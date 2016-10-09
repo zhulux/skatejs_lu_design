@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" class="han-init">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="renderer" content="webkit">
+    <meta name="browsermode" content="application">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="robots" content="noindex">
+    <title><%= title %> <% if title != '' %>&ndash;<% end %> LuDesign</title>
+    <link rel="stylesheet" href="assets/lud.css">
+    <link rel="stylesheet" href="styles/hgt-syntax.css">
+    <link rel="stylesheet" href="styles/hgt.css">
+</head>
+
+<body class="hgt-body">
+
+<ul class="hgt-styleguide container-fluid">
+        <% unless @blocks.length == 0 %>
+        <nav class="navbar navbar-fixed-side navbar-dark bg-inverse">
+            <a class="navbar-brand" href="/">LuDesign</a>
+            <ul class="nav navbar-nav hgt-menu">
+                <li class="nav-item">
+                <a href="index.html" class="nav-link">首页</a></li>
+                <li class="nav-item">
+                    <a href="#js-components-nav" data-toggle="collapse" class="nav-link">组件
+                    </a>
+                    <ul id="js-components-nav" class="nav nav-collapse collapse in">
+                        <% @blocks.each do |block| %>
+                        <% if not block[:parent] %>
+                        <li class="nav-item">
+                    <a href="#<%= block[:name] %>" class="nav-link hgt-menu-item"><%= block[:title] %></a>
+                        </li>
+                        <% end %>
+                        <% end %>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+        <% end %>
+
+            <div class="main container hgt-content">
+                <div class="card card-block">

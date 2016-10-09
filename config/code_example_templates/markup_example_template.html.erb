@@ -1,0 +1,16 @@
+<div class="codeExample">
+  <div class="exampleOutput">
+    <% id= "js-collapse-#{SecureRandom.hex}"  %>
+    <%= rendered_example %>
+    <div class="text-sm-right">
+      <button class="lud-button lud-button--primary lud-button--ghost lud-button--small" type="button" data-toggle="collapse" data-target="#<%= id %>" aria-expanded="false" aria-controls="collapseExample">
+        <lud-icon type="chevrondown"></lud-icon>HTML
+      </button>
+    </div>
+  </div>
+  <div id="<%= id %>" class="codeBlock collapse">
+    <div class="highlight">
+      <pre><%= code_example %></pre>
+    </div>
+  </div>
+</div>

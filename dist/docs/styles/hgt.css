@@ -1,0 +1,257 @@
+/**
+ * Author: Mathis Hofer <hofer@puzzle.ch>
+ *
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2015 Puzzle ITC GmbH
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+header{
+  margin-bottom: 1rem;
+}
+
+.hgt-body {
+  padding-left: 150px;
+}
+
+.hgt-content .styleguide a:hover,
+.hgt-footer a:hover {
+  text-decoration: underline;
+}
+.container-fluid {
+  padding: 0;
+}
+.hgt-container {
+  box-sizing: border-box;
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+footer {
+  margin: 2.5rem 0;
+}
+
+
+
+.hgt-content h1.styleguide,
+.hgt-content h2.styleguide,
+.hgt-content h3.styleguide,
+.hgt-content h4.styleguide,
+.hgt-content h5.styleguide,
+.hgt-content h6.styleguide,
+.hgt-content > h1,
+.hgt-content > h2,
+.hgt-content > h3,
+.hgt-content > h4,
+.hgt-content > h5,
+.hgt-content > h6 {
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.hgt-content h1.styleguide {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #EEE;
+}
+h2 {
+  font-size: 1.5em;
+}
+.hgt-content p.styleguide,
+.hgt-content blockquote.styleguide,
+.hgt-content dl.styleguide,
+.hgt-content table.styleguide,
+.hgt-content pre.styleguide {
+  box-sizing: border-box;
+  margin: 0 0 16px;
+}
+
+.hgt-content ul.styleguide {
+  list-style: disc;
+  box-sizing: border-box;
+  margin: 0 0 16px;
+  padding-left: 1em;
+}
+
+.hgt-content ol.styleguide {
+  list-style: decimal;
+  box-sizing: border-box;
+  margin: 0 0 16px;
+  padding-left: 1em;
+}
+
+.material-icons-list .material-icons {
+  font-size: 2rem;
+  line-height: 2.2rem;
+
+}
+
+.hgt-content h2.styleguide {
+  padding-bottom: 0.3em;
+  font-size: 1.5em;
+  line-height: 1.225;
+  border-bottom: 1px solid #EEE;
+}
+
+.hgt-content h3.styleguide {
+  font-size: 1.3em;
+  line-height: 1.43;
+}
+
+.hgt-content h4.styleguide {
+  font-size: 1.2em;
+}
+
+.hgt-content h5.styleguide {
+  font-size: 1em;
+}
+
+.hgt-content h6.styleguide {
+  font-size: 1em;
+  color: #777;
+}
+
+.hgt-content code.styleguide,
+.hgt-content tt.styleguide {
+  box-sizing: border-box;
+  padding: 0.2em 0;
+  margin: 0 3px 0 0;
+  font-size: 13.6px; /* 85% of 16px */
+  font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+}
+
+.hgt-content code.styleguide:before,
+.hgt-content code.styleguide:after,
+.hgt-content tt.styleguide:before,
+.hgt-content tt.styleguide:after {
+  letter-spacing: -0.2em;
+  content: " ";
+}
+
+.hgt-content .codeBlock pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 13px Consolas,"Liberation Mono",Menlo,Courier,monospace;
+}
+
+.hgt-content .codeBlock .highlight pre,
+.hgt-content .codeBlock pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 13.6px; /* 85% of 16px */
+  line-height: 1.45;
+  background-color: #F7F7F7;
+  border-radius: 3px;
+}
+
+.hgt-content .codeBlock  pre {
+  word-wrap: normal;
+  border-color: transparent;
+}
+
+.hgt-content > :first-child {
+  margin-top: 0 !important;
+}
+
+.hgt-content .codeExample,
+.hgt-content .jsExample {
+  border: 1px solid #EEE;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.hgt-content .jsExample {
+  border-top: 0;
+}
+
+.hgt-content .codeExample:before,
+.hgt-content .jsExample:before {
+  font-family: "Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;
+  color: #222;
+  border: 1px solid #EEE;
+  border-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  position: relative;
+  padding: 2px;
+  display: block;
+}
+
+/* .hgt-content .codeExample:before { */
+/*   content: "Example"; */
+/*   background-color: #f9f9f9; */
+/*   width: 50px; */
+/*   top: -1px; */
+/*   left: -1px; */
+/*   font-size: 12px; */
+/* } */
+/* .hgt-content .jsExample:before { */
+/*   content: "JS Example"; */
+/*   background-color: #f9f9f9; */
+/*   width: 65px; */
+/*   top: -11px; */
+/*   left: -11px; */
+/*   font-size: 12px; */
+/* } */
+
+.hgt-content .exampleOutput {
+  padding: 16px;
+}
+
+.hgt-content .codeBlock {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 1px solid #EEE;
+}
+
+.hgt-content table .codeBlock {
+  background-color: transparent;
+  border-top: none;
+  border-radius: 0;
+}
+.icon_lists li{
+  float:left;
+  width: 100px;
+  height:180px;
+  text-align: center;
+  list-style: none;
+}
+.icon_lists .icon{
+  font-size: 42px;
+  line-height: 100px;
+  margin: 10px 0;
+  color:#333;
+  -webkit-transition: font-size 0.25s ease-out 0s;
+  -moz-transition: font-size 0.25s ease-out 0s;
+  transition: font-size 0.25s ease-out 0s;
+
+}
+.icon_lists .icon:hover{
+  font-size: 100px;
+}

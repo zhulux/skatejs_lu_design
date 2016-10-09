@@ -1,0 +1,101 @@
+@import "../../base/core";
+
+@mixin button-theme($color, $background) {
+  color: $color;
+  background: $background;
+  border-color: transparent;
+  &:hover{
+    background: shade($background, 20%);
+    transition: all .6s $ease-in-out-cubic;
+  }
+  &[disabled],&.lud-button--disabled, &[disabled]:hover, &.lud-button--disabled:hover{
+    opacity: .5 !important;
+    cursor: not-allowed !important;
+    background: $background;
+  }
+  &.lud-button--ghost{
+    background-color: transparent;
+    color: $background;
+    border-color: $background;
+    &:hover{
+      background: $background;
+      color: $color;
+      transition: all .4s $ease-in-out-cubic;
+    }
+    &[disabled]:hover, &.lud-button--disabled:hover{
+      background-color: transparent;
+      color: $background;
+    }
+  }
+
+}
+
+a.lud-button{
+  text-decoration: none;
+}
+.lud-button{
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: bottom;
+  touch-action: manipulation;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  letter-spacing: 1px;
+  border: 1px solid transparent;
+  padding: rem(8) rem(16);
+  line-height: 1;
+  border-radius: rem(3);
+  &.lud-button--small{
+    font-size: 12px;
+    padding: rem(5) rem(10);
+  }
+  &.lud-button--large{
+    padding: rem(10) rem(20);
+  }
+}
+
+.lud-button{ // default
+  @include button-theme($primary-color,#fff);
+  border-color: #d8dde6;
+  &:hover{
+    color: shade($primary-color, 10%);
+    background: shade(#fff, 10%);
+  }
+  &.lud-button--ghost{
+    color: $primary-color;
+    border-color: $primary-color;
+    &:hover{
+      background: $primary-color;
+      color: #fff;
+    }
+  }
+
+}
+
+.lud-button.lud-button--primary{
+  @include button-theme(#fff,$primary-color);
+}
+
+.lud-button.lud-button--info{
+  @include button-theme(#fff,$info-color);
+}
+
+.lud-button.lud-button--success{
+  @include button-theme(#fff,$success-color);
+}
+
+.lud-button.lud-button--danger{
+  @include button-theme(#fff,$danger-color);
+}
+
+.lud-button.lud-button--warning{
+  @include button-theme(#fff,$warning-color);
+}
+
+.lud-button.lud-button--inverse{
+  @include button-theme(#fff,$primary-inverse);
+}

@@ -1,0 +1,30 @@
+</div>
+</div>
+        <footer><div class="container">
+            Built by <a href="https://github.com/trulia/hologram">Hologram</a> |
+             &copy; 2016 ZhuluX, Inc. (Member Of China Renaissance Group)
+        </div>
+        </footer>
+
+
+
+  </div>
+
+  <% if @config['js_include'].to_s.strip.length != 0 %>
+    <% @config['js_include'].each do |js| %>
+      <script type="text/javascript" src="<%= js %>"></script>
+    <% end %>
+  <% end %>
+
+  <% if @config['components_include'].to_s.strip.length != 0 %>
+    <% @config['components_include'].each do |component| %>
+      <link rel="import" href="<%= component %>">
+    <% end %>
+  <% end %>
+<script src="assets/lud.js"></script>
+<script src="scripts/vendor/jquery.waypoints.min.js"></script>
+<script src="scripts/vendor/sticky.min.js"></script>
+<script src="scripts/vendor/infinite.min.js"></script>
+<script src="scripts/hgt.js"></script>
+</body>
+</html>

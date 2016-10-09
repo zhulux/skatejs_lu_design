@@ -1,0 +1,8 @@
+{
+  "presets": ["es2015", "stage-2","babel-preset-react"],
+  "plugins": [
+    ["transform-react-jsx", {
+      "pragma": "skate.h"
+    }]
+  ]
+}

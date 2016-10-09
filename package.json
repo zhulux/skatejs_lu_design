@@ -1,0 +1,58 @@
+{
+  "name": "lu_design",
+  "version": "0.2.0",
+  "description": "An enterprise-class rails ui library.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhulux/lu_design.git"
+  },
+  "scripts": {
+    "start": "webpack --config config/webpack.config.babel.js --watch",
+    "build": "webpack --config config/webpack.config.babel.js"
+  },
+  "author": "borisding@zhulux.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhulux/lu_design/issues"
+  },
+  "homepage": "https://lu_design.github.io",
+  "devDependencies": {
+    "autoprefixer": "^6.4.0",
+    "babel-core": "^6.14.0",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-2": "^6.13.0",
+    "babel-register": "^6.16.3",
+    "css-loader": "^0.24.0",
+    "cssnano": "^3.7.4",
+    "eslint-loader": "^1.5.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "expose-loader": "^0.7.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "node-sass": "^3.8.0",
+    "postcss-loader": "^0.11.0",
+    "sass-loader": "^4.0.0",
+    "sasslint-loader": "0.0.1",
+    "webpack": "^1.13.2",
+    "webpack-shell-plugin": "^0.4.3"
+  },
+  "dependencies": {
+    "@salesforce-ux/design-system": "^2.1.3",
+    "bourbon": "^4.2.7",
+    "classnames": "^2.2.5",
+    "g2": "^2.0.2",
+    "jquery": "^3.1.0",
+    "jquery-ujs": "^1.2.2",
+    "moment": "^2.15.1",
+    "normalize.css": "^5.0.0",
+    "npm": "^3.10.8",
+    "select2": "^4.0.3",
+    "skatejs": "^2.0.0",
+    "skatejs-web-components": "^1.2.1",
+    "turbolinks": "^5.0.0"
+  }
+}
