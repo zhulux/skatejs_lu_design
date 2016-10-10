@@ -14080,6 +14080,8 @@
 
 	__webpack_require__(30);
 
+	__webpack_require__(32);
+
 /***/ },
 /* 17 */
 /***/ function(module, exports, __webpack_require__) {
@@ -23586,7 +23588,7 @@
 	        { type: 'button', 'class': 'lud-alert__close', 'aria-label': 'Close' },
 	        skate.h('i', { className: 'lud-icon lud-icon--close' })
 	      );
-	      var child = skate.h('div', { ref: function ref(x) {
+	      var child = skate.h('span', { ref: function ref(x) {
 	          return x.innerHTML = el.child;
 	        }, skip: true });
 
@@ -23617,6 +23619,123 @@
 
 /***/ },
 /* 31 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	__webpack_require__(33);
+
+	var _lud_component = __webpack_require__(26);
+
+	var _lud_component2 = _interopRequireDefault(_lud_component);
+
+	var _skatejs = __webpack_require__(27);
+
+	var skate = _interopRequireWildcard(_skatejs);
+
+	var _classnames = __webpack_require__(29);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*doc
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                title: Tag 标签
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                name: tag
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                category: 组件
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                进行标记和分类的小标签。
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 何时使用
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * 用于标记事物的属性和维度。
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * 进行分类。
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 代码演示
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ```html_example
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-tag>Default</lud-tag>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-tag type="primary">Primary</lud-tag>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-tag type="danger">Danger</lud-tag>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-tag type="warning">Warning</lud-tag>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-tag type="info">Info</lud-tag>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-tag type="success">Success</lud-tag>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```html_example
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-tag pill="true">Default</lud-tag>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-tag type="primary" pill="true">Primary</lud-tag>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ```
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
+
+	var ludTag = function (_ludComponent) {
+	  _inherits(ludTag, _ludComponent);
+
+	  function ludTag() {
+	    _classCallCheck(this, ludTag);
+
+	    return _possibleConstructorReturn(this, (ludTag.__proto__ || Object.getPrototypeOf(ludTag)).apply(this, arguments));
+	  }
+
+	  _createClass(ludTag, null, [{
+	    key: 'created',
+	    value: function created(el) {
+	      el.child = el.innerHTML;
+	      el.innerHTML = null;
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render(el) {
+	      var _classNames;
+
+	      var tagCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, 'lud-tag', true), _defineProperty(_classNames, 'lud-tag--' + el.type, true), _defineProperty(_classNames, 'lud-tag--pill', el.pill), _classNames));
+
+	      var child = skate.h('div', { ref: function ref(x) {
+	          return x.innerHTML = el.child;
+	        }, skip: true });
+
+	      return skate.h(
+	        'div',
+	        { className: tagCls },
+	        child
+	      );
+	    }
+	  }]);
+
+	  return ludTag;
+	}(_lud_component2.default);
+
+	ludTag.props = {
+	  type: skate.prop.string({
+	    attribute: true,
+	    default: 'default'
+	  }),
+	  pill: skate.prop.boolean({ attribute: true }),
+	  child: skate.prop.string()
+	};
+
+
+	skate.define('lud-tag', ludTag);
+
+/***/ },
+/* 33 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

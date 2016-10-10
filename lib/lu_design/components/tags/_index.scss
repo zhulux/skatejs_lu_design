@@ -1,0 +1,76 @@
+@import'../../config';
+@import "../../dependencies/index";
+
+@mixin tag-variant($color) {
+  background-color: $color;
+
+  &[href] {
+    &:focus,
+    &:hover {
+      background-color: shade($color, 10%);
+    }
+  }
+}
+
+@include fixed-component-fouc('lud-tag');
+.#{$css-prefix}tag {
+  display: inline-block;
+  padding: $spacing-xx-small;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 0.0625em;
+  vertical-align: baseline;
+  border-radius: $border-radius-medium;
+
+  // Empty tags collapse automatically
+  &:empty {
+    display: none;
+  }
+
+  + .#{$css-prefix}tag{
+    margin-left: $spacing-x-small;
+  }
+}
+
+
+// Pill tags
+//
+// Make them extra rounded with a modifier to replace v3's badges.
+
+.#{$css-prefix}tag--pill {
+  padding: $spacing-xx-small $spacing-x-small;
+  border-radius: $border-radius-pill;
+}
+
+// Colors
+//
+// Contextual variations (linked tags get darker on :hover).
+
+.#{$css-prefix}tag--default {
+  @include tag-variant($color-background-pill);
+  border: $border-width-thin solid $color-border;
+  color: $color-text-link;
+}
+
+.#{$css-prefix}tag--primary {
+  @include tag-variant($color-background-button-brand);
+}
+
+.#{$css-prefix}tag--success {
+  @include tag-variant($color-background-success);
+}
+
+.#{$css-prefix}tag--info {
+  @include tag-variant($color-background-info);
+}
+
+
+ .#{$css-prefix}tag--warning {
+  @include tag-variant($color-background-warning);
+}
+
+.#{$css-prefix}tag--danger {
+  @include tag-variant($color-background-error);
+}

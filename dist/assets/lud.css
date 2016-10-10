@@ -7780,3 +7780,59 @@ lud-alert {
     opacity: .5;
     background: none;
     border: 0; }
+lud-tag {
+  opacity: 1;
+  transition: opacity .3s ease; }
+  lud-tag:not([defined]) {
+    opacity: 0; }
+
+.lud-tag {
+  display: inline-block;
+  padding: 0.25rem;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 0.0625em;
+  vertical-align: baseline;
+  border-radius: 0.25rem; }
+  .lud-tag:empty {
+    display: none; }
+  .lud-tag + .lud-tag {
+    margin-left: 0.5rem; }
+
+.lud-tag--pill {
+  padding: 0.25rem 0.5rem;
+  border-radius: 15rem; }
+
+.lud-tag--default {
+  background-color: white;
+  border: 1px solid #d8dde6;
+  color: #0070d2; }
+  .lud-tag--default[href]:focus, .lud-tag--default[href]:hover {
+    background-color: #e6e6e6; }
+
+.lud-tag--primary {
+  background-color: #0070d2; }
+  .lud-tag--primary[href]:focus, .lud-tag--primary[href]:hover {
+    background-color: #0065bd; }
+
+.lud-tag--success {
+  background-color: #4bca81; }
+  .lud-tag--success[href]:focus, .lud-tag--success[href]:hover {
+    background-color: #44b674; }
+
+.lud-tag--info {
+  background-color: #54698d; }
+  .lud-tag--info[href]:focus, .lud-tag--info[href]:hover {
+    background-color: #4c5f7f; }
+
+.lud-tag--warning {
+  background-color: #ffb75d; }
+  .lud-tag--warning[href]:focus, .lud-tag--warning[href]:hover {
+    background-color: #e6a554; }
+
+.lud-tag--danger {
+  background-color: #d4504c; }
+  .lud-tag--danger[href]:focus, .lud-tag--danger[href]:hover {
+    background-color: #bf4844; }
