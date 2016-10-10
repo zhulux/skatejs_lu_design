@@ -22,14 +22,14 @@
 // TINY - 320px - 20rem
 @mixin mq-x-small-min {
 
-  @media (min-width: pem($mq-x-small)) {
+  @media (min-width: em($mq-x-small)) {
     @content;
   }
 }
 
 @mixin mq-x-small-max {
 
-  @media (max-width: pem($mq-x-small)) {
+  @media (max-width: em($mq-x-small)) {
     @content;
   }
 }
@@ -39,14 +39,14 @@
 // SMALL - 480px - 30rem
 @mixin mq-small-min {
 
-  @media (min-width: pem($mq-small)) {
+  @media (min-width: em($mq-small)) {
     @content;
   }
 }
 
 @mixin mq-small-max {
 
-  @media (max-width: pem($mq-small)) {
+  @media (max-width: em($mq-small)) {
     @content;
   }
 }
@@ -56,14 +56,14 @@
 // MEDIUM - 768px - 48rem
 @mixin mq-medium-min {
 
-  @media (min-width: pem($mq-medium)) {
+  @media (min-width: em($mq-medium)) {
     @content;
   }
 }
 
 @mixin mq-medium-max {
 
-  @media (max-width: pem($mq-medium)) {
+  @media (max-width: em($mq-medium)) {
     @content;
   }
 }
@@ -73,14 +73,14 @@
 // LARGE - 1024px - 64rem
 @mixin mq-large-min {
 
-  @media (min-width: pem($mq-large)) {
+  @media (min-width: em($mq-large)) {
     @content;
   }
 }
 
 @mixin mq-large-max {
 
-  @media (max-width: pem($mq-large)) {
+  @media (max-width: em($mq-large)) {
     @content;
   }
 }
@@ -90,14 +90,14 @@
 //HUGE - 1224px - 76.5rem
 @mixin mq-huge-min {
 
-  @media (min-width: pem(1224)) {
+  @media (min-width: em(1224)) {
     @content;
   }
 }
 
 @mixin mq-huge-max {
 
-  @media (max-width: pem(1224)) {
+  @media (max-width: em(1224)) {
     @content;
   }
 }
@@ -107,14 +107,14 @@
 // SUPER - 1824px - 114rem
 @mixin mq-super-min {
 
-  @media (min-width: pem(1824)) {
+  @media (min-width: em(1824)) {
     @content;
   }
 }
 
 @mixin mq-super-max {
 
-  @media (max-width: pem(1824)) {
+  @media (max-width: em(1824)) {
     @content;
   }
 }
@@ -249,16 +249,6 @@
 
 
 
-// Clearfix
-@mixin clearfix {
-
-  &:after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-}
-
 
 
 // Spacing
@@ -384,16 +374,6 @@
       align-self: center;
     }
   }
-}
-
-@mixin docked-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: $color-background;
-  box-shadow: $shadow-docked;
-  z-index: $z-index-overlay; // Better token - more specific to docked stuff
 }
 
 @mixin absolute-center {

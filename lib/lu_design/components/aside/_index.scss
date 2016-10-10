@@ -1,0 +1,93 @@
+@import'../../config';
+@import "../../dependencies/index";
+
+$width-sidebar: 12rem;
+
+.#{$css-prefix}aside {
+  .is-closed ul {
+    display: none;
+  }
+
+  .#{$css-prefix}aside__brand{
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  // Links
+  a {
+    display: block;
+    padding: $spacing-small $spacing-x-large;
+    line-height: 1.28571428571429;
+    color: $color-text-default;
+
+    &:hover {
+      background-color: rgba($color-background, 0.5);
+    }
+  }
+
+  // Active Link
+  .#{$css-prefix}is-active > a {
+    background-color: $color-background-alt-2;
+    color: $color-text-tab-label-selected;
+  }
+
+  // Open Menu Items
+  .#{$css-prefix}is-open {
+    padding-bottom: $spacing-x-small;
+  }
+
+  // Section Selected
+  .#{$css-prefix}is-selected {
+    background-color: $color-background;
+
+    a:hover {
+      background-color: darken($color-background, 2.5);
+    }
+
+    .icon__svg {
+      opacity: 1;
+    }
+  }
+
+  // Nested List
+  .#{$css-prefix}is-nested {
+    margin-left: 0;
+
+    a {
+      padding: {
+        top: $spacing-x-small;
+        bottom: $spacing-x-small;
+        left: $spacing-x-large + $spacing-large;
+      }
+    }
+
+    .#{$css-prefix}is-nested a {
+      padding-left: $spacing-x-large + ($spacing-large * 2);
+    }
+  }
+  @include mq-medium-min {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-right: $border-width-thin solid $color-border-separator;
+    padding-top: 0;
+    width: $width-sidebar;
+    height: 100%;
+    background: $color-background;
+    z-index: $z-index-default;
+
+    nav {
+      @include scrollbar($track: $color-background-alt);
+      position: absolute;
+      width: $width-sidebar;
+      height: 100%;
+      overflow: hidden {
+        y: auto;
+      };
+      // Remove the focus ring that appears when children are focused
+      outline: 0;
+    }
+  }
+
+}

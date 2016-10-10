@@ -1,4 +1,5 @@
-@import "../../base/core";
+@import "../../config";
+@import "../../dependencies/index";
 
 @mixin button-theme($color, $background) {
   color: $color;
@@ -59,17 +60,17 @@ a.lud-button{
 }
 
 .lud-button{ // default
-  @include button-theme($primary-color,#fff);
+  @include button-theme($color-brand-dark,#fff);
   border-color: #d8dde6;
   &:hover{
-    color: shade($primary-color, 10%);
+    color: shade($color-brand-dark, 10%);
     background: shade(#fff, 10%);
   }
   &.lud-button--ghost{
-    color: $primary-color;
-    border-color: $primary-color;
+    color: $color-brand-dark;
+    border-color: $color-brand-dark;
     &:hover{
-      background: $primary-color;
+      background: $color-brand-dark;
       color: #fff;
     }
   }
@@ -77,25 +78,25 @@ a.lud-button{
 }
 
 .lud-button.lud-button--primary{
-  @include button-theme(#fff,$primary-color);
+  @include button-theme(#fff,$color-background-button-brand);
 }
 
 .lud-button.lud-button--info{
-  @include button-theme(#fff,$info-color);
+  @include button-theme(#fff,$color-background-info);
 }
 
 .lud-button.lud-button--success{
-  @include button-theme(#fff,$success-color);
+  @include button-theme(#fff,$color-background-success);
 }
 
 .lud-button.lud-button--danger{
-  @include button-theme(#fff,$danger-color);
+  @include button-theme(#fff,$color-background-error);
 }
 
 .lud-button.lud-button--warning{
-  @include button-theme(#fff,$warning-color);
+  @include button-theme(#fff,$color-background-warning);
 }
 
 .lud-button.lud-button--inverse{
-  @include button-theme(#fff,$primary-inverse);
+  @include button-theme(#fff,$color-background-inverse);
 }

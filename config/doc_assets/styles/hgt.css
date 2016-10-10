@@ -28,27 +28,30 @@ header{
   margin-bottom: 1rem;
 }
 
-.hgt-body {
-  padding-left: 150px;
+@media (min-width: 48em) {
+  .hgt-body {
+    margin-left: 12rem;
+  }
+  .main{
+    padding: 3rem;
+  }
 }
 
 .hgt-content .styleguide a:hover,
 .hgt-footer a:hover {
   text-decoration: underline;
 }
-.container-fluid {
-  padding: 0;
+
+.main h1.styleguide{
+  padding: 1rem 2rem;
 }
-.hgt-container {
-  box-sizing: border-box;
-  width: 980px;
-  margin-right: auto;
-  margin-left: auto;
-}
+
 
 footer {
   margin: 2.5rem 0;
+  text-align: center;
 }
+
 
 
 

@@ -1,11 +1,7 @@
-lud-icon {
-  opacity: 1;
-  transition: opacity .3s ease;
-  &:not([defined]) {
-    opacity: 0;
-  }
-}
+@import "../../config";
+@import "../../dependencies/index";
 
+@include fixed-component-fouc('lud-icon');
 $lud-icon-cdn-prefix: '//at.alicdn.com/t/font_1475942807_327969';
 @font-face {
   font-family: 'iconfont';
@@ -30,7 +26,7 @@ $lud-icon-cdn-prefix: '//at.alicdn.com/t/font_1475942807_327969';
   font-feature-settings: 'liga';
   margin-right: .2rem;
   line-height: 1rem;
-  vertical-align: text-bottom;
+  vertical-align: middle;
 }
 
 // Modifiers: Each of the icons.

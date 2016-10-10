@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="zh-Hans" class="han-init">
+<html lang="zh-Hans">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="renderer" content="webkit">
     <meta name="browsermode" content="application">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -15,30 +15,31 @@
 
 <body class="hgt-body">
 
-<ul class="hgt-styleguide container-fluid">
+<div class="hgt-styleguide page-wrapper">
         <% unless @blocks.length == 0 %>
-        <nav class="navbar navbar-fixed-side navbar-dark bg-inverse">
-            <a class="navbar-brand" href="/">LuDesign</a>
-            <ul class="nav navbar-nav hgt-menu">
-                <li class="nav-item">
-                <a href="index.html" class="nav-link">首页</a></li>
-                <li class="nav-item">
-                    <a href="#js-components-nav" data-toggle="collapse" class="nav-link">组件
-                    </a>
-                    <ul id="js-components-nav" class="nav nav-collapse collapse in">
-                        <% @blocks.each do |block| %>
-                        <% if not block[:parent] %>
-                        <li class="nav-item">
-                    <a href="#<%= block[:name] %>" class="nav-link hgt-menu-item"><%= block[:title] %></a>
-                        </li>
-                        <% end %>
-                        <% end %>
-                    </ul>
-                </li>
+        <aside class="lud-aside">
+            <a class="lud-aside__brand" href="/">LuDesign</a>
+            <nav>
+                <ul class="lud-list--vertical lud-has-block-links hgt-menu">
+                    <li class="lud-list__item">
+                        <a href="index.html">首页</a></li>
+                    <li class="lud-list__item lud-is-open lud-is-selected">
+                        <a href="javascript:void(0);">组件</a>
+                        <ul id="js-components-nav" class="lud-list--vertical lud-has-block-links lud-is-nested">
+                            <% @blocks.each do |block| %>
+                            <% if not block[:parent] %>
+                            <li class="slds-list__item">
+                                <a href="#<%= block[:name] %>" ><%= block[:title] %></a>
+                            </li>
+                            <% end %>
+                            <% end %>
+                        </ul>
+                    </li>
 
-            </ul>
-        </nav>
+                </ul>
+            </nav>
+        </aside>
         <% end %>
 
-            <div class="main container hgt-content">
+            <div class="main  hgt-content">
                 <div class="card card-block">

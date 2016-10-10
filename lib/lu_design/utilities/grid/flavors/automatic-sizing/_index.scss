@@ -95,7 +95,7 @@
 @each $size in map-keys($breakpoints) {
   $breakpoint: map-get($breakpoints, $size);
   @each $key in $size {
-    @media (min-width: #{pem($breakpoint)}) {
+    @media (min-width: #{em($breakpoint)}) {
       .#{$css-prefix}#{$size}-nowrap {
         flex: 1 1 auto;
         flex-wrap: nowrap;
