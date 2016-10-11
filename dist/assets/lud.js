@@ -14090,6 +14090,8 @@
 
 	__webpack_require__(40);
 
+	__webpack_require__(42);
+
 /***/ },
 /* 17 */
 /***/ function(module, exports, __webpack_require__) {
@@ -23686,6 +23688,84 @@
 
 	var skate = _interopRequireWildcard(_skatejs);
 
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*doc
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                title: Spinner 加载中动画
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                name: spinner
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                category: 组件
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 代码演示
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```html_example
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div style="position: relative;width: 100%;height: 10rem;">
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-spinner></lud-spinner>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var ludSpinner = function (_ludComponent) {
+	  _inherits(ludSpinner, _ludComponent);
+
+	  function ludSpinner() {
+	    _classCallCheck(this, ludSpinner);
+
+	    return _possibleConstructorReturn(this, (ludSpinner.__proto__ || Object.getPrototypeOf(ludSpinner)).apply(this, arguments));
+	  }
+
+	  _createClass(ludSpinner, null, [{
+	    key: 'render',
+	    value: function render() {
+	      return skate.h(
+	        'div',
+	        { 'class': 'lud-spinner' },
+	        skate.h('div', { 'class': 'lud-spinner__rect1' }),
+	        skate.h('div', { 'class': 'lud-spinner__rect2' }),
+	        skate.h('div', { 'class': 'lud-spinner__rect3' }),
+	        skate.h('div', { 'class': 'lud-spinner__rect4' }),
+	        skate.h('div', { 'class': 'lud-spinner__rect5' })
+	      );
+	    }
+	  }]);
+
+	  return ludSpinner;
+	}(_lud_component2.default);
+
+	skate.define('lud-spinner', ludSpinner);
+
+/***/ },
+/* 39 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	__webpack_require__(41);
+
+	var _lud_component = __webpack_require__(19);
+
+	var _lud_component2 = _interopRequireDefault(_lud_component);
+
+	var _skatejs = __webpack_require__(20);
+
+	var skate = _interopRequireWildcard(_skatejs);
+
 	var _classnames = __webpack_require__(22);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
@@ -23784,20 +23864,20 @@
 	skate.define('lud-tag', ludTag);
 
 /***/ },
-/* 39 */
+/* 41 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 40 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	__webpack_require__(41);
+	__webpack_require__(43);
 
 	var _lud_component = __webpack_require__(19);
 
@@ -23898,7 +23978,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 41 */
+/* 43 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
