@@ -1,0 +1,107 @@
+.#{$css-prefix}form--compound {
+
+  .#{$css-prefix}form-element__row {
+    display: flex;
+    margin-bottom: $spacing-x-small;
+
+    + .#{$css-prefix}form-element__row {
+      clear: both;
+    }
+  }
+
+  .#{$css-prefix}form-element {
+    width: 100%; // Default - Stretch 100% unless told otherwise using sizing helpers
+
+    + .#{$css-prefix}form-element {
+      padding-left: $spacing-x-small;
+    }
+  }
+
+}
+
+.#{$css-prefix}form--horizontal {
+
+  @include mq-medium-min {
+    text-align: right;
+  }
+
+  .#{$css-prefix}form-element {
+
+    > .#{$css-prefix}form-element__legend,
+    > .#{$css-prefix}form-element__label {
+
+      @include mq-medium-min {
+        float: left;
+        text-align: right;
+        display: inline-block;
+        width: 33%;
+        vertical-align: top;
+        position: relative;
+        top: (($line-height-button / 2) - ($line-height-text / 2));
+        margin: {
+          right: 0;
+          bottom: 0;
+        }
+      }
+    }
+
+    + .#{$css-prefix}form-element {
+      @include form-element-vertical-spacing;
+    }
+  }
+
+  .#{$css-prefix}form-element__control {
+    width: 100%;
+
+    @include mq-medium-min {
+      width: 66%;
+      display: inline-block;
+      text-align: left;
+    }
+  }
+}
+
+.#{$css-prefix}form--inline {
+
+  .#{$css-prefix}form-element,
+  .#{$css-prefix}form-element__label,
+  .#{$css-prefix}form-element__control {
+    display: block;
+  }
+
+  .#{$css-prefix}form-element + .#{$css-prefix}form-element {
+    margin-top: $spacing-small;
+  }
+
+  @include mq-small-min {
+
+    .#{$css-prefix}form-element {
+      margin-right: $spacing-x-small;
+
+      + .#{$css-prefix}form-element {
+        margin-top: 0;
+      }
+    }
+
+    .#{$css-prefix}form-element,
+    .#{$css-prefix}form-element__label,
+    .#{$css-prefix}form-element__control {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.#{$css-prefix}form--stacked .#{$css-prefix}form-element {
+  display: block;
+
+  + .#{$css-prefix}form-element {
+    @include form-element-vertical-spacing;
+  }
+
+  .#{$css-prefix}checkbox,
+  .#{$css-prefix}radio {
+    display: block;
+  }
+}

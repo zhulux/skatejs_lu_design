@@ -1,5 +1,5 @@
-@import "../../../../config";
-@import "../../../../dependencies/index";
+@import "../../config";
+@import "../../dependencies/index";
 @import "~select2/dist/css/select2";
 
 select, .select2-container--default .select2-selection--single {
@@ -11,9 +11,14 @@ select, .select2-container--default .select2-selection--single {
     min-height: calc(#{$height-input} + (#{$border-width-thin} * 2));
     height: inherit;
 
-    option {
+    option, .select2-results__option {
       padding: $spacing-x-small;
     }
   }
 
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: $color-background-input-checkbox-selected;
+  color: white;
 }

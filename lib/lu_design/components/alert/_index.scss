@@ -1,5 +1,5 @@
-@import "../../../../config";
-@import "../../../../dependencies/index";
+@import "../../config";
+@import "../../dependencies/index";
 
 @include fixed-component-fouc('lud-alert');
 .#{$css-prefix}alert {

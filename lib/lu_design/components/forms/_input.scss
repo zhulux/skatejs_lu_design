@@ -110,6 +110,6 @@
   @include form-input-error('.#{$css-prefix}input');
 
   .#{$css-prefix}input__icon {
-    fill: $color-text-error;
+    color: $color-text-error;
   }
 }

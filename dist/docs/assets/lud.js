@@ -14076,11 +14076,13 @@
 
 	__webpack_require__(21);
 
-	__webpack_require__(24);
+	__webpack_require__(23);
 
-	__webpack_require__(30);
+	__webpack_require__(26);
 
 	__webpack_require__(32);
+
+	__webpack_require__(34);
 
 /***/ },
 /* 17 */
@@ -14118,7 +14120,21 @@
 
 	__webpack_require__(22);
 
-	__webpack_require__(23);
+/***/ },
+/* 22 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(24);
+
+	__webpack_require__(25);
 
 	var _jquery = __webpack_require__(2);
 
@@ -14169,13 +14185,13 @@
 	(0, _jquery2.default)(document).on("turbolinks:load", init_select).on("ajax:success", init_select); // ujs remote:true
 
 /***/ },
-/* 22 */
+/* 24 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 23 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var require;var require;/* WEBPACK VAR INJECTION */(function($) {/*!
@@ -20618,24 +20634,24 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 24 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	__webpack_require__(25);
+	__webpack_require__(27);
 
-	var _lud_component = __webpack_require__(26);
+	var _lud_component = __webpack_require__(28);
 
 	var _lud_component2 = _interopRequireDefault(_lud_component);
 
-	var _skatejs = __webpack_require__(27);
+	var _skatejs = __webpack_require__(29);
 
 	var skate = _interopRequireWildcard(_skatejs);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(31);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -20699,13 +20715,13 @@
 	skate.define('lud-icon', ludIcon);
 
 /***/ },
-/* 25 */
+/* 27 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 26 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20716,7 +20732,7 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _skatejs = __webpack_require__(27);
+	var _skatejs = __webpack_require__(29);
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -20755,11 +20771,11 @@
 	exports.default = ludComponent;
 
 /***/ },
-/* 27 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	(function (global, factory) {
-	   true ? factory(exports, __webpack_require__(28)) :
+	   true ? factory(exports, __webpack_require__(30)) :
 	  typeof define === 'function' && define.amd ? define(['exports', 'incremental-dom'], factory) :
 	  (factory((global.skate = global.skate || {}),global.IncrementalDOM));
 	}(this, (function (exports,incrementalDom) {
@@ -22368,7 +22384,7 @@
 
 
 /***/ },
-/* 28 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -23441,7 +23457,7 @@
 	//# sourceMappingURL=incremental-dom-cjs.js.map
 
 /***/ },
-/* 29 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -23495,24 +23511,24 @@
 
 
 /***/ },
-/* 30 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	__webpack_require__(31);
+	__webpack_require__(33);
 
-	var _lud_component = __webpack_require__(26);
+	var _lud_component = __webpack_require__(28);
 
 	var _lud_component2 = _interopRequireDefault(_lud_component);
 
-	var _skatejs = __webpack_require__(27);
+	var _skatejs = __webpack_require__(29);
 
 	var skate = _interopRequireWildcard(_skatejs);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(31);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -23618,30 +23634,30 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 31 */
+/* 33 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 32 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	__webpack_require__(33);
+	__webpack_require__(35);
 
-	var _lud_component = __webpack_require__(26);
+	var _lud_component = __webpack_require__(28);
 
 	var _lud_component2 = _interopRequireDefault(_lud_component);
 
-	var _skatejs = __webpack_require__(27);
+	var _skatejs = __webpack_require__(29);
 
 	var skate = _interopRequireWildcard(_skatejs);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(31);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -23687,7 +23703,6 @@
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-tag type="info" pill="true">Info</lud-tag>
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-tag type="success" pill="true">Success</lud-tag>
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ```
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
 
 	var ludTag = function (_ludComponent) {
@@ -23740,7 +23755,7 @@
 	skate.define('lud-tag', ludTag);
 
 /***/ },
-/* 33 */
+/* 35 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
