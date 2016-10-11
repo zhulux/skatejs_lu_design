@@ -621,109 +621,6 @@ img {
     padding-left: 0;
     padding-right: 0; }
 
-.lud-file-selector {
-  display: inline-flex; }
-
-.lud-file-selector__dropzone {
-  padding: 0.125rem;
-  border: 1px dashed #d8dde6;
-  border-radius: 0.25rem; }
-  .lud-file-selector__dropzone.lud-has-drag-over {
-    outline: 0;
-    border-color: #1589ee;
-    box-shadow: 0 0 3px #0070D2;
-    border-style: solid; }
-
-.lud-file-selector__input:focus ~ .lud-file-selector__body > .lud-file-selector__button {
-  box-shadow: 0 0 3px #0070D2; }
-
-.lud-file-selector__input[disabled] ~ .lud-file-selector__body {
-  color: #d8dde6; }
-  .lud-file-selector__input[disabled] ~ .lud-file-selector__body > .lud-file-selector__button {
-    background: #e0e5ee;
-    border-color: transparent;
-    color: white; }
-  .lud-file-selector__input[disabled] ~ .lud-file-selector__body > .lud-file-selector__body-icon {
-    fill: currentColor; }
-
-.lud-file-selector__button {
-  display: inline-flex;
-  align-items: center; }
-
-.lud-file-selector--files .lud-file-selector__body {
-  display: flex;
-  align-items: center; }
-
-.lud-file-selector--files .lud-file-selector__button {
-  max-height: 1.625rem;
-  line-height: 1.625rem; }
-
-.lud-file-selector--files .lud-file-selector__text {
-  margin-left: 0.5rem;
-  margin-right: 0.75rem; }
-
-.lud-file-selector--images {
-  display: block; }
-  .lud-file-selector--images .lud-file-selector__dropzone {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    margin: auto; }
-    .lud-file-selector--images .lud-file-selector__dropzone:after {
-      content: '';
-      padding-top: 100%;
-      display: table; }
-  .lud-file-selector--images .lud-file-selector__body {
-    text-align: center; }
-  .lud-file-selector--images .lud-file-selector__text {
-    margin-top: 0.75rem; }
-
-.lud-file-selector--integrated {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: block; }
-
-.lud-file-selector__dropzone--integrated {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 0;
-  opacity: 0;
-  z-index: -1; }
-  .lud-file-selector__dropzone--integrated.lud-has-drag {
-    background: rgba(255, 255, 255, 0.75);
-    opacity: 1;
-    z-index: 8000; }
-  .lud-file-selector__dropzone--integrated.lud-has-drag-over {
-    background: rgba(240, 248, 252, 0.75);
-    box-shadow: 0 0 0 4px #1589ee inset; }
-
-.lud-file-selector__body--integrated {
-  width: 12rem;
-  height: 12rem;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  margin: auto;
-  background: white;
-  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
-  border: 1px solid #d8dde6;
-  border-radius: 0.25rem;
-  flex-direction: column; }
-
-.lud-file-selector__text--integrated {
-  margin-top: 0.75rem; }
-
 .lud-popover--tooltip {
   width: auto;
   max-width: 20rem;
@@ -5521,6 +5418,92 @@ a.lud-button {
   .lud-has-error .lud-textarea:focus, .lud-has-error .lud-textarea:active {
     box-shadow: #c23934 0 0 0 1px inset, 0 0 3px #0070D2; }
 
+.lud-file-selector {
+  display: inline-flex; }
+
+.lud-file-selector__dropzone {
+  padding: 0.125rem;
+  border: 1px dashed #d8dde6;
+  border-radius: 0.25rem; }
+  .lud-file-selector__dropzone.lud-has-drag-over {
+    outline: 0;
+    border-color: #1589ee;
+    box-shadow: 0 0 3px #0070D2;
+    border-style: solid; }
+
+.lud-file-selector__input:focus ~ .lud-file-selector__body > .lud-file-selector__button {
+  box-shadow: 0 0 3px #0070D2; }
+
+.lud-file-selector__input[disabled] ~ .lud-file-selector__body {
+  color: #d8dde6; }
+  .lud-file-selector__input[disabled] ~ .lud-file-selector__body > .lud-file-selector__button {
+    background: #e0e5ee;
+    border-color: transparent;
+    color: white; }
+  .lud-file-selector__input[disabled] ~ .lud-file-selector__body > .lud-file-selector__body-icon {
+    fill: currentColor; }
+
+.lud-file-selector__button {
+  display: inline-flex;
+  align-items: center; }
+
+.lud-file-selector--files .lud-file-selector__body {
+  display: flex;
+  align-items: center; }
+
+.lud-file-selector--files .lud-file-selector__button {
+  max-height: 1.625rem;
+  line-height: 1.625rem; }
+
+.lud-file-selector--files .lud-file-selector__text {
+  margin-left: 0.5rem;
+  margin-right: 0.75rem; }
+
+.lud-file-selector--integrated {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block; }
+
+.lud-file-selector__dropzone--integrated {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  opacity: 0;
+  z-index: -1; }
+  .lud-file-selector__dropzone--integrated.lud-has-drag {
+    background: rgba(255, 255, 255, 0.75);
+    opacity: 1;
+    z-index: 8000; }
+  .lud-file-selector__dropzone--integrated.lud-has-drag-over {
+    background: rgba(240, 248, 252, 0.75);
+    box-shadow: 0 0 0 4px #1589ee inset; }
+
+.lud-file-selector__body--integrated {
+  width: 12rem;
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: auto;
+  background: white;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
+  border: 1px solid #d8dde6;
+  border-radius: 0.25rem;
+  flex-direction: column; }
+
+.lud-file-selector__text--integrated {
+  margin-top: 0.75rem; }
+
 .lud-form-element {
   position: relative; }
   .lud-form-element__label {
@@ -7563,3 +7546,51 @@ lud-tag {
   background-color: #d4504c; }
   .lud-tag--danger[href]:focus, .lud-tag--danger[href]:hover {
     background-color: #bf4844; }
+lud-toggle {
+  opacity: 1;
+  transition: opacity .3s ease; }
+  lud-toggle:not([defined]) {
+    opacity: 0; }
+
+lud-toggle .lud-toggle__wrap {
+  display: block;
+  position: relative;
+  width: 3.2rem;
+  height: 1.6rem;
+  border: 1px solid #9faab5;
+  padding: 0.125rem;
+  background-color: #9faab5;
+  border-radius: 15rem;
+  transition: background-color 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  cursor: pointer; }
+  lud-toggle .lud-toggle__wrap .lud-toggle__input {
+    width: 1px;
+    height: 1px;
+    border: 0;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute; }
+  lud-toggle .lud-toggle__wrap .lud-toggle__switch {
+    cursor: pointer;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: white;
+    border-radius: 15rem; }
+
+lud-toggle[checked] .lud-toggle__wrap {
+  background-color: #0070d2; }
+  lud-toggle[checked] .lud-toggle__wrap .lud-toggle__switch {
+    left: auto;
+    right: 1px;
+    transition: transform 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+
+lud-toggle[disabled] .lud-toggle__wrap {
+  cursor: not-allowed; }
+  lud-toggle[disabled] .lud-toggle__wrap .lud-toggle__switch {
+    opacity: 0.65;
+    cursor: not-allowed; }

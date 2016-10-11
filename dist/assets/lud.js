@@ -14084,6 +14084,8 @@
 
 	__webpack_require__(34);
 
+	__webpack_require__(36);
+
 /***/ },
 /* 17 */
 /***/ function(module, exports, __webpack_require__) {
@@ -20780,23 +20782,36 @@
 	  (factory((global.skate = global.skate || {}),global.IncrementalDOM));
 	}(this, (function (exports,incrementalDom) {
 
-	var assign = Object.assign;
-	var assign$1 = assign ? assign.bind(Object) : function (obj) {
+	function keys() {
+	  var obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+	  var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+	  var _ref$enumOnly = _ref.enumOnly;
+	  var enumOnly = _ref$enumOnly === undefined ? false : _ref$enumOnly;
+
+	  var listOfKeys = Object[enumOnly ? 'keys' : 'getOwnPropertyNames'](obj);
+	  return typeof Object.getOwnPropertySymbols === 'function' ? listOfKeys.concat(Object.getOwnPropertySymbols(obj)) : listOfKeys;
+	}
+
+	// We are not using Object.assign if it is defined since it will cause problems when Symbol is polyfilled.
+	// Apparently Object.assign (or any polyfill for this method) does not copy non-native Symbols.
+	var assign = (function (obj) {
 	  for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
 	    args[_key - 1] = arguments[_key];
 	  }
 
 	  args.forEach(function (arg) {
-	    return Object.keys(arg).forEach(function (name) {
+	    return keys(arg).forEach(function (name) {
 	      return obj[name] = arg[name];
 	    });
 	  }); // eslint-disable-line no-return-assign
 	  return obj;
-	};
+	});
 
 	var empty = function (val) {
 	  return typeof val === 'undefined' || val === null;
-	}
+	};
 
 	var alwaysUndefinedIfNotANumberOrNumber = function alwaysUndefinedIfNotANumberOrNumber(val) {
 	  return isNaN(val) ? undefined : Number(val);
@@ -20812,7 +20827,7 @@
 	    }
 
 	    args.unshift({}, def);
-	    return assign$1.apply(undefined, args);
+	    return assign.apply(undefined, args);
 	  };
 	}
 
@@ -20898,7 +20913,7 @@
 	}
 
 	function exit(object, saved) {
-	  assign$1(object, saved);
+	  assign(object, saved);
 	}
 
 	// Decorates a function with a side effect that changes the properties of an
@@ -20914,7 +20929,7 @@
 	      return result;
 	    };
 	  };
-	}
+	};
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
 	  return typeof obj;
@@ -21480,15 +21495,16 @@
 	// Convenience function for declaring an Incremental DOM element using
 	// hyperscript-style syntax.
 	function element(tname, attrs) {
+	  var atype = typeof attrs === 'undefined' ? 'undefined' : _typeof(attrs);
+
+	  // If attributes are a function, then they should be treated as children.
+
 	  for (var _len5 = arguments.length, chren = Array(_len5 > 2 ? _len5 - 2 : 0), _key5 = 2; _key5 < _len5; _key5++) {
 	    chren[_key5 - 2] = arguments[_key5];
 	  }
 
-	  var atype = typeof attrs === 'undefined' ? 'undefined' : _typeof(attrs);
-
-	  // If attributes are a function, then they should be treated as children.
 	  if (atype === 'function' || atype === 'string' || atype === 'number') {
-	    chren = [attrs];
+	    chren.unshift(attrs);
 	  }
 
 	  // Ensure the attributes are an object. Null is considered an object so we
@@ -21518,6 +21534,10 @@
 	      ch();
 	    } else if (ctype === 'string' || ctype === 'number') {
 	      newText(ch);
+	    } else if (Array.isArray(ch)) {
+	      ch.forEach(function (sch) {
+	        return sch();
+	      });
 	    }
 	  });
 
@@ -21570,7 +21590,7 @@
 
 	  var data = element.__SKATE_DATA || (element.__SKATE_DATA = {});
 	  return namespace && (data[namespace] || (data[namespace] = {})) || data; // eslint-disable-line no-mixed-operators
-	}
+	};
 
 	var longerTimeoutBrowsers = ['Edge', 'Trident', 'Firefox'];
 	var timeoutDuration = 0;
@@ -21598,28 +21618,16 @@
 	      }, timeoutDuration);
 	    }
 	  };
-	}
-
-	function keys() {
-	  var obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
-	  var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-	  var _ref$enumOnly = _ref.enumOnly;
-	  var enumOnly = _ref$enumOnly === undefined ? true : _ref$enumOnly;
-
-	  var listOfKeys = Object[enumOnly ? 'keys' : 'getOwnPropertyNames'](obj);
-	  return typeof Object.getOwnPropertySymbols === 'function' ? listOfKeys.concat(Object.getOwnPropertySymbols(obj)) : listOfKeys;
-	}
+	};
 
 	var getOwnPropertyDescriptors = function () {
 	  var obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
-	  return keys(obj, { enumOnly: false }).reduce(function (prev, curr) {
+	  return keys(obj).reduce(function (prev, curr) {
 	    prev[curr] = Object.getOwnPropertyDescriptor(obj, curr);
 	    return prev;
 	  }, {});
-	}
+	};
 
 	function getDefaultValue(elem, name, opts) {
 	  return typeof opts.default === 'function' ? opts.default(elem, { name: name }) : opts.default;
@@ -21630,8 +21638,8 @@
 	}
 
 	function getPropData(elem, name) {
-	  var namespace = 'api/property/' + ((typeof name === 'undefined' ? 'undefined' : _typeof(name)) === 'symbol' ? String(name) : name);
-	  return data(elem, namespace);
+	  var elemData = data(elem, 'props');
+	  return elemData[name] || (elemData[name] = {});
 	}
 
 	function syncFirstTimeProp(elem, prop, propName, attributeName, propData) {
@@ -21893,7 +21901,7 @@
 	      }
 
 	      if (propertyName) {
-	        var propData = data(this, 'api/property/' + propertyName);
+	        var propData = data(this, 'props')[propertyName];
 
 	        // This ensures a property set doesn't cause the attribute changed
 	        // handler to run again once we set this flag. This only ever has a
@@ -21951,7 +21959,7 @@
 	}
 
 	function set$2(elem, newProps) {
-	  assign$1(elem, newProps);
+	  assign(elem, newProps);
 	  if (elem.constructor.render) {
 	    elem.constructor[renderer](elem);
 	  }
@@ -21959,7 +21967,7 @@
 
 	var props$1 = function (elem, newProps) {
 	  return typeof newProps === 'undefined' ? get$2(elem) : set$2(elem, newProps);
-	}
+	};
 
 	var createRenderer = function (Ctor) {
 	  var render = Ctor.render;
@@ -22028,19 +22036,14 @@
 
 	    elem[rendering] = false;
 	  };
-	}
+	};
 
 	var dashCase = function (str) {
 	  return str.split(/([A-Z])/).reduce(function (one, two, idx) {
 	    var dash = !one || idx % 2 === 0 ? '' : '-';
 	    return '' + one + dash + two.toLowerCase();
 	  });
-	}
-
-	function getPropData$1(elem, name$$1) {
-	  var namespace = 'api/property/' + ((typeof name$$1 === 'undefined' ? 'undefined' : _typeof(name$$1)) === 'symbol' ? String(name$$1) : name$$1);
-	  return data(elem, namespace);
-	}
+	};
 
 	function createNativePropertyDefinition(name$$1, opts) {
 	  var prop = {
@@ -22049,7 +22052,7 @@
 	  };
 
 	  prop.created = function created(elem) {
-	    var propData = getPropData$1(elem, name$$1);
+	    var propData = getPropData(elem, name$$1);
 	    var attributeName = opts.attribute === true ? dashCase(name$$1) : opts.attribute;
 	    var initialValue = elem[name$$1];
 
@@ -22072,14 +22075,14 @@
 	  };
 
 	  prop.get = function get() {
-	    var propData = getPropData$1(this, name$$1);
+	    var propData = getPropData(this, name$$1);
 	    var internalValue = propData.internalValue;
 
 	    return typeof opts.get === 'function' ? opts.get(this, { name: name$$1, internalValue: internalValue }) : internalValue;
 	  };
 
 	  prop.set = function set(newValue) {
-	    var propData = getPropData$1(this, name$$1);
+	    var propData = getPropData(this, name$$1);
 	    propData.lastAssignedValue = newValue;
 	    var oldValue = propData.oldValue;
 
@@ -22125,7 +22128,7 @@
 	  }
 
 	  return function (name$$1) {
-	    return createNativePropertyDefinition(name$$1, assign$1({
+	    return createNativePropertyDefinition(name$$1, assign({
 	      default: null,
 	      deserialize: function deserialize(value) {
 	        return value;
@@ -22135,7 +22138,7 @@
 	      }
 	    }, opts));
 	  };
-	}
+	};
 
 	/* eslint no-bitwise: 0 */
 
@@ -22259,7 +22262,7 @@
 	    uniqueName = generateUniqueName(name$$1);
 	  }
 	  prepareForRegistration(uniqueName, Ctor);
-	  window.customElements.define(uniqueName, Ctor, { extends: Ctor.extends });
+	  window.customElements.define(uniqueName, Ctor, Ctor.extends ? { extends: Ctor.extends } : null);
 	  return Ctor;
 	}
 
@@ -22277,7 +22280,7 @@
 	  }
 
 	  throw new Error('Skate requires native custom element support or a polyfill.');
-	}
+	};
 
 	var Event = function (TheEvent) {
 	  if (TheEvent) {
@@ -22322,7 +22325,7 @@
 	    opts.composed = true;
 	  }
 	  return elem.dispatchEvent(createCustomEvent(name, opts));
-	}
+	};
 
 	function getValue(elem) {
 	  var type = elem.type;
@@ -22351,7 +22354,7 @@
 	      props$1(elem, defineProperty({}, localTarget, value));
 	    }
 	  };
-	}
+	};
 
 	var ready = function (elem, done) {
 	  var info = data(elem);
@@ -22362,7 +22365,7 @@
 	  } else {
 	    info.readyCallbacks = [done];
 	  }
-	}
+	};
 
 	var h = builder();
 
@@ -23583,25 +23586,19 @@
 	      el.innerHTML = null;
 	    }
 	  }, {
-	    key: 'attached',
-	    value: function attached(el) {
-	      var $el = $(el);
-	      $el.find('button.lud-alert__close').bind("click", function () {
-	        $el.find('div.lud-alert').slideUp('fast', function () {
-	          return $el.remove();
-	        });
-	      });
-	    }
-	  }, {
 	    key: 'render',
 	    value: function render(el) {
 	      var _classNames;
 
 	      var alertCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, 'lud-alert', true), _defineProperty(_classNames, 'lud-alert--' + el.type, true), _classNames));
-
+	      var $el = $(el);
 	      var closable = !el.closable ? null : skate.h(
 	        'button',
-	        { type: 'button', 'class': 'lud-alert__close', 'aria-label': 'Close' },
+	        { type: 'button', 'class': 'lud-alert__close', 'aria-label': 'Close', onClick: function onClick() {
+	            $el.find('div.lud-alert').slideUp('fast', function () {
+	              return $el.remove();
+	            });
+	          } },
 	        skate.h('i', { className: 'lud-icon lud-icon--close' })
 	      );
 	      var child = skate.h('span', { ref: function ref(x) {
@@ -23756,6 +23753,116 @@
 
 /***/ },
 /* 35 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	__webpack_require__(37);
+
+	var _lud_component = __webpack_require__(28);
+
+	var _lud_component2 = _interopRequireDefault(_lud_component);
+
+	var _skatejs = __webpack_require__(29);
+
+	var skate = _interopRequireWildcard(_skatejs);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*doc
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                title: Toggle 开关
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                name: toggle
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                category: 组件
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                开关选择器。
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 何时使用
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 需要表示开关状态/两种状态之间的切换时。
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 代码演示
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```html_example
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="lud-form-element">
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <label class="lud-form-element__label" for="text-input-01">Guest Mode</label>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="lud-form-element__control">
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-toggle name_is="guest-mode"></lud-toggle>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="lud-form-element">
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <label class="lud-form-element__label" for="text-input-01">Admin Mode</label>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="lud-form-element__control">
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-toggle name_is="admin-mode" value="root" disabled></lud-toggle>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var ludToggle = function (_ludComponent) {
+	  _inherits(ludToggle, _ludComponent);
+
+	  function ludToggle() {
+	    _classCallCheck(this, ludToggle);
+
+	    return _possibleConstructorReturn(this, (ludToggle.__proto__ || Object.getPrototypeOf(ludToggle)).apply(this, arguments));
+	  }
+
+	  _createClass(ludToggle, null, [{
+	    key: 'created',
+	    value: function created(el) {
+	      $(el).on('toggle', function () {
+	        if (el.disabled) return false;
+	        el.checked = !el.checked;
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render(el) {
+	      //noinspection CheckTagEmptyBody
+	      return skate.h(
+	        'div',
+	        { className: 'lud-toggle__wrap', onClick: function onClick() {
+	            return skate.emit(el, 'toggle');
+	          } },
+	        skate.h('input', { name: el.name_is, className: 'lud-toggle__input', checked: el.checked, disabled: el.disabled, value: el.value, type: 'checkbox', tabindex: '-1' }),
+	        skate.h('span', { className: 'lud-toggle__switch' })
+	      );
+	    }
+	  }]);
+
+	  return ludToggle;
+	}(_lud_component2.default);
+
+	ludToggle.props = {
+	  value: skate.prop.string({ attribute: true }),
+	  checked: skate.prop.boolean({ attribute: true }),
+	  disabled: skate.prop.boolean({ attribute: true }),
+	  name_is: skate.prop.string({ attribute: true })
+	};
+
+	skate.define('lud-toggle', ludToggle);
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ },
+/* 37 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
