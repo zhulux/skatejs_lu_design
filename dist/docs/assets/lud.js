@@ -14086,6 +14086,8 @@
 
 	__webpack_require__(36);
 
+	__webpack_require__(38);
+
 /***/ },
 /* 17 */
 /***/ function(module, exports, __webpack_require__) {
@@ -23517,11 +23519,25 @@
 /* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	__webpack_require__(33);
+
+/***/ },
+/* 33 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 34 */
+/***/ function(module, exports, __webpack_require__) {
+
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	__webpack_require__(33);
+	__webpack_require__(35);
 
 	var _lud_component = __webpack_require__(28);
 
@@ -23631,20 +23647,20 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 33 */
+/* 35 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 34 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	__webpack_require__(35);
+	__webpack_require__(37);
 
 	var _lud_component = __webpack_require__(28);
 
@@ -23752,20 +23768,20 @@
 	skate.define('lud-tag', ludTag);
 
 /***/ },
-/* 35 */
+/* 37 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 36 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	__webpack_require__(37);
+	__webpack_require__(39);
 
 	var _lud_component = __webpack_require__(28);
 
@@ -23802,14 +23818,14 @@
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="lud-form-element">
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <label class="lud-form-element__label" for="text-input-01">Guest Mode</label>
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="lud-form-element__control">
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-toggle name_is="guest-mode"></lud-toggle>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-toggle name="guest-mode"></lud-toggle>
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="lud-form-element">
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <label class="lud-form-element__label" for="text-input-01">Admin Mode</label>
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="lud-form-element__control">
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-toggle name_is="admin-mode" value="root" disabled></lud-toggle>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-toggle name="admin-mode" value="root" disabled></lud-toggle>
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```
@@ -23828,7 +23844,10 @@
 	  _createClass(ludToggle, null, [{
 	    key: 'created',
 	    value: function created(el) {
-	      $(el).on('toggle', function () {
+	      el.input_name = el.name;
+	      var $el = $(el);
+	      $el.attr('name', el.input_name + '-wrap');
+	      $el.on('toggle', function () {
 	        if (el.disabled) return false;
 	        el.checked = !el.checked;
 	      });
@@ -23842,7 +23861,7 @@
 	        { className: 'lud-toggle__wrap', onClick: function onClick() {
 	            return skate.emit(el, 'toggle');
 	          } },
-	        skate.h('input', { name: el.name_is, className: 'lud-toggle__input', checked: el.checked, disabled: el.disabled, value: el.value, type: 'checkbox', tabindex: '-1' }),
+	        skate.h('input', { name: el.input_name, className: 'lud-toggle__input', checked: el.checked, disabled: el.disabled, value: el.value, type: 'checkbox', tabindex: '-1' }),
 	        skate.h('span', { className: 'lud-toggle__switch' })
 	      );
 	    }
@@ -23855,14 +23874,15 @@
 	  value: skate.prop.string({ attribute: true }),
 	  checked: skate.prop.boolean({ attribute: true }),
 	  disabled: skate.prop.boolean({ attribute: true }),
-	  name_is: skate.prop.string({ attribute: true })
+	  name: skate.prop.string({ attribute: true }),
+	  input_name: skate.prop.string()
 	};
 
 	skate.define('lud-toggle', ludToggle);
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 37 */
+/* 39 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

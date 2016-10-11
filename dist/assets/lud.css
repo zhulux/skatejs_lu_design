@@ -1574,97 +1574,6 @@ img {
 .lud-modal__header .lud-notify--toast {
   display: block; }
 
-.lud-avatar {
-  overflow: hidden;
-  display: inline-block;
-  vertical-align: middle;
-  border-radius: 0.25rem;
-  line-height: 1; }
-  .lud-avatar:hover, .lud-avatar:focus:hover {
-    color: currentColor; }
-  .lud-avatar--x-small {
-    width: 1.25rem;
-    height: 1.25rem; }
-  .lud-avatar--small {
-    width: 1.5rem;
-    height: 1.5rem; }
-  .lud-avatar--medium {
-    width: 2rem;
-    height: 2rem; }
-  .lud-avatar--large {
-    width: 3rem;
-    height: 3rem; }
-  .lud-avatar--circle {
-    border-radius: 50%; }
-  .lud-avatar--empty {
-    border: 1px dashed #d8dde6; }
-
-.lud-image {
-  display: block;
-  position: relative; }
-  .lud-image__crop {
-    display: block;
-    position: relative;
-    overflow: hidden; }
-    .lud-image__crop img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate3d(-50%, -50%, 0);
-      max-width: 200%; }
-    .lud-image__crop:after {
-      content: '';
-      display: block; }
-    .lud-image__crop--1-by-1 {
-      padding-top: 100%; }
-    .lud-image__crop--16-by-9 {
-      padding-top: 56.25%; }
-    .lud-image__crop--4-by-3 {
-      padding-top: 75%; }
-  .lud-image__title {
-    display: flex;
-    align-items: center;
-    padding: 0.5rem; }
-    .lud-image__title--overlay {
-      color: white;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0; }
-      .lud-image__title--overlay .lud-image__text {
-        z-index: 1; }
-    .lud-image__title--card {
-      background: #f4f6f9;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0; }
-  .lud-image--overlay {
-    content: '';
-    background: rgba(0, 0, 0, 0.4);
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1; }
-  .lud-image--card {
-    background: white;
-    border-top: 1px solid #f4f6f9;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16); }
-  .lud-image__icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    margin-top: -1rem; }
-  .lud-image__actions {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem; }
-
 .lud-table {
   background-color: white; }
   .lud-table th,
@@ -7457,6 +7366,96 @@ lud-icon {
 
 .lud-icon--zoomout:before {
   content: "\E7B9"; }
+.lud-avatar {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 0.25rem;
+  line-height: 1; }
+  .lud-avatar:hover, .lud-avatar:focus:hover {
+    color: currentColor; }
+  .lud-avatar--x-small {
+    width: 1.25rem;
+    height: 1.25rem; }
+  .lud-avatar--small {
+    width: 1.5rem;
+    height: 1.5rem; }
+  .lud-avatar--medium {
+    width: 2rem;
+    height: 2rem; }
+  .lud-avatar--large {
+    width: 3rem;
+    height: 3rem; }
+  .lud-avatar--circle {
+    border-radius: 50%; }
+  .lud-avatar--empty {
+    border: 1px dashed #d8dde6; }
+
+.lud-image {
+  display: block;
+  position: relative; }
+  .lud-image__crop {
+    display: block;
+    position: relative;
+    overflow: hidden; }
+    .lud-image__crop img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      max-width: 200%; }
+    .lud-image__crop:after {
+      content: '';
+      display: block; }
+    .lud-image__crop--1-by-1 {
+      padding-top: 100%; }
+    .lud-image__crop--16-by-9 {
+      padding-top: 56.25%; }
+    .lud-image__crop--4-by-3 {
+      padding-top: 75%; }
+  .lud-image__title {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem; }
+    .lud-image__title--overlay {
+      color: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+      .lud-image__title--overlay .lud-image__text {
+        z-index: 1; }
+    .lud-image__title--card {
+      background: #f4f6f9;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0; }
+  .lud-image--overlay {
+    content: '';
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; }
+  .lud-image--card {
+    background: white;
+    border-top: 1px solid #f4f6f9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16); }
+  .lud-image__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    margin-top: -1rem; }
+  .lud-image__actions {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem; }
 lud-alert {
   opacity: 1;
   transition: opacity .3s ease; }
