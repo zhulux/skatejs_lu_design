@@ -6697,6 +6697,36 @@ lud-icon {
 
 .lud-navigation-list--vertical-inverse .lud-is-active .lud-navigation-list--vertical__action {
   background-color: white; }
+lud-phone-mockup {
+  opacity: 1;
+  transition: opacity .3s ease; }
+  lud-phone-mockup:not([defined]) {
+    opacity: 0; }
+
+.lud-phone-mockup {
+  display: block;
+  position: relative;
+  margin: 2.5rem auto;
+  width: 18.75rem;
+  border: 1px solid #999;
+  border-radius: 1.2rem;
+  background-color: #f4f6f9; }
+  .lud-phone-mockup:before {
+    content: '';
+    position: absolute;
+    width: 4.375rem;
+    height: 0.5rem;
+    border: 1px solid #999;
+    border-radius: 0.8em;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%); }
+  .lud-phone-mockup .lud-phone-mockup__body {
+    max-width: calc(100% - rem(20));
+    margin: 2.8125rem 0.625rem;
+    border: 1px solid #999;
+    max-height: 31.25rem;
+    overflow-y: scroll; }
 .select2-container {
   box-sizing: border-box;
   display: inline-block;

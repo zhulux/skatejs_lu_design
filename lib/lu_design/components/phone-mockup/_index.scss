@@ -1,0 +1,32 @@
+@import "../../config";
+@import "../../dependencies/index";
+
+@include fixed-component-fouc('lud-phone-mockup');
+.#{$css-prefix}phone-mockup {
+  display: block;
+  position: relative;
+  margin: rem(40) auto;
+  width: rem(300);
+  border: 1px solid #999;
+  border-radius: 1.2rem;
+  background-color: $color-background;
+  &:before{
+    content: '';
+    position: absolute;
+    width: rem(70);
+    height: rem(8);
+    border: 1px solid #999;
+    border-radius: 0.8em;
+    top: rem(16);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .#{$css-prefix}phone-mockup__body{
+    max-width: calc(100% - rem(20));
+    margin: rem(45) rem(10);
+    border: 1px solid #999;
+    max-height: rem(500);
+    overflow-y: scroll;
+  }
+}

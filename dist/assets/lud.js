@@ -14086,11 +14086,13 @@
 
 	__webpack_require__(35);
 
-	__webpack_require__(38);
+	__webpack_require__(37);
 
 	__webpack_require__(40);
 
 	__webpack_require__(42);
+
+	__webpack_require__(44);
 
 /***/ },
 /* 17 */
@@ -17169,9 +17171,101 @@
 
 	'use strict';
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	__webpack_require__(36);
 
-	__webpack_require__(37);
+	var _lud_component = __webpack_require__(19);
+
+	var _lud_component2 = _interopRequireDefault(_lud_component);
+
+	var _skatejs = __webpack_require__(20);
+
+	var skate = _interopRequireWildcard(_skatejs);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*doc
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                title: Phone Mockup
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                name: phone-mockup
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                category: 组件
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                显示移动端预览效果。
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 代码演示
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```html_example
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-phone-mockup>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   <img src="http://a3.mzstatic.com/us/r30/Purple62/v4/25/39/23/2539239c-4bdd-b750-84dd-82f6fef81c11/screen696x696.jpeg"/>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </lud-phone-mockup>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var ludPhoneMockup = function (_ludComponent) {
+	  _inherits(ludPhoneMockup, _ludComponent);
+
+	  function ludPhoneMockup() {
+	    _classCallCheck(this, ludPhoneMockup);
+
+	    return _possibleConstructorReturn(this, (ludPhoneMockup.__proto__ || Object.getPrototypeOf(ludPhoneMockup)).apply(this, arguments));
+	  }
+
+	  _createClass(ludPhoneMockup, null, [{
+	    key: 'created',
+	    value: function created(el) {
+	      el.child = el.innerHTML;
+	      el.innerHTML = null;
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render(el) {
+	      var child = skate.h('div', { ref: function ref(x) {
+	          return x.innerHTML = el.child;
+	        }, className: 'lud-phone-mockup__body', skip: true });
+
+	      return skate.h(
+	        'div',
+	        { className: 'lud-phone-mockup', role: 'alert' },
+	        child
+	      );
+	    }
+	  }]);
+
+	  return ludPhoneMockup;
+	}(_lud_component2.default);
+
+	ludPhoneMockup.props = {
+	  child: skate.prop.string()
+	};
+
+
+	skate.define('lud-phone-mockup', ludPhoneMockup);
+
+/***/ },
+/* 36 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 37 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(38);
+
+	__webpack_require__(39);
 
 	var _jquery = __webpack_require__(2);
 
@@ -17222,13 +17316,13 @@
 	(0, _jquery2.default)(document).on("turbolinks:load", init_select).on("ajax:success", init_select); // ujs remote:true
 
 /***/ },
-/* 36 */
+/* 38 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 37 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var require;var require;/* WEBPACK VAR INJECTION */(function($) {/*!
@@ -23671,14 +23765,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 38 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	__webpack_require__(39);
+	__webpack_require__(41);
 
 	var _lud_component = __webpack_require__(19);
 
@@ -23743,20 +23837,20 @@
 	skate.define('lud-spinner', ludSpinner);
 
 /***/ },
-/* 39 */
+/* 41 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 40 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	__webpack_require__(41);
+	__webpack_require__(43);
 
 	var _lud_component = __webpack_require__(19);
 
@@ -23864,20 +23958,20 @@
 	skate.define('lud-tag', ludTag);
 
 /***/ },
-/* 41 */
+/* 43 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 42 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	__webpack_require__(43);
+	__webpack_require__(45);
 
 	var _lud_component = __webpack_require__(19);
 
@@ -23978,7 +24072,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 43 */
+/* 45 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
