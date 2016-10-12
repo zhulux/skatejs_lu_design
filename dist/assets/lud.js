@@ -14072,21 +14072,21 @@
 
 	__webpack_require__(17);
 
-	__webpack_require__(23);
+	__webpack_require__(19);
 
-	__webpack_require__(25);
+	__webpack_require__(21);
 
-	__webpack_require__(27);
+	__webpack_require__(24);
 
 	__webpack_require__(29);
 
-	__webpack_require__(31);
+	__webpack_require__(32);
 
-	__webpack_require__(33);
+	__webpack_require__(34);
 
-	__webpack_require__(35);
+	__webpack_require__(36);
 
-	__webpack_require__(37);
+	__webpack_require__(38);
 
 	__webpack_require__(40);
 
@@ -14096,122 +14096,15 @@
 
 	__webpack_require__(46);
 
+	__webpack_require__(48);
+
 /***/ },
 /* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	'use strict';
 
 	__webpack_require__(18);
-
-	var _lud_component = __webpack_require__(19);
-
-	var _lud_component2 = _interopRequireDefault(_lud_component);
-
-	var _skatejs = __webpack_require__(20);
-
-	var skate = _interopRequireWildcard(_skatejs);
-
-	var _classnames = __webpack_require__(22);
-
-	var _classnames2 = _interopRequireDefault(_classnames);
-
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*doc
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                title: Alert 提示
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                name: alerts
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                category: 组件
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                警告提示，展现需要关注的信息。
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 何时使用
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 当某个页面需要向用户显示警告的信息时。
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 非浮层的静态展现形式，始终展现，不会自动消失，用户可以点击关闭。
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 代码演示
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```html_example
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               <lud-alert type="info">Base System Alert</lud-alert>
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               <lud-alert type="success" closable="true"><lud-icon type="customapps"></lud-icon>我们将在周五凌晨进行停机维护，带来不便深表歉意。</lud-alert>
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               <lud-alert type="warning">任何未经许可的访问，我们都将在法律允许的最大范围内追究责任。</lud-alert>
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               <lud-alert type="danger">我们中出了一个叛徒。</lud-alert>
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-
-
-	var ludAlert = function (_ludComponent) {
-	  _inherits(ludAlert, _ludComponent);
-
-	  function ludAlert() {
-	    _classCallCheck(this, ludAlert);
-
-	    return _possibleConstructorReturn(this, (ludAlert.__proto__ || Object.getPrototypeOf(ludAlert)).apply(this, arguments));
-	  }
-
-	  _createClass(ludAlert, null, [{
-	    key: 'created',
-	    value: function created(el) {
-	      el.child = el.innerHTML;
-	      el.innerHTML = null;
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render(el) {
-	      var _classNames;
-
-	      var alertCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, 'lud-alert', true), _defineProperty(_classNames, 'lud-alert--' + el.type, true), _classNames));
-	      var $el = $(el);
-	      var closable = !el.closable ? null : skate.h(
-	        'button',
-	        { type: 'button', 'class': 'lud-alert__close', 'aria-label': 'Close', onClick: function onClick() {
-	            $el.find('div.lud-alert').slideUp('fast', function () {
-	              return $el.remove();
-	            });
-	          } },
-	        skate.h('i', { className: 'lud-icon lud-icon--close' })
-	      );
-	      var child = skate.h('span', { ref: function ref(x) {
-	          return x.innerHTML = el.child;
-	        }, skip: true });
-
-	      return skate.h(
-	        'div',
-	        { className: alertCls, role: 'alert' },
-	        closable,
-	        child
-	      );
-	    }
-	  }]);
-
-	  return ludAlert;
-	}(_lud_component2.default);
-
-	ludAlert.props = {
-	  type: skate.prop.string({
-	    attribute: true,
-	    default: 'info'
-	  }),
-	  closable: skate.prop.boolean({ attribute: true }),
-	  child: skate.prop.string()
-	};
-
-
-	skate.define('lud-alert', ludAlert);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
 /* 18 */
@@ -14225,3049 +14118,23 @@
 
 	'use strict';
 
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _skatejs = __webpack_require__(20);
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var ludComponent = function (_Component) {
-	  _inherits(ludComponent, _Component);
-
-	  function ludComponent() {
-	    _classCallCheck(this, ludComponent);
-
-	    return _possibleConstructorReturn(this, (ludComponent.__proto__ || Object.getPrototypeOf(ludComponent)).apply(this, arguments));
-	  }
-
-	  _createClass(ludComponent, [{
-	    key: 'attachShadow',
-	    value: function attachShadow() {
-	      return this; // disabled ShadowDom
-	    }
-
-	    // However, in old Chrome / Opera or old polyfills
-	    // you might need to do this.
-
-	  }, {
-	    key: 'createShadowRoot',
-	    value: function createShadowRoot() {
-	      return this;
-	    }
-	  }]);
-
-	  return ludComponent;
-	}(_skatejs.Component);
-
-	exports.default = ludComponent;
+	__webpack_require__(20);
 
 /***/ },
 /* 20 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	(function (global, factory) {
-	   true ? factory(exports, __webpack_require__(21)) :
-	  typeof define === 'function' && define.amd ? define(['exports', 'incremental-dom'], factory) :
-	  (factory((global.skate = global.skate || {}),global.IncrementalDOM));
-	}(this, (function (exports,incrementalDom) {
-
-	function keys() {
-	  var obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
-	  var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-	  var _ref$enumOnly = _ref.enumOnly;
-	  var enumOnly = _ref$enumOnly === undefined ? false : _ref$enumOnly;
-
-	  var listOfKeys = Object[enumOnly ? 'keys' : 'getOwnPropertyNames'](obj);
-	  return typeof Object.getOwnPropertySymbols === 'function' ? listOfKeys.concat(Object.getOwnPropertySymbols(obj)) : listOfKeys;
-	}
-
-	// We are not using Object.assign if it is defined since it will cause problems when Symbol is polyfilled.
-	// Apparently Object.assign (or any polyfill for this method) does not copy non-native Symbols.
-	var assign = (function (obj) {
-	  for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-	    args[_key - 1] = arguments[_key];
-	  }
-
-	  args.forEach(function (arg) {
-	    return keys(arg).forEach(function (name) {
-	      return obj[name] = arg[name];
-	    });
-	  }); // eslint-disable-line no-return-assign
-	  return obj;
-	});
-
-	var empty = function (val) {
-	  return typeof val === 'undefined' || val === null;
-	};
-
-	var alwaysUndefinedIfNotANumberOrNumber = function alwaysUndefinedIfNotANumberOrNumber(val) {
-	  return isNaN(val) ? undefined : Number(val);
-	};
-	var alwaysUndefinedIfEmptyOrString = function alwaysUndefinedIfEmptyOrString(val) {
-	  return empty(val) ? undefined : String(val);
-	};
-
-	function create(def) {
-	  return function () {
-	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-	      args[_key] = arguments[_key];
-	    }
-
-	    args.unshift({}, def);
-	    return assign.apply(undefined, args);
-	  };
-	}
-
-	var array = create({
-	  coerce: function coerce(val) {
-	    return Array.isArray(val) ? val : [val];
-	  },
-	  default: function _default() {
-	    return [];
-	  },
-	  deserialize: JSON.parse,
-	  serialize: JSON.stringify
-	});
-
-	var boolean = create({
-	  coerce: function coerce(value) {
-	    return !!value;
-	  },
-	  default: false,
-	  deserialize: function deserialize(value) {
-	    return !(value === null);
-	  },
-	  serialize: function serialize(value) {
-	    return value ? '' : undefined;
-	  }
-	});
-
-	var number = create({
-	  default: 0,
-	  coerce: alwaysUndefinedIfNotANumberOrNumber,
-	  deserialize: alwaysUndefinedIfNotANumberOrNumber,
-	  serialize: alwaysUndefinedIfNotANumberOrNumber
-	});
-
-	var string = create({
-	  default: '',
-	  coerce: alwaysUndefinedIfEmptyOrString,
-	  deserialize: alwaysUndefinedIfEmptyOrString,
-	  serialize: alwaysUndefinedIfEmptyOrString
-	});
-
-	var prop = Object.freeze({
-		create: create,
-		array: array,
-		boolean: boolean,
-		number: number,
-		string: string
-	});
-
-	var connected = '____skate_connected';
-	var created$1 = '____skate_created';
-	var name$1 = '____skate_name';
-	var props = '____skate_props';
-	var ref$1 = '____skate_ref';
-	var renderer = '____skate_renderer';
-	var rendering = '____skate_rendering';
-	var rendererDebounced = '____skate_rendererDebounced';
-	var shadowRoot = '____skate_shadowRoot';
-
-
-
-	var symbols$1 = Object.freeze({
-		name: name$1,
-		shadowRoot: shadowRoot
-	});
-
-	var doc = document;
-	var win = window;
-	var div = doc.createElement('div');
-	var customElementsV0 = !!doc.registerElement;
-	var customElementsV1 = !!win.customElements;
-	var shadowDomV0 = !!div.createShadowRoot;
-	var shadowDomV1 = !!div.attachShadow;
-	var reflect = 'Reflect' in window;
-
-	function enter(object, props) {
-	  var saved = {};
-	  Object.keys(props).forEach(function (key) {
-	    saved[key] = object[key];
-	    object[key] = props[key];
-	  });
-	  return saved;
-	}
-
-	function exit(object, saved) {
-	  assign(object, saved);
-	}
-
-	// Decorates a function with a side effect that changes the properties of an
-	// object during its execution, and restores them after. There is no error
-	// handling here, if the wrapped function throws an error, properties are not
-	// restored and all bets are off.
-	var propContext = function (object, props) {
-	  return function (func) {
-	    return function () {
-	      var saved = enter(object, props);
-	      var result = func.apply(undefined, arguments);
-	      exit(object, saved);
-	      return result;
-	    };
-	  };
-	};
-
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
-	  return typeof obj;
-	} : function (obj) {
-	  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-	};
-
-
-
-
-
-	var asyncGenerator = function () {
-	  function AwaitValue(value) {
-	    this.value = value;
-	  }
-
-	  function AsyncGenerator(gen) {
-	    var front, back;
-
-	    function send(key, arg) {
-	      return new Promise(function (resolve, reject) {
-	        var request = {
-	          key: key,
-	          arg: arg,
-	          resolve: resolve,
-	          reject: reject,
-	          next: null
-	        };
-
-	        if (back) {
-	          back = back.next = request;
-	        } else {
-	          front = back = request;
-	          resume(key, arg);
-	        }
-	      });
-	    }
-
-	    function resume(key, arg) {
-	      try {
-	        var result = gen[key](arg);
-	        var value = result.value;
-
-	        if (value instanceof AwaitValue) {
-	          Promise.resolve(value.value).then(function (arg) {
-	            resume("next", arg);
-	          }, function (arg) {
-	            resume("throw", arg);
-	          });
-	        } else {
-	          settle(result.done ? "return" : "normal", result.value);
-	        }
-	      } catch (err) {
-	        settle("throw", err);
-	      }
-	    }
-
-	    function settle(type, value) {
-	      switch (type) {
-	        case "return":
-	          front.resolve({
-	            value: value,
-	            done: true
-	          });
-	          break;
-
-	        case "throw":
-	          front.reject(value);
-	          break;
-
-	        default:
-	          front.resolve({
-	            value: value,
-	            done: false
-	          });
-	          break;
-	      }
-
-	      front = front.next;
-
-	      if (front) {
-	        resume(front.key, front.arg);
-	      } else {
-	        back = null;
-	      }
-	    }
-
-	    this._invoke = send;
-
-	    if (typeof gen.return !== "function") {
-	      this.return = undefined;
-	    }
-	  }
-
-	  if (typeof Symbol === "function" && Symbol.asyncIterator) {
-	    AsyncGenerator.prototype[Symbol.asyncIterator] = function () {
-	      return this;
-	    };
-	  }
-
-	  AsyncGenerator.prototype.next = function (arg) {
-	    return this._invoke("next", arg);
-	  };
-
-	  AsyncGenerator.prototype.throw = function (arg) {
-	    return this._invoke("throw", arg);
-	  };
-
-	  AsyncGenerator.prototype.return = function (arg) {
-	    return this._invoke("return", arg);
-	  };
-
-	  return {
-	    wrap: function (fn) {
-	      return function () {
-	        return new AsyncGenerator(fn.apply(this, arguments));
-	      };
-	    },
-	    await: function (value) {
-	      return new AwaitValue(value);
-	    }
-	  };
-	}();
-
-
-
-
-
-	var classCallCheck = function (instance, Constructor) {
-	  if (!(instance instanceof Constructor)) {
-	    throw new TypeError("Cannot call a class as a function");
-	  }
-	};
-
-
-
-
-
-
-
-	var defineProperty = function (obj, key, value) {
-	  if (key in obj) {
-	    Object.defineProperty(obj, key, {
-	      value: value,
-	      enumerable: true,
-	      configurable: true,
-	      writable: true
-	    });
-	  } else {
-	    obj[key] = value;
-	  }
-
-	  return obj;
-	};
-
-	var get$1 = function get$1(object, property, receiver) {
-	  if (object === null) object = Function.prototype;
-	  var desc = Object.getOwnPropertyDescriptor(object, property);
-
-	  if (desc === undefined) {
-	    var parent = Object.getPrototypeOf(object);
-
-	    if (parent === null) {
-	      return undefined;
-	    } else {
-	      return get$1(parent, property, receiver);
-	    }
-	  } else if ("value" in desc) {
-	    return desc.value;
-	  } else {
-	    var getter = desc.get;
-
-	    if (getter === undefined) {
-	      return undefined;
-	    }
-
-	    return getter.call(receiver);
-	  }
-	};
-
-	var inherits = function (subClass, superClass) {
-	  if (typeof superClass !== "function" && superClass !== null) {
-	    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-	  }
-
-	  subClass.prototype = Object.create(superClass && superClass.prototype, {
-	    constructor: {
-	      value: subClass,
-	      enumerable: false,
-	      writable: true,
-	      configurable: true
-	    }
-	  });
-	  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-	};
-
-
-
-
-
-
-
-
-
-
-
-	var possibleConstructorReturn = function (self, call) {
-	  if (!self) {
-	    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-	  }
-
-	  return call && (typeof call === "object" || typeof call === "function") ? call : self;
-	};
-
-
-
-	var set$1 = function set$1(object, property, value, receiver) {
-	  var desc = Object.getOwnPropertyDescriptor(object, property);
-
-	  if (desc === undefined) {
-	    var parent = Object.getPrototypeOf(object);
-
-	    if (parent !== null) {
-	      set$1(parent, property, value, receiver);
-	    }
-	  } else if ("value" in desc && desc.writable) {
-	    desc.value = value;
-	  } else {
-	    var setter = desc.set;
-
-	    if (setter !== undefined) {
-	      setter.call(receiver, value);
-	    }
-	  }
-
-	  return value;
-	};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	var toConsumableArray = function (arr) {
-	  if (Array.isArray(arr)) {
-	    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
-
-	    return arr2;
-	  } else {
-	    return Array.from(arr);
-	  }
-	};
-
-	/* eslint no-plusplus: 0 */
-
-	var applyDefault = incrementalDom.attributes[incrementalDom.symbols.default];
-	var fallbackToV0 = !shadowDomV1 && shadowDomV0;
-
-	// A stack of children that corresponds to the current function helper being
-	// executed.
-	var stackChren = [];
-
-	var $skip = '__skip';
-	var $currentEventHandlers = '__events';
-	var $stackCurrentHelperProps = '__props';
-
-	// The current function helper in the stack.
-	var stackCurrentHelper = void 0;
-
-	// This is used for the Incremental DOM overrides to keep track of what args
-	// to pass the main elementOpen() function.
-	var overrideArgs = void 0;
-
-	// The number of levels deep after skipping a tree.
-	var skips = 0;
-
-	var noop = function noop() {};
-
-	// Adds or removes an event listener for an element.
-	function applyEvent(elem, ename, newFunc) {
-	  var events = elem[$currentEventHandlers];
-
-	  if (!events) {
-	    events = elem[$currentEventHandlers] = {};
-	  }
-
-	  var oldFunc = events[ename];
-
-	  // Remove old listener so they don't double up.
-	  if (oldFunc) {
-	    elem.removeEventListener(ename, oldFunc);
-	  }
-
-	  // Bind new listener.
-	  if (newFunc) {
-	    elem.addEventListener(ename, events[ename] = newFunc);
-	  }
-	}
-
-	var attributesContext = propContext(incrementalDom.attributes, defineProperty({
-	  // Attributes that shouldn't be applied to the DOM.
-	  key: noop,
-	  statics: noop,
-
-	  // Attributes that *must* be set via a property on all elements.
-	  checked: incrementalDom.applyProp,
-	  className: incrementalDom.applyProp,
-	  disabled: incrementalDom.applyProp,
-	  value: incrementalDom.applyProp,
-
-	  // V0 Shadow DOM to V1 normalisation.
-	  name: function name(elem, _name, value) {
-	    if (elem.tagName === 'CONTENT') {
-	      _name = 'select';
-	      value = '[slot="' + value + '"]';
-	    }
-	    applyDefault(elem, _name, value);
-	  },
-
-
-	  // Ref handler.
-	  ref: function ref(elem, name$$1, value) {
-	    elem[ref$1] = value;
-	  },
-
-
-	  // Skip handler.
-	  skip: function skip(elem, name$$1, value) {
-	    if (value) {
-	      elem[$skip] = true;
-	    } else {
-	      delete elem[$skip];
-	    }
-	  }
-	}, incrementalDom.symbols.default, function (elem, name$$1, value) {
-	  // Custom element properties should be set as properties.
-	  var props$$1 = elem.constructor.props;
-	  if (props$$1 && name$$1 in props$$1) {
-	    return incrementalDom.applyProp(elem, name$$1, value);
-	  }
-
-	  // Boolean false values should not set attributes at all.
-	  if (value === false) {
-	    return applyDefault(elem, name$$1);
-	  }
-
-	  // Handle built-in and custom events.
-	  if (name$$1.indexOf('on') === 0) {
-	    var firstChar = name$$1[2];
-	    var eventName = void 0;
-
-	    if (firstChar === '-') {
-	      eventName = name$$1.substring(3);
-	    } else if (firstChar === firstChar.toUpperCase()) {
-	      eventName = firstChar.toLowerCase() + name$$1.substring(3);
-	    }
-
-	    if (eventName) {
-	      applyEvent(elem, eventName, value);
-	      return;
-	    }
-	  }
-
-	  // Set defined props on the element directly. This ensures properties like
-	  // "value" on <input> elements get set correctly. Setting those as attributes
-	  // doesn't always work and setting props is faster than attributes.
-	  //
-	  // However, certain props on SVG elements are readonly and error when you try
-	  // to set them.
-	  if (name$$1 in elem && !('ownerSVGElement' in elem)) {
-	    incrementalDom.applyProp(elem, name$$1, value);
-	    return;
-	  }
-
-	  // Fallback to default IncrementalDOM behaviour.
-	  applyDefault(elem, name$$1, value);
-	}));
-
-	function resolveTagName(tname) {
-	  // If the tag name is a function, a Skate constructor or a standard function
-	  // is supported.
-	  //
-	  // - If a Skate constructor, the tag name is extracted from that.
-	  // - If a standard function, it is used as a helper.
-	  if (typeof tname === 'function') {
-	    return tname[name$1] || tname;
-	  }
-
-	  // Skate allows the consumer to use <slot /> and it will translate it to
-	  // <content /> if Shadow DOM V0 is preferred.
-	  if (tname === 'slot' && fallbackToV0) {
-	    return 'content';
-	  }
-
-	  // All other tag names are just passed through.
-	  return tname;
-	}
-
-	// Incremental DOM's elementOpen is where the hooks in `attributes` are applied,
-	// so it's the only function we need to execute in the context of our attributes.
-	var elementOpen$1 = attributesContext(incrementalDom.elementOpen);
-
-	function elementOpenStart(tag) {
-	  var key = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-	  var statics = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
-
-	  overrideArgs = [tag, key, statics];
-	}
-
-	function elementOpenEnd() {
-	  var node = newElementOpen.apply(undefined, toConsumableArray(overrideArgs)); // eslint-disable-line no-use-before-define
-	  overrideArgs = null;
-	  return node;
-	}
-
-	function wrapIdomFunc(func) {
-	  var tnameFuncHandler = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : noop;
-
-	  return function wrap() {
-	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-	      args[_key] = arguments[_key];
-	    }
-
-	    args[0] = resolveTagName(args[0]);
-	    stackCurrentHelper = null;
-	    if (typeof args[0] === 'function') {
-	      // If we've encountered a function, handle it according to the type of
-	      // function that is being wrapped.
-	      stackCurrentHelper = args[0];
-	      return tnameFuncHandler.apply(undefined, args);
-	    } else if (stackChren.length) {
-	      // We pass the wrap() function in here so that when it's called as
-	      // children, it will queue up for the next stack, if there is one.
-	      stackChren[stackChren.length - 1].push([wrap, args]);
-	    } else {
-	      if (func === elementOpen$1) {
-	        if (skips) {
-	          return ++skips;
-	        }
-
-	        var elem = func.apply(undefined, args);
-
-	        if (elem[$skip]) {
-	          ++skips;
-	        }
-
-	        return elem;
-	      }
-
-	      if (func === incrementalDom.elementClose) {
-	        if (skips === 1) {
-	          incrementalDom.skip();
-	        }
-
-	        // We only want to skip closing if it's not the last closing tag in the
-	        // skipped tree because we keep the element that initiated the skpping.
-	        if (skips && --skips) {
-	          return;
-	        }
-
-	        var _elem = func.apply(undefined, args);
-	        var ref$$1 = _elem[ref$1];
-
-	        // We delete so that it isn't called again for the same element. If the
-	        // ref changes, or the element changes, this will be defined again.
-	        delete _elem[ref$1];
-
-	        // Execute the saved ref after esuring we've cleand up after it.
-	        if (typeof ref$$1 === 'function') {
-	          ref$$1(_elem);
-	        }
-
-	        return _elem;
-	      }
-
-	      // We must call elementOpenStart and elementOpenEnd even if we are
-	      // skipping because they queue up attributes and then call elementClose.
-	      if (!skips || func === elementOpenStart || func === elementOpenEnd) {
-	        return func.apply(undefined, args);
-	      }
-	    }
-	  };
-	}
-
-	function newAttr() {
-	  for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-	    args[_key2] = arguments[_key2];
-	  }
-
-	  if (stackCurrentHelper) {
-	    stackCurrentHelper[$stackCurrentHelperProps][args[0]] = args[1];
-	  } else if (stackChren.length) {
-	    stackChren[stackChren.length - 1].push([newAttr, args]);
-	  } else {
-	    overrideArgs.push(args[0]);
-	    overrideArgs.push(args[1]);
-	  }
-	}
-
-	function stackOpen(tname, key, statics) {
-	  var props$$1 = { key: key, statics: statics };
-
-	  for (var _len3 = arguments.length, attrs = Array(_len3 > 3 ? _len3 - 3 : 0), _key3 = 3; _key3 < _len3; _key3++) {
-	    attrs[_key3 - 3] = arguments[_key3];
-	  }
-
-	  for (var a = 0; a < attrs.length; a += 2) {
-	    props$$1[attrs[a]] = attrs[a + 1];
-	  }
-	  tname[$stackCurrentHelperProps] = props$$1;
-	  stackChren.push([]);
-	}
-
-	function stackClose(tname) {
-	  var chren = stackChren.pop();
-	  var props$$1 = tname[$stackCurrentHelperProps];
-	  delete tname[$stackCurrentHelperProps];
-	  var elemOrFn = tname(props$$1, function () {
-	    return chren.forEach(function (args) {
-	      return args[0].apply(args, toConsumableArray(args[1]));
-	    });
-	  });
-	  return typeof elemOrFn === 'function' ? elemOrFn() : elemOrFn;
-	}
-
-	// Incremental DOM overrides
-	// -------------------------
-
-	// We must override internal functions that call internal Incremental DOM
-	// functions because we can't override the internal references. This means
-	// we must roughly re-implement their behaviour. Luckily, they're fairly
-	// simple.
-	var newElementOpenStart = wrapIdomFunc(elementOpenStart, stackOpen);
-	var newElementOpenEnd = wrapIdomFunc(elementOpenEnd);
-
-	// Standard open / closed overrides don't need to reproduce internal behaviour
-	// because they are the ones referenced from *End and *Start.
-	var newElementOpen = wrapIdomFunc(elementOpen$1, stackOpen);
-	var newElementClose = wrapIdomFunc(incrementalDom.elementClose, stackClose);
-
-	// Ensure we call our overridden functions instead of the internal ones.
-	function newElementVoid(tag) {
-	  for (var _len4 = arguments.length, args = Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {
-	    args[_key4 - 1] = arguments[_key4];
-	  }
-
-	  newElementOpen.apply(undefined, [tag].concat(args));
-	  return newElementClose(tag);
-	}
-
-	// Text override ensures their calls can queue if using function helpers.
-	var newText = wrapIdomFunc(incrementalDom.text);
-
-	// Convenience function for declaring an Incremental DOM element using
-	// hyperscript-style syntax.
-	function element(tname, attrs) {
-	  var atype = typeof attrs === 'undefined' ? 'undefined' : _typeof(attrs);
-
-	  // If attributes are a function, then they should be treated as children.
-
-	  for (var _len5 = arguments.length, chren = Array(_len5 > 2 ? _len5 - 2 : 0), _key5 = 2; _key5 < _len5; _key5++) {
-	    chren[_key5 - 2] = arguments[_key5];
-	  }
-
-	  if (atype === 'function' || atype === 'string' || atype === 'number') {
-	    chren.unshift(attrs);
-	  }
-
-	  // Ensure the attributes are an object. Null is considered an object so we
-	  // have to test for this explicitly.
-	  if (attrs === null || atype !== 'object') {
-	    attrs = {};
-	  }
-
-	  // We open the element so we can set attrs after.
-	  newElementOpenStart(tname, attrs.key, attrs.statics);
-
-	  // Delete so special attrs don't actually get set.
-	  delete attrs.key;
-	  delete attrs.statics;
-
-	  // Set attributes.
-	  Object.keys(attrs).forEach(function (name$$1) {
-	    return newAttr(name$$1, attrs[name$$1]);
-	  });
-
-	  // Close before we render the descendant tree.
-	  newElementOpenEnd(tname);
-
-	  chren.forEach(function (ch) {
-	    var ctype = typeof ch === 'undefined' ? 'undefined' : _typeof(ch);
-	    if (ctype === 'function') {
-	      ch();
-	    } else if (ctype === 'string' || ctype === 'number') {
-	      newText(ch);
-	    } else if (Array.isArray(ch)) {
-	      ch.forEach(function (sch) {
-	        return sch();
-	      });
-	    }
-	  });
-
-	  return newElementClose(tname);
-	}
-
-	// Even further convenience for building a DSL out of JavaScript functions or hooking into standard
-	// transpiles for JSX (React.createElement() / h).
-	function builder() {
-	  for (var _len6 = arguments.length, tags = Array(_len6), _key6 = 0; _key6 < _len6; _key6++) {
-	    tags[_key6] = arguments[_key6];
-	  }
-
-	  if (tags.length === 0) {
-	    return function () {
-	      for (var _len7 = arguments.length, args = Array(_len7), _key7 = 0; _key7 < _len7; _key7++) {
-	        args[_key7] = arguments[_key7];
-	      }
-
-	      return element.bind.apply(element, [null].concat(args));
-	    };
-	  }
-	  return tags.map(function (tag) {
-	    return function () {
-	      for (var _len8 = arguments.length, args = Array(_len8), _key8 = 0; _key8 < _len8; _key8++) {
-	        args[_key8] = arguments[_key8];
-	      }
-
-	      return element.bind.apply(element, [null, tag].concat(args));
-	    };
-	  });
-	}
-
-
-
-	var vdom = Object.freeze({
-		element: element,
-		builder: builder,
-		attr: newAttr,
-		elementClose: newElementClose,
-		elementOpen: newElementOpen,
-		elementOpenEnd: newElementOpenEnd,
-		elementOpenStart: newElementOpenStart,
-		elementVoid: newElementVoid,
-		text: newText
-	});
-
-	var data = function (element) {
-	  var namespace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
-
-	  var data = element.__SKATE_DATA || (element.__SKATE_DATA = {});
-	  return namespace && (data[namespace] || (data[namespace] = {})) || data; // eslint-disable-line no-mixed-operators
-	};
-
-	var longerTimeoutBrowsers = ['Edge', 'Trident', 'Firefox'];
-	var timeoutDuration = 0;
-	for (var i = 0; i < longerTimeoutBrowsers.length; i += 1) {
-	  if (navigator.userAgent.indexOf(longerTimeoutBrowsers[i]) >= 0) {
-	    timeoutDuration = 1;
-	    break;
-	  }
-	}
-
-	var debounce = function (fn) {
-	  var _this = this;
-
-	  var called = false;
-	  return function () {
-	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-	      args[_key] = arguments[_key];
-	    }
-
-	    if (!called) {
-	      called = true;
-	      setTimeout(function () {
-	        called = false;
-	        fn.apply(_this, args);
-	      }, timeoutDuration);
-	    }
-	  };
-	};
-
-	var getOwnPropertyDescriptors = function () {
-	  var obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
-	  return keys(obj).reduce(function (prev, curr) {
-	    prev[curr] = Object.getOwnPropertyDescriptor(obj, curr);
-	    return prev;
-	  }, {});
-	};
-
-	function getDefaultValue(elem, name, opts) {
-	  return typeof opts.default === 'function' ? opts.default(elem, { name: name }) : opts.default;
-	}
-
-	function getInitialValue(elem, name, opts) {
-	  return typeof opts.initial === 'function' ? opts.initial(elem, { name: name }) : opts.initial;
-	}
-
-	function getPropData(elem, name) {
-	  var elemData = data(elem, 'props');
-	  return elemData[name] || (elemData[name] = {});
-	}
-
-	function syncFirstTimeProp(elem, prop, propName, attributeName, propData) {
-	  var syncAttrValue = propData.lastAssignedValue;
-	  if (empty(syncAttrValue)) {
-	    if ('initial' in prop) {
-	      syncAttrValue = getInitialValue(elem, propName, prop);
-	    } else if ('default' in prop) {
-	      syncAttrValue = getDefaultValue(elem, propName, prop);
-	    }
-	  }
-	  if (!empty(syncAttrValue) && prop.serialize) {
-	    syncAttrValue = prop.serialize(syncAttrValue);
-	  }
-	  if (!empty(syncAttrValue)) {
-	    propData.syncingAttribute = true;
-	    elem.setAttribute(attributeName, syncAttrValue);
-	  }
-	}
-
-	function syncExistingProp(elem, prop, propName, attributeName, propData) {
-	  if (attributeName && !propData.settingAttribute) {
-	    var internalValue = propData.internalValue;
-
-	    var serializedValue = prop.serialize(internalValue);
-	    var currentAttrValue = elem.getAttribute(attributeName);
-	    var serializedIsEmpty = empty(serializedValue);
-	    var attributeChanged = !(serializedIsEmpty && empty(currentAttrValue) || serializedValue === currentAttrValue);
-
-	    propData.syncingAttribute = true;
-
-	    var shouldRemoveAttribute = empty(propData.lastAssignedValue);
-	    if (shouldRemoveAttribute || serializedIsEmpty) {
-	      elem.removeAttribute(attributeName);
-	    } else {
-	      elem.setAttribute(attributeName, serializedValue);
-	    }
-
-	    if (!attributeChanged && propData.syncingAttribute) {
-	      propData.syncingAttribute = false;
-	    }
-	  }
-
-	  // Allow the attribute to be linked again.
-	  propData.settingAttribute = false;
-	}
-
-	function syncPropToAttr(elem, prop, propName, isFirstSync) {
-	  var attributeName = data(elem, 'propertyLinks')[propName];
-	  var propData = getPropData(elem, propName);
-
-	  if (attributeName) {
-	    if (isFirstSync) {
-	      syncFirstTimeProp(elem, prop, propName, attributeName, propData);
-	    } else {
-	      syncExistingProp(elem, prop, propName, attributeName, propData);
-	    }
-	  }
-	}
-
-	function callConstructor(elem) {
-	  var elemData = data(elem);
-	  var readyCallbacks = elemData.readyCallbacks;
-	  var Ctor = elem.constructor;
-	  var created$$1 = Ctor.created;
-	  var observedAttributes = Ctor.observedAttributes;
-	  var props$$1 = Ctor.props;
-
-	  // Ensures that this can never be called twice.
-
-	  if (elem[created$1]) {
-	    return;
-	  }
-
-	  elem[created$1] = true;
-
-	  // Set up a renderer that is debounced for property sets to call directly.
-	  elem[rendererDebounced] = debounce(Ctor[renderer]);
-
-	  // Set up property lifecycle.
-	  if (props$$1 && Ctor[props]) {
-	    Ctor[props](elem);
-	  }
-
-	  // Props should be set up before calling this.
-	  if (created$$1) {
-	    created$$1(elem);
-	  }
-
-	  // Created should be set before invoking the ready listeners.
-	  if (readyCallbacks) {
-	    readyCallbacks.forEach(function (cb) {
-	      return cb(elem);
-	    });
-	    delete elemData.readyCallbacks;
-	  }
-
-	  // In v0 we must ensure the attributeChangedCallback is called for attrs
-	  // that aren't linked to props so that the callback behaves the same no
-	  // matter if v0 or v1 is being used.
-	  if (customElementsV0) {
-	    observedAttributes.forEach(function (name$$1) {
-	      var propertyName = data(elem, 'attributeLinks')[name$$1];
-	      if (!propertyName) {
-	        elem.attributeChangedCallback(name$$1, null, elem.getAttribute(name$$1));
-	      }
-	    });
-	  }
-	}
-
-	function syncPropsToAttrs(elem) {
-	  var props$$1 = elem.constructor.props;
-	  Object.keys(props$$1).forEach(function (propName) {
-	    var prop = props$$1[propName];
-	    syncPropToAttr(elem, prop, propName, true);
-	  });
-	}
-
-	function callConnected(elem) {
-	  var Ctor = elem.constructor;
-	  var attached = Ctor.attached;
-
-	  var render = Ctor[renderer];
-
-	  syncPropsToAttrs(elem);
-
-	  elem[connected] = true;
-
-	  if (typeof render === 'function') {
-	    render(elem);
-	  }
-
-	  if (typeof attached === 'function') {
-	    attached(elem);
-	  }
-
-	  elem.setAttribute('defined', '');
-	}
-
-	function callDisconnected(elem) {
-	  var detached = elem.constructor.detached;
-
-
-	  elem[connected] = false;
-
-	  if (typeof detached === 'function') {
-	    detached(elem);
-	  }
-	}
-
-	// v1
-	function Component() {
-	  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-	    args[_key] = arguments[_key];
-	  }
-
-	  var elem = reflect ? Reflect.construct(HTMLElement, args, this.constructor) : HTMLElement.call(this, args[0]);
-	  callConstructor(elem);
-	  return elem;
-	}
-
-	// v1
-	Component.observedAttributes = [];
-
-	// Skate
-	Component.props = {};
-
-	// Skate
-	Component.extend = function extend() {
-	  var definition = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-	  var Base = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this;
-
-	  // Create class for the user.
-	  var Ctor = function (_Base) {
-	    inherits(Ctor, _Base);
-
-	    function Ctor() {
-	      classCallCheck(this, Ctor);
-	      return possibleConstructorReturn(this, (Ctor.__proto__ || Object.getPrototypeOf(Ctor)).apply(this, arguments));
-	    }
-
-	    return Ctor;
-	  }(Base);
-
-	  // Pass on statics from the Base if not supported (IE 9 and 10).
-
-
-	  if (!Ctor.observedAttributes) {
-	    var staticOpts = getOwnPropertyDescriptors(Base);
-	    delete staticOpts.length;
-	    delete staticOpts.prototype;
-	    Object.defineProperties(Ctor, staticOpts);
-	  }
-
-	  // For inheriting from the object literal.
-	  var opts = getOwnPropertyDescriptors(definition);
-	  var prot = getOwnPropertyDescriptors(definition.prototype);
-
-	  // Prototype is non configurable (but is writable).
-	  delete opts.prototype;
-
-	  // Pass on static and instance members from the definition.
-	  Object.defineProperties(Ctor, opts);
-	  Object.defineProperties(Ctor.prototype, prot);
-
-	  return Ctor;
-	};
-
-	// Skate
-	//
-	// This is a default implementation that does strict equality copmarison on
-	// previous props and next props. It synchronously renders on the first prop
-	// that is different and returns immediately.
-	Component.updated = function updated(elem, prev) {
-	  if (!prev) {
-	    return true;
-	  }
-	  // use get all keys so that we check Symbols as well as regular props
-	  // using a for loop so we can break early
-	  var allKeys = keys(prev);
-	  for (var i = 0; i < allKeys.length; i += 1) {
-	    if (prev[allKeys[i]] !== elem[allKeys[i]]) {
-	      return true;
-	    }
-	  }
-	  return false;
-	};
-
-	Component.prototype = Object.create(HTMLElement.prototype, {
-	  // v1
-	  connectedCallback: {
-	    configurable: true,
-	    value: function value() {
-	      callConnected(this);
-	    }
-	  },
-
-	  // v1
-	  disconnectedCallback: {
-	    configurable: true,
-	    value: function value() {
-	      callDisconnected(this);
-	    }
-	  },
-
-	  // v0 and v1
-	  attributeChangedCallback: {
-	    configurable: true,
-	    value: function value(name$$1, oldValue, newValue) {
-	      var _constructor = this.constructor;
-	      var attributeChanged = _constructor.attributeChanged;
-	      var observedAttributes = _constructor.observedAttributes;
-
-	      var propertyName = data(this, 'attributeLinks')[name$$1];
-
-	      // In V0 we have to ensure the attribute is being observed.
-	      if (customElementsV0 && observedAttributes.indexOf(name$$1) === -1) {
-	        return;
-	      }
-
-	      if (propertyName) {
-	        var propData = data(this, 'props')[propertyName];
-
-	        // This ensures a property set doesn't cause the attribute changed
-	        // handler to run again once we set this flag. This only ever has a
-	        // chance to run when you set an attribute, it then sets a property and
-	        // then that causes the attribute to be set again.
-	        if (propData.syncingAttribute) {
-	          propData.syncingAttribute = false;
-	        } else {
-	          // Sync up the property.
-	          var propOpts = this.constructor.props[propertyName];
-	          propData.settingAttribute = true;
-	          var newPropVal = newValue !== null && propOpts.deserialize ? propOpts.deserialize(newValue) : newValue;
-	          this[propertyName] = newPropVal;
-	        }
-	      }
-
-	      if (attributeChanged) {
-	        attributeChanged(this, { name: name$$1, newValue: newValue, oldValue: oldValue });
-	      }
-	    }
-	  },
-
-	  // v0
-	  createdCallback: {
-	    configurable: true,
-	    value: function value() {
-	      callConstructor(this);
-	    }
-	  },
-
-	  // v0
-	  attachedCallback: {
-	    configurable: true,
-	    value: function value() {
-	      callConnected(this);
-	    }
-	  },
-
-	  // v0
-	  detachedCallback: {
-	    configurable: true,
-	    value: function value() {
-	      callDisconnected(this);
-	    }
-	  }
-	});
-
-	function get$2(elem) {
-	  var props$$1 = {};
-	  keys(elem.constructor.props).forEach(function (key) {
-	    props$$1[key] = elem[key];
-	  });
-
-	  return props$$1;
-	}
-
-	function set$2(elem, newProps) {
-	  assign(elem, newProps);
-	  if (elem.constructor.render) {
-	    elem.constructor[renderer](elem);
-	  }
-	}
-
-	var props$1 = function (elem, newProps) {
-	  return typeof newProps === 'undefined' ? get$2(elem) : set$2(elem, newProps);
-	};
-
-	var createRenderer = function (Ctor) {
-	  var render = Ctor.render;
-	  var rendered = Ctor.rendered;
-	  var updated = Ctor.updated;
-
-
-	  return function (elem) {
-	    if (elem[rendering] || !elem[connected]) {
-	      return;
-	    }
-
-	    // Flag as rendering. This prevents anything from trying to render - or
-	    // queueing a render - while there is a pending render.
-	    elem[rendering] = true;
-
-	    // Call the updated() callback to see if we should render.
-	    var shouldRender = true;
-	    if (updated) {
-	      var prev = elem[props];
-	      elem[props] = props$1(elem);
-	      shouldRender = updated(elem, prev);
-	    }
-
-	    // Even though this would ideally be checked in the updated() callback,
-	    // it may not be, so we ensure that there is a point in proceeding.
-	    if (!render) {
-	      elem[rendering] = false;
-	      return;
-	    }
-
-	    // Try and get the current shadow root (will be setup if not).
-	    var sr = elem[shadowRoot];
-
-	    // Setup the shadow root if it hasn't been setup yet.
-	    if (!sr) {
-	      if (shadowDomV1) {
-	        sr = elem.attachShadow({ mode: 'open' });
-	      } else if (shadowDomV0) {
-	        sr = elem.createShadowRoot();
-	      } else {
-	        sr = elem;
-	      }
-
-	      elem[shadowRoot] = sr;
-	    }
-
-	    if (shouldRender) {
-	      incrementalDom.patchInner(sr, function () {
-	        var possibleFn = render(elem);
-	        if (typeof possibleFn === 'function') {
-	          possibleFn();
-	        } else if (Array.isArray(possibleFn)) {
-	          possibleFn.forEach(function (fn) {
-	            if (typeof fn === 'function') {
-	              fn();
-	            }
-	          });
-	        }
-	      });
-
-	      if (rendered) {
-	        rendered(elem);
-	      }
-	    }
-
-	    elem[rendering] = false;
-	  };
-	};
-
-	var dashCase = function (str) {
-	  return str.split(/([A-Z])/).reduce(function (one, two, idx) {
-	    var dash = !one || idx % 2 === 0 ? '' : '-';
-	    return '' + one + dash + two.toLowerCase();
-	  });
-	};
-
-	function createNativePropertyDefinition(name$$1, opts) {
-	  var prop = {
-	    configurable: true,
-	    enumerable: true
-	  };
-
-	  prop.created = function created(elem) {
-	    var propData = getPropData(elem, name$$1);
-	    var attributeName = opts.attribute === true ? dashCase(name$$1) : opts.attribute;
-	    var initialValue = elem[name$$1];
-
-	    // Store property to attribute link information.
-	    data(elem, 'attributeLinks')[attributeName] = name$$1;
-	    data(elem, 'propertyLinks')[name$$1] = attributeName;
-
-	    // Set up initial value if it wasn't specified.
-	    if (empty(initialValue)) {
-	      if (attributeName && elem.hasAttribute(attributeName)) {
-	        initialValue = opts.deserialize(elem.getAttribute(attributeName));
-	      } else if ('initial' in opts) {
-	        initialValue = getInitialValue(elem, name$$1, opts);
-	      } else if ('default' in opts) {
-	        initialValue = getDefaultValue(elem, name$$1, opts);
-	      }
-	    }
-
-	    propData.internalValue = opts.coerce ? opts.coerce(initialValue) : initialValue;
-	  };
-
-	  prop.get = function get() {
-	    var propData = getPropData(this, name$$1);
-	    var internalValue = propData.internalValue;
-
-	    return typeof opts.get === 'function' ? opts.get(this, { name: name$$1, internalValue: internalValue }) : internalValue;
-	  };
-
-	  prop.set = function set(newValue) {
-	    var propData = getPropData(this, name$$1);
-	    propData.lastAssignedValue = newValue;
-	    var oldValue = propData.oldValue;
-
-
-	    if (empty(oldValue)) {
-	      oldValue = null;
-	    }
-
-	    if (empty(newValue)) {
-	      newValue = getDefaultValue(this, name$$1, opts);
-	    }
-
-	    if (typeof opts.coerce === 'function') {
-	      newValue = opts.coerce(newValue);
-	    }
-
-	    var changeData = { name: name$$1, newValue: newValue, oldValue: oldValue };
-
-	    if (typeof opts.set === 'function') {
-	      opts.set(this, changeData);
-	    }
-
-	    // Queue a re-render.
-	    this[rendererDebounced](this);
-
-	    // Update prop data so we can use it next time.
-	    propData.internalValue = propData.oldValue = newValue;
-
-	    // Link up the attribute.
-	    if (this[connected]) {
-	      syncPropToAttr(this, opts, name$$1, false);
-	    }
-	  };
-
-	  return prop;
-	}
-
-	var initProps = function (opts) {
-	  opts = opts || {};
-
-	  if (typeof opts === 'function') {
-	    opts = { coerce: opts };
-	  }
-
-	  return function (name$$1) {
-	    return createNativePropertyDefinition(name$$1, assign({
-	      default: null,
-	      deserialize: function deserialize(value) {
-	        return value;
-	      },
-	      serialize: function serialize(value) {
-	        return value;
-	      }
-	    }, opts));
-	  };
-	};
-
-	/* eslint no-bitwise: 0 */
-
-	// Ensures that definitions passed as part of the constructor are functions
-	// that return property definitions used on the element.
-	function ensurePropertyFunctions(Ctor) {
-	  var props$$1 = Ctor.props;
-
-	  return keys(props$$1).reduce(function (descriptors, descriptorName) {
-	    descriptors[descriptorName] = props$$1[descriptorName];
-	    if (typeof descriptors[descriptorName] !== 'function') {
-	      descriptors[descriptorName] = initProps(descriptors[descriptorName]);
-	    }
-	    return descriptors;
-	  }, {});
-	}
-
-	// Ensures the property definitions are transformed to objects that can be used
-	// to create properties on the element.
-	function ensurePropertyDefinitions(Ctor) {
-	  var props$$1 = ensurePropertyFunctions(Ctor);
-	  return keys(props$$1).reduce(function (descriptors, descriptorName) {
-	    descriptors[descriptorName] = props$$1[descriptorName](descriptorName);
-	    return descriptors;
-	  }, {});
-	}
-
-	// Ensures linked properties that have linked attributes are pre-formatted to
-	// the attribute name in which they are linked.
-	function formatLinkedAttributes(Ctor) {
-	  var observedAttributes = Ctor.observedAttributes;
-	  var props$$1 = Ctor.props;
-
-
-	  if (!props$$1) {
-	    return;
-	  }
-
-	  keys(props$$1).forEach(function (name$$1) {
-	    var prop = props$$1[name$$1];
-	    var attr = prop.attribute;
-	    if (attr) {
-	      // Ensure the property is updated.
-	      var linkedAttr = prop.attribute = attr === true ? dashCase(name$$1) : attr;
-
-	      // Automatically observe the attribute since they're linked from the
-	      // attributeChangedCallback.
-	      if (observedAttributes.indexOf(linkedAttr) === -1) {
-	        observedAttributes.push(linkedAttr);
-	      }
-	    }
-	  });
-
-	  // Merge observed attributes.
-	  Object.defineProperty(Ctor, 'observedAttributes', {
-	    configurable: true,
-	    enumerable: true,
-	    get: function get() {
-	      return observedAttributes;
-	    }
-	  });
-	}
-
-	function createInitProps(Ctor) {
-	  var props$$1 = ensurePropertyDefinitions(Ctor);
-
-	  return function (elem) {
-	    if (!props$$1) {
-	      return;
-	    }
-
-	    keys(props$$1).forEach(function (name$$1) {
-	      var prop = props$$1[name$$1];
-	      prop.created(elem);
-
-	      // https://bugs.webkit.org/show_bug.cgi?id=49739
-	      //
-	      // When Webkit fixes that bug so that native property accessors can be
-	      // retrieved, we can move defining the property to the prototype and away
-	      // from having to do if for every instance as all other browsers support
-	      // this.
-	      Object.defineProperty(elem, name$$1, prop);
-	    });
-	  };
-	}
-
-	function generateUniqueName(name$$1) {
-	  // http://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript/2117523#2117523
-	  var rand = 'xxxxxxxx'.replace(/[xy]/g, function (c) {
-	    var r = Math.random() * 16 | 0;
-	    var v = c === 'x' ? r : r & 0x3 | 0x8; // eslint-disable-line no-mixed-operators
-	    return v.toString(16);
-	  });
-
-	  return name$$1 + '-' + rand;
-	}
-
-	function prepareForRegistration(name$$1, Ctor) {
-	  Ctor[name$1] = name$$1;
-	  Ctor[props] = createInitProps(Ctor);
-	  Ctor[renderer] = createRenderer(Ctor);
-	}
-
-	function registerV0Element(name$$1, Ctor) {
-	  var res = void 0;
-	  var uniqueName = void 0;
-	  try {
-	    prepareForRegistration(name$$1, Ctor);
-	    res = document.registerElement(name$$1, Ctor);
-	  } catch (e) {
-	    uniqueName = generateUniqueName(name$$1);
-	    prepareForRegistration(uniqueName, Ctor);
-	    res = document.registerElement(uniqueName, Ctor);
-	  }
-	  return res;
-	}
-
-	function registerV1Element(name$$1, Ctor) {
-	  var uniqueName = name$$1;
-	  if (window.customElements.get(name$$1)) {
-	    uniqueName = generateUniqueName(name$$1);
-	  }
-	  prepareForRegistration(uniqueName, Ctor);
-	  window.customElements.define(uniqueName, Ctor, Ctor.extends ? { extends: Ctor.extends } : null);
-	  return Ctor;
-	}
-
-	var define = function (name$$1, opts) {
-	  if (opts === undefined) {
-	    throw new Error('You have to define options to register a component ' + name$$1);
-	  }
-	  var Ctor = (typeof opts === 'undefined' ? 'undefined' : _typeof(opts)) === 'object' ? Component.extend(opts) : opts;
-	  formatLinkedAttributes(Ctor);
-
-	  if (customElementsV1) {
-	    return registerV1Element(name$$1, Ctor);
-	  } else if (customElementsV0) {
-	    return registerV0Element(name$$1, Ctor);
-	  }
-
-	  throw new Error('Skate requires native custom element support or a polyfill.');
-	};
-
-	var Event = function (TheEvent) {
-	  if (TheEvent) {
-	    try {
-	      new TheEvent('emit-init'); // eslint-disable-line no-new
-	    } catch (e) {
-	      return undefined;
-	    }
-	  }
-	  return TheEvent;
-	}(window.Event);
-
-	function createCustomEvent(name) {
-	  var opts = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-	  var detail = opts.detail;
-
-	  delete opts.detail;
-
-	  var e = void 0;
-	  if (Event) {
-	    e = new Event(name, opts);
-	    if (typeof detail !== 'undefined') {
-	      Object.defineProperty(e, 'detail', { value: detail });
-	    }
-	  } else {
-	    e = document.createEvent('CustomEvent');
-	    e.initCustomEvent(name, opts.bubbles, opts.cancelable, detail);
-	  }
-	  return e;
-	}
-
-	var emit = function (elem, name) {
-	  var opts = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-	  if (opts.bubbles === undefined) {
-	    opts.bubbles = true;
-	  }
-	  if (opts.cancelable === undefined) {
-	    opts.cancelable = true;
-	  }
-	  if (opts.composed === undefined) {
-	    opts.composed = true;
-	  }
-	  return elem.dispatchEvent(createCustomEvent(name, opts));
-	};
-
-	function getValue(elem) {
-	  var type = elem.type;
-	  if (type === 'checkbox' || type === 'radio') {
-	    return elem.checked ? elem.value || true : false;
-	  }
-	  return elem.value;
-	}
-
-	var link = function (elem, target) {
-	  return function (e) {
-	    var value = getValue(e.target);
-	    var localTarget = target || e.target.name || 'value';
-
-	    if (localTarget.indexOf('.') > -1) {
-	      var parts = localTarget.split('.');
-	      var firstPart = parts[0];
-	      var propName = parts.pop();
-	      var obj = parts.reduce(function (prev, curr) {
-	        return prev && prev[curr];
-	      }, elem);
-
-	      obj[propName || e.target.name] = value;
-	      props$1(elem, defineProperty({}, firstPart, elem[firstPart]));
-	    } else {
-	      props$1(elem, defineProperty({}, localTarget, value));
-	    }
-	  };
-	};
-
-	var ready = function (elem, done) {
-	  var info = data(elem);
-	  if (elem[created$1]) {
-	    done(elem);
-	  } else if (info.readyCallbacks) {
-	    info.readyCallbacks.push(done);
-	  } else {
-	    info.readyCallbacks = [done];
-	  }
-	};
-
-	var h = builder();
-
-	exports.Component = Component;
-	exports.define = define;
-	exports.emit = emit;
-	exports.h = h;
-	exports.link = link;
-	exports.prop = prop;
-	exports.props = props$1;
-	exports.ready = ready;
-	exports.symbols = symbols$1;
-	exports.vdom = vdom;
-
-	Object.defineProperty(exports, '__esModule', { value: true });
-
-	})));
-	//# sourceMappingURL=index.js.map
-
+	// removed by extract-text-webpack-plugin
 
 /***/ },
 /* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
-	/**
-	 * @license
-	 * Copyright 2015 The Incremental DOM Authors. All Rights Reserved.
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 *      http://www.apache.org/licenses/LICENSE-2.0
-	 *
-	 * Unless required by applicable law or agreed to in writing, software
-	 * distributed under the License is distributed on an "AS-IS" BASIS,
-	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-	 * See the License for the specific language governing permissions and
-	 * limitations under the License.
-	 */
-
 	'use strict';
 
-	/**
-	 * Copyright 2015 The Incremental DOM Authors. All Rights Reserved.
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 *      http://www.apache.org/licenses/LICENSE-2.0
-	 *
-	 * Unless required by applicable law or agreed to in writing, software
-	 * distributed under the License is distributed on an "AS-IS" BASIS,
-	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-	 * See the License for the specific language governing permissions and
-	 * limitations under the License.
-	 */
+	__webpack_require__(22);
 
-	/**
-	 * A cached reference to the hasOwnProperty function.
-	 */
-	var hasOwnProperty = Object.prototype.hasOwnProperty;
-
-	/**
-	 * A cached reference to the create function.
-	 */
-	var create = Object.create;
-
-	/**
-	 * Used to prevent property collisions between our "map" and its prototype.
-	 * @param {!Object<string, *>} map The map to check.
-	 * @param {string} property The property to check.
-	 * @return {boolean} Whether map has property.
-	 */
-	var has = function (map, property) {
-	  return hasOwnProperty.call(map, property);
-	};
-
-	/**
-	 * Creates an map object without a prototype.
-	 * @return {!Object}
-	 */
-	var createMap = function () {
-	  return create(null);
-	};
-
-	/**
-	 * Keeps track of information needed to perform diffs for a given DOM node.
-	 * @param {!string} nodeName
-	 * @param {?string=} key
-	 * @constructor
-	 */
-	function NodeData(nodeName, key) {
-	  /**
-	   * The attributes and their values.
-	   * @const {!Object<string, *>}
-	   */
-	  this.attrs = createMap();
-
-	  /**
-	   * An array of attribute name/value pairs, used for quickly diffing the
-	   * incomming attributes to see if the DOM node's attributes need to be
-	   * updated.
-	   * @const {Array<*>}
-	   */
-	  this.attrsArr = [];
-
-	  /**
-	   * The incoming attributes for this Node, before they are updated.
-	   * @const {!Object<string, *>}
-	   */
-	  this.newAttrs = createMap();
-
-	  /**
-	   * The key used to identify this node, used to preserve DOM nodes when they
-	   * move within their parent.
-	   * @const
-	   */
-	  this.key = key;
-
-	  /**
-	   * Keeps track of children within this node by their key.
-	   * {?Object<string, !Element>}
-	   */
-	  this.keyMap = null;
-
-	  /**
-	   * Whether or not the keyMap is currently valid.
-	   * {boolean}
-	   */
-	  this.keyMapValid = true;
-
-	  /**
-	   * The node name for this node.
-	   * @const {string}
-	   */
-	  this.nodeName = nodeName;
-
-	  /**
-	   * @type {?string}
-	   */
-	  this.text = null;
-	}
-
-	/**
-	 * Initializes a NodeData object for a Node.
-	 *
-	 * @param {Node} node The node to initialize data for.
-	 * @param {string} nodeName The node name of node.
-	 * @param {?string=} key The key that identifies the node.
-	 * @return {!NodeData} The newly initialized data object
-	 */
-	var initData = function (node, nodeName, key) {
-	  var data = new NodeData(nodeName, key);
-	  node['__incrementalDOMData'] = data;
-	  return data;
-	};
-
-	/**
-	 * Retrieves the NodeData object for a Node, creating it if necessary.
-	 *
-	 * @param {Node} node The node to retrieve the data for.
-	 * @return {!NodeData} The NodeData for this Node.
-	 */
-	var getData = function (node) {
-	  var data = node['__incrementalDOMData'];
-
-	  if (!data) {
-	    var nodeName = node.nodeName.toLowerCase();
-	    var key = null;
-
-	    if (node instanceof Element) {
-	      key = node.getAttribute('key');
-	    }
-
-	    data = initData(node, nodeName, key);
-	  }
-
-	  return data;
-	};
-
-	/**
-	 * Copyright 2015 The Incremental DOM Authors. All Rights Reserved.
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 *      http://www.apache.org/licenses/LICENSE-2.0
-	 *
-	 * Unless required by applicable law or agreed to in writing, software
-	 * distributed under the License is distributed on an "AS-IS" BASIS,
-	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-	 * See the License for the specific language governing permissions and
-	 * limitations under the License.
-	 */
-
-	/** @const */
-	var symbols = {
-	  default: '__default',
-
-	  placeholder: '__placeholder'
-	};
-
-	/**
-	 * @param {string} name
-	 * @return {string|undefined} The namespace to use for the attribute.
-	 */
-	var getNamespace = function (name) {
-	  if (name.lastIndexOf('xml:', 0) === 0) {
-	    return 'http://www.w3.org/XML/1998/namespace';
-	  }
-
-	  if (name.lastIndexOf('xlink:', 0) === 0) {
-	    return 'http://www.w3.org/1999/xlink';
-	  }
-	};
-
-	/**
-	 * Applies an attribute or property to a given Element. If the value is null
-	 * or undefined, it is removed from the Element. Otherwise, the value is set
-	 * as an attribute.
-	 * @param {!Element} el
-	 * @param {string} name The attribute's name.
-	 * @param {?(boolean|number|string)=} value The attribute's value.
-	 */
-	var applyAttr = function (el, name, value) {
-	  if (value == null) {
-	    el.removeAttribute(name);
-	  } else {
-	    var attrNS = getNamespace(name);
-	    if (attrNS) {
-	      el.setAttributeNS(attrNS, name, value);
-	    } else {
-	      el.setAttribute(name, value);
-	    }
-	  }
-	};
-
-	/**
-	 * Applies a property to a given Element.
-	 * @param {!Element} el
-	 * @param {string} name The property's name.
-	 * @param {*} value The property's value.
-	 */
-	var applyProp = function (el, name, value) {
-	  el[name] = value;
-	};
-
-	/**
-	 * Applies a style to an Element. No vendor prefix expansion is done for
-	 * property names/values.
-	 * @param {!Element} el
-	 * @param {string} name The attribute's name.
-	 * @param {*} style The style to set. Either a string of css or an object
-	 *     containing property-value pairs.
-	 */
-	var applyStyle = function (el, name, style) {
-	  if (typeof style === 'string') {
-	    el.style.cssText = style;
-	  } else {
-	    el.style.cssText = '';
-	    var elStyle = el.style;
-	    var obj = /** @type {!Object<string,string>} */style;
-
-	    for (var prop in obj) {
-	      if (has(obj, prop)) {
-	        elStyle[prop] = obj[prop];
-	      }
-	    }
-	  }
-	};
-
-	/**
-	 * Updates a single attribute on an Element.
-	 * @param {!Element} el
-	 * @param {string} name The attribute's name.
-	 * @param {*} value The attribute's value. If the value is an object or
-	 *     function it is set on the Element, otherwise, it is set as an HTML
-	 *     attribute.
-	 */
-	var applyAttributeTyped = function (el, name, value) {
-	  var type = typeof value;
-
-	  if (type === 'object' || type === 'function') {
-	    applyProp(el, name, value);
-	  } else {
-	    applyAttr(el, name, /** @type {?(boolean|number|string)} */value);
-	  }
-	};
-
-	/**
-	 * Calls the appropriate attribute mutator for this attribute.
-	 * @param {!Element} el
-	 * @param {string} name The attribute's name.
-	 * @param {*} value The attribute's value.
-	 */
-	var updateAttribute = function (el, name, value) {
-	  var data = getData(el);
-	  var attrs = data.attrs;
-
-	  if (attrs[name] === value) {
-	    return;
-	  }
-
-	  var mutator = attributes[name] || attributes[symbols.default];
-	  mutator(el, name, value);
-
-	  attrs[name] = value;
-	};
-
-	/**
-	 * A publicly mutable object to provide custom mutators for attributes.
-	 * @const {!Object<string, function(!Element, string, *)>}
-	 */
-	var attributes = createMap();
-
-	// Special generic mutator that's called for any attribute that does not
-	// have a specific mutator.
-	attributes[symbols.default] = applyAttributeTyped;
-
-	attributes[symbols.placeholder] = function () {};
-
-	attributes['style'] = applyStyle;
-
-	/**
-	 * Gets the namespace to create an element (of a given tag) in.
-	 * @param {string} tag The tag to get the namespace for.
-	 * @param {?Node} parent
-	 * @return {?string} The namespace to create the tag in.
-	 */
-	var getNamespaceForTag = function (tag, parent) {
-	  if (tag === 'svg') {
-	    return 'http://www.w3.org/2000/svg';
-	  }
-
-	  if (getData(parent).nodeName === 'foreignObject') {
-	    return null;
-	  }
-
-	  return parent.namespaceURI;
-	};
-
-	/**
-	 * Creates an Element.
-	 * @param {Document} doc The document with which to create the Element.
-	 * @param {?Node} parent
-	 * @param {string} tag The tag for the Element.
-	 * @param {?string=} key A key to identify the Element.
-	 * @param {?Array<*>=} statics An array of attribute name/value pairs of the
-	 *     static attributes for the Element.
-	 * @return {!Element}
-	 */
-	var createElement = function (doc, parent, tag, key, statics) {
-	  var namespace = getNamespaceForTag(tag, parent);
-	  var el = undefined;
-
-	  if (namespace) {
-	    el = doc.createElementNS(namespace, tag);
-	  } else {
-	    el = doc.createElement(tag);
-	  }
-
-	  initData(el, tag, key);
-
-	  if (statics) {
-	    for (var i = 0; i < statics.length; i += 2) {
-	      updateAttribute(el, /** @type {!string}*/statics[i], statics[i + 1]);
-	    }
-	  }
-
-	  return el;
-	};
-
-	/**
-	 * Creates a Text Node.
-	 * @param {Document} doc The document with which to create the Element.
-	 * @return {!Text}
-	 */
-	var createText = function (doc) {
-	  var node = doc.createTextNode('');
-	  initData(node, '#text', null);
-	  return node;
-	};
-
-	/**
-	 * Creates a mapping that can be used to look up children using a key.
-	 * @param {?Node} el
-	 * @return {!Object<string, !Element>} A mapping of keys to the children of the
-	 *     Element.
-	 */
-	var createKeyMap = function (el) {
-	  var map = createMap();
-	  var child = el.firstElementChild;
-
-	  while (child) {
-	    var key = getData(child).key;
-
-	    if (key) {
-	      map[key] = child;
-	    }
-
-	    child = child.nextElementSibling;
-	  }
-
-	  return map;
-	};
-
-	/**
-	 * Retrieves the mapping of key to child node for a given Element, creating it
-	 * if necessary.
-	 * @param {?Node} el
-	 * @return {!Object<string, !Node>} A mapping of keys to child Elements
-	 */
-	var getKeyMap = function (el) {
-	  var data = getData(el);
-
-	  if (!data.keyMap) {
-	    data.keyMap = createKeyMap(el);
-	  }
-
-	  return data.keyMap;
-	};
-
-	/**
-	 * Retrieves a child from the parent with the given key.
-	 * @param {?Node} parent
-	 * @param {?string=} key
-	 * @return {?Node} The child corresponding to the key.
-	 */
-	var getChild = function (parent, key) {
-	  return key ? getKeyMap(parent)[key] : null;
-	};
-
-	/**
-	 * Registers an element as being a child. The parent will keep track of the
-	 * child using the key. The child can be retrieved using the same key using
-	 * getKeyMap. The provided key should be unique within the parent Element.
-	 * @param {?Node} parent The parent of child.
-	 * @param {string} key A key to identify the child with.
-	 * @param {!Node} child The child to register.
-	 */
-	var registerChild = function (parent, key, child) {
-	  getKeyMap(parent)[key] = child;
-	};
-
-	/**
-	 * Copyright 2015 The Incremental DOM Authors. All Rights Reserved.
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 *      http://www.apache.org/licenses/LICENSE-2.0
-	 *
-	 * Unless required by applicable law or agreed to in writing, software
-	 * distributed under the License is distributed on an "AS-IS" BASIS,
-	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-	 * See the License for the specific language governing permissions and
-	 * limitations under the License.
-	 */
-
-	/** @const */
-	var notifications = {
-	  /**
-	   * Called after patch has compleated with any Nodes that have been created
-	   * and added to the DOM.
-	   * @type {?function(Array<!Node>)}
-	   */
-	  nodesCreated: null,
-
-	  /**
-	   * Called after patch has compleated with any Nodes that have been removed
-	   * from the DOM.
-	   * Note it's an applications responsibility to handle any childNodes.
-	   * @type {?function(Array<!Node>)}
-	   */
-	  nodesDeleted: null
-	};
-
-	/**
-	 * Keeps track of the state of a patch.
-	 * @constructor
-	 */
-	function Context() {
-	  /**
-	   * @type {(Array<!Node>|undefined)}
-	   */
-	  this.created = notifications.nodesCreated && [];
-
-	  /**
-	   * @type {(Array<!Node>|undefined)}
-	   */
-	  this.deleted = notifications.nodesDeleted && [];
-	}
-
-	/**
-	 * @param {!Node} node
-	 */
-	Context.prototype.markCreated = function (node) {
-	  if (this.created) {
-	    this.created.push(node);
-	  }
-	};
-
-	/**
-	 * @param {!Node} node
-	 */
-	Context.prototype.markDeleted = function (node) {
-	  if (this.deleted) {
-	    this.deleted.push(node);
-	  }
-	};
-
-	/**
-	 * Notifies about nodes that were created during the patch opearation.
-	 */
-	Context.prototype.notifyChanges = function () {
-	  if (this.created && this.created.length > 0) {
-	    notifications.nodesCreated(this.created);
-	  }
-
-	  if (this.deleted && this.deleted.length > 0) {
-	    notifications.nodesDeleted(this.deleted);
-	  }
-	};
-
-	/**
-	* Makes sure that keyed Element matches the tag name provided.
-	* @param {!string} nodeName The nodeName of the node that is being matched.
-	* @param {string=} tag The tag name of the Element.
-	* @param {?string=} key The key of the Element.
-	*/
-	var assertKeyedTagMatches = function (nodeName, tag, key) {
-	  if (nodeName !== tag) {
-	    throw new Error('Was expecting node with key "' + key + '" to be a ' + tag + ', not a ' + nodeName + '.');
-	  }
-	};
-
-	/** @type {?Context} */
-	var context = null;
-
-	/** @type {?Node} */
-	var currentNode = null;
-
-	/** @type {?Node} */
-	var currentParent = null;
-
-	/** @type {?Element|?DocumentFragment} */
-	var root = null;
-
-	/** @type {?Document} */
-	var doc = null;
-
-	/**
-	 * Returns a patcher function that sets up and restores a patch context,
-	 * running the run function with the provided data.
-	 * @param {function((!Element|!DocumentFragment),!function(T),T=)} run
-	 * @return {function((!Element|!DocumentFragment),!function(T),T=)}
-	 * @template T
-	 */
-	var patchFactory = function (run) {
-	  /**
-	   * TODO(moz): These annotations won't be necessary once we switch to Closure
-	   * Compiler's new type inference. Remove these once the switch is done.
-	   *
-	   * @param {(!Element|!DocumentFragment)} node
-	   * @param {!function(T)} fn
-	   * @param {T=} data
-	   * @template T
-	   */
-	  var f = function (node, fn, data) {
-	    var prevContext = context;
-	    var prevRoot = root;
-	    var prevDoc = doc;
-	    var prevCurrentNode = currentNode;
-	    var prevCurrentParent = currentParent;
-	    var previousInAttributes = false;
-	    var previousInSkip = false;
-
-	    context = new Context();
-	    root = node;
-	    doc = node.ownerDocument;
-	    currentParent = node.parentNode;
-
-	    if (false) {}
-
-	    run(node, fn, data);
-
-	    if (false) {}
-
-	    context.notifyChanges();
-
-	    context = prevContext;
-	    root = prevRoot;
-	    doc = prevDoc;
-	    currentNode = prevCurrentNode;
-	    currentParent = prevCurrentParent;
-	  };
-	  return f;
-	};
-
-	/**
-	 * Patches the document starting at node with the provided function. This
-	 * function may be called during an existing patch operation.
-	 * @param {!Element|!DocumentFragment} node The Element or Document
-	 *     to patch.
-	 * @param {!function(T)} fn A function containing elementOpen/elementClose/etc.
-	 *     calls that describe the DOM.
-	 * @param {T=} data An argument passed to fn to represent DOM state.
-	 * @template T
-	 */
-	var patchInner = patchFactory(function (node, fn, data) {
-	  currentNode = node;
-
-	  enterNode();
-	  fn(data);
-	  exitNode();
-
-	  if (false) {}
-	});
-
-	/**
-	 * Patches an Element with the the provided function. Exactly one top level
-	 * element call should be made corresponding to `node`.
-	 * @param {!Element} node The Element where the patch should start.
-	 * @param {!function(T)} fn A function containing elementOpen/elementClose/etc.
-	 *     calls that describe the DOM. This should have at most one top level
-	 *     element call.
-	 * @param {T=} data An argument passed to fn to represent DOM state.
-	 * @template T
-	 */
-	var patchOuter = patchFactory(function (node, fn, data) {
-	  currentNode = /** @type {!Element} */{ nextSibling: node };
-
-	  fn(data);
-
-	  if (false) {}
-	});
-
-	/**
-	 * Checks whether or not the current node matches the specified nodeName and
-	 * key.
-	 *
-	 * @param {?string} nodeName The nodeName for this node.
-	 * @param {?string=} key An optional key that identifies a node.
-	 * @return {boolean} True if the node matches, false otherwise.
-	 */
-	var matches = function (nodeName, key) {
-	  var data = getData(currentNode);
-
-	  // Key check is done using double equals as we want to treat a null key the
-	  // same as undefined. This should be okay as the only values allowed are
-	  // strings, null and undefined so the == semantics are not too weird.
-	  return nodeName === data.nodeName && key == data.key;
-	};
-
-	/**
-	 * Aligns the virtual Element definition with the actual DOM, moving the
-	 * corresponding DOM node to the correct location or creating it if necessary.
-	 * @param {string} nodeName For an Element, this should be a valid tag string.
-	 *     For a Text, this should be #text.
-	 * @param {?string=} key The key used to identify this element.
-	 * @param {?Array<*>=} statics For an Element, this should be an array of
-	 *     name-value pairs.
-	 */
-	var alignWithDOM = function (nodeName, key, statics) {
-	  if (currentNode && matches(nodeName, key)) {
-	    return;
-	  }
-
-	  var node = undefined;
-
-	  // Check to see if the node has moved within the parent.
-	  if (key) {
-	    node = getChild(currentParent, key);
-	    if (node && 'production' !== 'production') {
-	      assertKeyedTagMatches(getData(node).nodeName, nodeName, key);
-	    }
-	  }
-
-	  // Create the node if it doesn't exist.
-	  if (!node) {
-	    if (nodeName === '#text') {
-	      node = createText(doc);
-	    } else {
-	      node = createElement(doc, currentParent, nodeName, key, statics);
-	    }
-
-	    if (key) {
-	      registerChild(currentParent, key, node);
-	    }
-
-	    context.markCreated(node);
-	  }
-
-	  // If the node has a key, remove it from the DOM to prevent a large number
-	  // of re-orders in the case that it moved far or was completely removed.
-	  // Since we hold on to a reference through the keyMap, we can always add it
-	  // back.
-	  if (currentNode && getData(currentNode).key) {
-	    currentParent.replaceChild(node, currentNode);
-	    getData(currentParent).keyMapValid = false;
-	  } else {
-	    currentParent.insertBefore(node, currentNode);
-	  }
-
-	  currentNode = node;
-	};
-
-	/**
-	 * Clears out any unvisited Nodes, as the corresponding virtual element
-	 * functions were never called for them.
-	 */
-	var clearUnvisitedDOM = function () {
-	  var node = currentParent;
-	  var data = getData(node);
-	  var keyMap = data.keyMap;
-	  var keyMapValid = data.keyMapValid;
-	  var child = node.lastChild;
-	  var key = undefined;
-
-	  if (child === currentNode && keyMapValid) {
-	    return;
-	  }
-
-	  if (data.attrs[symbols.placeholder] && node !== root) {
-	    if (false) {}
-	    return;
-	  }
-
-	  while (child !== currentNode) {
-	    node.removeChild(child);
-	    context.markDeleted( /** @type {!Node}*/child);
-
-	    key = getData(child).key;
-	    if (key) {
-	      delete keyMap[key];
-	    }
-	    child = node.lastChild;
-	  }
-
-	  // Clean the keyMap, removing any unusued keys.
-	  if (!keyMapValid) {
-	    for (key in keyMap) {
-	      child = keyMap[key];
-	      if (child.parentNode !== node) {
-	        context.markDeleted(child);
-	        delete keyMap[key];
-	      }
-	    }
-
-	    data.keyMapValid = true;
-	  }
-	};
-
-	/**
-	 * Changes to the first child of the current node.
-	 */
-	var enterNode = function () {
-	  currentParent = currentNode;
-	  currentNode = null;
-	};
-
-	/**
-	 * Changes to the next sibling of the current node.
-	 */
-	var nextNode = function () {
-	  if (currentNode) {
-	    currentNode = currentNode.nextSibling;
-	  } else {
-	    currentNode = currentParent.firstChild;
-	  }
-	};
-
-	/**
-	 * Changes to the parent of the current node, removing any unvisited children.
-	 */
-	var exitNode = function () {
-	  clearUnvisitedDOM();
-
-	  currentNode = currentParent;
-	  currentParent = currentParent.parentNode;
-	};
-
-	/**
-	 * Makes sure that the current node is an Element with a matching tagName and
-	 * key.
-	 *
-	 * @param {string} tag The element's tag.
-	 * @param {?string=} key The key used to identify this element. This can be an
-	 *     empty string, but performance may be better if a unique value is used
-	 *     when iterating over an array of items.
-	 * @param {?Array<*>=} statics An array of attribute name/value pairs of the
-	 *     static attributes for the Element. These will only be set once when the
-	 *     Element is created.
-	 * @return {!Element} The corresponding Element.
-	 */
-	var coreElementOpen = function (tag, key, statics) {
-	  nextNode();
-	  alignWithDOM(tag, key, statics);
-	  enterNode();
-	  return (/** @type {!Element} */currentParent
-	  );
-	};
-
-	/**
-	 * Closes the currently open Element, removing any unvisited children if
-	 * necessary.
-	 *
-	 * @return {!Element} The corresponding Element.
-	 */
-	var coreElementClose = function () {
-	  if (false) {}
-
-	  exitNode();
-	  return (/** @type {!Element} */currentNode
-	  );
-	};
-
-	/**
-	 * Makes sure the current node is a Text node and creates a Text node if it is
-	 * not.
-	 *
-	 * @return {!Text} The corresponding Text Node.
-	 */
-	var coreText = function () {
-	  nextNode();
-	  alignWithDOM('#text', null, null);
-	  return (/** @type {!Text} */currentNode
-	  );
-	};
-
-	/**
-	 * Gets the current Element being patched.
-	 * @return {!Element}
-	 */
-	var currentElement = function () {
-	  if (false) {}
-	  return (/** @type {!Element} */currentParent
-	  );
-	};
-
-	/**
-	 * Skips the children in a subtree, allowing an Element to be closed without
-	 * clearing out the children.
-	 */
-	var skip = function () {
-	  if (false) {}
-	  currentNode = currentParent.lastChild;
-	};
-
-	/**
-	 * The offset in the virtual element declaration where the attributes are
-	 * specified.
-	 * @const
-	 */
-	var ATTRIBUTES_OFFSET = 3;
-
-	/**
-	 * Builds an array of arguments for use with elementOpenStart, attr and
-	 * elementOpenEnd.
-	 * @const {Array<*>}
-	 */
-	var argsBuilder = [];
-
-	/**
-	 * @param {string} tag The element's tag.
-	 * @param {?string=} key The key used to identify this element. This can be an
-	 *     empty string, but performance may be better if a unique value is used
-	 *     when iterating over an array of items.
-	 * @param {?Array<*>=} statics An array of attribute name/value pairs of the
-	 *     static attributes for the Element. These will only be set once when the
-	 *     Element is created.
-	 * @param {...*} const_args Attribute name/value pairs of the dynamic attributes
-	 *     for the Element.
-	 * @return {!Element} The corresponding Element.
-	 */
-	var elementOpen = function (tag, key, statics, const_args) {
-	  if (false) {}
-
-	  var node = coreElementOpen(tag, key, statics);
-	  var data = getData(node);
-
-	  /*
-	   * Checks to see if one or more attributes have changed for a given Element.
-	   * When no attributes have changed, this is much faster than checking each
-	   * individual argument. When attributes have changed, the overhead of this is
-	   * minimal.
-	   */
-	  var attrsArr = data.attrsArr;
-	  var newAttrs = data.newAttrs;
-	  var attrsChanged = false;
-	  var i = ATTRIBUTES_OFFSET;
-	  var j = 0;
-
-	  for (; i < arguments.length; i += 1, j += 1) {
-	    if (attrsArr[j] !== arguments[i]) {
-	      attrsChanged = true;
-	      break;
-	    }
-	  }
-
-	  for (; i < arguments.length; i += 1, j += 1) {
-	    attrsArr[j] = arguments[i];
-	  }
-
-	  if (j < attrsArr.length) {
-	    attrsChanged = true;
-	    attrsArr.length = j;
-	  }
-
-	  /*
-	   * Actually perform the attribute update.
-	   */
-	  if (attrsChanged) {
-	    for (i = ATTRIBUTES_OFFSET; i < arguments.length; i += 2) {
-	      newAttrs[arguments[i]] = arguments[i + 1];
-	    }
-
-	    for (var _attr in newAttrs) {
-	      updateAttribute(node, _attr, newAttrs[_attr]);
-	      newAttrs[_attr] = undefined;
-	    }
-	  }
-
-	  return node;
-	};
-
-	/**
-	 * Declares a virtual Element at the current location in the document. This
-	 * corresponds to an opening tag and a elementClose tag is required. This is
-	 * like elementOpen, but the attributes are defined using the attr function
-	 * rather than being passed as arguments. Must be folllowed by 0 or more calls
-	 * to attr, then a call to elementOpenEnd.
-	 * @param {string} tag The element's tag.
-	 * @param {?string=} key The key used to identify this element. This can be an
-	 *     empty string, but performance may be better if a unique value is used
-	 *     when iterating over an array of items.
-	 * @param {?Array<*>=} statics An array of attribute name/value pairs of the
-	 *     static attributes for the Element. These will only be set once when the
-	 *     Element is created.
-	 */
-	var elementOpenStart = function (tag, key, statics) {
-	  if (false) {}
-
-	  argsBuilder[0] = tag;
-	  argsBuilder[1] = key;
-	  argsBuilder[2] = statics;
-	};
-
-	/***
-	 * Defines a virtual attribute at this point of the DOM. This is only valid
-	 * when called between elementOpenStart and elementOpenEnd.
-	 *
-	 * @param {string} name
-	 * @param {*} value
-	 */
-	var attr = function (name, value) {
-	  if (false) {}
-
-	  argsBuilder.push(name, value);
-	};
-
-	/**
-	 * Closes an open tag started with elementOpenStart.
-	 * @return {!Element} The corresponding Element.
-	 */
-	var elementOpenEnd = function () {
-	  if (false) {}
-
-	  var node = elementOpen.apply(null, argsBuilder);
-	  argsBuilder.length = 0;
-	  return node;
-	};
-
-	/**
-	 * Closes an open virtual Element.
-	 *
-	 * @param {string} tag The element's tag.
-	 * @return {!Element} The corresponding Element.
-	 */
-	var elementClose = function (tag) {
-	  if (false) {}
-
-	  var node = coreElementClose();
-
-	  if (false) {}
-
-	  return node;
-	};
-
-	/**
-	 * Declares a virtual Element at the current location in the document that has
-	 * no children.
-	 * @param {string} tag The element's tag.
-	 * @param {?string=} key The key used to identify this element. This can be an
-	 *     empty string, but performance may be better if a unique value is used
-	 *     when iterating over an array of items.
-	 * @param {?Array<*>=} statics An array of attribute name/value pairs of the
-	 *     static attributes for the Element. These will only be set once when the
-	 *     Element is created.
-	 * @param {...*} const_args Attribute name/value pairs of the dynamic attributes
-	 *     for the Element.
-	 * @return {!Element} The corresponding Element.
-	 */
-	var elementVoid = function (tag, key, statics, const_args) {
-	  elementOpen.apply(null, arguments);
-	  return elementClose(tag);
-	};
-
-	/**
-	 * Declares a virtual Element at the current location in the document that is a
-	 * placeholder element. Children of this Element can be manually managed and
-	 * will not be cleared by the library.
-	 *
-	 * A key must be specified to make sure that this node is correctly preserved
-	 * across all conditionals.
-	 *
-	 * @param {string} tag The element's tag.
-	 * @param {string} key The key used to identify this element.
-	 * @param {?Array<*>=} statics An array of attribute name/value pairs of the
-	 *     static attributes for the Element. These will only be set once when the
-	 *     Element is created.
-	 * @param {...*} const_args Attribute name/value pairs of the dynamic attributes
-	 *     for the Element.
-	 * @return {!Element} The corresponding Element.
-	 */
-	var elementPlaceholder = function (tag, key, statics, const_args) {
-	  if (false) {}
-
-	  elementOpen.apply(null, arguments);
-	  skip();
-	  return elementClose(tag);
-	};
-
-	/**
-	 * Declares a virtual Text at this point in the document.
-	 *
-	 * @param {string|number|boolean} value The value of the Text.
-	 * @param {...(function((string|number|boolean)):string)} const_args
-	 *     Functions to format the value which are called only when the value has
-	 *     changed.
-	 * @return {!Text} The corresponding text node.
-	 */
-	var text = function (value, const_args) {
-	  if (false) {}
-
-	  var node = coreText();
-	  var data = getData(node);
-
-	  if (data.text !== value) {
-	    data.text = /** @type {string} */value;
-
-	    var formatted = value;
-	    for (var i = 1; i < arguments.length; i += 1) {
-	      /*
-	       * Call the formatter function directly to prevent leaking arguments.
-	       * https://github.com/google/incremental-dom/pull/204#issuecomment-178223574
-	       */
-	      var fn = arguments[i];
-	      formatted = fn(formatted);
-	    }
-
-	    node.data = formatted;
-	  }
-
-	  return node;
-	};
-
-	exports.patch = patchInner;
-	exports.patchInner = patchInner;
-	exports.patchOuter = patchOuter;
-	exports.currentElement = currentElement;
-	exports.skip = skip;
-	exports.elementVoid = elementVoid;
-	exports.elementOpenStart = elementOpenStart;
-	exports.elementOpenEnd = elementOpenEnd;
-	exports.elementOpen = elementOpen;
-	exports.elementClose = elementClose;
-	exports.elementPlaceholder = elementPlaceholder;
-	exports.text = text;
-	exports.attr = attr;
-	exports.symbols = symbols;
-	exports.attributes = attributes;
-	exports.applyAttr = applyAttr;
-	exports.applyProp = applyProp;
-	exports.notifications = notifications;
-
-	//# sourceMappingURL=incremental-dom-cjs.js.map
-
-/***/ },
-/* 22 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-	  Copyright (c) 2016 Jed Watson.
-	  Licensed under the MIT License (MIT), see
-	  http://jedwatson.github.io/classnames
-	*/
-	/* global define */
-
-	(function () {
-		'use strict';
-
-		var hasOwn = {}.hasOwnProperty;
-
-		function classNames () {
-			var classes = [];
-
-			for (var i = 0; i < arguments.length; i++) {
-				var arg = arguments[i];
-				if (!arg) continue;
-
-				var argType = typeof arg;
-
-				if (argType === 'string' || argType === 'number') {
-					classes.push(arg);
-				} else if (Array.isArray(arg)) {
-					classes.push(classNames.apply(null, arg));
-				} else if (argType === 'object') {
-					for (var key in arg) {
-						if (hasOwn.call(arg, key) && arg[key]) {
-							classes.push(key);
-						}
-					}
-				}
-			}
-
-			return classes.join(' ');
-		}
-
-		if (typeof module !== 'undefined' && module.exports) {
-			module.exports = classNames;
-		} else if (true) {
-			// register as 'classnames', consistent with npm package name
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
-				return classNames;
-			}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-		} else {
-			window.classNames = classNames;
-		}
-	}());
-
-
-/***/ },
-/* 23 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(24);
-
-/***/ },
-/* 24 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 25 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(26);
-
-/***/ },
-/* 26 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 27 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(28);
-
-/***/ },
-/* 28 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 29 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	__webpack_require__(30);
-
-	var _lud_component = __webpack_require__(19);
-
-	var _lud_component2 = _interopRequireDefault(_lud_component);
-
-	var _skatejs = __webpack_require__(20);
-
-	var skate = _interopRequireWildcard(_skatejs);
-
-	var _classnames = __webpack_require__(22);
-
-	var _classnames2 = _interopRequireDefault(_classnames);
-
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*doc
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                title: Icon 图标
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                name: icon
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                category: 组件
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                有含义的矢量图形，源自[Salesforce Lightning Design System](https://github.com/salesforce-ux/design-system).
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Copyright (c) 2015, salesforce.com, inc. All rights reserved.
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                All icons and images are licensed under Creative Commons Attribution-NoDerivatives 4.0
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 如何使用
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ```html_example
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-icon type="people" />
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ```
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 图标列表
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <ul class="icon_lists lud-clearfix"> <li> <i class="icon lud-icon">&#xe662;</i> <div class="name">areachart</div><div class="code">&amp;#xe662;</div><div class="fontclass">.areachart</div></li><li> <i class="icon lud-icon">&#xe664;</i> <div class="name">barchart</div><div class="code">&amp;#xe664;</div><div class="fontclass">.barchart</div></li><li> <i class="icon lud-icon">&#xe6e4;</i> <div class="name">barschart</div><div class="code">&amp;#xe6e4;</div><div class="fontclass">.barschart</div></li><li> <i class="icon lud-icon">&#xe6e5;</i> <div class="name">facebook-official</div><div class="code">&amp;#xe6e5;</div><div class="fontclass">.facebookofficial</div></li><li> <i class="icon lud-icon">&#xe6e6;</i> <div class="name">linkedin-square</div><div class="code">&amp;#xe6e6;</div><div class="fontclass">.linkedinsquare</div></li><li> <i class="icon lud-icon">&#xe751;</i> <div class="name">skype</div><div class="code">&amp;#xe751;</div><div class="fontclass">.skype</div></li><li> <i class="icon lud-icon">&#xe7ba;</i> <div class="name">twitter</div><div class="code">&amp;#xe7ba;</div><div class="fontclass">.twitter</div></li><li> <i class="icon lud-icon">&#xe7bb;</i> <div class="name">wechat</div><div class="code">&amp;#xe7bb;</div><div class="fontclass">.wechat</div></li><li> <i class="icon lud-icon">&#xe7bc;</i> <div class="name">QQ</div><div class="code">&amp;#xe7bc;</div><div class="fontclass">.qq02</div></li><li> <i class="icon lud-icon">&#xe7bd;</i> <div class="name">weibo</div><div class="code">&amp;#xe7bd;</div><div class="fontclass">.weibo</div></li><li> <i class="icon lud-icon">&#xe600;</i> <div class="name">account</div><div class="code">&amp;#xe600;</div><div class="fontclass">.account</div></li><li> <i class="icon lud-icon">&#xe601;</i> <div class="name">announcement</div><div class="code">&amp;#xe601;</div><div class="fontclass">.announcement</div></li><li> <i class="icon lud-icon">&#xe602;</i> <div class="name">answer_best</div><div class="code">&amp;#xe602;</div><div class="fontclass">.answerbest</div></li><li> <i class="icon lud-icon">&#xe603;</i> <div class="name">answer_private</div><div class="code">&amp;#xe603;</div><div class="fontclass">.answerprivate</div></li><li> <i class="icon lud-icon">&#xe604;</i> <div class="name">answer_public</div><div class="code">&amp;#xe604;</div><div class="fontclass">.answerpublic</div></li><li> <i class="icon lud-icon">&#xe605;</i> <div class="name">approval</div><div class="code">&amp;#xe605;</div><div class="fontclass">.approval</div></li><li> <i class="icon lud-icon">&#xe606;</i> <div class="name">apps_admin</div><div class="code">&amp;#xe606;</div><div class="fontclass">.appsadmin</div></li><li> <i class="icon lud-icon">&#xe607;</i> <div class="name">apps</div><div class="code">&amp;#xe607;</div><div class="fontclass">.apps</div></li><li> <i class="icon lud-icon">&#xe608;</i> <div class="name">article</div><div class="code">&amp;#xe608;</div><div class="fontclass">.article</div></li><li> <i class="icon lud-icon">&#xe609;</i> <div class="name">avatar_loading</div><div class="code">&amp;#xe609;</div><div class="fontclass">.avatarloading</div></li><li> <i class="icon lud-icon">&#xe60a;</i> <div class="name">avatar</div><div class="code">&amp;#xe60a;</div><div class="fontclass">.avatar</div></li><li> <i class="icon lud-icon">&#xe60b;</i> <div class="name">calibration</div><div class="code">&amp;#xe60b;</div><div class="fontclass">.calibration</div></li><li> <i class="icon lud-icon">&#xe60c;</i> <div class="name">call_history</div><div class="code">&amp;#xe60c;</div><div class="fontclass">.callhistory</div></li><li> <i class="icon lud-icon">&#xe60d;</i> <div class="name">call</div><div class="code">&amp;#xe60d;</div><div class="fontclass">.call</div></li><li> <i class="icon lud-icon">&#xe60e;</i> <div class="name">campaign_members</div><div class="code">&amp;#xe60e;</div><div class="fontclass">.campaignmembers</div></li><li> <i class="icon lud-icon">&#xe60f;</i> <div class="name">campaign</div><div class="code">&amp;#xe60f;</div><div class="fontclass">.campaign</div></li><li> <i class="icon lud-icon">&#xe610;</i> <div class="name">canvas</div><div class="code">&amp;#xe610;</div><div class="fontclass">.canvas</div></li><li> <i class="icon lud-icon">&#xe611;</i> <div class="name">case_change_status</div><div class="code">&amp;#xe611;</div><div class="fontclass">.casechangestatus</div></li><li> <i class="icon lud-icon">&#xe612;</i> <div class="name">case_comment</div><div class="code">&amp;#xe612;</div><div class="fontclass">.casecomment</div></li><li> <i class="icon lud-icon">&#xe613;</i> <div class="name">case_email</div><div class="code">&amp;#xe613;</div><div class="fontclass">.caseemail</div></li><li> <i class="icon lud-icon">&#xe614;</i> <div class="name">case_log_a_call</div><div class="code">&amp;#xe614;</div><div class="fontclass">.caselogacall</div></li><li> <i class="icon lud-icon">&#xe615;</i> <div class="name">case_transcript</div><div class="code">&amp;#xe615;</div><div class="fontclass">.casetranscript</div></li><li> <i class="icon lud-icon">&#xe616;</i> <div class="name">case</div><div class="code">&amp;#xe616;</div><div class="fontclass">.case</div></li><li> <i class="icon lud-icon">&#xe617;</i> <div class="name">client</div><div class="code">&amp;#xe617;</div><div class="fontclass">.client</div></li><li> <i class="icon lud-icon">&#xe618;</i> <div class="name">coaching</div><div class="code">&amp;#xe618;</div><div class="fontclass">.coaching</div></li><li> <i class="icon lud-icon">&#xe619;</i> <div class="name">connected_apps</div><div class="code">&amp;#xe619;</div><div class="fontclass">.connectedapps</div></li><li> <i class="icon lud-icon">&#xe61a;</i> <div class="name">contact</div><div class="code">&amp;#xe61a;</div><div class="fontclass">.contact</div></li><li> <i class="icon lud-icon">&#xe61b;</i> <div class="name">contract</div><div class="code">&amp;#xe61b;</div><div class="fontclass">.contract</div></li><li> <i class="icon lud-icon">&#xe61c;</i> <div class="name">custom</div><div class="code">&amp;#xe61c;</div><div class="fontclass">.custom</div></li><li> <i class="icon lud-icon">&#xe61d;</i> <div class="name">dashboard</div><div class="code">&amp;#xe61d;</div><div class="fontclass">.dashboard</div></li><li> <i class="icon lud-icon">&#xe61e;</i> <div class="name">document</div><div class="code">&amp;#xe61e;</div><div class="fontclass">.document</div></li><li> <i class="icon lud-icon">&#xe61f;</i> <div class="name">drafts</div><div class="code">&amp;#xe61f;</div><div class="fontclass">.drafts</div></li><li> <i class="icon lud-icon">&#xe620;</i> <div class="name">email_chatter</div><div class="code">&amp;#xe620;</div><div class="fontclass">.emailchatter</div></li><li> <i class="icon lud-icon">&#xe621;</i> <div class="name">email_IQ</div><div class="code">&amp;#xe621;</div><div class="fontclass">.emailiq</div></li><li> <i class="icon lud-icon">&#xe622;</i> <div class="name">email</div><div class="code">&amp;#xe622;</div><div class="fontclass">.email</div></li><li> <i class="icon lud-icon">&#xe623;</i> <div class="name">endorsement</div><div class="code">&amp;#xe623;</div><div class="fontclass">.endorsement</div></li><li> <i class="icon lud-icon">&#xe624;</i> <div class="name">event</div><div class="code">&amp;#xe624;</div><div class="fontclass">.event</div></li><li> <i class="icon lud-icon">&#xe625;</i> <div class="name">feed</div><div class="code">&amp;#xe625;</div><div class="fontclass">.feed</div></li><li> <i class="icon lud-icon">&#xe626;</i> <div class="name">feedback</div><div class="code">&amp;#xe626;</div><div class="fontclass">.feedback</div></li><li> <i class="icon lud-icon">&#xe627;</i> <div class="name">file</div><div class="code">&amp;#xe627;</div><div class="fontclass">.file</div></li><li> <i class="icon lud-icon">&#xe628;</i> <div class="name">flow</div><div class="code">&amp;#xe628;</div><div class="fontclass">.flow</div></li><li> <i class="icon lud-icon">&#xe629;</i> <div class="name">folder</div><div class="code">&amp;#xe629;</div><div class="fontclass">.folder</div></li><li> <i class="icon lud-icon">&#xe62a;</i> <div class="name">generic_loading</div><div class="code">&amp;#xe62a;</div><div class="fontclass">.genericloading</div></li><li> <i class="icon lud-icon">&#xe62b;</i> <div class="name">goals</div><div class="code">&amp;#xe62b;</div><div class="fontclass">.goals</div></li><li> <i class="icon lud-icon">&#xe62c;</i> <div class="name">group_loading</div><div class="code">&amp;#xe62c;</div><div class="fontclass">.grouploading</div></li><li> <i class="icon lud-icon">&#xe62d;</i> <div class="name">groups</div><div class="code">&amp;#xe62d;</div><div class="fontclass">.groups</div></li><li> <i class="icon lud-icon">&#xe62e;</i> <div class="name">hierarchy</div><div class="code">&amp;#xe62e;</div><div class="fontclass">.hierarchy</div></li><li> <i class="icon lud-icon">&#xe62f;</i> <div class="name">home</div><div class="code">&amp;#xe62f;</div><div class="fontclass">.home</div></li><li> <i class="icon lud-icon">&#xe630;</i> <div class="name">household</div><div class="code">&amp;#xe630;</div><div class="fontclass">.household</div></li><li> <i class="icon lud-icon">&#xe631;</i> <div class="name">insights</div><div class="code">&amp;#xe631;</div><div class="fontclass">.insights</div></li><li> <i class="icon lud-icon">&#xe632;</i> <div class="name">investment_account</div><div class="code">&amp;#xe632;</div><div class="fontclass">.investmentaccount</div></li><li> <i class="icon lud-icon">&#xe633;</i> <div class="name">lead</div><div class="code">&amp;#xe633;</div><div class="fontclass">.lead</div></li><li> <i class="icon lud-icon">&#xe634;</i> <div class="name">link</div><div class="code">&amp;#xe634;</div><div class="fontclass">.link</div></li><li> <i class="icon lud-icon">&#xe635;</i> <div class="name">log_a_call</div><div class="code">&amp;#xe635;</div><div class="fontclass">.logacall</div></li><li> <i class="icon lud-icon">&#xe636;</i> <div class="name">marketing_actions</div><div class="code">&amp;#xe636;</div><div class="fontclass">.marketingactions</div></li><li> <i class="icon lud-icon">&#xe637;</i> <div class="name">metrics</div><div class="code">&amp;#xe637;</div><div class="fontclass">.metrics</div></li><li> <i class="icon lud-icon">&#xe638;</i> <div class="name">news</div><div class="code">&amp;#xe638;</div><div class="fontclass">.news</div></li><li> <i class="icon lud-icon">&#xe639;</i> <div class="name">note</div><div class="code">&amp;#xe639;</div><div class="fontclass">.note</div></li><li> <i class="icon lud-icon">&#xe63a;</i> <div class="name">opportunity</div><div class="code">&amp;#xe63a;</div><div class="fontclass">.opportunity</div></li><li> <i class="icon lud-icon">&#xe63b;</i> <div class="name">orders</div><div class="code">&amp;#xe63b;</div><div class="fontclass">.orders</div></li><li> <i class="icon lud-icon">&#xe63c;</i> <div class="name">people</div><div class="code">&amp;#xe63c;</div><div class="fontclass">.people</div></li><li> <i class="icon lud-icon">&#xe63d;</i> <div class="name">performance</div><div class="code">&amp;#xe63d;</div><div class="fontclass">.performance</div></li><li> <i class="icon lud-icon">&#xe63e;</i> <div class="name">person_account</div><div class="code">&amp;#xe63e;</div><div class="fontclass">.personaccount</div></li><li> <i class="icon lud-icon">&#xe63f;</i> <div class="name">photo</div><div class="code">&amp;#xe63f;</div><div class="fontclass">.photo</div></li><li> <i class="icon lud-icon">&#xe640;</i> <div class="name">poll</div><div class="code">&amp;#xe640;</div><div class="fontclass">.poll</div></li><li> <i class="icon lud-icon">&#xe641;</i> <div class="name">portal</div><div class="code">&amp;#xe641;</div><div class="fontclass">.portal</div></li><li> <i class="icon lud-icon">&#xe642;</i> <div class="name">pricebook</div><div class="code">&amp;#xe642;</div><div class="fontclass">.pricebook</div></li><li> <i class="icon lud-icon">&#xe643;</i> <div class="name">process</div><div class="code">&amp;#xe643;</div><div class="fontclass">.process</div></li><li> <i class="icon lud-icon">&#xe644;</i> <div class="name">question_best</div><div class="code">&amp;#xe644;</div><div class="fontclass">.questionbest</div></li><li> <i class="icon lud-icon">&#xe645;</i> <div class="name">quotes</div><div class="code">&amp;#xe645;</div><div class="fontclass">.quotes</div></li><li> <i class="icon lud-icon">&#xe646;</i> <div class="name">recent</div><div class="code">&amp;#xe646;</div><div class="fontclass">.recent</div></li><li> <i class="icon lud-icon">&#xe647;</i> <div class="name">record</div><div class="code">&amp;#xe647;</div><div class="fontclass">.record</div></li><li> <i class="icon lud-icon">&#xe648;</i> <div class="name">related_list</div><div class="code">&amp;#xe648;</div><div class="fontclass">.relatedlist</div></li><li> <i class="icon lud-icon">&#xe649;</i> <div class="name">report</div><div class="code">&amp;#xe649;</div><div class="fontclass">.report</div></li><li> <i class="icon lud-icon">&#xe64a;</i> <div class="name">reward</div><div class="code">&amp;#xe64a;</div><div class="fontclass">.reward</div></li><li> <i class="icon lud-icon">&#xe64b;</i> <div class="name">scan_card</div><div class="code">&amp;#xe64b;</div><div class="fontclass">.scancard</div></li><li> <i class="icon lud-icon">&#xe64c;</i> <div class="name">skill_entity</div><div class="code">&amp;#xe64c;</div><div class="fontclass">.skillentity</div></li><li> <i class="icon lud-icon">&#xe64d;</i> <div class="name">solution</div><div class="code">&amp;#xe64d;</div><div class="fontclass">.solution</div></li><li> <i class="icon lud-icon">&#xe64e;</i> <div class="name">sossession</div><div class="code">&amp;#xe64e;</div><div class="fontclass">.sossession</div></li><li> <i class="icon lud-icon">&#xe64f;</i> <div class="name">task</div><div class="code">&amp;#xe64f;</div><div class="fontclass">.task</div></li><li> <i class="icon lud-icon">&#xe650;</i> <div class="name">task2</div><div class="code">&amp;#xe650;</div><div class="fontclass">.task2</div></li><li> <i class="icon lud-icon">&#xe651;</i> <div class="name">team_member</div><div class="code">&amp;#xe651;</div><div class="fontclass">.teammember</div></li><li> <i class="icon lud-icon">&#xe652;</i> <div class="name">thanks_loading</div><div class="code">&amp;#xe652;</div><div class="fontclass">.thanksloading</div></li><li> <i class="icon lud-icon">&#xe653;</i> <div class="name">thanks</div><div class="code">&amp;#xe653;</div><div class="fontclass">.thanks</div></li><li> <i class="icon lud-icon">&#xe654;</i> <div class="name">today</div><div class="code">&amp;#xe654;</div><div class="fontclass">.today</div></li><li> <i class="icon lud-icon">&#xe655;</i> <div class="name">topic</div><div class="code">&amp;#xe655;</div><div class="fontclass">.topic</div></li><li> <i class="icon lud-icon">&#xe656;</i> <div class="name">unmatched</div><div class="code">&amp;#xe656;</div><div class="fontclass">.unmatched</div></li><li> <i class="icon lud-icon">&#xe657;</i> <div class="name">user</div><div class="code">&amp;#xe657;</div><div class="fontclass">.user</div></li><li> <i class="icon lud-icon">&#xe658;</i> <div class="name">work_order_item</div><div class="code">&amp;#xe658;</div><div class="fontclass">.workorderitem</div></li><li> <i class="icon lud-icon">&#xe659;</i> <div class="name">work_order</div><div class="code">&amp;#xe659;</div><div class="fontclass">.workorder</div></li><li> <i class="icon lud-icon">&#xe65a;</i> <div class="name">add_contact</div><div class="code">&amp;#xe65a;</div><div class="fontclass">.addcontact</div></li><li> <i class="icon lud-icon">&#xe65b;</i> <div class="name">announcement</div><div class="code">&amp;#xe65b;</div><div class="fontclass">.announcement1</div></li><li> <i class="icon lud-icon">&#xe65c;</i> <div class="name">apex</div><div class="code">&amp;#xe65c;</div><div class="fontclass">.apex</div></li><li> <i class="icon lud-icon">&#xe65d;</i> <div class="name">back</div><div class="code">&amp;#xe65d;</div><div class="fontclass">.back</div></li><li> <i class="icon lud-icon">&#xe65e;</i> <div class="name">call</div><div class="code">&amp;#xe65e;</div><div class="fontclass">.call1</div></li><li> <i class="icon lud-icon">&#xe65f;</i> <div class="name">canvas</div><div class="code">&amp;#xe65f;</div><div class="fontclass">.canvas1</div></li><li> <i class="icon lud-icon">&#xe660;</i> <div class="name">change_owner</div><div class="code">&amp;#xe660;</div><div class="fontclass">.changeowner</div></li><li> <i class="icon lud-icon">&#xe661;</i> <div class="name">change_record_type</div><div class="code">&amp;#xe661;</div><div class="fontclass">.changerecordtype</div></li><li> <i class="icon lud-icon">&#xe663;</i> <div class="name">clone</div><div class="code">&amp;#xe663;</div><div class="fontclass">.clone</div></li><li> <i class="icon lud-icon">&#xe665;</i> <div class="name">defer</div><div class="code">&amp;#xe665;</div><div class="fontclass">.defer</div></li><li> <i class="icon lud-icon">&#xe666;</i> <div class="name">delete</div><div class="code">&amp;#xe666;</div><div class="fontclass">.delete</div></li><li> <i class="icon lud-icon">&#xe667;</i> <div class="name">description</div><div class="code">&amp;#xe667;</div><div class="fontclass">.description</div></li><li> <i class="icon lud-icon">&#xe668;</i> <div class="name">dial_in</div><div class="code">&amp;#xe668;</div><div class="fontclass">.dialin</div></li><li> <i class="icon lud-icon">&#xe669;</i> <div class="name">download</div><div class="code">&amp;#xe669;</div><div class="fontclass">.download</div></li><li> <i class="icon lud-icon">&#xe66a;</i> <div class="name">edit_groups</div><div class="code">&amp;#xe66a;</div><div class="fontclass">.editgroups</div></li><li> <i class="icon lud-icon">&#xe66b;</i> <div class="name">edit_relationship</div><div class="code">&amp;#xe66b;</div><div class="fontclass">.editrelationship</div></li><li> <i class="icon lud-icon">&#xe66c;</i> <div class="name">edit</div><div class="code">&amp;#xe66c;</div><div class="fontclass">.edit</div></li><li> <i class="icon lud-icon">&#xe66d;</i> <div class="name">email</div><div class="code">&amp;#xe66d;</div><div class="fontclass">.email1</div></li><li> <i class="icon lud-icon">&#xe66e;</i> <div class="name">fallback</div><div class="code">&amp;#xe66e;</div><div class="fontclass">.fallback</div></li><li> <i class="icon lud-icon">&#xe66f;</i> <div class="name">filter</div><div class="code">&amp;#xe66f;</div><div class="fontclass">.filter</div></li><li> <i class="icon lud-icon">&#xe670;</i> <div class="name">flow</div><div class="code">&amp;#xe670;</div><div class="fontclass">.flow1</div></li><li> <i class="icon lud-icon">&#xe671;</i> <div class="name">follow</div><div class="code">&amp;#xe671;</div><div class="fontclass">.follow</div></li><li> <i class="icon lud-icon">&#xe672;</i> <div class="name">following</div><div class="code">&amp;#xe672;</div><div class="fontclass">.following</div></li><li> <i class="icon lud-icon">&#xe673;</i> <div class="name">freeze_user</div><div class="code">&amp;#xe673;</div><div class="fontclass">.freezeuser</div></li><li> <i class="icon lud-icon">&#xe674;</i> <div class="name">google_news</div><div class="code">&amp;#xe674;</div><div class="fontclass">.googlenews</div></li><li> <i class="icon lud-icon">&#xe675;</i> <div class="name">info</div><div class="code">&amp;#xe675;</div><div class="fontclass">.info</div></li><li> <i class="icon lud-icon">&#xe676;</i> <div class="name">join_group</div><div class="code">&amp;#xe676;</div><div class="fontclass">.joingroup</div></li><li> <i class="icon lud-icon">&#xe677;</i> <div class="name">lead_convert</div><div class="code">&amp;#xe677;</div><div class="fontclass">.leadconvert</div></li><li> <i class="icon lud-icon">&#xe678;</i> <div class="name">leave_group</div><div class="code">&amp;#xe678;</div><div class="fontclass">.leavegroup</div></li><li> <i class="icon lud-icon">&#xe679;</i> <div class="name">log_event</div><div class="code">&amp;#xe679;</div><div class="fontclass">.logevent</div></li><li> <i class="icon lud-icon">&#xe67a;</i> <div class="name">manage_perm_sets</div><div class="code">&amp;#xe67a;</div><div class="fontclass">.managepermsets</div></li><li> <i class="icon lud-icon">&#xe67b;</i> <div class="name">map</div><div class="code">&amp;#xe67b;</div><div class="fontclass">.map</div></li><li> <i class="icon lud-icon">&#xe67c;</i> <div class="name">more</div><div class="code">&amp;#xe67c;</div><div class="fontclass">.more</div></li><li> <i class="icon lud-icon">&#xe67d;</i> <div class="name">new_account</div><div class="code">&amp;#xe67d;</div><div class="fontclass">.newaccount</div></li><li> <i class="icon lud-icon">&#xe67e;</i> <div class="name">new_campaign</div><div class="code">&amp;#xe67e;</div><div class="fontclass">.newcampaign</div></li><li> <i class="icon lud-icon">&#xe67f;</i> <div class="name">new_child_case</div><div class="code">&amp;#xe67f;</div><div class="fontclass">.newchildcase</div></li><li> <i class="icon lud-icon">&#xe680;</i> <div class="name">new_contact</div><div class="code">&amp;#xe680;</div><div class="fontclass">.newcontact</div></li><li> <i class="icon lud-icon">&#xe681;</i> <div class="name">new_custom2</div><div class="code">&amp;#xe681;</div><div class="fontclass">.newcustom2</div></li><li> <i class="icon lud-icon">&#xe682;</i> <div class="name">new_custom3</div><div class="code">&amp;#xe682;</div><div class="fontclass">.newcustom3</div></li><li> <i class="icon lud-icon">&#xe683;</i> <div class="name">new_custom5</div><div class="code">&amp;#xe683;</div><div class="fontclass">.newcustom5</div></li><li> <i class="icon lud-icon">&#xe684;</i> <div class="name">new_custom9</div><div class="code">&amp;#xe684;</div><div class="fontclass">.newcustom9</div></li><li> <i class="icon lud-icon">&#xe685;</i> <div class="name">new_custom12</div><div class="code">&amp;#xe685;</div><div class="fontclass">.newcustom12</div></li><li> <i class="icon lud-icon">&#xe686;</i> <div class="name">new_custom14</div><div class="code">&amp;#xe686;</div><div class="fontclass">.newcustom14</div></li><li> <i class="icon lud-icon">&#xe687;</i> <div class="name">new_custom15</div><div class="code">&amp;#xe687;</div><div class="fontclass">.newcustom15</div></li><li> <i class="icon lud-icon">&#xe688;</i> <div class="name">new_custom16</div><div class="code">&amp;#xe688;</div><div class="fontclass">.newcustom16</div></li><li> <i class="icon lud-icon">&#xe689;</i> <div class="name">new_custom17</div><div class="code">&amp;#xe689;</div><div class="fontclass">.newcustom17</div></li><li> <i class="icon lud-icon">&#xe68a;</i> <div class="name">new_custom18</div><div class="code">&amp;#xe68a;</div><div class="fontclass">.newcustom18</div></li><li> <i class="icon lud-icon">&#xe68b;</i> <div class="name">new_custom20</div><div class="code">&amp;#xe68b;</div><div class="fontclass">.newcustom20</div></li><li> <i class="icon lud-icon">&#xe68c;</i> <div class="name">new_custom21</div><div class="code">&amp;#xe68c;</div><div class="fontclass">.newcustom21</div></li><li> <i class="icon lud-icon">&#xe68d;</i> <div class="name">new_custom24</div><div class="code">&amp;#xe68d;</div><div class="fontclass">.newcustom24</div></li><li> <i class="icon lud-icon">&#xe68e;</i> <div class="name">new_custom26</div><div class="code">&amp;#xe68e;</div><div class="fontclass">.newcustom26</div></li><li> <i class="icon lud-icon">&#xe68f;</i> <div class="name">new_custom30</div><div class="code">&amp;#xe68f;</div><div class="fontclass">.newcustom30</div></li><li> <i class="icon lud-icon">&#xe690;</i> <div class="name">new_custom31</div><div class="code">&amp;#xe690;</div><div class="fontclass">.newcustom31</div></li><li> <i class="icon lud-icon">&#xe691;</i> <div class="name">new_custom32</div><div class="code">&amp;#xe691;</div><div class="fontclass">.newcustom32</div></li><li> <i class="icon lud-icon">&#xe692;</i> <div class="name">new_custom33</div><div class="code">&amp;#xe692;</div><div class="fontclass">.newcustom33</div></li><li> <i class="icon lud-icon">&#xe693;</i> <div class="name">new_custom34</div><div class="code">&amp;#xe693;</div><div class="fontclass">.newcustom34</div></li><li> <i class="icon lud-icon">&#xe694;</i> <div class="name">new_custom35</div><div class="code">&amp;#xe694;</div><div class="fontclass">.newcustom35</div></li><li> <i class="icon lud-icon">&#xe695;</i> <div class="name">new_custom36</div><div class="code">&amp;#xe695;</div><div class="fontclass">.newcustom36</div></li><li> <i class="icon lud-icon">&#xe696;</i> <div class="name">new_custom37</div><div class="code">&amp;#xe696;</div><div class="fontclass">.newcustom37</div></li><li> <i class="icon lud-icon">&#xe697;</i> <div class="name">new_custom38</div><div class="code">&amp;#xe697;</div><div class="fontclass">.newcustom38</div></li><li> <i class="icon lud-icon">&#xe698;</i> <div class="name">new_custom39</div><div class="code">&amp;#xe698;</div><div class="fontclass">.newcustom39</div></li><li> <i class="icon lud-icon">&#xe699;</i> <div class="name">new_custom40</div><div class="code">&amp;#xe699;</div><div class="fontclass">.newcustom40</div></li><li> <i class="icon lud-icon">&#xe69a;</i> <div class="name">new_custom41</div><div class="code">&amp;#xe69a;</div><div class="fontclass">.newcustom41</div></li><li> <i class="icon lud-icon">&#xe69b;</i> <div class="name">new_custom42</div><div class="code">&amp;#xe69b;</div><div class="fontclass">.newcustom42</div></li><li> <i class="icon lud-icon">&#xe69c;</i> <div class="name">new_custom43</div><div class="code">&amp;#xe69c;</div><div class="fontclass">.newcustom43</div></li><li> <i class="icon lud-icon">&#xe69d;</i> <div class="name">new_custom44</div><div class="code">&amp;#xe69d;</div><div class="fontclass">.newcustom44</div></li><li> <i class="icon lud-icon">&#xe69e;</i> <div class="name">new_custom45</div><div class="code">&amp;#xe69e;</div><div class="fontclass">.newcustom45</div></li><li> <i class="icon lud-icon">&#xe69f;</i> <div class="name">new_custom46</div><div class="code">&amp;#xe69f;</div><div class="fontclass">.newcustom46</div></li><li> <i class="icon lud-icon">&#xe6a0;</i> <div class="name">new_custom47</div><div class="code">&amp;#xe6a0;</div><div class="fontclass">.newcustom47</div></li><li> <i class="icon lud-icon">&#xe6a1;</i> <div class="name">new_custom48</div><div class="code">&amp;#xe6a1;</div><div class="fontclass">.newcustom48</div></li><li> <i class="icon lud-icon">&#xe6a2;</i> <div class="name">new_custom49</div><div class="code">&amp;#xe6a2;</div><div class="fontclass">.newcustom49</div></li><li> <i class="icon lud-icon">&#xe6a3;</i> <div class="name">new_custom50</div><div class="code">&amp;#xe6a3;</div><div class="fontclass">.newcustom50</div></li><li> <i class="icon lud-icon">&#xe6a4;</i> <div class="name">new_custom51</div><div class="code">&amp;#xe6a4;</div><div class="fontclass">.newcustom51</div></li><li> <i class="icon lud-icon">&#xe6a5;</i> <div class="name">new_custom52</div><div class="code">&amp;#xe6a5;</div><div class="fontclass">.newcustom52</div></li><li> <i class="icon lud-icon">&#xe6a6;</i> <div class="name">new_custom54</div><div class="code">&amp;#xe6a6;</div><div class="fontclass">.newcustom54</div></li><li> <i class="icon lud-icon">&#xe6a7;</i> <div class="name">new_custom55</div><div class="code">&amp;#xe6a7;</div><div class="fontclass">.newcustom55</div></li><li> <i class="icon lud-icon">&#xe6a8;</i> <div class="name">new_custom56</div><div class="code">&amp;#xe6a8;</div><div class="fontclass">.newcustom56</div></li><li> <i class="icon lud-icon">&#xe6a9;</i> <div class="name">new_custom57</div><div class="code">&amp;#xe6a9;</div><div class="fontclass">.newcustom57</div></li><li> <i class="icon lud-icon">&#xe6aa;</i> <div class="name">new_custom58</div><div class="code">&amp;#xe6aa;</div><div class="fontclass">.newcustom58</div></li><li> <i class="icon lud-icon">&#xe6ab;</i> <div class="name">new_custom59</div><div class="code">&amp;#xe6ab;</div><div class="fontclass">.newcustom59</div></li><li> <i class="icon lud-icon">&#xe6ac;</i> <div class="name">new_custom60</div><div class="code">&amp;#xe6ac;</div><div class="fontclass">.newcustom60</div></li><li> <i class="icon lud-icon">&#xe6ad;</i> <div class="name">new_custom61</div><div class="code">&amp;#xe6ad;</div><div class="fontclass">.newcustom61</div></li><li> <i class="icon lud-icon">&#xe6ae;</i> <div class="name">new_custom62</div><div class="code">&amp;#xe6ae;</div><div class="fontclass">.newcustom62</div></li><li> <i class="icon lud-icon">&#xe6af;</i> <div class="name">new_custom63</div><div class="code">&amp;#xe6af;</div><div class="fontclass">.newcustom63</div></li><li> <i class="icon lud-icon">&#xe6b0;</i> <div class="name">new_custom64</div><div class="code">&amp;#xe6b0;</div><div class="fontclass">.newcustom64</div></li><li> <i class="icon lud-icon">&#xe6b1;</i> <div class="name">new_custom65</div><div class="code">&amp;#xe6b1;</div><div class="fontclass">.newcustom65</div></li><li> <i class="icon lud-icon">&#xe6b2;</i> <div class="name">new_custom66</div><div class="code">&amp;#xe6b2;</div><div class="fontclass">.newcustom66</div></li><li> <i class="icon lud-icon">&#xe6b3;</i> <div class="name">new_custom67</div><div class="code">&amp;#xe6b3;</div><div class="fontclass">.newcustom67</div></li><li> <i class="icon lud-icon">&#xe6b4;</i> <div class="name">new_custom68</div><div class="code">&amp;#xe6b4;</div><div class="fontclass">.newcustom68</div></li><li> <i class="icon lud-icon">&#xe6b5;</i> <div class="name">new_custom69</div><div class="code">&amp;#xe6b5;</div><div class="fontclass">.newcustom69</div></li><li> <i class="icon lud-icon">&#xe6b6;</i> <div class="name">new_custom70</div><div class="code">&amp;#xe6b6;</div><div class="fontclass">.newcustom70</div></li><li> <i class="icon lud-icon">&#xe6b7;</i> <div class="name">new_custom71</div><div class="code">&amp;#xe6b7;</div><div class="fontclass">.newcustom71</div></li><li> <i class="icon lud-icon">&#xe6b8;</i> <div class="name">new_custom72</div><div class="code">&amp;#xe6b8;</div><div class="fontclass">.newcustom72</div></li><li> <i class="icon lud-icon">&#xe6b9;</i> <div class="name">new_custom73</div><div class="code">&amp;#xe6b9;</div><div class="fontclass">.newcustom73</div></li><li> <i class="icon lud-icon">&#xe6ba;</i> <div class="name">new_custom74</div><div class="code">&amp;#xe6ba;</div><div class="fontclass">.newcustom74</div></li><li> <i class="icon lud-icon">&#xe6bb;</i> <div class="name">new_custom75</div><div class="code">&amp;#xe6bb;</div><div class="fontclass">.newcustom75</div></li><li> <i class="icon lud-icon">&#xe6bc;</i> <div class="name">new_custom76</div><div class="code">&amp;#xe6bc;</div><div class="fontclass">.newcustom76</div></li><li> <i class="icon lud-icon">&#xe6bd;</i> <div class="name">new_custom77</div><div class="code">&amp;#xe6bd;</div><div class="fontclass">.newcustom77</div></li><li> <i class="icon lud-icon">&#xe6be;</i> <div class="name">new_custom78</div><div class="code">&amp;#xe6be;</div><div class="fontclass">.newcustom78</div></li><li> <i class="icon lud-icon">&#xe6bf;</i> <div class="name">new_custom79</div><div class="code">&amp;#xe6bf;</div><div class="fontclass">.newcustom79</div></li><li> <i class="icon lud-icon">&#xe6c0;</i> <div class="name">new_custom80</div><div class="code">&amp;#xe6c0;</div><div class="fontclass">.newcustom80</div></li><li> <i class="icon lud-icon">&#xe6c1;</i> <div class="name">new_custom81</div><div class="code">&amp;#xe6c1;</div><div class="fontclass">.newcustom81</div></li><li> <i class="icon lud-icon">&#xe6c2;</i> <div class="name">new_custom82</div><div class="code">&amp;#xe6c2;</div><div class="fontclass">.newcustom82</div></li><li> <i class="icon lud-icon">&#xe6c3;</i> <div class="name">new_custom83</div><div class="code">&amp;#xe6c3;</div><div class="fontclass">.newcustom83</div></li><li> <i class="icon lud-icon">&#xe6c4;</i> <div class="name">new_custom84</div><div class="code">&amp;#xe6c4;</div><div class="fontclass">.newcustom84</div></li><li> <i class="icon lud-icon">&#xe6c5;</i> <div class="name">new_custom85</div><div class="code">&amp;#xe6c5;</div><div class="fontclass">.newcustom85</div></li><li> <i class="icon lud-icon">&#xe6c6;</i> <div class="name">new_custom86</div><div class="code">&amp;#xe6c6;</div><div class="fontclass">.newcustom86</div></li><li> <i class="icon lud-icon">&#xe6c7;</i> <div class="name">new_custom87</div><div class="code">&amp;#xe6c7;</div><div class="fontclass">.newcustom87</div></li><li> <i class="icon lud-icon">&#xe6c8;</i> <div class="name">new_custom88</div><div class="code">&amp;#xe6c8;</div><div class="fontclass">.newcustom88</div></li><li> <i class="icon lud-icon">&#xe6c9;</i> <div class="name">new_custom89</div><div class="code">&amp;#xe6c9;</div><div class="fontclass">.newcustom89</div></li><li> <i class="icon lud-icon">&#xe6ca;</i> <div class="name">new_custom90</div><div class="code">&amp;#xe6ca;</div><div class="fontclass">.newcustom90</div></li><li> <i class="icon lud-icon">&#xe6cb;</i> <div class="name">new_custom91</div><div class="code">&amp;#xe6cb;</div><div class="fontclass">.newcustom91</div></li><li> <i class="icon lud-icon">&#xe6cc;</i> <div class="name">new_custom92</div><div class="code">&amp;#xe6cc;</div><div class="fontclass">.newcustom92</div></li><li> <i class="icon lud-icon">&#xe6cd;</i> <div class="name">new_custom93</div><div class="code">&amp;#xe6cd;</div><div class="fontclass">.newcustom93</div></li><li> <i class="icon lud-icon">&#xe6ce;</i> <div class="name">new_custom94</div><div class="code">&amp;#xe6ce;</div><div class="fontclass">.newcustom94</div></li><li> <i class="icon lud-icon">&#xe6cf;</i> <div class="name">new_custom95</div><div class="code">&amp;#xe6cf;</div><div class="fontclass">.newcustom95</div></li><li> <i class="icon lud-icon">&#xe6d0;</i> <div class="name">new_custom96</div><div class="code">&amp;#xe6d0;</div><div class="fontclass">.newcustom96</div></li><li> <i class="icon lud-icon">&#xe6d1;</i> <div class="name">new_custom97</div><div class="code">&amp;#xe6d1;</div><div class="fontclass">.newcustom97</div></li><li> <i class="icon lud-icon">&#xe6d2;</i> <div class="name">new_custom98</div><div class="code">&amp;#xe6d2;</div><div class="fontclass">.newcustom98</div></li><li> <i class="icon lud-icon">&#xe6d3;</i> <div class="name">new_custom99</div><div class="code">&amp;#xe6d3;</div><div class="fontclass">.newcustom99</div></li><li> <i class="icon lud-icon">&#xe6d4;</i> <div class="name">new_custom100</div><div class="code">&amp;#xe6d4;</div><div class="fontclass">.newcustom100</div></li><li> <i class="icon lud-icon">&#xe6d5;</i> <div class="name">new_event</div><div class="code">&amp;#xe6d5;</div><div class="fontclass">.newevent</div></li><li> <i class="icon lud-icon">&#xe6d6;</i> <div class="name">new_group</div><div class="code">&amp;#xe6d6;</div><div class="fontclass">.newgroup</div></li><li> <i class="icon lud-icon">&#xe6d7;</i> <div class="name">new_lead</div><div class="code">&amp;#xe6d7;</div><div class="fontclass">.newlead</div></li><li> <i class="icon lud-icon">&#xe6d8;</i> <div class="name">new_note</div><div class="code">&amp;#xe6d8;</div><div class="fontclass">.newnote</div></li><li> <i class="icon lud-icon">&#xe6d9;</i> <div class="name">new_notebook</div><div class="code">&amp;#xe6d9;</div><div class="fontclass">.newnotebook</div></li><li> <i class="icon lud-icon">&#xe6da;</i> <div class="name">new_opportunity</div><div class="code">&amp;#xe6da;</div><div class="fontclass">.newopportunity</div></li><li> <i class="icon lud-icon">&#xe6db;</i> <div class="name">new_person_account</div><div class="code">&amp;#xe6db;</div><div class="fontclass">.newpersonaccount</div></li><li> <i class="icon lud-icon">&#xe6dc;</i> <div class="name">new_task</div><div class="code">&amp;#xe6dc;</div><div class="fontclass">.newtask</div></li><li> <i class="icon lud-icon">&#xe6dd;</i> <div class="name">password_unlock</div><div class="code">&amp;#xe6dd;</div><div class="fontclass">.passwordunlock</div></li><li> <i class="icon lud-icon">&#xe6de;</i> <div class="name">preview</div><div class="code">&amp;#xe6de;</div><div class="fontclass">.preview</div></li><li> <i class="icon lud-icon">&#xe6df;</i> <div class="name">priority</div><div class="code">&amp;#xe6df;</div><div class="fontclass">.priority</div></li><li> <i class="icon lud-icon">&#xe6e0;</i> <div class="name">question_post_action</div><div class="code">&amp;#xe6e0;</div><div class="fontclass">.questionpostaction</div></li><li> <i class="icon lud-icon">&#xe6e1;</i> <div class="name">quote</div><div class="code">&amp;#xe6e1;</div><div class="fontclass">.quote</div></li><li> <i class="icon lud-icon">&#xe6e2;</i> <div class="name">record</div><div class="code">&amp;#xe6e2;</div><div class="fontclass">.record1</div></li><li> <i class="icon lud-icon">&#xe6e3;</i> <div class="name">refresh</div><div class="code">&amp;#xe6e3;</div><div class="fontclass">.refresh</div></li><li> <i class="icon lud-icon">&#xe6e7;</i> <div class="name">share_link</div><div class="code">&amp;#xe6e7;</div><div class="fontclass">.sharelink</div></li><li> <i class="icon lud-icon">&#xe6e8;</i> <div class="name">share_poll</div><div class="code">&amp;#xe6e8;</div><div class="fontclass">.sharepoll</div></li><li> <i class="icon lud-icon">&#xe6e9;</i> <div class="name">share_post</div><div class="code">&amp;#xe6e9;</div><div class="fontclass">.sharepost</div></li><li> <i class="icon lud-icon">&#xe6ea;</i> <div class="name">share_thanks</div><div class="code">&amp;#xe6ea;</div><div class="fontclass">.sharethanks</div></li><li> <i class="icon lud-icon">&#xe6eb;</i> <div class="name">share</div><div class="code">&amp;#xe6eb;</div><div class="fontclass">.share</div></li><li> <i class="icon lud-icon">&#xe6ec;</i> <div class="name">sort</div><div class="code">&amp;#xe6ec;</div><div class="fontclass">.sort</div></li><li> <i class="icon lud-icon">&#xe6ed;</i> <div class="name">submit_for_approval</div><div class="code">&amp;#xe6ed;</div><div class="fontclass">.submitforapproval</div></li><li> <i class="icon lud-icon">&#xe6ee;</i> <div class="name">update_status</div><div class="code">&amp;#xe6ee;</div><div class="fontclass">.updatestatus</div></li><li> <i class="icon lud-icon">&#xe6ef;</i> <div class="name">update</div><div class="code">&amp;#xe6ef;</div><div class="fontclass">.update</div></li><li> <i class="icon lud-icon">&#xe6f0;</i> <div class="name">upload</div><div class="code">&amp;#xe6f0;</div><div class="fontclass">.upload</div></li><li> <i class="icon lud-icon">&#xe6f1;</i> <div class="name">user_activation</div><div class="code">&amp;#xe6f1;</div><div class="fontclass">.useractivation</div></li><li> <i class="icon lud-icon">&#xe6f2;</i> <div class="name">user</div><div class="code">&amp;#xe6f2;</div><div class="fontclass">.user1</div></li><li> <i class="icon lud-icon">&#xe6f3;</i> <div class="name">web_link</div><div class="code">&amp;#xe6f3;</div><div class="fontclass">.weblink</div></li><li> <i class="icon lud-icon">&#xe6f4;</i> <div class="name">add</div><div class="code">&amp;#xe6f4;</div><div class="fontclass">.add</div></li><li> <i class="icon lud-icon">&#xe6f5;</i> <div class="name">adduser</div><div class="code">&amp;#xe6f5;</div><div class="fontclass">.adduser</div></li><li> <i class="icon lud-icon">&#xe6f6;</i> <div class="name">announcement</div><div class="code">&amp;#xe6f6;</div><div class="fontclass">.announcement2</div></li><li> <i class="icon lud-icon">&#xe6f7;</i> <div class="name">answer</div><div class="code">&amp;#xe6f7;</div><div class="fontclass">.answer</div></li><li> <i class="icon lud-icon">&#xe6f8;</i> <div class="name">apps</div><div class="code">&amp;#xe6f8;</div><div class="fontclass">.apps1</div></li><li> <i class="icon lud-icon">&#xe6f9;</i> <div class="name">arrowdown</div><div class="code">&amp;#xe6f9;</div><div class="fontclass">.arrowdown</div></li><li> <i class="icon lud-icon">&#xe6fa;</i> <div class="name">arrowup</div><div class="code">&amp;#xe6fa;</div><div class="fontclass">.arrowup</div></li><li> <i class="icon lud-icon">&#xe6fb;</i> <div class="name">attach</div><div class="code">&amp;#xe6fb;</div><div class="fontclass">.attach</div></li><li> <i class="icon lud-icon">&#xe6fc;</i> <div class="name">back</div><div class="code">&amp;#xe6fc;</div><div class="fontclass">.back1</div></li><li> <i class="icon lud-icon">&#xe6fd;</i> <div class="name">ban</div><div class="code">&amp;#xe6fd;</div><div class="fontclass">.ban</div></li><li> <i class="icon lud-icon">&#xe6fe;</i> <div class="name">bold</div><div class="code">&amp;#xe6fe;</div><div class="fontclass">.bold</div></li><li> <i class="icon lud-icon">&#xe6ff;</i> <div class="name">bookmark</div><div class="code">&amp;#xe6ff;</div><div class="fontclass">.bookmark</div></li><li> <i class="icon lud-icon">&#xe700;</i> <div class="name">broadcast</div><div class="code">&amp;#xe700;</div><div class="fontclass">.broadcast</div></li><li> <i class="icon lud-icon">&#xe701;</i> <div class="name">brush</div><div class="code">&amp;#xe701;</div><div class="fontclass">.brush</div></li><li> <i class="icon lud-icon">&#xe702;</i> <div class="name">bucket</div><div class="code">&amp;#xe702;</div><div class="fontclass">.bucket</div></li><li> <i class="icon lud-icon">&#xe703;</i> <div class="name">builder</div><div class="code">&amp;#xe703;</div><div class="fontclass">.builder</div></li><li> <i class="icon lud-icon">&#xe704;</i> <div class="name">call</div><div class="code">&amp;#xe704;</div><div class="fontclass">.call2</div></li><li> <i class="icon lud-icon">&#xe705;</i> <div class="name">capslock</div><div class="code">&amp;#xe705;</div><div class="fontclass">.capslock</div></li><li> <i class="icon lud-icon">&#xe706;</i> <div class="name">cases</div><div class="code">&amp;#xe706;</div><div class="fontclass">.cases</div></li><li> <i class="icon lud-icon">&#xe707;</i> <div class="name">center_align_text</div><div class="code">&amp;#xe707;</div><div class="fontclass">.centeraligntext</div></li><li> <i class="icon lud-icon">&#xe708;</i> <div class="name">chart</div><div class="code">&amp;#xe708;</div><div class="fontclass">.chart</div></li><li> <i class="icon lud-icon">&#xe709;</i> <div class="name">chat</div><div class="code">&amp;#xe709;</div><div class="fontclass">.chat</div></li><li> <i class="icon lud-icon">&#xe70a;</i> <div class="name">check</div><div class="code">&amp;#xe70a;</div><div class="fontclass">.check</div></li><li> <i class="icon lud-icon">&#xe70b;</i> <div class="name">checkin</div><div class="code">&amp;#xe70b;</div><div class="fontclass">.checkin</div></li><li> <i class="icon lud-icon">&#xe70c;</i> <div class="name">chevrondown</div><div class="code">&amp;#xe70c;</div><div class="fontclass">.chevrondown</div></li><li> <i class="icon lud-icon">&#xe70d;</i> <div class="name">chevronleft</div><div class="code">&amp;#xe70d;</div><div class="fontclass">.chevronleft</div></li><li> <i class="icon lud-icon">&#xe70e;</i> <div class="name">chevronright</div><div class="code">&amp;#xe70e;</div><div class="fontclass">.chevronright</div></li><li> <i class="icon lud-icon">&#xe70f;</i> <div class="name">chevronup</div><div class="code">&amp;#xe70f;</div><div class="fontclass">.chevronup</div></li><li> <i class="icon lud-icon">&#xe710;</i> <div class="name">clear</div><div class="code">&amp;#xe710;</div><div class="fontclass">.clear</div></li><li> <i class="icon lud-icon">&#xe711;</i> <div class="name">clock</div><div class="code">&amp;#xe711;</div><div class="fontclass">.clock</div></li><li> <i class="icon lud-icon">&#xe712;</i> <div class="name">close</div><div class="code">&amp;#xe712;</div><div class="fontclass">.close</div></li><li> <i class="icon lud-icon">&#xe713;</i> <div class="name">comments</div><div class="code">&amp;#xe713;</div><div class="fontclass">.comments</div></li><li> <i class="icon lud-icon">&#xe714;</i> <div class="name">company</div><div class="code">&amp;#xe714;</div><div class="fontclass">.company</div></li><li> <i class="icon lud-icon">&#xe715;</i> <div class="name">connected_apps</div><div class="code">&amp;#xe715;</div><div class="fontclass">.connectedapps1</div></li><li> <i class="icon lud-icon">&#xe716;</i> <div class="name">contract_alt</div><div class="code">&amp;#xe716;</div><div class="fontclass">.contractalt</div></li><li> <i class="icon lud-icon">&#xe717;</i> <div class="name">contract</div><div class="code">&amp;#xe717;</div><div class="fontclass">.contract1</div></li><li> <i class="icon lud-icon">&#xe718;</i> <div class="name">copy</div><div class="code">&amp;#xe718;</div><div class="fontclass">.copy</div></li><li> <i class="icon lud-icon">&#xe719;</i> <div class="name">crossfilter</div><div class="code">&amp;#xe719;</div><div class="fontclass">.crossfilter</div></li><li> <i class="icon lud-icon">&#xe71a;</i> <div class="name">custom_apps</div><div class="code">&amp;#xe71a;</div><div class="fontclass">.customapps</div></li><li> <i class="icon lud-icon">&#xe71b;</i> <div class="name">cut</div><div class="code">&amp;#xe71b;</div><div class="fontclass">.cut</div></li><li> <i class="icon lud-icon">&#xe71c;</i> <div class="name">datadotcom</div><div class="code">&amp;#xe71c;</div><div class="fontclass">.datadotcom</div></li><li> <i class="icon lud-icon">&#xe71d;</i> <div class="name">dayview</div><div class="code">&amp;#xe71d;</div><div class="fontclass">.dayview</div></li><li> <i class="icon lud-icon">&#xe71e;</i> <div class="name">delete</div><div class="code">&amp;#xe71e;</div><div class="fontclass">.delete1</div></li><li> <i class="icon lud-icon">&#xe71f;</i> <div class="name">deprecate</div><div class="code">&amp;#xe71f;</div><div class="fontclass">.deprecate</div></li><li> <i class="icon lud-icon">&#xe720;</i> <div class="name">description</div><div class="code">&amp;#xe720;</div><div class="fontclass">.description1</div></li><li> <i class="icon lud-icon">&#xe721;</i> <div class="name">desktop</div><div class="code">&amp;#xe721;</div><div class="fontclass">.desktop</div></li><li> <i class="icon lud-icon">&#xe722;</i> <div class="name">dock_panel</div><div class="code">&amp;#xe722;</div><div class="fontclass">.dockpanel</div></li><li> <i class="icon lud-icon">&#xe723;</i> <div class="name">down</div><div class="code">&amp;#xe723;</div><div class="fontclass">.down</div></li><li> <i class="icon lud-icon">&#xe724;</i> <div class="name">download</div><div class="code">&amp;#xe724;</div><div class="fontclass">.download1</div></li><li> <i class="icon lud-icon">&#xe725;</i> <div class="name">edit_form</div><div class="code">&amp;#xe725;</div><div class="fontclass">.editform</div></li><li> <i class="icon lud-icon">&#xe726;</i> <div class="name">edit</div><div class="code">&amp;#xe726;</div><div class="fontclass">.edit1</div></li><li> <i class="icon lud-icon">&#xe727;</i> <div class="name">email</div><div class="code">&amp;#xe727;</div><div class="fontclass">.email2</div></li><li> <i class="icon lud-icon">&#xe728;</i> <div class="name">end_call</div><div class="code">&amp;#xe728;</div><div class="fontclass">.endcall</div></li><li> <i class="icon lud-icon">&#xe729;</i> <div class="name">erect_window</div><div class="code">&amp;#xe729;</div><div class="fontclass">.erectwindow</div></li><li> <i class="icon lud-icon">&#xe72a;</i> <div class="name">error</div><div class="code">&amp;#xe72a;</div><div class="fontclass">.error</div></li><li> <i class="icon lud-icon">&#xe72b;</i> <div class="name">event</div><div class="code">&amp;#xe72b;</div><div class="fontclass">.event1</div></li><li> <i class="icon lud-icon">&#xe72c;</i> <div class="name">expand_alt</div><div class="code">&amp;#xe72c;</div><div class="fontclass">.expandalt</div></li><li> <i class="icon lud-icon">&#xe72d;</i> <div class="name">expand</div><div class="code">&amp;#xe72d;</div><div class="fontclass">.expand</div></li><li> <i class="icon lud-icon">&#xe72e;</i> <div class="name">favorite</div><div class="code">&amp;#xe72e;</div><div class="fontclass">.favorite</div></li><li> <i class="icon lud-icon">&#xe72f;</i> <div class="name">feed</div><div class="code">&amp;#xe72f;</div><div class="fontclass">.feed1</div></li><li> <i class="icon lud-icon">&#xe730;</i> <div class="name">file</div><div class="code">&amp;#xe730;</div><div class="fontclass">.file1</div></li><li> <i class="icon lud-icon">&#xe731;</i> <div class="name">filter</div><div class="code">&amp;#xe731;</div><div class="fontclass">.filter1</div></li><li> <i class="icon lud-icon">&#xe732;</i> <div class="name">filterList</div><div class="code">&amp;#xe732;</div><div class="fontclass">.filterlist</div></li><li> <i class="icon lud-icon">&#xe733;</i> <div class="name">forward</div><div class="code">&amp;#xe733;</div><div class="fontclass">.forward</div></li><li> <i class="icon lud-icon">&#xe734;</i> <div class="name">frozen</div><div class="code">&amp;#xe734;</div><div class="fontclass">.frozen</div></li><li> <i class="icon lud-icon">&#xe735;</i> <div class="name">groups</div><div class="code">&amp;#xe735;</div><div class="fontclass">.groups1</div></li><li> <i class="icon lud-icon">&#xe736;</i> <div class="name">help</div><div class="code">&amp;#xe736;</div><div class="fontclass">.help</div></li><li> <i class="icon lud-icon">&#xe737;</i> <div class="name">home</div><div class="code">&amp;#xe737;</div><div class="fontclass">.home1</div></li><li> <i class="icon lud-icon">&#xe738;</i> <div class="name">identity</div><div class="code">&amp;#xe738;</div><div class="fontclass">.identity</div></li><li> <i class="icon lud-icon">&#xe739;</i> <div class="name">image</div><div class="code">&amp;#xe739;</div><div class="fontclass">.image</div></li><li> <i class="icon lud-icon">&#xe73a;</i> <div class="name">inbox</div><div class="code">&amp;#xe73a;</div><div class="fontclass">.inbox</div></li><li> <i class="icon lud-icon">&#xe73b;</i> <div class="name">info</div><div class="code">&amp;#xe73b;</div><div class="fontclass">.info1</div></li><li> <i class="icon lud-icon">&#xe73c;</i> <div class="name">insert_tag_field</div><div class="code">&amp;#xe73c;</div><div class="fontclass">.inserttagfield</div></li><li> <i class="icon lud-icon">&#xe73d;</i> <div class="name">insert_template</div><div class="code">&amp;#xe73d;</div><div class="fontclass">.inserttemplate</div></li><li> <i class="icon lud-icon">&#xe73e;</i> <div class="name">italic</div><div class="code">&amp;#xe73e;</div><div class="fontclass">.italic</div></li><li> <i class="icon lud-icon">&#xe73f;</i> <div class="name">justify_text</div><div class="code">&amp;#xe73f;</div><div class="fontclass">.justifytext</div></li><li> <i class="icon lud-icon">&#xe740;</i> <div class="name">kanban</div><div class="code">&amp;#xe740;</div><div class="fontclass">.kanban</div></li><li> <i class="icon lud-icon">&#xe741;</i> <div class="name">keyboard_dismiss</div><div class="code">&amp;#xe741;</div><div class="fontclass">.keyboarddismiss</div></li><li> <i class="icon lud-icon">&#xe742;</i> <div class="name">knowledge_base</div><div class="code">&amp;#xe742;</div><div class="fontclass">.knowledgebase</div></li><li> <i class="icon lud-icon">&#xe743;</i> <div class="name">layers</div><div class="code">&amp;#xe743;</div><div class="fontclass">.layers</div></li><li> <i class="icon lud-icon">&#xe744;</i> <div class="name">layout</div><div class="code">&amp;#xe744;</div><div class="fontclass">.layout</div></li><li> <i class="icon lud-icon">&#xe745;</i> <div class="name">left_align_text</div><div class="code">&amp;#xe745;</div><div class="fontclass">.leftaligntext</div></li><li> <i class="icon lud-icon">&#xe746;</i> <div class="name">left</div><div class="code">&amp;#xe746;</div><div class="fontclass">.left</div></li><li> <i class="icon lud-icon">&#xe747;</i> <div class="name">like</div><div class="code">&amp;#xe747;</div><div class="fontclass">.like</div></li><li> <i class="icon lud-icon">&#xe748;</i> <div class="name">link</div><div class="code">&amp;#xe748;</div><div class="fontclass">.link1</div></li><li> <i class="icon lud-icon">&#xe749;</i> <div class="name">list</div><div class="code">&amp;#xe749;</div><div class="fontclass">.list</div></li><li> <i class="icon lud-icon">&#xe74a;</i> <div class="name">location</div><div class="code">&amp;#xe74a;</div><div class="fontclass">.location</div></li><li> <i class="icon lud-icon">&#xe74b;</i> <div class="name">lock</div><div class="code">&amp;#xe74b;</div><div class="fontclass">.lock</div></li><li> <i class="icon lud-icon">&#xe74c;</i> <div class="name">log_a_call</div><div class="code">&amp;#xe74c;</div><div class="fontclass">.logacall1</div></li><li> <i class="icon lud-icon">&#xe74d;</i> <div class="name">logout</div><div class="code">&amp;#xe74d;</div><div class="fontclass">.logout</div></li><li> <i class="icon lud-icon">&#xe74e;</i> <div class="name">magicwand</div><div class="code">&amp;#xe74e;</div><div class="fontclass">.magicwand</div></li><li> <i class="icon lud-icon">&#xe74f;</i> <div class="name">matrix</div><div class="code">&amp;#xe74f;</div><div class="fontclass">.matrix</div></li><li> <i class="icon lud-icon">&#xe750;</i> <div class="name">metrics</div><div class="code">&amp;#xe750;</div><div class="fontclass">.metrics1</div></li><li> <i class="icon lud-icon">&#xe752;</i> <div class="name">moneybag</div><div class="code">&amp;#xe752;</div><div class="fontclass">.moneybag</div></li><li> <i class="icon lud-icon">&#xe753;</i> <div class="name">monthlyview</div><div class="code">&amp;#xe753;</div><div class="fontclass">.monthlyview</div></li><li> <i class="icon lud-icon">&#xe754;</i> <div class="name">move</div><div class="code">&amp;#xe754;</div><div class="fontclass">.move</div></li><li> <i class="icon lud-icon">&#xe755;</i> <div class="name">muted</div><div class="code">&amp;#xe755;</div><div class="fontclass">.muted</div></li><li> <i class="icon lud-icon">&#xe756;</i> <div class="name">new_window</div><div class="code">&amp;#xe756;</div><div class="fontclass">.newwindow</div></li><li> <i class="icon lud-icon">&#xe757;</i> <div class="name">new</div><div class="code">&amp;#xe757;</div><div class="fontclass">.new</div></li><li> <i class="icon lud-icon">&#xe758;</i> <div class="name">news</div><div class="code">&amp;#xe758;</div><div class="fontclass">.news1</div></li><li> <i class="icon lud-icon">&#xe759;</i> <div class="name">note</div><div class="code">&amp;#xe759;</div><div class="fontclass">.note1</div></li><li> <i class="icon lud-icon">&#xe75a;</i> <div class="name">notebook</div><div class="code">&amp;#xe75a;</div><div class="fontclass">.notebook</div></li><li> <i class="icon lud-icon">&#xe75b;</i> <div class="name">notification</div><div class="code">&amp;#xe75b;</div><div class="fontclass">.notification</div></li><li> <i class="icon lud-icon">&#xe75c;</i> <div class="name">office365</div><div class="code">&amp;#xe75c;</div><div class="fontclass">.office365</div></li><li> <i class="icon lud-icon">&#xe75d;</i> <div class="name">offline</div><div class="code">&amp;#xe75d;</div><div class="fontclass">.offline</div></li><li> <i class="icon lud-icon">&#xe75e;</i> <div class="name">open_folder</div><div class="code">&amp;#xe75e;</div><div class="fontclass">.openfolder</div></li><li> <i class="icon lud-icon">&#xe75f;</i> <div class="name">open</div><div class="code">&amp;#xe75f;</div><div class="fontclass">.open</div></li><li> <i class="icon lud-icon">&#xe760;</i> <div class="name">opened_folder</div><div class="code">&amp;#xe760;</div><div class="fontclass">.openedfolder</div></li><li> <i class="icon lud-icon">&#xe761;</i> <div class="name">overflow</div><div class="code">&amp;#xe761;</div><div class="fontclass">.overflow</div></li><li> <i class="icon lud-icon">&#xe762;</i> <div class="name">package_org_beta</div><div class="code">&amp;#xe762;</div><div class="fontclass">.packageorgbeta</div></li><li> <i class="icon lud-icon">&#xe763;</i> <div class="name">package_org</div><div class="code">&amp;#xe763;</div><div class="fontclass">.packageorg</div></li><li> <i class="icon lud-icon">&#xe764;</i> <div class="name">package</div><div class="code">&amp;#xe764;</div><div class="fontclass">.package</div></li><li> <i class="icon lud-icon">&#xe765;</i> <div class="name">page</div><div class="code">&amp;#xe765;</div><div class="fontclass">.page</div></li><li> <i class="icon lud-icon">&#xe766;</i> <div class="name">palette</div><div class="code">&amp;#xe766;</div><div class="fontclass">.palette</div></li><li> <i class="icon lud-icon">&#xe767;</i> <div class="name">paste</div><div class="code">&amp;#xe767;</div><div class="fontclass">.paste</div></li><li> <i class="icon lud-icon">&#xe768;</i> <div class="name">people</div><div class="code">&amp;#xe768;</div><div class="fontclass">.people1</div></li><li> <i class="icon lud-icon">&#xe769;</i> <div class="name">phone_landscape</div><div class="code">&amp;#xe769;</div><div class="fontclass">.phonelandscape</div></li><li> <i class="icon lud-icon">&#xe76a;</i> <div class="name">phone_portrait</div><div class="code">&amp;#xe76a;</div><div class="fontclass">.phoneportrait</div></li><li> <i class="icon lud-icon">&#xe76b;</i> <div class="name">photo</div><div class="code">&amp;#xe76b;</div><div class="fontclass">.photo1</div></li><li> <i class="icon lud-icon">&#xe76c;</i> <div class="name">picklist</div><div class="code">&amp;#xe76c;</div><div class="fontclass">.picklist</div></li><li> <i class="icon lud-icon">&#xe76d;</i> <div class="name">power</div><div class="code">&amp;#xe76d;</div><div class="fontclass">.power</div></li><li> <i class="icon lud-icon">&#xe76e;</i> <div class="name">preview</div><div class="code">&amp;#xe76e;</div><div class="fontclass">.preview1</div></li><li> <i class="icon lud-icon">&#xe76f;</i> <div class="name">priority</div><div class="code">&amp;#xe76f;</div><div class="fontclass">.priority1</div></li><li> <i class="icon lud-icon">&#xe770;</i> <div class="name">process</div><div class="code">&amp;#xe770;</div><div class="fontclass">.process1</div></li><li> <i class="icon lud-icon">&#xe771;</i> <div class="name">push</div><div class="code">&amp;#xe771;</div><div class="fontclass">.push</div></li><li> <i class="icon lud-icon">&#xe772;</i> <div class="name">puzzle</div><div class="code">&amp;#xe772;</div><div class="fontclass">.puzzle</div></li><li> <i class="icon lud-icon">&#xe773;</i> <div class="name">question</div><div class="code">&amp;#xe773;</div><div class="fontclass">.question</div></li><li> <i class="icon lud-icon">&#xe774;</i> <div class="name">questions_and_answers</div><div class="code">&amp;#xe774;</div><div class="fontclass">.questionsandanswers</div></li><li> <i class="icon lud-icon">&#xe775;</i> <div class="name">record</div><div class="code">&amp;#xe775;</div><div class="fontclass">.record2</div></li><li> <i class="icon lud-icon">&#xe776;</i> <div class="name">redo</div><div class="code">&amp;#xe776;</div><div class="fontclass">.redo</div></li><li> <i class="icon lud-icon">&#xe777;</i> <div class="name">refresh</div><div class="code">&amp;#xe777;</div><div class="fontclass">.refresh1</div></li><li> <i class="icon lud-icon">&#xe778;</i> <div class="name">relate</div><div class="code">&amp;#xe778;</div><div class="fontclass">.relate</div></li><li> <i class="icon lud-icon">&#xe779;</i> <div class="name">remove_formatting</div><div class="code">&amp;#xe779;</div><div class="fontclass">.removeformatting</div></li><li> <i class="icon lud-icon">&#xe77a;</i> <div class="name">remove_link</div><div class="code">&amp;#xe77a;</div><div class="fontclass">.removelink</div></li><li> <i class="icon lud-icon">&#xe77b;</i> <div class="name">replace</div><div class="code">&amp;#xe77b;</div><div class="fontclass">.replace</div></li><li> <i class="icon lud-icon">&#xe77c;</i> <div class="name">reply</div><div class="code">&amp;#xe77c;</div><div class="fontclass">.reply</div></li><li> <i class="icon lud-icon">&#xe77d;</i> <div class="name">reset_password</div><div class="code">&amp;#xe77d;</div><div class="fontclass">.resetpassword</div></li><li> <i class="icon lud-icon">&#xe77e;</i> <div class="name">retweet</div><div class="code">&amp;#xe77e;</div><div class="fontclass">.retweet</div></li><li> <i class="icon lud-icon">&#xe77f;</i> <div class="name">richtextbulletedlist</div><div class="code">&amp;#xe77f;</div><div class="fontclass">.richtextbulletedlist</div></li><li> <i class="icon lud-icon">&#xe780;</i> <div class="name">richtextindent</div><div class="code">&amp;#xe780;</div><div class="fontclass">.richtextindent</div></li><li> <i class="icon lud-icon">&#xe781;</i> <div class="name">richtextnumberedlist</div><div class="code">&amp;#xe781;</div><div class="fontclass">.richtextnumberedlist</div></li><li> <i class="icon lud-icon">&#xe782;</i> <div class="name">richtextoutdent</div><div class="code">&amp;#xe782;</div><div class="fontclass">.richtextoutdent</div></li><li> <i class="icon lud-icon">&#xe783;</i> <div class="name">right_align_text</div><div class="code">&amp;#xe783;</div><div class="fontclass">.rightaligntext</div></li><li> <i class="icon lud-icon">&#xe784;</i> <div class="name">right</div><div class="code">&amp;#xe784;</div><div class="fontclass">.right</div></li><li> <i class="icon lud-icon">&#xe785;</i> <div class="name">rotate</div><div class="code">&amp;#xe785;</div><div class="fontclass">.rotate</div></li><li> <i class="icon lud-icon">&#xe786;</i> <div class="name">rows</div><div class="code">&amp;#xe786;</div><div class="fontclass">.rows</div></li><li> <i class="icon lud-icon">&#xe787;</i> <div class="name">search</div><div class="code">&amp;#xe787;</div><div class="fontclass">.search</div></li><li> <i class="icon lud-icon">&#xe788;</i> <div class="name">settings</div><div class="code">&amp;#xe788;</div><div class="fontclass">.settings</div></li><li> <i class="icon lud-icon">&#xe789;</i> <div class="name">setup_assistant_guide</div><div class="code">&amp;#xe789;</div><div class="fontclass">.setupassistantguide</div></li><li> <i class="icon lud-icon">&#xe78a;</i> <div class="name">setup</div><div class="code">&amp;#xe78a;</div><div class="fontclass">.setup</div></li><li> <i class="icon lud-icon">&#xe78b;</i> <div class="name">share_post</div><div class="code">&amp;#xe78b;</div><div class="fontclass">.sharepost1</div></li><li> <i class="icon lud-icon">&#xe78c;</i> <div class="name">share</div><div class="code">&amp;#xe78c;</div><div class="fontclass">.share1</div></li><li> <i class="icon lud-icon">&#xe78d;</i> <div class="name">shield</div><div class="code">&amp;#xe78d;</div><div class="fontclass">.shield</div></li><li> <i class="icon lud-icon">&#xe78e;</i> <div class="name">side_list</div><div class="code">&amp;#xe78e;</div><div class="fontclass">.sidelist</div></li><li> <i class="icon lud-icon">&#xe78f;</i> <div class="name">signpost</div><div class="code">&amp;#xe78f;</div><div class="fontclass">.signpost</div></li><li> <i class="icon lud-icon">&#xe790;</i> <div class="name">sms</div><div class="code">&amp;#xe790;</div><div class="fontclass">.sms</div></li><li> <i class="icon lud-icon">&#xe791;</i> <div class="name">snippet</div><div class="code">&amp;#xe791;</div><div class="fontclass">.snippet</div></li><li> <i class="icon lud-icon">&#xe792;</i> <div class="name">socialshare</div><div class="code">&amp;#xe792;</div><div class="fontclass">.socialshare</div></li><li> <i class="icon lud-icon">&#xe793;</i> <div class="name">sort</div><div class="code">&amp;#xe793;</div><div class="fontclass">.sort1</div></li><li> <i class="icon lud-icon">&#xe794;</i> <div class="name">spinner</div><div class="code">&amp;#xe794;</div><div class="fontclass">.spinner</div></li><li> <i class="icon lud-icon">&#xe795;</i> <div class="name">standard_objects</div><div class="code">&amp;#xe795;</div><div class="fontclass">.standardobjects</div></li><li> <i class="icon lud-icon">&#xe796;</i> <div class="name">stop</div><div class="code">&amp;#xe796;</div><div class="fontclass">.stop</div></li><li> <i class="icon lud-icon">&#xe797;</i> <div class="name">strikethrough</div><div class="code">&amp;#xe797;</div><div class="fontclass">.strikethrough</div></li><li> <i class="icon lud-icon">&#xe798;</i> <div class="name">success</div><div class="code">&amp;#xe798;</div><div class="fontclass">.success</div></li><li> <i class="icon lud-icon">&#xe799;</i> <div class="name">summary</div><div class="code">&amp;#xe799;</div><div class="fontclass">.summary</div></li><li> <i class="icon lud-icon">&#xe79a;</i> <div class="name">summarydetail</div><div class="code">&amp;#xe79a;</div><div class="fontclass">.summarydetail</div></li><li> <i class="icon lud-icon">&#xe79b;</i> <div class="name">switch</div><div class="code">&amp;#xe79b;</div><div class="fontclass">.switch</div></li><li> <i class="icon lud-icon">&#xe79c;</i> <div class="name">table</div><div class="code">&amp;#xe79c;</div><div class="fontclass">.table</div></li><li> <i class="icon lud-icon">&#xe79d;</i> <div class="name">tablet_landscape</div><div class="code">&amp;#xe79d;</div><div class="fontclass">.tabletlandscape</div></li><li> <i class="icon lud-icon">&#xe79e;</i> <div class="name">tablet_portrait</div><div class="code">&amp;#xe79e;</div><div class="fontclass">.tabletportrait</div></li><li> <i class="icon lud-icon">&#xe79f;</i> <div class="name">tabset</div><div class="code">&amp;#xe79f;</div><div class="fontclass">.tabset</div></li><li> <i class="icon lud-icon">&#xe7a0;</i> <div class="name">task</div><div class="code">&amp;#xe7a0;</div><div class="fontclass">.task1</div></li><li> <i class="icon lud-icon">&#xe7a1;</i> <div class="name">text_background_color</div><div class="code">&amp;#xe7a1;</div><div class="fontclass">.textbackgroundcolor</div></li><li> <i class="icon lud-icon">&#xe7a2;</i> <div class="name">text_color</div><div class="code">&amp;#xe7a2;</div><div class="fontclass">.textcolor</div></li><li> <i class="icon lud-icon">&#xe7a3;</i> <div class="name">threedots</div><div class="code">&amp;#xe7a3;</div><div class="fontclass">.threedots</div></li><li> <i class="icon lud-icon">&#xe7a4;</i> <div class="name">tile_card_list</div><div class="code">&amp;#xe7a4;</div><div class="fontclass">.tilecardlist</div></li><li> <i class="icon lud-icon">&#xe7a5;</i> <div class="name">topic</div><div class="code">&amp;#xe7a5;</div><div class="fontclass">.topic1</div></li><li> <i class="icon lud-icon">&#xe7a6;</i> <div class="name">touch_action</div><div class="code">&amp;#xe7a6;</div><div class="fontclass">.touchaction</div></li><li> <i class="icon lud-icon">&#xe7a7;</i> <div class="name">trail</div><div class="code">&amp;#xe7a7;</div><div class="fontclass">.trail</div></li><li> <i class="icon lud-icon">&#xe7a8;</i> <div class="name">undelete</div><div class="code">&amp;#xe7a8;</div><div class="fontclass">.undelete</div></li><li> <i class="icon lud-icon">&#xe7a9;</i> <div class="name">undeprecate</div><div class="code">&amp;#xe7a9;</div><div class="fontclass">.undeprecate</div></li><li> <i class="icon lud-icon">&#xe7aa;</i> <div class="name">underline</div><div class="code">&amp;#xe7aa;</div><div class="fontclass">.underline</div></li><li> <i class="icon lud-icon">&#xe7ab;</i> <div class="name">undo</div><div class="code">&amp;#xe7ab;</div><div class="fontclass">.undo</div></li><li> <i class="icon lud-icon">&#xe7ac;</i> <div class="name">unlock</div><div class="code">&amp;#xe7ac;</div><div class="fontclass">.unlock</div></li><li> <i class="icon lud-icon">&#xe7ad;</i> <div class="name">unmuted</div><div class="code">&amp;#xe7ad;</div><div class="fontclass">.unmuted</div></li><li> <i class="icon lud-icon">&#xe7ae;</i> <div class="name">up</div><div class="code">&amp;#xe7ae;</div><div class="fontclass">.up</div></li><li> <i class="icon lud-icon">&#xe7af;</i> <div class="name">upload</div><div class="code">&amp;#xe7af;</div><div class="fontclass">.upload1</div></li><li> <i class="icon lud-icon">&#xe7b0;</i> <div class="name">user_role</div><div class="code">&amp;#xe7b0;</div><div class="fontclass">.userrole</div></li><li> <i class="icon lud-icon">&#xe7b1;</i> <div class="name">user</div><div class="code">&amp;#xe7b1;</div><div class="fontclass">.user2</div></li><li> <i class="icon lud-icon">&#xe7b2;</i> <div class="name">volume_high</div><div class="code">&amp;#xe7b2;</div><div class="fontclass">.volumehigh</div></li><li> <i class="icon lud-icon">&#xe7b3;</i> <div class="name">volume_low</div><div class="code">&amp;#xe7b3;</div><div class="fontclass">.volumelow</div></li><li> <i class="icon lud-icon">&#xe7b4;</i> <div class="name">volume_off</div><div class="code">&amp;#xe7b4;</div><div class="fontclass">.volumeoff</div></li><li> <i class="icon lud-icon">&#xe7b5;</i> <div class="name">warning</div><div class="code">&amp;#xe7b5;</div><div class="fontclass">.warning</div></li><li> <i class="icon lud-icon">&#xe7b6;</i> <div class="name">weeklyview</div><div class="code">&amp;#xe7b6;</div><div class="fontclass">.weeklyview</div></li><li> <i class="icon lud-icon">&#xe7b7;</i> <div class="name">world</div><div class="code">&amp;#xe7b7;</div><div class="fontclass">.world</div></li><li> <i class="icon lud-icon">&#xe7b8;</i> <div class="name">zoomin</div><div class="code">&amp;#xe7b8;</div><div class="fontclass">.zoomin</div></li><li> <i class="icon lud-icon">&#xe7b9;</i> <div class="name">zoomout</div><div class="code">&amp;#xe7b9;</div><div class="fontclass">.zoomout</div></li></ul>
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-
-
-	var ludIcon = function (_ludComponent) {
-	  _inherits(ludIcon, _ludComponent);
-
-	  function ludIcon() {
-	    _classCallCheck(this, ludIcon);
-
-	    return _possibleConstructorReturn(this, (ludIcon.__proto__ || Object.getPrototypeOf(ludIcon)).apply(this, arguments));
-	  }
-
-	  _createClass(ludIcon, null, [{
-	    key: 'render',
-	    value: function render(el) {
-	      var _classNames;
-
-	      var iconCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, 'lud-icon', true), _defineProperty(_classNames, 'lud-icon--' + el.type, true), _classNames));
-	      return skate.h('i', { 'class': iconCls, 'aria-hidden': 'true' });
-	    }
-	  }]);
-
-	  return ludIcon;
-	}(_lud_component2.default);
-
-	ludIcon.props = {
-	  type: skate.prop.string({ attribute: true })
-	};
-
-	skate.define('lud-icon', ludIcon);
-
-/***/ },
-/* 30 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 31 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(32);
-
-/***/ },
-/* 32 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 33 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(34);
-
-/***/ },
-/* 34 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 35 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	__webpack_require__(36);
-
-	var _lud_component = __webpack_require__(19);
-
-	var _lud_component2 = _interopRequireDefault(_lud_component);
-
-	var _skatejs = __webpack_require__(20);
-
-	var skate = _interopRequireWildcard(_skatejs);
-
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*doc
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                title: Phone Mockup
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                name: phone-mockup
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                category: 组件
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                显示移动端预览效果。
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 代码演示
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```html_example
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-phone-mockup>
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   <img src="http://a3.mzstatic.com/us/r30/Purple62/v4/25/39/23/2539239c-4bdd-b750-84dd-82f6fef81c11/screen696x696.jpeg"/>
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </lud-phone-mockup>
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-
-
-	var ludPhoneMockup = function (_ludComponent) {
-	  _inherits(ludPhoneMockup, _ludComponent);
-
-	  function ludPhoneMockup() {
-	    _classCallCheck(this, ludPhoneMockup);
-
-	    return _possibleConstructorReturn(this, (ludPhoneMockup.__proto__ || Object.getPrototypeOf(ludPhoneMockup)).apply(this, arguments));
-	  }
-
-	  _createClass(ludPhoneMockup, null, [{
-	    key: 'created',
-	    value: function created(el) {
-	      el.child = el.innerHTML;
-	      el.innerHTML = null;
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render(el) {
-	      var child = skate.h('div', { ref: function ref(x) {
-	          return x.innerHTML = el.child;
-	        }, className: 'lud-phone-mockup__body', skip: true });
-
-	      return skate.h(
-	        'div',
-	        { className: 'lud-phone-mockup', role: 'alert' },
-	        child
-	      );
-	    }
-	  }]);
-
-	  return ludPhoneMockup;
-	}(_lud_component2.default);
-
-	ludPhoneMockup.props = {
-	  child: skate.prop.string()
-	};
-
-
-	skate.define('lud-phone-mockup', ludPhoneMockup);
-
-/***/ },
-/* 36 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 37 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(38);
-
-	__webpack_require__(39);
+	__webpack_require__(23);
 
 	var _jquery = __webpack_require__(2);
 
@@ -17318,13 +14185,13 @@
 	(0, _jquery2.default)(document).on("turbolinks:load", init_select).on("ajax:success", init_select); // ujs remote:true
 
 /***/ },
-/* 38 */
+/* 22 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 39 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var require;var require;/* WEBPACK VAR INJECTION */(function($) {/*!
@@ -23767,20 +20634,3374 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 40 */
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	__webpack_require__(25);
+
+	var _lud_component = __webpack_require__(26);
+
+	var _lud_component2 = _interopRequireDefault(_lud_component);
+
+	var _skatejs = __webpack_require__(27);
+
+	var skate = _interopRequireWildcard(_skatejs);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*doc
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                title: Toggle 开关
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                name: toggle
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                category: 组件
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                开关选择器。
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 何时使用
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 需要表示开关状态/两种状态之间的切换时。
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 代码演示
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```html_example
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="lud-form-element">
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <label class="lud-form-element__label" for="text-input-01">Guest Mode</label>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="lud-form-element__control">
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-toggle name="guest-mode"></lud-toggle>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="lud-form-element">
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <label class="lud-form-element__label" for="text-input-01">Admin Mode</label>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="lud-form-element__control">
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-toggle name="admin-mode" value="root" disabled></lud-toggle>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var ludToggle = function (_ludComponent) {
+	  _inherits(ludToggle, _ludComponent);
+
+	  function ludToggle() {
+	    _classCallCheck(this, ludToggle);
+
+	    return _possibleConstructorReturn(this, (ludToggle.__proto__ || Object.getPrototypeOf(ludToggle)).apply(this, arguments));
+	  }
+
+	  _createClass(ludToggle, null, [{
+	    key: 'created',
+	    value: function created(el) {
+	      el.input_name = el.name;
+	      var $el = $(el);
+	      $el.attr('name', el.input_name + '-wrap');
+	      $el.on('toggle', function () {
+	        if (el.disabled) return false;
+	        el.checked = !el.checked;
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render(el) {
+	      //noinspection CheckTagEmptyBody
+	      return skate.h(
+	        'div',
+	        { className: 'lud-toggle__wrap', onClick: function onClick() {
+	            return skate.emit(el, 'toggle');
+	          } },
+	        skate.h('input', { name: el.input_name, className: 'lud-toggle__input', checked: el.checked, disabled: el.disabled, value: el.value, type: 'checkbox', tabindex: '-1' }),
+	        skate.h('span', { className: 'lud-toggle__switch' })
+	      );
+	    }
+	  }]);
+
+	  return ludToggle;
+	}(_lud_component2.default);
+
+	ludToggle.props = {
+	  value: skate.prop.string({ attribute: true }),
+	  checked: skate.prop.boolean({ attribute: true }),
+	  disabled: skate.prop.boolean({ attribute: true }),
+	  name: skate.prop.string({ attribute: true }),
+	  input_name: skate.prop.string()
+	};
+
+	skate.define('lud-toggle', ludToggle);
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ },
+/* 25 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 26 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _skatejs = __webpack_require__(27);
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ludComponent = function (_Component) {
+	  _inherits(ludComponent, _Component);
+
+	  function ludComponent() {
+	    _classCallCheck(this, ludComponent);
+
+	    return _possibleConstructorReturn(this, (ludComponent.__proto__ || Object.getPrototypeOf(ludComponent)).apply(this, arguments));
+	  }
+
+	  _createClass(ludComponent, [{
+	    key: 'attachShadow',
+	    value: function attachShadow() {
+	      return this; // disabled ShadowDom
+	    }
+
+	    // However, in old Chrome / Opera or old polyfills
+	    // you might need to do this.
+
+	  }, {
+	    key: 'createShadowRoot',
+	    value: function createShadowRoot() {
+	      return this;
+	    }
+	  }]);
+
+	  return ludComponent;
+	}(_skatejs.Component);
+
+	exports.default = ludComponent;
+
+/***/ },
+/* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
+	(function (global, factory) {
+	   true ? factory(exports, __webpack_require__(28)) :
+	  typeof define === 'function' && define.amd ? define(['exports', 'incremental-dom'], factory) :
+	  (factory((global.skate = global.skate || {}),global.IncrementalDOM));
+	}(this, (function (exports,incrementalDom) {
+
+	function keys() {
+	  var obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+	  var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+	  var _ref$enumOnly = _ref.enumOnly;
+	  var enumOnly = _ref$enumOnly === undefined ? false : _ref$enumOnly;
+
+	  var listOfKeys = Object[enumOnly ? 'keys' : 'getOwnPropertyNames'](obj);
+	  return typeof Object.getOwnPropertySymbols === 'function' ? listOfKeys.concat(Object.getOwnPropertySymbols(obj)) : listOfKeys;
+	}
+
+	// We are not using Object.assign if it is defined since it will cause problems when Symbol is polyfilled.
+	// Apparently Object.assign (or any polyfill for this method) does not copy non-native Symbols.
+	var assign = (function (obj) {
+	  for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+	    args[_key - 1] = arguments[_key];
+	  }
+
+	  args.forEach(function (arg) {
+	    return keys(arg).forEach(function (name) {
+	      return obj[name] = arg[name];
+	    });
+	  }); // eslint-disable-line no-return-assign
+	  return obj;
+	});
+
+	var empty = function (val) {
+	  return typeof val === 'undefined' || val === null;
+	};
+
+	var alwaysUndefinedIfNotANumberOrNumber = function alwaysUndefinedIfNotANumberOrNumber(val) {
+	  return isNaN(val) ? undefined : Number(val);
+	};
+	var alwaysUndefinedIfEmptyOrString = function alwaysUndefinedIfEmptyOrString(val) {
+	  return empty(val) ? undefined : String(val);
+	};
+
+	function create(def) {
+	  return function () {
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
+
+	    args.unshift({}, def);
+	    return assign.apply(undefined, args);
+	  };
+	}
+
+	var array = create({
+	  coerce: function coerce(val) {
+	    return Array.isArray(val) ? val : [val];
+	  },
+	  default: function _default() {
+	    return [];
+	  },
+	  deserialize: JSON.parse,
+	  serialize: JSON.stringify
+	});
+
+	var boolean = create({
+	  coerce: function coerce(value) {
+	    return !!value;
+	  },
+	  default: false,
+	  deserialize: function deserialize(value) {
+	    return !(value === null);
+	  },
+	  serialize: function serialize(value) {
+	    return value ? '' : undefined;
+	  }
+	});
+
+	var number = create({
+	  default: 0,
+	  coerce: alwaysUndefinedIfNotANumberOrNumber,
+	  deserialize: alwaysUndefinedIfNotANumberOrNumber,
+	  serialize: alwaysUndefinedIfNotANumberOrNumber
+	});
+
+	var string = create({
+	  default: '',
+	  coerce: alwaysUndefinedIfEmptyOrString,
+	  deserialize: alwaysUndefinedIfEmptyOrString,
+	  serialize: alwaysUndefinedIfEmptyOrString
+	});
+
+	var prop = Object.freeze({
+		create: create,
+		array: array,
+		boolean: boolean,
+		number: number,
+		string: string
+	});
+
+	var connected = '____skate_connected';
+	var created$1 = '____skate_created';
+	var name$1 = '____skate_name';
+	var props = '____skate_props';
+	var ref$1 = '____skate_ref';
+	var renderer = '____skate_renderer';
+	var rendering = '____skate_rendering';
+	var rendererDebounced = '____skate_rendererDebounced';
+	var shadowRoot = '____skate_shadowRoot';
+
+
+
+	var symbols$1 = Object.freeze({
+		name: name$1,
+		shadowRoot: shadowRoot
+	});
+
+	var doc = document;
+	var win = window;
+	var div = doc.createElement('div');
+	var customElementsV0 = !!doc.registerElement;
+	var customElementsV1 = !!win.customElements;
+	var shadowDomV0 = !!div.createShadowRoot;
+	var shadowDomV1 = !!div.attachShadow;
+	var reflect = 'Reflect' in window;
+
+	function enter(object, props) {
+	  var saved = {};
+	  Object.keys(props).forEach(function (key) {
+	    saved[key] = object[key];
+	    object[key] = props[key];
+	  });
+	  return saved;
+	}
+
+	function exit(object, saved) {
+	  assign(object, saved);
+	}
+
+	// Decorates a function with a side effect that changes the properties of an
+	// object during its execution, and restores them after. There is no error
+	// handling here, if the wrapped function throws an error, properties are not
+	// restored and all bets are off.
+	var propContext = function (object, props) {
+	  return function (func) {
+	    return function () {
+	      var saved = enter(object, props);
+	      var result = func.apply(undefined, arguments);
+	      exit(object, saved);
+	      return result;
+	    };
+	  };
+	};
+
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
+	  return typeof obj;
+	} : function (obj) {
+	  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+	};
+
+
+
+
+
+	var asyncGenerator = function () {
+	  function AwaitValue(value) {
+	    this.value = value;
+	  }
+
+	  function AsyncGenerator(gen) {
+	    var front, back;
+
+	    function send(key, arg) {
+	      return new Promise(function (resolve, reject) {
+	        var request = {
+	          key: key,
+	          arg: arg,
+	          resolve: resolve,
+	          reject: reject,
+	          next: null
+	        };
+
+	        if (back) {
+	          back = back.next = request;
+	        } else {
+	          front = back = request;
+	          resume(key, arg);
+	        }
+	      });
+	    }
+
+	    function resume(key, arg) {
+	      try {
+	        var result = gen[key](arg);
+	        var value = result.value;
+
+	        if (value instanceof AwaitValue) {
+	          Promise.resolve(value.value).then(function (arg) {
+	            resume("next", arg);
+	          }, function (arg) {
+	            resume("throw", arg);
+	          });
+	        } else {
+	          settle(result.done ? "return" : "normal", result.value);
+	        }
+	      } catch (err) {
+	        settle("throw", err);
+	      }
+	    }
+
+	    function settle(type, value) {
+	      switch (type) {
+	        case "return":
+	          front.resolve({
+	            value: value,
+	            done: true
+	          });
+	          break;
+
+	        case "throw":
+	          front.reject(value);
+	          break;
+
+	        default:
+	          front.resolve({
+	            value: value,
+	            done: false
+	          });
+	          break;
+	      }
+
+	      front = front.next;
+
+	      if (front) {
+	        resume(front.key, front.arg);
+	      } else {
+	        back = null;
+	      }
+	    }
+
+	    this._invoke = send;
+
+	    if (typeof gen.return !== "function") {
+	      this.return = undefined;
+	    }
+	  }
+
+	  if (typeof Symbol === "function" && Symbol.asyncIterator) {
+	    AsyncGenerator.prototype[Symbol.asyncIterator] = function () {
+	      return this;
+	    };
+	  }
+
+	  AsyncGenerator.prototype.next = function (arg) {
+	    return this._invoke("next", arg);
+	  };
+
+	  AsyncGenerator.prototype.throw = function (arg) {
+	    return this._invoke("throw", arg);
+	  };
+
+	  AsyncGenerator.prototype.return = function (arg) {
+	    return this._invoke("return", arg);
+	  };
+
+	  return {
+	    wrap: function (fn) {
+	      return function () {
+	        return new AsyncGenerator(fn.apply(this, arguments));
+	      };
+	    },
+	    await: function (value) {
+	      return new AwaitValue(value);
+	    }
+	  };
+	}();
+
+
+
+
+
+	var classCallCheck = function (instance, Constructor) {
+	  if (!(instance instanceof Constructor)) {
+	    throw new TypeError("Cannot call a class as a function");
+	  }
+	};
+
+
+
+
+
+
+
+	var defineProperty = function (obj, key, value) {
+	  if (key in obj) {
+	    Object.defineProperty(obj, key, {
+	      value: value,
+	      enumerable: true,
+	      configurable: true,
+	      writable: true
+	    });
+	  } else {
+	    obj[key] = value;
+	  }
+
+	  return obj;
+	};
+
+	var get$1 = function get$1(object, property, receiver) {
+	  if (object === null) object = Function.prototype;
+	  var desc = Object.getOwnPropertyDescriptor(object, property);
+
+	  if (desc === undefined) {
+	    var parent = Object.getPrototypeOf(object);
+
+	    if (parent === null) {
+	      return undefined;
+	    } else {
+	      return get$1(parent, property, receiver);
+	    }
+	  } else if ("value" in desc) {
+	    return desc.value;
+	  } else {
+	    var getter = desc.get;
+
+	    if (getter === undefined) {
+	      return undefined;
+	    }
+
+	    return getter.call(receiver);
+	  }
+	};
+
+	var inherits = function (subClass, superClass) {
+	  if (typeof superClass !== "function" && superClass !== null) {
+	    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+	  }
+
+	  subClass.prototype = Object.create(superClass && superClass.prototype, {
+	    constructor: {
+	      value: subClass,
+	      enumerable: false,
+	      writable: true,
+	      configurable: true
+	    }
+	  });
+	  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+	};
+
+
+
+
+
+
+
+
+
+
+
+	var possibleConstructorReturn = function (self, call) {
+	  if (!self) {
+	    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+	  }
+
+	  return call && (typeof call === "object" || typeof call === "function") ? call : self;
+	};
+
+
+
+	var set$1 = function set$1(object, property, value, receiver) {
+	  var desc = Object.getOwnPropertyDescriptor(object, property);
+
+	  if (desc === undefined) {
+	    var parent = Object.getPrototypeOf(object);
+
+	    if (parent !== null) {
+	      set$1(parent, property, value, receiver);
+	    }
+	  } else if ("value" in desc && desc.writable) {
+	    desc.value = value;
+	  } else {
+	    var setter = desc.set;
+
+	    if (setter !== undefined) {
+	      setter.call(receiver, value);
+	    }
+	  }
+
+	  return value;
+	};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	var toConsumableArray = function (arr) {
+	  if (Array.isArray(arr)) {
+	    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
+
+	    return arr2;
+	  } else {
+	    return Array.from(arr);
+	  }
+	};
+
+	/* eslint no-plusplus: 0 */
+
+	var applyDefault = incrementalDom.attributes[incrementalDom.symbols.default];
+	var fallbackToV0 = !shadowDomV1 && shadowDomV0;
+
+	// A stack of children that corresponds to the current function helper being
+	// executed.
+	var stackChren = [];
+
+	var $skip = '__skip';
+	var $currentEventHandlers = '__events';
+	var $stackCurrentHelperProps = '__props';
+
+	// The current function helper in the stack.
+	var stackCurrentHelper = void 0;
+
+	// This is used for the Incremental DOM overrides to keep track of what args
+	// to pass the main elementOpen() function.
+	var overrideArgs = void 0;
+
+	// The number of levels deep after skipping a tree.
+	var skips = 0;
+
+	var noop = function noop() {};
+
+	// Adds or removes an event listener for an element.
+	function applyEvent(elem, ename, newFunc) {
+	  var events = elem[$currentEventHandlers];
+
+	  if (!events) {
+	    events = elem[$currentEventHandlers] = {};
+	  }
+
+	  var oldFunc = events[ename];
+
+	  // Remove old listener so they don't double up.
+	  if (oldFunc) {
+	    elem.removeEventListener(ename, oldFunc);
+	  }
+
+	  // Bind new listener.
+	  if (newFunc) {
+	    elem.addEventListener(ename, events[ename] = newFunc);
+	  }
+	}
+
+	var attributesContext = propContext(incrementalDom.attributes, defineProperty({
+	  // Attributes that shouldn't be applied to the DOM.
+	  key: noop,
+	  statics: noop,
+
+	  // Attributes that *must* be set via a property on all elements.
+	  checked: incrementalDom.applyProp,
+	  className: incrementalDom.applyProp,
+	  disabled: incrementalDom.applyProp,
+	  value: incrementalDom.applyProp,
+
+	  // V0 Shadow DOM to V1 normalisation.
+	  name: function name(elem, _name, value) {
+	    if (elem.tagName === 'CONTENT') {
+	      _name = 'select';
+	      value = '[slot="' + value + '"]';
+	    }
+	    applyDefault(elem, _name, value);
+	  },
+
+
+	  // Ref handler.
+	  ref: function ref(elem, name$$1, value) {
+	    elem[ref$1] = value;
+	  },
+
+
+	  // Skip handler.
+	  skip: function skip(elem, name$$1, value) {
+	    if (value) {
+	      elem[$skip] = true;
+	    } else {
+	      delete elem[$skip];
+	    }
+	  }
+	}, incrementalDom.symbols.default, function (elem, name$$1, value) {
+	  // Custom element properties should be set as properties.
+	  var props$$1 = elem.constructor.props;
+	  if (props$$1 && name$$1 in props$$1) {
+	    return incrementalDom.applyProp(elem, name$$1, value);
+	  }
+
+	  // Boolean false values should not set attributes at all.
+	  if (value === false) {
+	    return applyDefault(elem, name$$1);
+	  }
+
+	  // Handle built-in and custom events.
+	  if (name$$1.indexOf('on') === 0) {
+	    var firstChar = name$$1[2];
+	    var eventName = void 0;
+
+	    if (firstChar === '-') {
+	      eventName = name$$1.substring(3);
+	    } else if (firstChar === firstChar.toUpperCase()) {
+	      eventName = firstChar.toLowerCase() + name$$1.substring(3);
+	    }
+
+	    if (eventName) {
+	      applyEvent(elem, eventName, value);
+	      return;
+	    }
+	  }
+
+	  // Set defined props on the element directly. This ensures properties like
+	  // "value" on <input> elements get set correctly. Setting those as attributes
+	  // doesn't always work and setting props is faster than attributes.
+	  //
+	  // However, certain props on SVG elements are readonly and error when you try
+	  // to set them.
+	  if (name$$1 in elem && !('ownerSVGElement' in elem)) {
+	    incrementalDom.applyProp(elem, name$$1, value);
+	    return;
+	  }
+
+	  // Fallback to default IncrementalDOM behaviour.
+	  applyDefault(elem, name$$1, value);
+	}));
+
+	function resolveTagName(tname) {
+	  // If the tag name is a function, a Skate constructor or a standard function
+	  // is supported.
+	  //
+	  // - If a Skate constructor, the tag name is extracted from that.
+	  // - If a standard function, it is used as a helper.
+	  if (typeof tname === 'function') {
+	    return tname[name$1] || tname;
+	  }
+
+	  // Skate allows the consumer to use <slot /> and it will translate it to
+	  // <content /> if Shadow DOM V0 is preferred.
+	  if (tname === 'slot' && fallbackToV0) {
+	    return 'content';
+	  }
+
+	  // All other tag names are just passed through.
+	  return tname;
+	}
+
+	// Incremental DOM's elementOpen is where the hooks in `attributes` are applied,
+	// so it's the only function we need to execute in the context of our attributes.
+	var elementOpen$1 = attributesContext(incrementalDom.elementOpen);
+
+	function elementOpenStart(tag) {
+	  var key = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+	  var statics = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+
+	  overrideArgs = [tag, key, statics];
+	}
+
+	function elementOpenEnd() {
+	  var node = newElementOpen.apply(undefined, toConsumableArray(overrideArgs)); // eslint-disable-line no-use-before-define
+	  overrideArgs = null;
+	  return node;
+	}
+
+	function wrapIdomFunc(func) {
+	  var tnameFuncHandler = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : noop;
+
+	  return function wrap() {
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
+
+	    args[0] = resolveTagName(args[0]);
+	    stackCurrentHelper = null;
+	    if (typeof args[0] === 'function') {
+	      // If we've encountered a function, handle it according to the type of
+	      // function that is being wrapped.
+	      stackCurrentHelper = args[0];
+	      return tnameFuncHandler.apply(undefined, args);
+	    } else if (stackChren.length) {
+	      // We pass the wrap() function in here so that when it's called as
+	      // children, it will queue up for the next stack, if there is one.
+	      stackChren[stackChren.length - 1].push([wrap, args]);
+	    } else {
+	      if (func === elementOpen$1) {
+	        if (skips) {
+	          return ++skips;
+	        }
+
+	        var elem = func.apply(undefined, args);
+
+	        if (elem[$skip]) {
+	          ++skips;
+	        }
+
+	        return elem;
+	      }
+
+	      if (func === incrementalDom.elementClose) {
+	        if (skips === 1) {
+	          incrementalDom.skip();
+	        }
+
+	        // We only want to skip closing if it's not the last closing tag in the
+	        // skipped tree because we keep the element that initiated the skpping.
+	        if (skips && --skips) {
+	          return;
+	        }
+
+	        var _elem = func.apply(undefined, args);
+	        var ref$$1 = _elem[ref$1];
+
+	        // We delete so that it isn't called again for the same element. If the
+	        // ref changes, or the element changes, this will be defined again.
+	        delete _elem[ref$1];
+
+	        // Execute the saved ref after esuring we've cleand up after it.
+	        if (typeof ref$$1 === 'function') {
+	          ref$$1(_elem);
+	        }
+
+	        return _elem;
+	      }
+
+	      // We must call elementOpenStart and elementOpenEnd even if we are
+	      // skipping because they queue up attributes and then call elementClose.
+	      if (!skips || func === elementOpenStart || func === elementOpenEnd) {
+	        return func.apply(undefined, args);
+	      }
+	    }
+	  };
+	}
+
+	function newAttr() {
+	  for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+	    args[_key2] = arguments[_key2];
+	  }
+
+	  if (stackCurrentHelper) {
+	    stackCurrentHelper[$stackCurrentHelperProps][args[0]] = args[1];
+	  } else if (stackChren.length) {
+	    stackChren[stackChren.length - 1].push([newAttr, args]);
+	  } else {
+	    overrideArgs.push(args[0]);
+	    overrideArgs.push(args[1]);
+	  }
+	}
+
+	function stackOpen(tname, key, statics) {
+	  var props$$1 = { key: key, statics: statics };
+
+	  for (var _len3 = arguments.length, attrs = Array(_len3 > 3 ? _len3 - 3 : 0), _key3 = 3; _key3 < _len3; _key3++) {
+	    attrs[_key3 - 3] = arguments[_key3];
+	  }
+
+	  for (var a = 0; a < attrs.length; a += 2) {
+	    props$$1[attrs[a]] = attrs[a + 1];
+	  }
+	  tname[$stackCurrentHelperProps] = props$$1;
+	  stackChren.push([]);
+	}
+
+	function stackClose(tname) {
+	  var chren = stackChren.pop();
+	  var props$$1 = tname[$stackCurrentHelperProps];
+	  delete tname[$stackCurrentHelperProps];
+	  var elemOrFn = tname(props$$1, function () {
+	    return chren.forEach(function (args) {
+	      return args[0].apply(args, toConsumableArray(args[1]));
+	    });
+	  });
+	  return typeof elemOrFn === 'function' ? elemOrFn() : elemOrFn;
+	}
+
+	// Incremental DOM overrides
+	// -------------------------
+
+	// We must override internal functions that call internal Incremental DOM
+	// functions because we can't override the internal references. This means
+	// we must roughly re-implement their behaviour. Luckily, they're fairly
+	// simple.
+	var newElementOpenStart = wrapIdomFunc(elementOpenStart, stackOpen);
+	var newElementOpenEnd = wrapIdomFunc(elementOpenEnd);
+
+	// Standard open / closed overrides don't need to reproduce internal behaviour
+	// because they are the ones referenced from *End and *Start.
+	var newElementOpen = wrapIdomFunc(elementOpen$1, stackOpen);
+	var newElementClose = wrapIdomFunc(incrementalDom.elementClose, stackClose);
+
+	// Ensure we call our overridden functions instead of the internal ones.
+	function newElementVoid(tag) {
+	  for (var _len4 = arguments.length, args = Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {
+	    args[_key4 - 1] = arguments[_key4];
+	  }
+
+	  newElementOpen.apply(undefined, [tag].concat(args));
+	  return newElementClose(tag);
+	}
+
+	// Text override ensures their calls can queue if using function helpers.
+	var newText = wrapIdomFunc(incrementalDom.text);
+
+	// Convenience function for declaring an Incremental DOM element using
+	// hyperscript-style syntax.
+	function element(tname, attrs) {
+	  var atype = typeof attrs === 'undefined' ? 'undefined' : _typeof(attrs);
+
+	  // If attributes are a function, then they should be treated as children.
+
+	  for (var _len5 = arguments.length, chren = Array(_len5 > 2 ? _len5 - 2 : 0), _key5 = 2; _key5 < _len5; _key5++) {
+	    chren[_key5 - 2] = arguments[_key5];
+	  }
+
+	  if (atype === 'function' || atype === 'string' || atype === 'number') {
+	    chren.unshift(attrs);
+	  }
+
+	  // Ensure the attributes are an object. Null is considered an object so we
+	  // have to test for this explicitly.
+	  if (attrs === null || atype !== 'object') {
+	    attrs = {};
+	  }
+
+	  // We open the element so we can set attrs after.
+	  newElementOpenStart(tname, attrs.key, attrs.statics);
+
+	  // Delete so special attrs don't actually get set.
+	  delete attrs.key;
+	  delete attrs.statics;
+
+	  // Set attributes.
+	  Object.keys(attrs).forEach(function (name$$1) {
+	    return newAttr(name$$1, attrs[name$$1]);
+	  });
+
+	  // Close before we render the descendant tree.
+	  newElementOpenEnd(tname);
+
+	  chren.forEach(function (ch) {
+	    var ctype = typeof ch === 'undefined' ? 'undefined' : _typeof(ch);
+	    if (ctype === 'function') {
+	      ch();
+	    } else if (ctype === 'string' || ctype === 'number') {
+	      newText(ch);
+	    } else if (Array.isArray(ch)) {
+	      ch.forEach(function (sch) {
+	        return sch();
+	      });
+	    }
+	  });
+
+	  return newElementClose(tname);
+	}
+
+	// Even further convenience for building a DSL out of JavaScript functions or hooking into standard
+	// transpiles for JSX (React.createElement() / h).
+	function builder() {
+	  for (var _len6 = arguments.length, tags = Array(_len6), _key6 = 0; _key6 < _len6; _key6++) {
+	    tags[_key6] = arguments[_key6];
+	  }
+
+	  if (tags.length === 0) {
+	    return function () {
+	      for (var _len7 = arguments.length, args = Array(_len7), _key7 = 0; _key7 < _len7; _key7++) {
+	        args[_key7] = arguments[_key7];
+	      }
+
+	      return element.bind.apply(element, [null].concat(args));
+	    };
+	  }
+	  return tags.map(function (tag) {
+	    return function () {
+	      for (var _len8 = arguments.length, args = Array(_len8), _key8 = 0; _key8 < _len8; _key8++) {
+	        args[_key8] = arguments[_key8];
+	      }
+
+	      return element.bind.apply(element, [null, tag].concat(args));
+	    };
+	  });
+	}
+
+
+
+	var vdom = Object.freeze({
+		element: element,
+		builder: builder,
+		attr: newAttr,
+		elementClose: newElementClose,
+		elementOpen: newElementOpen,
+		elementOpenEnd: newElementOpenEnd,
+		elementOpenStart: newElementOpenStart,
+		elementVoid: newElementVoid,
+		text: newText
+	});
+
+	var data = function (element) {
+	  var namespace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+
+	  var data = element.__SKATE_DATA || (element.__SKATE_DATA = {});
+	  return namespace && (data[namespace] || (data[namespace] = {})) || data; // eslint-disable-line no-mixed-operators
+	};
+
+	var longerTimeoutBrowsers = ['Edge', 'Trident', 'Firefox'];
+	var timeoutDuration = 0;
+	for (var i = 0; i < longerTimeoutBrowsers.length; i += 1) {
+	  if (navigator.userAgent.indexOf(longerTimeoutBrowsers[i]) >= 0) {
+	    timeoutDuration = 1;
+	    break;
+	  }
+	}
+
+	var debounce = function (fn) {
+	  var _this = this;
+
+	  var called = false;
+	  return function () {
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
+
+	    if (!called) {
+	      called = true;
+	      setTimeout(function () {
+	        called = false;
+	        fn.apply(_this, args);
+	      }, timeoutDuration);
+	    }
+	  };
+	};
+
+	var getOwnPropertyDescriptors = function () {
+	  var obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+	  return keys(obj).reduce(function (prev, curr) {
+	    prev[curr] = Object.getOwnPropertyDescriptor(obj, curr);
+	    return prev;
+	  }, {});
+	};
+
+	function getDefaultValue(elem, name, opts) {
+	  return typeof opts.default === 'function' ? opts.default(elem, { name: name }) : opts.default;
+	}
+
+	function getInitialValue(elem, name, opts) {
+	  return typeof opts.initial === 'function' ? opts.initial(elem, { name: name }) : opts.initial;
+	}
+
+	function getPropData(elem, name) {
+	  var elemData = data(elem, 'props');
+	  return elemData[name] || (elemData[name] = {});
+	}
+
+	function syncFirstTimeProp(elem, prop, propName, attributeName, propData) {
+	  var syncAttrValue = propData.lastAssignedValue;
+	  if (empty(syncAttrValue)) {
+	    if ('initial' in prop) {
+	      syncAttrValue = getInitialValue(elem, propName, prop);
+	    } else if ('default' in prop) {
+	      syncAttrValue = getDefaultValue(elem, propName, prop);
+	    }
+	  }
+	  if (!empty(syncAttrValue) && prop.serialize) {
+	    syncAttrValue = prop.serialize(syncAttrValue);
+	  }
+	  if (!empty(syncAttrValue)) {
+	    propData.syncingAttribute = true;
+	    elem.setAttribute(attributeName, syncAttrValue);
+	  }
+	}
+
+	function syncExistingProp(elem, prop, propName, attributeName, propData) {
+	  if (attributeName && !propData.settingAttribute) {
+	    var internalValue = propData.internalValue;
+
+	    var serializedValue = prop.serialize(internalValue);
+	    var currentAttrValue = elem.getAttribute(attributeName);
+	    var serializedIsEmpty = empty(serializedValue);
+	    var attributeChanged = !(serializedIsEmpty && empty(currentAttrValue) || serializedValue === currentAttrValue);
+
+	    propData.syncingAttribute = true;
+
+	    var shouldRemoveAttribute = empty(propData.lastAssignedValue);
+	    if (shouldRemoveAttribute || serializedIsEmpty) {
+	      elem.removeAttribute(attributeName);
+	    } else {
+	      elem.setAttribute(attributeName, serializedValue);
+	    }
+
+	    if (!attributeChanged && propData.syncingAttribute) {
+	      propData.syncingAttribute = false;
+	    }
+	  }
+
+	  // Allow the attribute to be linked again.
+	  propData.settingAttribute = false;
+	}
+
+	function syncPropToAttr(elem, prop, propName, isFirstSync) {
+	  var attributeName = data(elem, 'propertyLinks')[propName];
+	  var propData = getPropData(elem, propName);
+
+	  if (attributeName) {
+	    if (isFirstSync) {
+	      syncFirstTimeProp(elem, prop, propName, attributeName, propData);
+	    } else {
+	      syncExistingProp(elem, prop, propName, attributeName, propData);
+	    }
+	  }
+	}
+
+	function callConstructor(elem) {
+	  var elemData = data(elem);
+	  var readyCallbacks = elemData.readyCallbacks;
+	  var Ctor = elem.constructor;
+	  var created$$1 = Ctor.created;
+	  var observedAttributes = Ctor.observedAttributes;
+	  var props$$1 = Ctor.props;
+
+	  // Ensures that this can never be called twice.
+
+	  if (elem[created$1]) {
+	    return;
+	  }
+
+	  elem[created$1] = true;
+
+	  // Set up a renderer that is debounced for property sets to call directly.
+	  elem[rendererDebounced] = debounce(Ctor[renderer]);
+
+	  // Set up property lifecycle.
+	  if (props$$1 && Ctor[props]) {
+	    Ctor[props](elem);
+	  }
+
+	  // Props should be set up before calling this.
+	  if (created$$1) {
+	    created$$1(elem);
+	  }
+
+	  // Created should be set before invoking the ready listeners.
+	  if (readyCallbacks) {
+	    readyCallbacks.forEach(function (cb) {
+	      return cb(elem);
+	    });
+	    delete elemData.readyCallbacks;
+	  }
+
+	  // In v0 we must ensure the attributeChangedCallback is called for attrs
+	  // that aren't linked to props so that the callback behaves the same no
+	  // matter if v0 or v1 is being used.
+	  if (customElementsV0) {
+	    observedAttributes.forEach(function (name$$1) {
+	      var propertyName = data(elem, 'attributeLinks')[name$$1];
+	      if (!propertyName) {
+	        elem.attributeChangedCallback(name$$1, null, elem.getAttribute(name$$1));
+	      }
+	    });
+	  }
+	}
+
+	function syncPropsToAttrs(elem) {
+	  var props$$1 = elem.constructor.props;
+	  Object.keys(props$$1).forEach(function (propName) {
+	    var prop = props$$1[propName];
+	    syncPropToAttr(elem, prop, propName, true);
+	  });
+	}
+
+	function callConnected(elem) {
+	  var Ctor = elem.constructor;
+	  var attached = Ctor.attached;
+
+	  var render = Ctor[renderer];
+
+	  syncPropsToAttrs(elem);
+
+	  elem[connected] = true;
+
+	  if (typeof render === 'function') {
+	    render(elem);
+	  }
+
+	  if (typeof attached === 'function') {
+	    attached(elem);
+	  }
+
+	  elem.setAttribute('defined', '');
+	}
+
+	function callDisconnected(elem) {
+	  var detached = elem.constructor.detached;
+
+
+	  elem[connected] = false;
+
+	  if (typeof detached === 'function') {
+	    detached(elem);
+	  }
+	}
+
+	// v1
+	function Component() {
+	  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	    args[_key] = arguments[_key];
+	  }
+
+	  var elem = reflect ? Reflect.construct(HTMLElement, args, this.constructor) : HTMLElement.call(this, args[0]);
+	  callConstructor(elem);
+	  return elem;
+	}
+
+	// v1
+	Component.observedAttributes = [];
+
+	// Skate
+	Component.props = {};
+
+	// Skate
+	Component.extend = function extend() {
+	  var definition = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+	  var Base = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this;
+
+	  // Create class for the user.
+	  var Ctor = function (_Base) {
+	    inherits(Ctor, _Base);
+
+	    function Ctor() {
+	      classCallCheck(this, Ctor);
+	      return possibleConstructorReturn(this, (Ctor.__proto__ || Object.getPrototypeOf(Ctor)).apply(this, arguments));
+	    }
+
+	    return Ctor;
+	  }(Base);
+
+	  // Pass on statics from the Base if not supported (IE 9 and 10).
+
+
+	  if (!Ctor.observedAttributes) {
+	    var staticOpts = getOwnPropertyDescriptors(Base);
+	    delete staticOpts.length;
+	    delete staticOpts.prototype;
+	    Object.defineProperties(Ctor, staticOpts);
+	  }
+
+	  // For inheriting from the object literal.
+	  var opts = getOwnPropertyDescriptors(definition);
+	  var prot = getOwnPropertyDescriptors(definition.prototype);
+
+	  // Prototype is non configurable (but is writable).
+	  delete opts.prototype;
+
+	  // Pass on static and instance members from the definition.
+	  Object.defineProperties(Ctor, opts);
+	  Object.defineProperties(Ctor.prototype, prot);
+
+	  return Ctor;
+	};
+
+	// Skate
+	//
+	// This is a default implementation that does strict equality copmarison on
+	// previous props and next props. It synchronously renders on the first prop
+	// that is different and returns immediately.
+	Component.updated = function updated(elem, prev) {
+	  if (!prev) {
+	    return true;
+	  }
+	  // use get all keys so that we check Symbols as well as regular props
+	  // using a for loop so we can break early
+	  var allKeys = keys(prev);
+	  for (var i = 0; i < allKeys.length; i += 1) {
+	    if (prev[allKeys[i]] !== elem[allKeys[i]]) {
+	      return true;
+	    }
+	  }
+	  return false;
+	};
+
+	Component.prototype = Object.create(HTMLElement.prototype, {
+	  // v1
+	  connectedCallback: {
+	    configurable: true,
+	    value: function value() {
+	      callConnected(this);
+	    }
+	  },
+
+	  // v1
+	  disconnectedCallback: {
+	    configurable: true,
+	    value: function value() {
+	      callDisconnected(this);
+	    }
+	  },
+
+	  // v0 and v1
+	  attributeChangedCallback: {
+	    configurable: true,
+	    value: function value(name$$1, oldValue, newValue) {
+	      var _constructor = this.constructor;
+	      var attributeChanged = _constructor.attributeChanged;
+	      var observedAttributes = _constructor.observedAttributes;
+
+	      var propertyName = data(this, 'attributeLinks')[name$$1];
+
+	      // In V0 we have to ensure the attribute is being observed.
+	      if (customElementsV0 && observedAttributes.indexOf(name$$1) === -1) {
+	        return;
+	      }
+
+	      if (propertyName) {
+	        var propData = data(this, 'props')[propertyName];
+
+	        // This ensures a property set doesn't cause the attribute changed
+	        // handler to run again once we set this flag. This only ever has a
+	        // chance to run when you set an attribute, it then sets a property and
+	        // then that causes the attribute to be set again.
+	        if (propData.syncingAttribute) {
+	          propData.syncingAttribute = false;
+	        } else {
+	          // Sync up the property.
+	          var propOpts = this.constructor.props[propertyName];
+	          propData.settingAttribute = true;
+	          var newPropVal = newValue !== null && propOpts.deserialize ? propOpts.deserialize(newValue) : newValue;
+	          this[propertyName] = newPropVal;
+	        }
+	      }
+
+	      if (attributeChanged) {
+	        attributeChanged(this, { name: name$$1, newValue: newValue, oldValue: oldValue });
+	      }
+	    }
+	  },
+
+	  // v0
+	  createdCallback: {
+	    configurable: true,
+	    value: function value() {
+	      callConstructor(this);
+	    }
+	  },
+
+	  // v0
+	  attachedCallback: {
+	    configurable: true,
+	    value: function value() {
+	      callConnected(this);
+	    }
+	  },
+
+	  // v0
+	  detachedCallback: {
+	    configurable: true,
+	    value: function value() {
+	      callDisconnected(this);
+	    }
+	  }
+	});
+
+	function get$2(elem) {
+	  var props$$1 = {};
+	  keys(elem.constructor.props).forEach(function (key) {
+	    props$$1[key] = elem[key];
+	  });
+
+	  return props$$1;
+	}
+
+	function set$2(elem, newProps) {
+	  assign(elem, newProps);
+	  if (elem.constructor.render) {
+	    elem.constructor[renderer](elem);
+	  }
+	}
+
+	var props$1 = function (elem, newProps) {
+	  return typeof newProps === 'undefined' ? get$2(elem) : set$2(elem, newProps);
+	};
+
+	var createRenderer = function (Ctor) {
+	  var render = Ctor.render;
+	  var rendered = Ctor.rendered;
+	  var updated = Ctor.updated;
+
+
+	  return function (elem) {
+	    if (elem[rendering] || !elem[connected]) {
+	      return;
+	    }
+
+	    // Flag as rendering. This prevents anything from trying to render - or
+	    // queueing a render - while there is a pending render.
+	    elem[rendering] = true;
+
+	    // Call the updated() callback to see if we should render.
+	    var shouldRender = true;
+	    if (updated) {
+	      var prev = elem[props];
+	      elem[props] = props$1(elem);
+	      shouldRender = updated(elem, prev);
+	    }
+
+	    // Even though this would ideally be checked in the updated() callback,
+	    // it may not be, so we ensure that there is a point in proceeding.
+	    if (!render) {
+	      elem[rendering] = false;
+	      return;
+	    }
+
+	    // Try and get the current shadow root (will be setup if not).
+	    var sr = elem[shadowRoot];
+
+	    // Setup the shadow root if it hasn't been setup yet.
+	    if (!sr) {
+	      if (shadowDomV1) {
+	        sr = elem.attachShadow({ mode: 'open' });
+	      } else if (shadowDomV0) {
+	        sr = elem.createShadowRoot();
+	      } else {
+	        sr = elem;
+	      }
+
+	      elem[shadowRoot] = sr;
+	    }
+
+	    if (shouldRender) {
+	      incrementalDom.patchInner(sr, function () {
+	        var possibleFn = render(elem);
+	        if (typeof possibleFn === 'function') {
+	          possibleFn();
+	        } else if (Array.isArray(possibleFn)) {
+	          possibleFn.forEach(function (fn) {
+	            if (typeof fn === 'function') {
+	              fn();
+	            }
+	          });
+	        }
+	      });
+
+	      if (rendered) {
+	        rendered(elem);
+	      }
+	    }
+
+	    elem[rendering] = false;
+	  };
+	};
+
+	var dashCase = function (str) {
+	  return str.split(/([A-Z])/).reduce(function (one, two, idx) {
+	    var dash = !one || idx % 2 === 0 ? '' : '-';
+	    return '' + one + dash + two.toLowerCase();
+	  });
+	};
+
+	function createNativePropertyDefinition(name$$1, opts) {
+	  var prop = {
+	    configurable: true,
+	    enumerable: true
+	  };
+
+	  prop.created = function created(elem) {
+	    var propData = getPropData(elem, name$$1);
+	    var attributeName = opts.attribute === true ? dashCase(name$$1) : opts.attribute;
+	    var initialValue = elem[name$$1];
+
+	    // Store property to attribute link information.
+	    data(elem, 'attributeLinks')[attributeName] = name$$1;
+	    data(elem, 'propertyLinks')[name$$1] = attributeName;
+
+	    // Set up initial value if it wasn't specified.
+	    if (empty(initialValue)) {
+	      if (attributeName && elem.hasAttribute(attributeName)) {
+	        initialValue = opts.deserialize(elem.getAttribute(attributeName));
+	      } else if ('initial' in opts) {
+	        initialValue = getInitialValue(elem, name$$1, opts);
+	      } else if ('default' in opts) {
+	        initialValue = getDefaultValue(elem, name$$1, opts);
+	      }
+	    }
+
+	    propData.internalValue = opts.coerce ? opts.coerce(initialValue) : initialValue;
+	  };
+
+	  prop.get = function get() {
+	    var propData = getPropData(this, name$$1);
+	    var internalValue = propData.internalValue;
+
+	    return typeof opts.get === 'function' ? opts.get(this, { name: name$$1, internalValue: internalValue }) : internalValue;
+	  };
+
+	  prop.set = function set(newValue) {
+	    var propData = getPropData(this, name$$1);
+	    propData.lastAssignedValue = newValue;
+	    var oldValue = propData.oldValue;
+
+
+	    if (empty(oldValue)) {
+	      oldValue = null;
+	    }
+
+	    if (empty(newValue)) {
+	      newValue = getDefaultValue(this, name$$1, opts);
+	    }
+
+	    if (typeof opts.coerce === 'function') {
+	      newValue = opts.coerce(newValue);
+	    }
+
+	    var changeData = { name: name$$1, newValue: newValue, oldValue: oldValue };
+
+	    if (typeof opts.set === 'function') {
+	      opts.set(this, changeData);
+	    }
+
+	    // Queue a re-render.
+	    this[rendererDebounced](this);
+
+	    // Update prop data so we can use it next time.
+	    propData.internalValue = propData.oldValue = newValue;
+
+	    // Link up the attribute.
+	    if (this[connected]) {
+	      syncPropToAttr(this, opts, name$$1, false);
+	    }
+	  };
+
+	  return prop;
+	}
+
+	var initProps = function (opts) {
+	  opts = opts || {};
+
+	  if (typeof opts === 'function') {
+	    opts = { coerce: opts };
+	  }
+
+	  return function (name$$1) {
+	    return createNativePropertyDefinition(name$$1, assign({
+	      default: null,
+	      deserialize: function deserialize(value) {
+	        return value;
+	      },
+	      serialize: function serialize(value) {
+	        return value;
+	      }
+	    }, opts));
+	  };
+	};
+
+	/* eslint no-bitwise: 0 */
+
+	// Ensures that definitions passed as part of the constructor are functions
+	// that return property definitions used on the element.
+	function ensurePropertyFunctions(Ctor) {
+	  var props$$1 = Ctor.props;
+
+	  return keys(props$$1).reduce(function (descriptors, descriptorName) {
+	    descriptors[descriptorName] = props$$1[descriptorName];
+	    if (typeof descriptors[descriptorName] !== 'function') {
+	      descriptors[descriptorName] = initProps(descriptors[descriptorName]);
+	    }
+	    return descriptors;
+	  }, {});
+	}
+
+	// Ensures the property definitions are transformed to objects that can be used
+	// to create properties on the element.
+	function ensurePropertyDefinitions(Ctor) {
+	  var props$$1 = ensurePropertyFunctions(Ctor);
+	  return keys(props$$1).reduce(function (descriptors, descriptorName) {
+	    descriptors[descriptorName] = props$$1[descriptorName](descriptorName);
+	    return descriptors;
+	  }, {});
+	}
+
+	// Ensures linked properties that have linked attributes are pre-formatted to
+	// the attribute name in which they are linked.
+	function formatLinkedAttributes(Ctor) {
+	  var observedAttributes = Ctor.observedAttributes;
+	  var props$$1 = Ctor.props;
+
+
+	  if (!props$$1) {
+	    return;
+	  }
+
+	  keys(props$$1).forEach(function (name$$1) {
+	    var prop = props$$1[name$$1];
+	    var attr = prop.attribute;
+	    if (attr) {
+	      // Ensure the property is updated.
+	      var linkedAttr = prop.attribute = attr === true ? dashCase(name$$1) : attr;
+
+	      // Automatically observe the attribute since they're linked from the
+	      // attributeChangedCallback.
+	      if (observedAttributes.indexOf(linkedAttr) === -1) {
+	        observedAttributes.push(linkedAttr);
+	      }
+	    }
+	  });
+
+	  // Merge observed attributes.
+	  Object.defineProperty(Ctor, 'observedAttributes', {
+	    configurable: true,
+	    enumerable: true,
+	    get: function get() {
+	      return observedAttributes;
+	    }
+	  });
+	}
+
+	function createInitProps(Ctor) {
+	  var props$$1 = ensurePropertyDefinitions(Ctor);
+
+	  return function (elem) {
+	    if (!props$$1) {
+	      return;
+	    }
+
+	    keys(props$$1).forEach(function (name$$1) {
+	      var prop = props$$1[name$$1];
+	      prop.created(elem);
+
+	      // https://bugs.webkit.org/show_bug.cgi?id=49739
+	      //
+	      // When Webkit fixes that bug so that native property accessors can be
+	      // retrieved, we can move defining the property to the prototype and away
+	      // from having to do if for every instance as all other browsers support
+	      // this.
+	      Object.defineProperty(elem, name$$1, prop);
+	    });
+	  };
+	}
+
+	function generateUniqueName(name$$1) {
+	  // http://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript/2117523#2117523
+	  var rand = 'xxxxxxxx'.replace(/[xy]/g, function (c) {
+	    var r = Math.random() * 16 | 0;
+	    var v = c === 'x' ? r : r & 0x3 | 0x8; // eslint-disable-line no-mixed-operators
+	    return v.toString(16);
+	  });
+
+	  return name$$1 + '-' + rand;
+	}
+
+	function prepareForRegistration(name$$1, Ctor) {
+	  Ctor[name$1] = name$$1;
+	  Ctor[props] = createInitProps(Ctor);
+	  Ctor[renderer] = createRenderer(Ctor);
+	}
+
+	function registerV0Element(name$$1, Ctor) {
+	  var res = void 0;
+	  var uniqueName = void 0;
+	  try {
+	    prepareForRegistration(name$$1, Ctor);
+	    res = document.registerElement(name$$1, Ctor);
+	  } catch (e) {
+	    uniqueName = generateUniqueName(name$$1);
+	    prepareForRegistration(uniqueName, Ctor);
+	    res = document.registerElement(uniqueName, Ctor);
+	  }
+	  return res;
+	}
+
+	function registerV1Element(name$$1, Ctor) {
+	  var uniqueName = name$$1;
+	  if (window.customElements.get(name$$1)) {
+	    uniqueName = generateUniqueName(name$$1);
+	  }
+	  prepareForRegistration(uniqueName, Ctor);
+	  window.customElements.define(uniqueName, Ctor, Ctor.extends ? { extends: Ctor.extends } : null);
+	  return Ctor;
+	}
+
+	var define = function (name$$1, opts) {
+	  if (opts === undefined) {
+	    throw new Error('You have to define options to register a component ' + name$$1);
+	  }
+	  var Ctor = (typeof opts === 'undefined' ? 'undefined' : _typeof(opts)) === 'object' ? Component.extend(opts) : opts;
+	  formatLinkedAttributes(Ctor);
+
+	  if (customElementsV1) {
+	    return registerV1Element(name$$1, Ctor);
+	  } else if (customElementsV0) {
+	    return registerV0Element(name$$1, Ctor);
+	  }
+
+	  throw new Error('Skate requires native custom element support or a polyfill.');
+	};
+
+	var Event = function (TheEvent) {
+	  if (TheEvent) {
+	    try {
+	      new TheEvent('emit-init'); // eslint-disable-line no-new
+	    } catch (e) {
+	      return undefined;
+	    }
+	  }
+	  return TheEvent;
+	}(window.Event);
+
+	function createCustomEvent(name) {
+	  var opts = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+	  var detail = opts.detail;
+
+	  delete opts.detail;
+
+	  var e = void 0;
+	  if (Event) {
+	    e = new Event(name, opts);
+	    if (typeof detail !== 'undefined') {
+	      Object.defineProperty(e, 'detail', { value: detail });
+	    }
+	  } else {
+	    e = document.createEvent('CustomEvent');
+	    e.initCustomEvent(name, opts.bubbles, opts.cancelable, detail);
+	  }
+	  return e;
+	}
+
+	var emit = function (elem, name) {
+	  var opts = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+	  if (opts.bubbles === undefined) {
+	    opts.bubbles = true;
+	  }
+	  if (opts.cancelable === undefined) {
+	    opts.cancelable = true;
+	  }
+	  if (opts.composed === undefined) {
+	    opts.composed = true;
+	  }
+	  return elem.dispatchEvent(createCustomEvent(name, opts));
+	};
+
+	function getValue(elem) {
+	  var type = elem.type;
+	  if (type === 'checkbox' || type === 'radio') {
+	    return elem.checked ? elem.value || true : false;
+	  }
+	  return elem.value;
+	}
+
+	var link = function (elem, target) {
+	  return function (e) {
+	    var value = getValue(e.target);
+	    var localTarget = target || e.target.name || 'value';
+
+	    if (localTarget.indexOf('.') > -1) {
+	      var parts = localTarget.split('.');
+	      var firstPart = parts[0];
+	      var propName = parts.pop();
+	      var obj = parts.reduce(function (prev, curr) {
+	        return prev && prev[curr];
+	      }, elem);
+
+	      obj[propName || e.target.name] = value;
+	      props$1(elem, defineProperty({}, firstPart, elem[firstPart]));
+	    } else {
+	      props$1(elem, defineProperty({}, localTarget, value));
+	    }
+	  };
+	};
+
+	var ready = function (elem, done) {
+	  var info = data(elem);
+	  if (elem[created$1]) {
+	    done(elem);
+	  } else if (info.readyCallbacks) {
+	    info.readyCallbacks.push(done);
+	  } else {
+	    info.readyCallbacks = [done];
+	  }
+	};
+
+	var h = builder();
+
+	exports.Component = Component;
+	exports.define = define;
+	exports.emit = emit;
+	exports.h = h;
+	exports.link = link;
+	exports.prop = prop;
+	exports.props = props$1;
+	exports.ready = ready;
+	exports.symbols = symbols$1;
+	exports.vdom = vdom;
+
+	Object.defineProperty(exports, '__esModule', { value: true });
+
+	})));
+	//# sourceMappingURL=index.js.map
+
+
+/***/ },
+/* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	/**
+	 * @license
+	 * Copyright 2015 The Incremental DOM Authors. All Rights Reserved.
+	 *
+	 * Licensed under the Apache License, Version 2.0 (the "License");
+	 * you may not use this file except in compliance with the License.
+	 * You may obtain a copy of the License at
+	 *
+	 *      http://www.apache.org/licenses/LICENSE-2.0
+	 *
+	 * Unless required by applicable law or agreed to in writing, software
+	 * distributed under the License is distributed on an "AS-IS" BASIS,
+	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	 * See the License for the specific language governing permissions and
+	 * limitations under the License.
+	 */
+
+	'use strict';
+
+	/**
+	 * Copyright 2015 The Incremental DOM Authors. All Rights Reserved.
+	 *
+	 * Licensed under the Apache License, Version 2.0 (the "License");
+	 * you may not use this file except in compliance with the License.
+	 * You may obtain a copy of the License at
+	 *
+	 *      http://www.apache.org/licenses/LICENSE-2.0
+	 *
+	 * Unless required by applicable law or agreed to in writing, software
+	 * distributed under the License is distributed on an "AS-IS" BASIS,
+	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	 * See the License for the specific language governing permissions and
+	 * limitations under the License.
+	 */
+
+	/**
+	 * A cached reference to the hasOwnProperty function.
+	 */
+	var hasOwnProperty = Object.prototype.hasOwnProperty;
+
+	/**
+	 * A cached reference to the create function.
+	 */
+	var create = Object.create;
+
+	/**
+	 * Used to prevent property collisions between our "map" and its prototype.
+	 * @param {!Object<string, *>} map The map to check.
+	 * @param {string} property The property to check.
+	 * @return {boolean} Whether map has property.
+	 */
+	var has = function (map, property) {
+	  return hasOwnProperty.call(map, property);
+	};
+
+	/**
+	 * Creates an map object without a prototype.
+	 * @return {!Object}
+	 */
+	var createMap = function () {
+	  return create(null);
+	};
+
+	/**
+	 * Keeps track of information needed to perform diffs for a given DOM node.
+	 * @param {!string} nodeName
+	 * @param {?string=} key
+	 * @constructor
+	 */
+	function NodeData(nodeName, key) {
+	  /**
+	   * The attributes and their values.
+	   * @const {!Object<string, *>}
+	   */
+	  this.attrs = createMap();
+
+	  /**
+	   * An array of attribute name/value pairs, used for quickly diffing the
+	   * incomming attributes to see if the DOM node's attributes need to be
+	   * updated.
+	   * @const {Array<*>}
+	   */
+	  this.attrsArr = [];
+
+	  /**
+	   * The incoming attributes for this Node, before they are updated.
+	   * @const {!Object<string, *>}
+	   */
+	  this.newAttrs = createMap();
+
+	  /**
+	   * The key used to identify this node, used to preserve DOM nodes when they
+	   * move within their parent.
+	   * @const
+	   */
+	  this.key = key;
+
+	  /**
+	   * Keeps track of children within this node by their key.
+	   * {?Object<string, !Element>}
+	   */
+	  this.keyMap = null;
+
+	  /**
+	   * Whether or not the keyMap is currently valid.
+	   * {boolean}
+	   */
+	  this.keyMapValid = true;
+
+	  /**
+	   * The node name for this node.
+	   * @const {string}
+	   */
+	  this.nodeName = nodeName;
+
+	  /**
+	   * @type {?string}
+	   */
+	  this.text = null;
+	}
+
+	/**
+	 * Initializes a NodeData object for a Node.
+	 *
+	 * @param {Node} node The node to initialize data for.
+	 * @param {string} nodeName The node name of node.
+	 * @param {?string=} key The key that identifies the node.
+	 * @return {!NodeData} The newly initialized data object
+	 */
+	var initData = function (node, nodeName, key) {
+	  var data = new NodeData(nodeName, key);
+	  node['__incrementalDOMData'] = data;
+	  return data;
+	};
+
+	/**
+	 * Retrieves the NodeData object for a Node, creating it if necessary.
+	 *
+	 * @param {Node} node The node to retrieve the data for.
+	 * @return {!NodeData} The NodeData for this Node.
+	 */
+	var getData = function (node) {
+	  var data = node['__incrementalDOMData'];
+
+	  if (!data) {
+	    var nodeName = node.nodeName.toLowerCase();
+	    var key = null;
+
+	    if (node instanceof Element) {
+	      key = node.getAttribute('key');
+	    }
+
+	    data = initData(node, nodeName, key);
+	  }
+
+	  return data;
+	};
+
+	/**
+	 * Copyright 2015 The Incremental DOM Authors. All Rights Reserved.
+	 *
+	 * Licensed under the Apache License, Version 2.0 (the "License");
+	 * you may not use this file except in compliance with the License.
+	 * You may obtain a copy of the License at
+	 *
+	 *      http://www.apache.org/licenses/LICENSE-2.0
+	 *
+	 * Unless required by applicable law or agreed to in writing, software
+	 * distributed under the License is distributed on an "AS-IS" BASIS,
+	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	 * See the License for the specific language governing permissions and
+	 * limitations under the License.
+	 */
+
+	/** @const */
+	var symbols = {
+	  default: '__default',
+
+	  placeholder: '__placeholder'
+	};
+
+	/**
+	 * @param {string} name
+	 * @return {string|undefined} The namespace to use for the attribute.
+	 */
+	var getNamespace = function (name) {
+	  if (name.lastIndexOf('xml:', 0) === 0) {
+	    return 'http://www.w3.org/XML/1998/namespace';
+	  }
+
+	  if (name.lastIndexOf('xlink:', 0) === 0) {
+	    return 'http://www.w3.org/1999/xlink';
+	  }
+	};
+
+	/**
+	 * Applies an attribute or property to a given Element. If the value is null
+	 * or undefined, it is removed from the Element. Otherwise, the value is set
+	 * as an attribute.
+	 * @param {!Element} el
+	 * @param {string} name The attribute's name.
+	 * @param {?(boolean|number|string)=} value The attribute's value.
+	 */
+	var applyAttr = function (el, name, value) {
+	  if (value == null) {
+	    el.removeAttribute(name);
+	  } else {
+	    var attrNS = getNamespace(name);
+	    if (attrNS) {
+	      el.setAttributeNS(attrNS, name, value);
+	    } else {
+	      el.setAttribute(name, value);
+	    }
+	  }
+	};
+
+	/**
+	 * Applies a property to a given Element.
+	 * @param {!Element} el
+	 * @param {string} name The property's name.
+	 * @param {*} value The property's value.
+	 */
+	var applyProp = function (el, name, value) {
+	  el[name] = value;
+	};
+
+	/**
+	 * Applies a style to an Element. No vendor prefix expansion is done for
+	 * property names/values.
+	 * @param {!Element} el
+	 * @param {string} name The attribute's name.
+	 * @param {*} style The style to set. Either a string of css or an object
+	 *     containing property-value pairs.
+	 */
+	var applyStyle = function (el, name, style) {
+	  if (typeof style === 'string') {
+	    el.style.cssText = style;
+	  } else {
+	    el.style.cssText = '';
+	    var elStyle = el.style;
+	    var obj = /** @type {!Object<string,string>} */style;
+
+	    for (var prop in obj) {
+	      if (has(obj, prop)) {
+	        elStyle[prop] = obj[prop];
+	      }
+	    }
+	  }
+	};
+
+	/**
+	 * Updates a single attribute on an Element.
+	 * @param {!Element} el
+	 * @param {string} name The attribute's name.
+	 * @param {*} value The attribute's value. If the value is an object or
+	 *     function it is set on the Element, otherwise, it is set as an HTML
+	 *     attribute.
+	 */
+	var applyAttributeTyped = function (el, name, value) {
+	  var type = typeof value;
+
+	  if (type === 'object' || type === 'function') {
+	    applyProp(el, name, value);
+	  } else {
+	    applyAttr(el, name, /** @type {?(boolean|number|string)} */value);
+	  }
+	};
+
+	/**
+	 * Calls the appropriate attribute mutator for this attribute.
+	 * @param {!Element} el
+	 * @param {string} name The attribute's name.
+	 * @param {*} value The attribute's value.
+	 */
+	var updateAttribute = function (el, name, value) {
+	  var data = getData(el);
+	  var attrs = data.attrs;
+
+	  if (attrs[name] === value) {
+	    return;
+	  }
+
+	  var mutator = attributes[name] || attributes[symbols.default];
+	  mutator(el, name, value);
+
+	  attrs[name] = value;
+	};
+
+	/**
+	 * A publicly mutable object to provide custom mutators for attributes.
+	 * @const {!Object<string, function(!Element, string, *)>}
+	 */
+	var attributes = createMap();
+
+	// Special generic mutator that's called for any attribute that does not
+	// have a specific mutator.
+	attributes[symbols.default] = applyAttributeTyped;
+
+	attributes[symbols.placeholder] = function () {};
+
+	attributes['style'] = applyStyle;
+
+	/**
+	 * Gets the namespace to create an element (of a given tag) in.
+	 * @param {string} tag The tag to get the namespace for.
+	 * @param {?Node} parent
+	 * @return {?string} The namespace to create the tag in.
+	 */
+	var getNamespaceForTag = function (tag, parent) {
+	  if (tag === 'svg') {
+	    return 'http://www.w3.org/2000/svg';
+	  }
+
+	  if (getData(parent).nodeName === 'foreignObject') {
+	    return null;
+	  }
+
+	  return parent.namespaceURI;
+	};
+
+	/**
+	 * Creates an Element.
+	 * @param {Document} doc The document with which to create the Element.
+	 * @param {?Node} parent
+	 * @param {string} tag The tag for the Element.
+	 * @param {?string=} key A key to identify the Element.
+	 * @param {?Array<*>=} statics An array of attribute name/value pairs of the
+	 *     static attributes for the Element.
+	 * @return {!Element}
+	 */
+	var createElement = function (doc, parent, tag, key, statics) {
+	  var namespace = getNamespaceForTag(tag, parent);
+	  var el = undefined;
+
+	  if (namespace) {
+	    el = doc.createElementNS(namespace, tag);
+	  } else {
+	    el = doc.createElement(tag);
+	  }
+
+	  initData(el, tag, key);
+
+	  if (statics) {
+	    for (var i = 0; i < statics.length; i += 2) {
+	      updateAttribute(el, /** @type {!string}*/statics[i], statics[i + 1]);
+	    }
+	  }
+
+	  return el;
+	};
+
+	/**
+	 * Creates a Text Node.
+	 * @param {Document} doc The document with which to create the Element.
+	 * @return {!Text}
+	 */
+	var createText = function (doc) {
+	  var node = doc.createTextNode('');
+	  initData(node, '#text', null);
+	  return node;
+	};
+
+	/**
+	 * Creates a mapping that can be used to look up children using a key.
+	 * @param {?Node} el
+	 * @return {!Object<string, !Element>} A mapping of keys to the children of the
+	 *     Element.
+	 */
+	var createKeyMap = function (el) {
+	  var map = createMap();
+	  var child = el.firstElementChild;
+
+	  while (child) {
+	    var key = getData(child).key;
+
+	    if (key) {
+	      map[key] = child;
+	    }
+
+	    child = child.nextElementSibling;
+	  }
+
+	  return map;
+	};
+
+	/**
+	 * Retrieves the mapping of key to child node for a given Element, creating it
+	 * if necessary.
+	 * @param {?Node} el
+	 * @return {!Object<string, !Node>} A mapping of keys to child Elements
+	 */
+	var getKeyMap = function (el) {
+	  var data = getData(el);
+
+	  if (!data.keyMap) {
+	    data.keyMap = createKeyMap(el);
+	  }
+
+	  return data.keyMap;
+	};
+
+	/**
+	 * Retrieves a child from the parent with the given key.
+	 * @param {?Node} parent
+	 * @param {?string=} key
+	 * @return {?Node} The child corresponding to the key.
+	 */
+	var getChild = function (parent, key) {
+	  return key ? getKeyMap(parent)[key] : null;
+	};
+
+	/**
+	 * Registers an element as being a child. The parent will keep track of the
+	 * child using the key. The child can be retrieved using the same key using
+	 * getKeyMap. The provided key should be unique within the parent Element.
+	 * @param {?Node} parent The parent of child.
+	 * @param {string} key A key to identify the child with.
+	 * @param {!Node} child The child to register.
+	 */
+	var registerChild = function (parent, key, child) {
+	  getKeyMap(parent)[key] = child;
+	};
+
+	/**
+	 * Copyright 2015 The Incremental DOM Authors. All Rights Reserved.
+	 *
+	 * Licensed under the Apache License, Version 2.0 (the "License");
+	 * you may not use this file except in compliance with the License.
+	 * You may obtain a copy of the License at
+	 *
+	 *      http://www.apache.org/licenses/LICENSE-2.0
+	 *
+	 * Unless required by applicable law or agreed to in writing, software
+	 * distributed under the License is distributed on an "AS-IS" BASIS,
+	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	 * See the License for the specific language governing permissions and
+	 * limitations under the License.
+	 */
+
+	/** @const */
+	var notifications = {
+	  /**
+	   * Called after patch has compleated with any Nodes that have been created
+	   * and added to the DOM.
+	   * @type {?function(Array<!Node>)}
+	   */
+	  nodesCreated: null,
+
+	  /**
+	   * Called after patch has compleated with any Nodes that have been removed
+	   * from the DOM.
+	   * Note it's an applications responsibility to handle any childNodes.
+	   * @type {?function(Array<!Node>)}
+	   */
+	  nodesDeleted: null
+	};
+
+	/**
+	 * Keeps track of the state of a patch.
+	 * @constructor
+	 */
+	function Context() {
+	  /**
+	   * @type {(Array<!Node>|undefined)}
+	   */
+	  this.created = notifications.nodesCreated && [];
+
+	  /**
+	   * @type {(Array<!Node>|undefined)}
+	   */
+	  this.deleted = notifications.nodesDeleted && [];
+	}
+
+	/**
+	 * @param {!Node} node
+	 */
+	Context.prototype.markCreated = function (node) {
+	  if (this.created) {
+	    this.created.push(node);
+	  }
+	};
+
+	/**
+	 * @param {!Node} node
+	 */
+	Context.prototype.markDeleted = function (node) {
+	  if (this.deleted) {
+	    this.deleted.push(node);
+	  }
+	};
+
+	/**
+	 * Notifies about nodes that were created during the patch opearation.
+	 */
+	Context.prototype.notifyChanges = function () {
+	  if (this.created && this.created.length > 0) {
+	    notifications.nodesCreated(this.created);
+	  }
+
+	  if (this.deleted && this.deleted.length > 0) {
+	    notifications.nodesDeleted(this.deleted);
+	  }
+	};
+
+	/**
+	* Makes sure that keyed Element matches the tag name provided.
+	* @param {!string} nodeName The nodeName of the node that is being matched.
+	* @param {string=} tag The tag name of the Element.
+	* @param {?string=} key The key of the Element.
+	*/
+	var assertKeyedTagMatches = function (nodeName, tag, key) {
+	  if (nodeName !== tag) {
+	    throw new Error('Was expecting node with key "' + key + '" to be a ' + tag + ', not a ' + nodeName + '.');
+	  }
+	};
+
+	/** @type {?Context} */
+	var context = null;
+
+	/** @type {?Node} */
+	var currentNode = null;
+
+	/** @type {?Node} */
+	var currentParent = null;
+
+	/** @type {?Element|?DocumentFragment} */
+	var root = null;
+
+	/** @type {?Document} */
+	var doc = null;
+
+	/**
+	 * Returns a patcher function that sets up and restores a patch context,
+	 * running the run function with the provided data.
+	 * @param {function((!Element|!DocumentFragment),!function(T),T=)} run
+	 * @return {function((!Element|!DocumentFragment),!function(T),T=)}
+	 * @template T
+	 */
+	var patchFactory = function (run) {
+	  /**
+	   * TODO(moz): These annotations won't be necessary once we switch to Closure
+	   * Compiler's new type inference. Remove these once the switch is done.
+	   *
+	   * @param {(!Element|!DocumentFragment)} node
+	   * @param {!function(T)} fn
+	   * @param {T=} data
+	   * @template T
+	   */
+	  var f = function (node, fn, data) {
+	    var prevContext = context;
+	    var prevRoot = root;
+	    var prevDoc = doc;
+	    var prevCurrentNode = currentNode;
+	    var prevCurrentParent = currentParent;
+	    var previousInAttributes = false;
+	    var previousInSkip = false;
+
+	    context = new Context();
+	    root = node;
+	    doc = node.ownerDocument;
+	    currentParent = node.parentNode;
+
+	    if (false) {}
+
+	    run(node, fn, data);
+
+	    if (false) {}
+
+	    context.notifyChanges();
+
+	    context = prevContext;
+	    root = prevRoot;
+	    doc = prevDoc;
+	    currentNode = prevCurrentNode;
+	    currentParent = prevCurrentParent;
+	  };
+	  return f;
+	};
+
+	/**
+	 * Patches the document starting at node with the provided function. This
+	 * function may be called during an existing patch operation.
+	 * @param {!Element|!DocumentFragment} node The Element or Document
+	 *     to patch.
+	 * @param {!function(T)} fn A function containing elementOpen/elementClose/etc.
+	 *     calls that describe the DOM.
+	 * @param {T=} data An argument passed to fn to represent DOM state.
+	 * @template T
+	 */
+	var patchInner = patchFactory(function (node, fn, data) {
+	  currentNode = node;
+
+	  enterNode();
+	  fn(data);
+	  exitNode();
+
+	  if (false) {}
+	});
+
+	/**
+	 * Patches an Element with the the provided function. Exactly one top level
+	 * element call should be made corresponding to `node`.
+	 * @param {!Element} node The Element where the patch should start.
+	 * @param {!function(T)} fn A function containing elementOpen/elementClose/etc.
+	 *     calls that describe the DOM. This should have at most one top level
+	 *     element call.
+	 * @param {T=} data An argument passed to fn to represent DOM state.
+	 * @template T
+	 */
+	var patchOuter = patchFactory(function (node, fn, data) {
+	  currentNode = /** @type {!Element} */{ nextSibling: node };
+
+	  fn(data);
+
+	  if (false) {}
+	});
+
+	/**
+	 * Checks whether or not the current node matches the specified nodeName and
+	 * key.
+	 *
+	 * @param {?string} nodeName The nodeName for this node.
+	 * @param {?string=} key An optional key that identifies a node.
+	 * @return {boolean} True if the node matches, false otherwise.
+	 */
+	var matches = function (nodeName, key) {
+	  var data = getData(currentNode);
+
+	  // Key check is done using double equals as we want to treat a null key the
+	  // same as undefined. This should be okay as the only values allowed are
+	  // strings, null and undefined so the == semantics are not too weird.
+	  return nodeName === data.nodeName && key == data.key;
+	};
+
+	/**
+	 * Aligns the virtual Element definition with the actual DOM, moving the
+	 * corresponding DOM node to the correct location or creating it if necessary.
+	 * @param {string} nodeName For an Element, this should be a valid tag string.
+	 *     For a Text, this should be #text.
+	 * @param {?string=} key The key used to identify this element.
+	 * @param {?Array<*>=} statics For an Element, this should be an array of
+	 *     name-value pairs.
+	 */
+	var alignWithDOM = function (nodeName, key, statics) {
+	  if (currentNode && matches(nodeName, key)) {
+	    return;
+	  }
+
+	  var node = undefined;
+
+	  // Check to see if the node has moved within the parent.
+	  if (key) {
+	    node = getChild(currentParent, key);
+	    if (node && 'production' !== 'production') {
+	      assertKeyedTagMatches(getData(node).nodeName, nodeName, key);
+	    }
+	  }
+
+	  // Create the node if it doesn't exist.
+	  if (!node) {
+	    if (nodeName === '#text') {
+	      node = createText(doc);
+	    } else {
+	      node = createElement(doc, currentParent, nodeName, key, statics);
+	    }
+
+	    if (key) {
+	      registerChild(currentParent, key, node);
+	    }
+
+	    context.markCreated(node);
+	  }
+
+	  // If the node has a key, remove it from the DOM to prevent a large number
+	  // of re-orders in the case that it moved far or was completely removed.
+	  // Since we hold on to a reference through the keyMap, we can always add it
+	  // back.
+	  if (currentNode && getData(currentNode).key) {
+	    currentParent.replaceChild(node, currentNode);
+	    getData(currentParent).keyMapValid = false;
+	  } else {
+	    currentParent.insertBefore(node, currentNode);
+	  }
+
+	  currentNode = node;
+	};
+
+	/**
+	 * Clears out any unvisited Nodes, as the corresponding virtual element
+	 * functions were never called for them.
+	 */
+	var clearUnvisitedDOM = function () {
+	  var node = currentParent;
+	  var data = getData(node);
+	  var keyMap = data.keyMap;
+	  var keyMapValid = data.keyMapValid;
+	  var child = node.lastChild;
+	  var key = undefined;
+
+	  if (child === currentNode && keyMapValid) {
+	    return;
+	  }
+
+	  if (data.attrs[symbols.placeholder] && node !== root) {
+	    if (false) {}
+	    return;
+	  }
+
+	  while (child !== currentNode) {
+	    node.removeChild(child);
+	    context.markDeleted( /** @type {!Node}*/child);
+
+	    key = getData(child).key;
+	    if (key) {
+	      delete keyMap[key];
+	    }
+	    child = node.lastChild;
+	  }
+
+	  // Clean the keyMap, removing any unusued keys.
+	  if (!keyMapValid) {
+	    for (key in keyMap) {
+	      child = keyMap[key];
+	      if (child.parentNode !== node) {
+	        context.markDeleted(child);
+	        delete keyMap[key];
+	      }
+	    }
+
+	    data.keyMapValid = true;
+	  }
+	};
+
+	/**
+	 * Changes to the first child of the current node.
+	 */
+	var enterNode = function () {
+	  currentParent = currentNode;
+	  currentNode = null;
+	};
+
+	/**
+	 * Changes to the next sibling of the current node.
+	 */
+	var nextNode = function () {
+	  if (currentNode) {
+	    currentNode = currentNode.nextSibling;
+	  } else {
+	    currentNode = currentParent.firstChild;
+	  }
+	};
+
+	/**
+	 * Changes to the parent of the current node, removing any unvisited children.
+	 */
+	var exitNode = function () {
+	  clearUnvisitedDOM();
+
+	  currentNode = currentParent;
+	  currentParent = currentParent.parentNode;
+	};
+
+	/**
+	 * Makes sure that the current node is an Element with a matching tagName and
+	 * key.
+	 *
+	 * @param {string} tag The element's tag.
+	 * @param {?string=} key The key used to identify this element. This can be an
+	 *     empty string, but performance may be better if a unique value is used
+	 *     when iterating over an array of items.
+	 * @param {?Array<*>=} statics An array of attribute name/value pairs of the
+	 *     static attributes for the Element. These will only be set once when the
+	 *     Element is created.
+	 * @return {!Element} The corresponding Element.
+	 */
+	var coreElementOpen = function (tag, key, statics) {
+	  nextNode();
+	  alignWithDOM(tag, key, statics);
+	  enterNode();
+	  return (/** @type {!Element} */currentParent
+	  );
+	};
+
+	/**
+	 * Closes the currently open Element, removing any unvisited children if
+	 * necessary.
+	 *
+	 * @return {!Element} The corresponding Element.
+	 */
+	var coreElementClose = function () {
+	  if (false) {}
+
+	  exitNode();
+	  return (/** @type {!Element} */currentNode
+	  );
+	};
+
+	/**
+	 * Makes sure the current node is a Text node and creates a Text node if it is
+	 * not.
+	 *
+	 * @return {!Text} The corresponding Text Node.
+	 */
+	var coreText = function () {
+	  nextNode();
+	  alignWithDOM('#text', null, null);
+	  return (/** @type {!Text} */currentNode
+	  );
+	};
+
+	/**
+	 * Gets the current Element being patched.
+	 * @return {!Element}
+	 */
+	var currentElement = function () {
+	  if (false) {}
+	  return (/** @type {!Element} */currentParent
+	  );
+	};
+
+	/**
+	 * Skips the children in a subtree, allowing an Element to be closed without
+	 * clearing out the children.
+	 */
+	var skip = function () {
+	  if (false) {}
+	  currentNode = currentParent.lastChild;
+	};
+
+	/**
+	 * The offset in the virtual element declaration where the attributes are
+	 * specified.
+	 * @const
+	 */
+	var ATTRIBUTES_OFFSET = 3;
+
+	/**
+	 * Builds an array of arguments for use with elementOpenStart, attr and
+	 * elementOpenEnd.
+	 * @const {Array<*>}
+	 */
+	var argsBuilder = [];
+
+	/**
+	 * @param {string} tag The element's tag.
+	 * @param {?string=} key The key used to identify this element. This can be an
+	 *     empty string, but performance may be better if a unique value is used
+	 *     when iterating over an array of items.
+	 * @param {?Array<*>=} statics An array of attribute name/value pairs of the
+	 *     static attributes for the Element. These will only be set once when the
+	 *     Element is created.
+	 * @param {...*} const_args Attribute name/value pairs of the dynamic attributes
+	 *     for the Element.
+	 * @return {!Element} The corresponding Element.
+	 */
+	var elementOpen = function (tag, key, statics, const_args) {
+	  if (false) {}
+
+	  var node = coreElementOpen(tag, key, statics);
+	  var data = getData(node);
+
+	  /*
+	   * Checks to see if one or more attributes have changed for a given Element.
+	   * When no attributes have changed, this is much faster than checking each
+	   * individual argument. When attributes have changed, the overhead of this is
+	   * minimal.
+	   */
+	  var attrsArr = data.attrsArr;
+	  var newAttrs = data.newAttrs;
+	  var attrsChanged = false;
+	  var i = ATTRIBUTES_OFFSET;
+	  var j = 0;
+
+	  for (; i < arguments.length; i += 1, j += 1) {
+	    if (attrsArr[j] !== arguments[i]) {
+	      attrsChanged = true;
+	      break;
+	    }
+	  }
+
+	  for (; i < arguments.length; i += 1, j += 1) {
+	    attrsArr[j] = arguments[i];
+	  }
+
+	  if (j < attrsArr.length) {
+	    attrsChanged = true;
+	    attrsArr.length = j;
+	  }
+
+	  /*
+	   * Actually perform the attribute update.
+	   */
+	  if (attrsChanged) {
+	    for (i = ATTRIBUTES_OFFSET; i < arguments.length; i += 2) {
+	      newAttrs[arguments[i]] = arguments[i + 1];
+	    }
+
+	    for (var _attr in newAttrs) {
+	      updateAttribute(node, _attr, newAttrs[_attr]);
+	      newAttrs[_attr] = undefined;
+	    }
+	  }
+
+	  return node;
+	};
+
+	/**
+	 * Declares a virtual Element at the current location in the document. This
+	 * corresponds to an opening tag and a elementClose tag is required. This is
+	 * like elementOpen, but the attributes are defined using the attr function
+	 * rather than being passed as arguments. Must be folllowed by 0 or more calls
+	 * to attr, then a call to elementOpenEnd.
+	 * @param {string} tag The element's tag.
+	 * @param {?string=} key The key used to identify this element. This can be an
+	 *     empty string, but performance may be better if a unique value is used
+	 *     when iterating over an array of items.
+	 * @param {?Array<*>=} statics An array of attribute name/value pairs of the
+	 *     static attributes for the Element. These will only be set once when the
+	 *     Element is created.
+	 */
+	var elementOpenStart = function (tag, key, statics) {
+	  if (false) {}
+
+	  argsBuilder[0] = tag;
+	  argsBuilder[1] = key;
+	  argsBuilder[2] = statics;
+	};
+
+	/***
+	 * Defines a virtual attribute at this point of the DOM. This is only valid
+	 * when called between elementOpenStart and elementOpenEnd.
+	 *
+	 * @param {string} name
+	 * @param {*} value
+	 */
+	var attr = function (name, value) {
+	  if (false) {}
+
+	  argsBuilder.push(name, value);
+	};
+
+	/**
+	 * Closes an open tag started with elementOpenStart.
+	 * @return {!Element} The corresponding Element.
+	 */
+	var elementOpenEnd = function () {
+	  if (false) {}
+
+	  var node = elementOpen.apply(null, argsBuilder);
+	  argsBuilder.length = 0;
+	  return node;
+	};
+
+	/**
+	 * Closes an open virtual Element.
+	 *
+	 * @param {string} tag The element's tag.
+	 * @return {!Element} The corresponding Element.
+	 */
+	var elementClose = function (tag) {
+	  if (false) {}
+
+	  var node = coreElementClose();
+
+	  if (false) {}
+
+	  return node;
+	};
+
+	/**
+	 * Declares a virtual Element at the current location in the document that has
+	 * no children.
+	 * @param {string} tag The element's tag.
+	 * @param {?string=} key The key used to identify this element. This can be an
+	 *     empty string, but performance may be better if a unique value is used
+	 *     when iterating over an array of items.
+	 * @param {?Array<*>=} statics An array of attribute name/value pairs of the
+	 *     static attributes for the Element. These will only be set once when the
+	 *     Element is created.
+	 * @param {...*} const_args Attribute name/value pairs of the dynamic attributes
+	 *     for the Element.
+	 * @return {!Element} The corresponding Element.
+	 */
+	var elementVoid = function (tag, key, statics, const_args) {
+	  elementOpen.apply(null, arguments);
+	  return elementClose(tag);
+	};
+
+	/**
+	 * Declares a virtual Element at the current location in the document that is a
+	 * placeholder element. Children of this Element can be manually managed and
+	 * will not be cleared by the library.
+	 *
+	 * A key must be specified to make sure that this node is correctly preserved
+	 * across all conditionals.
+	 *
+	 * @param {string} tag The element's tag.
+	 * @param {string} key The key used to identify this element.
+	 * @param {?Array<*>=} statics An array of attribute name/value pairs of the
+	 *     static attributes for the Element. These will only be set once when the
+	 *     Element is created.
+	 * @param {...*} const_args Attribute name/value pairs of the dynamic attributes
+	 *     for the Element.
+	 * @return {!Element} The corresponding Element.
+	 */
+	var elementPlaceholder = function (tag, key, statics, const_args) {
+	  if (false) {}
+
+	  elementOpen.apply(null, arguments);
+	  skip();
+	  return elementClose(tag);
+	};
+
+	/**
+	 * Declares a virtual Text at this point in the document.
+	 *
+	 * @param {string|number|boolean} value The value of the Text.
+	 * @param {...(function((string|number|boolean)):string)} const_args
+	 *     Functions to format the value which are called only when the value has
+	 *     changed.
+	 * @return {!Text} The corresponding text node.
+	 */
+	var text = function (value, const_args) {
+	  if (false) {}
+
+	  var node = coreText();
+	  var data = getData(node);
+
+	  if (data.text !== value) {
+	    data.text = /** @type {string} */value;
+
+	    var formatted = value;
+	    for (var i = 1; i < arguments.length; i += 1) {
+	      /*
+	       * Call the formatter function directly to prevent leaking arguments.
+	       * https://github.com/google/incremental-dom/pull/204#issuecomment-178223574
+	       */
+	      var fn = arguments[i];
+	      formatted = fn(formatted);
+	    }
+
+	    node.data = formatted;
+	  }
+
+	  return node;
+	};
+
+	exports.patch = patchInner;
+	exports.patchInner = patchInner;
+	exports.patchOuter = patchOuter;
+	exports.currentElement = currentElement;
+	exports.skip = skip;
+	exports.elementVoid = elementVoid;
+	exports.elementOpenStart = elementOpenStart;
+	exports.elementOpenEnd = elementOpenEnd;
+	exports.elementOpen = elementOpen;
+	exports.elementClose = elementClose;
+	exports.elementPlaceholder = elementPlaceholder;
+	exports.text = text;
+	exports.attr = attr;
+	exports.symbols = symbols;
+	exports.attributes = attributes;
+	exports.applyAttr = applyAttr;
+	exports.applyProp = applyProp;
+	exports.notifications = notifications;
+
+	//# sourceMappingURL=incremental-dom-cjs.js.map
+
+/***/ },
+/* 29 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	__webpack_require__(30);
+
+	var _lud_component = __webpack_require__(26);
+
+	var _lud_component2 = _interopRequireDefault(_lud_component);
+
+	var _skatejs = __webpack_require__(27);
+
+	var skate = _interopRequireWildcard(_skatejs);
+
+	var _classnames = __webpack_require__(31);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*doc
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                title: Alert 提示
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                name: alerts
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                category: 组件
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                警告提示，展现需要关注的信息。
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 何时使用
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 当某个页面需要向用户显示警告的信息时。
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 非浮层的静态展现形式，始终展现，不会自动消失，用户可以点击关闭。
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 代码演示
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```html_example
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               <lud-alert type="info">Base System Alert</lud-alert>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               <lud-alert type="success" closable="true"><lud-icon type="customapps"></lud-icon>我们将在周五凌晨进行停机维护，带来不便深表歉意。</lud-alert>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               <lud-alert type="warning">任何未经许可的访问，我们都将在法律允许的最大范围内追究责任。</lud-alert>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               <lud-alert type="danger">我们中出了一个叛徒。</lud-alert>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var ludAlert = function (_ludComponent) {
+	  _inherits(ludAlert, _ludComponent);
+
+	  function ludAlert() {
+	    _classCallCheck(this, ludAlert);
+
+	    return _possibleConstructorReturn(this, (ludAlert.__proto__ || Object.getPrototypeOf(ludAlert)).apply(this, arguments));
+	  }
+
+	  _createClass(ludAlert, null, [{
+	    key: 'created',
+	    value: function created(el) {
+	      el.child = el.innerHTML;
+	      el.innerHTML = null;
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render(el) {
+	      var _classNames;
+
+	      var alertCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, 'lud-alert', true), _defineProperty(_classNames, 'lud-alert--' + el.type, true), _classNames));
+	      var $el = $(el);
+	      var closable = !el.closable ? null : skate.h(
+	        'button',
+	        { type: 'button', 'class': 'lud-alert__close', 'aria-label': 'Close', onClick: function onClick() {
+	            $el.find('div.lud-alert').slideUp('fast', function () {
+	              return $el.remove();
+	            });
+	          } },
+	        skate.h('i', { className: 'lud-icon lud-icon--close' })
+	      );
+	      var child = skate.h('span', { ref: function ref(x) {
+	          return x.innerHTML = el.child;
+	        }, skip: true });
+
+	      return skate.h(
+	        'div',
+	        { className: alertCls, role: 'alert' },
+	        closable,
+	        child
+	      );
+	    }
+	  }]);
+
+	  return ludAlert;
+	}(_lud_component2.default);
+
+	ludAlert.props = {
+	  type: skate.prop.string({
+	    attribute: true,
+	    default: 'info'
+	  }),
+	  closable: skate.prop.boolean({ attribute: true }),
+	  child: skate.prop.string()
+	};
+
+
+	skate.define('lud-alert', ludAlert);
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ },
+/* 30 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	  Copyright (c) 2016 Jed Watson.
+	  Licensed under the MIT License (MIT), see
+	  http://jedwatson.github.io/classnames
+	*/
+	/* global define */
+
+	(function () {
+		'use strict';
+
+		var hasOwn = {}.hasOwnProperty;
+
+		function classNames () {
+			var classes = [];
+
+			for (var i = 0; i < arguments.length; i++) {
+				var arg = arguments[i];
+				if (!arg) continue;
+
+				var argType = typeof arg;
+
+				if (argType === 'string' || argType === 'number') {
+					classes.push(arg);
+				} else if (Array.isArray(arg)) {
+					classes.push(classNames.apply(null, arg));
+				} else if (argType === 'object') {
+					for (var key in arg) {
+						if (hasOwn.call(arg, key) && arg[key]) {
+							classes.push(key);
+						}
+					}
+				}
+			}
+
+			return classes.join(' ');
+		}
+
+		if (typeof module !== 'undefined' && module.exports) {
+			module.exports = classNames;
+		} else if (true) {
+			// register as 'classnames', consistent with npm package name
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
+				return classNames;
+			}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		} else {
+			window.classNames = classNames;
+		}
+	}());
+
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(33);
+
+/***/ },
+/* 33 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 34 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(35);
+
+/***/ },
+/* 35 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	__webpack_require__(37);
+
+	var _lud_component = __webpack_require__(26);
+
+	var _lud_component2 = _interopRequireDefault(_lud_component);
+
+	var _skatejs = __webpack_require__(27);
+
+	var skate = _interopRequireWildcard(_skatejs);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*doc
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                title: Discussion 评论框
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                name: discussion
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                category: 组件
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                A publisher is an advanced longform text input form element.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 代码演示
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```html_example
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-discussion name="replay-feed" placeholder="输入评论内容..."></lud-discussion>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var ludDiscussion = function (_ludComponent) {
+	  _inherits(ludDiscussion, _ludComponent);
+
+	  function ludDiscussion() {
+	    _classCallCheck(this, ludDiscussion);
+
+	    return _possibleConstructorReturn(this, (ludDiscussion.__proto__ || Object.getPrototypeOf(ludDiscussion)).apply(this, arguments));
+	  }
+
+	  _createClass(ludDiscussion, null, [{
+	    key: 'created',
+	    value: function created(el) {
+	      el.input_name = el.name;
+	      $(el).attr('name', el.input_name + '-wrap').addClass('lud-discussion');
+	      el.child = el.innerHTML;
+	      el.innerHTML = null;
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render(el) {
+	      var $el = $(el);
+	      //noinspection CheckTagEmptyBody
+	      return skate.h('textarea', { name: el.input_name, className: 'lud-textarea lud-text-longform lud-discussion__input',
+	        placeholder: el.placeholder, onFocus: function onFocus() {
+	          return $el.addClass('lud-is-active');
+	        } });
+	    }
+	  }]);
+
+	  return ludDiscussion;
+	}(_lud_component2.default);
+
+	ludDiscussion.props = {
+	  name: skate.prop.string({ attribute: true }),
+	  placeholder: skate.prop.string({ attribute: true }),
+	  child: skate.prop.string(),
+	  input_name: skate.prop.string()
+	};
+
+	skate.define('lud-discussion', ludDiscussion);
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ },
+/* 37 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	__webpack_require__(41);
+	__webpack_require__(39);
 
-	var _lud_component = __webpack_require__(19);
+	var _lud_component = __webpack_require__(26);
 
 	var _lud_component2 = _interopRequireDefault(_lud_component);
 
-	var _skatejs = __webpack_require__(20);
+	var _skatejs = __webpack_require__(27);
+
+	var skate = _interopRequireWildcard(_skatejs);
+
+	var _classnames = __webpack_require__(31);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*doc
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                title: Icon 图标
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                name: icon
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                category: 组件
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                有含义的矢量图形，源自[Salesforce Lightning Design System](https://github.com/salesforce-ux/design-system).
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Copyright (c) 2015, salesforce.com, inc. All rights reserved.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                All icons and images are licensed under Creative Commons Attribution-NoDerivatives 4.0
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 如何使用
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ```html_example
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-icon type="people" />
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ```
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 图标列表
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <ul class="icon_lists lud-clearfix"> <li> <i class="icon lud-icon">&#xe662;</i> <div class="name">areachart</div><div class="code">&amp;#xe662;</div><div class="fontclass">.areachart</div></li><li> <i class="icon lud-icon">&#xe664;</i> <div class="name">barchart</div><div class="code">&amp;#xe664;</div><div class="fontclass">.barchart</div></li><li> <i class="icon lud-icon">&#xe6e4;</i> <div class="name">barschart</div><div class="code">&amp;#xe6e4;</div><div class="fontclass">.barschart</div></li><li> <i class="icon lud-icon">&#xe6e5;</i> <div class="name">facebook-official</div><div class="code">&amp;#xe6e5;</div><div class="fontclass">.facebookofficial</div></li><li> <i class="icon lud-icon">&#xe6e6;</i> <div class="name">linkedin-square</div><div class="code">&amp;#xe6e6;</div><div class="fontclass">.linkedinsquare</div></li><li> <i class="icon lud-icon">&#xe751;</i> <div class="name">skype</div><div class="code">&amp;#xe751;</div><div class="fontclass">.skype</div></li><li> <i class="icon lud-icon">&#xe7ba;</i> <div class="name">twitter</div><div class="code">&amp;#xe7ba;</div><div class="fontclass">.twitter</div></li><li> <i class="icon lud-icon">&#xe7bb;</i> <div class="name">wechat</div><div class="code">&amp;#xe7bb;</div><div class="fontclass">.wechat</div></li><li> <i class="icon lud-icon">&#xe7bc;</i> <div class="name">QQ</div><div class="code">&amp;#xe7bc;</div><div class="fontclass">.qq02</div></li><li> <i class="icon lud-icon">&#xe7bd;</i> <div class="name">weibo</div><div class="code">&amp;#xe7bd;</div><div class="fontclass">.weibo</div></li><li> <i class="icon lud-icon">&#xe600;</i> <div class="name">account</div><div class="code">&amp;#xe600;</div><div class="fontclass">.account</div></li><li> <i class="icon lud-icon">&#xe601;</i> <div class="name">announcement</div><div class="code">&amp;#xe601;</div><div class="fontclass">.announcement</div></li><li> <i class="icon lud-icon">&#xe602;</i> <div class="name">answer_best</div><div class="code">&amp;#xe602;</div><div class="fontclass">.answerbest</div></li><li> <i class="icon lud-icon">&#xe603;</i> <div class="name">answer_private</div><div class="code">&amp;#xe603;</div><div class="fontclass">.answerprivate</div></li><li> <i class="icon lud-icon">&#xe604;</i> <div class="name">answer_public</div><div class="code">&amp;#xe604;</div><div class="fontclass">.answerpublic</div></li><li> <i class="icon lud-icon">&#xe605;</i> <div class="name">approval</div><div class="code">&amp;#xe605;</div><div class="fontclass">.approval</div></li><li> <i class="icon lud-icon">&#xe606;</i> <div class="name">apps_admin</div><div class="code">&amp;#xe606;</div><div class="fontclass">.appsadmin</div></li><li> <i class="icon lud-icon">&#xe607;</i> <div class="name">apps</div><div class="code">&amp;#xe607;</div><div class="fontclass">.apps</div></li><li> <i class="icon lud-icon">&#xe608;</i> <div class="name">article</div><div class="code">&amp;#xe608;</div><div class="fontclass">.article</div></li><li> <i class="icon lud-icon">&#xe609;</i> <div class="name">avatar_loading</div><div class="code">&amp;#xe609;</div><div class="fontclass">.avatarloading</div></li><li> <i class="icon lud-icon">&#xe60a;</i> <div class="name">avatar</div><div class="code">&amp;#xe60a;</div><div class="fontclass">.avatar</div></li><li> <i class="icon lud-icon">&#xe60b;</i> <div class="name">calibration</div><div class="code">&amp;#xe60b;</div><div class="fontclass">.calibration</div></li><li> <i class="icon lud-icon">&#xe60c;</i> <div class="name">call_history</div><div class="code">&amp;#xe60c;</div><div class="fontclass">.callhistory</div></li><li> <i class="icon lud-icon">&#xe60d;</i> <div class="name">call</div><div class="code">&amp;#xe60d;</div><div class="fontclass">.call</div></li><li> <i class="icon lud-icon">&#xe60e;</i> <div class="name">campaign_members</div><div class="code">&amp;#xe60e;</div><div class="fontclass">.campaignmembers</div></li><li> <i class="icon lud-icon">&#xe60f;</i> <div class="name">campaign</div><div class="code">&amp;#xe60f;</div><div class="fontclass">.campaign</div></li><li> <i class="icon lud-icon">&#xe610;</i> <div class="name">canvas</div><div class="code">&amp;#xe610;</div><div class="fontclass">.canvas</div></li><li> <i class="icon lud-icon">&#xe611;</i> <div class="name">case_change_status</div><div class="code">&amp;#xe611;</div><div class="fontclass">.casechangestatus</div></li><li> <i class="icon lud-icon">&#xe612;</i> <div class="name">case_comment</div><div class="code">&amp;#xe612;</div><div class="fontclass">.casecomment</div></li><li> <i class="icon lud-icon">&#xe613;</i> <div class="name">case_email</div><div class="code">&amp;#xe613;</div><div class="fontclass">.caseemail</div></li><li> <i class="icon lud-icon">&#xe614;</i> <div class="name">case_log_a_call</div><div class="code">&amp;#xe614;</div><div class="fontclass">.caselogacall</div></li><li> <i class="icon lud-icon">&#xe615;</i> <div class="name">case_transcript</div><div class="code">&amp;#xe615;</div><div class="fontclass">.casetranscript</div></li><li> <i class="icon lud-icon">&#xe616;</i> <div class="name">case</div><div class="code">&amp;#xe616;</div><div class="fontclass">.case</div></li><li> <i class="icon lud-icon">&#xe617;</i> <div class="name">client</div><div class="code">&amp;#xe617;</div><div class="fontclass">.client</div></li><li> <i class="icon lud-icon">&#xe618;</i> <div class="name">coaching</div><div class="code">&amp;#xe618;</div><div class="fontclass">.coaching</div></li><li> <i class="icon lud-icon">&#xe619;</i> <div class="name">connected_apps</div><div class="code">&amp;#xe619;</div><div class="fontclass">.connectedapps</div></li><li> <i class="icon lud-icon">&#xe61a;</i> <div class="name">contact</div><div class="code">&amp;#xe61a;</div><div class="fontclass">.contact</div></li><li> <i class="icon lud-icon">&#xe61b;</i> <div class="name">contract</div><div class="code">&amp;#xe61b;</div><div class="fontclass">.contract</div></li><li> <i class="icon lud-icon">&#xe61c;</i> <div class="name">custom</div><div class="code">&amp;#xe61c;</div><div class="fontclass">.custom</div></li><li> <i class="icon lud-icon">&#xe61d;</i> <div class="name">dashboard</div><div class="code">&amp;#xe61d;</div><div class="fontclass">.dashboard</div></li><li> <i class="icon lud-icon">&#xe61e;</i> <div class="name">document</div><div class="code">&amp;#xe61e;</div><div class="fontclass">.document</div></li><li> <i class="icon lud-icon">&#xe61f;</i> <div class="name">drafts</div><div class="code">&amp;#xe61f;</div><div class="fontclass">.drafts</div></li><li> <i class="icon lud-icon">&#xe620;</i> <div class="name">email_chatter</div><div class="code">&amp;#xe620;</div><div class="fontclass">.emailchatter</div></li><li> <i class="icon lud-icon">&#xe621;</i> <div class="name">email_IQ</div><div class="code">&amp;#xe621;</div><div class="fontclass">.emailiq</div></li><li> <i class="icon lud-icon">&#xe622;</i> <div class="name">email</div><div class="code">&amp;#xe622;</div><div class="fontclass">.email</div></li><li> <i class="icon lud-icon">&#xe623;</i> <div class="name">endorsement</div><div class="code">&amp;#xe623;</div><div class="fontclass">.endorsement</div></li><li> <i class="icon lud-icon">&#xe624;</i> <div class="name">event</div><div class="code">&amp;#xe624;</div><div class="fontclass">.event</div></li><li> <i class="icon lud-icon">&#xe625;</i> <div class="name">feed</div><div class="code">&amp;#xe625;</div><div class="fontclass">.feed</div></li><li> <i class="icon lud-icon">&#xe626;</i> <div class="name">feedback</div><div class="code">&amp;#xe626;</div><div class="fontclass">.feedback</div></li><li> <i class="icon lud-icon">&#xe627;</i> <div class="name">file</div><div class="code">&amp;#xe627;</div><div class="fontclass">.file</div></li><li> <i class="icon lud-icon">&#xe628;</i> <div class="name">flow</div><div class="code">&amp;#xe628;</div><div class="fontclass">.flow</div></li><li> <i class="icon lud-icon">&#xe629;</i> <div class="name">folder</div><div class="code">&amp;#xe629;</div><div class="fontclass">.folder</div></li><li> <i class="icon lud-icon">&#xe62a;</i> <div class="name">generic_loading</div><div class="code">&amp;#xe62a;</div><div class="fontclass">.genericloading</div></li><li> <i class="icon lud-icon">&#xe62b;</i> <div class="name">goals</div><div class="code">&amp;#xe62b;</div><div class="fontclass">.goals</div></li><li> <i class="icon lud-icon">&#xe62c;</i> <div class="name">group_loading</div><div class="code">&amp;#xe62c;</div><div class="fontclass">.grouploading</div></li><li> <i class="icon lud-icon">&#xe62d;</i> <div class="name">groups</div><div class="code">&amp;#xe62d;</div><div class="fontclass">.groups</div></li><li> <i class="icon lud-icon">&#xe62e;</i> <div class="name">hierarchy</div><div class="code">&amp;#xe62e;</div><div class="fontclass">.hierarchy</div></li><li> <i class="icon lud-icon">&#xe62f;</i> <div class="name">home</div><div class="code">&amp;#xe62f;</div><div class="fontclass">.home</div></li><li> <i class="icon lud-icon">&#xe630;</i> <div class="name">household</div><div class="code">&amp;#xe630;</div><div class="fontclass">.household</div></li><li> <i class="icon lud-icon">&#xe631;</i> <div class="name">insights</div><div class="code">&amp;#xe631;</div><div class="fontclass">.insights</div></li><li> <i class="icon lud-icon">&#xe632;</i> <div class="name">investment_account</div><div class="code">&amp;#xe632;</div><div class="fontclass">.investmentaccount</div></li><li> <i class="icon lud-icon">&#xe633;</i> <div class="name">lead</div><div class="code">&amp;#xe633;</div><div class="fontclass">.lead</div></li><li> <i class="icon lud-icon">&#xe634;</i> <div class="name">link</div><div class="code">&amp;#xe634;</div><div class="fontclass">.link</div></li><li> <i class="icon lud-icon">&#xe635;</i> <div class="name">log_a_call</div><div class="code">&amp;#xe635;</div><div class="fontclass">.logacall</div></li><li> <i class="icon lud-icon">&#xe636;</i> <div class="name">marketing_actions</div><div class="code">&amp;#xe636;</div><div class="fontclass">.marketingactions</div></li><li> <i class="icon lud-icon">&#xe637;</i> <div class="name">metrics</div><div class="code">&amp;#xe637;</div><div class="fontclass">.metrics</div></li><li> <i class="icon lud-icon">&#xe638;</i> <div class="name">news</div><div class="code">&amp;#xe638;</div><div class="fontclass">.news</div></li><li> <i class="icon lud-icon">&#xe639;</i> <div class="name">note</div><div class="code">&amp;#xe639;</div><div class="fontclass">.note</div></li><li> <i class="icon lud-icon">&#xe63a;</i> <div class="name">opportunity</div><div class="code">&amp;#xe63a;</div><div class="fontclass">.opportunity</div></li><li> <i class="icon lud-icon">&#xe63b;</i> <div class="name">orders</div><div class="code">&amp;#xe63b;</div><div class="fontclass">.orders</div></li><li> <i class="icon lud-icon">&#xe63c;</i> <div class="name">people</div><div class="code">&amp;#xe63c;</div><div class="fontclass">.people</div></li><li> <i class="icon lud-icon">&#xe63d;</i> <div class="name">performance</div><div class="code">&amp;#xe63d;</div><div class="fontclass">.performance</div></li><li> <i class="icon lud-icon">&#xe63e;</i> <div class="name">person_account</div><div class="code">&amp;#xe63e;</div><div class="fontclass">.personaccount</div></li><li> <i class="icon lud-icon">&#xe63f;</i> <div class="name">photo</div><div class="code">&amp;#xe63f;</div><div class="fontclass">.photo</div></li><li> <i class="icon lud-icon">&#xe640;</i> <div class="name">poll</div><div class="code">&amp;#xe640;</div><div class="fontclass">.poll</div></li><li> <i class="icon lud-icon">&#xe641;</i> <div class="name">portal</div><div class="code">&amp;#xe641;</div><div class="fontclass">.portal</div></li><li> <i class="icon lud-icon">&#xe642;</i> <div class="name">pricebook</div><div class="code">&amp;#xe642;</div><div class="fontclass">.pricebook</div></li><li> <i class="icon lud-icon">&#xe643;</i> <div class="name">process</div><div class="code">&amp;#xe643;</div><div class="fontclass">.process</div></li><li> <i class="icon lud-icon">&#xe644;</i> <div class="name">question_best</div><div class="code">&amp;#xe644;</div><div class="fontclass">.questionbest</div></li><li> <i class="icon lud-icon">&#xe645;</i> <div class="name">quotes</div><div class="code">&amp;#xe645;</div><div class="fontclass">.quotes</div></li><li> <i class="icon lud-icon">&#xe646;</i> <div class="name">recent</div><div class="code">&amp;#xe646;</div><div class="fontclass">.recent</div></li><li> <i class="icon lud-icon">&#xe647;</i> <div class="name">record</div><div class="code">&amp;#xe647;</div><div class="fontclass">.record</div></li><li> <i class="icon lud-icon">&#xe648;</i> <div class="name">related_list</div><div class="code">&amp;#xe648;</div><div class="fontclass">.relatedlist</div></li><li> <i class="icon lud-icon">&#xe649;</i> <div class="name">report</div><div class="code">&amp;#xe649;</div><div class="fontclass">.report</div></li><li> <i class="icon lud-icon">&#xe64a;</i> <div class="name">reward</div><div class="code">&amp;#xe64a;</div><div class="fontclass">.reward</div></li><li> <i class="icon lud-icon">&#xe64b;</i> <div class="name">scan_card</div><div class="code">&amp;#xe64b;</div><div class="fontclass">.scancard</div></li><li> <i class="icon lud-icon">&#xe64c;</i> <div class="name">skill_entity</div><div class="code">&amp;#xe64c;</div><div class="fontclass">.skillentity</div></li><li> <i class="icon lud-icon">&#xe64d;</i> <div class="name">solution</div><div class="code">&amp;#xe64d;</div><div class="fontclass">.solution</div></li><li> <i class="icon lud-icon">&#xe64e;</i> <div class="name">sossession</div><div class="code">&amp;#xe64e;</div><div class="fontclass">.sossession</div></li><li> <i class="icon lud-icon">&#xe64f;</i> <div class="name">task</div><div class="code">&amp;#xe64f;</div><div class="fontclass">.task</div></li><li> <i class="icon lud-icon">&#xe650;</i> <div class="name">task2</div><div class="code">&amp;#xe650;</div><div class="fontclass">.task2</div></li><li> <i class="icon lud-icon">&#xe651;</i> <div class="name">team_member</div><div class="code">&amp;#xe651;</div><div class="fontclass">.teammember</div></li><li> <i class="icon lud-icon">&#xe652;</i> <div class="name">thanks_loading</div><div class="code">&amp;#xe652;</div><div class="fontclass">.thanksloading</div></li><li> <i class="icon lud-icon">&#xe653;</i> <div class="name">thanks</div><div class="code">&amp;#xe653;</div><div class="fontclass">.thanks</div></li><li> <i class="icon lud-icon">&#xe654;</i> <div class="name">today</div><div class="code">&amp;#xe654;</div><div class="fontclass">.today</div></li><li> <i class="icon lud-icon">&#xe655;</i> <div class="name">topic</div><div class="code">&amp;#xe655;</div><div class="fontclass">.topic</div></li><li> <i class="icon lud-icon">&#xe656;</i> <div class="name">unmatched</div><div class="code">&amp;#xe656;</div><div class="fontclass">.unmatched</div></li><li> <i class="icon lud-icon">&#xe657;</i> <div class="name">user</div><div class="code">&amp;#xe657;</div><div class="fontclass">.user</div></li><li> <i class="icon lud-icon">&#xe658;</i> <div class="name">work_order_item</div><div class="code">&amp;#xe658;</div><div class="fontclass">.workorderitem</div></li><li> <i class="icon lud-icon">&#xe659;</i> <div class="name">work_order</div><div class="code">&amp;#xe659;</div><div class="fontclass">.workorder</div></li><li> <i class="icon lud-icon">&#xe65a;</i> <div class="name">add_contact</div><div class="code">&amp;#xe65a;</div><div class="fontclass">.addcontact</div></li><li> <i class="icon lud-icon">&#xe65b;</i> <div class="name">announcement</div><div class="code">&amp;#xe65b;</div><div class="fontclass">.announcement1</div></li><li> <i class="icon lud-icon">&#xe65c;</i> <div class="name">apex</div><div class="code">&amp;#xe65c;</div><div class="fontclass">.apex</div></li><li> <i class="icon lud-icon">&#xe65d;</i> <div class="name">back</div><div class="code">&amp;#xe65d;</div><div class="fontclass">.back</div></li><li> <i class="icon lud-icon">&#xe65e;</i> <div class="name">call</div><div class="code">&amp;#xe65e;</div><div class="fontclass">.call1</div></li><li> <i class="icon lud-icon">&#xe65f;</i> <div class="name">canvas</div><div class="code">&amp;#xe65f;</div><div class="fontclass">.canvas1</div></li><li> <i class="icon lud-icon">&#xe660;</i> <div class="name">change_owner</div><div class="code">&amp;#xe660;</div><div class="fontclass">.changeowner</div></li><li> <i class="icon lud-icon">&#xe661;</i> <div class="name">change_record_type</div><div class="code">&amp;#xe661;</div><div class="fontclass">.changerecordtype</div></li><li> <i class="icon lud-icon">&#xe663;</i> <div class="name">clone</div><div class="code">&amp;#xe663;</div><div class="fontclass">.clone</div></li><li> <i class="icon lud-icon">&#xe665;</i> <div class="name">defer</div><div class="code">&amp;#xe665;</div><div class="fontclass">.defer</div></li><li> <i class="icon lud-icon">&#xe666;</i> <div class="name">delete</div><div class="code">&amp;#xe666;</div><div class="fontclass">.delete</div></li><li> <i class="icon lud-icon">&#xe667;</i> <div class="name">description</div><div class="code">&amp;#xe667;</div><div class="fontclass">.description</div></li><li> <i class="icon lud-icon">&#xe668;</i> <div class="name">dial_in</div><div class="code">&amp;#xe668;</div><div class="fontclass">.dialin</div></li><li> <i class="icon lud-icon">&#xe669;</i> <div class="name">download</div><div class="code">&amp;#xe669;</div><div class="fontclass">.download</div></li><li> <i class="icon lud-icon">&#xe66a;</i> <div class="name">edit_groups</div><div class="code">&amp;#xe66a;</div><div class="fontclass">.editgroups</div></li><li> <i class="icon lud-icon">&#xe66b;</i> <div class="name">edit_relationship</div><div class="code">&amp;#xe66b;</div><div class="fontclass">.editrelationship</div></li><li> <i class="icon lud-icon">&#xe66c;</i> <div class="name">edit</div><div class="code">&amp;#xe66c;</div><div class="fontclass">.edit</div></li><li> <i class="icon lud-icon">&#xe66d;</i> <div class="name">email</div><div class="code">&amp;#xe66d;</div><div class="fontclass">.email1</div></li><li> <i class="icon lud-icon">&#xe66e;</i> <div class="name">fallback</div><div class="code">&amp;#xe66e;</div><div class="fontclass">.fallback</div></li><li> <i class="icon lud-icon">&#xe66f;</i> <div class="name">filter</div><div class="code">&amp;#xe66f;</div><div class="fontclass">.filter</div></li><li> <i class="icon lud-icon">&#xe670;</i> <div class="name">flow</div><div class="code">&amp;#xe670;</div><div class="fontclass">.flow1</div></li><li> <i class="icon lud-icon">&#xe671;</i> <div class="name">follow</div><div class="code">&amp;#xe671;</div><div class="fontclass">.follow</div></li><li> <i class="icon lud-icon">&#xe672;</i> <div class="name">following</div><div class="code">&amp;#xe672;</div><div class="fontclass">.following</div></li><li> <i class="icon lud-icon">&#xe673;</i> <div class="name">freeze_user</div><div class="code">&amp;#xe673;</div><div class="fontclass">.freezeuser</div></li><li> <i class="icon lud-icon">&#xe674;</i> <div class="name">google_news</div><div class="code">&amp;#xe674;</div><div class="fontclass">.googlenews</div></li><li> <i class="icon lud-icon">&#xe675;</i> <div class="name">info</div><div class="code">&amp;#xe675;</div><div class="fontclass">.info</div></li><li> <i class="icon lud-icon">&#xe676;</i> <div class="name">join_group</div><div class="code">&amp;#xe676;</div><div class="fontclass">.joingroup</div></li><li> <i class="icon lud-icon">&#xe677;</i> <div class="name">lead_convert</div><div class="code">&amp;#xe677;</div><div class="fontclass">.leadconvert</div></li><li> <i class="icon lud-icon">&#xe678;</i> <div class="name">leave_group</div><div class="code">&amp;#xe678;</div><div class="fontclass">.leavegroup</div></li><li> <i class="icon lud-icon">&#xe679;</i> <div class="name">log_event</div><div class="code">&amp;#xe679;</div><div class="fontclass">.logevent</div></li><li> <i class="icon lud-icon">&#xe67a;</i> <div class="name">manage_perm_sets</div><div class="code">&amp;#xe67a;</div><div class="fontclass">.managepermsets</div></li><li> <i class="icon lud-icon">&#xe67b;</i> <div class="name">map</div><div class="code">&amp;#xe67b;</div><div class="fontclass">.map</div></li><li> <i class="icon lud-icon">&#xe67c;</i> <div class="name">more</div><div class="code">&amp;#xe67c;</div><div class="fontclass">.more</div></li><li> <i class="icon lud-icon">&#xe67d;</i> <div class="name">new_account</div><div class="code">&amp;#xe67d;</div><div class="fontclass">.newaccount</div></li><li> <i class="icon lud-icon">&#xe67e;</i> <div class="name">new_campaign</div><div class="code">&amp;#xe67e;</div><div class="fontclass">.newcampaign</div></li><li> <i class="icon lud-icon">&#xe67f;</i> <div class="name">new_child_case</div><div class="code">&amp;#xe67f;</div><div class="fontclass">.newchildcase</div></li><li> <i class="icon lud-icon">&#xe680;</i> <div class="name">new_contact</div><div class="code">&amp;#xe680;</div><div class="fontclass">.newcontact</div></li><li> <i class="icon lud-icon">&#xe681;</i> <div class="name">new_custom2</div><div class="code">&amp;#xe681;</div><div class="fontclass">.newcustom2</div></li><li> <i class="icon lud-icon">&#xe682;</i> <div class="name">new_custom3</div><div class="code">&amp;#xe682;</div><div class="fontclass">.newcustom3</div></li><li> <i class="icon lud-icon">&#xe683;</i> <div class="name">new_custom5</div><div class="code">&amp;#xe683;</div><div class="fontclass">.newcustom5</div></li><li> <i class="icon lud-icon">&#xe684;</i> <div class="name">new_custom9</div><div class="code">&amp;#xe684;</div><div class="fontclass">.newcustom9</div></li><li> <i class="icon lud-icon">&#xe685;</i> <div class="name">new_custom12</div><div class="code">&amp;#xe685;</div><div class="fontclass">.newcustom12</div></li><li> <i class="icon lud-icon">&#xe686;</i> <div class="name">new_custom14</div><div class="code">&amp;#xe686;</div><div class="fontclass">.newcustom14</div></li><li> <i class="icon lud-icon">&#xe687;</i> <div class="name">new_custom15</div><div class="code">&amp;#xe687;</div><div class="fontclass">.newcustom15</div></li><li> <i class="icon lud-icon">&#xe688;</i> <div class="name">new_custom16</div><div class="code">&amp;#xe688;</div><div class="fontclass">.newcustom16</div></li><li> <i class="icon lud-icon">&#xe689;</i> <div class="name">new_custom17</div><div class="code">&amp;#xe689;</div><div class="fontclass">.newcustom17</div></li><li> <i class="icon lud-icon">&#xe68a;</i> <div class="name">new_custom18</div><div class="code">&amp;#xe68a;</div><div class="fontclass">.newcustom18</div></li><li> <i class="icon lud-icon">&#xe68b;</i> <div class="name">new_custom20</div><div class="code">&amp;#xe68b;</div><div class="fontclass">.newcustom20</div></li><li> <i class="icon lud-icon">&#xe68c;</i> <div class="name">new_custom21</div><div class="code">&amp;#xe68c;</div><div class="fontclass">.newcustom21</div></li><li> <i class="icon lud-icon">&#xe68d;</i> <div class="name">new_custom24</div><div class="code">&amp;#xe68d;</div><div class="fontclass">.newcustom24</div></li><li> <i class="icon lud-icon">&#xe68e;</i> <div class="name">new_custom26</div><div class="code">&amp;#xe68e;</div><div class="fontclass">.newcustom26</div></li><li> <i class="icon lud-icon">&#xe68f;</i> <div class="name">new_custom30</div><div class="code">&amp;#xe68f;</div><div class="fontclass">.newcustom30</div></li><li> <i class="icon lud-icon">&#xe690;</i> <div class="name">new_custom31</div><div class="code">&amp;#xe690;</div><div class="fontclass">.newcustom31</div></li><li> <i class="icon lud-icon">&#xe691;</i> <div class="name">new_custom32</div><div class="code">&amp;#xe691;</div><div class="fontclass">.newcustom32</div></li><li> <i class="icon lud-icon">&#xe692;</i> <div class="name">new_custom33</div><div class="code">&amp;#xe692;</div><div class="fontclass">.newcustom33</div></li><li> <i class="icon lud-icon">&#xe693;</i> <div class="name">new_custom34</div><div class="code">&amp;#xe693;</div><div class="fontclass">.newcustom34</div></li><li> <i class="icon lud-icon">&#xe694;</i> <div class="name">new_custom35</div><div class="code">&amp;#xe694;</div><div class="fontclass">.newcustom35</div></li><li> <i class="icon lud-icon">&#xe695;</i> <div class="name">new_custom36</div><div class="code">&amp;#xe695;</div><div class="fontclass">.newcustom36</div></li><li> <i class="icon lud-icon">&#xe696;</i> <div class="name">new_custom37</div><div class="code">&amp;#xe696;</div><div class="fontclass">.newcustom37</div></li><li> <i class="icon lud-icon">&#xe697;</i> <div class="name">new_custom38</div><div class="code">&amp;#xe697;</div><div class="fontclass">.newcustom38</div></li><li> <i class="icon lud-icon">&#xe698;</i> <div class="name">new_custom39</div><div class="code">&amp;#xe698;</div><div class="fontclass">.newcustom39</div></li><li> <i class="icon lud-icon">&#xe699;</i> <div class="name">new_custom40</div><div class="code">&amp;#xe699;</div><div class="fontclass">.newcustom40</div></li><li> <i class="icon lud-icon">&#xe69a;</i> <div class="name">new_custom41</div><div class="code">&amp;#xe69a;</div><div class="fontclass">.newcustom41</div></li><li> <i class="icon lud-icon">&#xe69b;</i> <div class="name">new_custom42</div><div class="code">&amp;#xe69b;</div><div class="fontclass">.newcustom42</div></li><li> <i class="icon lud-icon">&#xe69c;</i> <div class="name">new_custom43</div><div class="code">&amp;#xe69c;</div><div class="fontclass">.newcustom43</div></li><li> <i class="icon lud-icon">&#xe69d;</i> <div class="name">new_custom44</div><div class="code">&amp;#xe69d;</div><div class="fontclass">.newcustom44</div></li><li> <i class="icon lud-icon">&#xe69e;</i> <div class="name">new_custom45</div><div class="code">&amp;#xe69e;</div><div class="fontclass">.newcustom45</div></li><li> <i class="icon lud-icon">&#xe69f;</i> <div class="name">new_custom46</div><div class="code">&amp;#xe69f;</div><div class="fontclass">.newcustom46</div></li><li> <i class="icon lud-icon">&#xe6a0;</i> <div class="name">new_custom47</div><div class="code">&amp;#xe6a0;</div><div class="fontclass">.newcustom47</div></li><li> <i class="icon lud-icon">&#xe6a1;</i> <div class="name">new_custom48</div><div class="code">&amp;#xe6a1;</div><div class="fontclass">.newcustom48</div></li><li> <i class="icon lud-icon">&#xe6a2;</i> <div class="name">new_custom49</div><div class="code">&amp;#xe6a2;</div><div class="fontclass">.newcustom49</div></li><li> <i class="icon lud-icon">&#xe6a3;</i> <div class="name">new_custom50</div><div class="code">&amp;#xe6a3;</div><div class="fontclass">.newcustom50</div></li><li> <i class="icon lud-icon">&#xe6a4;</i> <div class="name">new_custom51</div><div class="code">&amp;#xe6a4;</div><div class="fontclass">.newcustom51</div></li><li> <i class="icon lud-icon">&#xe6a5;</i> <div class="name">new_custom52</div><div class="code">&amp;#xe6a5;</div><div class="fontclass">.newcustom52</div></li><li> <i class="icon lud-icon">&#xe6a6;</i> <div class="name">new_custom54</div><div class="code">&amp;#xe6a6;</div><div class="fontclass">.newcustom54</div></li><li> <i class="icon lud-icon">&#xe6a7;</i> <div class="name">new_custom55</div><div class="code">&amp;#xe6a7;</div><div class="fontclass">.newcustom55</div></li><li> <i class="icon lud-icon">&#xe6a8;</i> <div class="name">new_custom56</div><div class="code">&amp;#xe6a8;</div><div class="fontclass">.newcustom56</div></li><li> <i class="icon lud-icon">&#xe6a9;</i> <div class="name">new_custom57</div><div class="code">&amp;#xe6a9;</div><div class="fontclass">.newcustom57</div></li><li> <i class="icon lud-icon">&#xe6aa;</i> <div class="name">new_custom58</div><div class="code">&amp;#xe6aa;</div><div class="fontclass">.newcustom58</div></li><li> <i class="icon lud-icon">&#xe6ab;</i> <div class="name">new_custom59</div><div class="code">&amp;#xe6ab;</div><div class="fontclass">.newcustom59</div></li><li> <i class="icon lud-icon">&#xe6ac;</i> <div class="name">new_custom60</div><div class="code">&amp;#xe6ac;</div><div class="fontclass">.newcustom60</div></li><li> <i class="icon lud-icon">&#xe6ad;</i> <div class="name">new_custom61</div><div class="code">&amp;#xe6ad;</div><div class="fontclass">.newcustom61</div></li><li> <i class="icon lud-icon">&#xe6ae;</i> <div class="name">new_custom62</div><div class="code">&amp;#xe6ae;</div><div class="fontclass">.newcustom62</div></li><li> <i class="icon lud-icon">&#xe6af;</i> <div class="name">new_custom63</div><div class="code">&amp;#xe6af;</div><div class="fontclass">.newcustom63</div></li><li> <i class="icon lud-icon">&#xe6b0;</i> <div class="name">new_custom64</div><div class="code">&amp;#xe6b0;</div><div class="fontclass">.newcustom64</div></li><li> <i class="icon lud-icon">&#xe6b1;</i> <div class="name">new_custom65</div><div class="code">&amp;#xe6b1;</div><div class="fontclass">.newcustom65</div></li><li> <i class="icon lud-icon">&#xe6b2;</i> <div class="name">new_custom66</div><div class="code">&amp;#xe6b2;</div><div class="fontclass">.newcustom66</div></li><li> <i class="icon lud-icon">&#xe6b3;</i> <div class="name">new_custom67</div><div class="code">&amp;#xe6b3;</div><div class="fontclass">.newcustom67</div></li><li> <i class="icon lud-icon">&#xe6b4;</i> <div class="name">new_custom68</div><div class="code">&amp;#xe6b4;</div><div class="fontclass">.newcustom68</div></li><li> <i class="icon lud-icon">&#xe6b5;</i> <div class="name">new_custom69</div><div class="code">&amp;#xe6b5;</div><div class="fontclass">.newcustom69</div></li><li> <i class="icon lud-icon">&#xe6b6;</i> <div class="name">new_custom70</div><div class="code">&amp;#xe6b6;</div><div class="fontclass">.newcustom70</div></li><li> <i class="icon lud-icon">&#xe6b7;</i> <div class="name">new_custom71</div><div class="code">&amp;#xe6b7;</div><div class="fontclass">.newcustom71</div></li><li> <i class="icon lud-icon">&#xe6b8;</i> <div class="name">new_custom72</div><div class="code">&amp;#xe6b8;</div><div class="fontclass">.newcustom72</div></li><li> <i class="icon lud-icon">&#xe6b9;</i> <div class="name">new_custom73</div><div class="code">&amp;#xe6b9;</div><div class="fontclass">.newcustom73</div></li><li> <i class="icon lud-icon">&#xe6ba;</i> <div class="name">new_custom74</div><div class="code">&amp;#xe6ba;</div><div class="fontclass">.newcustom74</div></li><li> <i class="icon lud-icon">&#xe6bb;</i> <div class="name">new_custom75</div><div class="code">&amp;#xe6bb;</div><div class="fontclass">.newcustom75</div></li><li> <i class="icon lud-icon">&#xe6bc;</i> <div class="name">new_custom76</div><div class="code">&amp;#xe6bc;</div><div class="fontclass">.newcustom76</div></li><li> <i class="icon lud-icon">&#xe6bd;</i> <div class="name">new_custom77</div><div class="code">&amp;#xe6bd;</div><div class="fontclass">.newcustom77</div></li><li> <i class="icon lud-icon">&#xe6be;</i> <div class="name">new_custom78</div><div class="code">&amp;#xe6be;</div><div class="fontclass">.newcustom78</div></li><li> <i class="icon lud-icon">&#xe6bf;</i> <div class="name">new_custom79</div><div class="code">&amp;#xe6bf;</div><div class="fontclass">.newcustom79</div></li><li> <i class="icon lud-icon">&#xe6c0;</i> <div class="name">new_custom80</div><div class="code">&amp;#xe6c0;</div><div class="fontclass">.newcustom80</div></li><li> <i class="icon lud-icon">&#xe6c1;</i> <div class="name">new_custom81</div><div class="code">&amp;#xe6c1;</div><div class="fontclass">.newcustom81</div></li><li> <i class="icon lud-icon">&#xe6c2;</i> <div class="name">new_custom82</div><div class="code">&amp;#xe6c2;</div><div class="fontclass">.newcustom82</div></li><li> <i class="icon lud-icon">&#xe6c3;</i> <div class="name">new_custom83</div><div class="code">&amp;#xe6c3;</div><div class="fontclass">.newcustom83</div></li><li> <i class="icon lud-icon">&#xe6c4;</i> <div class="name">new_custom84</div><div class="code">&amp;#xe6c4;</div><div class="fontclass">.newcustom84</div></li><li> <i class="icon lud-icon">&#xe6c5;</i> <div class="name">new_custom85</div><div class="code">&amp;#xe6c5;</div><div class="fontclass">.newcustom85</div></li><li> <i class="icon lud-icon">&#xe6c6;</i> <div class="name">new_custom86</div><div class="code">&amp;#xe6c6;</div><div class="fontclass">.newcustom86</div></li><li> <i class="icon lud-icon">&#xe6c7;</i> <div class="name">new_custom87</div><div class="code">&amp;#xe6c7;</div><div class="fontclass">.newcustom87</div></li><li> <i class="icon lud-icon">&#xe6c8;</i> <div class="name">new_custom88</div><div class="code">&amp;#xe6c8;</div><div class="fontclass">.newcustom88</div></li><li> <i class="icon lud-icon">&#xe6c9;</i> <div class="name">new_custom89</div><div class="code">&amp;#xe6c9;</div><div class="fontclass">.newcustom89</div></li><li> <i class="icon lud-icon">&#xe6ca;</i> <div class="name">new_custom90</div><div class="code">&amp;#xe6ca;</div><div class="fontclass">.newcustom90</div></li><li> <i class="icon lud-icon">&#xe6cb;</i> <div class="name">new_custom91</div><div class="code">&amp;#xe6cb;</div><div class="fontclass">.newcustom91</div></li><li> <i class="icon lud-icon">&#xe6cc;</i> <div class="name">new_custom92</div><div class="code">&amp;#xe6cc;</div><div class="fontclass">.newcustom92</div></li><li> <i class="icon lud-icon">&#xe6cd;</i> <div class="name">new_custom93</div><div class="code">&amp;#xe6cd;</div><div class="fontclass">.newcustom93</div></li><li> <i class="icon lud-icon">&#xe6ce;</i> <div class="name">new_custom94</div><div class="code">&amp;#xe6ce;</div><div class="fontclass">.newcustom94</div></li><li> <i class="icon lud-icon">&#xe6cf;</i> <div class="name">new_custom95</div><div class="code">&amp;#xe6cf;</div><div class="fontclass">.newcustom95</div></li><li> <i class="icon lud-icon">&#xe6d0;</i> <div class="name">new_custom96</div><div class="code">&amp;#xe6d0;</div><div class="fontclass">.newcustom96</div></li><li> <i class="icon lud-icon">&#xe6d1;</i> <div class="name">new_custom97</div><div class="code">&amp;#xe6d1;</div><div class="fontclass">.newcustom97</div></li><li> <i class="icon lud-icon">&#xe6d2;</i> <div class="name">new_custom98</div><div class="code">&amp;#xe6d2;</div><div class="fontclass">.newcustom98</div></li><li> <i class="icon lud-icon">&#xe6d3;</i> <div class="name">new_custom99</div><div class="code">&amp;#xe6d3;</div><div class="fontclass">.newcustom99</div></li><li> <i class="icon lud-icon">&#xe6d4;</i> <div class="name">new_custom100</div><div class="code">&amp;#xe6d4;</div><div class="fontclass">.newcustom100</div></li><li> <i class="icon lud-icon">&#xe6d5;</i> <div class="name">new_event</div><div class="code">&amp;#xe6d5;</div><div class="fontclass">.newevent</div></li><li> <i class="icon lud-icon">&#xe6d6;</i> <div class="name">new_group</div><div class="code">&amp;#xe6d6;</div><div class="fontclass">.newgroup</div></li><li> <i class="icon lud-icon">&#xe6d7;</i> <div class="name">new_lead</div><div class="code">&amp;#xe6d7;</div><div class="fontclass">.newlead</div></li><li> <i class="icon lud-icon">&#xe6d8;</i> <div class="name">new_note</div><div class="code">&amp;#xe6d8;</div><div class="fontclass">.newnote</div></li><li> <i class="icon lud-icon">&#xe6d9;</i> <div class="name">new_notebook</div><div class="code">&amp;#xe6d9;</div><div class="fontclass">.newnotebook</div></li><li> <i class="icon lud-icon">&#xe6da;</i> <div class="name">new_opportunity</div><div class="code">&amp;#xe6da;</div><div class="fontclass">.newopportunity</div></li><li> <i class="icon lud-icon">&#xe6db;</i> <div class="name">new_person_account</div><div class="code">&amp;#xe6db;</div><div class="fontclass">.newpersonaccount</div></li><li> <i class="icon lud-icon">&#xe6dc;</i> <div class="name">new_task</div><div class="code">&amp;#xe6dc;</div><div class="fontclass">.newtask</div></li><li> <i class="icon lud-icon">&#xe6dd;</i> <div class="name">password_unlock</div><div class="code">&amp;#xe6dd;</div><div class="fontclass">.passwordunlock</div></li><li> <i class="icon lud-icon">&#xe6de;</i> <div class="name">preview</div><div class="code">&amp;#xe6de;</div><div class="fontclass">.preview</div></li><li> <i class="icon lud-icon">&#xe6df;</i> <div class="name">priority</div><div class="code">&amp;#xe6df;</div><div class="fontclass">.priority</div></li><li> <i class="icon lud-icon">&#xe6e0;</i> <div class="name">question_post_action</div><div class="code">&amp;#xe6e0;</div><div class="fontclass">.questionpostaction</div></li><li> <i class="icon lud-icon">&#xe6e1;</i> <div class="name">quote</div><div class="code">&amp;#xe6e1;</div><div class="fontclass">.quote</div></li><li> <i class="icon lud-icon">&#xe6e2;</i> <div class="name">record</div><div class="code">&amp;#xe6e2;</div><div class="fontclass">.record1</div></li><li> <i class="icon lud-icon">&#xe6e3;</i> <div class="name">refresh</div><div class="code">&amp;#xe6e3;</div><div class="fontclass">.refresh</div></li><li> <i class="icon lud-icon">&#xe6e7;</i> <div class="name">share_link</div><div class="code">&amp;#xe6e7;</div><div class="fontclass">.sharelink</div></li><li> <i class="icon lud-icon">&#xe6e8;</i> <div class="name">share_poll</div><div class="code">&amp;#xe6e8;</div><div class="fontclass">.sharepoll</div></li><li> <i class="icon lud-icon">&#xe6e9;</i> <div class="name">share_post</div><div class="code">&amp;#xe6e9;</div><div class="fontclass">.sharepost</div></li><li> <i class="icon lud-icon">&#xe6ea;</i> <div class="name">share_thanks</div><div class="code">&amp;#xe6ea;</div><div class="fontclass">.sharethanks</div></li><li> <i class="icon lud-icon">&#xe6eb;</i> <div class="name">share</div><div class="code">&amp;#xe6eb;</div><div class="fontclass">.share</div></li><li> <i class="icon lud-icon">&#xe6ec;</i> <div class="name">sort</div><div class="code">&amp;#xe6ec;</div><div class="fontclass">.sort</div></li><li> <i class="icon lud-icon">&#xe6ed;</i> <div class="name">submit_for_approval</div><div class="code">&amp;#xe6ed;</div><div class="fontclass">.submitforapproval</div></li><li> <i class="icon lud-icon">&#xe6ee;</i> <div class="name">update_status</div><div class="code">&amp;#xe6ee;</div><div class="fontclass">.updatestatus</div></li><li> <i class="icon lud-icon">&#xe6ef;</i> <div class="name">update</div><div class="code">&amp;#xe6ef;</div><div class="fontclass">.update</div></li><li> <i class="icon lud-icon">&#xe6f0;</i> <div class="name">upload</div><div class="code">&amp;#xe6f0;</div><div class="fontclass">.upload</div></li><li> <i class="icon lud-icon">&#xe6f1;</i> <div class="name">user_activation</div><div class="code">&amp;#xe6f1;</div><div class="fontclass">.useractivation</div></li><li> <i class="icon lud-icon">&#xe6f2;</i> <div class="name">user</div><div class="code">&amp;#xe6f2;</div><div class="fontclass">.user1</div></li><li> <i class="icon lud-icon">&#xe6f3;</i> <div class="name">web_link</div><div class="code">&amp;#xe6f3;</div><div class="fontclass">.weblink</div></li><li> <i class="icon lud-icon">&#xe6f4;</i> <div class="name">add</div><div class="code">&amp;#xe6f4;</div><div class="fontclass">.add</div></li><li> <i class="icon lud-icon">&#xe6f5;</i> <div class="name">adduser</div><div class="code">&amp;#xe6f5;</div><div class="fontclass">.adduser</div></li><li> <i class="icon lud-icon">&#xe6f6;</i> <div class="name">announcement</div><div class="code">&amp;#xe6f6;</div><div class="fontclass">.announcement2</div></li><li> <i class="icon lud-icon">&#xe6f7;</i> <div class="name">answer</div><div class="code">&amp;#xe6f7;</div><div class="fontclass">.answer</div></li><li> <i class="icon lud-icon">&#xe6f8;</i> <div class="name">apps</div><div class="code">&amp;#xe6f8;</div><div class="fontclass">.apps1</div></li><li> <i class="icon lud-icon">&#xe6f9;</i> <div class="name">arrowdown</div><div class="code">&amp;#xe6f9;</div><div class="fontclass">.arrowdown</div></li><li> <i class="icon lud-icon">&#xe6fa;</i> <div class="name">arrowup</div><div class="code">&amp;#xe6fa;</div><div class="fontclass">.arrowup</div></li><li> <i class="icon lud-icon">&#xe6fb;</i> <div class="name">attach</div><div class="code">&amp;#xe6fb;</div><div class="fontclass">.attach</div></li><li> <i class="icon lud-icon">&#xe6fc;</i> <div class="name">back</div><div class="code">&amp;#xe6fc;</div><div class="fontclass">.back1</div></li><li> <i class="icon lud-icon">&#xe6fd;</i> <div class="name">ban</div><div class="code">&amp;#xe6fd;</div><div class="fontclass">.ban</div></li><li> <i class="icon lud-icon">&#xe6fe;</i> <div class="name">bold</div><div class="code">&amp;#xe6fe;</div><div class="fontclass">.bold</div></li><li> <i class="icon lud-icon">&#xe6ff;</i> <div class="name">bookmark</div><div class="code">&amp;#xe6ff;</div><div class="fontclass">.bookmark</div></li><li> <i class="icon lud-icon">&#xe700;</i> <div class="name">broadcast</div><div class="code">&amp;#xe700;</div><div class="fontclass">.broadcast</div></li><li> <i class="icon lud-icon">&#xe701;</i> <div class="name">brush</div><div class="code">&amp;#xe701;</div><div class="fontclass">.brush</div></li><li> <i class="icon lud-icon">&#xe702;</i> <div class="name">bucket</div><div class="code">&amp;#xe702;</div><div class="fontclass">.bucket</div></li><li> <i class="icon lud-icon">&#xe703;</i> <div class="name">builder</div><div class="code">&amp;#xe703;</div><div class="fontclass">.builder</div></li><li> <i class="icon lud-icon">&#xe704;</i> <div class="name">call</div><div class="code">&amp;#xe704;</div><div class="fontclass">.call2</div></li><li> <i class="icon lud-icon">&#xe705;</i> <div class="name">capslock</div><div class="code">&amp;#xe705;</div><div class="fontclass">.capslock</div></li><li> <i class="icon lud-icon">&#xe706;</i> <div class="name">cases</div><div class="code">&amp;#xe706;</div><div class="fontclass">.cases</div></li><li> <i class="icon lud-icon">&#xe707;</i> <div class="name">center_align_text</div><div class="code">&amp;#xe707;</div><div class="fontclass">.centeraligntext</div></li><li> <i class="icon lud-icon">&#xe708;</i> <div class="name">chart</div><div class="code">&amp;#xe708;</div><div class="fontclass">.chart</div></li><li> <i class="icon lud-icon">&#xe709;</i> <div class="name">chat</div><div class="code">&amp;#xe709;</div><div class="fontclass">.chat</div></li><li> <i class="icon lud-icon">&#xe70a;</i> <div class="name">check</div><div class="code">&amp;#xe70a;</div><div class="fontclass">.check</div></li><li> <i class="icon lud-icon">&#xe70b;</i> <div class="name">checkin</div><div class="code">&amp;#xe70b;</div><div class="fontclass">.checkin</div></li><li> <i class="icon lud-icon">&#xe70c;</i> <div class="name">chevrondown</div><div class="code">&amp;#xe70c;</div><div class="fontclass">.chevrondown</div></li><li> <i class="icon lud-icon">&#xe70d;</i> <div class="name">chevronleft</div><div class="code">&amp;#xe70d;</div><div class="fontclass">.chevronleft</div></li><li> <i class="icon lud-icon">&#xe70e;</i> <div class="name">chevronright</div><div class="code">&amp;#xe70e;</div><div class="fontclass">.chevronright</div></li><li> <i class="icon lud-icon">&#xe70f;</i> <div class="name">chevronup</div><div class="code">&amp;#xe70f;</div><div class="fontclass">.chevronup</div></li><li> <i class="icon lud-icon">&#xe710;</i> <div class="name">clear</div><div class="code">&amp;#xe710;</div><div class="fontclass">.clear</div></li><li> <i class="icon lud-icon">&#xe711;</i> <div class="name">clock</div><div class="code">&amp;#xe711;</div><div class="fontclass">.clock</div></li><li> <i class="icon lud-icon">&#xe712;</i> <div class="name">close</div><div class="code">&amp;#xe712;</div><div class="fontclass">.close</div></li><li> <i class="icon lud-icon">&#xe713;</i> <div class="name">comments</div><div class="code">&amp;#xe713;</div><div class="fontclass">.comments</div></li><li> <i class="icon lud-icon">&#xe714;</i> <div class="name">company</div><div class="code">&amp;#xe714;</div><div class="fontclass">.company</div></li><li> <i class="icon lud-icon">&#xe715;</i> <div class="name">connected_apps</div><div class="code">&amp;#xe715;</div><div class="fontclass">.connectedapps1</div></li><li> <i class="icon lud-icon">&#xe716;</i> <div class="name">contract_alt</div><div class="code">&amp;#xe716;</div><div class="fontclass">.contractalt</div></li><li> <i class="icon lud-icon">&#xe717;</i> <div class="name">contract</div><div class="code">&amp;#xe717;</div><div class="fontclass">.contract1</div></li><li> <i class="icon lud-icon">&#xe718;</i> <div class="name">copy</div><div class="code">&amp;#xe718;</div><div class="fontclass">.copy</div></li><li> <i class="icon lud-icon">&#xe719;</i> <div class="name">crossfilter</div><div class="code">&amp;#xe719;</div><div class="fontclass">.crossfilter</div></li><li> <i class="icon lud-icon">&#xe71a;</i> <div class="name">custom_apps</div><div class="code">&amp;#xe71a;</div><div class="fontclass">.customapps</div></li><li> <i class="icon lud-icon">&#xe71b;</i> <div class="name">cut</div><div class="code">&amp;#xe71b;</div><div class="fontclass">.cut</div></li><li> <i class="icon lud-icon">&#xe71c;</i> <div class="name">datadotcom</div><div class="code">&amp;#xe71c;</div><div class="fontclass">.datadotcom</div></li><li> <i class="icon lud-icon">&#xe71d;</i> <div class="name">dayview</div><div class="code">&amp;#xe71d;</div><div class="fontclass">.dayview</div></li><li> <i class="icon lud-icon">&#xe71e;</i> <div class="name">delete</div><div class="code">&amp;#xe71e;</div><div class="fontclass">.delete1</div></li><li> <i class="icon lud-icon">&#xe71f;</i> <div class="name">deprecate</div><div class="code">&amp;#xe71f;</div><div class="fontclass">.deprecate</div></li><li> <i class="icon lud-icon">&#xe720;</i> <div class="name">description</div><div class="code">&amp;#xe720;</div><div class="fontclass">.description1</div></li><li> <i class="icon lud-icon">&#xe721;</i> <div class="name">desktop</div><div class="code">&amp;#xe721;</div><div class="fontclass">.desktop</div></li><li> <i class="icon lud-icon">&#xe722;</i> <div class="name">dock_panel</div><div class="code">&amp;#xe722;</div><div class="fontclass">.dockpanel</div></li><li> <i class="icon lud-icon">&#xe723;</i> <div class="name">down</div><div class="code">&amp;#xe723;</div><div class="fontclass">.down</div></li><li> <i class="icon lud-icon">&#xe724;</i> <div class="name">download</div><div class="code">&amp;#xe724;</div><div class="fontclass">.download1</div></li><li> <i class="icon lud-icon">&#xe725;</i> <div class="name">edit_form</div><div class="code">&amp;#xe725;</div><div class="fontclass">.editform</div></li><li> <i class="icon lud-icon">&#xe726;</i> <div class="name">edit</div><div class="code">&amp;#xe726;</div><div class="fontclass">.edit1</div></li><li> <i class="icon lud-icon">&#xe727;</i> <div class="name">email</div><div class="code">&amp;#xe727;</div><div class="fontclass">.email2</div></li><li> <i class="icon lud-icon">&#xe728;</i> <div class="name">end_call</div><div class="code">&amp;#xe728;</div><div class="fontclass">.endcall</div></li><li> <i class="icon lud-icon">&#xe729;</i> <div class="name">erect_window</div><div class="code">&amp;#xe729;</div><div class="fontclass">.erectwindow</div></li><li> <i class="icon lud-icon">&#xe72a;</i> <div class="name">error</div><div class="code">&amp;#xe72a;</div><div class="fontclass">.error</div></li><li> <i class="icon lud-icon">&#xe72b;</i> <div class="name">event</div><div class="code">&amp;#xe72b;</div><div class="fontclass">.event1</div></li><li> <i class="icon lud-icon">&#xe72c;</i> <div class="name">expand_alt</div><div class="code">&amp;#xe72c;</div><div class="fontclass">.expandalt</div></li><li> <i class="icon lud-icon">&#xe72d;</i> <div class="name">expand</div><div class="code">&amp;#xe72d;</div><div class="fontclass">.expand</div></li><li> <i class="icon lud-icon">&#xe72e;</i> <div class="name">favorite</div><div class="code">&amp;#xe72e;</div><div class="fontclass">.favorite</div></li><li> <i class="icon lud-icon">&#xe72f;</i> <div class="name">feed</div><div class="code">&amp;#xe72f;</div><div class="fontclass">.feed1</div></li><li> <i class="icon lud-icon">&#xe730;</i> <div class="name">file</div><div class="code">&amp;#xe730;</div><div class="fontclass">.file1</div></li><li> <i class="icon lud-icon">&#xe731;</i> <div class="name">filter</div><div class="code">&amp;#xe731;</div><div class="fontclass">.filter1</div></li><li> <i class="icon lud-icon">&#xe732;</i> <div class="name">filterList</div><div class="code">&amp;#xe732;</div><div class="fontclass">.filterlist</div></li><li> <i class="icon lud-icon">&#xe733;</i> <div class="name">forward</div><div class="code">&amp;#xe733;</div><div class="fontclass">.forward</div></li><li> <i class="icon lud-icon">&#xe734;</i> <div class="name">frozen</div><div class="code">&amp;#xe734;</div><div class="fontclass">.frozen</div></li><li> <i class="icon lud-icon">&#xe735;</i> <div class="name">groups</div><div class="code">&amp;#xe735;</div><div class="fontclass">.groups1</div></li><li> <i class="icon lud-icon">&#xe736;</i> <div class="name">help</div><div class="code">&amp;#xe736;</div><div class="fontclass">.help</div></li><li> <i class="icon lud-icon">&#xe737;</i> <div class="name">home</div><div class="code">&amp;#xe737;</div><div class="fontclass">.home1</div></li><li> <i class="icon lud-icon">&#xe738;</i> <div class="name">identity</div><div class="code">&amp;#xe738;</div><div class="fontclass">.identity</div></li><li> <i class="icon lud-icon">&#xe739;</i> <div class="name">image</div><div class="code">&amp;#xe739;</div><div class="fontclass">.image</div></li><li> <i class="icon lud-icon">&#xe73a;</i> <div class="name">inbox</div><div class="code">&amp;#xe73a;</div><div class="fontclass">.inbox</div></li><li> <i class="icon lud-icon">&#xe73b;</i> <div class="name">info</div><div class="code">&amp;#xe73b;</div><div class="fontclass">.info1</div></li><li> <i class="icon lud-icon">&#xe73c;</i> <div class="name">insert_tag_field</div><div class="code">&amp;#xe73c;</div><div class="fontclass">.inserttagfield</div></li><li> <i class="icon lud-icon">&#xe73d;</i> <div class="name">insert_template</div><div class="code">&amp;#xe73d;</div><div class="fontclass">.inserttemplate</div></li><li> <i class="icon lud-icon">&#xe73e;</i> <div class="name">italic</div><div class="code">&amp;#xe73e;</div><div class="fontclass">.italic</div></li><li> <i class="icon lud-icon">&#xe73f;</i> <div class="name">justify_text</div><div class="code">&amp;#xe73f;</div><div class="fontclass">.justifytext</div></li><li> <i class="icon lud-icon">&#xe740;</i> <div class="name">kanban</div><div class="code">&amp;#xe740;</div><div class="fontclass">.kanban</div></li><li> <i class="icon lud-icon">&#xe741;</i> <div class="name">keyboard_dismiss</div><div class="code">&amp;#xe741;</div><div class="fontclass">.keyboarddismiss</div></li><li> <i class="icon lud-icon">&#xe742;</i> <div class="name">knowledge_base</div><div class="code">&amp;#xe742;</div><div class="fontclass">.knowledgebase</div></li><li> <i class="icon lud-icon">&#xe743;</i> <div class="name">layers</div><div class="code">&amp;#xe743;</div><div class="fontclass">.layers</div></li><li> <i class="icon lud-icon">&#xe744;</i> <div class="name">layout</div><div class="code">&amp;#xe744;</div><div class="fontclass">.layout</div></li><li> <i class="icon lud-icon">&#xe745;</i> <div class="name">left_align_text</div><div class="code">&amp;#xe745;</div><div class="fontclass">.leftaligntext</div></li><li> <i class="icon lud-icon">&#xe746;</i> <div class="name">left</div><div class="code">&amp;#xe746;</div><div class="fontclass">.left</div></li><li> <i class="icon lud-icon">&#xe747;</i> <div class="name">like</div><div class="code">&amp;#xe747;</div><div class="fontclass">.like</div></li><li> <i class="icon lud-icon">&#xe748;</i> <div class="name">link</div><div class="code">&amp;#xe748;</div><div class="fontclass">.link1</div></li><li> <i class="icon lud-icon">&#xe749;</i> <div class="name">list</div><div class="code">&amp;#xe749;</div><div class="fontclass">.list</div></li><li> <i class="icon lud-icon">&#xe74a;</i> <div class="name">location</div><div class="code">&amp;#xe74a;</div><div class="fontclass">.location</div></li><li> <i class="icon lud-icon">&#xe74b;</i> <div class="name">lock</div><div class="code">&amp;#xe74b;</div><div class="fontclass">.lock</div></li><li> <i class="icon lud-icon">&#xe74c;</i> <div class="name">log_a_call</div><div class="code">&amp;#xe74c;</div><div class="fontclass">.logacall1</div></li><li> <i class="icon lud-icon">&#xe74d;</i> <div class="name">logout</div><div class="code">&amp;#xe74d;</div><div class="fontclass">.logout</div></li><li> <i class="icon lud-icon">&#xe74e;</i> <div class="name">magicwand</div><div class="code">&amp;#xe74e;</div><div class="fontclass">.magicwand</div></li><li> <i class="icon lud-icon">&#xe74f;</i> <div class="name">matrix</div><div class="code">&amp;#xe74f;</div><div class="fontclass">.matrix</div></li><li> <i class="icon lud-icon">&#xe750;</i> <div class="name">metrics</div><div class="code">&amp;#xe750;</div><div class="fontclass">.metrics1</div></li><li> <i class="icon lud-icon">&#xe752;</i> <div class="name">moneybag</div><div class="code">&amp;#xe752;</div><div class="fontclass">.moneybag</div></li><li> <i class="icon lud-icon">&#xe753;</i> <div class="name">monthlyview</div><div class="code">&amp;#xe753;</div><div class="fontclass">.monthlyview</div></li><li> <i class="icon lud-icon">&#xe754;</i> <div class="name">move</div><div class="code">&amp;#xe754;</div><div class="fontclass">.move</div></li><li> <i class="icon lud-icon">&#xe755;</i> <div class="name">muted</div><div class="code">&amp;#xe755;</div><div class="fontclass">.muted</div></li><li> <i class="icon lud-icon">&#xe756;</i> <div class="name">new_window</div><div class="code">&amp;#xe756;</div><div class="fontclass">.newwindow</div></li><li> <i class="icon lud-icon">&#xe757;</i> <div class="name">new</div><div class="code">&amp;#xe757;</div><div class="fontclass">.new</div></li><li> <i class="icon lud-icon">&#xe758;</i> <div class="name">news</div><div class="code">&amp;#xe758;</div><div class="fontclass">.news1</div></li><li> <i class="icon lud-icon">&#xe759;</i> <div class="name">note</div><div class="code">&amp;#xe759;</div><div class="fontclass">.note1</div></li><li> <i class="icon lud-icon">&#xe75a;</i> <div class="name">notebook</div><div class="code">&amp;#xe75a;</div><div class="fontclass">.notebook</div></li><li> <i class="icon lud-icon">&#xe75b;</i> <div class="name">notification</div><div class="code">&amp;#xe75b;</div><div class="fontclass">.notification</div></li><li> <i class="icon lud-icon">&#xe75c;</i> <div class="name">office365</div><div class="code">&amp;#xe75c;</div><div class="fontclass">.office365</div></li><li> <i class="icon lud-icon">&#xe75d;</i> <div class="name">offline</div><div class="code">&amp;#xe75d;</div><div class="fontclass">.offline</div></li><li> <i class="icon lud-icon">&#xe75e;</i> <div class="name">open_folder</div><div class="code">&amp;#xe75e;</div><div class="fontclass">.openfolder</div></li><li> <i class="icon lud-icon">&#xe75f;</i> <div class="name">open</div><div class="code">&amp;#xe75f;</div><div class="fontclass">.open</div></li><li> <i class="icon lud-icon">&#xe760;</i> <div class="name">opened_folder</div><div class="code">&amp;#xe760;</div><div class="fontclass">.openedfolder</div></li><li> <i class="icon lud-icon">&#xe761;</i> <div class="name">overflow</div><div class="code">&amp;#xe761;</div><div class="fontclass">.overflow</div></li><li> <i class="icon lud-icon">&#xe762;</i> <div class="name">package_org_beta</div><div class="code">&amp;#xe762;</div><div class="fontclass">.packageorgbeta</div></li><li> <i class="icon lud-icon">&#xe763;</i> <div class="name">package_org</div><div class="code">&amp;#xe763;</div><div class="fontclass">.packageorg</div></li><li> <i class="icon lud-icon">&#xe764;</i> <div class="name">package</div><div class="code">&amp;#xe764;</div><div class="fontclass">.package</div></li><li> <i class="icon lud-icon">&#xe765;</i> <div class="name">page</div><div class="code">&amp;#xe765;</div><div class="fontclass">.page</div></li><li> <i class="icon lud-icon">&#xe766;</i> <div class="name">palette</div><div class="code">&amp;#xe766;</div><div class="fontclass">.palette</div></li><li> <i class="icon lud-icon">&#xe767;</i> <div class="name">paste</div><div class="code">&amp;#xe767;</div><div class="fontclass">.paste</div></li><li> <i class="icon lud-icon">&#xe768;</i> <div class="name">people</div><div class="code">&amp;#xe768;</div><div class="fontclass">.people1</div></li><li> <i class="icon lud-icon">&#xe769;</i> <div class="name">phone_landscape</div><div class="code">&amp;#xe769;</div><div class="fontclass">.phonelandscape</div></li><li> <i class="icon lud-icon">&#xe76a;</i> <div class="name">phone_portrait</div><div class="code">&amp;#xe76a;</div><div class="fontclass">.phoneportrait</div></li><li> <i class="icon lud-icon">&#xe76b;</i> <div class="name">photo</div><div class="code">&amp;#xe76b;</div><div class="fontclass">.photo1</div></li><li> <i class="icon lud-icon">&#xe76c;</i> <div class="name">picklist</div><div class="code">&amp;#xe76c;</div><div class="fontclass">.picklist</div></li><li> <i class="icon lud-icon">&#xe76d;</i> <div class="name">power</div><div class="code">&amp;#xe76d;</div><div class="fontclass">.power</div></li><li> <i class="icon lud-icon">&#xe76e;</i> <div class="name">preview</div><div class="code">&amp;#xe76e;</div><div class="fontclass">.preview1</div></li><li> <i class="icon lud-icon">&#xe76f;</i> <div class="name">priority</div><div class="code">&amp;#xe76f;</div><div class="fontclass">.priority1</div></li><li> <i class="icon lud-icon">&#xe770;</i> <div class="name">process</div><div class="code">&amp;#xe770;</div><div class="fontclass">.process1</div></li><li> <i class="icon lud-icon">&#xe771;</i> <div class="name">push</div><div class="code">&amp;#xe771;</div><div class="fontclass">.push</div></li><li> <i class="icon lud-icon">&#xe772;</i> <div class="name">puzzle</div><div class="code">&amp;#xe772;</div><div class="fontclass">.puzzle</div></li><li> <i class="icon lud-icon">&#xe773;</i> <div class="name">question</div><div class="code">&amp;#xe773;</div><div class="fontclass">.question</div></li><li> <i class="icon lud-icon">&#xe774;</i> <div class="name">questions_and_answers</div><div class="code">&amp;#xe774;</div><div class="fontclass">.questionsandanswers</div></li><li> <i class="icon lud-icon">&#xe775;</i> <div class="name">record</div><div class="code">&amp;#xe775;</div><div class="fontclass">.record2</div></li><li> <i class="icon lud-icon">&#xe776;</i> <div class="name">redo</div><div class="code">&amp;#xe776;</div><div class="fontclass">.redo</div></li><li> <i class="icon lud-icon">&#xe777;</i> <div class="name">refresh</div><div class="code">&amp;#xe777;</div><div class="fontclass">.refresh1</div></li><li> <i class="icon lud-icon">&#xe778;</i> <div class="name">relate</div><div class="code">&amp;#xe778;</div><div class="fontclass">.relate</div></li><li> <i class="icon lud-icon">&#xe779;</i> <div class="name">remove_formatting</div><div class="code">&amp;#xe779;</div><div class="fontclass">.removeformatting</div></li><li> <i class="icon lud-icon">&#xe77a;</i> <div class="name">remove_link</div><div class="code">&amp;#xe77a;</div><div class="fontclass">.removelink</div></li><li> <i class="icon lud-icon">&#xe77b;</i> <div class="name">replace</div><div class="code">&amp;#xe77b;</div><div class="fontclass">.replace</div></li><li> <i class="icon lud-icon">&#xe77c;</i> <div class="name">reply</div><div class="code">&amp;#xe77c;</div><div class="fontclass">.reply</div></li><li> <i class="icon lud-icon">&#xe77d;</i> <div class="name">reset_password</div><div class="code">&amp;#xe77d;</div><div class="fontclass">.resetpassword</div></li><li> <i class="icon lud-icon">&#xe77e;</i> <div class="name">retweet</div><div class="code">&amp;#xe77e;</div><div class="fontclass">.retweet</div></li><li> <i class="icon lud-icon">&#xe77f;</i> <div class="name">richtextbulletedlist</div><div class="code">&amp;#xe77f;</div><div class="fontclass">.richtextbulletedlist</div></li><li> <i class="icon lud-icon">&#xe780;</i> <div class="name">richtextindent</div><div class="code">&amp;#xe780;</div><div class="fontclass">.richtextindent</div></li><li> <i class="icon lud-icon">&#xe781;</i> <div class="name">richtextnumberedlist</div><div class="code">&amp;#xe781;</div><div class="fontclass">.richtextnumberedlist</div></li><li> <i class="icon lud-icon">&#xe782;</i> <div class="name">richtextoutdent</div><div class="code">&amp;#xe782;</div><div class="fontclass">.richtextoutdent</div></li><li> <i class="icon lud-icon">&#xe783;</i> <div class="name">right_align_text</div><div class="code">&amp;#xe783;</div><div class="fontclass">.rightaligntext</div></li><li> <i class="icon lud-icon">&#xe784;</i> <div class="name">right</div><div class="code">&amp;#xe784;</div><div class="fontclass">.right</div></li><li> <i class="icon lud-icon">&#xe785;</i> <div class="name">rotate</div><div class="code">&amp;#xe785;</div><div class="fontclass">.rotate</div></li><li> <i class="icon lud-icon">&#xe786;</i> <div class="name">rows</div><div class="code">&amp;#xe786;</div><div class="fontclass">.rows</div></li><li> <i class="icon lud-icon">&#xe787;</i> <div class="name">search</div><div class="code">&amp;#xe787;</div><div class="fontclass">.search</div></li><li> <i class="icon lud-icon">&#xe788;</i> <div class="name">settings</div><div class="code">&amp;#xe788;</div><div class="fontclass">.settings</div></li><li> <i class="icon lud-icon">&#xe789;</i> <div class="name">setup_assistant_guide</div><div class="code">&amp;#xe789;</div><div class="fontclass">.setupassistantguide</div></li><li> <i class="icon lud-icon">&#xe78a;</i> <div class="name">setup</div><div class="code">&amp;#xe78a;</div><div class="fontclass">.setup</div></li><li> <i class="icon lud-icon">&#xe78b;</i> <div class="name">share_post</div><div class="code">&amp;#xe78b;</div><div class="fontclass">.sharepost1</div></li><li> <i class="icon lud-icon">&#xe78c;</i> <div class="name">share</div><div class="code">&amp;#xe78c;</div><div class="fontclass">.share1</div></li><li> <i class="icon lud-icon">&#xe78d;</i> <div class="name">shield</div><div class="code">&amp;#xe78d;</div><div class="fontclass">.shield</div></li><li> <i class="icon lud-icon">&#xe78e;</i> <div class="name">side_list</div><div class="code">&amp;#xe78e;</div><div class="fontclass">.sidelist</div></li><li> <i class="icon lud-icon">&#xe78f;</i> <div class="name">signpost</div><div class="code">&amp;#xe78f;</div><div class="fontclass">.signpost</div></li><li> <i class="icon lud-icon">&#xe790;</i> <div class="name">sms</div><div class="code">&amp;#xe790;</div><div class="fontclass">.sms</div></li><li> <i class="icon lud-icon">&#xe791;</i> <div class="name">snippet</div><div class="code">&amp;#xe791;</div><div class="fontclass">.snippet</div></li><li> <i class="icon lud-icon">&#xe792;</i> <div class="name">socialshare</div><div class="code">&amp;#xe792;</div><div class="fontclass">.socialshare</div></li><li> <i class="icon lud-icon">&#xe793;</i> <div class="name">sort</div><div class="code">&amp;#xe793;</div><div class="fontclass">.sort1</div></li><li> <i class="icon lud-icon">&#xe794;</i> <div class="name">spinner</div><div class="code">&amp;#xe794;</div><div class="fontclass">.spinner</div></li><li> <i class="icon lud-icon">&#xe795;</i> <div class="name">standard_objects</div><div class="code">&amp;#xe795;</div><div class="fontclass">.standardobjects</div></li><li> <i class="icon lud-icon">&#xe796;</i> <div class="name">stop</div><div class="code">&amp;#xe796;</div><div class="fontclass">.stop</div></li><li> <i class="icon lud-icon">&#xe797;</i> <div class="name">strikethrough</div><div class="code">&amp;#xe797;</div><div class="fontclass">.strikethrough</div></li><li> <i class="icon lud-icon">&#xe798;</i> <div class="name">success</div><div class="code">&amp;#xe798;</div><div class="fontclass">.success</div></li><li> <i class="icon lud-icon">&#xe799;</i> <div class="name">summary</div><div class="code">&amp;#xe799;</div><div class="fontclass">.summary</div></li><li> <i class="icon lud-icon">&#xe79a;</i> <div class="name">summarydetail</div><div class="code">&amp;#xe79a;</div><div class="fontclass">.summarydetail</div></li><li> <i class="icon lud-icon">&#xe79b;</i> <div class="name">switch</div><div class="code">&amp;#xe79b;</div><div class="fontclass">.switch</div></li><li> <i class="icon lud-icon">&#xe79c;</i> <div class="name">table</div><div class="code">&amp;#xe79c;</div><div class="fontclass">.table</div></li><li> <i class="icon lud-icon">&#xe79d;</i> <div class="name">tablet_landscape</div><div class="code">&amp;#xe79d;</div><div class="fontclass">.tabletlandscape</div></li><li> <i class="icon lud-icon">&#xe79e;</i> <div class="name">tablet_portrait</div><div class="code">&amp;#xe79e;</div><div class="fontclass">.tabletportrait</div></li><li> <i class="icon lud-icon">&#xe79f;</i> <div class="name">tabset</div><div class="code">&amp;#xe79f;</div><div class="fontclass">.tabset</div></li><li> <i class="icon lud-icon">&#xe7a0;</i> <div class="name">task</div><div class="code">&amp;#xe7a0;</div><div class="fontclass">.task1</div></li><li> <i class="icon lud-icon">&#xe7a1;</i> <div class="name">text_background_color</div><div class="code">&amp;#xe7a1;</div><div class="fontclass">.textbackgroundcolor</div></li><li> <i class="icon lud-icon">&#xe7a2;</i> <div class="name">text_color</div><div class="code">&amp;#xe7a2;</div><div class="fontclass">.textcolor</div></li><li> <i class="icon lud-icon">&#xe7a3;</i> <div class="name">threedots</div><div class="code">&amp;#xe7a3;</div><div class="fontclass">.threedots</div></li><li> <i class="icon lud-icon">&#xe7a4;</i> <div class="name">tile_card_list</div><div class="code">&amp;#xe7a4;</div><div class="fontclass">.tilecardlist</div></li><li> <i class="icon lud-icon">&#xe7a5;</i> <div class="name">topic</div><div class="code">&amp;#xe7a5;</div><div class="fontclass">.topic1</div></li><li> <i class="icon lud-icon">&#xe7a6;</i> <div class="name">touch_action</div><div class="code">&amp;#xe7a6;</div><div class="fontclass">.touchaction</div></li><li> <i class="icon lud-icon">&#xe7a7;</i> <div class="name">trail</div><div class="code">&amp;#xe7a7;</div><div class="fontclass">.trail</div></li><li> <i class="icon lud-icon">&#xe7a8;</i> <div class="name">undelete</div><div class="code">&amp;#xe7a8;</div><div class="fontclass">.undelete</div></li><li> <i class="icon lud-icon">&#xe7a9;</i> <div class="name">undeprecate</div><div class="code">&amp;#xe7a9;</div><div class="fontclass">.undeprecate</div></li><li> <i class="icon lud-icon">&#xe7aa;</i> <div class="name">underline</div><div class="code">&amp;#xe7aa;</div><div class="fontclass">.underline</div></li><li> <i class="icon lud-icon">&#xe7ab;</i> <div class="name">undo</div><div class="code">&amp;#xe7ab;</div><div class="fontclass">.undo</div></li><li> <i class="icon lud-icon">&#xe7ac;</i> <div class="name">unlock</div><div class="code">&amp;#xe7ac;</div><div class="fontclass">.unlock</div></li><li> <i class="icon lud-icon">&#xe7ad;</i> <div class="name">unmuted</div><div class="code">&amp;#xe7ad;</div><div class="fontclass">.unmuted</div></li><li> <i class="icon lud-icon">&#xe7ae;</i> <div class="name">up</div><div class="code">&amp;#xe7ae;</div><div class="fontclass">.up</div></li><li> <i class="icon lud-icon">&#xe7af;</i> <div class="name">upload</div><div class="code">&amp;#xe7af;</div><div class="fontclass">.upload1</div></li><li> <i class="icon lud-icon">&#xe7b0;</i> <div class="name">user_role</div><div class="code">&amp;#xe7b0;</div><div class="fontclass">.userrole</div></li><li> <i class="icon lud-icon">&#xe7b1;</i> <div class="name">user</div><div class="code">&amp;#xe7b1;</div><div class="fontclass">.user2</div></li><li> <i class="icon lud-icon">&#xe7b2;</i> <div class="name">volume_high</div><div class="code">&amp;#xe7b2;</div><div class="fontclass">.volumehigh</div></li><li> <i class="icon lud-icon">&#xe7b3;</i> <div class="name">volume_low</div><div class="code">&amp;#xe7b3;</div><div class="fontclass">.volumelow</div></li><li> <i class="icon lud-icon">&#xe7b4;</i> <div class="name">volume_off</div><div class="code">&amp;#xe7b4;</div><div class="fontclass">.volumeoff</div></li><li> <i class="icon lud-icon">&#xe7b5;</i> <div class="name">warning</div><div class="code">&amp;#xe7b5;</div><div class="fontclass">.warning</div></li><li> <i class="icon lud-icon">&#xe7b6;</i> <div class="name">weeklyview</div><div class="code">&amp;#xe7b6;</div><div class="fontclass">.weeklyview</div></li><li> <i class="icon lud-icon">&#xe7b7;</i> <div class="name">world</div><div class="code">&amp;#xe7b7;</div><div class="fontclass">.world</div></li><li> <i class="icon lud-icon">&#xe7b8;</i> <div class="name">zoomin</div><div class="code">&amp;#xe7b8;</div><div class="fontclass">.zoomin</div></li><li> <i class="icon lud-icon">&#xe7b9;</i> <div class="name">zoomout</div><div class="code">&amp;#xe7b9;</div><div class="fontclass">.zoomout</div></li></ul>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var ludIcon = function (_ludComponent) {
+	  _inherits(ludIcon, _ludComponent);
+
+	  function ludIcon() {
+	    _classCallCheck(this, ludIcon);
+
+	    return _possibleConstructorReturn(this, (ludIcon.__proto__ || Object.getPrototypeOf(ludIcon)).apply(this, arguments));
+	  }
+
+	  _createClass(ludIcon, null, [{
+	    key: 'render',
+	    value: function render(el) {
+	      var _classNames;
+
+	      var iconCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, 'lud-icon', true), _defineProperty(_classNames, 'lud-icon--' + el.type, true), _classNames));
+	      return skate.h('i', { 'class': iconCls, 'aria-hidden': 'true' });
+	    }
+	  }]);
+
+	  return ludIcon;
+	}(_lud_component2.default);
+
+	ludIcon.props = {
+	  type: skate.prop.string({ attribute: true })
+	};
+
+	skate.define('lud-icon', ludIcon);
+
+/***/ },
+/* 39 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(41);
+
+/***/ },
+/* 41 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 42 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(43);
+
+/***/ },
+/* 43 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 44 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	__webpack_require__(45);
+
+	var _lud_component = __webpack_require__(26);
+
+	var _lud_component2 = _interopRequireDefault(_lud_component);
+
+	var _skatejs = __webpack_require__(27);
+
+	var skate = _interopRequireWildcard(_skatejs);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*doc
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                title: Phone Mockup
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                name: phone-mockup
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                category: 组件
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                显示移动端预览效果。
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 代码演示
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```html_example
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-phone-mockup>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   <img src="http://a3.mzstatic.com/us/r30/Purple62/v4/25/39/23/2539239c-4bdd-b750-84dd-82f6fef81c11/screen696x696.jpeg"/>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </lud-phone-mockup>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var ludPhoneMockup = function (_ludComponent) {
+	  _inherits(ludPhoneMockup, _ludComponent);
+
+	  function ludPhoneMockup() {
+	    _classCallCheck(this, ludPhoneMockup);
+
+	    return _possibleConstructorReturn(this, (ludPhoneMockup.__proto__ || Object.getPrototypeOf(ludPhoneMockup)).apply(this, arguments));
+	  }
+
+	  _createClass(ludPhoneMockup, null, [{
+	    key: 'created',
+	    value: function created(el) {
+	      el.child = el.innerHTML;
+	      el.innerHTML = null;
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render(el) {
+	      var child = skate.h('div', { ref: function ref(x) {
+	          return x.innerHTML = el.child;
+	        }, className: 'lud-phone-mockup__body', skip: true });
+
+	      return skate.h(
+	        'div',
+	        { className: 'lud-phone-mockup', role: 'alert' },
+	        child
+	      );
+	    }
+	  }]);
+
+	  return ludPhoneMockup;
+	}(_lud_component2.default);
+
+	ludPhoneMockup.props = {
+	  child: skate.prop.string()
+	};
+
+
+	skate.define('lud-phone-mockup', ludPhoneMockup);
+
+/***/ },
+/* 45 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 46 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	__webpack_require__(47);
+
+	var _lud_component = __webpack_require__(26);
+
+	var _lud_component2 = _interopRequireDefault(_lud_component);
+
+	var _skatejs = __webpack_require__(27);
 
 	var skate = _interopRequireWildcard(_skatejs);
 
@@ -23839,30 +24060,30 @@
 	skate.define('lud-spinner', ludSpinner);
 
 /***/ },
-/* 41 */
+/* 47 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 42 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	__webpack_require__(43);
+	__webpack_require__(49);
 
-	var _lud_component = __webpack_require__(19);
+	var _lud_component = __webpack_require__(26);
 
 	var _lud_component2 = _interopRequireDefault(_lud_component);
 
-	var _skatejs = __webpack_require__(20);
+	var _skatejs = __webpack_require__(27);
 
 	var skate = _interopRequireWildcard(_skatejs);
 
-	var _classnames = __webpack_require__(22);
+	var _classnames = __webpack_require__(31);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -23960,135 +24181,7 @@
 	skate.define('lud-tag', ludTag);
 
 /***/ },
-/* 43 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 44 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(45);
-
-/***/ },
-/* 45 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 46 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function($) {'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	__webpack_require__(47);
-
-	var _lud_component = __webpack_require__(19);
-
-	var _lud_component2 = _interopRequireDefault(_lud_component);
-
-	var _skatejs = __webpack_require__(20);
-
-	var skate = _interopRequireWildcard(_skatejs);
-
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*doc
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                title: Toggle 开关
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                name: toggle
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                category: 组件
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                开关选择器。
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 何时使用
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 需要表示开关状态/两种状态之间的切换时。
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 代码演示
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```html_example
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="lud-form-element">
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <label class="lud-form-element__label" for="text-input-01">Guest Mode</label>
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="lud-form-element__control">
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-toggle name="guest-mode"></lud-toggle>
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="lud-form-element">
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <label class="lud-form-element__label" for="text-input-01">Admin Mode</label>
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="lud-form-element__control">
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-toggle name="admin-mode" value="root" disabled></lud-toggle>
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-
-
-	var ludToggle = function (_ludComponent) {
-	  _inherits(ludToggle, _ludComponent);
-
-	  function ludToggle() {
-	    _classCallCheck(this, ludToggle);
-
-	    return _possibleConstructorReturn(this, (ludToggle.__proto__ || Object.getPrototypeOf(ludToggle)).apply(this, arguments));
-	  }
-
-	  _createClass(ludToggle, null, [{
-	    key: 'created',
-	    value: function created(el) {
-	      el.input_name = el.name;
-	      var $el = $(el);
-	      $el.attr('name', el.input_name + '-wrap');
-	      $el.on('toggle', function () {
-	        if (el.disabled) return false;
-	        el.checked = !el.checked;
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render(el) {
-	      //noinspection CheckTagEmptyBody
-	      return skate.h(
-	        'div',
-	        { className: 'lud-toggle__wrap', onClick: function onClick() {
-	            return skate.emit(el, 'toggle');
-	          } },
-	        skate.h('input', { name: el.input_name, className: 'lud-toggle__input', checked: el.checked, disabled: el.disabled, value: el.value, type: 'checkbox', tabindex: '-1' }),
-	        skate.h('span', { className: 'lud-toggle__switch' })
-	      );
-	    }
-	  }]);
-
-	  return ludToggle;
-	}(_lud_component2.default);
-
-	ludToggle.props = {
-	  value: skate.prop.string({ attribute: true }),
-	  checked: skate.prop.boolean({ attribute: true }),
-	  disabled: skate.prop.boolean({ attribute: true }),
-	  name: skate.prop.string({ attribute: true }),
-	  input_name: skate.prop.string()
-	};
-
-	skate.define('lud-toggle', ludToggle);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
-
-/***/ },
-/* 47 */
+/* 49 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
