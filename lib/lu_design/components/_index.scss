@@ -13,8 +13,6 @@
   'menus/flavors/action-overflow/index',
 
 
-  // Global Header
-  'global-header/flavors/base/index',
 
   // Publishers
   'publishers/index',
@@ -40,15 +38,8 @@
   'tabs/flavors/scrolling/index',
 
 
-  // Notifications -- Toasts & Alerts
+  // Notifications -- Toasts
   'notifications/index',
   'notifications/flavors/prompt/index',
-  'notifications/flavors/modal-toast/index',
-
-
-  // Tables
-  'data-tables/index',
-  'data-tables/flavors/responsive/index',
-  'data-tables/flavors/inline-edit/index',
-  'data-tables/flavors/fixed-header/index';
+  'notifications/flavors/modal-toast/index';
 
