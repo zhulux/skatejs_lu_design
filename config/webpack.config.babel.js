@@ -33,14 +33,12 @@ export default {
         loaders: [
             {test: require.resolve("jquery"), loader: "expose?jQuery" },
             {test: require.resolve("jquery"), loader: "expose?$" },
-            {test: require.resolve("tether"), loader: "expose?Tether" },
             {test: require.resolve("lodash"), loader: "expose?_" },
             {test: require.resolve("g2"), loader: "expose?G2" },
-            {test: require.resolve("vue"), loader: "expose?Vue" },
             {test: require.resolve("turbolinks"), loader: "expose?Turbolinks" },
             {
                 test: /\.scss$/,
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!sass-loader')
+                loader: ExtractTextPlugin.extract('style-loader', 'css-loader?camelCase!postcss-loader!sass-loader')
             },
             {
                 test: /\.js$/,

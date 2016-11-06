@@ -50,15 +50,17 @@
 
 	__webpack_require__(2);
 
-	__webpack_require__(5);
+	__webpack_require__(4);
 
-	__webpack_require__(6);
+	__webpack_require__(8);
 
-	var _turbolinks = __webpack_require__(13);
+	var _turbolinks = __webpack_require__(9);
 
 	var _turbolinks2 = _interopRequireDefault(_turbolinks);
 
-	__webpack_require__(16);
+	__webpack_require__(11);
+
+	__webpack_require__(78);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68,12 +70,14 @@
 	_turbolinks2.default.start(); // web component polyfills
 
 	/*!
-	* Copyright (c) 2016, ZhuluX, inc. All rights reserved.
-	*
-	* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-	*
-	* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-	* */
+	 * LuDesign | MIT License | https://github.com/zhulux/lu_design/
+	 *
+	 * Copyright (c) 2016, ZhuluX, inc. All rights reserved.
+	 *
+	 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+	 *
+	 * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+	 * */
 
 	//core
 
@@ -87,23 +91,602 @@
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["jQuery"] = __webpack_require__(3);
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! jQuery v3.1.1 | (c) jQuery Foundation | jquery.org/license */
+	!function(a,b){"use strict";"object"==typeof module&&"object"==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error("jQuery requires a window with a document");return b(a)}:b(a)}("undefined"!=typeof window?window:this,function(a,b){"use strict";var c=[],d=a.document,e=Object.getPrototypeOf,f=c.slice,g=c.concat,h=c.push,i=c.indexOf,j={},k=j.toString,l=j.hasOwnProperty,m=l.toString,n=m.call(Object),o={};function p(a,b){b=b||d;var c=b.createElement("script");c.text=a,b.head.appendChild(c).parentNode.removeChild(c)}var q="3.1.1",r=function(a,b){return new r.fn.init(a,b)},s=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,t=/^-ms-/,u=/-([a-z])/g,v=function(a,b){return b.toUpperCase()};r.fn=r.prototype={jquery:q,constructor:r,length:0,toArray:function(){return f.call(this)},get:function(a){return null==a?f.call(this):a<0?this[a+this.length]:this[a]},pushStack:function(a){var b=r.merge(this.constructor(),a);return b.prevObject=this,b},each:function(a){return r.each(this,a)},map:function(a){return this.pushStack(r.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return this.pushStack(f.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(a){var b=this.length,c=+a+(a<0?b:0);return this.pushStack(c>=0&&c<b?[this[c]]:[])},end:function(){return this.prevObject||this.constructor()},push:h,sort:c.sort,splice:c.splice},r.extend=r.fn.extend=function(){var a,b,c,d,e,f,g=arguments[0]||{},h=1,i=arguments.length,j=!1;for("boolean"==typeof g&&(j=g,g=arguments[h]||{},h++),"object"==typeof g||r.isFunction(g)||(g={}),h===i&&(g=this,h--);h<i;h++)if(null!=(a=arguments[h]))for(b in a)c=g[b],d=a[b],g!==d&&(j&&d&&(r.isPlainObject(d)||(e=r.isArray(d)))?(e?(e=!1,f=c&&r.isArray(c)?c:[]):f=c&&r.isPlainObject(c)?c:{},g[b]=r.extend(j,f,d)):void 0!==d&&(g[b]=d));return g},r.extend({expando:"jQuery"+(q+Math.random()).replace(/\D/g,""),isReady:!0,error:function(a){throw new Error(a)},noop:function(){},isFunction:function(a){return"function"===r.type(a)},isArray:Array.isArray,isWindow:function(a){return null!=a&&a===a.window},isNumeric:function(a){var b=r.type(a);return("number"===b||"string"===b)&&!isNaN(a-parseFloat(a))},isPlainObject:function(a){var b,c;return!(!a||"[object Object]"!==k.call(a))&&(!(b=e(a))||(c=l.call(b,"constructor")&&b.constructor,"function"==typeof c&&m.call(c)===n))},isEmptyObject:function(a){var b;for(b in a)return!1;return!0},type:function(a){return null==a?a+"":"object"==typeof a||"function"==typeof a?j[k.call(a)]||"object":typeof a},globalEval:function(a){p(a)},camelCase:function(a){return a.replace(t,"ms-").replace(u,v)},nodeName:function(a,b){return a.nodeName&&a.nodeName.toLowerCase()===b.toLowerCase()},each:function(a,b){var c,d=0;if(w(a)){for(c=a.length;d<c;d++)if(b.call(a[d],d,a[d])===!1)break}else for(d in a)if(b.call(a[d],d,a[d])===!1)break;return a},trim:function(a){return null==a?"":(a+"").replace(s,"")},makeArray:function(a,b){var c=b||[];return null!=a&&(w(Object(a))?r.merge(c,"string"==typeof a?[a]:a):h.call(c,a)),c},inArray:function(a,b,c){return null==b?-1:i.call(b,a,c)},merge:function(a,b){for(var c=+b.length,d=0,e=a.length;d<c;d++)a[e++]=b[d];return a.length=e,a},grep:function(a,b,c){for(var d,e=[],f=0,g=a.length,h=!c;f<g;f++)d=!b(a[f],f),d!==h&&e.push(a[f]);return e},map:function(a,b,c){var d,e,f=0,h=[];if(w(a))for(d=a.length;f<d;f++)e=b(a[f],f,c),null!=e&&h.push(e);else for(f in a)e=b(a[f],f,c),null!=e&&h.push(e);return g.apply([],h)},guid:1,proxy:function(a,b){var c,d,e;if("string"==typeof b&&(c=a[b],b=a,a=c),r.isFunction(a))return d=f.call(arguments,2),e=function(){return a.apply(b||this,d.concat(f.call(arguments)))},e.guid=a.guid=a.guid||r.guid++,e},now:Date.now,support:o}),"function"==typeof Symbol&&(r.fn[Symbol.iterator]=c[Symbol.iterator]),r.each("Boolean Number String Function Array Date RegExp Object Error Symbol".split(" "),function(a,b){j["[object "+b+"]"]=b.toLowerCase()});function w(a){var b=!!a&&"length"in a&&a.length,c=r.type(a);return"function"!==c&&!r.isWindow(a)&&("array"===c||0===b||"number"==typeof b&&b>0&&b-1 in a)}var x=function(a){var b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u="sizzle"+1*new Date,v=a.document,w=0,x=0,y=ha(),z=ha(),A=ha(),B=function(a,b){return a===b&&(l=!0),0},C={}.hasOwnProperty,D=[],E=D.pop,F=D.push,G=D.push,H=D.slice,I=function(a,b){for(var c=0,d=a.length;c<d;c++)if(a[c]===b)return c;return-1},J="checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",K="[\\x20\\t\\r\\n\\f]",L="(?:\\\\.|[\\w-]|[^\0-\\xa0])+",M="\\["+K+"*("+L+")(?:"+K+"*([*^$|!~]?=)"+K+"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|("+L+"))|)"+K+"*\\]",N=":("+L+")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|"+M+")*)|.*)\\)|)",O=new RegExp(K+"+","g"),P=new RegExp("^"+K+"+|((?:^|[^\\\\])(?:\\\\.)*)"+K+"+$","g"),Q=new RegExp("^"+K+"*,"+K+"*"),R=new RegExp("^"+K+"*([>+~]|"+K+")"+K+"*"),S=new RegExp("="+K+"*([^\\]'\"]*?)"+K+"*\\]","g"),T=new RegExp(N),U=new RegExp("^"+L+"$"),V={ID:new RegExp("^#("+L+")"),CLASS:new RegExp("^\\.("+L+")"),TAG:new RegExp("^("+L+"|[*])"),ATTR:new RegExp("^"+M),PSEUDO:new RegExp("^"+N),CHILD:new RegExp("^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\("+K+"*(even|odd|(([+-]|)(\\d*)n|)"+K+"*(?:([+-]|)"+K+"*(\\d+)|))"+K+"*\\)|)","i"),bool:new RegExp("^(?:"+J+")$","i"),needsContext:new RegExp("^"+K+"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\("+K+"*((?:-\\d)?\\d*)"+K+"*\\)|)(?=[^-]|$)","i")},W=/^(?:input|select|textarea|button)$/i,X=/^h\d$/i,Y=/^[^{]+\{\s*\[native \w/,Z=/^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,$=/[+~]/,_=new RegExp("\\\\([\\da-f]{1,6}"+K+"?|("+K+")|.)","ig"),aa=function(a,b,c){var d="0x"+b-65536;return d!==d||c?b:d<0?String.fromCharCode(d+65536):String.fromCharCode(d>>10|55296,1023&d|56320)},ba=/([\0-\x1f\x7f]|^-?\d)|^-$|[^\0-\x1f\x7f-\uFFFF\w-]/g,ca=function(a,b){return b?"\0"===a?"\ufffd":a.slice(0,-1)+"\\"+a.charCodeAt(a.length-1).toString(16)+" ":"\\"+a},da=function(){m()},ea=ta(function(a){return a.disabled===!0&&("form"in a||"label"in a)},{dir:"parentNode",next:"legend"});try{G.apply(D=H.call(v.childNodes),v.childNodes),D[v.childNodes.length].nodeType}catch(fa){G={apply:D.length?function(a,b){F.apply(a,H.call(b))}:function(a,b){var c=a.length,d=0;while(a[c++]=b[d++]);a.length=c-1}}}function ga(a,b,d,e){var f,h,j,k,l,o,r,s=b&&b.ownerDocument,w=b?b.nodeType:9;if(d=d||[],"string"!=typeof a||!a||1!==w&&9!==w&&11!==w)return d;if(!e&&((b?b.ownerDocument||b:v)!==n&&m(b),b=b||n,p)){if(11!==w&&(l=Z.exec(a)))if(f=l[1]){if(9===w){if(!(j=b.getElementById(f)))return d;if(j.id===f)return d.push(j),d}else if(s&&(j=s.getElementById(f))&&t(b,j)&&j.id===f)return d.push(j),d}else{if(l[2])return G.apply(d,b.getElementsByTagName(a)),d;if((f=l[3])&&c.getElementsByClassName&&b.getElementsByClassName)return G.apply(d,b.getElementsByClassName(f)),d}if(c.qsa&&!A[a+" "]&&(!q||!q.test(a))){if(1!==w)s=b,r=a;else if("object"!==b.nodeName.toLowerCase()){(k=b.getAttribute("id"))?k=k.replace(ba,ca):b.setAttribute("id",k=u),o=g(a),h=o.length;while(h--)o[h]="#"+k+" "+sa(o[h]);r=o.join(","),s=$.test(a)&&qa(b.parentNode)||b}if(r)try{return G.apply(d,s.querySelectorAll(r)),d}catch(x){}finally{k===u&&b.removeAttribute("id")}}}return i(a.replace(P,"$1"),b,d,e)}function ha(){var a=[];function b(c,e){return a.push(c+" ")>d.cacheLength&&delete b[a.shift()],b[c+" "]=e}return b}function ia(a){return a[u]=!0,a}function ja(a){var b=n.createElement("fieldset");try{return!!a(b)}catch(c){return!1}finally{b.parentNode&&b.parentNode.removeChild(b),b=null}}function ka(a,b){var c=a.split("|"),e=c.length;while(e--)d.attrHandle[c[e]]=b}function la(a,b){var c=b&&a,d=c&&1===a.nodeType&&1===b.nodeType&&a.sourceIndex-b.sourceIndex;if(d)return d;if(c)while(c=c.nextSibling)if(c===b)return-1;return a?1:-1}function ma(a){return function(b){var c=b.nodeName.toLowerCase();return"input"===c&&b.type===a}}function na(a){return function(b){var c=b.nodeName.toLowerCase();return("input"===c||"button"===c)&&b.type===a}}function oa(a){return function(b){return"form"in b?b.parentNode&&b.disabled===!1?"label"in b?"label"in b.parentNode?b.parentNode.disabled===a:b.disabled===a:b.isDisabled===a||b.isDisabled!==!a&&ea(b)===a:b.disabled===a:"label"in b&&b.disabled===a}}function pa(a){return ia(function(b){return b=+b,ia(function(c,d){var e,f=a([],c.length,b),g=f.length;while(g--)c[e=f[g]]&&(c[e]=!(d[e]=c[e]))})})}function qa(a){return a&&"undefined"!=typeof a.getElementsByTagName&&a}c=ga.support={},f=ga.isXML=function(a){var b=a&&(a.ownerDocument||a).documentElement;return!!b&&"HTML"!==b.nodeName},m=ga.setDocument=function(a){var b,e,g=a?a.ownerDocument||a:v;return g!==n&&9===g.nodeType&&g.documentElement?(n=g,o=n.documentElement,p=!f(n),v!==n&&(e=n.defaultView)&&e.top!==e&&(e.addEventListener?e.addEventListener("unload",da,!1):e.attachEvent&&e.attachEvent("onunload",da)),c.attributes=ja(function(a){return a.className="i",!a.getAttribute("className")}),c.getElementsByTagName=ja(function(a){return a.appendChild(n.createComment("")),!a.getElementsByTagName("*").length}),c.getElementsByClassName=Y.test(n.getElementsByClassName),c.getById=ja(function(a){return o.appendChild(a).id=u,!n.getElementsByName||!n.getElementsByName(u).length}),c.getById?(d.filter.ID=function(a){var b=a.replace(_,aa);return function(a){return a.getAttribute("id")===b}},d.find.ID=function(a,b){if("undefined"!=typeof b.getElementById&&p){var c=b.getElementById(a);return c?[c]:[]}}):(d.filter.ID=function(a){var b=a.replace(_,aa);return function(a){var c="undefined"!=typeof a.getAttributeNode&&a.getAttributeNode("id");return c&&c.value===b}},d.find.ID=function(a,b){if("undefined"!=typeof b.getElementById&&p){var c,d,e,f=b.getElementById(a);if(f){if(c=f.getAttributeNode("id"),c&&c.value===a)return[f];e=b.getElementsByName(a),d=0;while(f=e[d++])if(c=f.getAttributeNode("id"),c&&c.value===a)return[f]}return[]}}),d.find.TAG=c.getElementsByTagName?function(a,b){return"undefined"!=typeof b.getElementsByTagName?b.getElementsByTagName(a):c.qsa?b.querySelectorAll(a):void 0}:function(a,b){var c,d=[],e=0,f=b.getElementsByTagName(a);if("*"===a){while(c=f[e++])1===c.nodeType&&d.push(c);return d}return f},d.find.CLASS=c.getElementsByClassName&&function(a,b){if("undefined"!=typeof b.getElementsByClassName&&p)return b.getElementsByClassName(a)},r=[],q=[],(c.qsa=Y.test(n.querySelectorAll))&&(ja(function(a){o.appendChild(a).innerHTML="<a id='"+u+"'></a><select id='"+u+"-\r\\' msallowcapture=''><option selected=''></option></select>",a.querySelectorAll("[msallowcapture^='']").length&&q.push("[*^$]="+K+"*(?:''|\"\")"),a.querySelectorAll("[selected]").length||q.push("\\["+K+"*(?:value|"+J+")"),a.querySelectorAll("[id~="+u+"-]").length||q.push("~="),a.querySelectorAll(":checked").length||q.push(":checked"),a.querySelectorAll("a#"+u+"+*").length||q.push(".#.+[+~]")}),ja(function(a){a.innerHTML="<a href='' disabled='disabled'></a><select disabled='disabled'><option/></select>";var b=n.createElement("input");b.setAttribute("type","hidden"),a.appendChild(b).setAttribute("name","D"),a.querySelectorAll("[name=d]").length&&q.push("name"+K+"*[*^$|!~]?="),2!==a.querySelectorAll(":enabled").length&&q.push(":enabled",":disabled"),o.appendChild(a).disabled=!0,2!==a.querySelectorAll(":disabled").length&&q.push(":enabled",":disabled"),a.querySelectorAll("*,:x"),q.push(",.*:")})),(c.matchesSelector=Y.test(s=o.matches||o.webkitMatchesSelector||o.mozMatchesSelector||o.oMatchesSelector||o.msMatchesSelector))&&ja(function(a){c.disconnectedMatch=s.call(a,"*"),s.call(a,"[s!='']:x"),r.push("!=",N)}),q=q.length&&new RegExp(q.join("|")),r=r.length&&new RegExp(r.join("|")),b=Y.test(o.compareDocumentPosition),t=b||Y.test(o.contains)?function(a,b){var c=9===a.nodeType?a.documentElement:a,d=b&&b.parentNode;return a===d||!(!d||1!==d.nodeType||!(c.contains?c.contains(d):a.compareDocumentPosition&&16&a.compareDocumentPosition(d)))}:function(a,b){if(b)while(b=b.parentNode)if(b===a)return!0;return!1},B=b?function(a,b){if(a===b)return l=!0,0;var d=!a.compareDocumentPosition-!b.compareDocumentPosition;return d?d:(d=(a.ownerDocument||a)===(b.ownerDocument||b)?a.compareDocumentPosition(b):1,1&d||!c.sortDetached&&b.compareDocumentPosition(a)===d?a===n||a.ownerDocument===v&&t(v,a)?-1:b===n||b.ownerDocument===v&&t(v,b)?1:k?I(k,a)-I(k,b):0:4&d?-1:1)}:function(a,b){if(a===b)return l=!0,0;var c,d=0,e=a.parentNode,f=b.parentNode,g=[a],h=[b];if(!e||!f)return a===n?-1:b===n?1:e?-1:f?1:k?I(k,a)-I(k,b):0;if(e===f)return la(a,b);c=a;while(c=c.parentNode)g.unshift(c);c=b;while(c=c.parentNode)h.unshift(c);while(g[d]===h[d])d++;return d?la(g[d],h[d]):g[d]===v?-1:h[d]===v?1:0},n):n},ga.matches=function(a,b){return ga(a,null,null,b)},ga.matchesSelector=function(a,b){if((a.ownerDocument||a)!==n&&m(a),b=b.replace(S,"='$1']"),c.matchesSelector&&p&&!A[b+" "]&&(!r||!r.test(b))&&(!q||!q.test(b)))try{var d=s.call(a,b);if(d||c.disconnectedMatch||a.document&&11!==a.document.nodeType)return d}catch(e){}return ga(b,n,null,[a]).length>0},ga.contains=function(a,b){return(a.ownerDocument||a)!==n&&m(a),t(a,b)},ga.attr=function(a,b){(a.ownerDocument||a)!==n&&m(a);var e=d.attrHandle[b.toLowerCase()],f=e&&C.call(d.attrHandle,b.toLowerCase())?e(a,b,!p):void 0;return void 0!==f?f:c.attributes||!p?a.getAttribute(b):(f=a.getAttributeNode(b))&&f.specified?f.value:null},ga.escape=function(a){return(a+"").replace(ba,ca)},ga.error=function(a){throw new Error("Syntax error, unrecognized expression: "+a)},ga.uniqueSort=function(a){var b,d=[],e=0,f=0;if(l=!c.detectDuplicates,k=!c.sortStable&&a.slice(0),a.sort(B),l){while(b=a[f++])b===a[f]&&(e=d.push(f));while(e--)a.splice(d[e],1)}return k=null,a},e=ga.getText=function(a){var b,c="",d=0,f=a.nodeType;if(f){if(1===f||9===f||11===f){if("string"==typeof a.textContent)return a.textContent;for(a=a.firstChild;a;a=a.nextSibling)c+=e(a)}else if(3===f||4===f)return a.nodeValue}else while(b=a[d++])c+=e(b);return c},d=ga.selectors={cacheLength:50,createPseudo:ia,match:V,attrHandle:{},find:{},relative:{">":{dir:"parentNode",first:!0}," ":{dir:"parentNode"},"+":{dir:"previousSibling",first:!0},"~":{dir:"previousSibling"}},preFilter:{ATTR:function(a){return a[1]=a[1].replace(_,aa),a[3]=(a[3]||a[4]||a[5]||"").replace(_,aa),"~="===a[2]&&(a[3]=" "+a[3]+" "),a.slice(0,4)},CHILD:function(a){return a[1]=a[1].toLowerCase(),"nth"===a[1].slice(0,3)?(a[3]||ga.error(a[0]),a[4]=+(a[4]?a[5]+(a[6]||1):2*("even"===a[3]||"odd"===a[3])),a[5]=+(a[7]+a[8]||"odd"===a[3])):a[3]&&ga.error(a[0]),a},PSEUDO:function(a){var b,c=!a[6]&&a[2];return V.CHILD.test(a[0])?null:(a[3]?a[2]=a[4]||a[5]||"":c&&T.test(c)&&(b=g(c,!0))&&(b=c.indexOf(")",c.length-b)-c.length)&&(a[0]=a[0].slice(0,b),a[2]=c.slice(0,b)),a.slice(0,3))}},filter:{TAG:function(a){var b=a.replace(_,aa).toLowerCase();return"*"===a?function(){return!0}:function(a){return a.nodeName&&a.nodeName.toLowerCase()===b}},CLASS:function(a){var b=y[a+" "];return b||(b=new RegExp("(^|"+K+")"+a+"("+K+"|$)"))&&y(a,function(a){return b.test("string"==typeof a.className&&a.className||"undefined"!=typeof a.getAttribute&&a.getAttribute("class")||"")})},ATTR:function(a,b,c){return function(d){var e=ga.attr(d,a);return null==e?"!="===b:!b||(e+="","="===b?e===c:"!="===b?e!==c:"^="===b?c&&0===e.indexOf(c):"*="===b?c&&e.indexOf(c)>-1:"$="===b?c&&e.slice(-c.length)===c:"~="===b?(" "+e.replace(O," ")+" ").indexOf(c)>-1:"|="===b&&(e===c||e.slice(0,c.length+1)===c+"-"))}},CHILD:function(a,b,c,d,e){var f="nth"!==a.slice(0,3),g="last"!==a.slice(-4),h="of-type"===b;return 1===d&&0===e?function(a){return!!a.parentNode}:function(b,c,i){var j,k,l,m,n,o,p=f!==g?"nextSibling":"previousSibling",q=b.parentNode,r=h&&b.nodeName.toLowerCase(),s=!i&&!h,t=!1;if(q){if(f){while(p){m=b;while(m=m[p])if(h?m.nodeName.toLowerCase()===r:1===m.nodeType)return!1;o=p="only"===a&&!o&&"nextSibling"}return!0}if(o=[g?q.firstChild:q.lastChild],g&&s){m=q,l=m[u]||(m[u]={}),k=l[m.uniqueID]||(l[m.uniqueID]={}),j=k[a]||[],n=j[0]===w&&j[1],t=n&&j[2],m=n&&q.childNodes[n];while(m=++n&&m&&m[p]||(t=n=0)||o.pop())if(1===m.nodeType&&++t&&m===b){k[a]=[w,n,t];break}}else if(s&&(m=b,l=m[u]||(m[u]={}),k=l[m.uniqueID]||(l[m.uniqueID]={}),j=k[a]||[],n=j[0]===w&&j[1],t=n),t===!1)while(m=++n&&m&&m[p]||(t=n=0)||o.pop())if((h?m.nodeName.toLowerCase()===r:1===m.nodeType)&&++t&&(s&&(l=m[u]||(m[u]={}),k=l[m.uniqueID]||(l[m.uniqueID]={}),k[a]=[w,t]),m===b))break;return t-=e,t===d||t%d===0&&t/d>=0}}},PSEUDO:function(a,b){var c,e=d.pseudos[a]||d.setFilters[a.toLowerCase()]||ga.error("unsupported pseudo: "+a);return e[u]?e(b):e.length>1?(c=[a,a,"",b],d.setFilters.hasOwnProperty(a.toLowerCase())?ia(function(a,c){var d,f=e(a,b),g=f.length;while(g--)d=I(a,f[g]),a[d]=!(c[d]=f[g])}):function(a){return e(a,0,c)}):e}},pseudos:{not:ia(function(a){var b=[],c=[],d=h(a.replace(P,"$1"));return d[u]?ia(function(a,b,c,e){var f,g=d(a,null,e,[]),h=a.length;while(h--)(f=g[h])&&(a[h]=!(b[h]=f))}):function(a,e,f){return b[0]=a,d(b,null,f,c),b[0]=null,!c.pop()}}),has:ia(function(a){return function(b){return ga(a,b).length>0}}),contains:ia(function(a){return a=a.replace(_,aa),function(b){return(b.textContent||b.innerText||e(b)).indexOf(a)>-1}}),lang:ia(function(a){return U.test(a||"")||ga.error("unsupported lang: "+a),a=a.replace(_,aa).toLowerCase(),function(b){var c;do if(c=p?b.lang:b.getAttribute("xml:lang")||b.getAttribute("lang"))return c=c.toLowerCase(),c===a||0===c.indexOf(a+"-");while((b=b.parentNode)&&1===b.nodeType);return!1}}),target:function(b){var c=a.location&&a.location.hash;return c&&c.slice(1)===b.id},root:function(a){return a===o},focus:function(a){return a===n.activeElement&&(!n.hasFocus||n.hasFocus())&&!!(a.type||a.href||~a.tabIndex)},enabled:oa(!1),disabled:oa(!0),checked:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&!!a.checked||"option"===b&&!!a.selected},selected:function(a){return a.parentNode&&a.parentNode.selectedIndex,a.selected===!0},empty:function(a){for(a=a.firstChild;a;a=a.nextSibling)if(a.nodeType<6)return!1;return!0},parent:function(a){return!d.pseudos.empty(a)},header:function(a){return X.test(a.nodeName)},input:function(a){return W.test(a.nodeName)},button:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&"button"===a.type||"button"===b},text:function(a){var b;return"input"===a.nodeName.toLowerCase()&&"text"===a.type&&(null==(b=a.getAttribute("type"))||"text"===b.toLowerCase())},first:pa(function(){return[0]}),last:pa(function(a,b){return[b-1]}),eq:pa(function(a,b,c){return[c<0?c+b:c]}),even:pa(function(a,b){for(var c=0;c<b;c+=2)a.push(c);return a}),odd:pa(function(a,b){for(var c=1;c<b;c+=2)a.push(c);return a}),lt:pa(function(a,b,c){for(var d=c<0?c+b:c;--d>=0;)a.push(d);return a}),gt:pa(function(a,b,c){for(var d=c<0?c+b:c;++d<b;)a.push(d);return a})}},d.pseudos.nth=d.pseudos.eq;for(b in{radio:!0,checkbox:!0,file:!0,password:!0,image:!0})d.pseudos[b]=ma(b);for(b in{submit:!0,reset:!0})d.pseudos[b]=na(b);function ra(){}ra.prototype=d.filters=d.pseudos,d.setFilters=new ra,g=ga.tokenize=function(a,b){var c,e,f,g,h,i,j,k=z[a+" "];if(k)return b?0:k.slice(0);h=a,i=[],j=d.preFilter;while(h){c&&!(e=Q.exec(h))||(e&&(h=h.slice(e[0].length)||h),i.push(f=[])),c=!1,(e=R.exec(h))&&(c=e.shift(),f.push({value:c,type:e[0].replace(P," ")}),h=h.slice(c.length));for(g in d.filter)!(e=V[g].exec(h))||j[g]&&!(e=j[g](e))||(c=e.shift(),f.push({value:c,type:g,matches:e}),h=h.slice(c.length));if(!c)break}return b?h.length:h?ga.error(a):z(a,i).slice(0)};function sa(a){for(var b=0,c=a.length,d="";b<c;b++)d+=a[b].value;return d}function ta(a,b,c){var d=b.dir,e=b.next,f=e||d,g=c&&"parentNode"===f,h=x++;return b.first?function(b,c,e){while(b=b[d])if(1===b.nodeType||g)return a(b,c,e);return!1}:function(b,c,i){var j,k,l,m=[w,h];if(i){while(b=b[d])if((1===b.nodeType||g)&&a(b,c,i))return!0}else while(b=b[d])if(1===b.nodeType||g)if(l=b[u]||(b[u]={}),k=l[b.uniqueID]||(l[b.uniqueID]={}),e&&e===b.nodeName.toLowerCase())b=b[d]||b;else{if((j=k[f])&&j[0]===w&&j[1]===h)return m[2]=j[2];if(k[f]=m,m[2]=a(b,c,i))return!0}return!1}}function ua(a){return a.length>1?function(b,c,d){var e=a.length;while(e--)if(!a[e](b,c,d))return!1;return!0}:a[0]}function va(a,b,c){for(var d=0,e=b.length;d<e;d++)ga(a,b[d],c);return c}function wa(a,b,c,d,e){for(var f,g=[],h=0,i=a.length,j=null!=b;h<i;h++)(f=a[h])&&(c&&!c(f,d,e)||(g.push(f),j&&b.push(h)));return g}function xa(a,b,c,d,e,f){return d&&!d[u]&&(d=xa(d)),e&&!e[u]&&(e=xa(e,f)),ia(function(f,g,h,i){var j,k,l,m=[],n=[],o=g.length,p=f||va(b||"*",h.nodeType?[h]:h,[]),q=!a||!f&&b?p:wa(p,m,a,h,i),r=c?e||(f?a:o||d)?[]:g:q;if(c&&c(q,r,h,i),d){j=wa(r,n),d(j,[],h,i),k=j.length;while(k--)(l=j[k])&&(r[n[k]]=!(q[n[k]]=l))}if(f){if(e||a){if(e){j=[],k=r.length;while(k--)(l=r[k])&&j.push(q[k]=l);e(null,r=[],j,i)}k=r.length;while(k--)(l=r[k])&&(j=e?I(f,l):m[k])>-1&&(f[j]=!(g[j]=l))}}else r=wa(r===g?r.splice(o,r.length):r),e?e(null,g,r,i):G.apply(g,r)})}function ya(a){for(var b,c,e,f=a.length,g=d.relative[a[0].type],h=g||d.relative[" "],i=g?1:0,k=ta(function(a){return a===b},h,!0),l=ta(function(a){return I(b,a)>-1},h,!0),m=[function(a,c,d){var e=!g&&(d||c!==j)||((b=c).nodeType?k(a,c,d):l(a,c,d));return b=null,e}];i<f;i++)if(c=d.relative[a[i].type])m=[ta(ua(m),c)];else{if(c=d.filter[a[i].type].apply(null,a[i].matches),c[u]){for(e=++i;e<f;e++)if(d.relative[a[e].type])break;return xa(i>1&&ua(m),i>1&&sa(a.slice(0,i-1).concat({value:" "===a[i-2].type?"*":""})).replace(P,"$1"),c,i<e&&ya(a.slice(i,e)),e<f&&ya(a=a.slice(e)),e<f&&sa(a))}m.push(c)}return ua(m)}function za(a,b){var c=b.length>0,e=a.length>0,f=function(f,g,h,i,k){var l,o,q,r=0,s="0",t=f&&[],u=[],v=j,x=f||e&&d.find.TAG("*",k),y=w+=null==v?1:Math.random()||.1,z=x.length;for(k&&(j=g===n||g||k);s!==z&&null!=(l=x[s]);s++){if(e&&l){o=0,g||l.ownerDocument===n||(m(l),h=!p);while(q=a[o++])if(q(l,g||n,h)){i.push(l);break}k&&(w=y)}c&&((l=!q&&l)&&r--,f&&t.push(l))}if(r+=s,c&&s!==r){o=0;while(q=b[o++])q(t,u,g,h);if(f){if(r>0)while(s--)t[s]||u[s]||(u[s]=E.call(i));u=wa(u)}G.apply(i,u),k&&!f&&u.length>0&&r+b.length>1&&ga.uniqueSort(i)}return k&&(w=y,j=v),t};return c?ia(f):f}return h=ga.compile=function(a,b){var c,d=[],e=[],f=A[a+" "];if(!f){b||(b=g(a)),c=b.length;while(c--)f=ya(b[c]),f[u]?d.push(f):e.push(f);f=A(a,za(e,d)),f.selector=a}return f},i=ga.select=function(a,b,c,e){var f,i,j,k,l,m="function"==typeof a&&a,n=!e&&g(a=m.selector||a);if(c=c||[],1===n.length){if(i=n[0]=n[0].slice(0),i.length>2&&"ID"===(j=i[0]).type&&9===b.nodeType&&p&&d.relative[i[1].type]){if(b=(d.find.ID(j.matches[0].replace(_,aa),b)||[])[0],!b)return c;m&&(b=b.parentNode),a=a.slice(i.shift().value.length)}f=V.needsContext.test(a)?0:i.length;while(f--){if(j=i[f],d.relative[k=j.type])break;if((l=d.find[k])&&(e=l(j.matches[0].replace(_,aa),$.test(i[0].type)&&qa(b.parentNode)||b))){if(i.splice(f,1),a=e.length&&sa(i),!a)return G.apply(c,e),c;break}}}return(m||h(a,n))(e,b,!p,c,!b||$.test(a)&&qa(b.parentNode)||b),c},c.sortStable=u.split("").sort(B).join("")===u,c.detectDuplicates=!!l,m(),c.sortDetached=ja(function(a){return 1&a.compareDocumentPosition(n.createElement("fieldset"))}),ja(function(a){return a.innerHTML="<a href='#'></a>","#"===a.firstChild.getAttribute("href")})||ka("type|href|height|width",function(a,b,c){if(!c)return a.getAttribute(b,"type"===b.toLowerCase()?1:2)}),c.attributes&&ja(function(a){return a.innerHTML="<input/>",a.firstChild.setAttribute("value",""),""===a.firstChild.getAttribute("value")})||ka("value",function(a,b,c){if(!c&&"input"===a.nodeName.toLowerCase())return a.defaultValue}),ja(function(a){return null==a.getAttribute("disabled")})||ka(J,function(a,b,c){var d;if(!c)return a[b]===!0?b.toLowerCase():(d=a.getAttributeNode(b))&&d.specified?d.value:null}),ga}(a);r.find=x,r.expr=x.selectors,r.expr[":"]=r.expr.pseudos,r.uniqueSort=r.unique=x.uniqueSort,r.text=x.getText,r.isXMLDoc=x.isXML,r.contains=x.contains,r.escapeSelector=x.escape;var y=function(a,b,c){var d=[],e=void 0!==c;while((a=a[b])&&9!==a.nodeType)if(1===a.nodeType){if(e&&r(a).is(c))break;d.push(a)}return d},z=function(a,b){for(var c=[];a;a=a.nextSibling)1===a.nodeType&&a!==b&&c.push(a);return c},A=r.expr.match.needsContext,B=/^<([a-z][^\/\0>:\x20\t\r\n\f]*)[\x20\t\r\n\f]*\/?>(?:<\/\1>|)$/i,C=/^.[^:#\[\.,]*$/;function D(a,b,c){return r.isFunction(b)?r.grep(a,function(a,d){return!!b.call(a,d,a)!==c}):b.nodeType?r.grep(a,function(a){return a===b!==c}):"string"!=typeof b?r.grep(a,function(a){return i.call(b,a)>-1!==c}):C.test(b)?r.filter(b,a,c):(b=r.filter(b,a),r.grep(a,function(a){return i.call(b,a)>-1!==c&&1===a.nodeType}))}r.filter=function(a,b,c){var d=b[0];return c&&(a=":not("+a+")"),1===b.length&&1===d.nodeType?r.find.matchesSelector(d,a)?[d]:[]:r.find.matches(a,r.grep(b,function(a){return 1===a.nodeType}))},r.fn.extend({find:function(a){var b,c,d=this.length,e=this;if("string"!=typeof a)return this.pushStack(r(a).filter(function(){for(b=0;b<d;b++)if(r.contains(e[b],this))return!0}));for(c=this.pushStack([]),b=0;b<d;b++)r.find(a,e[b],c);return d>1?r.uniqueSort(c):c},filter:function(a){return this.pushStack(D(this,a||[],!1))},not:function(a){return this.pushStack(D(this,a||[],!0))},is:function(a){return!!D(this,"string"==typeof a&&A.test(a)?r(a):a||[],!1).length}});var E,F=/^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]+))$/,G=r.fn.init=function(a,b,c){var e,f;if(!a)return this;if(c=c||E,"string"==typeof a){if(e="<"===a[0]&&">"===a[a.length-1]&&a.length>=3?[null,a,null]:F.exec(a),!e||!e[1]&&b)return!b||b.jquery?(b||c).find(a):this.constructor(b).find(a);if(e[1]){if(b=b instanceof r?b[0]:b,r.merge(this,r.parseHTML(e[1],b&&b.nodeType?b.ownerDocument||b:d,!0)),B.test(e[1])&&r.isPlainObject(b))for(e in b)r.isFunction(this[e])?this[e](b[e]):this.attr(e,b[e]);return this}return f=d.getElementById(e[2]),f&&(this[0]=f,this.length=1),this}return a.nodeType?(this[0]=a,this.length=1,this):r.isFunction(a)?void 0!==c.ready?c.ready(a):a(r):r.makeArray(a,this)};G.prototype=r.fn,E=r(d);var H=/^(?:parents|prev(?:Until|All))/,I={children:!0,contents:!0,next:!0,prev:!0};r.fn.extend({has:function(a){var b=r(a,this),c=b.length;return this.filter(function(){for(var a=0;a<c;a++)if(r.contains(this,b[a]))return!0})},closest:function(a,b){var c,d=0,e=this.length,f=[],g="string"!=typeof a&&r(a);if(!A.test(a))for(;d<e;d++)for(c=this[d];c&&c!==b;c=c.parentNode)if(c.nodeType<11&&(g?g.index(c)>-1:1===c.nodeType&&r.find.matchesSelector(c,a))){f.push(c);break}return this.pushStack(f.length>1?r.uniqueSort(f):f)},index:function(a){return a?"string"==typeof a?i.call(r(a),this[0]):i.call(this,a.jquery?a[0]:a):this[0]&&this[0].parentNode?this.first().prevAll().length:-1},add:function(a,b){return this.pushStack(r.uniqueSort(r.merge(this.get(),r(a,b))))},addBack:function(a){return this.add(null==a?this.prevObject:this.prevObject.filter(a))}});function J(a,b){while((a=a[b])&&1!==a.nodeType);return a}r.each({parent:function(a){var b=a.parentNode;return b&&11!==b.nodeType?b:null},parents:function(a){return y(a,"parentNode")},parentsUntil:function(a,b,c){return y(a,"parentNode",c)},next:function(a){return J(a,"nextSibling")},prev:function(a){return J(a,"previousSibling")},nextAll:function(a){return y(a,"nextSibling")},prevAll:function(a){return y(a,"previousSibling")},nextUntil:function(a,b,c){return y(a,"nextSibling",c)},prevUntil:function(a,b,c){return y(a,"previousSibling",c)},siblings:function(a){return z((a.parentNode||{}).firstChild,a)},children:function(a){return z(a.firstChild)},contents:function(a){return a.contentDocument||r.merge([],a.childNodes)}},function(a,b){r.fn[a]=function(c,d){var e=r.map(this,b,c);return"Until"!==a.slice(-5)&&(d=c),d&&"string"==typeof d&&(e=r.filter(d,e)),this.length>1&&(I[a]||r.uniqueSort(e),H.test(a)&&e.reverse()),this.pushStack(e)}});var K=/[^\x20\t\r\n\f]+/g;function L(a){var b={};return r.each(a.match(K)||[],function(a,c){b[c]=!0}),b}r.Callbacks=function(a){a="string"==typeof a?L(a):r.extend({},a);var b,c,d,e,f=[],g=[],h=-1,i=function(){for(e=a.once,d=b=!0;g.length;h=-1){c=g.shift();while(++h<f.length)f[h].apply(c[0],c[1])===!1&&a.stopOnFalse&&(h=f.length,c=!1)}a.memory||(c=!1),b=!1,e&&(f=c?[]:"")},j={add:function(){return f&&(c&&!b&&(h=f.length-1,g.push(c)),function d(b){r.each(b,function(b,c){r.isFunction(c)?a.unique&&j.has(c)||f.push(c):c&&c.length&&"string"!==r.type(c)&&d(c)})}(arguments),c&&!b&&i()),this},remove:function(){return r.each(arguments,function(a,b){var c;while((c=r.inArray(b,f,c))>-1)f.splice(c,1),c<=h&&h--}),this},has:function(a){return a?r.inArray(a,f)>-1:f.length>0},empty:function(){return f&&(f=[]),this},disable:function(){return e=g=[],f=c="",this},disabled:function(){return!f},lock:function(){return e=g=[],c||b||(f=c=""),this},locked:function(){return!!e},fireWith:function(a,c){return e||(c=c||[],c=[a,c.slice?c.slice():c],g.push(c),b||i()),this},fire:function(){return j.fireWith(this,arguments),this},fired:function(){return!!d}};return j};function M(a){return a}function N(a){throw a}function O(a,b,c){var d;try{a&&r.isFunction(d=a.promise)?d.call(a).done(b).fail(c):a&&r.isFunction(d=a.then)?d.call(a,b,c):b.call(void 0,a)}catch(a){c.call(void 0,a)}}r.extend({Deferred:function(b){var c=[["notify","progress",r.Callbacks("memory"),r.Callbacks("memory"),2],["resolve","done",r.Callbacks("once memory"),r.Callbacks("once memory"),0,"resolved"],["reject","fail",r.Callbacks("once memory"),r.Callbacks("once memory"),1,"rejected"]],d="pending",e={state:function(){return d},always:function(){return f.done(arguments).fail(arguments),this},"catch":function(a){return e.then(null,a)},pipe:function(){var a=arguments;return r.Deferred(function(b){r.each(c,function(c,d){var e=r.isFunction(a[d[4]])&&a[d[4]];f[d[1]](function(){var a=e&&e.apply(this,arguments);a&&r.isFunction(a.promise)?a.promise().progress(b.notify).done(b.resolve).fail(b.reject):b[d[0]+"With"](this,e?[a]:arguments)})}),a=null}).promise()},then:function(b,d,e){var f=0;function g(b,c,d,e){return function(){var h=this,i=arguments,j=function(){var a,j;if(!(b<f)){if(a=d.apply(h,i),a===c.promise())throw new TypeError("Thenable self-resolution");j=a&&("object"==typeof a||"function"==typeof a)&&a.then,r.isFunction(j)?e?j.call(a,g(f,c,M,e),g(f,c,N,e)):(f++,j.call(a,g(f,c,M,e),g(f,c,N,e),g(f,c,M,c.notifyWith))):(d!==M&&(h=void 0,i=[a]),(e||c.resolveWith)(h,i))}},k=e?j:function(){try{j()}catch(a){r.Deferred.exceptionHook&&r.Deferred.exceptionHook(a,k.stackTrace),b+1>=f&&(d!==N&&(h=void 0,i=[a]),c.rejectWith(h,i))}};b?k():(r.Deferred.getStackHook&&(k.stackTrace=r.Deferred.getStackHook()),a.setTimeout(k))}}return r.Deferred(function(a){c[0][3].add(g(0,a,r.isFunction(e)?e:M,a.notifyWith)),c[1][3].add(g(0,a,r.isFunction(b)?b:M)),c[2][3].add(g(0,a,r.isFunction(d)?d:N))}).promise()},promise:function(a){return null!=a?r.extend(a,e):e}},f={};return r.each(c,function(a,b){var g=b[2],h=b[5];e[b[1]]=g.add,h&&g.add(function(){d=h},c[3-a][2].disable,c[0][2].lock),g.add(b[3].fire),f[b[0]]=function(){return f[b[0]+"With"](this===f?void 0:this,arguments),this},f[b[0]+"With"]=g.fireWith}),e.promise(f),b&&b.call(f,f),f},when:function(a){var b=arguments.length,c=b,d=Array(c),e=f.call(arguments),g=r.Deferred(),h=function(a){return function(c){d[a]=this,e[a]=arguments.length>1?f.call(arguments):c,--b||g.resolveWith(d,e)}};if(b<=1&&(O(a,g.done(h(c)).resolve,g.reject),"pending"===g.state()||r.isFunction(e[c]&&e[c].then)))return g.then();while(c--)O(e[c],h(c),g.reject);return g.promise()}});var P=/^(Eval|Internal|Range|Reference|Syntax|Type|URI)Error$/;r.Deferred.exceptionHook=function(b,c){a.console&&a.console.warn&&b&&P.test(b.name)&&a.console.warn("jQuery.Deferred exception: "+b.message,b.stack,c)},r.readyException=function(b){a.setTimeout(function(){throw b})};var Q=r.Deferred();r.fn.ready=function(a){return Q.then(a)["catch"](function(a){r.readyException(a)}),this},r.extend({isReady:!1,readyWait:1,holdReady:function(a){a?r.readyWait++:r.ready(!0)},ready:function(a){(a===!0?--r.readyWait:r.isReady)||(r.isReady=!0,a!==!0&&--r.readyWait>0||Q.resolveWith(d,[r]))}}),r.ready.then=Q.then;function R(){d.removeEventListener("DOMContentLoaded",R),
+	a.removeEventListener("load",R),r.ready()}"complete"===d.readyState||"loading"!==d.readyState&&!d.documentElement.doScroll?a.setTimeout(r.ready):(d.addEventListener("DOMContentLoaded",R),a.addEventListener("load",R));var S=function(a,b,c,d,e,f,g){var h=0,i=a.length,j=null==c;if("object"===r.type(c)){e=!0;for(h in c)S(a,b,h,c[h],!0,f,g)}else if(void 0!==d&&(e=!0,r.isFunction(d)||(g=!0),j&&(g?(b.call(a,d),b=null):(j=b,b=function(a,b,c){return j.call(r(a),c)})),b))for(;h<i;h++)b(a[h],c,g?d:d.call(a[h],h,b(a[h],c)));return e?a:j?b.call(a):i?b(a[0],c):f},T=function(a){return 1===a.nodeType||9===a.nodeType||!+a.nodeType};function U(){this.expando=r.expando+U.uid++}U.uid=1,U.prototype={cache:function(a){var b=a[this.expando];return b||(b={},T(a)&&(a.nodeType?a[this.expando]=b:Object.defineProperty(a,this.expando,{value:b,configurable:!0}))),b},set:function(a,b,c){var d,e=this.cache(a);if("string"==typeof b)e[r.camelCase(b)]=c;else for(d in b)e[r.camelCase(d)]=b[d];return e},get:function(a,b){return void 0===b?this.cache(a):a[this.expando]&&a[this.expando][r.camelCase(b)]},access:function(a,b,c){return void 0===b||b&&"string"==typeof b&&void 0===c?this.get(a,b):(this.set(a,b,c),void 0!==c?c:b)},remove:function(a,b){var c,d=a[this.expando];if(void 0!==d){if(void 0!==b){r.isArray(b)?b=b.map(r.camelCase):(b=r.camelCase(b),b=b in d?[b]:b.match(K)||[]),c=b.length;while(c--)delete d[b[c]]}(void 0===b||r.isEmptyObject(d))&&(a.nodeType?a[this.expando]=void 0:delete a[this.expando])}},hasData:function(a){var b=a[this.expando];return void 0!==b&&!r.isEmptyObject(b)}};var V=new U,W=new U,X=/^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,Y=/[A-Z]/g;function Z(a){return"true"===a||"false"!==a&&("null"===a?null:a===+a+""?+a:X.test(a)?JSON.parse(a):a)}function $(a,b,c){var d;if(void 0===c&&1===a.nodeType)if(d="data-"+b.replace(Y,"-$&").toLowerCase(),c=a.getAttribute(d),"string"==typeof c){try{c=Z(c)}catch(e){}W.set(a,b,c)}else c=void 0;return c}r.extend({hasData:function(a){return W.hasData(a)||V.hasData(a)},data:function(a,b,c){return W.access(a,b,c)},removeData:function(a,b){W.remove(a,b)},_data:function(a,b,c){return V.access(a,b,c)},_removeData:function(a,b){V.remove(a,b)}}),r.fn.extend({data:function(a,b){var c,d,e,f=this[0],g=f&&f.attributes;if(void 0===a){if(this.length&&(e=W.get(f),1===f.nodeType&&!V.get(f,"hasDataAttrs"))){c=g.length;while(c--)g[c]&&(d=g[c].name,0===d.indexOf("data-")&&(d=r.camelCase(d.slice(5)),$(f,d,e[d])));V.set(f,"hasDataAttrs",!0)}return e}return"object"==typeof a?this.each(function(){W.set(this,a)}):S(this,function(b){var c;if(f&&void 0===b){if(c=W.get(f,a),void 0!==c)return c;if(c=$(f,a),void 0!==c)return c}else this.each(function(){W.set(this,a,b)})},null,b,arguments.length>1,null,!0)},removeData:function(a){return this.each(function(){W.remove(this,a)})}}),r.extend({queue:function(a,b,c){var d;if(a)return b=(b||"fx")+"queue",d=V.get(a,b),c&&(!d||r.isArray(c)?d=V.access(a,b,r.makeArray(c)):d.push(c)),d||[]},dequeue:function(a,b){b=b||"fx";var c=r.queue(a,b),d=c.length,e=c.shift(),f=r._queueHooks(a,b),g=function(){r.dequeue(a,b)};"inprogress"===e&&(e=c.shift(),d--),e&&("fx"===b&&c.unshift("inprogress"),delete f.stop,e.call(a,g,f)),!d&&f&&f.empty.fire()},_queueHooks:function(a,b){var c=b+"queueHooks";return V.get(a,c)||V.access(a,c,{empty:r.Callbacks("once memory").add(function(){V.remove(a,[b+"queue",c])})})}}),r.fn.extend({queue:function(a,b){var c=2;return"string"!=typeof a&&(b=a,a="fx",c--),arguments.length<c?r.queue(this[0],a):void 0===b?this:this.each(function(){var c=r.queue(this,a,b);r._queueHooks(this,a),"fx"===a&&"inprogress"!==c[0]&&r.dequeue(this,a)})},dequeue:function(a){return this.each(function(){r.dequeue(this,a)})},clearQueue:function(a){return this.queue(a||"fx",[])},promise:function(a,b){var c,d=1,e=r.Deferred(),f=this,g=this.length,h=function(){--d||e.resolveWith(f,[f])};"string"!=typeof a&&(b=a,a=void 0),a=a||"fx";while(g--)c=V.get(f[g],a+"queueHooks"),c&&c.empty&&(d++,c.empty.add(h));return h(),e.promise(b)}});var _=/[+-]?(?:\d*\.|)\d+(?:[eE][+-]?\d+|)/.source,aa=new RegExp("^(?:([+-])=|)("+_+")([a-z%]*)$","i"),ba=["Top","Right","Bottom","Left"],ca=function(a,b){return a=b||a,"none"===a.style.display||""===a.style.display&&r.contains(a.ownerDocument,a)&&"none"===r.css(a,"display")},da=function(a,b,c,d){var e,f,g={};for(f in b)g[f]=a.style[f],a.style[f]=b[f];e=c.apply(a,d||[]);for(f in b)a.style[f]=g[f];return e};function ea(a,b,c,d){var e,f=1,g=20,h=d?function(){return d.cur()}:function(){return r.css(a,b,"")},i=h(),j=c&&c[3]||(r.cssNumber[b]?"":"px"),k=(r.cssNumber[b]||"px"!==j&&+i)&&aa.exec(r.css(a,b));if(k&&k[3]!==j){j=j||k[3],c=c||[],k=+i||1;do f=f||".5",k/=f,r.style(a,b,k+j);while(f!==(f=h()/i)&&1!==f&&--g)}return c&&(k=+k||+i||0,e=c[1]?k+(c[1]+1)*c[2]:+c[2],d&&(d.unit=j,d.start=k,d.end=e)),e}var fa={};function ga(a){var b,c=a.ownerDocument,d=a.nodeName,e=fa[d];return e?e:(b=c.body.appendChild(c.createElement(d)),e=r.css(b,"display"),b.parentNode.removeChild(b),"none"===e&&(e="block"),fa[d]=e,e)}function ha(a,b){for(var c,d,e=[],f=0,g=a.length;f<g;f++)d=a[f],d.style&&(c=d.style.display,b?("none"===c&&(e[f]=V.get(d,"display")||null,e[f]||(d.style.display="")),""===d.style.display&&ca(d)&&(e[f]=ga(d))):"none"!==c&&(e[f]="none",V.set(d,"display",c)));for(f=0;f<g;f++)null!=e[f]&&(a[f].style.display=e[f]);return a}r.fn.extend({show:function(){return ha(this,!0)},hide:function(){return ha(this)},toggle:function(a){return"boolean"==typeof a?a?this.show():this.hide():this.each(function(){ca(this)?r(this).show():r(this).hide()})}});var ia=/^(?:checkbox|radio)$/i,ja=/<([a-z][^\/\0>\x20\t\r\n\f]+)/i,ka=/^$|\/(?:java|ecma)script/i,la={option:[1,"<select multiple='multiple'>","</select>"],thead:[1,"<table>","</table>"],col:[2,"<table><colgroup>","</colgroup></table>"],tr:[2,"<table><tbody>","</tbody></table>"],td:[3,"<table><tbody><tr>","</tr></tbody></table>"],_default:[0,"",""]};la.optgroup=la.option,la.tbody=la.tfoot=la.colgroup=la.caption=la.thead,la.th=la.td;function ma(a,b){var c;return c="undefined"!=typeof a.getElementsByTagName?a.getElementsByTagName(b||"*"):"undefined"!=typeof a.querySelectorAll?a.querySelectorAll(b||"*"):[],void 0===b||b&&r.nodeName(a,b)?r.merge([a],c):c}function na(a,b){for(var c=0,d=a.length;c<d;c++)V.set(a[c],"globalEval",!b||V.get(b[c],"globalEval"))}var oa=/<|&#?\w+;/;function pa(a,b,c,d,e){for(var f,g,h,i,j,k,l=b.createDocumentFragment(),m=[],n=0,o=a.length;n<o;n++)if(f=a[n],f||0===f)if("object"===r.type(f))r.merge(m,f.nodeType?[f]:f);else if(oa.test(f)){g=g||l.appendChild(b.createElement("div")),h=(ja.exec(f)||["",""])[1].toLowerCase(),i=la[h]||la._default,g.innerHTML=i[1]+r.htmlPrefilter(f)+i[2],k=i[0];while(k--)g=g.lastChild;r.merge(m,g.childNodes),g=l.firstChild,g.textContent=""}else m.push(b.createTextNode(f));l.textContent="",n=0;while(f=m[n++])if(d&&r.inArray(f,d)>-1)e&&e.push(f);else if(j=r.contains(f.ownerDocument,f),g=ma(l.appendChild(f),"script"),j&&na(g),c){k=0;while(f=g[k++])ka.test(f.type||"")&&c.push(f)}return l}!function(){var a=d.createDocumentFragment(),b=a.appendChild(d.createElement("div")),c=d.createElement("input");c.setAttribute("type","radio"),c.setAttribute("checked","checked"),c.setAttribute("name","t"),b.appendChild(c),o.checkClone=b.cloneNode(!0).cloneNode(!0).lastChild.checked,b.innerHTML="<textarea>x</textarea>",o.noCloneChecked=!!b.cloneNode(!0).lastChild.defaultValue}();var qa=d.documentElement,ra=/^key/,sa=/^(?:mouse|pointer|contextmenu|drag|drop)|click/,ta=/^([^.]*)(?:\.(.+)|)/;function ua(){return!0}function va(){return!1}function wa(){try{return d.activeElement}catch(a){}}function xa(a,b,c,d,e,f){var g,h;if("object"==typeof b){"string"!=typeof c&&(d=d||c,c=void 0);for(h in b)xa(a,h,c,d,b[h],f);return a}if(null==d&&null==e?(e=c,d=c=void 0):null==e&&("string"==typeof c?(e=d,d=void 0):(e=d,d=c,c=void 0)),e===!1)e=va;else if(!e)return a;return 1===f&&(g=e,e=function(a){return r().off(a),g.apply(this,arguments)},e.guid=g.guid||(g.guid=r.guid++)),a.each(function(){r.event.add(this,b,e,d,c)})}r.event={global:{},add:function(a,b,c,d,e){var f,g,h,i,j,k,l,m,n,o,p,q=V.get(a);if(q){c.handler&&(f=c,c=f.handler,e=f.selector),e&&r.find.matchesSelector(qa,e),c.guid||(c.guid=r.guid++),(i=q.events)||(i=q.events={}),(g=q.handle)||(g=q.handle=function(b){return"undefined"!=typeof r&&r.event.triggered!==b.type?r.event.dispatch.apply(a,arguments):void 0}),b=(b||"").match(K)||[""],j=b.length;while(j--)h=ta.exec(b[j])||[],n=p=h[1],o=(h[2]||"").split(".").sort(),n&&(l=r.event.special[n]||{},n=(e?l.delegateType:l.bindType)||n,l=r.event.special[n]||{},k=r.extend({type:n,origType:p,data:d,handler:c,guid:c.guid,selector:e,needsContext:e&&r.expr.match.needsContext.test(e),namespace:o.join(".")},f),(m=i[n])||(m=i[n]=[],m.delegateCount=0,l.setup&&l.setup.call(a,d,o,g)!==!1||a.addEventListener&&a.addEventListener(n,g)),l.add&&(l.add.call(a,k),k.handler.guid||(k.handler.guid=c.guid)),e?m.splice(m.delegateCount++,0,k):m.push(k),r.event.global[n]=!0)}},remove:function(a,b,c,d,e){var f,g,h,i,j,k,l,m,n,o,p,q=V.hasData(a)&&V.get(a);if(q&&(i=q.events)){b=(b||"").match(K)||[""],j=b.length;while(j--)if(h=ta.exec(b[j])||[],n=p=h[1],o=(h[2]||"").split(".").sort(),n){l=r.event.special[n]||{},n=(d?l.delegateType:l.bindType)||n,m=i[n]||[],h=h[2]&&new RegExp("(^|\\.)"+o.join("\\.(?:.*\\.|)")+"(\\.|$)"),g=f=m.length;while(f--)k=m[f],!e&&p!==k.origType||c&&c.guid!==k.guid||h&&!h.test(k.namespace)||d&&d!==k.selector&&("**"!==d||!k.selector)||(m.splice(f,1),k.selector&&m.delegateCount--,l.remove&&l.remove.call(a,k));g&&!m.length&&(l.teardown&&l.teardown.call(a,o,q.handle)!==!1||r.removeEvent(a,n,q.handle),delete i[n])}else for(n in i)r.event.remove(a,n+b[j],c,d,!0);r.isEmptyObject(i)&&V.remove(a,"handle events")}},dispatch:function(a){var b=r.event.fix(a),c,d,e,f,g,h,i=new Array(arguments.length),j=(V.get(this,"events")||{})[b.type]||[],k=r.event.special[b.type]||{};for(i[0]=b,c=1;c<arguments.length;c++)i[c]=arguments[c];if(b.delegateTarget=this,!k.preDispatch||k.preDispatch.call(this,b)!==!1){h=r.event.handlers.call(this,b,j),c=0;while((f=h[c++])&&!b.isPropagationStopped()){b.currentTarget=f.elem,d=0;while((g=f.handlers[d++])&&!b.isImmediatePropagationStopped())b.rnamespace&&!b.rnamespace.test(g.namespace)||(b.handleObj=g,b.data=g.data,e=((r.event.special[g.origType]||{}).handle||g.handler).apply(f.elem,i),void 0!==e&&(b.result=e)===!1&&(b.preventDefault(),b.stopPropagation()))}return k.postDispatch&&k.postDispatch.call(this,b),b.result}},handlers:function(a,b){var c,d,e,f,g,h=[],i=b.delegateCount,j=a.target;if(i&&j.nodeType&&!("click"===a.type&&a.button>=1))for(;j!==this;j=j.parentNode||this)if(1===j.nodeType&&("click"!==a.type||j.disabled!==!0)){for(f=[],g={},c=0;c<i;c++)d=b[c],e=d.selector+" ",void 0===g[e]&&(g[e]=d.needsContext?r(e,this).index(j)>-1:r.find(e,this,null,[j]).length),g[e]&&f.push(d);f.length&&h.push({elem:j,handlers:f})}return j=this,i<b.length&&h.push({elem:j,handlers:b.slice(i)}),h},addProp:function(a,b){Object.defineProperty(r.Event.prototype,a,{enumerable:!0,configurable:!0,get:r.isFunction(b)?function(){if(this.originalEvent)return b(this.originalEvent)}:function(){if(this.originalEvent)return this.originalEvent[a]},set:function(b){Object.defineProperty(this,a,{enumerable:!0,configurable:!0,writable:!0,value:b})}})},fix:function(a){return a[r.expando]?a:new r.Event(a)},special:{load:{noBubble:!0},focus:{trigger:function(){if(this!==wa()&&this.focus)return this.focus(),!1},delegateType:"focusin"},blur:{trigger:function(){if(this===wa()&&this.blur)return this.blur(),!1},delegateType:"focusout"},click:{trigger:function(){if("checkbox"===this.type&&this.click&&r.nodeName(this,"input"))return this.click(),!1},_default:function(a){return r.nodeName(a.target,"a")}},beforeunload:{postDispatch:function(a){void 0!==a.result&&a.originalEvent&&(a.originalEvent.returnValue=a.result)}}}},r.removeEvent=function(a,b,c){a.removeEventListener&&a.removeEventListener(b,c)},r.Event=function(a,b){return this instanceof r.Event?(a&&a.type?(this.originalEvent=a,this.type=a.type,this.isDefaultPrevented=a.defaultPrevented||void 0===a.defaultPrevented&&a.returnValue===!1?ua:va,this.target=a.target&&3===a.target.nodeType?a.target.parentNode:a.target,this.currentTarget=a.currentTarget,this.relatedTarget=a.relatedTarget):this.type=a,b&&r.extend(this,b),this.timeStamp=a&&a.timeStamp||r.now(),void(this[r.expando]=!0)):new r.Event(a,b)},r.Event.prototype={constructor:r.Event,isDefaultPrevented:va,isPropagationStopped:va,isImmediatePropagationStopped:va,isSimulated:!1,preventDefault:function(){var a=this.originalEvent;this.isDefaultPrevented=ua,a&&!this.isSimulated&&a.preventDefault()},stopPropagation:function(){var a=this.originalEvent;this.isPropagationStopped=ua,a&&!this.isSimulated&&a.stopPropagation()},stopImmediatePropagation:function(){var a=this.originalEvent;this.isImmediatePropagationStopped=ua,a&&!this.isSimulated&&a.stopImmediatePropagation(),this.stopPropagation()}},r.each({altKey:!0,bubbles:!0,cancelable:!0,changedTouches:!0,ctrlKey:!0,detail:!0,eventPhase:!0,metaKey:!0,pageX:!0,pageY:!0,shiftKey:!0,view:!0,"char":!0,charCode:!0,key:!0,keyCode:!0,button:!0,buttons:!0,clientX:!0,clientY:!0,offsetX:!0,offsetY:!0,pointerId:!0,pointerType:!0,screenX:!0,screenY:!0,targetTouches:!0,toElement:!0,touches:!0,which:function(a){var b=a.button;return null==a.which&&ra.test(a.type)?null!=a.charCode?a.charCode:a.keyCode:!a.which&&void 0!==b&&sa.test(a.type)?1&b?1:2&b?3:4&b?2:0:a.which}},r.event.addProp),r.each({mouseenter:"mouseover",mouseleave:"mouseout",pointerenter:"pointerover",pointerleave:"pointerout"},function(a,b){r.event.special[a]={delegateType:b,bindType:b,handle:function(a){var c,d=this,e=a.relatedTarget,f=a.handleObj;return e&&(e===d||r.contains(d,e))||(a.type=f.origType,c=f.handler.apply(this,arguments),a.type=b),c}}}),r.fn.extend({on:function(a,b,c,d){return xa(this,a,b,c,d)},one:function(a,b,c,d){return xa(this,a,b,c,d,1)},off:function(a,b,c){var d,e;if(a&&a.preventDefault&&a.handleObj)return d=a.handleObj,r(a.delegateTarget).off(d.namespace?d.origType+"."+d.namespace:d.origType,d.selector,d.handler),this;if("object"==typeof a){for(e in a)this.off(e,b,a[e]);return this}return b!==!1&&"function"!=typeof b||(c=b,b=void 0),c===!1&&(c=va),this.each(function(){r.event.remove(this,a,c,b)})}});var ya=/<(?!area|br|col|embed|hr|img|input|link|meta|param)(([a-z][^\/\0>\x20\t\r\n\f]*)[^>]*)\/>/gi,za=/<script|<style|<link/i,Aa=/checked\s*(?:[^=]|=\s*.checked.)/i,Ba=/^true\/(.*)/,Ca=/^\s*<!(?:\[CDATA\[|--)|(?:\]\]|--)>\s*$/g;function Da(a,b){return r.nodeName(a,"table")&&r.nodeName(11!==b.nodeType?b:b.firstChild,"tr")?a.getElementsByTagName("tbody")[0]||a:a}function Ea(a){return a.type=(null!==a.getAttribute("type"))+"/"+a.type,a}function Fa(a){var b=Ba.exec(a.type);return b?a.type=b[1]:a.removeAttribute("type"),a}function Ga(a,b){var c,d,e,f,g,h,i,j;if(1===b.nodeType){if(V.hasData(a)&&(f=V.access(a),g=V.set(b,f),j=f.events)){delete g.handle,g.events={};for(e in j)for(c=0,d=j[e].length;c<d;c++)r.event.add(b,e,j[e][c])}W.hasData(a)&&(h=W.access(a),i=r.extend({},h),W.set(b,i))}}function Ha(a,b){var c=b.nodeName.toLowerCase();"input"===c&&ia.test(a.type)?b.checked=a.checked:"input"!==c&&"textarea"!==c||(b.defaultValue=a.defaultValue)}function Ia(a,b,c,d){b=g.apply([],b);var e,f,h,i,j,k,l=0,m=a.length,n=m-1,q=b[0],s=r.isFunction(q);if(s||m>1&&"string"==typeof q&&!o.checkClone&&Aa.test(q))return a.each(function(e){var f=a.eq(e);s&&(b[0]=q.call(this,e,f.html())),Ia(f,b,c,d)});if(m&&(e=pa(b,a[0].ownerDocument,!1,a,d),f=e.firstChild,1===e.childNodes.length&&(e=f),f||d)){for(h=r.map(ma(e,"script"),Ea),i=h.length;l<m;l++)j=e,l!==n&&(j=r.clone(j,!0,!0),i&&r.merge(h,ma(j,"script"))),c.call(a[l],j,l);if(i)for(k=h[h.length-1].ownerDocument,r.map(h,Fa),l=0;l<i;l++)j=h[l],ka.test(j.type||"")&&!V.access(j,"globalEval")&&r.contains(k,j)&&(j.src?r._evalUrl&&r._evalUrl(j.src):p(j.textContent.replace(Ca,""),k))}return a}function Ja(a,b,c){for(var d,e=b?r.filter(b,a):a,f=0;null!=(d=e[f]);f++)c||1!==d.nodeType||r.cleanData(ma(d)),d.parentNode&&(c&&r.contains(d.ownerDocument,d)&&na(ma(d,"script")),d.parentNode.removeChild(d));return a}r.extend({htmlPrefilter:function(a){return a.replace(ya,"<$1></$2>")},clone:function(a,b,c){var d,e,f,g,h=a.cloneNode(!0),i=r.contains(a.ownerDocument,a);if(!(o.noCloneChecked||1!==a.nodeType&&11!==a.nodeType||r.isXMLDoc(a)))for(g=ma(h),f=ma(a),d=0,e=f.length;d<e;d++)Ha(f[d],g[d]);if(b)if(c)for(f=f||ma(a),g=g||ma(h),d=0,e=f.length;d<e;d++)Ga(f[d],g[d]);else Ga(a,h);return g=ma(h,"script"),g.length>0&&na(g,!i&&ma(a,"script")),h},cleanData:function(a){for(var b,c,d,e=r.event.special,f=0;void 0!==(c=a[f]);f++)if(T(c)){if(b=c[V.expando]){if(b.events)for(d in b.events)e[d]?r.event.remove(c,d):r.removeEvent(c,d,b.handle);c[V.expando]=void 0}c[W.expando]&&(c[W.expando]=void 0)}}}),r.fn.extend({detach:function(a){return Ja(this,a,!0)},remove:function(a){return Ja(this,a)},text:function(a){return S(this,function(a){return void 0===a?r.text(this):this.empty().each(function(){1!==this.nodeType&&11!==this.nodeType&&9!==this.nodeType||(this.textContent=a)})},null,a,arguments.length)},append:function(){return Ia(this,arguments,function(a){if(1===this.nodeType||11===this.nodeType||9===this.nodeType){var b=Da(this,a);b.appendChild(a)}})},prepend:function(){return Ia(this,arguments,function(a){if(1===this.nodeType||11===this.nodeType||9===this.nodeType){var b=Da(this,a);b.insertBefore(a,b.firstChild)}})},before:function(){return Ia(this,arguments,function(a){this.parentNode&&this.parentNode.insertBefore(a,this)})},after:function(){return Ia(this,arguments,function(a){this.parentNode&&this.parentNode.insertBefore(a,this.nextSibling)})},empty:function(){for(var a,b=0;null!=(a=this[b]);b++)1===a.nodeType&&(r.cleanData(ma(a,!1)),a.textContent="");return this},clone:function(a,b){return a=null!=a&&a,b=null==b?a:b,this.map(function(){return r.clone(this,a,b)})},html:function(a){return S(this,function(a){var b=this[0]||{},c=0,d=this.length;if(void 0===a&&1===b.nodeType)return b.innerHTML;if("string"==typeof a&&!za.test(a)&&!la[(ja.exec(a)||["",""])[1].toLowerCase()]){a=r.htmlPrefilter(a);try{for(;c<d;c++)b=this[c]||{},1===b.nodeType&&(r.cleanData(ma(b,!1)),b.innerHTML=a);b=0}catch(e){}}b&&this.empty().append(a)},null,a,arguments.length)},replaceWith:function(){var a=[];return Ia(this,arguments,function(b){var c=this.parentNode;r.inArray(this,a)<0&&(r.cleanData(ma(this)),c&&c.replaceChild(b,this))},a)}}),r.each({appendTo:"append",prependTo:"prepend",insertBefore:"before",insertAfter:"after",replaceAll:"replaceWith"},function(a,b){r.fn[a]=function(a){for(var c,d=[],e=r(a),f=e.length-1,g=0;g<=f;g++)c=g===f?this:this.clone(!0),r(e[g])[b](c),h.apply(d,c.get());return this.pushStack(d)}});var Ka=/^margin/,La=new RegExp("^("+_+")(?!px)[a-z%]+$","i"),Ma=function(b){var c=b.ownerDocument.defaultView;return c&&c.opener||(c=a),c.getComputedStyle(b)};!function(){function b(){if(i){i.style.cssText="box-sizing:border-box;position:relative;display:block;margin:auto;border:1px;padding:1px;top:1%;width:50%",i.innerHTML="",qa.appendChild(h);var b=a.getComputedStyle(i);c="1%"!==b.top,g="2px"===b.marginLeft,e="4px"===b.width,i.style.marginRight="50%",f="4px"===b.marginRight,qa.removeChild(h),i=null}}var c,e,f,g,h=d.createElement("div"),i=d.createElement("div");i.style&&(i.style.backgroundClip="content-box",i.cloneNode(!0).style.backgroundClip="",o.clearCloneStyle="content-box"===i.style.backgroundClip,h.style.cssText="border:0;width:8px;height:0;top:0;left:-9999px;padding:0;margin-top:1px;position:absolute",h.appendChild(i),r.extend(o,{pixelPosition:function(){return b(),c},boxSizingReliable:function(){return b(),e},pixelMarginRight:function(){return b(),f},reliableMarginLeft:function(){return b(),g}}))}();function Na(a,b,c){var d,e,f,g,h=a.style;return c=c||Ma(a),c&&(g=c.getPropertyValue(b)||c[b],""!==g||r.contains(a.ownerDocument,a)||(g=r.style(a,b)),!o.pixelMarginRight()&&La.test(g)&&Ka.test(b)&&(d=h.width,e=h.minWidth,f=h.maxWidth,h.minWidth=h.maxWidth=h.width=g,g=c.width,h.width=d,h.minWidth=e,h.maxWidth=f)),void 0!==g?g+"":g}function Oa(a,b){return{get:function(){return a()?void delete this.get:(this.get=b).apply(this,arguments)}}}var Pa=/^(none|table(?!-c[ea]).+)/,Qa={position:"absolute",visibility:"hidden",display:"block"},Ra={letterSpacing:"0",fontWeight:"400"},Sa=["Webkit","Moz","ms"],Ta=d.createElement("div").style;function Ua(a){if(a in Ta)return a;var b=a[0].toUpperCase()+a.slice(1),c=Sa.length;while(c--)if(a=Sa[c]+b,a in Ta)return a}function Va(a,b,c){var d=aa.exec(b);return d?Math.max(0,d[2]-(c||0))+(d[3]||"px"):b}function Wa(a,b,c,d,e){var f,g=0;for(f=c===(d?"border":"content")?4:"width"===b?1:0;f<4;f+=2)"margin"===c&&(g+=r.css(a,c+ba[f],!0,e)),d?("content"===c&&(g-=r.css(a,"padding"+ba[f],!0,e)),"margin"!==c&&(g-=r.css(a,"border"+ba[f]+"Width",!0,e))):(g+=r.css(a,"padding"+ba[f],!0,e),"padding"!==c&&(g+=r.css(a,"border"+ba[f]+"Width",!0,e)));return g}function Xa(a,b,c){var d,e=!0,f=Ma(a),g="border-box"===r.css(a,"boxSizing",!1,f);if(a.getClientRects().length&&(d=a.getBoundingClientRect()[b]),d<=0||null==d){if(d=Na(a,b,f),(d<0||null==d)&&(d=a.style[b]),La.test(d))return d;e=g&&(o.boxSizingReliable()||d===a.style[b]),d=parseFloat(d)||0}return d+Wa(a,b,c||(g?"border":"content"),e,f)+"px"}r.extend({cssHooks:{opacity:{get:function(a,b){if(b){var c=Na(a,"opacity");return""===c?"1":c}}}},cssNumber:{animationIterationCount:!0,columnCount:!0,fillOpacity:!0,flexGrow:!0,flexShrink:!0,fontWeight:!0,lineHeight:!0,opacity:!0,order:!0,orphans:!0,widows:!0,zIndex:!0,zoom:!0},cssProps:{"float":"cssFloat"},style:function(a,b,c,d){if(a&&3!==a.nodeType&&8!==a.nodeType&&a.style){var e,f,g,h=r.camelCase(b),i=a.style;return b=r.cssProps[h]||(r.cssProps[h]=Ua(h)||h),g=r.cssHooks[b]||r.cssHooks[h],void 0===c?g&&"get"in g&&void 0!==(e=g.get(a,!1,d))?e:i[b]:(f=typeof c,"string"===f&&(e=aa.exec(c))&&e[1]&&(c=ea(a,b,e),f="number"),null!=c&&c===c&&("number"===f&&(c+=e&&e[3]||(r.cssNumber[h]?"":"px")),o.clearCloneStyle||""!==c||0!==b.indexOf("background")||(i[b]="inherit"),g&&"set"in g&&void 0===(c=g.set(a,c,d))||(i[b]=c)),void 0)}},css:function(a,b,c,d){var e,f,g,h=r.camelCase(b);return b=r.cssProps[h]||(r.cssProps[h]=Ua(h)||h),g=r.cssHooks[b]||r.cssHooks[h],g&&"get"in g&&(e=g.get(a,!0,c)),void 0===e&&(e=Na(a,b,d)),"normal"===e&&b in Ra&&(e=Ra[b]),""===c||c?(f=parseFloat(e),c===!0||isFinite(f)?f||0:e):e}}),r.each(["height","width"],function(a,b){r.cssHooks[b]={get:function(a,c,d){if(c)return!Pa.test(r.css(a,"display"))||a.getClientRects().length&&a.getBoundingClientRect().width?Xa(a,b,d):da(a,Qa,function(){return Xa(a,b,d)})},set:function(a,c,d){var e,f=d&&Ma(a),g=d&&Wa(a,b,d,"border-box"===r.css(a,"boxSizing",!1,f),f);return g&&(e=aa.exec(c))&&"px"!==(e[3]||"px")&&(a.style[b]=c,c=r.css(a,b)),Va(a,c,g)}}}),r.cssHooks.marginLeft=Oa(o.reliableMarginLeft,function(a,b){if(b)return(parseFloat(Na(a,"marginLeft"))||a.getBoundingClientRect().left-da(a,{marginLeft:0},function(){return a.getBoundingClientRect().left}))+"px"}),r.each({margin:"",padding:"",border:"Width"},function(a,b){r.cssHooks[a+b]={expand:function(c){for(var d=0,e={},f="string"==typeof c?c.split(" "):[c];d<4;d++)e[a+ba[d]+b]=f[d]||f[d-2]||f[0];return e}},Ka.test(a)||(r.cssHooks[a+b].set=Va)}),r.fn.extend({css:function(a,b){return S(this,function(a,b,c){var d,e,f={},g=0;if(r.isArray(b)){for(d=Ma(a),e=b.length;g<e;g++)f[b[g]]=r.css(a,b[g],!1,d);return f}return void 0!==c?r.style(a,b,c):r.css(a,b)},a,b,arguments.length>1)}});function Ya(a,b,c,d,e){return new Ya.prototype.init(a,b,c,d,e)}r.Tween=Ya,Ya.prototype={constructor:Ya,init:function(a,b,c,d,e,f){this.elem=a,this.prop=c,this.easing=e||r.easing._default,this.options=b,this.start=this.now=this.cur(),this.end=d,this.unit=f||(r.cssNumber[c]?"":"px")},cur:function(){var a=Ya.propHooks[this.prop];return a&&a.get?a.get(this):Ya.propHooks._default.get(this)},run:function(a){var b,c=Ya.propHooks[this.prop];return this.options.duration?this.pos=b=r.easing[this.easing](a,this.options.duration*a,0,1,this.options.duration):this.pos=b=a,this.now=(this.end-this.start)*b+this.start,this.options.step&&this.options.step.call(this.elem,this.now,this),c&&c.set?c.set(this):Ya.propHooks._default.set(this),this}},Ya.prototype.init.prototype=Ya.prototype,Ya.propHooks={_default:{get:function(a){var b;return 1!==a.elem.nodeType||null!=a.elem[a.prop]&&null==a.elem.style[a.prop]?a.elem[a.prop]:(b=r.css(a.elem,a.prop,""),b&&"auto"!==b?b:0)},set:function(a){r.fx.step[a.prop]?r.fx.step[a.prop](a):1!==a.elem.nodeType||null==a.elem.style[r.cssProps[a.prop]]&&!r.cssHooks[a.prop]?a.elem[a.prop]=a.now:r.style(a.elem,a.prop,a.now+a.unit)}}},Ya.propHooks.scrollTop=Ya.propHooks.scrollLeft={set:function(a){a.elem.nodeType&&a.elem.parentNode&&(a.elem[a.prop]=a.now)}},r.easing={linear:function(a){return a},swing:function(a){return.5-Math.cos(a*Math.PI)/2},_default:"swing"},r.fx=Ya.prototype.init,r.fx.step={};var Za,$a,_a=/^(?:toggle|show|hide)$/,ab=/queueHooks$/;function bb(){$a&&(a.requestAnimationFrame(bb),r.fx.tick())}function cb(){return a.setTimeout(function(){Za=void 0}),Za=r.now()}function db(a,b){var c,d=0,e={height:a};for(b=b?1:0;d<4;d+=2-b)c=ba[d],e["margin"+c]=e["padding"+c]=a;return b&&(e.opacity=e.width=a),e}function eb(a,b,c){for(var d,e=(hb.tweeners[b]||[]).concat(hb.tweeners["*"]),f=0,g=e.length;f<g;f++)if(d=e[f].call(c,b,a))return d}function fb(a,b,c){var d,e,f,g,h,i,j,k,l="width"in b||"height"in b,m=this,n={},o=a.style,p=a.nodeType&&ca(a),q=V.get(a,"fxshow");c.queue||(g=r._queueHooks(a,"fx"),null==g.unqueued&&(g.unqueued=0,h=g.empty.fire,g.empty.fire=function(){g.unqueued||h()}),g.unqueued++,m.always(function(){m.always(function(){g.unqueued--,r.queue(a,"fx").length||g.empty.fire()})}));for(d in b)if(e=b[d],_a.test(e)){if(delete b[d],f=f||"toggle"===e,e===(p?"hide":"show")){if("show"!==e||!q||void 0===q[d])continue;p=!0}n[d]=q&&q[d]||r.style(a,d)}if(i=!r.isEmptyObject(b),i||!r.isEmptyObject(n)){l&&1===a.nodeType&&(c.overflow=[o.overflow,o.overflowX,o.overflowY],j=q&&q.display,null==j&&(j=V.get(a,"display")),k=r.css(a,"display"),"none"===k&&(j?k=j:(ha([a],!0),j=a.style.display||j,k=r.css(a,"display"),ha([a]))),("inline"===k||"inline-block"===k&&null!=j)&&"none"===r.css(a,"float")&&(i||(m.done(function(){o.display=j}),null==j&&(k=o.display,j="none"===k?"":k)),o.display="inline-block")),c.overflow&&(o.overflow="hidden",m.always(function(){o.overflow=c.overflow[0],o.overflowX=c.overflow[1],o.overflowY=c.overflow[2]})),i=!1;for(d in n)i||(q?"hidden"in q&&(p=q.hidden):q=V.access(a,"fxshow",{display:j}),f&&(q.hidden=!p),p&&ha([a],!0),m.done(function(){p||ha([a]),V.remove(a,"fxshow");for(d in n)r.style(a,d,n[d])})),i=eb(p?q[d]:0,d,m),d in q||(q[d]=i.start,p&&(i.end=i.start,i.start=0))}}function gb(a,b){var c,d,e,f,g;for(c in a)if(d=r.camelCase(c),e=b[d],f=a[c],r.isArray(f)&&(e=f[1],f=a[c]=f[0]),c!==d&&(a[d]=f,delete a[c]),g=r.cssHooks[d],g&&"expand"in g){f=g.expand(f),delete a[d];for(c in f)c in a||(a[c]=f[c],b[c]=e)}else b[d]=e}function hb(a,b,c){var d,e,f=0,g=hb.prefilters.length,h=r.Deferred().always(function(){delete i.elem}),i=function(){if(e)return!1;for(var b=Za||cb(),c=Math.max(0,j.startTime+j.duration-b),d=c/j.duration||0,f=1-d,g=0,i=j.tweens.length;g<i;g++)j.tweens[g].run(f);return h.notifyWith(a,[j,f,c]),f<1&&i?c:(h.resolveWith(a,[j]),!1)},j=h.promise({elem:a,props:r.extend({},b),opts:r.extend(!0,{specialEasing:{},easing:r.easing._default},c),originalProperties:b,originalOptions:c,startTime:Za||cb(),duration:c.duration,tweens:[],createTween:function(b,c){var d=r.Tween(a,j.opts,b,c,j.opts.specialEasing[b]||j.opts.easing);return j.tweens.push(d),d},stop:function(b){var c=0,d=b?j.tweens.length:0;if(e)return this;for(e=!0;c<d;c++)j.tweens[c].run(1);return b?(h.notifyWith(a,[j,1,0]),h.resolveWith(a,[j,b])):h.rejectWith(a,[j,b]),this}}),k=j.props;for(gb(k,j.opts.specialEasing);f<g;f++)if(d=hb.prefilters[f].call(j,a,k,j.opts))return r.isFunction(d.stop)&&(r._queueHooks(j.elem,j.opts.queue).stop=r.proxy(d.stop,d)),d;return r.map(k,eb,j),r.isFunction(j.opts.start)&&j.opts.start.call(a,j),r.fx.timer(r.extend(i,{elem:a,anim:j,queue:j.opts.queue})),j.progress(j.opts.progress).done(j.opts.done,j.opts.complete).fail(j.opts.fail).always(j.opts.always)}r.Animation=r.extend(hb,{tweeners:{"*":[function(a,b){var c=this.createTween(a,b);return ea(c.elem,a,aa.exec(b),c),c}]},tweener:function(a,b){r.isFunction(a)?(b=a,a=["*"]):a=a.match(K);for(var c,d=0,e=a.length;d<e;d++)c=a[d],hb.tweeners[c]=hb.tweeners[c]||[],hb.tweeners[c].unshift(b)},prefilters:[fb],prefilter:function(a,b){b?hb.prefilters.unshift(a):hb.prefilters.push(a)}}),r.speed=function(a,b,c){var e=a&&"object"==typeof a?r.extend({},a):{complete:c||!c&&b||r.isFunction(a)&&a,duration:a,easing:c&&b||b&&!r.isFunction(b)&&b};return r.fx.off||d.hidden?e.duration=0:"number"!=typeof e.duration&&(e.duration in r.fx.speeds?e.duration=r.fx.speeds[e.duration]:e.duration=r.fx.speeds._default),null!=e.queue&&e.queue!==!0||(e.queue="fx"),e.old=e.complete,e.complete=function(){r.isFunction(e.old)&&e.old.call(this),e.queue&&r.dequeue(this,e.queue)},e},r.fn.extend({fadeTo:function(a,b,c,d){return this.filter(ca).css("opacity",0).show().end().animate({opacity:b},a,c,d)},animate:function(a,b,c,d){var e=r.isEmptyObject(a),f=r.speed(b,c,d),g=function(){var b=hb(this,r.extend({},a),f);(e||V.get(this,"finish"))&&b.stop(!0)};return g.finish=g,e||f.queue===!1?this.each(g):this.queue(f.queue,g)},stop:function(a,b,c){var d=function(a){var b=a.stop;delete a.stop,b(c)};return"string"!=typeof a&&(c=b,b=a,a=void 0),b&&a!==!1&&this.queue(a||"fx",[]),this.each(function(){var b=!0,e=null!=a&&a+"queueHooks",f=r.timers,g=V.get(this);if(e)g[e]&&g[e].stop&&d(g[e]);else for(e in g)g[e]&&g[e].stop&&ab.test(e)&&d(g[e]);for(e=f.length;e--;)f[e].elem!==this||null!=a&&f[e].queue!==a||(f[e].anim.stop(c),b=!1,f.splice(e,1));!b&&c||r.dequeue(this,a)})},finish:function(a){return a!==!1&&(a=a||"fx"),this.each(function(){var b,c=V.get(this),d=c[a+"queue"],e=c[a+"queueHooks"],f=r.timers,g=d?d.length:0;for(c.finish=!0,r.queue(this,a,[]),e&&e.stop&&e.stop.call(this,!0),b=f.length;b--;)f[b].elem===this&&f[b].queue===a&&(f[b].anim.stop(!0),f.splice(b,1));for(b=0;b<g;b++)d[b]&&d[b].finish&&d[b].finish.call(this);delete c.finish})}}),r.each(["toggle","show","hide"],function(a,b){var c=r.fn[b];r.fn[b]=function(a,d,e){return null==a||"boolean"==typeof a?c.apply(this,arguments):this.animate(db(b,!0),a,d,e)}}),r.each({slideDown:db("show"),slideUp:db("hide"),slideToggle:db("toggle"),fadeIn:{opacity:"show"},fadeOut:{opacity:"hide"},fadeToggle:{opacity:"toggle"}},function(a,b){r.fn[a]=function(a,c,d){return this.animate(b,a,c,d)}}),r.timers=[],r.fx.tick=function(){var a,b=0,c=r.timers;for(Za=r.now();b<c.length;b++)a=c[b],a()||c[b]!==a||c.splice(b--,1);c.length||r.fx.stop(),Za=void 0},r.fx.timer=function(a){r.timers.push(a),a()?r.fx.start():r.timers.pop()},r.fx.interval=13,r.fx.start=function(){$a||($a=a.requestAnimationFrame?a.requestAnimationFrame(bb):a.setInterval(r.fx.tick,r.fx.interval))},r.fx.stop=function(){a.cancelAnimationFrame?a.cancelAnimationFrame($a):a.clearInterval($a),$a=null},r.fx.speeds={slow:600,fast:200,_default:400},r.fn.delay=function(b,c){return b=r.fx?r.fx.speeds[b]||b:b,c=c||"fx",this.queue(c,function(c,d){var e=a.setTimeout(c,b);d.stop=function(){a.clearTimeout(e)}})},function(){var a=d.createElement("input"),b=d.createElement("select"),c=b.appendChild(d.createElement("option"));a.type="checkbox",o.checkOn=""!==a.value,o.optSelected=c.selected,a=d.createElement("input"),a.value="t",a.type="radio",o.radioValue="t"===a.value}();var ib,jb=r.expr.attrHandle;r.fn.extend({attr:function(a,b){return S(this,r.attr,a,b,arguments.length>1)},removeAttr:function(a){return this.each(function(){r.removeAttr(this,a)})}}),r.extend({attr:function(a,b,c){var d,e,f=a.nodeType;if(3!==f&&8!==f&&2!==f)return"undefined"==typeof a.getAttribute?r.prop(a,b,c):(1===f&&r.isXMLDoc(a)||(e=r.attrHooks[b.toLowerCase()]||(r.expr.match.bool.test(b)?ib:void 0)),
+	void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:(a.setAttribute(b,c+""),c):e&&"get"in e&&null!==(d=e.get(a,b))?d:(d=r.find.attr(a,b),null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"===b&&r.nodeName(a,"input")){var c=a.value;return a.setAttribute("type",b),c&&(a.value=c),b}}}},removeAttr:function(a,b){var c,d=0,e=b&&b.match(K);if(e&&1===a.nodeType)while(c=e[d++])a.removeAttribute(c)}}),ib={set:function(a,b,c){return b===!1?r.removeAttr(a,c):a.setAttribute(c,c),c}},r.each(r.expr.match.bool.source.match(/\w+/g),function(a,b){var c=jb[b]||r.find.attr;jb[b]=function(a,b,d){var e,f,g=b.toLowerCase();return d||(f=jb[g],jb[g]=e,e=null!=c(a,b,d)?g:null,jb[g]=f),e}});var kb=/^(?:input|select|textarea|button)$/i,lb=/^(?:a|area)$/i;r.fn.extend({prop:function(a,b){return S(this,r.prop,a,b,arguments.length>1)},removeProp:function(a){return this.each(function(){delete this[r.propFix[a]||a]})}}),r.extend({prop:function(a,b,c){var d,e,f=a.nodeType;if(3!==f&&8!==f&&2!==f)return 1===f&&r.isXMLDoc(a)||(b=r.propFix[b]||b,e=r.propHooks[b]),void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!==(d=e.get(a,b))?d:a[b]},propHooks:{tabIndex:{get:function(a){var b=r.find.attr(a,"tabindex");return b?parseInt(b,10):kb.test(a.nodeName)||lb.test(a.nodeName)&&a.href?0:-1}}},propFix:{"for":"htmlFor","class":"className"}}),o.optSelected||(r.propHooks.selected={get:function(a){var b=a.parentNode;return b&&b.parentNode&&b.parentNode.selectedIndex,null},set:function(a){var b=a.parentNode;b&&(b.selectedIndex,b.parentNode&&b.parentNode.selectedIndex)}}),r.each(["tabIndex","readOnly","maxLength","cellSpacing","cellPadding","rowSpan","colSpan","useMap","frameBorder","contentEditable"],function(){r.propFix[this.toLowerCase()]=this});function mb(a){var b=a.match(K)||[];return b.join(" ")}function nb(a){return a.getAttribute&&a.getAttribute("class")||""}r.fn.extend({addClass:function(a){var b,c,d,e,f,g,h,i=0;if(r.isFunction(a))return this.each(function(b){r(this).addClass(a.call(this,b,nb(this)))});if("string"==typeof a&&a){b=a.match(K)||[];while(c=this[i++])if(e=nb(c),d=1===c.nodeType&&" "+mb(e)+" "){g=0;while(f=b[g++])d.indexOf(" "+f+" ")<0&&(d+=f+" ");h=mb(d),e!==h&&c.setAttribute("class",h)}}return this},removeClass:function(a){var b,c,d,e,f,g,h,i=0;if(r.isFunction(a))return this.each(function(b){r(this).removeClass(a.call(this,b,nb(this)))});if(!arguments.length)return this.attr("class","");if("string"==typeof a&&a){b=a.match(K)||[];while(c=this[i++])if(e=nb(c),d=1===c.nodeType&&" "+mb(e)+" "){g=0;while(f=b[g++])while(d.indexOf(" "+f+" ")>-1)d=d.replace(" "+f+" "," ");h=mb(d),e!==h&&c.setAttribute("class",h)}}return this},toggleClass:function(a,b){var c=typeof a;return"boolean"==typeof b&&"string"===c?b?this.addClass(a):this.removeClass(a):r.isFunction(a)?this.each(function(c){r(this).toggleClass(a.call(this,c,nb(this),b),b)}):this.each(function(){var b,d,e,f;if("string"===c){d=0,e=r(this),f=a.match(K)||[];while(b=f[d++])e.hasClass(b)?e.removeClass(b):e.addClass(b)}else void 0!==a&&"boolean"!==c||(b=nb(this),b&&V.set(this,"__className__",b),this.setAttribute&&this.setAttribute("class",b||a===!1?"":V.get(this,"__className__")||""))})},hasClass:function(a){var b,c,d=0;b=" "+a+" ";while(c=this[d++])if(1===c.nodeType&&(" "+mb(nb(c))+" ").indexOf(b)>-1)return!0;return!1}});var ob=/\r/g;r.fn.extend({val:function(a){var b,c,d,e=this[0];{if(arguments.length)return d=r.isFunction(a),this.each(function(c){var e;1===this.nodeType&&(e=d?a.call(this,c,r(this).val()):a,null==e?e="":"number"==typeof e?e+="":r.isArray(e)&&(e=r.map(e,function(a){return null==a?"":a+""})),b=r.valHooks[this.type]||r.valHooks[this.nodeName.toLowerCase()],b&&"set"in b&&void 0!==b.set(this,e,"value")||(this.value=e))});if(e)return b=r.valHooks[e.type]||r.valHooks[e.nodeName.toLowerCase()],b&&"get"in b&&void 0!==(c=b.get(e,"value"))?c:(c=e.value,"string"==typeof c?c.replace(ob,""):null==c?"":c)}}}),r.extend({valHooks:{option:{get:function(a){var b=r.find.attr(a,"value");return null!=b?b:mb(r.text(a))}},select:{get:function(a){var b,c,d,e=a.options,f=a.selectedIndex,g="select-one"===a.type,h=g?null:[],i=g?f+1:e.length;for(d=f<0?i:g?f:0;d<i;d++)if(c=e[d],(c.selected||d===f)&&!c.disabled&&(!c.parentNode.disabled||!r.nodeName(c.parentNode,"optgroup"))){if(b=r(c).val(),g)return b;h.push(b)}return h},set:function(a,b){var c,d,e=a.options,f=r.makeArray(b),g=e.length;while(g--)d=e[g],(d.selected=r.inArray(r.valHooks.option.get(d),f)>-1)&&(c=!0);return c||(a.selectedIndex=-1),f}}}}),r.each(["radio","checkbox"],function(){r.valHooks[this]={set:function(a,b){if(r.isArray(b))return a.checked=r.inArray(r(a).val(),b)>-1}},o.checkOn||(r.valHooks[this].get=function(a){return null===a.getAttribute("value")?"on":a.value})});var pb=/^(?:focusinfocus|focusoutblur)$/;r.extend(r.event,{trigger:function(b,c,e,f){var g,h,i,j,k,m,n,o=[e||d],p=l.call(b,"type")?b.type:b,q=l.call(b,"namespace")?b.namespace.split("."):[];if(h=i=e=e||d,3!==e.nodeType&&8!==e.nodeType&&!pb.test(p+r.event.triggered)&&(p.indexOf(".")>-1&&(q=p.split("."),p=q.shift(),q.sort()),k=p.indexOf(":")<0&&"on"+p,b=b[r.expando]?b:new r.Event(p,"object"==typeof b&&b),b.isTrigger=f?2:3,b.namespace=q.join("."),b.rnamespace=b.namespace?new RegExp("(^|\\.)"+q.join("\\.(?:.*\\.|)")+"(\\.|$)"):null,b.result=void 0,b.target||(b.target=e),c=null==c?[b]:r.makeArray(c,[b]),n=r.event.special[p]||{},f||!n.trigger||n.trigger.apply(e,c)!==!1)){if(!f&&!n.noBubble&&!r.isWindow(e)){for(j=n.delegateType||p,pb.test(j+p)||(h=h.parentNode);h;h=h.parentNode)o.push(h),i=h;i===(e.ownerDocument||d)&&o.push(i.defaultView||i.parentWindow||a)}g=0;while((h=o[g++])&&!b.isPropagationStopped())b.type=g>1?j:n.bindType||p,m=(V.get(h,"events")||{})[b.type]&&V.get(h,"handle"),m&&m.apply(h,c),m=k&&h[k],m&&m.apply&&T(h)&&(b.result=m.apply(h,c),b.result===!1&&b.preventDefault());return b.type=p,f||b.isDefaultPrevented()||n._default&&n._default.apply(o.pop(),c)!==!1||!T(e)||k&&r.isFunction(e[p])&&!r.isWindow(e)&&(i=e[k],i&&(e[k]=null),r.event.triggered=p,e[p](),r.event.triggered=void 0,i&&(e[k]=i)),b.result}},simulate:function(a,b,c){var d=r.extend(new r.Event,c,{type:a,isSimulated:!0});r.event.trigger(d,null,b)}}),r.fn.extend({trigger:function(a,b){return this.each(function(){r.event.trigger(a,b,this)})},triggerHandler:function(a,b){var c=this[0];if(c)return r.event.trigger(a,b,c,!0)}}),r.each("blur focus focusin focusout resize scroll click dblclick mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave change select submit keydown keypress keyup contextmenu".split(" "),function(a,b){r.fn[b]=function(a,c){return arguments.length>0?this.on(b,null,a,c):this.trigger(b)}}),r.fn.extend({hover:function(a,b){return this.mouseenter(a).mouseleave(b||a)}}),o.focusin="onfocusin"in a,o.focusin||r.each({focus:"focusin",blur:"focusout"},function(a,b){var c=function(a){r.event.simulate(b,a.target,r.event.fix(a))};r.event.special[b]={setup:function(){var d=this.ownerDocument||this,e=V.access(d,b);e||d.addEventListener(a,c,!0),V.access(d,b,(e||0)+1)},teardown:function(){var d=this.ownerDocument||this,e=V.access(d,b)-1;e?V.access(d,b,e):(d.removeEventListener(a,c,!0),V.remove(d,b))}}});var qb=a.location,rb=r.now(),sb=/\?/;r.parseXML=function(b){var c;if(!b||"string"!=typeof b)return null;try{c=(new a.DOMParser).parseFromString(b,"text/xml")}catch(d){c=void 0}return c&&!c.getElementsByTagName("parsererror").length||r.error("Invalid XML: "+b),c};var tb=/\[\]$/,ub=/\r?\n/g,vb=/^(?:submit|button|image|reset|file)$/i,wb=/^(?:input|select|textarea|keygen)/i;function xb(a,b,c,d){var e;if(r.isArray(b))r.each(b,function(b,e){c||tb.test(a)?d(a,e):xb(a+"["+("object"==typeof e&&null!=e?b:"")+"]",e,c,d)});else if(c||"object"!==r.type(b))d(a,b);else for(e in b)xb(a+"["+e+"]",b[e],c,d)}r.param=function(a,b){var c,d=[],e=function(a,b){var c=r.isFunction(b)?b():b;d[d.length]=encodeURIComponent(a)+"="+encodeURIComponent(null==c?"":c)};if(r.isArray(a)||a.jquery&&!r.isPlainObject(a))r.each(a,function(){e(this.name,this.value)});else for(c in a)xb(c,a[c],b,e);return d.join("&")},r.fn.extend({serialize:function(){return r.param(this.serializeArray())},serializeArray:function(){return this.map(function(){var a=r.prop(this,"elements");return a?r.makeArray(a):this}).filter(function(){var a=this.type;return this.name&&!r(this).is(":disabled")&&wb.test(this.nodeName)&&!vb.test(a)&&(this.checked||!ia.test(a))}).map(function(a,b){var c=r(this).val();return null==c?null:r.isArray(c)?r.map(c,function(a){return{name:b.name,value:a.replace(ub,"\r\n")}}):{name:b.name,value:c.replace(ub,"\r\n")}}).get()}});var yb=/%20/g,zb=/#.*$/,Ab=/([?&])_=[^&]*/,Bb=/^(.*?):[ \t]*([^\r\n]*)$/gm,Cb=/^(?:about|app|app-storage|.+-extension|file|res|widget):$/,Db=/^(?:GET|HEAD)$/,Eb=/^\/\//,Fb={},Gb={},Hb="*/".concat("*"),Ib=d.createElement("a");Ib.href=qb.href;function Jb(a){return function(b,c){"string"!=typeof b&&(c=b,b="*");var d,e=0,f=b.toLowerCase().match(K)||[];if(r.isFunction(c))while(d=f[e++])"+"===d[0]?(d=d.slice(1)||"*",(a[d]=a[d]||[]).unshift(c)):(a[d]=a[d]||[]).push(c)}}function Kb(a,b,c,d){var e={},f=a===Gb;function g(h){var i;return e[h]=!0,r.each(a[h]||[],function(a,h){var j=h(b,c,d);return"string"!=typeof j||f||e[j]?f?!(i=j):void 0:(b.dataTypes.unshift(j),g(j),!1)}),i}return g(b.dataTypes[0])||!e["*"]&&g("*")}function Lb(a,b){var c,d,e=r.ajaxSettings.flatOptions||{};for(c in b)void 0!==b[c]&&((e[c]?a:d||(d={}))[c]=b[c]);return d&&r.extend(!0,a,d),a}function Mb(a,b,c){var d,e,f,g,h=a.contents,i=a.dataTypes;while("*"===i[0])i.shift(),void 0===d&&(d=a.mimeType||b.getResponseHeader("Content-Type"));if(d)for(e in h)if(h[e]&&h[e].test(d)){i.unshift(e);break}if(i[0]in c)f=i[0];else{for(e in c){if(!i[0]||a.converters[e+" "+i[0]]){f=e;break}g||(g=e)}f=f||g}if(f)return f!==i[0]&&i.unshift(f),c[f]}function Nb(a,b,c,d){var e,f,g,h,i,j={},k=a.dataTypes.slice();if(k[1])for(g in a.converters)j[g.toLowerCase()]=a.converters[g];f=k.shift();while(f)if(a.responseFields[f]&&(c[a.responseFields[f]]=b),!i&&d&&a.dataFilter&&(b=a.dataFilter(b,a.dataType)),i=f,f=k.shift())if("*"===f)f=i;else if("*"!==i&&i!==f){if(g=j[i+" "+f]||j["* "+f],!g)for(e in j)if(h=e.split(" "),h[1]===f&&(g=j[i+" "+h[0]]||j["* "+h[0]])){g===!0?g=j[e]:j[e]!==!0&&(f=h[0],k.unshift(h[1]));break}if(g!==!0)if(g&&a["throws"])b=g(b);else try{b=g(b)}catch(l){return{state:"parsererror",error:g?l:"No conversion from "+i+" to "+f}}}return{state:"success",data:b}}r.extend({active:0,lastModified:{},etag:{},ajaxSettings:{url:qb.href,type:"GET",isLocal:Cb.test(qb.protocol),global:!0,processData:!0,async:!0,contentType:"application/x-www-form-urlencoded; charset=UTF-8",accepts:{"*":Hb,text:"text/plain",html:"text/html",xml:"application/xml, text/xml",json:"application/json, text/javascript"},contents:{xml:/\bxml\b/,html:/\bhtml/,json:/\bjson\b/},responseFields:{xml:"responseXML",text:"responseText",json:"responseJSON"},converters:{"* text":String,"text html":!0,"text json":JSON.parse,"text xml":r.parseXML},flatOptions:{url:!0,context:!0}},ajaxSetup:function(a,b){return b?Lb(Lb(a,r.ajaxSettings),b):Lb(r.ajaxSettings,a)},ajaxPrefilter:Jb(Fb),ajaxTransport:Jb(Gb),ajax:function(b,c){"object"==typeof b&&(c=b,b=void 0),c=c||{};var e,f,g,h,i,j,k,l,m,n,o=r.ajaxSetup({},c),p=o.context||o,q=o.context&&(p.nodeType||p.jquery)?r(p):r.event,s=r.Deferred(),t=r.Callbacks("once memory"),u=o.statusCode||{},v={},w={},x="canceled",y={readyState:0,getResponseHeader:function(a){var b;if(k){if(!h){h={};while(b=Bb.exec(g))h[b[1].toLowerCase()]=b[2]}b=h[a.toLowerCase()]}return null==b?null:b},getAllResponseHeaders:function(){return k?g:null},setRequestHeader:function(a,b){return null==k&&(a=w[a.toLowerCase()]=w[a.toLowerCase()]||a,v[a]=b),this},overrideMimeType:function(a){return null==k&&(o.mimeType=a),this},statusCode:function(a){var b;if(a)if(k)y.always(a[y.status]);else for(b in a)u[b]=[u[b],a[b]];return this},abort:function(a){var b=a||x;return e&&e.abort(b),A(0,b),this}};if(s.promise(y),o.url=((b||o.url||qb.href)+"").replace(Eb,qb.protocol+"//"),o.type=c.method||c.type||o.method||o.type,o.dataTypes=(o.dataType||"*").toLowerCase().match(K)||[""],null==o.crossDomain){j=d.createElement("a");try{j.href=o.url,j.href=j.href,o.crossDomain=Ib.protocol+"//"+Ib.host!=j.protocol+"//"+j.host}catch(z){o.crossDomain=!0}}if(o.data&&o.processData&&"string"!=typeof o.data&&(o.data=r.param(o.data,o.traditional)),Kb(Fb,o,c,y),k)return y;l=r.event&&o.global,l&&0===r.active++&&r.event.trigger("ajaxStart"),o.type=o.type.toUpperCase(),o.hasContent=!Db.test(o.type),f=o.url.replace(zb,""),o.hasContent?o.data&&o.processData&&0===(o.contentType||"").indexOf("application/x-www-form-urlencoded")&&(o.data=o.data.replace(yb,"+")):(n=o.url.slice(f.length),o.data&&(f+=(sb.test(f)?"&":"?")+o.data,delete o.data),o.cache===!1&&(f=f.replace(Ab,"$1"),n=(sb.test(f)?"&":"?")+"_="+rb++ +n),o.url=f+n),o.ifModified&&(r.lastModified[f]&&y.setRequestHeader("If-Modified-Since",r.lastModified[f]),r.etag[f]&&y.setRequestHeader("If-None-Match",r.etag[f])),(o.data&&o.hasContent&&o.contentType!==!1||c.contentType)&&y.setRequestHeader("Content-Type",o.contentType),y.setRequestHeader("Accept",o.dataTypes[0]&&o.accepts[o.dataTypes[0]]?o.accepts[o.dataTypes[0]]+("*"!==o.dataTypes[0]?", "+Hb+"; q=0.01":""):o.accepts["*"]);for(m in o.headers)y.setRequestHeader(m,o.headers[m]);if(o.beforeSend&&(o.beforeSend.call(p,y,o)===!1||k))return y.abort();if(x="abort",t.add(o.complete),y.done(o.success),y.fail(o.error),e=Kb(Gb,o,c,y)){if(y.readyState=1,l&&q.trigger("ajaxSend",[y,o]),k)return y;o.async&&o.timeout>0&&(i=a.setTimeout(function(){y.abort("timeout")},o.timeout));try{k=!1,e.send(v,A)}catch(z){if(k)throw z;A(-1,z)}}else A(-1,"No Transport");function A(b,c,d,h){var j,m,n,v,w,x=c;k||(k=!0,i&&a.clearTimeout(i),e=void 0,g=h||"",y.readyState=b>0?4:0,j=b>=200&&b<300||304===b,d&&(v=Mb(o,y,d)),v=Nb(o,v,y,j),j?(o.ifModified&&(w=y.getResponseHeader("Last-Modified"),w&&(r.lastModified[f]=w),w=y.getResponseHeader("etag"),w&&(r.etag[f]=w)),204===b||"HEAD"===o.type?x="nocontent":304===b?x="notmodified":(x=v.state,m=v.data,n=v.error,j=!n)):(n=x,!b&&x||(x="error",b<0&&(b=0))),y.status=b,y.statusText=(c||x)+"",j?s.resolveWith(p,[m,x,y]):s.rejectWith(p,[y,x,n]),y.statusCode(u),u=void 0,l&&q.trigger(j?"ajaxSuccess":"ajaxError",[y,o,j?m:n]),t.fireWith(p,[y,x]),l&&(q.trigger("ajaxComplete",[y,o]),--r.active||r.event.trigger("ajaxStop")))}return y},getJSON:function(a,b,c){return r.get(a,b,c,"json")},getScript:function(a,b){return r.get(a,void 0,b,"script")}}),r.each(["get","post"],function(a,b){r[b]=function(a,c,d,e){return r.isFunction(c)&&(e=e||d,d=c,c=void 0),r.ajax(r.extend({url:a,type:b,dataType:e,data:c,success:d},r.isPlainObject(a)&&a))}}),r._evalUrl=function(a){return r.ajax({url:a,type:"GET",dataType:"script",cache:!0,async:!1,global:!1,"throws":!0})},r.fn.extend({wrapAll:function(a){var b;return this[0]&&(r.isFunction(a)&&(a=a.call(this[0])),b=r(a,this[0].ownerDocument).eq(0).clone(!0),this[0].parentNode&&b.insertBefore(this[0]),b.map(function(){var a=this;while(a.firstElementChild)a=a.firstElementChild;return a}).append(this)),this},wrapInner:function(a){return r.isFunction(a)?this.each(function(b){r(this).wrapInner(a.call(this,b))}):this.each(function(){var b=r(this),c=b.contents();c.length?c.wrapAll(a):b.append(a)})},wrap:function(a){var b=r.isFunction(a);return this.each(function(c){r(this).wrapAll(b?a.call(this,c):a)})},unwrap:function(a){return this.parent(a).not("body").each(function(){r(this).replaceWith(this.childNodes)}),this}}),r.expr.pseudos.hidden=function(a){return!r.expr.pseudos.visible(a)},r.expr.pseudos.visible=function(a){return!!(a.offsetWidth||a.offsetHeight||a.getClientRects().length)},r.ajaxSettings.xhr=function(){try{return new a.XMLHttpRequest}catch(b){}};var Ob={0:200,1223:204},Pb=r.ajaxSettings.xhr();o.cors=!!Pb&&"withCredentials"in Pb,o.ajax=Pb=!!Pb,r.ajaxTransport(function(b){var c,d;if(o.cors||Pb&&!b.crossDomain)return{send:function(e,f){var g,h=b.xhr();if(h.open(b.type,b.url,b.async,b.username,b.password),b.xhrFields)for(g in b.xhrFields)h[g]=b.xhrFields[g];b.mimeType&&h.overrideMimeType&&h.overrideMimeType(b.mimeType),b.crossDomain||e["X-Requested-With"]||(e["X-Requested-With"]="XMLHttpRequest");for(g in e)h.setRequestHeader(g,e[g]);c=function(a){return function(){c&&(c=d=h.onload=h.onerror=h.onabort=h.onreadystatechange=null,"abort"===a?h.abort():"error"===a?"number"!=typeof h.status?f(0,"error"):f(h.status,h.statusText):f(Ob[h.status]||h.status,h.statusText,"text"!==(h.responseType||"text")||"string"!=typeof h.responseText?{binary:h.response}:{text:h.responseText},h.getAllResponseHeaders()))}},h.onload=c(),d=h.onerror=c("error"),void 0!==h.onabort?h.onabort=d:h.onreadystatechange=function(){4===h.readyState&&a.setTimeout(function(){c&&d()})},c=c("abort");try{h.send(b.hasContent&&b.data||null)}catch(i){if(c)throw i}},abort:function(){c&&c()}}}),r.ajaxPrefilter(function(a){a.crossDomain&&(a.contents.script=!1)}),r.ajaxSetup({accepts:{script:"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript"},contents:{script:/\b(?:java|ecma)script\b/},converters:{"text script":function(a){return r.globalEval(a),a}}}),r.ajaxPrefilter("script",function(a){void 0===a.cache&&(a.cache=!1),a.crossDomain&&(a.type="GET")}),r.ajaxTransport("script",function(a){if(a.crossDomain){var b,c;return{send:function(e,f){b=r("<script>").prop({charset:a.scriptCharset,src:a.url}).on("load error",c=function(a){b.remove(),c=null,a&&f("error"===a.type?404:200,a.type)}),d.head.appendChild(b[0])},abort:function(){c&&c()}}}});var Qb=[],Rb=/(=)\?(?=&|$)|\?\?/;r.ajaxSetup({jsonp:"callback",jsonpCallback:function(){var a=Qb.pop()||r.expando+"_"+rb++;return this[a]=!0,a}}),r.ajaxPrefilter("json jsonp",function(b,c,d){var e,f,g,h=b.jsonp!==!1&&(Rb.test(b.url)?"url":"string"==typeof b.data&&0===(b.contentType||"").indexOf("application/x-www-form-urlencoded")&&Rb.test(b.data)&&"data");if(h||"jsonp"===b.dataTypes[0])return e=b.jsonpCallback=r.isFunction(b.jsonpCallback)?b.jsonpCallback():b.jsonpCallback,h?b[h]=b[h].replace(Rb,"$1"+e):b.jsonp!==!1&&(b.url+=(sb.test(b.url)?"&":"?")+b.jsonp+"="+e),b.converters["script json"]=function(){return g||r.error(e+" was not called"),g[0]},b.dataTypes[0]="json",f=a[e],a[e]=function(){g=arguments},d.always(function(){void 0===f?r(a).removeProp(e):a[e]=f,b[e]&&(b.jsonpCallback=c.jsonpCallback,Qb.push(e)),g&&r.isFunction(f)&&f(g[0]),g=f=void 0}),"script"}),o.createHTMLDocument=function(){var a=d.implementation.createHTMLDocument("").body;return a.innerHTML="<form></form><form></form>",2===a.childNodes.length}(),r.parseHTML=function(a,b,c){if("string"!=typeof a)return[];"boolean"==typeof b&&(c=b,b=!1);var e,f,g;return b||(o.createHTMLDocument?(b=d.implementation.createHTMLDocument(""),e=b.createElement("base"),e.href=d.location.href,b.head.appendChild(e)):b=d),f=B.exec(a),g=!c&&[],f?[b.createElement(f[1])]:(f=pa([a],b,g),g&&g.length&&r(g).remove(),r.merge([],f.childNodes))},r.fn.load=function(a,b,c){var d,e,f,g=this,h=a.indexOf(" ");return h>-1&&(d=mb(a.slice(h)),a=a.slice(0,h)),r.isFunction(b)?(c=b,b=void 0):b&&"object"==typeof b&&(e="POST"),g.length>0&&r.ajax({url:a,type:e||"GET",dataType:"html",data:b}).done(function(a){f=arguments,g.html(d?r("<div>").append(r.parseHTML(a)).find(d):a)}).always(c&&function(a,b){g.each(function(){c.apply(this,f||[a.responseText,b,a])})}),this},r.each(["ajaxStart","ajaxStop","ajaxComplete","ajaxError","ajaxSuccess","ajaxSend"],function(a,b){r.fn[b]=function(a){return this.on(b,a)}}),r.expr.pseudos.animated=function(a){return r.grep(r.timers,function(b){return a===b.elem}).length};function Sb(a){return r.isWindow(a)?a:9===a.nodeType&&a.defaultView}r.offset={setOffset:function(a,b,c){var d,e,f,g,h,i,j,k=r.css(a,"position"),l=r(a),m={};"static"===k&&(a.style.position="relative"),h=l.offset(),f=r.css(a,"top"),i=r.css(a,"left"),j=("absolute"===k||"fixed"===k)&&(f+i).indexOf("auto")>-1,j?(d=l.position(),g=d.top,e=d.left):(g=parseFloat(f)||0,e=parseFloat(i)||0),r.isFunction(b)&&(b=b.call(a,c,r.extend({},h))),null!=b.top&&(m.top=b.top-h.top+g),null!=b.left&&(m.left=b.left-h.left+e),"using"in b?b.using.call(a,m):l.css(m)}},r.fn.extend({offset:function(a){if(arguments.length)return void 0===a?this:this.each(function(b){r.offset.setOffset(this,a,b)});var b,c,d,e,f=this[0];if(f)return f.getClientRects().length?(d=f.getBoundingClientRect(),d.width||d.height?(e=f.ownerDocument,c=Sb(e),b=e.documentElement,{top:d.top+c.pageYOffset-b.clientTop,left:d.left+c.pageXOffset-b.clientLeft}):d):{top:0,left:0}},position:function(){if(this[0]){var a,b,c=this[0],d={top:0,left:0};return"fixed"===r.css(c,"position")?b=c.getBoundingClientRect():(a=this.offsetParent(),b=this.offset(),r.nodeName(a[0],"html")||(d=a.offset()),d={top:d.top+r.css(a[0],"borderTopWidth",!0),left:d.left+r.css(a[0],"borderLeftWidth",!0)}),{top:b.top-d.top-r.css(c,"marginTop",!0),left:b.left-d.left-r.css(c,"marginLeft",!0)}}},offsetParent:function(){return this.map(function(){var a=this.offsetParent;while(a&&"static"===r.css(a,"position"))a=a.offsetParent;return a||qa})}}),r.each({scrollLeft:"pageXOffset",scrollTop:"pageYOffset"},function(a,b){var c="pageYOffset"===b;r.fn[a]=function(d){return S(this,function(a,d,e){var f=Sb(a);return void 0===e?f?f[b]:a[d]:void(f?f.scrollTo(c?f.pageXOffset:e,c?e:f.pageYOffset):a[d]=e)},a,d,arguments.length)}}),r.each(["top","left"],function(a,b){r.cssHooks[b]=Oa(o.pixelPosition,function(a,c){if(c)return c=Na(a,b),La.test(c)?r(a).position()[b]+"px":c})}),r.each({Height:"height",Width:"width"},function(a,b){r.each({padding:"inner"+a,content:b,"":"outer"+a},function(c,d){r.fn[d]=function(e,f){var g=arguments.length&&(c||"boolean"!=typeof e),h=c||(e===!0||f===!0?"margin":"border");return S(this,function(b,c,e){var f;return r.isWindow(b)?0===d.indexOf("outer")?b["inner"+a]:b.document.documentElement["client"+a]:9===b.nodeType?(f=b.documentElement,Math.max(b.body["scroll"+a],f["scroll"+a],b.body["offset"+a],f["offset"+a],f["client"+a])):void 0===e?r.css(b,c,h):r.style(b,c,e,h)},b,g?e:void 0,g)}})}),r.fn.extend({bind:function(a,b,c){return this.on(a,null,b,c)},unbind:function(a,b){return this.off(a,null,b)},delegate:function(a,b,c,d){return this.on(b,a,c,d)},undelegate:function(a,b,c){return 1===arguments.length?this.off(a,"**"):this.off(b,a||"**",c)}}),r.parseJSON=JSON.parse,"function"=="function"&&__webpack_require__(3)&&!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function(){return r}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));var Tb=a.jQuery,Ub=a.$;return r.noConflict=function(b){return a.$===r&&(a.$=Ub),b&&a.jQuery===r&&(a.jQuery=Tb),r},b||(a.jQuery=a.$=r),r});
+
 
 /***/ },
 /* 3 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["$"] = __webpack_require__(4);
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {module.exports = __webpack_amd_options__;
+
+	/* WEBPACK VAR INJECTION */}.call(exports, {}))
 
 /***/ },
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*eslint-disable no-unused-vars*/
-	/*!
-	 * jQuery JavaScript Library v3.1.0
+	/* WEBPACK VAR INJECTION */(function(jQuery) {(function($, undefined) {
+
+	/**
+	 * Unobtrusive scripting adapter for jQuery
+	 * https://github.com/rails/jquery-ujs
+	 *
+	 * Requires jQuery 1.8.0 or later.
+	 *
+	 * Released under the MIT license
+	 *
+	 */
+
+	  // Cut down on the number of issues from people inadvertently including jquery_ujs twice
+	  // by detecting and raising an error when it happens.
+	  'use strict';
+
+	  if ( $.rails !== undefined ) {
+	    $.error('jquery-ujs has already been loaded!');
+	  }
+
+	  // Shorthand to make it a little easier to call public rails functions from within rails.js
+	  var rails;
+	  var $document = $(document);
+
+	  $.rails = rails = {
+	    // Link elements bound by jquery-ujs
+	    linkClickSelector: 'a[data-confirm], a[data-method], a[data-remote]:not([disabled]), a[data-disable-with], a[data-disable]',
+
+	    // Button elements bound by jquery-ujs
+	    buttonClickSelector: 'button[data-remote]:not([form]):not(form button), button[data-confirm]:not([form]):not(form button)',
+
+	    // Select elements bound by jquery-ujs
+	    inputChangeSelector: 'select[data-remote], input[data-remote], textarea[data-remote]',
+
+	    // Form elements bound by jquery-ujs
+	    formSubmitSelector: 'form',
+
+	    // Form input elements bound by jquery-ujs
+	    formInputClickSelector: 'form input[type=submit], form input[type=image], form button[type=submit], form button:not([type]), input[type=submit][form], input[type=image][form], button[type=submit][form], button[form]:not([type])',
+
+	    // Form input elements disabled during form submission
+	    disableSelector: 'input[data-disable-with]:enabled, button[data-disable-with]:enabled, textarea[data-disable-with]:enabled, input[data-disable]:enabled, button[data-disable]:enabled, textarea[data-disable]:enabled',
+
+	    // Form input elements re-enabled after form submission
+	    enableSelector: 'input[data-disable-with]:disabled, button[data-disable-with]:disabled, textarea[data-disable-with]:disabled, input[data-disable]:disabled, button[data-disable]:disabled, textarea[data-disable]:disabled',
+
+	    // Form required input elements
+	    requiredInputSelector: 'input[name][required]:not([disabled]), textarea[name][required]:not([disabled])',
+
+	    // Form file input elements
+	    fileInputSelector: 'input[name][type=file]:not([disabled])',
+
+	    // Link onClick disable selector with possible reenable after remote submission
+	    linkDisableSelector: 'a[data-disable-with], a[data-disable]',
+
+	    // Button onClick disable selector with possible reenable after remote submission
+	    buttonDisableSelector: 'button[data-remote][data-disable-with], button[data-remote][data-disable]',
+
+	    // Up-to-date Cross-Site Request Forgery token
+	    csrfToken: function() {
+	     return $('meta[name=csrf-token]').attr('content');
+	    },
+
+	    // URL param that must contain the CSRF token
+	    csrfParam: function() {
+	     return $('meta[name=csrf-param]').attr('content');
+	    },
+
+	    // Make sure that every Ajax request sends the CSRF token
+	    CSRFProtection: function(xhr) {
+	      var token = rails.csrfToken();
+	      if (token) xhr.setRequestHeader('X-CSRF-Token', token);
+	    },
+
+	    // Make sure that all forms have actual up-to-date tokens (cached forms contain old ones)
+	    refreshCSRFTokens: function(){
+	      $('form input[name="' + rails.csrfParam() + '"]').val(rails.csrfToken());
+	    },
+
+	    // Triggers an event on an element and returns false if the event result is false
+	    fire: function(obj, name, data) {
+	      var event = $.Event(name);
+	      obj.trigger(event, data);
+	      return event.result !== false;
+	    },
+
+	    // Default confirm dialog, may be overridden with custom confirm dialog in $.rails.confirm
+	    confirm: function(message) {
+	      return confirm(message);
+	    },
+
+	    // Default ajax function, may be overridden with custom function in $.rails.ajax
+	    ajax: function(options) {
+	      return $.ajax(options);
+	    },
+
+	    // Default way to get an element's href. May be overridden at $.rails.href.
+	    href: function(element) {
+	      return element[0].href;
+	    },
+
+	    // Checks "data-remote" if true to handle the request through a XHR request.
+	    isRemote: function(element) {
+	      return element.data('remote') !== undefined && element.data('remote') !== false;
+	    },
+
+	    // Submits "remote" forms and links with ajax
+	    handleRemote: function(element) {
+	      var method, url, data, withCredentials, dataType, options;
+
+	      if (rails.fire(element, 'ajax:before')) {
+	        withCredentials = element.data('with-credentials') || null;
+	        dataType = element.data('type') || ($.ajaxSettings && $.ajaxSettings.dataType);
+
+	        if (element.is('form')) {
+	          method = element.data('ujs:submit-button-formmethod') || element.attr('method');
+	          url = element.data('ujs:submit-button-formaction') || element.attr('action');
+	          data = $(element[0]).serializeArray();
+	          // memoized value from clicked submit button
+	          var button = element.data('ujs:submit-button');
+	          if (button) {
+	            data.push(button);
+	            element.data('ujs:submit-button', null);
+	          }
+	          element.data('ujs:submit-button-formmethod', null);
+	          element.data('ujs:submit-button-formaction', null);
+	        } else if (element.is(rails.inputChangeSelector)) {
+	          method = element.data('method');
+	          url = element.data('url');
+	          data = element.serialize();
+	          if (element.data('params')) data = data + '&' + element.data('params');
+	        } else if (element.is(rails.buttonClickSelector)) {
+	          method = element.data('method') || 'get';
+	          url = element.data('url');
+	          data = element.serialize();
+	          if (element.data('params')) data = data + '&' + element.data('params');
+	        } else {
+	          method = element.data('method');
+	          url = rails.href(element);
+	          data = element.data('params') || null;
+	        }
+
+	        options = {
+	          type: method || 'GET', data: data, dataType: dataType,
+	          // stopping the "ajax:beforeSend" event will cancel the ajax request
+	          beforeSend: function(xhr, settings) {
+	            if (settings.dataType === undefined) {
+	              xhr.setRequestHeader('accept', '*/*;q=0.5, ' + settings.accepts.script);
+	            }
+	            if (rails.fire(element, 'ajax:beforeSend', [xhr, settings])) {
+	              element.trigger('ajax:send', xhr);
+	            } else {
+	              return false;
+	            }
+	          },
+	          success: function(data, status, xhr) {
+	            element.trigger('ajax:success', [data, status, xhr]);
+	          },
+	          complete: function(xhr, status) {
+	            element.trigger('ajax:complete', [xhr, status]);
+	          },
+	          error: function(xhr, status, error) {
+	            element.trigger('ajax:error', [xhr, status, error]);
+	          },
+	          crossDomain: rails.isCrossDomain(url)
+	        };
+
+	        // There is no withCredentials for IE6-8 when
+	        // "Enable native XMLHTTP support" is disabled
+	        if (withCredentials) {
+	          options.xhrFields = {
+	            withCredentials: withCredentials
+	          };
+	        }
+
+	        // Only pass url to `ajax` options if not blank
+	        if (url) { options.url = url; }
+
+	        return rails.ajax(options);
+	      } else {
+	        return false;
+	      }
+	    },
+
+	    // Determines if the request is a cross domain request.
+	    isCrossDomain: function(url) {
+	      var originAnchor = document.createElement('a');
+	      originAnchor.href = location.href;
+	      var urlAnchor = document.createElement('a');
+
+	      try {
+	        urlAnchor.href = url;
+	        // This is a workaround to a IE bug.
+	        urlAnchor.href = urlAnchor.href;
+
+	        // If URL protocol is false or is a string containing a single colon
+	        // *and* host are false, assume it is not a cross-domain request
+	        // (should only be the case for IE7 and IE compatibility mode).
+	        // Otherwise, evaluate protocol and host of the URL against the origin
+	        // protocol and host.
+	        return !(((!urlAnchor.protocol || urlAnchor.protocol === ':') && !urlAnchor.host) ||
+	          (originAnchor.protocol + '//' + originAnchor.host ===
+	            urlAnchor.protocol + '//' + urlAnchor.host));
+	      } catch (e) {
+	        // If there is an error parsing the URL, assume it is crossDomain.
+	        return true;
+	      }
+	    },
+
+	    // Handles "data-method" on links such as:
+	    // <a href="/users/5" data-method="delete" rel="nofollow" data-confirm="Are you sure?">Delete</a>
+	    handleMethod: function(link) {
+	      var href = rails.href(link),
+	        method = link.data('method'),
+	        target = link.attr('target'),
+	        csrfToken = rails.csrfToken(),
+	        csrfParam = rails.csrfParam(),
+	        form = $('<form method="post" action="' + href + '"></form>'),
+	        metadataInput = '<input name="_method" value="' + method + '" type="hidden" />';
+
+	      if (csrfParam !== undefined && csrfToken !== undefined && !rails.isCrossDomain(href)) {
+	        metadataInput += '<input name="' + csrfParam + '" value="' + csrfToken + '" type="hidden" />';
+	      }
+
+	      if (target) { form.attr('target', target); }
+
+	      form.hide().append(metadataInput).appendTo('body');
+	      form.submit();
+	    },
+
+	    // Helper function that returns form elements that match the specified CSS selector
+	    // If form is actually a "form" element this will return associated elements outside the from that have
+	    // the html form attribute set
+	    formElements: function(form, selector) {
+	      return form.is('form') ? $(form[0].elements).filter(selector) : form.find(selector);
+	    },
+
+	    /* Disables form elements:
+	      - Caches element value in 'ujs:enable-with' data store
+	      - Replaces element text with value of 'data-disable-with' attribute
+	      - Sets disabled property to true
+	    */
+	    disableFormElements: function(form) {
+	      rails.formElements(form, rails.disableSelector).each(function() {
+	        rails.disableFormElement($(this));
+	      });
+	    },
+
+	    disableFormElement: function(element) {
+	      var method, replacement;
+
+	      method = element.is('button') ? 'html' : 'val';
+	      replacement = element.data('disable-with');
+
+	      if (replacement !== undefined) {
+	        element.data('ujs:enable-with', element[method]());
+	        element[method](replacement);
+	      }
+
+	      element.prop('disabled', true);
+	      element.data('ujs:disabled', true);
+	    },
+
+	    /* Re-enables disabled form elements:
+	      - Replaces element text with cached value from 'ujs:enable-with' data store (created in `disableFormElements`)
+	      - Sets disabled property to false
+	    */
+	    enableFormElements: function(form) {
+	      rails.formElements(form, rails.enableSelector).each(function() {
+	        rails.enableFormElement($(this));
+	      });
+	    },
+
+	    enableFormElement: function(element) {
+	      var method = element.is('button') ? 'html' : 'val';
+	      if (element.data('ujs:enable-with') !== undefined) {
+	        element[method](element.data('ujs:enable-with'));
+	        element.removeData('ujs:enable-with'); // clean up cache
+	      }
+	      element.prop('disabled', false);
+	      element.removeData('ujs:disabled');
+	    },
+
+	   /* For 'data-confirm' attribute:
+	      - Fires `confirm` event
+	      - Shows the confirmation dialog
+	      - Fires the `confirm:complete` event
+
+	      Returns `true` if no function stops the chain and user chose yes; `false` otherwise.
+	      Attaching a handler to the element's `confirm` event that returns a `falsy` value cancels the confirmation dialog.
+	      Attaching a handler to the element's `confirm:complete` event that returns a `falsy` value makes this function
+	      return false. The `confirm:complete` event is fired whether or not the user answered true or false to the dialog.
+	   */
+	    allowAction: function(element) {
+	      var message = element.data('confirm'),
+	          answer = false, callback;
+	      if (!message) { return true; }
+
+	      if (rails.fire(element, 'confirm')) {
+	        try {
+	          answer = rails.confirm(message);
+	        } catch (e) {
+	          (console.error || console.log).call(console, e.stack || e);
+	        }
+	        callback = rails.fire(element, 'confirm:complete', [answer]);
+	      }
+	      return answer && callback;
+	    },
+
+	    // Helper function which checks for blank inputs in a form that match the specified CSS selector
+	    blankInputs: function(form, specifiedSelector, nonBlank) {
+	      var foundInputs = $(),
+	        input,
+	        valueToCheck,
+	        radiosForNameWithNoneSelected,
+	        radioName,
+	        selector = specifiedSelector || 'input,textarea',
+	        requiredInputs = form.find(selector),
+	        checkedRadioButtonNames = {};
+
+	      requiredInputs.each(function() {
+	        input = $(this);
+	        if (input.is('input[type=radio]')) {
+
+	          // Don't count unchecked required radio as blank if other radio with same name is checked,
+	          // regardless of whether same-name radio input has required attribute or not. The spec
+	          // states https://www.w3.org/TR/html5/forms.html#the-required-attribute
+	          radioName = input.attr('name');
+
+	          // Skip if we've already seen the radio with this name.
+	          if (!checkedRadioButtonNames[radioName]) {
+
+	            // If none checked
+	            if (form.find('input[type=radio]:checked[name="' + radioName + '"]').length === 0) {
+	              radiosForNameWithNoneSelected = form.find(
+	                'input[type=radio][name="' + radioName + '"]');
+	              foundInputs = foundInputs.add(radiosForNameWithNoneSelected);
+	            }
+
+	            // We only need to check each name once.
+	            checkedRadioButtonNames[radioName] = radioName;
+	          }
+	        } else {
+	          valueToCheck = input.is('input[type=checkbox],input[type=radio]') ? input.is(':checked') : !!input.val();
+	          if (valueToCheck === nonBlank) {
+	            foundInputs = foundInputs.add(input);
+	          }
+	        }
+	      });
+	      return foundInputs.length ? foundInputs : false;
+	    },
+
+	    // Helper function which checks for non-blank inputs in a form that match the specified CSS selector
+	    nonBlankInputs: function(form, specifiedSelector) {
+	      return rails.blankInputs(form, specifiedSelector, true); // true specifies nonBlank
+	    },
+
+	    // Helper function, needed to provide consistent behavior in IE
+	    stopEverything: function(e) {
+	      $(e.target).trigger('ujs:everythingStopped');
+	      e.stopImmediatePropagation();
+	      return false;
+	    },
+
+	    //  Replace element's html with the 'data-disable-with' after storing original html
+	    //  and prevent clicking on it
+	    disableElement: function(element) {
+	      var replacement = element.data('disable-with');
+
+	      if (replacement !== undefined) {
+	        element.data('ujs:enable-with', element.html()); // store enabled state
+	        element.html(replacement);
+	      }
+
+	      element.bind('click.railsDisable', function(e) { // prevent further clicking
+	        return rails.stopEverything(e);
+	      });
+	      element.data('ujs:disabled', true);
+	    },
+
+	    // Restore element to its original state which was disabled by 'disableElement' above
+	    enableElement: function(element) {
+	      if (element.data('ujs:enable-with') !== undefined) {
+	        element.html(element.data('ujs:enable-with')); // set to old enabled state
+	        element.removeData('ujs:enable-with'); // clean up cache
+	      }
+	      element.unbind('click.railsDisable'); // enable element
+	      element.removeData('ujs:disabled');
+	    }
+	  };
+
+	  if (rails.fire($document, 'rails:attachBindings')) {
+
+	    $.ajaxPrefilter(function(options, originalOptions, xhr){ if ( !options.crossDomain ) { rails.CSRFProtection(xhr); }});
+
+	    // This event works the same as the load event, except that it fires every
+	    // time the page is loaded.
+	    //
+	    // See https://github.com/rails/jquery-ujs/issues/357
+	    // See https://developer.mozilla.org/en-US/docs/Using_Firefox_1.5_caching
+	    $(window).on('pageshow.rails', function () {
+	      $($.rails.enableSelector).each(function () {
+	        var element = $(this);
+
+	        if (element.data('ujs:disabled')) {
+	          $.rails.enableFormElement(element);
+	        }
+	      });
+
+	      $($.rails.linkDisableSelector).each(function () {
+	        var element = $(this);
+
+	        if (element.data('ujs:disabled')) {
+	          $.rails.enableElement(element);
+	        }
+	      });
+	    });
+
+	    $document.on('ajax:complete', rails.linkDisableSelector, function() {
+	        rails.enableElement($(this));
+	    });
+
+	    $document.on('ajax:complete', rails.buttonDisableSelector, function() {
+	        rails.enableFormElement($(this));
+	    });
+
+	    $document.on('click.rails', rails.linkClickSelector, function(e) {
+	      var link = $(this), method = link.data('method'), data = link.data('params'), metaClick = e.metaKey || e.ctrlKey;
+	      if (!rails.allowAction(link)) return rails.stopEverything(e);
+
+	      if (!metaClick && link.is(rails.linkDisableSelector)) rails.disableElement(link);
+
+	      if (rails.isRemote(link)) {
+	        if (metaClick && (!method || method === 'GET') && !data) { return true; }
+
+	        var handleRemote = rails.handleRemote(link);
+	        // Response from rails.handleRemote() will either be false or a deferred object promise.
+	        if (handleRemote === false) {
+	          rails.enableElement(link);
+	        } else {
+	          handleRemote.fail( function() { rails.enableElement(link); } );
+	        }
+	        return false;
+
+	      } else if (method) {
+	        rails.handleMethod(link);
+	        return false;
+	      }
+	    });
+
+	    $document.on('click.rails', rails.buttonClickSelector, function(e) {
+	      var button = $(this);
+
+	      if (!rails.allowAction(button) || !rails.isRemote(button)) return rails.stopEverything(e);
+
+	      if (button.is(rails.buttonDisableSelector)) rails.disableFormElement(button);
+
+	      var handleRemote = rails.handleRemote(button);
+	      // Response from rails.handleRemote() will either be false or a deferred object promise.
+	      if (handleRemote === false) {
+	        rails.enableFormElement(button);
+	      } else {
+	        handleRemote.fail( function() { rails.enableFormElement(button); } );
+	      }
+	      return false;
+	    });
+
+	    $document.on('change.rails', rails.inputChangeSelector, function(e) {
+	      var link = $(this);
+	      if (!rails.allowAction(link) || !rails.isRemote(link)) return rails.stopEverything(e);
+
+	      rails.handleRemote(link);
+	      return false;
+	    });
+
+	    $document.on('submit.rails', rails.formSubmitSelector, function(e) {
+	      var form = $(this),
+	        remote = rails.isRemote(form),
+	        blankRequiredInputs,
+	        nonBlankFileInputs;
+
+	      if (!rails.allowAction(form)) return rails.stopEverything(e);
+
+	      // Skip other logic when required values are missing or file upload is present
+	      if (form.attr('novalidate') === undefined) {
+	        if (form.data('ujs:formnovalidate-button') === undefined) {
+	          blankRequiredInputs = rails.blankInputs(form, rails.requiredInputSelector, false);
+	          if (blankRequiredInputs && rails.fire(form, 'ajax:aborted:required', [blankRequiredInputs])) {
+	            return rails.stopEverything(e);
+	          }
+	        } else {
+	          // Clear the formnovalidate in case the next button click is not on a formnovalidate button
+	          // Not strictly necessary to do here, since it is also reset on each button click, but just to be certain
+	          form.data('ujs:formnovalidate-button', undefined);
+	        }
+	      }
+
+	      if (remote) {
+	        nonBlankFileInputs = rails.nonBlankInputs(form, rails.fileInputSelector);
+	        if (nonBlankFileInputs) {
+	          // Slight timeout so that the submit button gets properly serialized
+	          // (make it easy for event handler to serialize form without disabled values)
+	          setTimeout(function(){ rails.disableFormElements(form); }, 13);
+	          var aborted = rails.fire(form, 'ajax:aborted:file', [nonBlankFileInputs]);
+
+	          // Re-enable form elements if event bindings return false (canceling normal form submission)
+	          if (!aborted) { setTimeout(function(){ rails.enableFormElements(form); }, 13); }
+
+	          return aborted;
+	        }
+
+	        rails.handleRemote(form);
+	        return false;
+
+	      } else {
+	        // Slight timeout so that the submit button gets properly serialized
+	        setTimeout(function(){ rails.disableFormElements(form); }, 13);
+	      }
+	    });
+
+	    $document.on('click.rails', rails.formInputClickSelector, function(event) {
+	      var button = $(this);
+
+	      if (!rails.allowAction(button)) return rails.stopEverything(event);
+
+	      // Register the pressed submit button
+	      var name = button.attr('name'),
+	        data = name ? {name:name, value:button.val()} : null;
+
+	      var form = button.closest('form');
+	      if (form.length === 0) {
+	        form = $('#' + button.attr('form'));
+	      }
+	      form.data('ujs:submit-button', data);
+
+	      // Save attributes from button
+	      form.data('ujs:formnovalidate-button', button.attr('formnovalidate'));
+	      form.data('ujs:submit-button-formaction', button.attr('formaction'));
+	      form.data('ujs:submit-button-formmethod', button.attr('formmethod'));
+	    });
+
+	    $document.on('ajax:send.rails', rails.formSubmitSelector, function(event) {
+	      if (this === event.target) rails.disableFormElements($(this));
+	    });
+
+	    $document.on('ajax:complete.rails', rails.formSubmitSelector, function(event) {
+	      if (this === event.target) rails.enableFormElements($(this));
+	    });
+
+	    $(function(){
+	      rails.refreshCSRFTokens();
+	    });
+	  }
+
+	})( jQuery );
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["jQuery"] = __webpack_require__(6);
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["$"] = __webpack_require__(7);
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	 * jQuery JavaScript Library v3.1.1
 	 * https://jquery.com/
 	 *
 	 * Includes Sizzle.js
@@ -113,7 +696,7 @@
 	 * Released under the MIT license
 	 * https://jquery.org/license
 	 *
-	 * Date: 2016-07-07T21:44Z
+	 * Date: 2016-09-22T22:30Z
 	 */
 	( function( global, factory ) {
 
@@ -186,13 +769,13 @@
 			doc.head.appendChild( script ).parentNode.removeChild( script );
 		}
 	/* global Symbol */
-	// Defining this global in .eslintrc would create a danger of using the global
+	// Defining this global in .eslintrc.json would create a danger of using the global
 	// unguarded in another place, it seems safer to define global only for this module
 
 
 
 	var
-		version = "3.1.0",
+		version = "3.1.1",
 
 		// Define a local copy of jQuery
 		jQuery = function( selector, context ) {
@@ -232,13 +815,14 @@
 		// Get the Nth element in the matched element set OR
 		// Get the whole matched element set as a clean array
 		get: function( num ) {
-			return num != null ?
 
-				// Return just the one element from the set
-				( num < 0 ? this[ num + this.length ] : this[ num ] ) :
+			// Return all the elements in a clean array
+			if ( num == null ) {
+				return slice.call( this );
+			}
 
-				// Return all the elements in a clean array
-				slice.call( this );
+			// Return just the one element from the set
+			return num < 0 ? this[ num + this.length ] : this[ num ];
 		},
 
 		// Take an array of elements and push it onto the stack
@@ -646,14 +1230,14 @@
 	}
 	var Sizzle =
 	/*!
-	 * Sizzle CSS Selector Engine v2.3.0
+	 * Sizzle CSS Selector Engine v2.3.3
 	 * https://sizzlejs.com/
 	 *
 	 * Copyright jQuery Foundation and other contributors
 	 * Released under the MIT license
 	 * http://jquery.org/license
 	 *
-	 * Date: 2016-01-04
+	 * Date: 2016-08-08
 	 */
 	(function( window ) {
 
@@ -799,7 +1383,7 @@
 
 		// CSS string/identifier serialization
 		// https://drafts.csswg.org/cssom/#common-serializing-idioms
-		rcssescape = /([\0-\x1f\x7f]|^-?\d)|^-$|[^\x80-\uFFFF\w-]/g,
+		rcssescape = /([\0-\x1f\x7f]|^-?\d)|^-$|[^\0-\x1f\x7f-\uFFFF\w-]/g,
 		fcssescape = function( ch, asCodePoint ) {
 			if ( asCodePoint ) {
 
@@ -826,7 +1410,7 @@
 
 		disabledAncestor = addCombinator(
 			function( elem ) {
-				return elem.disabled === true;
+				return elem.disabled === true && ("form" in elem || "label" in elem);
 			},
 			{ dir: "parentNode", next: "legend" }
 		);
@@ -1112,26 +1696,54 @@
 	 * @param {Boolean} disabled true for :disabled; false for :enabled
 	 */
 	function createDisabledPseudo( disabled ) {
-		// Known :disabled false positives:
-		// IE: *[disabled]:not(button, input, select, textarea, optgroup, option, menuitem, fieldset)
-		// not IE: fieldset[disabled] > legend:nth-of-type(n+2) :can-disable
+
+		// Known :disabled false positives: fieldset[disabled] > legend:nth-of-type(n+2) :can-disable
 		return function( elem ) {
 
-			// Check form elements and option elements for explicit disabling
-			return "label" in elem && elem.disabled === disabled ||
-				"form" in elem && elem.disabled === disabled ||
+			// Only certain elements can match :enabled or :disabled
+			// https://html.spec.whatwg.org/multipage/scripting.html#selector-enabled
+			// https://html.spec.whatwg.org/multipage/scripting.html#selector-disabled
+			if ( "form" in elem ) {
 
-				// Check non-disabled form elements for fieldset[disabled] ancestors
-				"form" in elem && elem.disabled === false && (
-					// Support: IE6-11+
-					// Ancestry is covered for us
-					elem.isDisabled === disabled ||
+				// Check for inherited disabledness on relevant non-disabled elements:
+				// * listed form-associated elements in a disabled fieldset
+				//   https://html.spec.whatwg.org/multipage/forms.html#category-listed
+				//   https://html.spec.whatwg.org/multipage/forms.html#concept-fe-disabled
+				// * option elements in a disabled optgroup
+				//   https://html.spec.whatwg.org/multipage/forms.html#concept-option-disabled
+				// All such elements have a "form" property.
+				if ( elem.parentNode && elem.disabled === false ) {
 
-					// Otherwise, assume any non-<option> under fieldset[disabled] is disabled
-					/* jshint -W018 */
-					elem.isDisabled !== !disabled &&
-						("label" in elem || !disabledAncestor( elem )) !== disabled
-				);
+					// Option elements defer to a parent optgroup if present
+					if ( "label" in elem ) {
+						if ( "label" in elem.parentNode ) {
+							return elem.parentNode.disabled === disabled;
+						} else {
+							return elem.disabled === disabled;
+						}
+					}
+
+					// Support: IE 6 - 11
+					// Use the isDisabled shortcut property to check for disabled fieldset ancestors
+					return elem.isDisabled === disabled ||
+
+						// Where there is no isDisabled, check manually
+						/* jshint -W018 */
+						elem.isDisabled !== !disabled &&
+							disabledAncestor( elem ) === disabled;
+				}
+
+				return elem.disabled === disabled;
+
+			// Try to winnow out elements that can't be disabled before trusting the disabled property.
+			// Some victims get caught in our net (label, legend, menu, track), but it shouldn't
+			// even exist on them, let alone have a boolean value.
+			} else if ( "label" in elem ) {
+				return elem.disabled === disabled;
+			}
+
+			// Remaining elements are neither :enabled nor :disabled
+			return false;
 		};
 	}
 
@@ -1247,25 +1859,21 @@
 			return !document.getElementsByName || !document.getElementsByName( expando ).length;
 		});
 
-		// ID find and filter
+		// ID filter and find
 		if ( support.getById ) {
-			Expr.find["ID"] = function( id, context ) {
-				if ( typeof context.getElementById !== "undefined" && documentIsHTML ) {
-					var m = context.getElementById( id );
-					return m ? [ m ] : [];
-				}
-			};
 			Expr.filter["ID"] = function( id ) {
 				var attrId = id.replace( runescape, funescape );
 				return function( elem ) {
 					return elem.getAttribute("id") === attrId;
 				};
 			};
+			Expr.find["ID"] = function( id, context ) {
+				if ( typeof context.getElementById !== "undefined" && documentIsHTML ) {
+					var elem = context.getElementById( id );
+					return elem ? [ elem ] : [];
+				}
+			};
 		} else {
-			// Support: IE6/7
-			// getElementById is not reliable as a find shortcut
-			delete Expr.find["ID"];
-
 			Expr.filter["ID"] =  function( id ) {
 				var attrId = id.replace( runescape, funescape );
 				return function( elem ) {
@@ -1273,6 +1881,36 @@
 						elem.getAttributeNode("id");
 					return node && node.value === attrId;
 				};
+			};
+
+			// Support: IE 6 - 7 only
+			// getElementById is not reliable as a find shortcut
+			Expr.find["ID"] = function( id, context ) {
+				if ( typeof context.getElementById !== "undefined" && documentIsHTML ) {
+					var node, i, elems,
+						elem = context.getElementById( id );
+
+					if ( elem ) {
+
+						// Verify the id attribute
+						node = elem.getAttributeNode("id");
+						if ( node && node.value === id ) {
+							return [ elem ];
+						}
+
+						// Fall back on getElementsByName
+						elems = context.getElementsByName( id );
+						i = 0;
+						while ( (elem = elems[i++]) ) {
+							node = elem.getAttributeNode("id");
+							if ( node && node.value === id ) {
+								return [ elem ];
+							}
+						}
+					}
+
+					return [];
+				}
 			};
 		}
 
@@ -2314,6 +2952,7 @@
 						return matcher( elem, context, xml );
 					}
 				}
+				return false;
 			} :
 
 			// Check against all ancestor/preceding elements
@@ -2358,6 +2997,7 @@
 						}
 					}
 				}
+				return false;
 			};
 	}
 
@@ -2720,8 +3360,7 @@
 			// Reduce context if the leading compound selector is an ID
 			tokens = match[0] = match[0].slice( 0 );
 			if ( tokens.length > 2 && (token = tokens[0]).type === "ID" &&
-					support.getById && context.nodeType === 9 && documentIsHTML &&
-					Expr.relative[ tokens[1].type ] ) {
+					context.nodeType === 9 && documentIsHTML && Expr.relative[ tokens[1].type ] ) {
 
 				context = ( Expr.find["ID"]( token.matches[0].replace(runescape, funescape), context ) || [] )[0];
 				if ( !context ) {
@@ -2903,24 +3542,29 @@
 			return jQuery.grep( elements, function( elem, i ) {
 				return !!qualifier.call( elem, i, elem ) !== not;
 			} );
-
 		}
 
+		// Single element
 		if ( qualifier.nodeType ) {
 			return jQuery.grep( elements, function( elem ) {
 				return ( elem === qualifier ) !== not;
 			} );
-
 		}
 
-		if ( typeof qualifier === "string" ) {
-			if ( risSimple.test( qualifier ) ) {
-				return jQuery.filter( qualifier, elements, not );
-			}
-
-			qualifier = jQuery.filter( qualifier, elements );
+		// Arraylike of elements (jQuery, arguments, Array)
+		if ( typeof qualifier !== "string" ) {
+			return jQuery.grep( elements, function( elem ) {
+				return ( indexOf.call( qualifier, elem ) > -1 ) !== not;
+			} );
 		}
 
+		// Simple selector that can be filtered directly, removing non-Elements
+		if ( risSimple.test( qualifier ) ) {
+			return jQuery.filter( qualifier, elements, not );
+		}
+
+		// Complex selector, compare the two sets, removing non-Elements
+		qualifier = jQuery.filter( qualifier, elements );
 		return jQuery.grep( elements, function( elem ) {
 			return ( indexOf.call( qualifier, elem ) > -1 ) !== not && elem.nodeType === 1;
 		} );
@@ -2933,11 +3577,13 @@
 			expr = ":not(" + expr + ")";
 		}
 
-		return elems.length === 1 && elem.nodeType === 1 ?
-			jQuery.find.matchesSelector( elem, expr ) ? [ elem ] : [] :
-			jQuery.find.matches( expr, jQuery.grep( elems, function( elem ) {
-				return elem.nodeType === 1;
-			} ) );
+		if ( elems.length === 1 && elem.nodeType === 1 ) {
+			return jQuery.find.matchesSelector( elem, expr ) ? [ elem ] : [];
+		}
+
+		return jQuery.find.matches( expr, jQuery.grep( elems, function( elem ) {
+			return elem.nodeType === 1;
+		} ) );
 	};
 
 	jQuery.fn.extend( {
@@ -3265,14 +3911,14 @@
 			return this.pushStack( matched );
 		};
 	} );
-	var rnotwhite = ( /\S+/g );
+	var rnothtmlwhite = ( /[^\x20\t\r\n\f]+/g );
 
 
 
 	// Convert String-formatted options into Object-formatted ones
 	function createOptions( options ) {
 		var object = {};
-		jQuery.each( options.match( rnotwhite ) || [], function( _, flag ) {
+		jQuery.each( options.match( rnothtmlwhite ) || [], function( _, flag ) {
 			object[ flag ] = true;
 		} );
 		return object;
@@ -4037,13 +4683,16 @@
 			}
 		}
 
-		return chainable ?
-			elems :
+		if ( chainable ) {
+			return elems;
+		}
 
-			// Gets
-			bulk ?
-				fn.call( elems ) :
-				len ? fn( elems[ 0 ], key ) : emptyGet;
+		// Gets
+		if ( bulk ) {
+			return fn.call( elems );
+		}
+
+		return len ? fn( elems[ 0 ], key ) : emptyGet;
 	};
 	var acceptData = function( owner ) {
 
@@ -4180,7 +4829,7 @@
 					// Otherwise, create an array by matching non-whitespace
 					key = key in cache ?
 						[ key ] :
-						( key.match( rnotwhite ) || [] );
+						( key.match( rnothtmlwhite ) || [] );
 				}
 
 				i = key.length;
@@ -4228,6 +4877,31 @@
 	var rbrace = /^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,
 		rmultiDash = /[A-Z]/g;
 
+	function getData( data ) {
+		if ( data === "true" ) {
+			return true;
+		}
+
+		if ( data === "false" ) {
+			return false;
+		}
+
+		if ( data === "null" ) {
+			return null;
+		}
+
+		// Only convert to a number if it doesn't change the string
+		if ( data === +data + "" ) {
+			return +data;
+		}
+
+		if ( rbrace.test( data ) ) {
+			return JSON.parse( data );
+		}
+
+		return data;
+	}
+
 	function dataAttr( elem, key, data ) {
 		var name;
 
@@ -4239,14 +4913,7 @@
 
 			if ( typeof data === "string" ) {
 				try {
-					data = data === "true" ? true :
-						data === "false" ? false :
-						data === "null" ? null :
-
-						// Only convert to a number if it doesn't change the string
-						+data + "" === data ? +data :
-						rbrace.test( data ) ? JSON.parse( data ) :
-						data;
+					data = getData( data );
 				} catch ( e ) {}
 
 				// Make sure we set the data so it isn't changed later
@@ -4623,7 +5290,7 @@
 			return display;
 		}
 
-		temp = doc.body.appendChild( doc.createElement( nodeName ) ),
+		temp = doc.body.appendChild( doc.createElement( nodeName ) );
 		display = jQuery.css( temp, "display" );
 
 		temp.parentNode.removeChild( temp );
@@ -4741,15 +5408,23 @@
 
 		// Support: IE <=9 - 11 only
 		// Use typeof to avoid zero-argument method invocation on host objects (#15151)
-		var ret = typeof context.getElementsByTagName !== "undefined" ?
-				context.getElementsByTagName( tag || "*" ) :
-				typeof context.querySelectorAll !== "undefined" ?
-					context.querySelectorAll( tag || "*" ) :
-				[];
+		var ret;
 
-		return tag === undefined || tag && jQuery.nodeName( context, tag ) ?
-			jQuery.merge( [ context ], ret ) :
-			ret;
+		if ( typeof context.getElementsByTagName !== "undefined" ) {
+			ret = context.getElementsByTagName( tag || "*" );
+
+		} else if ( typeof context.querySelectorAll !== "undefined" ) {
+			ret = context.querySelectorAll( tag || "*" );
+
+		} else {
+			ret = [];
+		}
+
+		if ( tag === undefined || tag && jQuery.nodeName( context, tag ) ) {
+			return jQuery.merge( [ context ], ret );
+		}
+
+		return ret;
 	}
 
 
@@ -5023,7 +5698,7 @@
 			}
 
 			// Handle multiple events separated by a space
-			types = ( types || "" ).match( rnotwhite ) || [ "" ];
+			types = ( types || "" ).match( rnothtmlwhite ) || [ "" ];
 			t = types.length;
 			while ( t-- ) {
 				tmp = rtypenamespace.exec( types[ t ] ) || [];
@@ -5105,7 +5780,7 @@
 			}
 
 			// Once for each type.namespace in types; type may be omitted
-			types = ( types || "" ).match( rnotwhite ) || [ "" ];
+			types = ( types || "" ).match( rnothtmlwhite ) || [ "" ];
 			t = types.length;
 			while ( t-- ) {
 				tmp = rtypenamespace.exec( types[ t ] ) || [];
@@ -5231,51 +5906,58 @@
 		},
 
 		handlers: function( event, handlers ) {
-			var i, matches, sel, handleObj,
+			var i, handleObj, sel, matchedHandlers, matchedSelectors,
 				handlerQueue = [],
 				delegateCount = handlers.delegateCount,
 				cur = event.target;
 
-			// Support: IE <=9
 			// Find delegate handlers
-			// Black-hole SVG <use> instance trees (#13180)
-			//
-			// Support: Firefox <=42
-			// Avoid non-left-click in FF but don't block IE radio events (#3861, gh-2343)
-			if ( delegateCount && cur.nodeType &&
-				( event.type !== "click" || isNaN( event.button ) || event.button < 1 ) ) {
+			if ( delegateCount &&
+
+				// Support: IE <=9
+				// Black-hole SVG <use> instance trees (trac-13180)
+				cur.nodeType &&
+
+				// Support: Firefox <=42
+				// Suppress spec-violating clicks indicating a non-primary pointer button (trac-3861)
+				// https://www.w3.org/TR/DOM-Level-3-Events/#event-type-click
+				// Support: IE 11 only
+				// ...but not arrow key "clicks" of radio inputs, which can have `button` -1 (gh-2343)
+				!( event.type === "click" && event.button >= 1 ) ) {
 
 				for ( ; cur !== this; cur = cur.parentNode || this ) {
 
 					// Don't check non-elements (#13208)
 					// Don't process clicks on disabled elements (#6911, #8165, #11382, #11764)
-					if ( cur.nodeType === 1 && ( cur.disabled !== true || event.type !== "click" ) ) {
-						matches = [];
+					if ( cur.nodeType === 1 && !( event.type === "click" && cur.disabled === true ) ) {
+						matchedHandlers = [];
+						matchedSelectors = {};
 						for ( i = 0; i < delegateCount; i++ ) {
 							handleObj = handlers[ i ];
 
 							// Don't conflict with Object.prototype properties (#13203)
 							sel = handleObj.selector + " ";
 
-							if ( matches[ sel ] === undefined ) {
-								matches[ sel ] = handleObj.needsContext ?
+							if ( matchedSelectors[ sel ] === undefined ) {
+								matchedSelectors[ sel ] = handleObj.needsContext ?
 									jQuery( sel, this ).index( cur ) > -1 :
 									jQuery.find( sel, this, null, [ cur ] ).length;
 							}
-							if ( matches[ sel ] ) {
-								matches.push( handleObj );
+							if ( matchedSelectors[ sel ] ) {
+								matchedHandlers.push( handleObj );
 							}
 						}
-						if ( matches.length ) {
-							handlerQueue.push( { elem: cur, handlers: matches } );
+						if ( matchedHandlers.length ) {
+							handlerQueue.push( { elem: cur, handlers: matchedHandlers } );
 						}
 					}
 				}
 			}
 
 			// Add the remaining (directly-bound) handlers
+			cur = this;
 			if ( delegateCount < handlers.length ) {
-				handlerQueue.push( { elem: this, handlers: handlers.slice( delegateCount ) } );
+				handlerQueue.push( { elem: cur, handlers: handlers.slice( delegateCount ) } );
 			}
 
 			return handlerQueue;
@@ -5509,7 +6191,19 @@
 
 			// Add which for click: 1 === left; 2 === middle; 3 === right
 			if ( !event.which && button !== undefined && rmouseEvent.test( event.type ) ) {
-				return ( button & 1 ? 1 : ( button & 2 ? 3 : ( button & 4 ? 2 : 0 ) ) );
+				if ( button & 1 ) {
+					return 1;
+				}
+
+				if ( button & 2 ) {
+					return 3;
+				}
+
+				if ( button & 4 ) {
+					return 2;
+				}
+
+				return 0;
 			}
 
 			return event.which;
@@ -6265,15 +6959,17 @@
 	}
 
 	function augmentWidthOrHeight( elem, name, extra, isBorderBox, styles ) {
-		var i = extra === ( isBorderBox ? "border" : "content" ) ?
-
-			// If we already have the right measurement, avoid augmentation
-			4 :
-
-			// Otherwise initialize for horizontal or vertical properties
-			name === "width" ? 1 : 0,
-
+		var i,
 			val = 0;
+
+		// If we already have the right measurement, avoid augmentation
+		if ( extra === ( isBorderBox ? "border" : "content" ) ) {
+			i = 4;
+
+		// Otherwise initialize for horizontal or vertical properties
+		} else {
+			i = name === "width" ? 1 : 0;
+		}
 
 		for ( ; i < 4; i += 2 ) {
 
@@ -7127,7 +7823,7 @@
 				callback = props;
 				props = [ "*" ];
 			} else {
-				props = props.match( rnotwhite );
+				props = props.match( rnothtmlwhite );
 			}
 
 			var prop,
@@ -7165,9 +7861,14 @@
 			opt.duration = 0;
 
 		} else {
-			opt.duration = typeof opt.duration === "number" ?
-				opt.duration : opt.duration in jQuery.fx.speeds ?
-					jQuery.fx.speeds[ opt.duration ] : jQuery.fx.speeds._default;
+			if ( typeof opt.duration !== "number" ) {
+				if ( opt.duration in jQuery.fx.speeds ) {
+					opt.duration = jQuery.fx.speeds[ opt.duration ];
+
+				} else {
+					opt.duration = jQuery.fx.speeds._default;
+				}
+			}
 		}
 
 		// Normalize opt.queue - true/undefined/null -> "fx"
@@ -7517,7 +8218,10 @@
 		removeAttr: function( elem, value ) {
 			var name,
 				i = 0,
-				attrNames = value && value.match( rnotwhite );
+
+				// Attribute names can contain non-HTML whitespace characters
+				// https://html.spec.whatwg.org/multipage/syntax.html#attributes-2
+				attrNames = value && value.match( rnothtmlwhite );
 
 			if ( attrNames && elem.nodeType === 1 ) {
 				while ( ( name = attrNames[ i++ ] ) ) {
@@ -7624,12 +8328,19 @@
 					// Use proper attribute retrieval(#12072)
 					var tabindex = jQuery.find.attr( elem, "tabindex" );
 
-					return tabindex ?
-						parseInt( tabindex, 10 ) :
+					if ( tabindex ) {
+						return parseInt( tabindex, 10 );
+					}
+
+					if (
 						rfocusable.test( elem.nodeName ) ||
-							rclickable.test( elem.nodeName ) && elem.href ?
-								0 :
-								-1;
+						rclickable.test( elem.nodeName ) &&
+						elem.href
+					) {
+						return 0;
+					}
+
+					return -1;
 				}
 			}
 		},
@@ -7646,9 +8357,14 @@
 	// on the option
 	// The getter ensures a default option is selected
 	// when in an optgroup
+	// eslint rule "no-unused-expressions" is disabled for this code
+	// since it considers such accessions noop
 	if ( !support.optSelected ) {
 		jQuery.propHooks.selected = {
 			get: function( elem ) {
+
+				/* eslint no-unused-expressions: "off" */
+
 				var parent = elem.parentNode;
 				if ( parent && parent.parentNode ) {
 					parent.parentNode.selectedIndex;
@@ -7656,6 +8372,9 @@
 				return null;
 			},
 			set: function( elem ) {
+
+				/* eslint no-unused-expressions: "off" */
+
 				var parent = elem.parentNode;
 				if ( parent ) {
 					parent.selectedIndex;
@@ -7686,7 +8405,13 @@
 
 
 
-	var rclass = /[\t\r\n\f]/g;
+		// Strip and collapse whitespace according to HTML spec
+		// https://html.spec.whatwg.org/multipage/infrastructure.html#strip-and-collapse-whitespace
+		function stripAndCollapse( value ) {
+			var tokens = value.match( rnothtmlwhite ) || [];
+			return tokens.join( " " );
+		}
+
 
 	function getClass( elem ) {
 		return elem.getAttribute && elem.getAttribute( "class" ) || "";
@@ -7704,12 +8429,11 @@
 			}
 
 			if ( typeof value === "string" && value ) {
-				classes = value.match( rnotwhite ) || [];
+				classes = value.match( rnothtmlwhite ) || [];
 
 				while ( ( elem = this[ i++ ] ) ) {
 					curValue = getClass( elem );
-					cur = elem.nodeType === 1 &&
-						( " " + curValue + " " ).replace( rclass, " " );
+					cur = elem.nodeType === 1 && ( " " + stripAndCollapse( curValue ) + " " );
 
 					if ( cur ) {
 						j = 0;
@@ -7720,7 +8444,7 @@
 						}
 
 						// Only assign if different to avoid unneeded rendering.
-						finalValue = jQuery.trim( cur );
+						finalValue = stripAndCollapse( cur );
 						if ( curValue !== finalValue ) {
 							elem.setAttribute( "class", finalValue );
 						}
@@ -7746,14 +8470,13 @@
 			}
 
 			if ( typeof value === "string" && value ) {
-				classes = value.match( rnotwhite ) || [];
+				classes = value.match( rnothtmlwhite ) || [];
 
 				while ( ( elem = this[ i++ ] ) ) {
 					curValue = getClass( elem );
 
 					// This expression is here for better compressibility (see addClass)
-					cur = elem.nodeType === 1 &&
-						( " " + curValue + " " ).replace( rclass, " " );
+					cur = elem.nodeType === 1 && ( " " + stripAndCollapse( curValue ) + " " );
 
 					if ( cur ) {
 						j = 0;
@@ -7766,7 +8489,7 @@
 						}
 
 						// Only assign if different to avoid unneeded rendering.
-						finalValue = jQuery.trim( cur );
+						finalValue = stripAndCollapse( cur );
 						if ( curValue !== finalValue ) {
 							elem.setAttribute( "class", finalValue );
 						}
@@ -7801,7 +8524,7 @@
 					// Toggle individual class names
 					i = 0;
 					self = jQuery( this );
-					classNames = value.match( rnotwhite ) || [];
+					classNames = value.match( rnothtmlwhite ) || [];
 
 					while ( ( className = classNames[ i++ ] ) ) {
 
@@ -7844,10 +8567,8 @@
 			className = " " + selector + " ";
 			while ( ( elem = this[ i++ ] ) ) {
 				if ( elem.nodeType === 1 &&
-					( " " + getClass( elem ) + " " ).replace( rclass, " " )
-						.indexOf( className ) > -1
-				) {
-					return true;
+					( " " + stripAndCollapse( getClass( elem ) ) + " " ).indexOf( className ) > -1 ) {
+						return true;
 				}
 			}
 
@@ -7858,8 +8579,7 @@
 
 
 
-	var rreturn = /\r/g,
-		rspaces = /[\x20\t\r\n\f]+/g;
+	var rreturn = /\r/g;
 
 	jQuery.fn.extend( {
 		val: function( value ) {
@@ -7880,13 +8600,13 @@
 
 					ret = elem.value;
 
-					return typeof ret === "string" ?
+					// Handle most common string cases
+					if ( typeof ret === "string" ) {
+						return ret.replace( rreturn, "" );
+					}
 
-						// Handle most common string cases
-						ret.replace( rreturn, "" ) :
-
-						// Handle cases where value is null/undef or number
-						ret == null ? "" : ret;
+					// Handle cases where value is null/undef or number
+					return ret == null ? "" : ret;
 				}
 
 				return;
@@ -7943,20 +8663,24 @@
 						// option.text throws exceptions (#14686, #14858)
 						// Strip and collapse whitespace
 						// https://html.spec.whatwg.org/#strip-and-collapse-whitespace
-						jQuery.trim( jQuery.text( elem ) ).replace( rspaces, " " );
+						stripAndCollapse( jQuery.text( elem ) );
 				}
 			},
 			select: {
 				get: function( elem ) {
-					var value, option,
+					var value, option, i,
 						options = elem.options,
 						index = elem.selectedIndex,
 						one = elem.type === "select-one",
 						values = one ? null : [],
-						max = one ? index + 1 : options.length,
-						i = index < 0 ?
-							max :
-							one ? index : 0;
+						max = one ? index + 1 : options.length;
+
+					if ( index < 0 ) {
+						i = max;
+
+					} else {
+						i = one ? index : 0;
+					}
 
 					// Loop through all the selected options
 					for ( ; i < max; i++ ) {
@@ -8410,13 +9134,17 @@
 			.map( function( i, elem ) {
 				var val = jQuery( this ).val();
 
-				return val == null ?
-					null :
-					jQuery.isArray( val ) ?
-						jQuery.map( val, function( val ) {
-							return { name: elem.name, value: val.replace( rCRLF, "\r\n" ) };
-						} ) :
-						{ name: elem.name, value: val.replace( rCRLF, "\r\n" ) };
+				if ( val == null ) {
+					return null;
+				}
+
+				if ( jQuery.isArray( val ) ) {
+					return jQuery.map( val, function( val ) {
+						return { name: elem.name, value: val.replace( rCRLF, "\r\n" ) };
+					} );
+				}
+
+				return { name: elem.name, value: val.replace( rCRLF, "\r\n" ) };
 			} ).get();
 		}
 	} );
@@ -8425,7 +9153,7 @@
 	var
 		r20 = /%20/g,
 		rhash = /#.*$/,
-		rts = /([?&])_=[^&]*/,
+		rantiCache = /([?&])_=[^&]*/,
 		rheaders = /^(.*?):[ \t]*([^\r\n]*)$/mg,
 
 		// #7653, #8125, #8152: local protocol detection
@@ -8471,7 +9199,7 @@
 
 			var dataType,
 				i = 0,
-				dataTypes = dataTypeExpression.toLowerCase().match( rnotwhite ) || [];
+				dataTypes = dataTypeExpression.toLowerCase().match( rnothtmlwhite ) || [];
 
 			if ( jQuery.isFunction( func ) ) {
 
@@ -8939,7 +9667,7 @@
 			s.type = options.method || options.type || s.method || s.type;
 
 			// Extract dataTypes list
-			s.dataTypes = ( s.dataType || "*" ).toLowerCase().match( rnotwhite ) || [ "" ];
+			s.dataTypes = ( s.dataType || "*" ).toLowerCase().match( rnothtmlwhite ) || [ "" ];
 
 			// A cross-domain request is in order when the origin doesn't match the current origin.
 			if ( s.crossDomain == null ) {
@@ -9011,9 +9739,9 @@
 					delete s.data;
 				}
 
-				// Add anti-cache in uncached url if needed
+				// Add or update anti-cache param if needed
 				if ( s.cache === false ) {
-					cacheURL = cacheURL.replace( rts, "" );
+					cacheURL = cacheURL.replace( rantiCache, "$1" );
 					uncached = ( rquery.test( cacheURL ) ? "&" : "?" ) + "_=" + ( nonce++ ) + uncached;
 				}
 
@@ -9752,7 +10480,7 @@
 			off = url.indexOf( " " );
 
 		if ( off > -1 ) {
-			selector = jQuery.trim( url.slice( off ) );
+			selector = stripAndCollapse( url.slice( off ) );
 			url = url.slice( 0, off );
 		}
 
@@ -10144,7 +10872,6 @@
 
 
 
-
 	var
 
 		// Map over jQuery in case of overwrite
@@ -10173,3880 +10900,3138 @@
 	}
 
 
+
+
+
 	return jQuery;
 	} );
 
 
 /***/ },
-/* 5 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(jQuery) {(function($, undefined) {
-
-	/**
-	 * Unobtrusive scripting adapter for jQuery
-	 * https://github.com/rails/jquery-ujs
-	 *
-	 * Requires jQuery 1.8.0 or later.
-	 *
-	 * Released under the MIT license
-	 *
-	 */
-
-	  // Cut down on the number of issues from people inadvertently including jquery_ujs twice
-	  // by detecting and raising an error when it happens.
-	  'use strict';
-
-	  if ( $.rails !== undefined ) {
-	    $.error('jquery-ujs has already been loaded!');
-	  }
-
-	  // Shorthand to make it a little easier to call public rails functions from within rails.js
-	  var rails;
-	  var $document = $(document);
-
-	  $.rails = rails = {
-	    // Link elements bound by jquery-ujs
-	    linkClickSelector: 'a[data-confirm], a[data-method], a[data-remote]:not([disabled]), a[data-disable-with], a[data-disable]',
-
-	    // Button elements bound by jquery-ujs
-	    buttonClickSelector: 'button[data-remote]:not([form]):not(form button), button[data-confirm]:not([form]):not(form button)',
-
-	    // Select elements bound by jquery-ujs
-	    inputChangeSelector: 'select[data-remote], input[data-remote], textarea[data-remote]',
-
-	    // Form elements bound by jquery-ujs
-	    formSubmitSelector: 'form',
-
-	    // Form input elements bound by jquery-ujs
-	    formInputClickSelector: 'form input[type=submit], form input[type=image], form button[type=submit], form button:not([type]), input[type=submit][form], input[type=image][form], button[type=submit][form], button[form]:not([type])',
-
-	    // Form input elements disabled during form submission
-	    disableSelector: 'input[data-disable-with]:enabled, button[data-disable-with]:enabled, textarea[data-disable-with]:enabled, input[data-disable]:enabled, button[data-disable]:enabled, textarea[data-disable]:enabled',
-
-	    // Form input elements re-enabled after form submission
-	    enableSelector: 'input[data-disable-with]:disabled, button[data-disable-with]:disabled, textarea[data-disable-with]:disabled, input[data-disable]:disabled, button[data-disable]:disabled, textarea[data-disable]:disabled',
-
-	    // Form required input elements
-	    requiredInputSelector: 'input[name][required]:not([disabled]), textarea[name][required]:not([disabled])',
-
-	    // Form file input elements
-	    fileInputSelector: 'input[name][type=file]:not([disabled])',
-
-	    // Link onClick disable selector with possible reenable after remote submission
-	    linkDisableSelector: 'a[data-disable-with], a[data-disable]',
-
-	    // Button onClick disable selector with possible reenable after remote submission
-	    buttonDisableSelector: 'button[data-remote][data-disable-with], button[data-remote][data-disable]',
-
-	    // Up-to-date Cross-Site Request Forgery token
-	    csrfToken: function() {
-	     return $('meta[name=csrf-token]').attr('content');
-	    },
-
-	    // URL param that must contain the CSRF token
-	    csrfParam: function() {
-	     return $('meta[name=csrf-param]').attr('content');
-	    },
-
-	    // Make sure that every Ajax request sends the CSRF token
-	    CSRFProtection: function(xhr) {
-	      var token = rails.csrfToken();
-	      if (token) xhr.setRequestHeader('X-CSRF-Token', token);
-	    },
-
-	    // Make sure that all forms have actual up-to-date tokens (cached forms contain old ones)
-	    refreshCSRFTokens: function(){
-	      $('form input[name="' + rails.csrfParam() + '"]').val(rails.csrfToken());
-	    },
-
-	    // Triggers an event on an element and returns false if the event result is false
-	    fire: function(obj, name, data) {
-	      var event = $.Event(name);
-	      obj.trigger(event, data);
-	      return event.result !== false;
-	    },
-
-	    // Default confirm dialog, may be overridden with custom confirm dialog in $.rails.confirm
-	    confirm: function(message) {
-	      return confirm(message);
-	    },
-
-	    // Default ajax function, may be overridden with custom function in $.rails.ajax
-	    ajax: function(options) {
-	      return $.ajax(options);
-	    },
-
-	    // Default way to get an element's href. May be overridden at $.rails.href.
-	    href: function(element) {
-	      return element[0].href;
-	    },
-
-	    // Checks "data-remote" if true to handle the request through a XHR request.
-	    isRemote: function(element) {
-	      return element.data('remote') !== undefined && element.data('remote') !== false;
-	    },
-
-	    // Submits "remote" forms and links with ajax
-	    handleRemote: function(element) {
-	      var method, url, data, withCredentials, dataType, options;
-
-	      if (rails.fire(element, 'ajax:before')) {
-	        withCredentials = element.data('with-credentials') || null;
-	        dataType = element.data('type') || ($.ajaxSettings && $.ajaxSettings.dataType);
-
-	        if (element.is('form')) {
-	          method = element.data('ujs:submit-button-formmethod') || element.attr('method');
-	          url = element.data('ujs:submit-button-formaction') || element.attr('action');
-	          data = $(element[0]).serializeArray();
-	          // memoized value from clicked submit button
-	          var button = element.data('ujs:submit-button');
-	          if (button) {
-	            data.push(button);
-	            element.data('ujs:submit-button', null);
-	          }
-	          element.data('ujs:submit-button-formmethod', null);
-	          element.data('ujs:submit-button-formaction', null);
-	        } else if (element.is(rails.inputChangeSelector)) {
-	          method = element.data('method');
-	          url = element.data('url');
-	          data = element.serialize();
-	          if (element.data('params')) data = data + '&' + element.data('params');
-	        } else if (element.is(rails.buttonClickSelector)) {
-	          method = element.data('method') || 'get';
-	          url = element.data('url');
-	          data = element.serialize();
-	          if (element.data('params')) data = data + '&' + element.data('params');
-	        } else {
-	          method = element.data('method');
-	          url = rails.href(element);
-	          data = element.data('params') || null;
-	        }
-
-	        options = {
-	          type: method || 'GET', data: data, dataType: dataType,
-	          // stopping the "ajax:beforeSend" event will cancel the ajax request
-	          beforeSend: function(xhr, settings) {
-	            if (settings.dataType === undefined) {
-	              xhr.setRequestHeader('accept', '*/*;q=0.5, ' + settings.accepts.script);
-	            }
-	            if (rails.fire(element, 'ajax:beforeSend', [xhr, settings])) {
-	              element.trigger('ajax:send', xhr);
-	            } else {
-	              return false;
-	            }
-	          },
-	          success: function(data, status, xhr) {
-	            element.trigger('ajax:success', [data, status, xhr]);
-	          },
-	          complete: function(xhr, status) {
-	            element.trigger('ajax:complete', [xhr, status]);
-	          },
-	          error: function(xhr, status, error) {
-	            element.trigger('ajax:error', [xhr, status, error]);
-	          },
-	          crossDomain: rails.isCrossDomain(url)
-	        };
-
-	        // There is no withCredentials for IE6-8 when
-	        // "Enable native XMLHTTP support" is disabled
-	        if (withCredentials) {
-	          options.xhrFields = {
-	            withCredentials: withCredentials
-	          };
-	        }
-
-	        // Only pass url to `ajax` options if not blank
-	        if (url) { options.url = url; }
-
-	        return rails.ajax(options);
-	      } else {
-	        return false;
-	      }
-	    },
-
-	    // Determines if the request is a cross domain request.
-	    isCrossDomain: function(url) {
-	      var originAnchor = document.createElement('a');
-	      originAnchor.href = location.href;
-	      var urlAnchor = document.createElement('a');
-
-	      try {
-	        urlAnchor.href = url;
-	        // This is a workaround to a IE bug.
-	        urlAnchor.href = urlAnchor.href;
-
-	        // If URL protocol is false or is a string containing a single colon
-	        // *and* host are false, assume it is not a cross-domain request
-	        // (should only be the case for IE7 and IE compatibility mode).
-	        // Otherwise, evaluate protocol and host of the URL against the origin
-	        // protocol and host.
-	        return !(((!urlAnchor.protocol || urlAnchor.protocol === ':') && !urlAnchor.host) ||
-	          (originAnchor.protocol + '//' + originAnchor.host ===
-	            urlAnchor.protocol + '//' + urlAnchor.host));
-	      } catch (e) {
-	        // If there is an error parsing the URL, assume it is crossDomain.
-	        return true;
-	      }
-	    },
-
-	    // Handles "data-method" on links such as:
-	    // <a href="/users/5" data-method="delete" rel="nofollow" data-confirm="Are you sure?">Delete</a>
-	    handleMethod: function(link) {
-	      var href = rails.href(link),
-	        method = link.data('method'),
-	        target = link.attr('target'),
-	        csrfToken = rails.csrfToken(),
-	        csrfParam = rails.csrfParam(),
-	        form = $('<form method="post" action="' + href + '"></form>'),
-	        metadataInput = '<input name="_method" value="' + method + '" type="hidden" />';
-
-	      if (csrfParam !== undefined && csrfToken !== undefined && !rails.isCrossDomain(href)) {
-	        metadataInput += '<input name="' + csrfParam + '" value="' + csrfToken + '" type="hidden" />';
-	      }
-
-	      if (target) { form.attr('target', target); }
-
-	      form.hide().append(metadataInput).appendTo('body');
-	      form.submit();
-	    },
-
-	    // Helper function that returns form elements that match the specified CSS selector
-	    // If form is actually a "form" element this will return associated elements outside the from that have
-	    // the html form attribute set
-	    formElements: function(form, selector) {
-	      return form.is('form') ? $(form[0].elements).filter(selector) : form.find(selector);
-	    },
-
-	    /* Disables form elements:
-	      - Caches element value in 'ujs:enable-with' data store
-	      - Replaces element text with value of 'data-disable-with' attribute
-	      - Sets disabled property to true
-	    */
-	    disableFormElements: function(form) {
-	      rails.formElements(form, rails.disableSelector).each(function() {
-	        rails.disableFormElement($(this));
-	      });
-	    },
-
-	    disableFormElement: function(element) {
-	      var method, replacement;
-
-	      method = element.is('button') ? 'html' : 'val';
-	      replacement = element.data('disable-with');
-
-	      if (replacement !== undefined) {
-	        element.data('ujs:enable-with', element[method]());
-	        element[method](replacement);
-	      }
-
-	      element.prop('disabled', true);
-	      element.data('ujs:disabled', true);
-	    },
-
-	    /* Re-enables disabled form elements:
-	      - Replaces element text with cached value from 'ujs:enable-with' data store (created in `disableFormElements`)
-	      - Sets disabled property to false
-	    */
-	    enableFormElements: function(form) {
-	      rails.formElements(form, rails.enableSelector).each(function() {
-	        rails.enableFormElement($(this));
-	      });
-	    },
-
-	    enableFormElement: function(element) {
-	      var method = element.is('button') ? 'html' : 'val';
-	      if (element.data('ujs:enable-with') !== undefined) {
-	        element[method](element.data('ujs:enable-with'));
-	        element.removeData('ujs:enable-with'); // clean up cache
-	      }
-	      element.prop('disabled', false);
-	      element.removeData('ujs:disabled');
-	    },
-
-	   /* For 'data-confirm' attribute:
-	      - Fires `confirm` event
-	      - Shows the confirmation dialog
-	      - Fires the `confirm:complete` event
-
-	      Returns `true` if no function stops the chain and user chose yes; `false` otherwise.
-	      Attaching a handler to the element's `confirm` event that returns a `falsy` value cancels the confirmation dialog.
-	      Attaching a handler to the element's `confirm:complete` event that returns a `falsy` value makes this function
-	      return false. The `confirm:complete` event is fired whether or not the user answered true or false to the dialog.
-	   */
-	    allowAction: function(element) {
-	      var message = element.data('confirm'),
-	          answer = false, callback;
-	      if (!message) { return true; }
-
-	      if (rails.fire(element, 'confirm')) {
-	        try {
-	          answer = rails.confirm(message);
-	        } catch (e) {
-	          (console.error || console.log).call(console, e.stack || e);
-	        }
-	        callback = rails.fire(element, 'confirm:complete', [answer]);
-	      }
-	      return answer && callback;
-	    },
-
-	    // Helper function which checks for blank inputs in a form that match the specified CSS selector
-	    blankInputs: function(form, specifiedSelector, nonBlank) {
-	      var foundInputs = $(),
-	        input,
-	        valueToCheck,
-	        radiosForNameWithNoneSelected,
-	        radioName,
-	        selector = specifiedSelector || 'input,textarea',
-	        requiredInputs = form.find(selector),
-	        checkedRadioButtonNames = {};
-
-	      requiredInputs.each(function() {
-	        input = $(this);
-	        if (input.is('input[type=radio]')) {
-
-	          // Don't count unchecked required radio as blank if other radio with same name is checked,
-	          // regardless of whether same-name radio input has required attribute or not. The spec
-	          // states https://www.w3.org/TR/html5/forms.html#the-required-attribute
-	          radioName = input.attr('name');
-
-	          // Skip if we've already seen the radio with this name.
-	          if (!checkedRadioButtonNames[radioName]) {
-
-	            // If none checked
-	            if (form.find('input[type=radio]:checked[name="' + radioName + '"]').length === 0) {
-	              radiosForNameWithNoneSelected = form.find(
-	                'input[type=radio][name="' + radioName + '"]');
-	              foundInputs = foundInputs.add(radiosForNameWithNoneSelected);
-	            }
-
-	            // We only need to check each name once.
-	            checkedRadioButtonNames[radioName] = radioName;
-	          }
-	        } else {
-	          valueToCheck = input.is('input[type=checkbox],input[type=radio]') ? input.is(':checked') : !!input.val();
-	          if (valueToCheck === nonBlank) {
-	            foundInputs = foundInputs.add(input);
-	          }
-	        }
-	      });
-	      return foundInputs.length ? foundInputs : false;
-	    },
-
-	    // Helper function which checks for non-blank inputs in a form that match the specified CSS selector
-	    nonBlankInputs: function(form, specifiedSelector) {
-	      return rails.blankInputs(form, specifiedSelector, true); // true specifies nonBlank
-	    },
-
-	    // Helper function, needed to provide consistent behavior in IE
-	    stopEverything: function(e) {
-	      $(e.target).trigger('ujs:everythingStopped');
-	      e.stopImmediatePropagation();
-	      return false;
-	    },
-
-	    //  Replace element's html with the 'data-disable-with' after storing original html
-	    //  and prevent clicking on it
-	    disableElement: function(element) {
-	      var replacement = element.data('disable-with');
-
-	      if (replacement !== undefined) {
-	        element.data('ujs:enable-with', element.html()); // store enabled state
-	        element.html(replacement);
-	      }
-
-	      element.bind('click.railsDisable', function(e) { // prevent further clicking
-	        return rails.stopEverything(e);
-	      });
-	      element.data('ujs:disabled', true);
-	    },
-
-	    // Restore element to its original state which was disabled by 'disableElement' above
-	    enableElement: function(element) {
-	      if (element.data('ujs:enable-with') !== undefined) {
-	        element.html(element.data('ujs:enable-with')); // set to old enabled state
-	        element.removeData('ujs:enable-with'); // clean up cache
-	      }
-	      element.unbind('click.railsDisable'); // enable element
-	      element.removeData('ujs:disabled');
-	    }
-	  };
-
-	  if (rails.fire($document, 'rails:attachBindings')) {
-
-	    $.ajaxPrefilter(function(options, originalOptions, xhr){ if ( !options.crossDomain ) { rails.CSRFProtection(xhr); }});
-
-	    // This event works the same as the load event, except that it fires every
-	    // time the page is loaded.
-	    //
-	    // See https://github.com/rails/jquery-ujs/issues/357
-	    // See https://developer.mozilla.org/en-US/docs/Using_Firefox_1.5_caching
-	    $(window).on('pageshow.rails', function () {
-	      $($.rails.enableSelector).each(function () {
-	        var element = $(this);
-
-	        if (element.data('ujs:disabled')) {
-	          $.rails.enableFormElement(element);
-	        }
-	      });
-
-	      $($.rails.linkDisableSelector).each(function () {
-	        var element = $(this);
-
-	        if (element.data('ujs:disabled')) {
-	          $.rails.enableElement(element);
-	        }
-	      });
-	    });
-
-	    $document.on('ajax:complete', rails.linkDisableSelector, function() {
-	        rails.enableElement($(this));
-	    });
-
-	    $document.on('ajax:complete', rails.buttonDisableSelector, function() {
-	        rails.enableFormElement($(this));
-	    });
-
-	    $document.on('click.rails', rails.linkClickSelector, function(e) {
-	      var link = $(this), method = link.data('method'), data = link.data('params'), metaClick = e.metaKey || e.ctrlKey;
-	      if (!rails.allowAction(link)) return rails.stopEverything(e);
-
-	      if (!metaClick && link.is(rails.linkDisableSelector)) rails.disableElement(link);
-
-	      if (rails.isRemote(link)) {
-	        if (metaClick && (!method || method === 'GET') && !data) { return true; }
-
-	        var handleRemote = rails.handleRemote(link);
-	        // Response from rails.handleRemote() will either be false or a deferred object promise.
-	        if (handleRemote === false) {
-	          rails.enableElement(link);
-	        } else {
-	          handleRemote.fail( function() { rails.enableElement(link); } );
-	        }
-	        return false;
-
-	      } else if (method) {
-	        rails.handleMethod(link);
-	        return false;
-	      }
-	    });
-
-	    $document.on('click.rails', rails.buttonClickSelector, function(e) {
-	      var button = $(this);
-
-	      if (!rails.allowAction(button) || !rails.isRemote(button)) return rails.stopEverything(e);
-
-	      if (button.is(rails.buttonDisableSelector)) rails.disableFormElement(button);
-
-	      var handleRemote = rails.handleRemote(button);
-	      // Response from rails.handleRemote() will either be false or a deferred object promise.
-	      if (handleRemote === false) {
-	        rails.enableFormElement(button);
-	      } else {
-	        handleRemote.fail( function() { rails.enableFormElement(button); } );
-	      }
-	      return false;
-	    });
-
-	    $document.on('change.rails', rails.inputChangeSelector, function(e) {
-	      var link = $(this);
-	      if (!rails.allowAction(link) || !rails.isRemote(link)) return rails.stopEverything(e);
-
-	      rails.handleRemote(link);
-	      return false;
-	    });
-
-	    $document.on('submit.rails', rails.formSubmitSelector, function(e) {
-	      var form = $(this),
-	        remote = rails.isRemote(form),
-	        blankRequiredInputs,
-	        nonBlankFileInputs;
-
-	      if (!rails.allowAction(form)) return rails.stopEverything(e);
-
-	      // Skip other logic when required values are missing or file upload is present
-	      if (form.attr('novalidate') === undefined) {
-	        if (form.data('ujs:formnovalidate-button') === undefined) {
-	          blankRequiredInputs = rails.blankInputs(form, rails.requiredInputSelector, false);
-	          if (blankRequiredInputs && rails.fire(form, 'ajax:aborted:required', [blankRequiredInputs])) {
-	            return rails.stopEverything(e);
-	          }
-	        } else {
-	          // Clear the formnovalidate in case the next button click is not on a formnovalidate button
-	          // Not strictly necessary to do here, since it is also reset on each button click, but just to be certain
-	          form.data('ujs:formnovalidate-button', undefined);
-	        }
-	      }
-
-	      if (remote) {
-	        nonBlankFileInputs = rails.nonBlankInputs(form, rails.fileInputSelector);
-	        if (nonBlankFileInputs) {
-	          // Slight timeout so that the submit button gets properly serialized
-	          // (make it easy for event handler to serialize form without disabled values)
-	          setTimeout(function(){ rails.disableFormElements(form); }, 13);
-	          var aborted = rails.fire(form, 'ajax:aborted:file', [nonBlankFileInputs]);
-
-	          // Re-enable form elements if event bindings return false (canceling normal form submission)
-	          if (!aborted) { setTimeout(function(){ rails.enableFormElements(form); }, 13); }
-
-	          return aborted;
-	        }
-
-	        rails.handleRemote(form);
-	        return false;
-
-	      } else {
-	        // Slight timeout so that the submit button gets properly serialized
-	        setTimeout(function(){ rails.disableFormElements(form); }, 13);
-	      }
-	    });
-
-	    $document.on('click.rails', rails.formInputClickSelector, function(event) {
-	      var button = $(this);
-
-	      if (!rails.allowAction(button)) return rails.stopEverything(event);
-
-	      // Register the pressed submit button
-	      var name = button.attr('name'),
-	        data = name ? {name:name, value:button.val()} : null;
-
-	      var form = button.closest('form');
-	      if (form.length === 0) {
-	        form = $('#' + button.attr('form'));
-	      }
-	      form.data('ujs:submit-button', data);
-
-	      // Save attributes from button
-	      form.data('ujs:formnovalidate-button', button.attr('formnovalidate'));
-	      form.data('ujs:submit-button-formaction', button.attr('formaction'));
-	      form.data('ujs:submit-button-formmethod', button.attr('formmethod'));
-	    });
-
-	    $document.on('ajax:send.rails', rails.formSubmitSelector, function(event) {
-	      if (this === event.target) rails.disableFormElements($(this));
-	    });
-
-	    $document.on('ajax:complete.rails', rails.formSubmitSelector, function(event) {
-	      if (this === event.target) rails.enableFormElements($(this));
-	    });
-
-	    $(function(){
-	      rails.refreshCSRFTokens();
-	    });
-	  }
-
-	})( jQuery );
-
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
-
-/***/ },
-/* 6 */
-/***/ function(module, exports, __webpack_require__) {
-
-	(function (global, factory) {
-	   true ? factory(exports, __webpack_require__(7), __webpack_require__(12)) :
-	  typeof define === 'function' && define.amd ? define(['exports', 'skatejs-named-slots', 'document-register-element'], factory) :
-	  (factory((global.skatejsWebComponents = global.skatejsWebComponents || {}),global.skatejsNamedSlots,global.documentRegisterElement));
-	}(this, (function (exports,skatejsNamedSlots,documentRegisterElement) {
-
-	var patch = navigator.userAgent.indexOf('Safari/60') !== -1;
-
-	// Workaround for https://bugs.webkit.org/show_bug.cgi?id=160331
-	function fixSafari() {
-	  var oldAttachShadow = HTMLElement.prototype.attachShadow;
-
-	  // We observe a shadow root, but only need to know if the target that was mutated is a <style>
-	  // element as this is the only scenario where styles aren't recalculated.
-	  var moOpts = { childList: true, subtree: true };
-	  var mo = new MutationObserver(function (muts) {
-	    muts.forEach(function (mut) {
-	      var target = mut.target;
-
-	      if (target.tagName === 'STYLE') {
-	        var nextSibling = target.nextSibling;
-	        var parentNode = target.parentNode;
-
-	        // We actually have to remove and subsequently re-insert rather than doing insertBefore()
-	        // as it seems that doesn't trigger a recalc.
-
-	        parentNode.removeChild(target);
-	        parentNode.insertBefore(target, nextSibling);
-	      }
-	    });
-	  });
-
-	  // Our override simply calls the native (or overridden) attachShadow but it ensures that changes
-	  // to it are observed so that we can take any <style> elements and re-insert them.
-	  function newAttachShadow(opts) {
-	    var sr = oldAttachShadow.call(this, opts);
-	    mo.observe(sr, moOpts);
-	    return sr;
-	  }
-
-	  // We have to define a property because Safari won't take the override if it is set directly.
-	  Object.defineProperty(HTMLElement.prototype, 'attachShadow', {
-	    // Ensure polyfills can override it (hoping they call it back).
-	    configurable: true,
-	    enumerable: true,
-	    value: newAttachShadow,
-	    writable: true
-	  });
-	}
-
-	// We target a specific version of Safari instead of trying to but detect as it seems to involve
-	// contriving a breaking case and detecting computed styles. We can remove this code when Safari
-	// fixes the bug.
-	if (patch) {
-	  fixSafari();
-	}
-
-	Object.defineProperty(exports, '__esModule', { value: true });
-
-	})));
-	//# sourceMappingURL=index.js.map
-
-
-/***/ },
-/* 7 */
-/***/ function(module, exports, __webpack_require__) {
-
-	(function (global, factory) {
-	   true ? factory(exports, __webpack_require__(8), __webpack_require__(9), __webpack_require__(11)) :
-	  typeof define === 'function' && define.amd ? define(['exports', 'custom-event-polyfill', 'debounce', 'weakmap'], factory) :
-	  (factory((global.skatejsNamedSlots = global.skatejsNamedSlots || {}),global.customEventPolyfill,global.debounce,global.WeakMap));
-	}(this, (function (exports,customEventPolyfill,debounce,WeakMap) {
-
-	debounce = 'default' in debounce ? debounce['default'] : debounce;
-	WeakMap = 'default' in WeakMap ? WeakMap['default'] : WeakMap;
-
-	var div = document.createElement('div');
-	var shadowDomV0 = !!div.createShadowRoot;
-	var shadowDomV1 = !!div.attachShadow;
-
-	var $shadowRoot = '__shadowRoot';
-
-	var v0 = (function () {
-	  // Returns the assigned nodes (unflattened) for a <content> node.
-	  var getAssignedNodes = function getAssignedNodes(node) {
-	    var slot = node.getAttribute('name');
-
-	    var host = node;
-	    while (host) {
-	      var sr = host[$shadowRoot];
-	      if (sr && sr.contains(node)) {
-	        break;
-	      }
-	      host = host.parentNode;
-	    }
-
-	    if (!host) {
-	      return [];
-	    }
-
-	    var chs = host.childNodes;
-	    var chsLen = chs.length;
-	    var filtered = [];
-
-	    for (var a = 0; a < chsLen; a++) {
-	      var ch = chs[a];
-	      var chSlot = ch.getAttribute ? ch.getAttribute('slot') : null;
-	      if (slot === chSlot) {
-	        filtered.push(ch);
-	      }
-	    }
-
-	    return filtered;
-	  };
-
-	  var _HTMLElement$prototyp = HTMLElement.prototype;
-	  var getAttribute = _HTMLElement$prototyp.getAttribute;
-	  var setAttribute = _HTMLElement$prototyp.setAttribute;
-
-	  var elementInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
-	  var shadowRootInnerHTML = Object.getOwnPropertyDescriptor(ShadowRoot.prototype, 'innerHTML');
-
-	  // We do this so creating a <slot> actually creates a <content>.
-	  var filterTagName = function filterTagName(name) {
-	    return name === 'slot' ? 'content' : name;
-	  };
-	  var createElement = document.createElement.bind(document);
-	  var createElementNS = document.createElementNS.bind(document);
-	  document.createElement = function (name) {
-	    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-	      args[_key - 1] = arguments[_key];
-	    }
-
-	    return createElement.apply(undefined, [filterTagName(name)].concat(args));
-	  };
-	  document.createElementNS = function (uri, name) {
-	    for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
-	      args[_key2 - 2] = arguments[_key2];
-	    }
-
-	    return createElementNS.apply(undefined, [uri, filterTagName(name)].concat(args));
-	  };
-
-	  // Override innerHTML to turn slot nodes into content nodes.
-	  function replaceSlotsWithContents(node) {
-	    var tree = document.createTreeWalker(node, NodeFilter.SHOW_ELEMENT);
-	    var repl = [];
-
-	    // Walk the tree and record nodes that need replacing.
-	    while (tree.nextNode()) {
-	      var currentNode = tree.currentNode;
-
-	      if (currentNode.tagName === 'SLOT') {
-	        repl.push(currentNode);
-	      }
-	    }
-
-	    repl.forEach(function (fake) {
-	      var name = fake.getAttribute('name');
-	      var real = document.createElement('slot');
-	      if (name) {
-	        real.setAttribute('name', name);
-	      }
-
-	      fake.parentNode.replaceChild(real, fake);
-	      while (fake.hasChildNodes()) {
-	        real.appendChild(fake.firstChild);
-	      }
-	    });
-	  }
-	  Object.defineProperty(Element.prototype, 'innerHTML', {
-	    configurable: true,
-	    get: elementInnerHTML.get,
-	    set: function set(html) {
-	      elementInnerHTML.set.call(this, html);
-	      replaceSlotsWithContents(this);
-	    }
-	  });
-	  Object.defineProperty(ShadowRoot.prototype, 'innerHTML', {
-	    configurable: true,
-	    get: shadowRootInnerHTML.get,
-	    set: function set(html) {
-	      shadowRootInnerHTML.set.call(this, html);
-	      replaceSlotsWithContents(this);
-	    }
-	  });
-
-	  // Node
-	  // ----
-
-	  Object.defineProperty(Node.prototype, 'assignedSlot', {
-	    get: function get() {
-	      var parentNode = this.parentNode;
-
-	      if (parentNode) {
-	        var shadowRoot = parentNode.shadowRoot;
-
-	        // If { mode } is "closed", always return `null`.
-
-	        if (!shadowRoot) {
-	          return null;
-	        }
-
-	        var contents = shadowRoot.querySelectorAll('content');
-	        for (var a = 0; a < contents.length; a++) {
-	          var content = contents[a];
-	          if (content.assignedNodes().indexOf(this) > -1) {
-	            return content;
-	          }
-	        }
-	      }
-	      return null;
-	    }
-	  });
-
-	  // Just proxy createShadowRoot() because there's no such thing as closed
-	  // shadow trees in v0.
-	  HTMLElement.prototype.attachShadow = function attachShadow() {
-	    var _this = this;
-
-	    var _ref = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-
-	    var mode = _ref.mode;
-
-	    // In v1 you must specify a mode.
-	    if (mode !== 'closed' && mode !== 'open') {
-	      throw new Error('You must specify { mode } as "open" or "closed" to attachShadow().');
-	    }
-
-	    // Proxy native v0.
-	    var sr = this.createShadowRoot();
-
-	    // In v0 it always defines the shadowRoot property so we must undefine it.
-	    if (mode === 'closed') {
-	      Object.defineProperty(this, 'shadowRoot', {
-	        configurable: true,
-	        get: function get() {
-	          return null;
-	        }
-	      });
-	    }
-
-	    // For some reason this wasn't being reported as set, but it seems to work
-	    // in dev tools.
-	    Object.defineProperty(sr, 'parentNode', {
-	      get: function get() {
-	        return _this;
-	      }
-	    });
-
-	    // Add a MutationObserver to trigger slot change events when the element
-	    // is mutated. We only need to listen to the childList because we only care
-	    // about light DOM.
-	    var mo = new MutationObserver(function (muts) {
-	      var root = _this[$shadowRoot];
-	      muts.forEach(function (mut) {
-	        var addedNodes = mut.addedNodes;
-	        var removedNodes = mut.removedNodes;
-
-	        var slots = {};
-	        var recordSlots = function recordSlots(node) {
-	          return slots[node.getAttribute && node.getAttribute('slot') || '__default'] = true;
-	        };
-
-	        if (addedNodes) {
-	          var addedNodesLen = addedNodes.length;
-	          for (var a = 0; a < addedNodesLen; a++) {
-	            recordSlots(addedNodes[a]);
-	          }
-	        }
-
-	        if (removedNodes) {
-	          var removedNodesLen = removedNodes.length;
-	          for (var _a = 0; _a < removedNodesLen; _a++) {
-	            recordSlots(removedNodes[_a]);
-	          }
-	        }
-
-	        Object.keys(slots).forEach(function (slot) {
-	          var node = slot === '__default' ? root.querySelector('content:not([name])') || root.querySelector('content[name=""]') : root.querySelector('content[name="' + slot + '"]');
-
-	          if (node) {
-	            node.dispatchEvent(new CustomEvent('slotchange', {
-	              bubbles: false,
-	              cancelable: false
-	            }));
-	          }
-	        });
-	      });
-	    });
-	    mo.observe(this, { childList: true });
-
-	    return this[$shadowRoot] = sr;
-	  };
-
-	  // Make like the <slot> name property.
-	  Object.defineProperty(HTMLContentElement.prototype, 'name', {
-	    get: function get() {
-	      return this.getAttribute('name');
-	    },
-	    set: function set(name) {
-	      return this.setAttribute('name', name);
-	    }
-	  });
-
-	  // Make like the element slot property.
-	  Object.defineProperty(HTMLElement.prototype, 'slot', {
-	    get: function get() {
-	      return this.getAttribute('slot');
-	    },
-	    set: function set(name) {
-	      return this.setAttribute('slot', name);
-	    }
-	  });
-
-	  // By default, getDistributedNodes() returns a flattened tree (no <slot>
-	  // nodes). That means we get native { deep } but we have to manually do the
-	  // opposite.
-	  HTMLContentElement.prototype.assignedNodes = function assignedNodes() {
-	    var _ref2 = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-
-	    var deep = _ref2.deep;
-
-	    var cnodes = [];
-	    var dnodes = deep ? this.getDistributedNodes() : getAssignedNodes(this);
-
-	    // Regardless of how we get the nodes, we must ensure we're only given text
-	    // nodes or element nodes.
-	    for (var a = 0; a < dnodes.length; a++) {
-	      var dnode = dnodes[a];
-	      var dtype = dnode.nodeType;
-	      if (dtype === Node.ELEMENT_NODE || dtype === Node.TEXT_NODE) {
-	        cnodes.push(dnode);
-	      }
-	    }
-	    return cnodes;
-	  };
-
-	  HTMLContentElement.prototype.getAttribute = function overriddenGetAttribute(name) {
-	    if (name === 'name') {
-	      var select = getAttribute.call(this, 'select');
-	      return select ? select.match(/\[slot=['"]?(.*?)['"]?\]/)[1] : null;
-	    }
-	    return getAttribute.call(this, name);
-	  };
-
-	  HTMLContentElement.prototype.setAttribute = function overriddenSetAttribute(name, value) {
-	    if (name === 'name') {
-	      name = 'select';
-	      value = '[slot=\'' + value + '\']';
-	    }
-	    return setAttribute.call(this, name, value);
-	  };
-	})
-
-	function eachChildNode(node, func) {
-	  if (!node) {
-	    return;
-	  }
-
-	  var chs = node.childNodes;
-	  var chsLen = chs.length;
-	  for (var a = 0; a < chsLen; a++) {
-	    var ret = func(chs[a], a, chs);
-	    if (typeof ret !== 'undefined') {
-	      return ret; // eslint-disable-line consistent-return
-	    }
-	  }
-	}
-
-	// Re-implemented to avoid Array.prototype.slice.call for performance reasons
-	function reverse(arr) {
-	  var reversedArray = [];
-	  for (var i = arr.length - 1; i >= 0; i--) {
-	    reversedArray.push(arr[i]);
-	  }
-	  return reversedArray;
-	}
-
-	/**
-	 * Execute func over all child nodes or a document fragment, or a single node
-	 * @param node the node or document fragment
-	 * @param func a function to execute on node or the children of node, if node is a document fragment.
-	 *        func may optionally append the node elsewhere, in the case of a document fragment
-	 */
-	function eachNodeOrFragmentNodes(node, func) {
-	  if (node instanceof DocumentFragment) {
-	    var chs = node.childNodes;
-	    var chsLen = chs.length;
-
-	    // We must iterate in reverse to handle the case where child nodes are moved elsewhere during execution
-	    for (var a = chsLen - 1; a >= 0; a--) {
-	      var thisNode = reverse(node.childNodes)[a];
-	      func(thisNode, a);
-	    }
-	  } else {
-	    func(node, 0);
-	  }
-	}
-
-	var div$1 = document.createElement('div');
-
-	function getPrototype(obj, key) {
-	  var descriptor = void 0;
-
-	  while (obj && !(descriptor = Object.getOwnPropertyDescriptor(obj, key))) {
-	    // eslint-disable-line no-cond-assign
-	    obj = Object.getPrototypeOf(obj);
-	  }
-	  return descriptor;
-	}
-	function getPropertyDescriptor (obj, key) {
-	  if (obj instanceof Node) {
-	    obj = div$1;
-	  }
-	  var proto = getPrototype(obj, key);
-
-	  if (proto) {
-	    var getter = proto.get;
-	    var setter = proto.set;
-	    var _descriptor = {
-	      configurable: true,
-	      enumerable: true
-	    };
-
-	    if (getter) {
-	      _descriptor.get = getter;
-	      _descriptor.set = setter;
-	      return _descriptor;
-	    } else if (typeof obj[key] === 'function') {
-	      _descriptor.value = obj[key];
-	      return _descriptor;
-	    }
-	  }
-
-	  var descriptor = Object.getOwnPropertyDescriptor(obj, key);
-	  if (descriptor && descriptor.get) {
-	    return descriptor;
-	  }
-	}
-
-	// Any code referring to this is because it has to work around this bug in
-	// WebKit: https://bugs.webkit.org/show_bug.cgi?id=49739
-
-	var nativeParentNode = getPropertyDescriptor(Element.prototype, 'innerHTML');
-
-	var canPatchNativeAccessors = !!nativeParentNode;
-
-	/**
-	 * See https://w3c.github.io/DOM-Parsing/#serializing
-	 * @param {TextNode}
-	 * @returns {string}
-	 */
-	function getEscapedTextContent(textNode) {
-	  return textNode.textContent.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-	}
-
-	/**
-	 * @param {TextNode}
-	 * @returns {string}
-	 */
-	function getRawTextContent(textNode) {
-	  return textNode.textContent;
-	}
-
-	/**
-	 * @returns {string}
-	 * @param {commentNode}
-	 */
-	function getCommentNodeOuterHtml(commentNode) {
-	  return commentNode.text || "<!--" + commentNode.textContent + "-->";
-	}
-
-	function isSlotNode (node) {
-	  return node.tagName === 'SLOT';
-	}
-
-	var toConsumableArray = function (arr) {
-	  if (Array.isArray(arr)) {
-	    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
-
-	    return arr2;
-	  } else {
-	    return Array.from(arr);
-	  }
-	};
-
-	function findSlots(root) {
-	  var slots = arguments.length <= 1 || arguments[1] === undefined ? [] : arguments[1];
-	  var childNodes = root.childNodes;
-
-
-	  if (shadowDomV0 && !shadowDomV1) {
-	    return [].concat(toConsumableArray(root.querySelectorAll('content')));
-	  }
-
-	  if (!childNodes || [Node.ELEMENT_NODE, Node.DOCUMENT_FRAGMENT_NODE].indexOf(root.nodeType) === -1) {
-	    return slots;
-	  }
-
-	  var length = childNodes.length;
-
-
-	  for (var a = 0; a < length; a++) {
-	    var childNode = childNodes[a];
-
-	    if (isSlotNode(childNode)) {
-	      slots.push(childNode);
-	    }
-	    findSlots(childNode, slots);
-	  }
-
-	  return slots;
-	}
-
-	function isRootNode (node) {
-	  return node.tagName === '_SHADOW_ROOT_';
-	}
-
-	var pseudoArrayToArray = (function (pseudoArray) {
-	  return Array.prototype.slice.call(pseudoArray);
-	})
-
-	var arrProto = Array.prototype;
-	var forEach = arrProto.forEach;
-
-	// We use a real DOM node for a shadow root. This is because the host node
-	// basically becomes a virtual entry point for your element leaving the shadow
-	// root the only thing that can receive instructions on how the host should
-	// render to the browser.
-
-	var defaultShadowRootTagName = '_shadow_root_';
-
-	// * WebKit only *
-	//
-	// These members we need cannot override as we require native access to their
-	// original values at some point.
-	var polyfillAtRuntime = ['childNodes', 'parentNode'];
-
-	// Some properties that should not be overridden in the Text prototype.
-	var doNotOverridePropertiesInTextNodes = ['textContent'];
-
-	// Some new properties that should be defined in the Text prototype.
-	var defineInTextNodes = ['assignedSlot'];
-
-	// Some properties that should not be overridden in the Comment prototype.
-	var doNotOverridePropertiesInCommNodes = ['textContent'];
-
-	// Some new properties that should be defined in the Comment prototype.
-	var defineInCommNodes = [];
-
-	// Nodes that should be slotted
-	var slottedNodeTypes = [Node.ELEMENT_NODE, Node.TEXT_NODE];
-
-	// Private data stores.
-	var assignedToSlotMap = new WeakMap();
-	var hostToModeMap = new WeakMap();
-	var hostToRootMap = new WeakMap();
-	var nodeToChildNodesMap = new WeakMap();
-	var nodeToParentNodeMap = new WeakMap();
-	var nodeToSlotMap = new WeakMap();
-	var rootToHostMap = new WeakMap();
-	var rootToSlotMap = new WeakMap();
-	var slotToRootMap = new WeakMap();
-
-	// Unfortunately manual DOM parsing is because of WebKit.
-	var parser = new DOMParser();
-	function parse(html) {
-	  var tree = document.createElement('div');
-
-	  // Everything not WebKit can do this easily.
-	  if (canPatchNativeAccessors) {
-	    tree.__innerHTML = html;
-	    return tree;
-	  }
-
-	  var parsed = parser.parseFromString('<div>' + html + '</div>', 'text/html').body.firstChild;
-
-	  while (parsed.hasChildNodes()) {
-	    var firstChild = parsed.firstChild;
-	    parsed.removeChild(firstChild);
-	    tree.appendChild(firstChild);
-	  }
-
-	  // Need to import the node to initialise the custom elements from the parser.
-	  return document.importNode(tree, true);
-	}
-
-	function staticProp(obj, name, value) {
-	  Object.defineProperty(obj, name, {
-	    configurable: true,
-	    get: function get() {
-	      return value;
-	    }
-	  });
-	}
-
-	// Slotting helpers.
-
-	function arrayItem(idx) {
-	  return this[idx];
-	}
-
-	function makeLikeNodeList(arr) {
-	  arr.item = arrayItem;
-	  return arr;
-	}
-
-	function isHostNode(node) {
-	  return !!hostToRootMap.get(node);
-	}
-
-	function getNodeType(node) {
-	  if (isHostNode(node)) {
-	    return 'host';
-	  }
-
-	  if (isSlotNode(node)) {
-	    return 'slot';
-	  }
-
-	  if (isRootNode(node)) {
-	    return 'root';
-	  }
-
-	  return 'node';
-	}
-
-	function findClosest(node, func) {
-	  while (node) {
-	    if (node === document) {
-	      break;
-	    }
-	    if (func(node)) {
-	      return node;
-	    }
-	    node = node.parentNode;
-	  }
-	}
-
-	function getSlotNameFromSlot(node) {
-	  return node.getAttribute && node.getAttribute('name') || 'default';
-	}
-
-	function getSlotNameFromNode(node) {
-	  return node.getAttribute && node.getAttribute('slot') || 'default';
-	}
-
-	function slotNodeIntoSlot(slot, node, insertBefore) {
-	  // Only Text and Element nodes should be slotted.
-	  if (slottedNodeTypes.indexOf(node.nodeType) === -1) {
-	    return;
-	  }
-
-	  var assignedNodes = slot.assignedNodes();
-	  var shouldGoIntoContentMode = assignedNodes.length === 0;
-	  var slotInsertBeforeIndex = assignedNodes.indexOf(insertBefore);
-
-	  // Assign the slot to the node internally.
-	  nodeToSlotMap.set(node, slot);
-
-	  // Remove the fallback content and state if we're going into content mode.
-	  if (shouldGoIntoContentMode) {
-	    forEach.call(slot.childNodes, function (child) {
-	      return slot.__removeChild(child);
-	    });
-	  }
-
-	  if (slotInsertBeforeIndex > -1) {
-	    slot.__insertBefore(node, insertBefore !== undefined ? insertBefore : null);
-	    assignedNodes.splice(slotInsertBeforeIndex, 0, node);
-	  } else {
-	    slot.__appendChild(node);
-	    assignedNodes.push(node);
-	  }
-
-	  slot.____triggerSlotChangeEvent();
-	}
-
-	function slotNodeFromSlot(node) {
-	  var slot = nodeToSlotMap.get(node);
-
-	  if (slot) {
-	    var assignedNodes = slot.assignedNodes();
-	    var index = assignedNodes.indexOf(node);
-
-	    if (index > -1) {
-	      var shouldGoIntoDefaultMode = assignedNodes.length === 1;
-
-	      assignedNodes.splice(index, 1);
-	      nodeToSlotMap.set(node, null);
-
-	      // Actually remove the child.
-	      slot.__removeChild(node);
-
-	      // If this was the last slotted node, then insert fallback content.
-	      if (shouldGoIntoDefaultMode) {
-	        forEach.call(slot.childNodes, function (child) {
-	          return slot.__appendChild(child);
-	        });
-	      }
-
-	      slot.____triggerSlotChangeEvent();
-	    }
-	  }
-	}
-
-	// Returns the index of the node in the host's childNodes.
-	function indexOfNode(host, node) {
-	  var chs = host.childNodes;
-	  var chsLen = chs.length;
-	  for (var a = 0; a < chsLen; a++) {
-	    if (chs[a] === node) {
-	      return a;
-	    }
-	  }
-	  return -1;
-	}
-
-	// Adds the node to the list of childNodes on the host and fakes any necessary
-	// information such as parentNode.
-	function registerNode(host, node, insertBefore, func) {
-	  var index = indexOfNode(host, insertBefore);
-	  eachNodeOrFragmentNodes(node, function (eachNode, eachIndex) {
-	    func(eachNode, eachIndex);
-
-	    if (canPatchNativeAccessors) {
-	      nodeToParentNodeMap.set(eachNode, host);
-	    } else {
-	      staticProp(eachNode, 'parentNode', host);
-	    }
-
-	    if (index > -1) {
-	      arrProto.splice.call(host.childNodes, index + eachIndex, 0, eachNode);
-	    } else {
-	      arrProto.push.call(host.childNodes, eachNode);
-	    }
-	  });
-	}
-
-	// Cleans up registerNode().
-	function unregisterNode(host, node, func) {
-	  var index = indexOfNode(host, node);
-
-	  if (index > -1) {
-	    func(node, 0);
-
-	    if (canPatchNativeAccessors) {
-	      nodeToParentNodeMap.set(node, null);
-	    } else {
-	      staticProp(node, 'parentNode', null);
-	    }
-
-	    arrProto.splice.call(host.childNodes, index, 1);
-	  }
-	}
-
-	function addNodeToNode(host, node, insertBefore) {
-	  registerNode(host, node, insertBefore, function (eachNode) {
-	    host.__insertBefore(eachNode, insertBefore !== undefined ? insertBefore : null);
-	  });
-	}
-
-	function addNodeToHost(host, node, insertBefore) {
-	  registerNode(host, node, insertBefore, function (eachNode) {
-	    var rootNode = hostToRootMap.get(host);
-	    var slotNodes = rootToSlotMap.get(rootNode);
-	    var slotNode = slotNodes[getSlotNameFromNode(eachNode)];
-	    if (slotNode) {
-	      slotNodeIntoSlot(slotNode, eachNode, insertBefore);
-	    }
-	  });
-	}
-
-	function addSlotToRoot(root, slot) {
-	  var slotName = getSlotNameFromSlot(slot);
-
-	  // Ensure a slot node's childNodes are overridden at the earliest point
-	  // possible for WebKit.
-	  if (!canPatchNativeAccessors && !Array.isArray(slot.childNodes)) {
-	    staticProp(slot, 'childNodes', pseudoArrayToArray(slot.childNodes));
-	  }
-
-	  rootToSlotMap.get(root)[slotName] = slot;
-
-	  if (!slotToRootMap.has(slot)) {
-	    slotToRootMap.set(slot, root);
-	  }
-
-	  eachChildNode(rootToHostMap.get(root), function (eachNode) {
-	    if (!eachNode.assignedSlot && slotName === getSlotNameFromNode(eachNode)) {
-	      slotNodeIntoSlot(slot, eachNode);
-	    }
-	  });
-	}
-
-	function addNodeToRoot(root, node, insertBefore) {
-	  eachNodeOrFragmentNodes(node, function (child) {
-	    if (isSlotNode(child)) {
-	      addSlotToRoot(root, child);
-	    } else {
-	      var slotNodes = findSlots(child);
-	      if (slotNodes) {
-	        var slotNodesLen = slotNodes.length;
-	        for (var a = 0; a < slotNodesLen; a++) {
-	          addSlotToRoot(root, slotNodes[a]);
-	        }
-	      }
-	    }
-	  });
-	  addNodeToNode(root, node, insertBefore);
-	}
-
-	// Adds a node to a slot. In other words, adds default content to a slot. It
-	// ensures that if the slot doesn't have any assigned nodes yet, that the node
-	// is actually displayed, otherwise it's just registered as child content.
-	function addNodeToSlot(slot, node, insertBefore) {
-	  var isInDefaultMode = slot.assignedNodes().length === 0;
-	  registerNode(slot, node, insertBefore, function (eachNode) {
-	    if (isInDefaultMode) {
-	      slot.__insertBefore(eachNode, insertBefore !== undefined ? insertBefore : null);
-	    }
-	  });
-	}
-
-	// Removes a node from a slot (default content). It ensures that if the slot
-	// doesn't have any assigned nodes yet, that the node is actually removed,
-	// otherwise it's just unregistered.
-	function removeNodeFromSlot(slot, node) {
-	  var isInDefaultMode = slot.assignedNodes().length === 0;
-	  unregisterNode(slot, node, function () {
-	    if (isInDefaultMode) {
-	      slot.__removeChild(node);
-	    }
-	  });
-	}
-
-	function removeNodeFromNode(host, node) {
-	  unregisterNode(host, node, function () {
-	    host.__removeChild(node);
-	  });
-	}
-
-	function removeNodeFromHost(host, node) {
-	  unregisterNode(host, node, function () {
-	    slotNodeFromSlot(node);
-	  });
-	}
-
-	function removeSlotFromRoot(root, node) {
-	  var assignedNodes = Array.prototype.slice.call(node.assignedNodes());
-	  assignedNodes.forEach(slotNodeFromSlot);
-	  delete rootToSlotMap.get(root)[getSlotNameFromSlot(node)];
-	  slotToRootMap.delete(node);
-	}
-
-	function removeNodeFromRoot(root, node) {
-	  unregisterNode(root, node, function () {
-	    if (isSlotNode(node)) {
-	      removeSlotFromRoot(root, node);
-	    } else {
-	      var nodes = findSlots(node);
-	      if (nodes) {
-	        for (var a = 0; a < nodes.length; a++) {
-	          removeSlotFromRoot(root, nodes[a]);
-	        }
-	      }
-	    }
-	    root.__removeChild(node);
-	  });
-	}
-
-	// TODO terribly inefficient
-	function getRootNode(host) {
-	  if (isRootNode(host)) {
-	    return host;
-	  }
-
-	  if (!host.parentNode) {
-	    return;
-	  }
-
-	  return getRootNode(host.parentNode);
-	}
-
-	function appendChildOrInsertBefore(host, newNode, refNode) {
-	  var nodeType = getNodeType(host);
-	  var parentNode = newNode.parentNode;
-	  var rootNode = getRootNode(host);
-
-	  // Ensure childNodes is patched so we can manually update it for WebKit.
-	  if (!canPatchNativeAccessors && !Array.isArray(host.childNodes)) {
-	    staticProp(host, 'childNodes', pseudoArrayToArray(host.childNodes));
-	  }
-
-	  if (rootNode && getNodeType(newNode) === 'slot') {
-	    addSlotToRoot(rootNode, newNode);
-	  }
-
-	  // If we append a child to a host, the host tells the shadow root to distribute
-	  // it. If the root decides it doesn't need to be distributed, it is never
-	  // removed from the old parent because in polyfill land we store a reference
-	  // to the node but we don't move it. Due to that, we must explicitly remove the
-	  // node from its old parent.
-	  if (parentNode && getNodeType(parentNode) === 'host') {
-	    if (canPatchNativeAccessors) {
-	      nodeToParentNodeMap.set(newNode, null);
-	    } else {
-	      staticProp(newNode, 'parentNode', null);
-	    }
-	  }
-
-	  if (nodeType === 'node') {
-	    if (canPatchNativeAccessors) {
-	      nodeToParentNodeMap.set(newNode, host);
-	      return host.__insertBefore(newNode, refNode !== undefined ? refNode : null);
-	    }
-
-	    return addNodeToNode(host, newNode, refNode);
-	  }
-
-	  if (nodeType === 'slot') {
-	    return addNodeToSlot(host, newNode, refNode);
-	  }
-
-	  if (nodeType === 'host') {
-	    return addNodeToHost(host, newNode, refNode);
-	  }
-
-	  if (nodeType === 'root') {
-	    return addNodeToRoot(host, newNode, refNode);
-	  }
-	}
-
-	function syncSlotChildNodes(node) {
-	  if (canPatchNativeAccessors && getNodeType(node) === 'slot' && node.__childNodes.length !== node.childNodes.length) {
-	    while (node.hasChildNodes()) {
-	      node.removeChild(node.firstChild);
-	    }
-
-	    forEach.call(node.__childNodes, function (child) {
-	      return node.appendChild(child);
-	    });
-	  }
-	}
-
-	var members = {
-	  // For testing purposes.
-	  ____assignedNodes: {
-	    get: function get() {
-	      return this.______assignedNodes || (this.______assignedNodes = []);
-	    }
-	  },
-
-	  // For testing purposes.
-	  ____isInFallbackMode: {
-	    get: function get() {
-	      return this.assignedNodes().length === 0;
-	    }
-	  },
-
-	  ____slotChangeListeners: {
-	    get: function get() {
-	      if (typeof this.______slotChangeListeners === 'undefined') {
-	        this.______slotChangeListeners = 0;
-	      }
-	      return this.______slotChangeListeners;
-	    },
-	    set: function set(value) {
-	      this.______slotChangeListeners = value;
-	    }
-	  },
-	  ____triggerSlotChangeEvent: {
-	    value: debounce(function callback() {
-	      if (this.____slotChangeListeners) {
-	        this.dispatchEvent(new CustomEvent('slotchange', {
-	          bubbles: false,
-	          cancelable: false
-	        }));
-	      }
-	    })
-	  },
-	  addEventListener: {
-	    value: function value(name, func, opts) {
-	      if (name === 'slotchange' && isSlotNode(this)) {
-	        this.____slotChangeListeners++;
-	      }
-	      return this.__addEventListener(name, func, opts);
-	    }
-	  },
-	  appendChild: {
-	    value: function value(newNode) {
-	      appendChildOrInsertBefore(this, newNode);
-	      return newNode;
-	    }
-	  },
-	  assignedSlot: {
-	    get: function get() {
-	      var slot = nodeToSlotMap.get(this);
-
-	      if (!slot) {
-	        return null;
-	      }
-
-	      var root = slotToRootMap.get(slot);
-	      var host = rootToHostMap.get(root);
-	      var mode = hostToModeMap.get(host);
-
-	      return mode === 'open' ? slot : null;
-	    }
-	  },
-	  attachShadow: {
-	    value: function value(opts) {
-	      var _this = this;
-
-	      var mode = opts && opts.mode;
-	      if (mode !== 'closed' && mode !== 'open') {
-	        throw new Error('You must specify { mode } as "open" or "closed" to attachShadow().');
-	      }
-
-	      // Return the existing shadow root if it exists.
-	      var existingShadowRoot = hostToRootMap.get(this);
-	      if (existingShadowRoot) {
-	        return existingShadowRoot;
-	      }
-
-	      var lightNodes = makeLikeNodeList([].slice.call(this.childNodes));
-	      var shadowRoot = document.createElement(opts.polyfillShadowRootTagName || defaultShadowRootTagName);
-
-	      // Host and shadow root data.
-	      hostToModeMap.set(this, mode);
-	      hostToRootMap.set(this, shadowRoot);
-	      rootToHostMap.set(shadowRoot, this);
-	      rootToSlotMap.set(shadowRoot, {});
-
-	      if (canPatchNativeAccessors) {
-	        nodeToChildNodesMap.set(this, lightNodes);
-	      } else {
-	        staticProp(this, 'childNodes', lightNodes);
-	      }
-
-	      // Process light DOM.
-	      lightNodes.forEach(function (node) {
-	        // Existing children should be removed from being displayed, but still
-	        // appear to be child nodes. This is how light DOM works; they're still
-	        // child nodes but not in the composed DOM yet as there won't be any
-	        // slots for them to go into.
-	        _this.__removeChild(node);
-
-	        // We must register the parentNode here as this has the potential to
-	        // become out of sync if the node is moved before being slotted.
-	        if (canPatchNativeAccessors) {
-	          nodeToParentNodeMap.set(node, _this);
-	        } else {
-	          staticProp(node, 'parentNode', _this);
-	        }
-	      });
-
-	      // The shadow root is actually the only child of the host.
-	      return this.__appendChild(shadowRoot);
-	    }
-	  },
-	  childElementCount: {
-	    get: function get() {
-	      return this.children.length;
-	    }
-	  },
-	  childNodes: {
-	    get: function get() {
-	      if (canPatchNativeAccessors && getNodeType(this) === 'node') {
-	        return this.__childNodes;
-	      }
-	      var childNodes = nodeToChildNodesMap.get(this);
-
-	      if (!childNodes) {
-	        nodeToChildNodesMap.set(this, childNodes = makeLikeNodeList([]));
-	      }
-
-	      return childNodes;
-	    }
-	  },
-	  children: {
-	    get: function get() {
-	      var chs = [];
-	      eachChildNode(this, function (node) {
-	        if (node.nodeType === 1) {
-	          chs.push(node);
-	        }
-	      });
-	      return makeLikeNodeList(chs);
-	    }
-	  },
-	  firstChild: {
-	    get: function get() {
-	      return this.childNodes[0] || null;
-	    }
-	  },
-	  firstElementChild: {
-	    get: function get() {
-	      return this.children[0] || null;
-	    }
-	  },
-	  assignedNodes: {
-	    value: function value() {
-	      if (isSlotNode(this)) {
-	        var assigned = assignedToSlotMap.get(this);
-
-	        if (!assigned) {
-	          assignedToSlotMap.set(this, assigned = []);
-	        }
-
-	        return assigned;
-	      }
-	    }
-	  },
-	  hasChildNodes: {
-	    value: function value() {
-	      return this.childNodes.length > 0;
-	    }
-	  },
-	  innerHTML: {
-	    get: function get() {
-	      var innerHTML = '';
-
-	      var getHtmlNodeOuterHtml = function getHtmlNodeOuterHtml(node) {
-	        return node.outerHTML;
-	      };
-	      var getOuterHtmlByNodeType = {};
-	      getOuterHtmlByNodeType[Node.ELEMENT_NODE] = getHtmlNodeOuterHtml;
-	      getOuterHtmlByNodeType[Node.COMMENT_NODE] = getCommentNodeOuterHtml;
-
-	      // Text nodes with these ancestors should be treated as raw text
-	      // See section 8.4 of
-	      // https://www.w3.org/TR/2008/WD-html5-20080610/serializing.html#html-fragment
-	      // Though Chrome does not adhere to spec for <noscript/>
-	      var rawTextNodeNames = {
-	        style: true,
-	        script: true,
-	        xmp: true,
-	        iframe: true,
-	        noembed: true,
-	        noframes: true,
-	        noscript: true,
-	        plaintext: true
-	      };
-
-	      function isRawTextNode(node) {
-	        return node.nodeType === Node.ELEMENT_NODE && node.nodeName.toLowerCase() in rawTextNodeNames;
-	      }
-
-	      var isParentNodeRawText = isRawTextNode(this);
-
-	      eachChildNode(this, function (node) {
-	        var getOuterHtml = void 0;
-	        if (node.nodeType === Node.TEXT_NODE) {
-	          if (isParentNodeRawText) {
-	            getOuterHtml = getRawTextContent;
-	          } else {
-	            getOuterHtml = getEscapedTextContent;
-	          }
-	        } else {
-	          getOuterHtml = getOuterHtmlByNodeType[node.nodeType] || getHtmlNodeOuterHtml;
-	        }
-	        innerHTML += getOuterHtml(node);
-	      });
-	      return innerHTML;
-	    },
-	    set: function set(innerHTML) {
-	      var parsed = parse(innerHTML);
-
-	      while (this.hasChildNodes()) {
-	        this.removeChild(this.firstChild);
-	      }
-
-	      // when we are doing this: root.innerHTML = "<slot><div></div></slot>";
-	      // slot.__childNodes is out of sync with slot.childNodes.
-	      // to fix it we have to manually remove and insert them
-	      var slots = findSlots(parsed);
-	      forEach.call(slots, function (slot) {
-	        return syncSlotChildNodes(slot);
-	      });
-
-	      while (parsed.hasChildNodes()) {
-	        var firstChild = parsed.firstChild;
-
-	        // When we polyfill everything on HTMLElement.prototype, we overwrite
-	        // properties. This makes it so that parentNode reports null even though
-	        // it's actually a parent of the HTML parser. For this reason,
-	        // cleanNode() won't work and we must manually remove it from the
-	        // parser before it is moved to the host just in case it's added as a
-	        // light node but not assigned to a slot.
-	        parsed.removeChild(firstChild);
-
-	        this.appendChild(firstChild);
-	      }
-	    }
-	  },
-	  insertBefore: {
-	    value: function value(newNode, refNode) {
-	      appendChildOrInsertBefore(this, newNode, refNode);
-
-	      return newNode;
-	    }
-	  },
-	  lastChild: {
-	    get: function get() {
-	      var ch = this.childNodes;
-	      return ch[ch.length - 1] || null;
-	    }
-	  },
-	  lastElementChild: {
-	    get: function get() {
-	      var ch = this.children;
-	      return ch[ch.length - 1] || null;
-	    }
-	  },
-	  name: {
-	    get: function get() {
-	      return this.getAttribute('name');
-	    },
-	    set: function set(name) {
-	      var oldName = this.name;
-	      var ret = this.__setAttribute('name', name);
-
-	      if (name === oldName) {
-	        return ret;
-	      }
-
-	      if (!isSlotNode(this)) {
-	        return ret;
-	      }
-	      var root = slotToRootMap.get(this);
-	      if (root) {
-	        removeSlotFromRoot(root, this);
-	        addSlotToRoot(root, this);
-	      }
-	      return ret;
-	    }
-	  },
-	  nextSibling: {
-	    get: function get() {
-	      var host = this;
-	      return eachChildNode(this.parentNode, function (child, index, nodes) {
-	        if (host === child) {
-	          return nodes[index + 1] || null;
-	        }
-	      });
-	    }
-	  },
-	  nextElementSibling: {
-	    get: function get() {
-	      var host = this;
-	      var found = void 0;
-	      return eachChildNode(this.parentNode, function (child) {
-	        if (found && child.nodeType === 1) {
-	          return child;
-	        }
-	        if (host === child) {
-	          found = true;
-	        }
-	      });
-	    }
-	  },
-	  outerHTML: {
-	    get: function get() {
-	      var name = this.tagName.toLowerCase();
-	      var attributes = Array.prototype.slice.call(this.attributes).map(function (attr) {
-	        return ' ' + attr.name + (attr.value ? '="' + attr.value + '"' : '');
-	      }).join('');
-	      return '<' + name + attributes + '>' + this.innerHTML + '</' + name + '>';
-	    },
-	    set: function set(outerHTML) {
-	      if (this.parentNode) {
-	        var parsed = parse(outerHTML);
-	        this.parentNode.replaceChild(parsed.firstChild, this);
-	      } else if (canPatchNativeAccessors) {
-	        this.__outerHTML = outerHTML; // this will throw a native error;
-	      } else {
-	          throw new Error('Failed to set the \'outerHTML\' property on \'Element\': This element has no parent node.');
-	        }
-	    }
-	  },
-	  parentElement: {
-	    get: function get() {
-	      return findClosest(this.parentNode, function (node) {
-	        return node.nodeType === 1;
-	      });
-	    }
-	  },
-	  parentNode: {
-	    get: function get() {
-	      return nodeToParentNodeMap.get(this) || this.__parentNode || null;
-	    }
-	  },
-	  previousSibling: {
-	    get: function get() {
-	      var host = this;
-	      return eachChildNode(this.parentNode, function (child, index, nodes) {
-	        if (host === child) {
-	          return nodes[index - 1] || null;
-	        }
-	      });
-	    }
-	  },
-	  previousElementSibling: {
-	    get: function get() {
-	      var host = this;
-	      var found = void 0;
-	      return eachChildNode(this.parentNode, function (child) {
-	        if (found && host === child) {
-	          return found;
-	        }
-	        if (child.nodeType === 1) {
-	          found = child;
-	        }
-	      });
-	    }
-	  },
-	  removeChild: {
-	    value: function value(refNode) {
-	      var nodeType = getNodeType(this);
-
-	      switch (nodeType) {
-	        case 'node':
-	          if (canPatchNativeAccessors) {
-	            nodeToParentNodeMap.set(refNode, null);
-	            return this.__removeChild(refNode);
-	          }
-	          removeNodeFromNode(this, refNode);
-	          break;
-	        case 'slot':
-	          removeNodeFromSlot(this, refNode);
-	          break;
-	        case 'host':
-	          removeNodeFromHost(this, refNode);
-	          break;
-	        case 'root':
-	          removeNodeFromRoot(this, refNode);
-	          break;
-	        default:
-	          break;
-	      }
-	      return refNode;
-	    }
-	  },
-	  removeEventListener: {
-	    value: function value(name, func, opts) {
-	      if (name === 'slotchange' && this.____slotChangeListeners && isSlotNode(this)) {
-	        this.____slotChangeListeners--;
-	      }
-	      return this.__removeEventListener(name, func, opts);
-	    }
-	  },
-	  replaceChild: {
-	    value: function value(newNode, refNode) {
-	      this.insertBefore(newNode, refNode);
-	      return this.removeChild(refNode);
-	    }
-	  },
-	  setAttribute: {
-	    value: function value(attrName, attrValue) {
-	      if (attrName === 'slot') {
-	        this[attrName] = attrValue;
-	      }
-	      if (isSlotNode(this)) {
-	        if (attrName === 'name') {
-	          this[attrName] = attrValue;
-	        }
-	      }
-	      return this.__setAttribute(attrName, attrValue);
-	    }
-	  },
-	  shadowRoot: {
-	    get: function get() {
-	      return hostToModeMap.get(this) === 'open' ? hostToRootMap.get(this) : null;
-	    }
-	  },
-	  slot: {
-	    get: function get() {
-	      return this.getAttribute('slot');
-	    },
-	    set: function set(name) {
-	      var oldName = this.name;
-	      var ret = this.__setAttribute('slot', name);
-
-	      if (oldName === name) {
-	        return ret;
-	      }
-
-	      var slot = nodeToSlotMap.get(this);
-	      var root = slot && slotToRootMap.get(slot);
-	      var host = root && rootToHostMap.get(root);
-
-	      if (host) {
-	        removeNodeFromHost(host, this);
-	        addNodeToHost(host, this);
-	      }
-	      return ret;
-	    }
-	  },
-	  textContent: {
-	    get: function get() {
-	      var textContent = '';
-	      eachChildNode(this, function (node) {
-	        if (node.nodeType !== Node.COMMENT_NODE) {
-	          textContent += node.textContent;
-	        }
-	      });
-	      return textContent;
-	    },
-	    set: function set(textContent) {
-	      while (this.hasChildNodes()) {
-	        this.removeChild(this.firstChild);
-	      }
-	      if (!textContent) {
-	        return;
-	      }
-	      this.appendChild(document.createTextNode(textContent));
-	    }
-	  }
-	};
-
-	var v1 = (function () {
-	  var commProto = Comment.prototype;
-	  var elementProto = HTMLElement.prototype;
-	  var svgProto = SVGElement.prototype;
-	  var textProto = Text.prototype;
-	  var textNode = document.createTextNode('');
-	  var commNode = document.createComment('');
-
-	  Object.keys(members).forEach(function (memberName) {
-	    var memberProperty = members[memberName];
-
-	    // All properties should be configurable and enumerable.
-	    memberProperty.configurable = true;
-	    memberProperty.enumerable = true;
-
-	    // Applying to the data properties only since we can't have writable accessor properties.
-	    if (memberProperty.hasOwnProperty('value')) {
-	      // eslint-disable-line no-prototype-builtins
-	      memberProperty.writable = true;
-	    }
-
-	    // Polyfill as much as we can and work around WebKit in other areas.
-	    if (canPatchNativeAccessors || polyfillAtRuntime.indexOf(memberName) === -1) {
-	      var nativeDescriptor = getPropertyDescriptor(elementProto, memberName);
-	      var nativeTextDescriptor = getPropertyDescriptor(textProto, memberName);
-	      var nativeCommDescriptor = getPropertyDescriptor(commProto, memberName);
-	      var shouldOverrideInTextNode = memberName in textNode && doNotOverridePropertiesInTextNodes.indexOf(memberName) === -1 || ~defineInTextNodes.indexOf(memberName);
-	      var shouldOverrideInCommentNode = memberName in commNode && doNotOverridePropertiesInCommNodes.indexOf(memberName) === -1 || ~defineInCommNodes.indexOf(memberName);
-	      var nativeMemberName = '__' + memberName;
-
-	      Object.defineProperty(elementProto, memberName, memberProperty);
-	      Object.defineProperty(svgProto, memberName, memberProperty);
-
-	      if (nativeDescriptor) {
-	        Object.defineProperty(elementProto, nativeMemberName, nativeDescriptor);
-	        Object.defineProperty(svgProto, nativeMemberName, nativeDescriptor);
-	      }
-
-	      if (shouldOverrideInTextNode) {
-	        Object.defineProperty(textProto, memberName, memberProperty);
-	      }
-
-	      if (shouldOverrideInTextNode && nativeTextDescriptor) {
-	        Object.defineProperty(textProto, nativeMemberName, nativeTextDescriptor);
-	      }
-
-	      if (shouldOverrideInCommentNode) {
-	        Object.defineProperty(commProto, memberName, memberProperty);
-	      }
-
-	      if (shouldOverrideInCommentNode && nativeCommDescriptor) {
-	        Object.defineProperty(commProto, nativeMemberName, nativeCommDescriptor);
-	      }
-	    }
-	  });
-	})
-
-	// TODO move into the skatejs-web-components package.
-	if (shadowDomV1) {
-	  // then we should probably not be loading this
-	} else if (shadowDomV0) {
-	    v0();
-	  } else {
-	    v1();
-	  }
-
-	exports.v0 = v0;
-	exports.v1 = v1;
-
-	Object.defineProperty(exports, '__esModule', { value: true });
-
-	})));
-	//# sourceMappingURL=index.js.map
-
-
-/***/ },
 /* 8 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	// Polyfill for creating CustomEvents on IE9/10/11
+	(function webpackUniversalModuleDefinition(root, factory) {
+		if(true)
+			module.exports = factory();
+		else if(typeof define === 'function' && define.amd)
+			define([], factory);
+		else if(typeof exports === 'object')
+			exports["skatejsWebComponents"] = factory();
+		else
+			root["skatejsWebComponents"] = factory();
+	})(this, function() {
+	return /******/ (function(modules) { // webpackBootstrap
+	/******/ 	// The module cache
+	/******/ 	var installedModules = {};
+	/******/
+	/******/ 	// The require function
+	/******/ 	function __webpack_require__(moduleId) {
+	/******/
+	/******/ 		// Check if module is in cache
+	/******/ 		if(installedModules[moduleId])
+	/******/ 			return installedModules[moduleId].exports;
+	/******/
+	/******/ 		// Create a new module (and put it into the cache)
+	/******/ 		var module = installedModules[moduleId] = {
+	/******/ 			exports: {},
+	/******/ 			id: moduleId,
+	/******/ 			loaded: false
+	/******/ 		};
+	/******/
+	/******/ 		// Execute the module function
+	/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+	/******/
+	/******/ 		// Flag the module as loaded
+	/******/ 		module.loaded = true;
+	/******/
+	/******/ 		// Return the exports of the module
+	/******/ 		return module.exports;
+	/******/ 	}
+	/******/
+	/******/
+	/******/ 	// expose the modules object (__webpack_modules__)
+	/******/ 	__webpack_require__.m = modules;
+	/******/
+	/******/ 	// expose the module cache
+	/******/ 	__webpack_require__.c = installedModules;
+	/******/
+	/******/ 	// __webpack_public_path__
+	/******/ 	__webpack_require__.p = "";
+	/******/
+	/******/ 	// Load entry module and return exports
+	/******/ 	return __webpack_require__(0);
+	/******/ })
+	/************************************************************************/
+	/******/ ([
+	/* 0 */
+	/***/ function(module, exports, __webpack_require__) {
 
-	// code pulled from:
-	// https://github.com/d4tocchini/customevent-polyfill
-	// https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent#Polyfill
+		'use strict';
+		
+		__webpack_require__(1);
+		
+		__webpack_require__(2);
+		
+		__webpack_require__(7);
 
-	try {
-	    var ce = new window.CustomEvent('test');
-	    ce.preventDefault();
-	    if (ce.defaultPrevented !== true) {
-	        // IE has problems with .preventDefault() on custom events
-	        // http://stackoverflow.com/questions/23349191
-	        throw new Error('Could not prevent default');
-	    }
-	} catch(e) {
-	  var CustomEvent = function(event, params) {
-	    var evt, origPrevent;
-	    params = params || {
-	      bubbles: false,
-	      cancelable: false,
-	      detail: undefined
-	    };
+	/***/ },
+	/* 1 */
+	/***/ function(module, exports) {
 
-	    evt = document.createEvent("CustomEvent");
-	    evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
-	    origPrevent = evt.preventDefault;
-	    evt.preventDefault = function () {
-	      origPrevent.call(this);
-	      try {
-	        Object.defineProperty(this, 'defaultPrevented', {
-	          get: function () {
-	            return true;
-	          }
-	        });
-	      } catch(e) {
-	        this.defaultPrevented = true;
-	      }
-	    };
-	    return evt;
-	  };
+		'use strict';
+		
+		Object.defineProperty(exports, "__esModule", {
+		  value: true
+		});
+		var _window = window;
+		var HTMLElement = _window.HTMLElement;
+		var MutationObserver = _window.MutationObserver;
+		var navigator = _window.navigator;
+		var userAgent = navigator.userAgent;
+		
+		var safari = userAgent.indexOf('Safari/60') !== -1;
+		var safariVersion = safari && userAgent.match(/Version\/([^\s]+)/)[1];
+		var safariVersions = [0, 1].map(function (v) {
+		  return '10.0.' + v;
+		}).concat(['10.0']);
+		var patch = safari && safariVersions.indexOf(safariVersion) > -1;
+		
+		// Workaround for https://bugs.webkit.org/show_bug.cgi?id=160331
+		function fixSafari() {
+		  var oldAttachShadow = HTMLElement.prototype.attachShadow;
+		
+		  // We observe a shadow root, but only need to know if the target that was mutated is a <style>
+		  // element as this is the only scenario where styles aren't recalculated.
+		  var moOpts = { childList: true, subtree: true };
+		  var mo = new MutationObserver(function (muts) {
+		    muts.forEach(function (mut) {
+		      var target = mut.target;
+		
+		      if (target.tagName === 'STYLE') {
+		        var nextSibling = target.nextSibling;
+		        var parentNode = target.parentNode;
+		
+		        // We actually have to remove and subsequently re-insert rather than doing insertBefore()
+		        // as it seems that doesn't trigger a recalc.
+		
+		        parentNode.removeChild(target);
+		        parentNode.insertBefore(target, nextSibling);
+		      }
+		    });
+		  });
+		
+		  // Our override simply calls the native (or overridden) attachShadow but it ensures that changes
+		  // to it are observed so that we can take any <style> elements and re-insert them.
+		  function newAttachShadow(opts) {
+		    var sr = oldAttachShadow.call(this, opts);
+		    mo.observe(sr, moOpts);
+		    return sr;
+		  }
+		
+		  // We have to define a property because Safari won't take the override if it is set directly.
+		  Object.defineProperty(HTMLElement.prototype, 'attachShadow', {
+		    // Ensure polyfills can override it (hoping they call it back).
+		    configurable: true,
+		    enumerable: true,
+		    value: newAttachShadow,
+		    writable: true
+		  });
+		}
+		
+		// We target a specific version of Safari instead of trying to but detect as it seems to involve
+		// contriving a breaking case and detecting computed styles. We can remove this code when Safari
+		// fixes the bug.
+		if (patch) {
+		  fixSafari();
+		}
+		
+		exports.default = patch;
 
-	  CustomEvent.prototype = window.Event.prototype;
-	  window.CustomEvent = CustomEvent; // expose definition to window
-	}
+	/***/ },
+	/* 2 */
+	/***/ function(module, exports, __webpack_require__) {
 
+		(function (global, factory) {
+		     true ? factory(exports, __webpack_require__(3), __webpack_require__(4), __webpack_require__(6)) :
+		    typeof define === 'function' && define.amd ? define(['exports', 'custom-event-polyfill', 'debounce', 'weakmap'], factory) :
+		    (factory((global.skatejsNamedSlots = global.skatejsNamedSlots || {}),global.customEventPolyfill,global.debounce,global.WeakMap));
+		}(this, (function (exports,customEventPolyfill,debounce,WeakMap) {
+		
+		debounce = 'default' in debounce ? debounce['default'] : debounce;
+		WeakMap = 'default' in WeakMap ? WeakMap['default'] : WeakMap;
+		
+		var div = document.createElement('div');
+		var shadowDomV1 = !!div.attachShadow; // eslint-disable-line import/prefer-default-export
+		
+		var _window$1 = window;
+		var DocumentFragment = _window$1.DocumentFragment;
+		
+		
+		function eachChildNode(node, func) {
+		  if (!node) {
+		    return;
+		  }
+		
+		  var chs = node.childNodes;
+		  var chsLen = chs.length;
+		  for (var a = 0; a < chsLen; a++) {
+		    var ret = func(chs[a], a, chs);
+		    if (typeof ret !== 'undefined') {
+		      return ret; // eslint-disable-line consistent-return
+		    }
+		  }
+		}
+		
+		// Re-implemented to avoid Array.prototype.slice.call for performance reasons
+		function reverse(arr) {
+		  var reversedArray = [];
+		  for (var i = arr.length - 1; i >= 0; i--) {
+		    reversedArray.push(arr[i]);
+		  }
+		  return reversedArray;
+		}
+		
+		/**
+		 * Execute func over all child nodes or a document fragment, or a single node
+		 * @param node the node or document fragment
+		 * @param func a function to execute on node or the children of node, if node is a document fragment.
+		 *        func may optionally append the node elsewhere, in the case of a document fragment
+		 */
+		function eachNodeOrFragmentNodes(node, func) {
+		  if (node instanceof DocumentFragment) {
+		    var chs = node.childNodes;
+		    var chsLen = chs.length;
+		
+		    // We must iterate in reverse to handle the case where child nodes are moved elsewhere during execution
+		    for (var a = chsLen - 1; a >= 0; a--) {
+		      var thisNode = reverse(node.childNodes)[a];
+		      func(thisNode, a);
+		    }
+		  } else {
+		    func(node, 0);
+		  }
+		}
+		
+		var _window$3 = window;
+		var Node$1 = _window$3.Node;
+		
+		var div$1 = document.createElement('div');
+		
+		function getPrototype(obj, key) {
+		  var descriptor = void 0;
+		
+		  while (obj && !(descriptor = Object.getOwnPropertyDescriptor(obj, key))) {
+		    // eslint-disable-line no-cond-assign
+		    obj = Object.getPrototypeOf(obj);
+		  }
+		  return descriptor;
+		}
+		var getPropertyDescriptor = function (obj, key) {
+		  if (obj instanceof Node$1) {
+		    obj = div$1;
+		  }
+		  var proto = getPrototype(obj, key);
+		
+		  if (proto) {
+		    var getter = proto.get;
+		    var setter = proto.set;
+		    var _descriptor = {
+		      configurable: true,
+		      enumerable: true
+		    };
+		
+		    if (getter) {
+		      _descriptor.get = getter;
+		      _descriptor.set = setter;
+		      return _descriptor;
+		    } else if (typeof obj[key] === 'function') {
+		      _descriptor.value = obj[key];
+		      return _descriptor;
+		    }
+		  }
+		
+		  var descriptor = Object.getOwnPropertyDescriptor(obj, key);
+		  if (descriptor && descriptor.get) {
+		    return descriptor;
+		  }
+		};
+		
+		// Any code referring to this is because it has to work around this bug in
+		// WebKit: https://bugs.webkit.org/show_bug.cgi?id=49739
+		
+		var _window$2 = window;
+		var Element = _window$2.Element;
+		
+		var nativeParentNode = getPropertyDescriptor(Element.prototype, 'innerHTML');
+		
+		var canPatchNativeAccessors = !!nativeParentNode;
+		
+		/**
+		 * See https://w3c.github.io/DOM-Parsing/#serializing
+		 * @param {TextNode}
+		 * @returns {string}
+		 */
+		function getEscapedTextContent(textNode) {
+		  return textNode.textContent.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+		}
+		
+		/**
+		 * @param {TextNode}
+		 * @returns {string}
+		 */
+		function getRawTextContent(textNode) {
+		  return textNode.textContent;
+		}
+		
+		/**
+		 * @returns {string}
+		 * @param {commentNode}
+		 */
+		function getCommentNodeOuterHtml(commentNode) {
+		  return commentNode.text || "<!--" + commentNode.textContent + "-->";
+		}
+		
+		var isSlotNode = function (node) {
+		  return node.tagName === 'SLOT';
+		};
+		
+		var _window$4 = window;
+		var Node$2 = _window$4.Node;
+		
+		
+		function findSlots(root) {
+		  var slots = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+		  var childNodes = root.childNodes;
+		
+		
+		  if (!childNodes || [Node$2.ELEMENT_NODE, Node$2.DOCUMENT_FRAGMENT_NODE].indexOf(root.nodeType) === -1) {
+		    return slots;
+		  }
+		
+		  var length = childNodes.length;
+		
+		
+		  for (var a = 0; a < length; a++) {
+		    var childNode = childNodes[a];
+		
+		    if (isSlotNode(childNode)) {
+		      slots.push(childNode);
+		    }
+		    findSlots(childNode, slots);
+		  }
+		
+		  return slots;
+		}
+		
+		var isRootNode = function (node) {
+		  return node.tagName === '_SHADOW_ROOT_';
+		};
+		
+		var pseudoArrayToArray = (function (pseudoArray) {
+		  return Array.prototype.slice.call(pseudoArray);
+		});
+		
+		var _window = window;
+		var Comment = _window.Comment;
+		var CustomEvent = _window.CustomEvent;
+		var DOMParser = _window.DOMParser;
+		var HTMLElement = _window.HTMLElement;
+		var Node = _window.Node;
+		var SVGElement = _window.SVGElement;
+		var Text = _window.Text;
+		
+		var arrProto = Array.prototype;
+		var forEach = arrProto.forEach;
+		
+		// We use a real DOM node for a shadow root. This is because the host node
+		// basically becomes a virtual entry point for your element leaving the shadow
+		// root the only thing that can receive instructions on how the host should
+		// render to the browser.
+		
+		var defaultShadowRootTagName = '_shadow_root_';
+		
+		// * WebKit only *
+		//
+		// These members we need cannot override as we require native access to their
+		// original values at some point.
+		var polyfillAtRuntime = ['childNodes', 'parentNode'];
+		
+		// Some properties that should not be overridden in the Text prototype.
+		var doNotOverridePropertiesInTextNodes = ['textContent'];
+		
+		// Some new properties that should be defined in the Text prototype.
+		var defineInTextNodes = ['assignedSlot'];
+		
+		// Some properties that should not be overridden in the Comment prototype.
+		var doNotOverridePropertiesInCommNodes = ['textContent'];
+		
+		// Some new properties that should be defined in the Comment prototype.
+		var defineInCommNodes = [];
+		
+		// Nodes that should be slotted
+		var slottedNodeTypes = [Node.ELEMENT_NODE, Node.TEXT_NODE];
+		
+		// Private data stores.
+		var assignedToSlotMap = new WeakMap();
+		var hostToModeMap = new WeakMap();
+		var hostToRootMap = new WeakMap();
+		var nodeToChildNodesMap = new WeakMap();
+		var nodeToParentNodeMap = new WeakMap();
+		var nodeToSlotMap = new WeakMap();
+		var rootToHostMap = new WeakMap();
+		var rootToSlotMap = new WeakMap();
+		var slotToRootMap = new WeakMap();
+		
+		// Unfortunately manual DOM parsing is because of WebKit.
+		var parser = new DOMParser();
+		function parse(html) {
+		  var tree = document.createElement('div');
+		
+		  // Everything not WebKit can do this easily.
+		  if (canPatchNativeAccessors) {
+		    tree.__innerHTML = html;
+		    return tree;
+		  }
+		
+		  var parsed = parser.parseFromString('<div>' + html + '</div>', 'text/html').body.firstChild;
+		
+		  while (parsed.hasChildNodes()) {
+		    var firstChild = parsed.firstChild;
+		    parsed.removeChild(firstChild);
+		    tree.appendChild(firstChild);
+		  }
+		
+		  // Need to import the node to initialise the custom elements from the parser.
+		  return document.importNode(tree, true);
+		}
+		
+		function staticProp(obj, name, value) {
+		  Object.defineProperty(obj, name, {
+		    configurable: true,
+		    get: function get() {
+		      return value;
+		    }
+		  });
+		}
+		
+		// Slotting helpers.
+		
+		function arrayItem(idx) {
+		  return this[idx];
+		}
+		
+		function makeLikeNodeList(arr) {
+		  arr.item = arrayItem;
+		  return arr;
+		}
+		
+		function isHostNode(node) {
+		  return !!hostToRootMap.get(node);
+		}
+		
+		function getNodeType(node) {
+		  if (isHostNode(node)) {
+		    return 'host';
+		  }
+		
+		  if (isSlotNode(node)) {
+		    return 'slot';
+		  }
+		
+		  if (isRootNode(node)) {
+		    return 'root';
+		  }
+		
+		  return 'node';
+		}
+		
+		function findClosest(node, func) {
+		  while (node) {
+		    if (node === document) {
+		      break;
+		    }
+		    if (func(node)) {
+		      return node;
+		    }
+		    node = node.parentNode;
+		  }
+		}
+		
+		function getSlotNameFromSlot(node) {
+		  return node.getAttribute && node.getAttribute('name') || 'default';
+		}
+		
+		function getSlotNameFromNode(node) {
+		  return node.getAttribute && node.getAttribute('slot') || 'default';
+		}
+		
+		function slotNodeIntoSlot(slot, node, insertBefore) {
+		  // Only Text and Element nodes should be slotted.
+		  if (slottedNodeTypes.indexOf(node.nodeType) === -1) {
+		    return;
+		  }
+		
+		  var assignedNodes = slot.assignedNodes();
+		  var shouldGoIntoContentMode = assignedNodes.length === 0;
+		  var slotInsertBeforeIndex = assignedNodes.indexOf(insertBefore);
+		
+		  // Assign the slot to the node internally.
+		  nodeToSlotMap.set(node, slot);
+		
+		  // Remove the fallback content and state if we're going into content mode.
+		  if (shouldGoIntoContentMode) {
+		    forEach.call(slot.childNodes, function (child) {
+		      return slot.__removeChild(child);
+		    });
+		  }
+		
+		  if (slotInsertBeforeIndex > -1) {
+		    slot.__insertBefore(node, insertBefore !== undefined ? insertBefore : null);
+		    assignedNodes.splice(slotInsertBeforeIndex, 0, node);
+		  } else {
+		    slot.__appendChild(node);
+		    assignedNodes.push(node);
+		  }
+		
+		  slot.____triggerSlotChangeEvent();
+		}
+		
+		function slotNodeFromSlot(node) {
+		  var slot = nodeToSlotMap.get(node);
+		
+		  if (slot) {
+		    var assignedNodes = slot.assignedNodes();
+		    var index = assignedNodes.indexOf(node);
+		
+		    if (index > -1) {
+		      var shouldGoIntoDefaultMode = assignedNodes.length === 1;
+		
+		      assignedNodes.splice(index, 1);
+		      nodeToSlotMap.set(node, null);
+		
+		      // Actually remove the child.
+		      slot.__removeChild(node);
+		
+		      // If this was the last slotted node, then insert fallback content.
+		      if (shouldGoIntoDefaultMode) {
+		        forEach.call(slot.childNodes, function (child) {
+		          return slot.__appendChild(child);
+		        });
+		      }
+		
+		      slot.____triggerSlotChangeEvent();
+		    }
+		  }
+		}
+		
+		// Returns the index of the node in the host's childNodes.
+		function indexOfNode(host, node) {
+		  var chs = host.childNodes;
+		  var chsLen = chs.length;
+		  for (var a = 0; a < chsLen; a++) {
+		    if (chs[a] === node) {
+		      return a;
+		    }
+		  }
+		  return -1;
+		}
+		
+		// Adds the node to the list of childNodes on the host and fakes any necessary
+		// information such as parentNode.
+		function registerNode(host, node, insertBefore, func) {
+		  var index = indexOfNode(host, insertBefore);
+		  eachNodeOrFragmentNodes(node, function (eachNode, eachIndex) {
+		    func(eachNode, eachIndex);
+		
+		    if (canPatchNativeAccessors) {
+		      nodeToParentNodeMap.set(eachNode, host);
+		    } else {
+		      staticProp(eachNode, 'parentNode', host);
+		    }
+		
+		    if (index > -1) {
+		      arrProto.splice.call(host.childNodes, index + eachIndex, 0, eachNode);
+		    } else {
+		      arrProto.push.call(host.childNodes, eachNode);
+		    }
+		  });
+		}
+		
+		// Cleans up registerNode().
+		function unregisterNode(host, node, func) {
+		  var index = indexOfNode(host, node);
+		
+		  if (index > -1) {
+		    func(node, 0);
+		
+		    if (canPatchNativeAccessors) {
+		      nodeToParentNodeMap.set(node, null);
+		    } else {
+		      staticProp(node, 'parentNode', null);
+		    }
+		
+		    arrProto.splice.call(host.childNodes, index, 1);
+		  }
+		}
+		
+		function addNodeToNode(host, node, insertBefore) {
+		  registerNode(host, node, insertBefore, function (eachNode) {
+		    host.__insertBefore(eachNode, insertBefore !== undefined ? insertBefore : null);
+		  });
+		}
+		
+		function addNodeToHost(host, node, insertBefore) {
+		  registerNode(host, node, insertBefore, function (eachNode) {
+		    var rootNode = hostToRootMap.get(host);
+		    var slotNodes = rootToSlotMap.get(rootNode);
+		    var slotNode = slotNodes[getSlotNameFromNode(eachNode)];
+		    if (slotNode) {
+		      slotNodeIntoSlot(slotNode, eachNode, insertBefore);
+		    }
+		  });
+		}
+		
+		function addSlotToRoot(root, slot) {
+		  var slotName = getSlotNameFromSlot(slot);
+		
+		  // Ensure a slot node's childNodes are overridden at the earliest point
+		  // possible for WebKit.
+		  if (!canPatchNativeAccessors && !Array.isArray(slot.childNodes)) {
+		    staticProp(slot, 'childNodes', pseudoArrayToArray(slot.childNodes));
+		  }
+		
+		  rootToSlotMap.get(root)[slotName] = slot;
+		
+		  if (!slotToRootMap.has(slot)) {
+		    slotToRootMap.set(slot, root);
+		  }
+		
+		  eachChildNode(rootToHostMap.get(root), function (eachNode) {
+		    if (!eachNode.assignedSlot && slotName === getSlotNameFromNode(eachNode)) {
+		      slotNodeIntoSlot(slot, eachNode);
+		    }
+		  });
+		}
+		
+		function addNodeToRoot(root, node, insertBefore) {
+		  eachNodeOrFragmentNodes(node, function (child) {
+		    if (isSlotNode(child)) {
+		      addSlotToRoot(root, child);
+		    } else {
+		      var slotNodes = findSlots(child);
+		      if (slotNodes) {
+		        var slotNodesLen = slotNodes.length;
+		        for (var a = 0; a < slotNodesLen; a++) {
+		          addSlotToRoot(root, slotNodes[a]);
+		        }
+		      }
+		    }
+		  });
+		  addNodeToNode(root, node, insertBefore);
+		}
+		
+		// Adds a node to a slot. In other words, adds default content to a slot. It
+		// ensures that if the slot doesn't have any assigned nodes yet, that the node
+		// is actually displayed, otherwise it's just registered as child content.
+		function addNodeToSlot(slot, node, insertBefore) {
+		  var isInDefaultMode = slot.assignedNodes().length === 0;
+		  registerNode(slot, node, insertBefore, function (eachNode) {
+		    if (isInDefaultMode) {
+		      slot.__insertBefore(eachNode, insertBefore !== undefined ? insertBefore : null);
+		    }
+		  });
+		}
+		
+		// Removes a node from a slot (default content). It ensures that if the slot
+		// doesn't have any assigned nodes yet, that the node is actually removed,
+		// otherwise it's just unregistered.
+		function removeNodeFromSlot(slot, node) {
+		  var isInDefaultMode = slot.assignedNodes().length === 0;
+		  unregisterNode(slot, node, function () {
+		    if (isInDefaultMode) {
+		      slot.__removeChild(node);
+		    }
+		  });
+		}
+		
+		function removeNodeFromNode(host, node) {
+		  unregisterNode(host, node, function () {
+		    host.__removeChild(node);
+		  });
+		}
+		
+		function removeNodeFromHost(host, node) {
+		  unregisterNode(host, node, function () {
+		    slotNodeFromSlot(node);
+		  });
+		}
+		
+		function removeSlotFromRoot(root, node) {
+		  var assignedNodes = Array.prototype.slice.call(node.assignedNodes());
+		  assignedNodes.forEach(slotNodeFromSlot);
+		  delete rootToSlotMap.get(root)[getSlotNameFromSlot(node)];
+		  slotToRootMap.delete(node);
+		}
+		
+		function removeNodeFromRoot(root, node) {
+		  unregisterNode(root, node, function () {
+		    if (isSlotNode(node)) {
+		      removeSlotFromRoot(root, node);
+		    } else {
+		      var nodes = findSlots(node);
+		      if (nodes) {
+		        for (var a = 0; a < nodes.length; a++) {
+		          removeSlotFromRoot(root, nodes[a]);
+		        }
+		      }
+		    }
+		    root.__removeChild(node);
+		  });
+		}
+		
+		// TODO terribly inefficient
+		function getRootNode(host) {
+		  if (isRootNode(host)) {
+		    return host;
+		  }
+		
+		  if (!host.parentNode) {
+		    return;
+		  }
+		
+		  return getRootNode(host.parentNode);
+		}
+		
+		function appendChildOrInsertBefore(host, newNode, refNode) {
+		  var nodeType = getNodeType(host);
+		  var parentNode = newNode.parentNode;
+		  var rootNode = getRootNode(host);
+		
+		  // Ensure childNodes is patched so we can manually update it for WebKit.
+		  if (!canPatchNativeAccessors && !Array.isArray(host.childNodes)) {
+		    staticProp(host, 'childNodes', pseudoArrayToArray(host.childNodes));
+		  }
+		
+		  if (rootNode && getNodeType(newNode) === 'slot') {
+		    addSlotToRoot(rootNode, newNode);
+		  }
+		
+		  // If we append a child to a host, the host tells the shadow root to distribute
+		  // it. If the root decides it doesn't need to be distributed, it is never
+		  // removed from the old parent because in polyfill land we store a reference
+		  // to the node but we don't move it. Due to that, we must explicitly remove the
+		  // node from its old parent.
+		  if (parentNode && getNodeType(parentNode) === 'host') {
+		    if (canPatchNativeAccessors) {
+		      nodeToParentNodeMap.set(newNode, null);
+		    } else {
+		      staticProp(newNode, 'parentNode', null);
+		    }
+		  }
+		
+		  // safari doesn't update its children properly for some reason, so it needs a little push
+		  if (!canPatchNativeAccessors && parentNode) {
+		    parentNode.removeChild(newNode);
+		  }
+		
+		  if (nodeType === 'node') {
+		    if (canPatchNativeAccessors) {
+		      nodeToParentNodeMap.set(newNode, host);
+		      return host.__insertBefore(newNode, refNode !== undefined ? refNode : null);
+		    }
+		
+		    return addNodeToNode(host, newNode, refNode);
+		  }
+		
+		  if (nodeType === 'slot') {
+		    return addNodeToSlot(host, newNode, refNode);
+		  }
+		
+		  if (nodeType === 'host') {
+		    return addNodeToHost(host, newNode, refNode);
+		  }
+		
+		  if (nodeType === 'root') {
+		    return addNodeToRoot(host, newNode, refNode);
+		  }
+		}
+		
+		function syncSlotChildNodes(node) {
+		  if (canPatchNativeAccessors && getNodeType(node) === 'slot' && node.__childNodes.length !== node.childNodes.length) {
+		    while (node.hasChildNodes()) {
+		      node.removeChild(node.firstChild);
+		    }
+		
+		    forEach.call(node.__childNodes, function (child) {
+		      return node.appendChild(child);
+		    });
+		  }
+		}
+		
+		var members = {
+		  // For testing purposes.
+		  ____assignedNodes: {
+		    get: function get() {
+		      return this.______assignedNodes || (this.______assignedNodes = []);
+		    }
+		  },
+		
+		  // For testing purposes.
+		  ____isInFallbackMode: {
+		    get: function get() {
+		      return this.assignedNodes().length === 0;
+		    }
+		  },
+		
+		  ____slotChangeListeners: {
+		    get: function get() {
+		      if (typeof this.______slotChangeListeners === 'undefined') {
+		        this.______slotChangeListeners = 0;
+		      }
+		      return this.______slotChangeListeners;
+		    },
+		    set: function set(value) {
+		      this.______slotChangeListeners = value;
+		    }
+		  },
+		  ____triggerSlotChangeEvent: {
+		    value: debounce(function callback() {
+		      if (this.____slotChangeListeners) {
+		        this.dispatchEvent(new CustomEvent('slotchange', {
+		          bubbles: false,
+		          cancelable: false
+		        }));
+		      }
+		    })
+		  },
+		  addEventListener: {
+		    value: function value(name, func, opts) {
+		      if (name === 'slotchange' && isSlotNode(this)) {
+		        this.____slotChangeListeners++;
+		      }
+		      return this.__addEventListener(name, func, opts);
+		    }
+		  },
+		  appendChild: {
+		    value: function value(newNode) {
+		      appendChildOrInsertBefore(this, newNode);
+		      return newNode;
+		    }
+		  },
+		  assignedSlot: {
+		    get: function get() {
+		      var slot = nodeToSlotMap.get(this);
+		
+		      if (!slot) {
+		        return null;
+		      }
+		
+		      var root = slotToRootMap.get(slot);
+		      var host = rootToHostMap.get(root);
+		      var mode = hostToModeMap.get(host);
+		
+		      return mode === 'open' ? slot : null;
+		    }
+		  },
+		  attachShadow: {
+		    value: function value(opts) {
+		      var _this = this;
+		
+		      var mode = opts && opts.mode;
+		      if (mode !== 'closed' && mode !== 'open') {
+		        throw new Error('You must specify { mode } as "open" or "closed" to attachShadow().');
+		      }
+		
+		      // Return the existing shadow root if it exists.
+		      var existingShadowRoot = hostToRootMap.get(this);
+		      if (existingShadowRoot) {
+		        return existingShadowRoot;
+		      }
+		
+		      var lightNodes = makeLikeNodeList([].slice.call(this.childNodes));
+		      var shadowRoot = document.createElement(opts.polyfillShadowRootTagName || defaultShadowRootTagName);
+		
+		      // Host and shadow root data.
+		      hostToModeMap.set(this, mode);
+		      hostToRootMap.set(this, shadowRoot);
+		      rootToHostMap.set(shadowRoot, this);
+		      rootToSlotMap.set(shadowRoot, {});
+		
+		      if (canPatchNativeAccessors) {
+		        nodeToChildNodesMap.set(this, lightNodes);
+		      } else {
+		        staticProp(this, 'childNodes', lightNodes);
+		      }
+		
+		      // Process light DOM.
+		      lightNodes.forEach(function (node) {
+		        // Existing children should be removed from being displayed, but still
+		        // appear to be child nodes. This is how light DOM works; they're still
+		        // child nodes but not in the composed DOM yet as there won't be any
+		        // slots for them to go into.
+		        _this.__removeChild(node);
+		
+		        // We must register the parentNode here as this has the potential to
+		        // become out of sync if the node is moved before being slotted.
+		        if (canPatchNativeAccessors) {
+		          nodeToParentNodeMap.set(node, _this);
+		        } else {
+		          staticProp(node, 'parentNode', _this);
+		        }
+		      });
+		
+		      // The shadow root is actually the only child of the host.
+		      return this.__appendChild(shadowRoot);
+		    }
+		  },
+		  childElementCount: {
+		    get: function get() {
+		      return this.children.length;
+		    }
+		  },
+		  childNodes: {
+		    get: function get() {
+		      if (canPatchNativeAccessors && getNodeType(this) === 'node') {
+		        return this.__childNodes;
+		      }
+		      var childNodes = nodeToChildNodesMap.get(this);
+		
+		      if (!childNodes) {
+		        nodeToChildNodesMap.set(this, childNodes = makeLikeNodeList([]));
+		      }
+		
+		      return childNodes;
+		    }
+		  },
+		  children: {
+		    get: function get() {
+		      var chs = [];
+		      eachChildNode(this, function (node) {
+		        if (node.nodeType === 1) {
+		          chs.push(node);
+		        }
+		      });
+		      return makeLikeNodeList(chs);
+		    }
+		  },
+		  firstChild: {
+		    get: function get() {
+		      return this.childNodes[0] || null;
+		    }
+		  },
+		  firstElementChild: {
+		    get: function get() {
+		      return this.children[0] || null;
+		    }
+		  },
+		  assignedNodes: {
+		    value: function value() {
+		      if (isSlotNode(this)) {
+		        var assigned = assignedToSlotMap.get(this);
+		
+		        if (!assigned) {
+		          assignedToSlotMap.set(this, assigned = []);
+		        }
+		
+		        return assigned;
+		      }
+		    }
+		  },
+		  hasChildNodes: {
+		    value: function value() {
+		      return this.childNodes.length > 0;
+		    }
+		  },
+		  innerHTML: {
+		    get: function get() {
+		      var innerHTML = '';
+		
+		      var getHtmlNodeOuterHtml = function getHtmlNodeOuterHtml(node) {
+		        return node.outerHTML;
+		      };
+		      var getOuterHtmlByNodeType = {};
+		      getOuterHtmlByNodeType[Node.ELEMENT_NODE] = getHtmlNodeOuterHtml;
+		      getOuterHtmlByNodeType[Node.COMMENT_NODE] = getCommentNodeOuterHtml;
+		
+		      // Text nodes with these ancestors should be treated as raw text
+		      // See section 8.4 of
+		      // https://www.w3.org/TR/2008/WD-html5-20080610/serializing.html#html-fragment
+		      // Though Chrome does not adhere to spec for <noscript/>
+		      var rawTextNodeNames = {
+		        style: true,
+		        script: true,
+		        xmp: true,
+		        iframe: true,
+		        noembed: true,
+		        noframes: true,
+		        noscript: true,
+		        plaintext: true
+		      };
+		
+		      function isRawTextNode(node) {
+		        return node.nodeType === Node.ELEMENT_NODE && node.nodeName.toLowerCase() in rawTextNodeNames;
+		      }
+		
+		      var isParentNodeRawText = isRawTextNode(this);
+		
+		      eachChildNode(this, function (node) {
+		        var getOuterHtml = void 0;
+		        if (node.nodeType === Node.TEXT_NODE) {
+		          if (isParentNodeRawText) {
+		            getOuterHtml = getRawTextContent;
+		          } else {
+		            getOuterHtml = getEscapedTextContent;
+		          }
+		        } else {
+		          getOuterHtml = getOuterHtmlByNodeType[node.nodeType] || getHtmlNodeOuterHtml;
+		        }
+		        innerHTML += getOuterHtml(node);
+		      });
+		      return innerHTML;
+		    },
+		    set: function set(innerHTML) {
+		      var parsed = parse(innerHTML);
+		
+		      while (this.hasChildNodes()) {
+		        this.removeChild(this.firstChild);
+		      }
+		
+		      // when we are doing this: root.innerHTML = "<slot><div></div></slot>";
+		      // slot.__childNodes is out of sync with slot.childNodes.
+		      // to fix it we have to manually remove and insert them
+		      var slots = findSlots(parsed);
+		      forEach.call(slots, function (slot) {
+		        return syncSlotChildNodes(slot);
+		      });
+		
+		      while (parsed.hasChildNodes()) {
+		        var firstChild = parsed.firstChild;
+		
+		        // When we polyfill everything on HTMLElement.prototype, we overwrite
+		        // properties. This makes it so that parentNode reports null even though
+		        // it's actually a parent of the HTML parser. For this reason,
+		        // cleanNode() won't work and we must manually remove it from the
+		        // parser before it is moved to the host just in case it's added as a
+		        // light node but not assigned to a slot.
+		        parsed.removeChild(firstChild);
+		
+		        this.appendChild(firstChild);
+		      }
+		    }
+		  },
+		  insertBefore: {
+		    value: function value(newNode, refNode) {
+		      appendChildOrInsertBefore(this, newNode, refNode);
+		
+		      return newNode;
+		    }
+		  },
+		  lastChild: {
+		    get: function get() {
+		      var ch = this.childNodes;
+		      return ch[ch.length - 1] || null;
+		    }
+		  },
+		  lastElementChild: {
+		    get: function get() {
+		      var ch = this.children;
+		      return ch[ch.length - 1] || null;
+		    }
+		  },
+		  name: {
+		    get: function get() {
+		      return this.getAttribute('name');
+		    },
+		    set: function set(name) {
+		      var oldName = this.name;
+		      var ret = this.__setAttribute('name', name);
+		
+		      if (name === oldName) {
+		        return ret;
+		      }
+		
+		      if (!isSlotNode(this)) {
+		        return ret;
+		      }
+		      var root = slotToRootMap.get(this);
+		      if (root) {
+		        removeSlotFromRoot(root, this);
+		        addSlotToRoot(root, this);
+		      }
+		      return ret;
+		    }
+		  },
+		  nextSibling: {
+		    get: function get() {
+		      var host = this;
+		      return eachChildNode(this.parentNode, function (child, index, nodes) {
+		        if (host === child) {
+		          return nodes[index + 1] || null;
+		        }
+		      });
+		    }
+		  },
+		  nextElementSibling: {
+		    get: function get() {
+		      var host = this;
+		      var found = void 0;
+		      return eachChildNode(this.parentNode, function (child) {
+		        if (found && child.nodeType === 1) {
+		          return child;
+		        }
+		        if (host === child) {
+		          found = true;
+		        }
+		      });
+		    }
+		  },
+		  outerHTML: {
+		    get: function get() {
+		      var name = this.tagName.toLowerCase();
+		      var attributes = Array.prototype.slice.call(this.attributes).map(function (attr) {
+		        return ' ' + attr.name + (attr.value ? '="' + attr.value + '"' : '');
+		      }).join('');
+		      return '<' + name + attributes + '>' + this.innerHTML + '</' + name + '>';
+		    },
+		    set: function set(outerHTML) {
+		      if (this.parentNode) {
+		        var parsed = parse(outerHTML);
+		        this.parentNode.replaceChild(parsed.firstChild, this);
+		      } else if (canPatchNativeAccessors) {
+		        this.__outerHTML = outerHTML; // this will throw a native error;
+		      } else {
+		        throw new Error('Failed to set the \'outerHTML\' property on \'Element\': This element has no parent node.');
+		      }
+		    }
+		  },
+		  parentElement: {
+		    get: function get() {
+		      return findClosest(this.parentNode, function (node) {
+		        return node.nodeType === 1;
+		      });
+		    }
+		  },
+		  parentNode: {
+		    get: function get() {
+		      return nodeToParentNodeMap.get(this) || this.__parentNode || null;
+		    }
+		  },
+		  previousSibling: {
+		    get: function get() {
+		      var host = this;
+		      return eachChildNode(this.parentNode, function (child, index, nodes) {
+		        if (host === child) {
+		          return nodes[index - 1] || null;
+		        }
+		      });
+		    }
+		  },
+		  previousElementSibling: {
+		    get: function get() {
+		      var host = this;
+		      var found = void 0;
+		      return eachChildNode(this.parentNode, function (child) {
+		        if (found && host === child) {
+		          return found;
+		        }
+		        if (child.nodeType === 1) {
+		          found = child;
+		        }
+		      });
+		    }
+		  },
+		  removeChild: {
+		    value: function value(refNode) {
+		      var nodeType = getNodeType(this);
+		
+		      switch (nodeType) {
+		        case 'node':
+		          if (canPatchNativeAccessors) {
+		            nodeToParentNodeMap.set(refNode, null);
+		            return this.__removeChild(refNode);
+		          }
+		          removeNodeFromNode(this, refNode);
+		          break;
+		        case 'slot':
+		          removeNodeFromSlot(this, refNode);
+		          break;
+		        case 'host':
+		          removeNodeFromHost(this, refNode);
+		          break;
+		        case 'root':
+		          removeNodeFromRoot(this, refNode);
+		          break;
+		        default:
+		          break;
+		      }
+		      return refNode;
+		    }
+		  },
+		  removeEventListener: {
+		    value: function value(name, func, opts) {
+		      if (name === 'slotchange' && this.____slotChangeListeners && isSlotNode(this)) {
+		        this.____slotChangeListeners--;
+		      }
+		      return this.__removeEventListener(name, func, opts);
+		    }
+		  },
+		  replaceChild: {
+		    value: function value(newNode, refNode) {
+		      this.insertBefore(newNode, refNode);
+		      return this.removeChild(refNode);
+		    }
+		  },
+		  setAttribute: {
+		    value: function value(attrName, attrValue) {
+		      if (attrName === 'slot') {
+		        this[attrName] = attrValue;
+		      }
+		      if (isSlotNode(this)) {
+		        if (attrName === 'name') {
+		          this[attrName] = attrValue;
+		        }
+		      }
+		      return this.__setAttribute(attrName, attrValue);
+		    }
+		  },
+		  shadowRoot: {
+		    get: function get() {
+		      return hostToModeMap.get(this) === 'open' ? hostToRootMap.get(this) : null;
+		    }
+		  },
+		  slot: {
+		    get: function get() {
+		      return this.getAttribute('slot');
+		    },
+		    set: function set(name) {
+		      var oldName = this.name;
+		      var ret = this.__setAttribute('slot', name);
+		
+		      if (oldName === name) {
+		        return ret;
+		      }
+		
+		      var slot = nodeToSlotMap.get(this);
+		      var root = slot && slotToRootMap.get(slot);
+		      var host = root && rootToHostMap.get(root);
+		
+		      if (host) {
+		        removeNodeFromHost(host, this);
+		        addNodeToHost(host, this);
+		      }
+		      return ret;
+		    }
+		  },
+		  textContent: {
+		    get: function get() {
+		      var textContent = '';
+		      eachChildNode(this, function (node) {
+		        if (node.nodeType !== Node.COMMENT_NODE) {
+		          textContent += node.textContent;
+		        }
+		      });
+		      return textContent;
+		    },
+		    set: function set(textContent) {
+		      while (this.hasChildNodes()) {
+		        this.removeChild(this.firstChild);
+		      }
+		      if (!textContent) {
+		        return;
+		      }
+		      this.appendChild(document.createTextNode(textContent));
+		    }
+		  }
+		};
+		
+		var v1 = (function () {
+		  var commProto = Comment.prototype;
+		  var elementProto = HTMLElement.prototype;
+		  var svgProto = SVGElement && SVGElement.prototype;
+		  var textProto = Text.prototype;
+		  var textNode = document.createTextNode('');
+		  var commNode = document.createComment('');
+		
+		  Object.keys(members).forEach(function (memberName) {
+		    var memberProperty = members[memberName];
+		
+		    // All properties should be configurable and enumerable.
+		    memberProperty.configurable = true;
+		    memberProperty.enumerable = true;
+		
+		    // Applying to the data properties only since we can't have writable accessor properties.
+		    if (memberProperty.hasOwnProperty('value')) {
+		      // eslint-disable-line no-prototype-builtins
+		      memberProperty.writable = true;
+		    }
+		
+		    // Polyfill as much as we can and work around WebKit in other areas.
+		    if (canPatchNativeAccessors || polyfillAtRuntime.indexOf(memberName) === -1) {
+		      var nativeDescriptor = getPropertyDescriptor(elementProto, memberName);
+		      var nativeTextDescriptor = getPropertyDescriptor(textProto, memberName);
+		      var nativeCommDescriptor = getPropertyDescriptor(commProto, memberName);
+		      var shouldOverrideInTextNode = memberName in textNode && doNotOverridePropertiesInTextNodes.indexOf(memberName) === -1 || ~defineInTextNodes.indexOf(memberName);
+		      var shouldOverrideInCommentNode = memberName in commNode && doNotOverridePropertiesInCommNodes.indexOf(memberName) === -1 || ~defineInCommNodes.indexOf(memberName);
+		      var nativeMemberName = '__' + memberName;
+		
+		      Object.defineProperty(elementProto, memberName, memberProperty);
+		      svgProto && Object.defineProperty(svgProto, memberName, memberProperty);
+		
+		      if (nativeDescriptor) {
+		        Object.defineProperty(elementProto, nativeMemberName, nativeDescriptor);
+		        svgProto && Object.defineProperty(svgProto, nativeMemberName, nativeDescriptor);
+		      }
+		
+		      if (shouldOverrideInTextNode) {
+		        Object.defineProperty(textProto, memberName, memberProperty);
+		      }
+		
+		      if (shouldOverrideInTextNode && nativeTextDescriptor) {
+		        Object.defineProperty(textProto, nativeMemberName, nativeTextDescriptor);
+		      }
+		
+		      if (shouldOverrideInCommentNode) {
+		        Object.defineProperty(commProto, memberName, memberProperty);
+		      }
+		
+		      if (shouldOverrideInCommentNode && nativeCommDescriptor) {
+		        Object.defineProperty(commProto, nativeMemberName, nativeCommDescriptor);
+		      }
+		    }
+		  });
+		});
+		
+		// TODO move into the skatejs-web-components package.
+		if (shadowDomV1) {
+		  // then we should probably not be loading this
+		} else {
+		  v1();
+		}
+		
+		 // eslint-disable-line import/prefer-default-export
+		
+		exports.v1 = v1;
+		
+		Object.defineProperty(exports, '__esModule', { value: true });
+		
+		})));
+		//# sourceMappingURL=index.js.map
+
+
+	/***/ },
+	/* 3 */
+	/***/ function(module, exports) {
+
+		// Polyfill for creating CustomEvents on IE9/10/11
+		
+		// code pulled from:
+		// https://github.com/d4tocchini/customevent-polyfill
+		// https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent#Polyfill
+		
+		try {
+		    var ce = new window.CustomEvent('test');
+		    ce.preventDefault();
+		    if (ce.defaultPrevented !== true) {
+		        // IE has problems with .preventDefault() on custom events
+		        // http://stackoverflow.com/questions/23349191
+		        throw new Error('Could not prevent default');
+		    }
+		} catch(e) {
+		  var CustomEvent = function(event, params) {
+		    var evt, origPrevent;
+		    params = params || {
+		      bubbles: false,
+		      cancelable: false,
+		      detail: undefined
+		    };
+		
+		    evt = document.createEvent("CustomEvent");
+		    evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+		    origPrevent = evt.preventDefault;
+		    evt.preventDefault = function () {
+		      origPrevent.call(this);
+		      try {
+		        Object.defineProperty(this, 'defaultPrevented', {
+		          get: function () {
+		            return true;
+		          }
+		        });
+		      } catch(e) {
+		        this.defaultPrevented = true;
+		      }
+		    };
+		    return evt;
+		  };
+		
+		  CustomEvent.prototype = window.Event.prototype;
+		  window.CustomEvent = CustomEvent; // expose definition to window
+		}
+
+
+	/***/ },
+	/* 4 */
+	/***/ function(module, exports, __webpack_require__) {
+
+		
+		/**
+		 * Module dependencies.
+		 */
+		
+		var now = __webpack_require__(5);
+		
+		/**
+		 * Returns a function, that, as long as it continues to be invoked, will not
+		 * be triggered. The function will be called after it stops being called for
+		 * N milliseconds. If `immediate` is passed, trigger the function on the
+		 * leading edge, instead of the trailing.
+		 *
+		 * @source underscore.js
+		 * @see http://unscriptable.com/2009/03/20/debouncing-javascript-methods/
+		 * @param {Function} function to wrap
+		 * @param {Number} timeout in ms (`100`)
+		 * @param {Boolean} whether to execute at the beginning (`false`)
+		 * @api public
+		 */
+		
+		module.exports = function debounce(func, wait, immediate){
+		  var timeout, args, context, timestamp, result;
+		  if (null == wait) wait = 100;
+		
+		  function later() {
+		    var last = now() - timestamp;
+		
+		    if (last < wait && last > 0) {
+		      timeout = setTimeout(later, wait - last);
+		    } else {
+		      timeout = null;
+		      if (!immediate) {
+		        result = func.apply(context, args);
+		        if (!timeout) context = args = null;
+		      }
+		    }
+		  };
+		
+		  return function debounced() {
+		    context = this;
+		    args = arguments;
+		    timestamp = now();
+		    var callNow = immediate && !timeout;
+		    if (!timeout) timeout = setTimeout(later, wait);
+		    if (callNow) {
+		      result = func.apply(context, args);
+		      context = args = null;
+		    }
+		
+		    return result;
+		  };
+		};
+
+
+	/***/ },
+	/* 5 */
+	/***/ function(module, exports) {
+
+		module.exports = Date.now || now
+		
+		function now() {
+		    return new Date().getTime()
+		}
+
+
+	/***/ },
+	/* 6 */
+	/***/ function(module, exports, __webpack_require__) {
+
+		/* (The MIT License)
+		 *
+		 * Copyright (c) 2012 Brandon Benvie <http://bbenvie.com>
+		 *
+		 * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+		 * associated documentation files (the 'Software'), to deal in the Software without restriction,
+		 * including without limitation the rights to use, copy, modify, merge, publish, distribute,
+		 * sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+		 * furnished to do so, subject to the following conditions:
+		 *
+		 * The above copyright notice and this permission notice shall be included with all copies or
+		 * substantial portions of the Software.
+		 *
+		 * THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+		 * BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+		 * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY  CLAIM,
+		 * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+		 * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+		 */
+		
+		// Original WeakMap implementation by Gozala @ https://gist.github.com/1269991
+		// Updated and bugfixed by Raynos @ https://gist.github.com/1638059
+		// Expanded by Benvie @ https://github.com/Benvie/harmony-collections
+		
+		void function(global, undefined_, undefined){
+		  var getProps = Object.getOwnPropertyNames,
+		      defProp  = Object.defineProperty,
+		      toSource = Function.prototype.toString,
+		      create   = Object.create,
+		      hasOwn   = Object.prototype.hasOwnProperty,
+		      funcName = /^\n?function\s?(\w*)?_?\(/;
+		
+		
+		  function define(object, key, value){
+		    if (typeof key === 'function') {
+		      value = key;
+		      key = nameOf(value).replace(/_$/, '');
+		    }
+		    return defProp(object, key, { configurable: true, writable: true, value: value });
+		  }
+		
+		  function nameOf(func){
+		    return typeof func !== 'function'
+		          ? '' : 'name' in func
+		          ? func.name : toSource.call(func).match(funcName)[1];
+		  }
+		
+		  // ############
+		  // ### Data ###
+		  // ############
+		
+		  var Data = (function(){
+		    var dataDesc = { value: { writable: true, value: undefined } },
+		        datalock = 'return function(k){if(k===s)return l}',
+		        uids     = create(null),
+		
+		        createUID = function(){
+		          var key = Math.random().toString(36).slice(2);
+		          return key in uids ? createUID() : uids[key] = key;
+		        },
+		
+		        globalID = createUID(),
+		
+		        storage = function(obj){
+		          if (hasOwn.call(obj, globalID))
+		            return obj[globalID];
+		
+		          if (!Object.isExtensible(obj))
+		            throw new TypeError("Object must be extensible");
+		
+		          var store = create(null);
+		          defProp(obj, globalID, { value: store });
+		          return store;
+		        };
+		
+		    // common per-object storage area made visible by patching getOwnPropertyNames'
+		    define(Object, function getOwnPropertyNames(obj){
+		      var props = getProps(obj);
+		      if (hasOwn.call(obj, globalID))
+		        props.splice(props.indexOf(globalID), 1);
+		      return props;
+		    });
+		
+		    function Data(){
+		      var puid = createUID(),
+		          secret = {};
+		
+		      this.unlock = function(obj){
+		        var store = storage(obj);
+		        if (hasOwn.call(store, puid))
+		          return store[puid](secret);
+		
+		        var data = create(null, dataDesc);
+		        defProp(store, puid, {
+		          value: new Function('s', 'l', datalock)(secret, data)
+		        });
+		        return data;
+		      }
+		    }
+		
+		    define(Data.prototype, function get(o){ return this.unlock(o).value });
+		    define(Data.prototype, function set(o, v){ this.unlock(o).value = v });
+		
+		    return Data;
+		  }());
+		
+		
+		  var WM = (function(data){
+		    var validate = function(key){
+		      if (key == null || typeof key !== 'object' && typeof key !== 'function')
+		        throw new TypeError("Invalid WeakMap key");
+		    }
+		
+		    var wrap = function(collection, value){
+		      var store = data.unlock(collection);
+		      if (store.value)
+		        throw new TypeError("Object is already a WeakMap");
+		      store.value = value;
+		    }
+		
+		    var unwrap = function(collection){
+		      var storage = data.unlock(collection).value;
+		      if (!storage)
+		        throw new TypeError("WeakMap is not generic");
+		      return storage;
+		    }
+		
+		    var initialize = function(weakmap, iterable){
+		      if (iterable !== null && typeof iterable === 'object' && typeof iterable.forEach === 'function') {
+		        iterable.forEach(function(item, i){
+		          if (item instanceof Array && item.length === 2)
+		            set.call(weakmap, iterable[i][0], iterable[i][1]);
+		        });
+		      }
+		    }
+		
+		
+		    function WeakMap(iterable){
+		      if (this === global || this == null || this === WeakMap.prototype)
+		        return new WeakMap(iterable);
+		
+		      wrap(this, new Data);
+		      initialize(this, iterable);
+		    }
+		
+		    function get(key){
+		      validate(key);
+		      var value = unwrap(this).get(key);
+		      return value === undefined_ ? undefined : value;
+		    }
+		
+		    function set(key, value){
+		      validate(key);
+		      // store a token for explicit undefined so that "has" works correctly
+		      unwrap(this).set(key, value === undefined ? undefined_ : value);
+		    }
+		
+		    function has(key){
+		      validate(key);
+		      return unwrap(this).get(key) !== undefined;
+		    }
+		
+		    function delete_(key){
+		      validate(key);
+		      var data = unwrap(this),
+		          had = data.get(key) !== undefined;
+		      data.set(key, undefined);
+		      return had;
+		    }
+		
+		    function toString(){
+		      unwrap(this);
+		      return '[object WeakMap]';
+		    }
+		
+		    try {
+		      var src = ('return '+delete_).replace('e_', '\\u0065'),
+		          del = new Function('unwrap', 'validate', src)(unwrap, validate);
+		    } catch (e) {
+		      var del = delete_;
+		    }
+		
+		    var src = (''+Object).split('Object');
+		    var stringifier = function toString(){
+		      return src[0] + nameOf(this) + src[1];
+		    };
+		
+		    define(stringifier, stringifier);
+		
+		    var prep = { __proto__: [] } instanceof Array
+		      ? function(f){ f.__proto__ = stringifier }
+		      : function(f){ define(f, stringifier) };
+		
+		    prep(WeakMap);
+		
+		    [toString, get, set, has, del].forEach(function(method){
+		      define(WeakMap.prototype, method);
+		      prep(method);
+		    });
+		
+		    return WeakMap;
+		  }(new Data));
+		
+		  var defaultCreator = Object.create
+		    ? function(){ return Object.create(null) }
+		    : function(){ return {} };
+		
+		  function createStorage(creator){
+		    var weakmap = new WM;
+		    creator || (creator = defaultCreator);
+		
+		    function storage(object, value){
+		      if (value || arguments.length === 2) {
+		        weakmap.set(object, value);
+		      } else {
+		        value = weakmap.get(object);
+		        if (value === undefined) {
+		          value = creator(object);
+		          weakmap.set(object, value);
+		        }
+		      }
+		      return value;
+		    }
+		
+		    return storage;
+		  }
+		
+		
+		  if (true) {
+		    module.exports = WM;
+		  } else if (typeof exports !== 'undefined') {
+		    exports.WeakMap = WM;
+		  } else if (!('WeakMap' in global)) {
+		    global.WeakMap = WM;
+		  }
+		
+		  WM.createStorage = createStorage;
+		  if (global.WeakMap)
+		    global.WeakMap.createStorage = createStorage;
+		}((0, eval)('this'));
+
+
+	/***/ },
+	/* 7 */
+	/***/ function(module, exports) {
+
+		/* WEBPACK VAR INJECTION */(function(global) {/*!
+		
+		Copyright (C) 2014-2016 by Andrea Giammarchi - @WebReflection
+		
+		Permission is hereby granted, free of charge, to any person obtaining a copy
+		of this software and associated documentation files (the "Software"), to deal
+		in the Software without restriction, including without limitation the rights
+		to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+		copies of the Software, and to permit persons to whom the Software is
+		furnished to do so, subject to the following conditions:
+		
+		The above copyright notice and this permission notice shall be included in
+		all copies or substantial portions of the Software.
+		
+		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+		AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+		THE SOFTWARE.
+		
+		*/
+		function installCustomElements(window) {'use strict';
+		
+		  // DO NOT USE THIS FILE DIRECTLY, IT WON'T WORK
+		  // THIS IS A PROJECT BASED ON A BUILD SYSTEM
+		  // THIS FILE IS JUST WRAPPED UP RESULTING IN
+		  // build/document-register-element.node.js
+		
+		  var
+		    document = window.document,
+		    Object = window.Object
+		  ;
+		
+		  var htmlClass = (function (info) {
+		    // (C) Andrea Giammarchi - @WebReflection - MIT Style
+		    var
+		      catchClass = /^[A-Z]+[a-z]/,
+		      filterBy = function (re) {
+		        var arr = [], tag;
+		        for (tag in register) {
+		          if (re.test(tag)) arr.push(tag);
+		        }
+		        return arr;
+		      },
+		      add = function (Class, tag) {
+		        tag = tag.toLowerCase();
+		        if (!(tag in register)) {
+		          register[Class] = (register[Class] || []).concat(tag);
+		          register[tag] = (register[tag.toUpperCase()] = Class);
+		        }
+		      },
+		      register = (Object.create || Object)(null),
+		      htmlClass = {},
+		      i, section, tags, Class
+		    ;
+		    for (section in info) {
+		      for (Class in info[section]) {
+		        tags = info[section][Class];
+		        register[Class] = tags;
+		        for (i = 0; i < tags.length; i++) {
+		          register[tags[i].toLowerCase()] =
+		          register[tags[i].toUpperCase()] = Class;
+		        }
+		      }
+		    }
+		    htmlClass.get = function get(tagOrClass) {
+		      return typeof tagOrClass === 'string' ?
+		        (register[tagOrClass] || (catchClass.test(tagOrClass) ? [] : '')) :
+		        filterBy(tagOrClass);
+		    };
+		    htmlClass.set = function set(tag, Class) {
+		      return (catchClass.test(tag) ?
+		        add(tag, Class) :
+		        add(Class, tag)
+		      ), htmlClass;
+		    };
+		    return htmlClass;
+		  }({
+		    "collections": {
+		      "HTMLAllCollection": [
+		        "all"
+		      ],
+		      "HTMLCollection": [
+		        "forms"
+		      ],
+		      "HTMLFormControlsCollection": [
+		        "elements"
+		      ],
+		      "HTMLOptionsCollection": [
+		        "options"
+		      ]
+		    },
+		    "elements": {
+		      "Element": [
+		        "element"
+		      ],
+		      "HTMLAnchorElement": [
+		        "a"
+		      ],
+		      "HTMLAppletElement": [
+		        "applet"
+		      ],
+		      "HTMLAreaElement": [
+		        "area"
+		      ],
+		      "HTMLAttachmentElement": [
+		        "attachment"
+		      ],
+		      "HTMLAudioElement": [
+		        "audio"
+		      ],
+		      "HTMLBRElement": [
+		        "br"
+		      ],
+		      "HTMLBaseElement": [
+		        "base"
+		      ],
+		      "HTMLBodyElement": [
+		        "body"
+		      ],
+		      "HTMLButtonElement": [
+		        "button"
+		      ],
+		      "HTMLCanvasElement": [
+		        "canvas"
+		      ],
+		      "HTMLContentElement": [
+		        "content"
+		      ],
+		      "HTMLDListElement": [
+		        "dl"
+		      ],
+		      "HTMLDataElement": [
+		        "data"
+		      ],
+		      "HTMLDataListElement": [
+		        "datalist"
+		      ],
+		      "HTMLDetailsElement": [
+		        "details"
+		      ],
+		      "HTMLDialogElement": [
+		        "dialog"
+		      ],
+		      "HTMLDirectoryElement": [
+		        "dir"
+		      ],
+		      "HTMLDivElement": [
+		        "div"
+		      ],
+		      "HTMLDocument": [
+		        "document"
+		      ],
+		      "HTMLElement": [
+		        "element",
+		        "abbr",
+		        "address",
+		        "article",
+		        "aside",
+		        "b",
+		        "bdi",
+		        "bdo",
+		        "cite",
+		        "code",
+		        "command",
+		        "dd",
+		        "dfn",
+		        "dt",
+		        "em",
+		        "figcaption",
+		        "figure",
+		        "footer",
+		        "header",
+		        "i",
+		        "kbd",
+		        "mark",
+		        "nav",
+		        "noscript",
+		        "rp",
+		        "rt",
+		        "ruby",
+		        "s",
+		        "samp",
+		        "section",
+		        "small",
+		        "strong",
+		        "sub",
+		        "summary",
+		        "sup",
+		        "u",
+		        "var",
+		        "wbr"
+		      ],
+		      "HTMLEmbedElement": [
+		        "embed"
+		      ],
+		      "HTMLFieldSetElement": [
+		        "fieldset"
+		      ],
+		      "HTMLFontElement": [
+		        "font"
+		      ],
+		      "HTMLFormElement": [
+		        "form"
+		      ],
+		      "HTMLFrameElement": [
+		        "frame"
+		      ],
+		      "HTMLFrameSetElement": [
+		        "frameset"
+		      ],
+		      "HTMLHRElement": [
+		        "hr"
+		      ],
+		      "HTMLHeadElement": [
+		        "head"
+		      ],
+		      "HTMLHeadingElement": [
+		        "h1",
+		        "h2",
+		        "h3",
+		        "h4",
+		        "h5",
+		        "h6"
+		      ],
+		      "HTMLHtmlElement": [
+		        "html"
+		      ],
+		      "HTMLIFrameElement": [
+		        "iframe"
+		      ],
+		      "HTMLImageElement": [
+		        "img"
+		      ],
+		      "HTMLInputElement": [
+		        "input"
+		      ],
+		      "HTMLKeygenElement": [
+		        "keygen"
+		      ],
+		      "HTMLLIElement": [
+		        "li"
+		      ],
+		      "HTMLLabelElement": [
+		        "label"
+		      ],
+		      "HTMLLegendElement": [
+		        "legend"
+		      ],
+		      "HTMLLinkElement": [
+		        "link"
+		      ],
+		      "HTMLMapElement": [
+		        "map"
+		      ],
+		      "HTMLMarqueeElement": [
+		        "marquee"
+		      ],
+		      "HTMLMediaElement": [
+		        "media"
+		      ],
+		      "HTMLMenuElement": [
+		        "menu"
+		      ],
+		      "HTMLMenuItemElement": [
+		        "menuitem"
+		      ],
+		      "HTMLMetaElement": [
+		        "meta"
+		      ],
+		      "HTMLMeterElement": [
+		        "meter"
+		      ],
+		      "HTMLModElement": [
+		        "del",
+		        "ins"
+		      ],
+		      "HTMLOListElement": [
+		        "ol"
+		      ],
+		      "HTMLObjectElement": [
+		        "object"
+		      ],
+		      "HTMLOptGroupElement": [
+		        "optgroup"
+		      ],
+		      "HTMLOptionElement": [
+		        "option"
+		      ],
+		      "HTMLOutputElement": [
+		        "output"
+		      ],
+		      "HTMLParagraphElement": [
+		        "p"
+		      ],
+		      "HTMLParamElement": [
+		        "param"
+		      ],
+		      "HTMLPictureElement": [
+		        "picture"
+		      ],
+		      "HTMLPreElement": [
+		        "pre"
+		      ],
+		      "HTMLProgressElement": [
+		        "progress"
+		      ],
+		      "HTMLQuoteElement": [
+		        "blockquote",
+		        "q",
+		        "quote"
+		      ],
+		      "HTMLScriptElement": [
+		        "script"
+		      ],
+		      "HTMLSelectElement": [
+		        "select"
+		      ],
+		      "HTMLShadowElement": [
+		        "shadow"
+		      ],
+		      "HTMLSlotElement": [
+		        "slot"
+		      ],
+		      "HTMLSourceElement": [
+		        "source"
+		      ],
+		      "HTMLSpanElement": [
+		        "span"
+		      ],
+		      "HTMLStyleElement": [
+		        "style"
+		      ],
+		      "HTMLTableCaptionElement": [
+		        "caption"
+		      ],
+		      "HTMLTableCellElement": [
+		        "td",
+		        "th"
+		      ],
+		      "HTMLTableColElement": [
+		        "col",
+		        "colgroup"
+		      ],
+		      "HTMLTableElement": [
+		        "table"
+		      ],
+		      "HTMLTableRowElement": [
+		        "tr"
+		      ],
+		      "HTMLTableSectionElement": [
+		        "thead",
+		        "tbody",
+		        "tfoot"
+		      ],
+		      "HTMLTemplateElement": [
+		        "template"
+		      ],
+		      "HTMLTextAreaElement": [
+		        "textarea"
+		      ],
+		      "HTMLTimeElement": [
+		        "time"
+		      ],
+		      "HTMLTitleElement": [
+		        "title"
+		      ],
+		      "HTMLTrackElement": [
+		        "track"
+		      ],
+		      "HTMLUListElement": [
+		        "ul"
+		      ],
+		      "HTMLUnknownElement": [
+		        "unknown",
+		        "vhgroupv",
+		        "vkeygen"
+		      ],
+		      "HTMLVideoElement": [
+		        "video"
+		      ]
+		    },
+		    "nodes": {
+		      "Attr": [
+		        "node"
+		      ],
+		      "Audio": [
+		        "audio"
+		      ],
+		      "CDATASection": [
+		        "node"
+		      ],
+		      "CharacterData": [
+		        "node"
+		      ],
+		      "Comment": [
+		        "#comment"
+		      ],
+		      "Document": [
+		        "#document"
+		      ],
+		      "DocumentFragment": [
+		        "#document-fragment"
+		      ],
+		      "DocumentType": [
+		        "node"
+		      ],
+		      "HTMLDocument": [
+		        "#document"
+		      ],
+		      "Image": [
+		        "img"
+		      ],
+		      "Option": [
+		        "option"
+		      ],
+		      "ProcessingInstruction": [
+		        "node"
+		      ],
+		      "ShadowRoot": [
+		        "#shadow-root"
+		      ],
+		      "Text": [
+		        "#text"
+		      ],
+		      "XMLDocument": [
+		        "xml"
+		      ]
+		    }
+		  }));
+		  
+		  
+		    var
+		    // V0 polyfill entry
+		    REGISTER_ELEMENT = 'registerElement',
+		  
+		    // IE < 11 only + old WebKit for attributes + feature detection
+		    EXPANDO_UID = '__' + REGISTER_ELEMENT + (window.Math.random() * 10e4 >> 0),
+		  
+		    // shortcuts and costants
+		    ADD_EVENT_LISTENER = 'addEventListener',
+		    ATTACHED = 'attached',
+		    CALLBACK = 'Callback',
+		    DETACHED = 'detached',
+		    EXTENDS = 'extends',
+		  
+		    ATTRIBUTE_CHANGED_CALLBACK = 'attributeChanged' + CALLBACK,
+		    ATTACHED_CALLBACK = ATTACHED + CALLBACK,
+		    CONNECTED_CALLBACK = 'connected' + CALLBACK,
+		    DISCONNECTED_CALLBACK = 'disconnected' + CALLBACK,
+		    CREATED_CALLBACK = 'created' + CALLBACK,
+		    DETACHED_CALLBACK = DETACHED + CALLBACK,
+		  
+		    ADDITION = 'ADDITION',
+		    MODIFICATION = 'MODIFICATION',
+		    REMOVAL = 'REMOVAL',
+		  
+		    DOM_ATTR_MODIFIED = 'DOMAttrModified',
+		    DOM_CONTENT_LOADED = 'DOMContentLoaded',
+		    DOM_SUBTREE_MODIFIED = 'DOMSubtreeModified',
+		  
+		    PREFIX_TAG = '<',
+		    PREFIX_IS = '=',
+		  
+		    // valid and invalid node names
+		    validName = /^[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)+$/,
+		    invalidNames = [
+		      'ANNOTATION-XML',
+		      'COLOR-PROFILE',
+		      'FONT-FACE',
+		      'FONT-FACE-SRC',
+		      'FONT-FACE-URI',
+		      'FONT-FACE-FORMAT',
+		      'FONT-FACE-NAME',
+		      'MISSING-GLYPH'
+		    ],
+		  
+		    // registered types and their prototypes
+		    types = [],
+		    protos = [],
+		  
+		    // to query subnodes
+		    query = '',
+		  
+		    // html shortcut used to feature detect
+		    documentElement = document.documentElement,
+		  
+		    // ES5 inline helpers || basic patches
+		    indexOf = types.indexOf || function (v) {
+		      for(var i = this.length; i-- && this[i] !== v;){}
+		      return i;
+		    },
+		  
+		    // other helpers / shortcuts
+		    OP = Object.prototype,
+		    hOP = OP.hasOwnProperty,
+		    iPO = OP.isPrototypeOf,
+		  
+		    defineProperty = Object.defineProperty,
+		    empty = [],
+		    gOPD = Object.getOwnPropertyDescriptor,
+		    gOPN = Object.getOwnPropertyNames,
+		    gPO = Object.getPrototypeOf,
+		    sPO = Object.setPrototypeOf,
+		  
+		    // jshint proto: true
+		    hasProto = !!Object.__proto__,
+		  
+		    // V1 helpers
+		    fixGetClass = false,
+		    DRECEV1 = '__dreCEv1',
+		    customElements = window.customElements,
+		    usableCustomElements = !!(
+		      customElements &&
+		      customElements.define &&
+		      customElements.get &&
+		      customElements.whenDefined
+		    ),
+		    Dict = Object.create || Object,
+		    Map = window.Map || function Map() {
+		      var K = [], V = [], i;
+		      return {
+		        get: function (k) {
+		          return V[indexOf.call(K, k)];
+		        },
+		        set: function (k, v) {
+		          i = indexOf.call(K, k);
+		          if (i < 0) V[K.push(k) - 1] = v;
+		          else V[i] = v;
+		        }
+		      };
+		    },
+		    Promise = window.Promise || function (fn) {
+		      var
+		        notify = [],
+		        done = false,
+		        p = {
+		          'catch': function () {
+		            return p;
+		          },
+		          'then': function (cb) {
+		            notify.push(cb);
+		            if (done) setTimeout(resolve, 1);
+		            return p;
+		          }
+		        }
+		      ;
+		      function resolve(value) {
+		        done = true;
+		        while (notify.length) notify.shift()(value);
+		      }
+		      fn(resolve);
+		      return p;
+		    },
+		    justCreated = false,
+		    constructors = Dict(null),
+		    waitingList = Dict(null),
+		    nodeNames = new Map(),
+		    secondArgument = String,
+		  
+		    // used to create unique instances
+		    create = Object.create || function Bridge(proto) {
+		      // silly broken polyfill probably ever used but short enough to work
+		      return proto ? ((Bridge.prototype = proto), new Bridge()) : this;
+		    },
+		  
+		    // will set the prototype if possible
+		    // or copy over all properties
+		    setPrototype = sPO || (
+		      hasProto ?
+		        function (o, p) {
+		          o.__proto__ = p;
+		          return o;
+		        } : (
+		      (gOPN && gOPD) ?
+		        (function(){
+		          function setProperties(o, p) {
+		            for (var
+		              key,
+		              names = gOPN(p),
+		              i = 0, length = names.length;
+		              i < length; i++
+		            ) {
+		              key = names[i];
+		              if (!hOP.call(o, key)) {
+		                defineProperty(o, key, gOPD(p, key));
+		              }
+		            }
+		          }
+		          return function (o, p) {
+		            do {
+		              setProperties(o, p);
+		            } while ((p = gPO(p)) && !iPO.call(p, o));
+		            return o;
+		          };
+		        }()) :
+		        function (o, p) {
+		          for (var key in p) {
+		            o[key] = p[key];
+		          }
+		          return o;
+		        }
+		    )),
+		  
+		    // DOM shortcuts and helpers, if any
+		  
+		    MutationObserver = window.MutationObserver ||
+		                       window.WebKitMutationObserver,
+		  
+		    HTMLElementPrototype = (
+		      window.HTMLElement ||
+		      window.Element ||
+		      window.Node
+		    ).prototype,
+		  
+		    IE8 = !iPO.call(HTMLElementPrototype, documentElement),
+		  
+		    safeProperty = IE8 ? function (o, k, d) {
+		      o[k] = d.value;
+		      return o;
+		    } : defineProperty,
+		  
+		    isValidNode = IE8 ?
+		      function (node) {
+		        return node.nodeType === 1;
+		      } :
+		      function (node) {
+		        return iPO.call(HTMLElementPrototype, node);
+		      },
+		  
+		    targets = IE8 && [],
+		  
+		    attachShadow = HTMLElementPrototype.attachShadow,
+		    cloneNode = HTMLElementPrototype.cloneNode,
+		    dispatchEvent = HTMLElementPrototype.dispatchEvent,
+		    getAttribute = HTMLElementPrototype.getAttribute,
+		    hasAttribute = HTMLElementPrototype.hasAttribute,
+		    removeAttribute = HTMLElementPrototype.removeAttribute,
+		    setAttribute = HTMLElementPrototype.setAttribute,
+		  
+		    // replaced later on
+		    createElement = document.createElement,
+		    patchedCreateElement = createElement,
+		  
+		    // shared observer for all attributes
+		    attributesObserver = MutationObserver && {
+		      attributes: true,
+		      characterData: true,
+		      attributeOldValue: true
+		    },
+		  
+		    // useful to detect only if there's no MutationObserver
+		    DOMAttrModified = MutationObserver || function(e) {
+		      doesNotSupportDOMAttrModified = false;
+		      documentElement.removeEventListener(
+		        DOM_ATTR_MODIFIED,
+		        DOMAttrModified
+		      );
+		    },
+		  
+		    // will both be used to make DOMNodeInserted asynchronous
+		    asapQueue,
+		    asapTimer = 0,
+		  
+		    // internal flags
+		    setListener = false,
+		    doesNotSupportDOMAttrModified = true,
+		    dropDomContentLoaded = true,
+		  
+		    // needed for the innerHTML helper
+		    notFromInnerHTMLHelper = true,
+		  
+		    // optionally defined later on
+		    onSubtreeModified,
+		    callDOMAttrModified,
+		    getAttributesMirror,
+		    observer,
+		    observe,
+		  
+		    // based on setting prototype capability
+		    // will check proto or the expando attribute
+		    // in order to setup the node once
+		    patchIfNotAlready,
+		    patch
+		  ;
+		  
+		  // only if needed
+		  if (!(REGISTER_ELEMENT in document)) {
+		  
+		    if (sPO || hasProto) {
+		        patchIfNotAlready = function (node, proto) {
+		          if (!iPO.call(proto, node)) {
+		            setupNode(node, proto);
+		          }
+		        };
+		        patch = setupNode;
+		    } else {
+		        patchIfNotAlready = function (node, proto) {
+		          if (!node[EXPANDO_UID]) {
+		            node[EXPANDO_UID] = Object(true);
+		            setupNode(node, proto);
+		          }
+		        };
+		        patch = patchIfNotAlready;
+		    }
+		  
+		    if (IE8) {
+		      doesNotSupportDOMAttrModified = false;
+		      (function (){
+		        var
+		          descriptor = gOPD(HTMLElementPrototype, ADD_EVENT_LISTENER),
+		          addEventListener = descriptor.value,
+		          patchedRemoveAttribute = function (name) {
+		            var e = new CustomEvent(DOM_ATTR_MODIFIED, {bubbles: true});
+		            e.attrName = name;
+		            e.prevValue = getAttribute.call(this, name);
+		            e.newValue = null;
+		            e[REMOVAL] = e.attrChange = 2;
+		            removeAttribute.call(this, name);
+		            dispatchEvent.call(this, e);
+		          },
+		          patchedSetAttribute = function (name, value) {
+		            var
+		              had = hasAttribute.call(this, name),
+		              old = had && getAttribute.call(this, name),
+		              e = new CustomEvent(DOM_ATTR_MODIFIED, {bubbles: true})
+		            ;
+		            setAttribute.call(this, name, value);
+		            e.attrName = name;
+		            e.prevValue = had ? old : null;
+		            e.newValue = value;
+		            if (had) {
+		              e[MODIFICATION] = e.attrChange = 1;
+		            } else {
+		              e[ADDITION] = e.attrChange = 0;
+		            }
+		            dispatchEvent.call(this, e);
+		          },
+		          onPropertyChange = function (e) {
+		            // jshint eqnull:true
+		            var
+		              node = e.currentTarget,
+		              superSecret = node[EXPANDO_UID],
+		              propertyName = e.propertyName,
+		              event
+		            ;
+		            if (superSecret.hasOwnProperty(propertyName)) {
+		              superSecret = superSecret[propertyName];
+		              event = new CustomEvent(DOM_ATTR_MODIFIED, {bubbles: true});
+		              event.attrName = superSecret.name;
+		              event.prevValue = superSecret.value || null;
+		              event.newValue = (superSecret.value = node[propertyName] || null);
+		              if (event.prevValue == null) {
+		                event[ADDITION] = event.attrChange = 0;
+		              } else {
+		                event[MODIFICATION] = event.attrChange = 1;
+		              }
+		              dispatchEvent.call(node, event);
+		            }
+		          }
+		        ;
+		        descriptor.value = function (type, handler, capture) {
+		          if (
+		            type === DOM_ATTR_MODIFIED &&
+		            this[ATTRIBUTE_CHANGED_CALLBACK] &&
+		            this.setAttribute !== patchedSetAttribute
+		          ) {
+		            this[EXPANDO_UID] = {
+		              className: {
+		                name: 'class',
+		                value: this.className
+		              }
+		            };
+		            this.setAttribute = patchedSetAttribute;
+		            this.removeAttribute = patchedRemoveAttribute;
+		            addEventListener.call(this, 'propertychange', onPropertyChange);
+		          }
+		          addEventListener.call(this, type, handler, capture);
+		        };
+		        defineProperty(HTMLElementPrototype, ADD_EVENT_LISTENER, descriptor);
+		      }());
+		    } else if (!MutationObserver) {
+		      documentElement[ADD_EVENT_LISTENER](DOM_ATTR_MODIFIED, DOMAttrModified);
+		      documentElement.setAttribute(EXPANDO_UID, 1);
+		      documentElement.removeAttribute(EXPANDO_UID);
+		      if (doesNotSupportDOMAttrModified) {
+		        onSubtreeModified = function (e) {
+		          var
+		            node = this,
+		            oldAttributes,
+		            newAttributes,
+		            key
+		          ;
+		          if (node === e.target) {
+		            oldAttributes = node[EXPANDO_UID];
+		            node[EXPANDO_UID] = (newAttributes = getAttributesMirror(node));
+		            for (key in newAttributes) {
+		              if (!(key in oldAttributes)) {
+		                // attribute was added
+		                return callDOMAttrModified(
+		                  0,
+		                  node,
+		                  key,
+		                  oldAttributes[key],
+		                  newAttributes[key],
+		                  ADDITION
+		                );
+		              } else if (newAttributes[key] !== oldAttributes[key]) {
+		                // attribute was changed
+		                return callDOMAttrModified(
+		                  1,
+		                  node,
+		                  key,
+		                  oldAttributes[key],
+		                  newAttributes[key],
+		                  MODIFICATION
+		                );
+		              }
+		            }
+		            // checking if it has been removed
+		            for (key in oldAttributes) {
+		              if (!(key in newAttributes)) {
+		                // attribute removed
+		                return callDOMAttrModified(
+		                  2,
+		                  node,
+		                  key,
+		                  oldAttributes[key],
+		                  newAttributes[key],
+		                  REMOVAL
+		                );
+		              }
+		            }
+		          }
+		        };
+		        callDOMAttrModified = function (
+		          attrChange,
+		          currentTarget,
+		          attrName,
+		          prevValue,
+		          newValue,
+		          action
+		        ) {
+		          var e = {
+		            attrChange: attrChange,
+		            currentTarget: currentTarget,
+		            attrName: attrName,
+		            prevValue: prevValue,
+		            newValue: newValue
+		          };
+		          e[action] = attrChange;
+		          onDOMAttrModified(e);
+		        };
+		        getAttributesMirror = function (node) {
+		          for (var
+		            attr, name,
+		            result = {},
+		            attributes = node.attributes,
+		            i = 0, length = attributes.length;
+		            i < length; i++
+		          ) {
+		            attr = attributes[i];
+		            name = attr.name;
+		            if (name !== 'setAttribute') {
+		              result[name] = attr.value;
+		            }
+		          }
+		          return result;
+		        };
+		      }
+		    }
+		  
+		    // set as enumerable, writable and configurable
+		    document[REGISTER_ELEMENT] = function registerElement(type, options) {
+		      upperType = type.toUpperCase();
+		      if (!setListener) {
+		        // only first time document.registerElement is used
+		        // we need to set this listener
+		        // setting it by default might slow down for no reason
+		        setListener = true;
+		        if (MutationObserver) {
+		          observer = (function(attached, detached){
+		            function checkEmAll(list, callback) {
+		              for (var i = 0, length = list.length; i < length; callback(list[i++])){}
+		            }
+		            return new MutationObserver(function (records) {
+		              for (var
+		                current, node, newValue,
+		                i = 0, length = records.length; i < length; i++
+		              ) {
+		                current = records[i];
+		                if (current.type === 'childList') {
+		                  checkEmAll(current.addedNodes, attached);
+		                  checkEmAll(current.removedNodes, detached);
+		                } else {
+		                  node = current.target;
+		                  if (notFromInnerHTMLHelper &&
+		                      node[ATTRIBUTE_CHANGED_CALLBACK] &&
+		                      current.attributeName !== 'style') {
+		                    newValue = getAttribute.call(node, current.attributeName);
+		                    if (newValue !== current.oldValue) {
+		                      node[ATTRIBUTE_CHANGED_CALLBACK](
+		                        current.attributeName,
+		                        current.oldValue,
+		                        newValue
+		                      );
+		                    }
+		                  }
+		                }
+		              }
+		            });
+		          }(executeAction(ATTACHED), executeAction(DETACHED)));
+		          observe = function (node) {
+		            observer.observe(
+		              node,
+		              {
+		                childList: true,
+		                subtree: true
+		              }
+		            );
+		            return node;
+		          };
+		          observe(document);
+		          if (attachShadow) {
+		            HTMLElementPrototype.attachShadow = function () {
+		              return observe(attachShadow.apply(this, arguments));
+		            };
+		          }
+		        } else {
+		          asapQueue = [];
+		          document[ADD_EVENT_LISTENER]('DOMNodeInserted', onDOMNode(ATTACHED));
+		          document[ADD_EVENT_LISTENER]('DOMNodeRemoved', onDOMNode(DETACHED));
+		        }
+		  
+		        document[ADD_EVENT_LISTENER](DOM_CONTENT_LOADED, onReadyStateChange);
+		        document[ADD_EVENT_LISTENER]('readystatechange', onReadyStateChange);
+		  
+		        HTMLElementPrototype.cloneNode = function (deep) {
+		          var
+		            node = cloneNode.call(this, !!deep),
+		            i = getTypeIndex(node)
+		          ;
+		          if (-1 < i) patch(node, protos[i]);
+		          if (deep) loopAndSetup(node.querySelectorAll(query));
+		          return node;
+		        };
+		      }
+		  
+		      if (-2 < (
+		        indexOf.call(types, PREFIX_IS + upperType) +
+		        indexOf.call(types, PREFIX_TAG + upperType)
+		      )) {
+		        throwTypeError(type);
+		      }
+		  
+		      if (!validName.test(upperType) || -1 < indexOf.call(invalidNames, upperType)) {
+		        throw new Error('The type ' + type + ' is invalid');
+		      }
+		  
+		      var
+		        constructor = function () {
+		          return extending ?
+		            document.createElement(nodeName, upperType) :
+		            document.createElement(nodeName);
+		        },
+		        opt = options || OP,
+		        extending = hOP.call(opt, EXTENDS),
+		        nodeName = extending ? options[EXTENDS].toUpperCase() : upperType,
+		        upperType,
+		        i
+		      ;
+		  
+		      if (extending && -1 < (
+		        indexOf.call(types, PREFIX_TAG + nodeName)
+		      )) {
+		        throwTypeError(nodeName);
+		      }
+		  
+		      i = types.push((extending ? PREFIX_IS : PREFIX_TAG) + upperType) - 1;
+		  
+		      query = query.concat(
+		        query.length ? ',' : '',
+		        extending ? nodeName + '[is="' + type.toLowerCase() + '"]' : nodeName
+		      );
+		  
+		      constructor.prototype = (
+		        protos[i] = hOP.call(opt, 'prototype') ?
+		          opt.prototype :
+		          create(HTMLElementPrototype)
+		      );
+		  
+		      loopAndVerify(
+		        document.querySelectorAll(query),
+		        ATTACHED
+		      );
+		  
+		      return constructor;
+		    };
+		  
+		    document.createElement = (patchedCreateElement = function (localName, typeExtension) {
+		      var
+		        is = getIs(typeExtension),
+		        node = is ?
+		          createElement.call(document, localName, secondArgument(is)) :
+		          createElement.call(document, localName),
+		        name = '' + localName,
+		        i = indexOf.call(
+		          types,
+		          (is ? PREFIX_IS : PREFIX_TAG) +
+		          (is || name).toUpperCase()
+		        ),
+		        setup = -1 < i
+		      ;
+		      if (is) {
+		        node.setAttribute('is', is = is.toLowerCase());
+		        if (setup) {
+		          setup = isInQSA(name.toUpperCase(), is);
+		        }
+		      }
+		      notFromInnerHTMLHelper = !document.createElement.innerHTMLHelper;
+		      if (setup) patch(node, protos[i]);
+		      return node;
+		    });
+		  
+		  }
+		  
+		  function ASAP() {
+		    var queue = asapQueue.splice(0, asapQueue.length);
+		    asapTimer = 0;
+		    while (queue.length) {
+		      queue.shift().call(
+		        null, queue.shift()
+		      );
+		    }
+		  }
+		  
+		  function loopAndVerify(list, action) {
+		    for (var i = 0, length = list.length; i < length; i++) {
+		      verifyAndSetupAndAction(list[i], action);
+		    }
+		  }
+		  
+		  function loopAndSetup(list) {
+		    for (var i = 0, length = list.length, node; i < length; i++) {
+		      node = list[i];
+		      patch(node, protos[getTypeIndex(node)]);
+		    }
+		  }
+		  
+		  function executeAction(action) {
+		    return function (node) {
+		      if (isValidNode(node)) {
+		        verifyAndSetupAndAction(node, action);
+		        loopAndVerify(
+		          node.querySelectorAll(query),
+		          action
+		        );
+		      }
+		    };
+		  }
+		  
+		  function getTypeIndex(target) {
+		    var
+		      is = getAttribute.call(target, 'is'),
+		      nodeName = target.nodeName.toUpperCase(),
+		      i = indexOf.call(
+		        types,
+		        is ?
+		            PREFIX_IS + is.toUpperCase() :
+		            PREFIX_TAG + nodeName
+		      )
+		    ;
+		    return is && -1 < i && !isInQSA(nodeName, is) ? -1 : i;
+		  }
+		  
+		  function isInQSA(name, type) {
+		    return -1 < query.indexOf(name + '[is="' + type + '"]');
+		  }
+		  
+		  function onDOMAttrModified(e) {
+		    var
+		      node = e.currentTarget,
+		      attrChange = e.attrChange,
+		      attrName = e.attrName,
+		      target = e.target,
+		      addition = e[ADDITION] || 2,
+		      removal = e[REMOVAL] || 3
+		    ;
+		    if (notFromInnerHTMLHelper &&
+		        (!target || target === node) &&
+		        node[ATTRIBUTE_CHANGED_CALLBACK] &&
+		        attrName !== 'style' && (
+		          e.prevValue !== e.newValue ||
+		          // IE9, IE10, and Opera 12 gotcha
+		          e.newValue === '' && (
+		            attrChange === addition ||
+		            attrChange === removal
+		          )
+		    )) {
+		      node[ATTRIBUTE_CHANGED_CALLBACK](
+		        attrName,
+		        attrChange === addition ? null : e.prevValue,
+		        attrChange === removal ? null : e.newValue
+		      );
+		    }
+		  }
+		  
+		  function onDOMNode(action) {
+		    var executor = executeAction(action);
+		    return function (e) {
+		      asapQueue.push(executor, e.target);
+		      if (asapTimer) clearTimeout(asapTimer);
+		      asapTimer = setTimeout(ASAP, 1);
+		    };
+		  }
+		  
+		  function onReadyStateChange(e) {
+		    if (dropDomContentLoaded) {
+		      dropDomContentLoaded = false;
+		      e.currentTarget.removeEventListener(DOM_CONTENT_LOADED, onReadyStateChange);
+		    }
+		    loopAndVerify(
+		      (e.target || document).querySelectorAll(query),
+		      e.detail === DETACHED ? DETACHED : ATTACHED
+		    );
+		    if (IE8) purge();
+		  }
+		  
+		  function patchedSetAttribute(name, value) {
+		    // jshint validthis:true
+		    var self = this;
+		    setAttribute.call(self, name, value);
+		    onSubtreeModified.call(self, {target: self});
+		  }
+		  
+		  function setupNode(node, proto) {
+		    setPrototype(node, proto);
+		    if (observer) {
+		      observer.observe(node, attributesObserver);
+		    } else {
+		      if (doesNotSupportDOMAttrModified) {
+		        node.setAttribute = patchedSetAttribute;
+		        node[EXPANDO_UID] = getAttributesMirror(node);
+		        node[ADD_EVENT_LISTENER](DOM_SUBTREE_MODIFIED, onSubtreeModified);
+		      }
+		      node[ADD_EVENT_LISTENER](DOM_ATTR_MODIFIED, onDOMAttrModified);
+		    }
+		    if (node[CREATED_CALLBACK] && notFromInnerHTMLHelper) {
+		      node.created = true;
+		      node[CREATED_CALLBACK]();
+		      node.created = false;
+		    }
+		  }
+		  
+		  function purge() {
+		    for (var
+		      node,
+		      i = 0,
+		      length = targets.length;
+		      i < length; i++
+		    ) {
+		      node = targets[i];
+		      if (!documentElement.contains(node)) {
+		        length--;
+		        targets.splice(i--, 1);
+		        verifyAndSetupAndAction(node, DETACHED);
+		      }
+		    }
+		  }
+		  
+		  function throwTypeError(type) {
+		    throw new Error('A ' + type + ' type is already registered');
+		  }
+		  
+		  function verifyAndSetupAndAction(node, action) {
+		    var
+		      fn,
+		      i = getTypeIndex(node)
+		    ;
+		    if (-1 < i) {
+		      patchIfNotAlready(node, protos[i]);
+		      i = 0;
+		      if (action === ATTACHED && !node[ATTACHED]) {
+		        node[DETACHED] = false;
+		        node[ATTACHED] = true;
+		        i = 1;
+		        if (IE8 && indexOf.call(targets, node) < 0) {
+		          targets.push(node);
+		        }
+		      } else if (action === DETACHED && !node[DETACHED]) {
+		        node[ATTACHED] = false;
+		        node[DETACHED] = true;
+		        i = 1;
+		      }
+		      if (i && (fn = node[action + CALLBACK])) fn.call(node);
+		    }
+		  }
+		  
+		  
+		  
+		  // V1 in da House!
+		  function CustomElementRegistry() {}
+		  
+		  CustomElementRegistry.prototype = {
+		    constructor: CustomElementRegistry,
+		    // a workaround for the stubborn WebKit
+		    define: usableCustomElements ?
+		      function (name, Class, options) {
+		        if (options) {
+		          CERDefine(name, Class, options);
+		        } else {
+		          var NAME = name.toUpperCase();
+		          constructors[NAME] = {
+		            constructor: Class,
+		            create: [NAME]
+		          };
+		          nodeNames.set(Class, NAME);
+		          customElements.define(name, Class);
+		        }
+		      } :
+		      CERDefine,
+		    get: usableCustomElements ?
+		      function (name) {
+		        return customElements.get(name) || get(name);
+		      } :
+		      get,
+		    whenDefined: usableCustomElements ?
+		      function (name) {
+		        return Promise.race([
+		          customElements.whenDefined(name),
+		          whenDefined(name)
+		        ]);
+		      } :
+		      whenDefined
+		  };
+		  
+		  function CERDefine(name, Class, options) {
+		    var
+		      is = options && options[EXTENDS] || '',
+		      CProto = Class.prototype,
+		      proto = create(CProto),
+		      attributes = Class.observedAttributes || empty,
+		      definition = {prototype: proto}
+		    ;
+		    // TODO: is this needed at all since it's inherited?
+		    // defineProperty(proto, 'constructor', {value: Class});
+		    safeProperty(proto, CREATED_CALLBACK, {
+		        value: function () {
+		          if (justCreated) justCreated = false;
+		          else if (!this[DRECEV1]) {
+		            this[DRECEV1] = true;
+		            new Class(this);
+		            if (CProto[CREATED_CALLBACK])
+		              CProto[CREATED_CALLBACK].call(this);
+		            var info = constructors[nodeNames.get(Class)];
+		            if (!usableCustomElements || info.create.length > 1) {
+		              notifyAttributes(this);
+		            }
+		          }
+		      }
+		    });
+		    safeProperty(proto, ATTRIBUTE_CHANGED_CALLBACK, {
+		      value: function (name) {
+		        if (-1 < indexOf.call(attributes, name))
+		          CProto[ATTRIBUTE_CHANGED_CALLBACK].apply(this, arguments);
+		      }
+		    });
+		    if (CProto[CONNECTED_CALLBACK]) {
+		      safeProperty(proto, ATTACHED_CALLBACK, {
+		        value: CProto[CONNECTED_CALLBACK]
+		      });
+		    }
+		    if (CProto[DISCONNECTED_CALLBACK]) {
+		      safeProperty(proto, DETACHED_CALLBACK, {
+		        value: CProto[DISCONNECTED_CALLBACK]
+		      });
+		    }
+		    if (is) definition[EXTENDS] = is;
+		    name = name.toUpperCase();
+		    constructors[name] = {
+		      constructor: Class,
+		      create: is ? [is, secondArgument(name)] : [name]
+		    };
+		    nodeNames.set(Class, name);
+		    document[REGISTER_ELEMENT](name.toLowerCase(), definition);
+		    whenDefined(name);
+		    waitingList[name].r();
+		  }
+		  
+		  function get(name) {
+		    var info = constructors[name.toUpperCase()];
+		    return info && info.constructor;
+		  }
+		  
+		  function getIs(options) {
+		    return typeof options === 'string' ?
+		        options : (options && options.is || '');
+		  }
+		  
+		  function notifyAttributes(self) {
+		    var
+		      callback = self[ATTRIBUTE_CHANGED_CALLBACK],
+		      attributes = callback ? self.attributes : empty,
+		      i = attributes.length,
+		      attribute
+		    ;
+		    while (i--) {
+		      attribute =  attributes[i]; // || attributes.item(i);
+		      callback.call(
+		        self,
+		        attribute.name || attribute.nodeName,
+		        null,
+		        attribute.value || attribute.nodeValue
+		      );
+		    }
+		  }
+		  
+		  function whenDefined(name) {
+		    name = name.toUpperCase();
+		    if (!(name in waitingList)) {
+		      waitingList[name] = {};
+		      waitingList[name].p = new Promise(function (resolve) {
+		        waitingList[name].r = resolve;
+		      });
+		    }
+		    return waitingList[name].p;
+		  }
+		  
+		  function polyfillV1() {
+		    if (customElements) delete window.customElements;
+		    defineProperty(window, 'customElements', {
+		      configurable: true,
+		      value: new CustomElementRegistry()
+		    });
+		    defineProperty(window, 'CustomElementRegistry', {
+		      configurable: true,
+		      value: CustomElementRegistry
+		    });
+		    for (var
+		      patchClass = function (name) {
+		        var Class = window[name];
+		        if (Class) {
+		          window[name] = function CustomElementsV1(self) {
+		            var info, isNative;
+		            if (!self) self = this;
+		            if (!self[DRECEV1]) {
+		              justCreated = true;
+		              info = constructors[nodeNames.get(self.constructor)];
+		              isNative = usableCustomElements && info.create.length === 1;
+		              self = isNative ?
+		                Reflect.construct(Class, empty, info.constructor) :
+		                document.createElement.apply(document, info.create);
+		              self[DRECEV1] = true;
+		              justCreated = false;
+		              if (!isNative) notifyAttributes(self);
+		            }
+		            return self;
+		          };
+		          window[name].prototype = Class.prototype;
+		          try {
+		            Class.prototype.constructor = window[name];
+		          } catch(WebKit) {
+		            fixGetClass = true;
+		            defineProperty(Class, DRECEV1, {value: window[name]});
+		          }
+		        }
+		      },
+		      Classes = htmlClass.get(/^HTML[A-Z]*[a-z]/),
+		      i = Classes.length;
+		      i--;
+		      patchClass(Classes[i])
+		    ) {}
+		    (document.createElement = function (name, options) {
+		      var is = getIs(options);
+		      return is ?
+		        patchedCreateElement.call(this, name, secondArgument(is)) :
+		        patchedCreateElement.call(this, name);
+		    });
+		  }
+		  
+		  // if customElements is not there at all
+		  if (!customElements) polyfillV1();
+		  else {
+		    // if available test extends work as expected
+		    try {
+		      (function (DRE, options, name) {
+		        options[EXTENDS] = 'a';
+		        DRE.prototype = create(HTMLAnchorElement.prototype);
+		        DRE.prototype.constructor = DRE;
+		        window.customElements.define(name, DRE, options);
+		        if (
+		          getAttribute.call(document.createElement('a', {is: name}), 'is') !== name ||
+		          (usableCustomElements && getAttribute.call(new DRE(), 'is') !== name)
+		        ) {
+		          throw options;
+		        }
+		      }(
+		        function DRE() {
+		          return Reflect.construct(HTMLAnchorElement, [], DRE);
+		        },
+		        {},
+		        'document-register-element-a'
+		      ));
+		    } catch(o_O) {
+		      // or force the polyfill if not
+		      // and keep internal original reference
+		      polyfillV1();
+		    }
+		  }
+		  
+		  try {
+		    createElement.call(document, 'a', 'a');
+		  } catch(FireFox) {
+		    secondArgument = function (is) {
+		      return {is: is};
+		    };
+		  }
+		  
+		}
+		
+		installCustomElements(global);
+		
+		module.exports = installCustomElements;
+		
+		/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+	/***/ }
+	/******/ ])
+	});
+	;
+	//# sourceMappingURL=index.js.map
 
 /***/ },
 /* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
-	/**
-	 * Module dependencies.
-	 */
-
-	var now = __webpack_require__(10);
-
-	/**
-	 * Returns a function, that, as long as it continues to be invoked, will not
-	 * be triggered. The function will be called after it stops being called for
-	 * N milliseconds. If `immediate` is passed, trigger the function on the
-	 * leading edge, instead of the trailing.
-	 *
-	 * @source underscore.js
-	 * @see http://unscriptable.com/2009/03/20/debouncing-javascript-methods/
-	 * @param {Function} function to wrap
-	 * @param {Number} timeout in ms (`100`)
-	 * @param {Boolean} whether to execute at the beginning (`false`)
-	 * @api public
-	 */
-
-	module.exports = function debounce(func, wait, immediate){
-	  var timeout, args, context, timestamp, result;
-	  if (null == wait) wait = 100;
-
-	  function later() {
-	    var last = now() - timestamp;
-
-	    if (last < wait && last > 0) {
-	      timeout = setTimeout(later, wait - last);
-	    } else {
-	      timeout = null;
-	      if (!immediate) {
-	        result = func.apply(context, args);
-	        if (!timeout) context = args = null;
-	      }
-	    }
-	  };
-
-	  return function debounced() {
-	    context = this;
-	    args = arguments;
-	    timestamp = now();
-	    var callNow = immediate && !timeout;
-	    if (!timeout) timeout = setTimeout(later, wait);
-	    if (callNow) {
-	      result = func.apply(context, args);
-	      context = args = null;
-	    }
-
-	    return result;
-	  };
-	};
-
+	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["Turbolinks"] = __webpack_require__(10);
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
 /* 10 */
-/***/ function(module, exports) {
-
-	module.exports = Date.now || now
-
-	function now() {
-	    return new Date().getTime()
-	}
-
-
-/***/ },
-/* 11 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* (The MIT License)
-	 *
-	 * Copyright (c) 2012 Brandon Benvie <http://bbenvie.com>
-	 *
-	 * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
-	 * associated documentation files (the 'Software'), to deal in the Software without restriction,
-	 * including without limitation the rights to use, copy, modify, merge, publish, distribute,
-	 * sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
-	 * furnished to do so, subject to the following conditions:
-	 *
-	 * The above copyright notice and this permission notice shall be included with all copies or
-	 * substantial portions of the Software.
-	 *
-	 * THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
-	 * BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-	 * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY  CLAIM,
-	 * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-	 * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-	 */
-
-	// Original WeakMap implementation by Gozala @ https://gist.github.com/1269991
-	// Updated and bugfixed by Raynos @ https://gist.github.com/1638059
-	// Expanded by Benvie @ https://github.com/Benvie/harmony-collections
-
-	void function(global, undefined_, undefined){
-	  var getProps = Object.getOwnPropertyNames,
-	      defProp  = Object.defineProperty,
-	      toSource = Function.prototype.toString,
-	      create   = Object.create,
-	      hasOwn   = Object.prototype.hasOwnProperty,
-	      funcName = /^\n?function\s?(\w*)?_?\(/;
-
-
-	  function define(object, key, value){
-	    if (typeof key === 'function') {
-	      value = key;
-	      key = nameOf(value).replace(/_$/, '');
-	    }
-	    return defProp(object, key, { configurable: true, writable: true, value: value });
-	  }
-
-	  function nameOf(func){
-	    return typeof func !== 'function'
-	          ? '' : 'name' in func
-	          ? func.name : toSource.call(func).match(funcName)[1];
-	  }
-
-	  // ############
-	  // ### Data ###
-	  // ############
-
-	  var Data = (function(){
-	    var dataDesc = { value: { writable: true, value: undefined } },
-	        datalock = 'return function(k){if(k===s)return l}',
-	        uids     = create(null),
-
-	        createUID = function(){
-	          var key = Math.random().toString(36).slice(2);
-	          return key in uids ? createUID() : uids[key] = key;
-	        },
-
-	        globalID = createUID(),
-
-	        storage = function(obj){
-	          if (hasOwn.call(obj, globalID))
-	            return obj[globalID];
-
-	          if (!Object.isExtensible(obj))
-	            throw new TypeError("Object must be extensible");
-
-	          var store = create(null);
-	          defProp(obj, globalID, { value: store });
-	          return store;
-	        };
-
-	    // common per-object storage area made visible by patching getOwnPropertyNames'
-	    define(Object, function getOwnPropertyNames(obj){
-	      var props = getProps(obj);
-	      if (hasOwn.call(obj, globalID))
-	        props.splice(props.indexOf(globalID), 1);
-	      return props;
-	    });
-
-	    function Data(){
-	      var puid = createUID(),
-	          secret = {};
-
-	      this.unlock = function(obj){
-	        var store = storage(obj);
-	        if (hasOwn.call(store, puid))
-	          return store[puid](secret);
-
-	        var data = create(null, dataDesc);
-	        defProp(store, puid, {
-	          value: new Function('s', 'l', datalock)(secret, data)
-	        });
-	        return data;
-	      }
-	    }
-
-	    define(Data.prototype, function get(o){ return this.unlock(o).value });
-	    define(Data.prototype, function set(o, v){ this.unlock(o).value = v });
-
-	    return Data;
-	  }());
-
-
-	  var WM = (function(data){
-	    var validate = function(key){
-	      if (key == null || typeof key !== 'object' && typeof key !== 'function')
-	        throw new TypeError("Invalid WeakMap key");
-	    }
-
-	    var wrap = function(collection, value){
-	      var store = data.unlock(collection);
-	      if (store.value)
-	        throw new TypeError("Object is already a WeakMap");
-	      store.value = value;
-	    }
-
-	    var unwrap = function(collection){
-	      var storage = data.unlock(collection).value;
-	      if (!storage)
-	        throw new TypeError("WeakMap is not generic");
-	      return storage;
-	    }
-
-	    var initialize = function(weakmap, iterable){
-	      if (iterable !== null && typeof iterable === 'object' && typeof iterable.forEach === 'function') {
-	        iterable.forEach(function(item, i){
-	          if (item instanceof Array && item.length === 2)
-	            set.call(weakmap, iterable[i][0], iterable[i][1]);
-	        });
-	      }
-	    }
-
-
-	    function WeakMap(iterable){
-	      if (this === global || this == null || this === WeakMap.prototype)
-	        return new WeakMap(iterable);
-
-	      wrap(this, new Data);
-	      initialize(this, iterable);
-	    }
-
-	    function get(key){
-	      validate(key);
-	      var value = unwrap(this).get(key);
-	      return value === undefined_ ? undefined : value;
-	    }
-
-	    function set(key, value){
-	      validate(key);
-	      // store a token for explicit undefined so that "has" works correctly
-	      unwrap(this).set(key, value === undefined ? undefined_ : value);
-	    }
-
-	    function has(key){
-	      validate(key);
-	      return unwrap(this).get(key) !== undefined;
-	    }
-
-	    function delete_(key){
-	      validate(key);
-	      var data = unwrap(this),
-	          had = data.get(key) !== undefined;
-	      data.set(key, undefined);
-	      return had;
-	    }
-
-	    function toString(){
-	      unwrap(this);
-	      return '[object WeakMap]';
-	    }
-
-	    try {
-	      var src = ('return '+delete_).replace('e_', '\\u0065'),
-	          del = new Function('unwrap', 'validate', src)(unwrap, validate);
-	    } catch (e) {
-	      var del = delete_;
-	    }
-
-	    var src = (''+Object).split('Object');
-	    var stringifier = function toString(){
-	      return src[0] + nameOf(this) + src[1];
-	    };
-
-	    define(stringifier, stringifier);
-
-	    var prep = { __proto__: [] } instanceof Array
-	      ? function(f){ f.__proto__ = stringifier }
-	      : function(f){ define(f, stringifier) };
-
-	    prep(WeakMap);
-
-	    [toString, get, set, has, del].forEach(function(method){
-	      define(WeakMap.prototype, method);
-	      prep(method);
-	    });
-
-	    return WeakMap;
-	  }(new Data));
-
-	  var defaultCreator = Object.create
-	    ? function(){ return Object.create(null) }
-	    : function(){ return {} };
-
-	  function createStorage(creator){
-	    var weakmap = new WM;
-	    creator || (creator = defaultCreator);
-
-	    function storage(object, value){
-	      if (value || arguments.length === 2) {
-	        weakmap.set(object, value);
-	      } else {
-	        value = weakmap.get(object);
-	        if (value === undefined) {
-	          value = creator(object);
-	          weakmap.set(object, value);
-	        }
-	      }
-	      return value;
-	    }
-
-	    return storage;
-	  }
-
-
-	  if (true) {
-	    module.exports = WM;
-	  } else if (typeof exports !== 'undefined') {
-	    exports.WeakMap = WM;
-	  } else if (!('WeakMap' in global)) {
-	    global.WeakMap = WM;
-	  }
-
-	  WM.createStorage = createStorage;
-	  if (global.WeakMap)
-	    global.WeakMap.createStorage = createStorage;
-	}((0, eval)('this'));
-
-
-/***/ },
-/* 12 */
-/***/ function(module, exports) {
-
-	/* WEBPACK VAR INJECTION */(function(global) {/*!
-
-	Copyright (C) 2014-2016 by Andrea Giammarchi - @WebReflection
-
-	Permission is hereby granted, free of charge, to any person obtaining a copy
-	of this software and associated documentation files (the "Software"), to deal
-	in the Software without restriction, including without limitation the rights
-	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-	copies of the Software, and to permit persons to whom the Software is
-	furnished to do so, subject to the following conditions:
-
-	The above copyright notice and this permission notice shall be included in
-	all copies or substantial portions of the Software.
-
-	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-	THE SOFTWARE.
-
-	*/
-	function installCustomElements(window) {'use strict';
-
-	  // DO NOT USE THIS FILE DIRECTLY, IT WON'T WORK
-	  // THIS IS A PROJECT BASED ON A BUILD SYSTEM
-	  // THIS FILE IS JUST WRAPPED UP RESULTING IN
-	  // build/document-register-element.node.js
-
-	  var
-	    document = window.document,
-	    Object = window.Object
-	  ;
-
-	  var htmlClass = (function (info) {
-	    // (C) Andrea Giammarchi - @WebReflection - MIT Style
-	    var
-	      catchClass = /^[A-Z]+[a-z]/,
-	      filterBy = function (re) {
-	        var arr = [], tag;
-	        for (tag in register) {
-	          if (re.test(tag)) arr.push(tag);
-	        }
-	        return arr;
-	      },
-	      add = function (Class, tag) {
-	        tag = tag.toLowerCase();
-	        if (!(tag in register)) {
-	          register[Class] = (register[Class] || []).concat(tag);
-	          register[tag] = (register[tag.toUpperCase()] = Class);
-	        }
-	      },
-	      register = (Object.create || Object)(null),
-	      htmlClass = {},
-	      i, section, tags, Class
-	    ;
-	    for (section in info) {
-	      for (Class in info[section]) {
-	        tags = info[section][Class];
-	        register[Class] = tags;
-	        for (i = 0; i < tags.length; i++) {
-	          register[tags[i].toLowerCase()] =
-	          register[tags[i].toUpperCase()] = Class;
-	        }
-	      }
-	    }
-	    htmlClass.get = function get(tagOrClass) {
-	      return typeof tagOrClass === 'string' ?
-	        (register[tagOrClass] || (catchClass.test(tagOrClass) ? [] : '')) :
-	        filterBy(tagOrClass);
-	    };
-	    htmlClass.set = function set(tag, Class) {
-	      return (catchClass.test(tag) ?
-	        add(tag, Class) :
-	        add(Class, tag)
-	      ), htmlClass;
-	    };
-	    return htmlClass;
-	  }({
-	    "collections": {
-	      "HTMLAllCollection": [
-	        "all"
-	      ],
-	      "HTMLCollection": [
-	        "forms"
-	      ],
-	      "HTMLFormControlsCollection": [
-	        "elements"
-	      ],
-	      "HTMLOptionsCollection": [
-	        "options"
-	      ]
-	    },
-	    "elements": {
-	      "Element": [
-	        "element"
-	      ],
-	      "HTMLAnchorElement": [
-	        "a"
-	      ],
-	      "HTMLAppletElement": [
-	        "applet"
-	      ],
-	      "HTMLAreaElement": [
-	        "area"
-	      ],
-	      "HTMLAttachmentElement": [
-	        "attachment"
-	      ],
-	      "HTMLAudioElement": [
-	        "audio"
-	      ],
-	      "HTMLBRElement": [
-	        "br"
-	      ],
-	      "HTMLBaseElement": [
-	        "base"
-	      ],
-	      "HTMLBodyElement": [
-	        "body"
-	      ],
-	      "HTMLButtonElement": [
-	        "button"
-	      ],
-	      "HTMLCanvasElement": [
-	        "canvas"
-	      ],
-	      "HTMLContentElement": [
-	        "content"
-	      ],
-	      "HTMLDListElement": [
-	        "dl"
-	      ],
-	      "HTMLDataElement": [
-	        "data"
-	      ],
-	      "HTMLDataListElement": [
-	        "datalist"
-	      ],
-	      "HTMLDetailsElement": [
-	        "details"
-	      ],
-	      "HTMLDialogElement": [
-	        "dialog"
-	      ],
-	      "HTMLDirectoryElement": [
-	        "dir"
-	      ],
-	      "HTMLDivElement": [
-	        "div"
-	      ],
-	      "HTMLDocument": [
-	        "document"
-	      ],
-	      "HTMLElement": [
-	        "element",
-	        "abbr",
-	        "address",
-	        "article",
-	        "aside",
-	        "b",
-	        "bdi",
-	        "bdo",
-	        "cite",
-	        "code",
-	        "command",
-	        "dd",
-	        "dfn",
-	        "dt",
-	        "em",
-	        "figcaption",
-	        "figure",
-	        "footer",
-	        "header",
-	        "i",
-	        "kbd",
-	        "mark",
-	        "nav",
-	        "noscript",
-	        "rp",
-	        "rt",
-	        "ruby",
-	        "s",
-	        "samp",
-	        "section",
-	        "small",
-	        "strong",
-	        "sub",
-	        "summary",
-	        "sup",
-	        "u",
-	        "var",
-	        "wbr"
-	      ],
-	      "HTMLEmbedElement": [
-	        "embed"
-	      ],
-	      "HTMLFieldSetElement": [
-	        "fieldset"
-	      ],
-	      "HTMLFontElement": [
-	        "font"
-	      ],
-	      "HTMLFormElement": [
-	        "form"
-	      ],
-	      "HTMLFrameElement": [
-	        "frame"
-	      ],
-	      "HTMLFrameSetElement": [
-	        "frameset"
-	      ],
-	      "HTMLHRElement": [
-	        "hr"
-	      ],
-	      "HTMLHeadElement": [
-	        "head"
-	      ],
-	      "HTMLHeadingElement": [
-	        "h1",
-	        "h2",
-	        "h3",
-	        "h4",
-	        "h5",
-	        "h6"
-	      ],
-	      "HTMLHtmlElement": [
-	        "html"
-	      ],
-	      "HTMLIFrameElement": [
-	        "iframe"
-	      ],
-	      "HTMLImageElement": [
-	        "img"
-	      ],
-	      "HTMLInputElement": [
-	        "input"
-	      ],
-	      "HTMLKeygenElement": [
-	        "keygen"
-	      ],
-	      "HTMLLIElement": [
-	        "li"
-	      ],
-	      "HTMLLabelElement": [
-	        "label"
-	      ],
-	      "HTMLLegendElement": [
-	        "legend"
-	      ],
-	      "HTMLLinkElement": [
-	        "link"
-	      ],
-	      "HTMLMapElement": [
-	        "map"
-	      ],
-	      "HTMLMarqueeElement": [
-	        "marquee"
-	      ],
-	      "HTMLMediaElement": [
-	        "media"
-	      ],
-	      "HTMLMenuElement": [
-	        "menu"
-	      ],
-	      "HTMLMenuItemElement": [
-	        "menuitem"
-	      ],
-	      "HTMLMetaElement": [
-	        "meta"
-	      ],
-	      "HTMLMeterElement": [
-	        "meter"
-	      ],
-	      "HTMLModElement": [
-	        "del",
-	        "ins"
-	      ],
-	      "HTMLOListElement": [
-	        "ol"
-	      ],
-	      "HTMLObjectElement": [
-	        "object"
-	      ],
-	      "HTMLOptGroupElement": [
-	        "optgroup"
-	      ],
-	      "HTMLOptionElement": [
-	        "option"
-	      ],
-	      "HTMLOutputElement": [
-	        "output"
-	      ],
-	      "HTMLParagraphElement": [
-	        "p"
-	      ],
-	      "HTMLParamElement": [
-	        "param"
-	      ],
-	      "HTMLPictureElement": [
-	        "picture"
-	      ],
-	      "HTMLPreElement": [
-	        "pre"
-	      ],
-	      "HTMLProgressElement": [
-	        "progress"
-	      ],
-	      "HTMLQuoteElement": [
-	        "blockquote",
-	        "q",
-	        "quote"
-	      ],
-	      "HTMLScriptElement": [
-	        "script"
-	      ],
-	      "HTMLSelectElement": [
-	        "select"
-	      ],
-	      "HTMLShadowElement": [
-	        "shadow"
-	      ],
-	      "HTMLSlotElement": [
-	        "slot"
-	      ],
-	      "HTMLSourceElement": [
-	        "source"
-	      ],
-	      "HTMLSpanElement": [
-	        "span"
-	      ],
-	      "HTMLStyleElement": [
-	        "style"
-	      ],
-	      "HTMLTableCaptionElement": [
-	        "caption"
-	      ],
-	      "HTMLTableCellElement": [
-	        "td",
-	        "th"
-	      ],
-	      "HTMLTableColElement": [
-	        "col",
-	        "colgroup"
-	      ],
-	      "HTMLTableElement": [
-	        "table"
-	      ],
-	      "HTMLTableRowElement": [
-	        "tr"
-	      ],
-	      "HTMLTableSectionElement": [
-	        "thead",
-	        "tbody",
-	        "tfoot"
-	      ],
-	      "HTMLTemplateElement": [
-	        "template"
-	      ],
-	      "HTMLTextAreaElement": [
-	        "textarea"
-	      ],
-	      "HTMLTimeElement": [
-	        "time"
-	      ],
-	      "HTMLTitleElement": [
-	        "title"
-	      ],
-	      "HTMLTrackElement": [
-	        "track"
-	      ],
-	      "HTMLUListElement": [
-	        "ul"
-	      ],
-	      "HTMLUnknownElement": [
-	        "unknown",
-	        "vhgroupv",
-	        "vkeygen"
-	      ],
-	      "HTMLVideoElement": [
-	        "video"
-	      ]
-	    },
-	    "nodes": {
-	      "Attr": [
-	        "node"
-	      ],
-	      "Audio": [
-	        "audio"
-	      ],
-	      "CDATASection": [
-	        "node"
-	      ],
-	      "CharacterData": [
-	        "node"
-	      ],
-	      "Comment": [
-	        "#comment"
-	      ],
-	      "Document": [
-	        "#document"
-	      ],
-	      "DocumentFragment": [
-	        "#document-fragment"
-	      ],
-	      "DocumentType": [
-	        "node"
-	      ],
-	      "HTMLDocument": [
-	        "#document"
-	      ],
-	      "Image": [
-	        "img"
-	      ],
-	      "Option": [
-	        "option"
-	      ],
-	      "ProcessingInstruction": [
-	        "node"
-	      ],
-	      "ShadowRoot": [
-	        "#shadow-root"
-	      ],
-	      "Text": [
-	        "#text"
-	      ],
-	      "XMLDocument": [
-	        "xml"
-	      ]
-	    }
-	  }));
-	  
-	  
-	    var
-	    // V0 polyfill entry
-	    REGISTER_ELEMENT = 'registerElement',
-	  
-	    // IE < 11 only + old WebKit for attributes + feature detection
-	    EXPANDO_UID = '__' + REGISTER_ELEMENT + (window.Math.random() * 10e4 >> 0),
-	  
-	    // shortcuts and costants
-	    ADD_EVENT_LISTENER = 'addEventListener',
-	    ATTACHED = 'attached',
-	    CALLBACK = 'Callback',
-	    DETACHED = 'detached',
-	    EXTENDS = 'extends',
-	  
-	    ATTRIBUTE_CHANGED_CALLBACK = 'attributeChanged' + CALLBACK,
-	    ATTACHED_CALLBACK = ATTACHED + CALLBACK,
-	    CONNECTED_CALLBACK = 'connected' + CALLBACK,
-	    DISCONNECTED_CALLBACK = 'disconnected' + CALLBACK,
-	    CREATED_CALLBACK = 'created' + CALLBACK,
-	    DETACHED_CALLBACK = DETACHED + CALLBACK,
-	  
-	    ADDITION = 'ADDITION',
-	    MODIFICATION = 'MODIFICATION',
-	    REMOVAL = 'REMOVAL',
-	  
-	    DOM_ATTR_MODIFIED = 'DOMAttrModified',
-	    DOM_CONTENT_LOADED = 'DOMContentLoaded',
-	    DOM_SUBTREE_MODIFIED = 'DOMSubtreeModified',
-	  
-	    PREFIX_TAG = '<',
-	    PREFIX_IS = '=',
-	  
-	    // valid and invalid node names
-	    validName = /^[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)+$/,
-	    invalidNames = [
-	      'ANNOTATION-XML',
-	      'COLOR-PROFILE',
-	      'FONT-FACE',
-	      'FONT-FACE-SRC',
-	      'FONT-FACE-URI',
-	      'FONT-FACE-FORMAT',
-	      'FONT-FACE-NAME',
-	      'MISSING-GLYPH'
-	    ],
-	  
-	    // registered types and their prototypes
-	    types = [],
-	    protos = [],
-	  
-	    // to query subnodes
-	    query = '',
-	  
-	    // html shortcut used to feature detect
-	    documentElement = document.documentElement,
-	  
-	    // ES5 inline helpers || basic patches
-	    indexOf = types.indexOf || function (v) {
-	      for(var i = this.length; i-- && this[i] !== v;){}
-	      return i;
-	    },
-	  
-	    // other helpers / shortcuts
-	    OP = Object.prototype,
-	    hOP = OP.hasOwnProperty,
-	    iPO = OP.isPrototypeOf,
-	  
-	    defineProperty = Object.defineProperty,
-	    empty = [],
-	    gOPD = Object.getOwnPropertyDescriptor,
-	    gOPN = Object.getOwnPropertyNames,
-	    gPO = Object.getPrototypeOf,
-	    sPO = Object.setPrototypeOf,
-	  
-	    // jshint proto: true
-	    hasProto = !!Object.__proto__,
-	  
-	    // V1 helpers
-	    fixGetClass = false,
-	    DRECEV1 = '__dreCEv1',
-	    customElements = window.customElements,
-	    usableCustomElements = !!(
-	      customElements &&
-	      customElements.define &&
-	      customElements.get &&
-	      customElements.whenDefined
-	    ),
-	    Dict = Object.create || Object,
-	    Map = window.Map || function Map() {
-	      var K = [], V = [], i;
-	      return {
-	        get: function (k) {
-	          return V[indexOf.call(K, k)];
-	        },
-	        set: function (k, v) {
-	          i = indexOf.call(K, k);
-	          if (i < 0) V[K.push(k) - 1] = v;
-	          else V[i] = v;
-	        }
-	      };
-	    },
-	    Promise = window.Promise || function (fn) {
-	      var
-	        notify = [],
-	        done = false,
-	        p = {
-	          'catch': function () {
-	            return p;
-	          },
-	          'then': function (cb) {
-	            notify.push(cb);
-	            if (done) setTimeout(resolve, 1);
-	            return p;
-	          }
-	        }
-	      ;
-	      function resolve(value) {
-	        done = true;
-	        while (notify.length) notify.shift()(value);
-	      }
-	      fn(resolve);
-	      return p;
-	    },
-	    justCreated = false,
-	    constructors = Dict(null),
-	    waitingList = Dict(null),
-	    nodeNames = new Map(),
-	    secondArgument = String,
-	  
-	    // used to create unique instances
-	    create = Object.create || function Bridge(proto) {
-	      // silly broken polyfill probably ever used but short enough to work
-	      return proto ? ((Bridge.prototype = proto), new Bridge()) : this;
-	    },
-	  
-	    // will set the prototype if possible
-	    // or copy over all properties
-	    setPrototype = sPO || (
-	      hasProto ?
-	        function (o, p) {
-	          o.__proto__ = p;
-	          return o;
-	        } : (
-	      (gOPN && gOPD) ?
-	        (function(){
-	          function setProperties(o, p) {
-	            for (var
-	              key,
-	              names = gOPN(p),
-	              i = 0, length = names.length;
-	              i < length; i++
-	            ) {
-	              key = names[i];
-	              if (!hOP.call(o, key)) {
-	                defineProperty(o, key, gOPD(p, key));
-	              }
-	            }
-	          }
-	          return function (o, p) {
-	            do {
-	              setProperties(o, p);
-	            } while ((p = gPO(p)) && !iPO.call(p, o));
-	            return o;
-	          };
-	        }()) :
-	        function (o, p) {
-	          for (var key in p) {
-	            o[key] = p[key];
-	          }
-	          return o;
-	        }
-	    )),
-	  
-	    // DOM shortcuts and helpers, if any
-	  
-	    MutationObserver = window.MutationObserver ||
-	                       window.WebKitMutationObserver,
-	  
-	    HTMLElementPrototype = (
-	      window.HTMLElement ||
-	      window.Element ||
-	      window.Node
-	    ).prototype,
-	  
-	    IE8 = !iPO.call(HTMLElementPrototype, documentElement),
-	  
-	    safeProperty = IE8 ? function (o, k, d) {
-	      o[k] = d.value;
-	      return o;
-	    } : defineProperty,
-	  
-	    isValidNode = IE8 ?
-	      function (node) {
-	        return node.nodeType === 1;
-	      } :
-	      function (node) {
-	        return iPO.call(HTMLElementPrototype, node);
-	      },
-	  
-	    targets = IE8 && [],
-	  
-	    attachShadow = HTMLElementPrototype.attachShadow,
-	    cloneNode = HTMLElementPrototype.cloneNode,
-	    dispatchEvent = HTMLElementPrototype.dispatchEvent,
-	    getAttribute = HTMLElementPrototype.getAttribute,
-	    hasAttribute = HTMLElementPrototype.hasAttribute,
-	    removeAttribute = HTMLElementPrototype.removeAttribute,
-	    setAttribute = HTMLElementPrototype.setAttribute,
-	  
-	    // replaced later on
-	    createElement = document.createElement,
-	    patchedCreateElement = createElement,
-	  
-	    // shared observer for all attributes
-	    attributesObserver = MutationObserver && {
-	      attributes: true,
-	      characterData: true,
-	      attributeOldValue: true
-	    },
-	  
-	    // useful to detect only if there's no MutationObserver
-	    DOMAttrModified = MutationObserver || function(e) {
-	      doesNotSupportDOMAttrModified = false;
-	      documentElement.removeEventListener(
-	        DOM_ATTR_MODIFIED,
-	        DOMAttrModified
-	      );
-	    },
-	  
-	    // will both be used to make DOMNodeInserted asynchronous
-	    asapQueue,
-	    asapTimer = 0,
-	  
-	    // internal flags
-	    setListener = false,
-	    doesNotSupportDOMAttrModified = true,
-	    dropDomContentLoaded = true,
-	  
-	    // needed for the innerHTML helper
-	    notFromInnerHTMLHelper = true,
-	  
-	    // optionally defined later on
-	    onSubtreeModified,
-	    callDOMAttrModified,
-	    getAttributesMirror,
-	    observer,
-	    observe,
-	  
-	    // based on setting prototype capability
-	    // will check proto or the expando attribute
-	    // in order to setup the node once
-	    patchIfNotAlready,
-	    patch
-	  ;
-	  
-	  // only if needed
-	  if (!(REGISTER_ELEMENT in document)) {
-	  
-	    if (sPO || hasProto) {
-	        patchIfNotAlready = function (node, proto) {
-	          if (!iPO.call(proto, node)) {
-	            setupNode(node, proto);
-	          }
-	        };
-	        patch = setupNode;
-	    } else {
-	        patchIfNotAlready = function (node, proto) {
-	          if (!node[EXPANDO_UID]) {
-	            node[EXPANDO_UID] = Object(true);
-	            setupNode(node, proto);
-	          }
-	        };
-	        patch = patchIfNotAlready;
-	    }
-	  
-	    if (IE8) {
-	      doesNotSupportDOMAttrModified = false;
-	      (function (){
-	        var
-	          descriptor = gOPD(HTMLElementPrototype, ADD_EVENT_LISTENER),
-	          addEventListener = descriptor.value,
-	          patchedRemoveAttribute = function (name) {
-	            var e = new CustomEvent(DOM_ATTR_MODIFIED, {bubbles: true});
-	            e.attrName = name;
-	            e.prevValue = getAttribute.call(this, name);
-	            e.newValue = null;
-	            e[REMOVAL] = e.attrChange = 2;
-	            removeAttribute.call(this, name);
-	            dispatchEvent.call(this, e);
-	          },
-	          patchedSetAttribute = function (name, value) {
-	            var
-	              had = hasAttribute.call(this, name),
-	              old = had && getAttribute.call(this, name),
-	              e = new CustomEvent(DOM_ATTR_MODIFIED, {bubbles: true})
-	            ;
-	            setAttribute.call(this, name, value);
-	            e.attrName = name;
-	            e.prevValue = had ? old : null;
-	            e.newValue = value;
-	            if (had) {
-	              e[MODIFICATION] = e.attrChange = 1;
-	            } else {
-	              e[ADDITION] = e.attrChange = 0;
-	            }
-	            dispatchEvent.call(this, e);
-	          },
-	          onPropertyChange = function (e) {
-	            // jshint eqnull:true
-	            var
-	              node = e.currentTarget,
-	              superSecret = node[EXPANDO_UID],
-	              propertyName = e.propertyName,
-	              event
-	            ;
-	            if (superSecret.hasOwnProperty(propertyName)) {
-	              superSecret = superSecret[propertyName];
-	              event = new CustomEvent(DOM_ATTR_MODIFIED, {bubbles: true});
-	              event.attrName = superSecret.name;
-	              event.prevValue = superSecret.value || null;
-	              event.newValue = (superSecret.value = node[propertyName] || null);
-	              if (event.prevValue == null) {
-	                event[ADDITION] = event.attrChange = 0;
-	              } else {
-	                event[MODIFICATION] = event.attrChange = 1;
-	              }
-	              dispatchEvent.call(node, event);
-	            }
-	          }
-	        ;
-	        descriptor.value = function (type, handler, capture) {
-	          if (
-	            type === DOM_ATTR_MODIFIED &&
-	            this[ATTRIBUTE_CHANGED_CALLBACK] &&
-	            this.setAttribute !== patchedSetAttribute
-	          ) {
-	            this[EXPANDO_UID] = {
-	              className: {
-	                name: 'class',
-	                value: this.className
-	              }
-	            };
-	            this.setAttribute = patchedSetAttribute;
-	            this.removeAttribute = patchedRemoveAttribute;
-	            addEventListener.call(this, 'propertychange', onPropertyChange);
-	          }
-	          addEventListener.call(this, type, handler, capture);
-	        };
-	        defineProperty(HTMLElementPrototype, ADD_EVENT_LISTENER, descriptor);
-	      }());
-	    } else if (!MutationObserver) {
-	      documentElement[ADD_EVENT_LISTENER](DOM_ATTR_MODIFIED, DOMAttrModified);
-	      documentElement.setAttribute(EXPANDO_UID, 1);
-	      documentElement.removeAttribute(EXPANDO_UID);
-	      if (doesNotSupportDOMAttrModified) {
-	        onSubtreeModified = function (e) {
-	          var
-	            node = this,
-	            oldAttributes,
-	            newAttributes,
-	            key
-	          ;
-	          if (node === e.target) {
-	            oldAttributes = node[EXPANDO_UID];
-	            node[EXPANDO_UID] = (newAttributes = getAttributesMirror(node));
-	            for (key in newAttributes) {
-	              if (!(key in oldAttributes)) {
-	                // attribute was added
-	                return callDOMAttrModified(
-	                  0,
-	                  node,
-	                  key,
-	                  oldAttributes[key],
-	                  newAttributes[key],
-	                  ADDITION
-	                );
-	              } else if (newAttributes[key] !== oldAttributes[key]) {
-	                // attribute was changed
-	                return callDOMAttrModified(
-	                  1,
-	                  node,
-	                  key,
-	                  oldAttributes[key],
-	                  newAttributes[key],
-	                  MODIFICATION
-	                );
-	              }
-	            }
-	            // checking if it has been removed
-	            for (key in oldAttributes) {
-	              if (!(key in newAttributes)) {
-	                // attribute removed
-	                return callDOMAttrModified(
-	                  2,
-	                  node,
-	                  key,
-	                  oldAttributes[key],
-	                  newAttributes[key],
-	                  REMOVAL
-	                );
-	              }
-	            }
-	          }
-	        };
-	        callDOMAttrModified = function (
-	          attrChange,
-	          currentTarget,
-	          attrName,
-	          prevValue,
-	          newValue,
-	          action
-	        ) {
-	          var e = {
-	            attrChange: attrChange,
-	            currentTarget: currentTarget,
-	            attrName: attrName,
-	            prevValue: prevValue,
-	            newValue: newValue
-	          };
-	          e[action] = attrChange;
-	          onDOMAttrModified(e);
-	        };
-	        getAttributesMirror = function (node) {
-	          for (var
-	            attr, name,
-	            result = {},
-	            attributes = node.attributes,
-	            i = 0, length = attributes.length;
-	            i < length; i++
-	          ) {
-	            attr = attributes[i];
-	            name = attr.name;
-	            if (name !== 'setAttribute') {
-	              result[name] = attr.value;
-	            }
-	          }
-	          return result;
-	        };
-	      }
-	    }
-	  
-	    // set as enumerable, writable and configurable
-	    document[REGISTER_ELEMENT] = function registerElement(type, options) {
-	      upperType = type.toUpperCase();
-	      if (!setListener) {
-	        // only first time document.registerElement is used
-	        // we need to set this listener
-	        // setting it by default might slow down for no reason
-	        setListener = true;
-	        if (MutationObserver) {
-	          observer = (function(attached, detached){
-	            function checkEmAll(list, callback) {
-	              for (var i = 0, length = list.length; i < length; callback(list[i++])){}
-	            }
-	            return new MutationObserver(function (records) {
-	              for (var
-	                current, node, newValue,
-	                i = 0, length = records.length; i < length; i++
-	              ) {
-	                current = records[i];
-	                if (current.type === 'childList') {
-	                  checkEmAll(current.addedNodes, attached);
-	                  checkEmAll(current.removedNodes, detached);
-	                } else {
-	                  node = current.target;
-	                  if (notFromInnerHTMLHelper &&
-	                      node[ATTRIBUTE_CHANGED_CALLBACK] &&
-	                      current.attributeName !== 'style') {
-	                    newValue = getAttribute.call(node, current.attributeName);
-	                    if (newValue !== current.oldValue) {
-	                      node[ATTRIBUTE_CHANGED_CALLBACK](
-	                        current.attributeName,
-	                        current.oldValue,
-	                        newValue
-	                      );
-	                    }
-	                  }
-	                }
-	              }
-	            });
-	          }(executeAction(ATTACHED), executeAction(DETACHED)));
-	          observe = function (node) {
-	            observer.observe(
-	              node,
-	              {
-	                childList: true,
-	                subtree: true
-	              }
-	            );
-	            return node;
-	          };
-	          observe(document);
-	          if (attachShadow) {
-	            HTMLElementPrototype.attachShadow = function () {
-	              return observe(attachShadow.apply(this, arguments));
-	            };
-	          }
-	        } else {
-	          asapQueue = [];
-	          document[ADD_EVENT_LISTENER]('DOMNodeInserted', onDOMNode(ATTACHED));
-	          document[ADD_EVENT_LISTENER]('DOMNodeRemoved', onDOMNode(DETACHED));
-	        }
-	  
-	        document[ADD_EVENT_LISTENER](DOM_CONTENT_LOADED, onReadyStateChange);
-	        document[ADD_EVENT_LISTENER]('readystatechange', onReadyStateChange);
-	  
-	        HTMLElementPrototype.cloneNode = function (deep) {
-	          var
-	            node = cloneNode.call(this, !!deep),
-	            i = getTypeIndex(node)
-	          ;
-	          if (-1 < i) patch(node, protos[i]);
-	          if (deep) loopAndSetup(node.querySelectorAll(query));
-	          return node;
-	        };
-	      }
-	  
-	      if (-2 < (
-	        indexOf.call(types, PREFIX_IS + upperType) +
-	        indexOf.call(types, PREFIX_TAG + upperType)
-	      )) {
-	        throwTypeError(type);
-	      }
-	  
-	      if (!validName.test(upperType) || -1 < indexOf.call(invalidNames, upperType)) {
-	        throw new Error('The type ' + type + ' is invalid');
-	      }
-	  
-	      var
-	        constructor = function () {
-	          return extending ?
-	            document.createElement(nodeName, upperType) :
-	            document.createElement(nodeName);
-	        },
-	        opt = options || OP,
-	        extending = hOP.call(opt, EXTENDS),
-	        nodeName = extending ? options[EXTENDS].toUpperCase() : upperType,
-	        upperType,
-	        i
-	      ;
-	  
-	      if (extending && -1 < (
-	        indexOf.call(types, PREFIX_TAG + nodeName)
-	      )) {
-	        throwTypeError(nodeName);
-	      }
-	  
-	      i = types.push((extending ? PREFIX_IS : PREFIX_TAG) + upperType) - 1;
-	  
-	      query = query.concat(
-	        query.length ? ',' : '',
-	        extending ? nodeName + '[is="' + type.toLowerCase() + '"]' : nodeName
-	      );
-	  
-	      constructor.prototype = (
-	        protos[i] = hOP.call(opt, 'prototype') ?
-	          opt.prototype :
-	          create(HTMLElementPrototype)
-	      );
-	  
-	      loopAndVerify(
-	        document.querySelectorAll(query),
-	        ATTACHED
-	      );
-	  
-	      return constructor;
-	    };
-	  
-	    document.createElement = (patchedCreateElement = function (localName, typeExtension) {
-	      var
-	        is = getIs(typeExtension),
-	        node = is ?
-	          createElement.call(document, localName, secondArgument(is)) :
-	          createElement.call(document, localName),
-	        name = '' + localName,
-	        i = indexOf.call(
-	          types,
-	          (is ? PREFIX_IS : PREFIX_TAG) +
-	          (is || name).toUpperCase()
-	        ),
-	        setup = -1 < i
-	      ;
-	      if (is) {
-	        node.setAttribute('is', is = is.toLowerCase());
-	        if (setup) {
-	          setup = isInQSA(name.toUpperCase(), is);
-	        }
-	      }
-	      notFromInnerHTMLHelper = !document.createElement.innerHTMLHelper;
-	      if (setup) patch(node, protos[i]);
-	      return node;
-	    });
-	  
-	  }
-	  
-	  function ASAP() {
-	    var queue = asapQueue.splice(0, asapQueue.length);
-	    asapTimer = 0;
-	    while (queue.length) {
-	      queue.shift().call(
-	        null, queue.shift()
-	      );
-	    }
-	  }
-	  
-	  function loopAndVerify(list, action) {
-	    for (var i = 0, length = list.length; i < length; i++) {
-	      verifyAndSetupAndAction(list[i], action);
-	    }
-	  }
-	  
-	  function loopAndSetup(list) {
-	    for (var i = 0, length = list.length, node; i < length; i++) {
-	      node = list[i];
-	      patch(node, protos[getTypeIndex(node)]);
-	    }
-	  }
-	  
-	  function executeAction(action) {
-	    return function (node) {
-	      if (isValidNode(node)) {
-	        verifyAndSetupAndAction(node, action);
-	        loopAndVerify(
-	          node.querySelectorAll(query),
-	          action
-	        );
-	      }
-	    };
-	  }
-	  
-	  function getTypeIndex(target) {
-	    var
-	      is = getAttribute.call(target, 'is'),
-	      nodeName = target.nodeName.toUpperCase(),
-	      i = indexOf.call(
-	        types,
-	        is ?
-	            PREFIX_IS + is.toUpperCase() :
-	            PREFIX_TAG + nodeName
-	      )
-	    ;
-	    return is && -1 < i && !isInQSA(nodeName, is) ? -1 : i;
-	  }
-	  
-	  function isInQSA(name, type) {
-	    return -1 < query.indexOf(name + '[is="' + type + '"]');
-	  }
-	  
-	  function onDOMAttrModified(e) {
-	    var
-	      node = e.currentTarget,
-	      attrChange = e.attrChange,
-	      attrName = e.attrName,
-	      target = e.target,
-	      addition = e[ADDITION] || 2,
-	      removal = e[REMOVAL] || 3
-	    ;
-	    if (notFromInnerHTMLHelper &&
-	        (!target || target === node) &&
-	        node[ATTRIBUTE_CHANGED_CALLBACK] &&
-	        attrName !== 'style' && (
-	          e.prevValue !== e.newValue ||
-	          // IE9, IE10, and Opera 12 gotcha
-	          e.newValue === '' && (
-	            attrChange === addition ||
-	            attrChange === removal
-	          )
-	    )) {
-	      node[ATTRIBUTE_CHANGED_CALLBACK](
-	        attrName,
-	        attrChange === addition ? null : e.prevValue,
-	        attrChange === removal ? null : e.newValue
-	      );
-	    }
-	  }
-	  
-	  function onDOMNode(action) {
-	    var executor = executeAction(action);
-	    return function (e) {
-	      asapQueue.push(executor, e.target);
-	      if (asapTimer) clearTimeout(asapTimer);
-	      asapTimer = setTimeout(ASAP, 1);
-	    };
-	  }
-	  
-	  function onReadyStateChange(e) {
-	    if (dropDomContentLoaded) {
-	      dropDomContentLoaded = false;
-	      e.currentTarget.removeEventListener(DOM_CONTENT_LOADED, onReadyStateChange);
-	    }
-	    loopAndVerify(
-	      (e.target || document).querySelectorAll(query),
-	      e.detail === DETACHED ? DETACHED : ATTACHED
-	    );
-	    if (IE8) purge();
-	  }
-	  
-	  function patchedSetAttribute(name, value) {
-	    // jshint validthis:true
-	    var self = this;
-	    setAttribute.call(self, name, value);
-	    onSubtreeModified.call(self, {target: self});
-	  }
-	  
-	  function setupNode(node, proto) {
-	    setPrototype(node, proto);
-	    if (observer) {
-	      observer.observe(node, attributesObserver);
-	    } else {
-	      if (doesNotSupportDOMAttrModified) {
-	        node.setAttribute = patchedSetAttribute;
-	        node[EXPANDO_UID] = getAttributesMirror(node);
-	        node[ADD_EVENT_LISTENER](DOM_SUBTREE_MODIFIED, onSubtreeModified);
-	      }
-	      node[ADD_EVENT_LISTENER](DOM_ATTR_MODIFIED, onDOMAttrModified);
-	    }
-	    if (node[CREATED_CALLBACK] && notFromInnerHTMLHelper) {
-	      node.created = true;
-	      node[CREATED_CALLBACK]();
-	      node.created = false;
-	    }
-	  }
-	  
-	  function purge() {
-	    for (var
-	      node,
-	      i = 0,
-	      length = targets.length;
-	      i < length; i++
-	    ) {
-	      node = targets[i];
-	      if (!documentElement.contains(node)) {
-	        length--;
-	        targets.splice(i--, 1);
-	        verifyAndSetupAndAction(node, DETACHED);
-	      }
-	    }
-	  }
-	  
-	  function throwTypeError(type) {
-	    throw new Error('A ' + type + ' type is already registered');
-	  }
-	  
-	  function verifyAndSetupAndAction(node, action) {
-	    var
-	      fn,
-	      i = getTypeIndex(node)
-	    ;
-	    if (-1 < i) {
-	      patchIfNotAlready(node, protos[i]);
-	      i = 0;
-	      if (action === ATTACHED && !node[ATTACHED]) {
-	        node[DETACHED] = false;
-	        node[ATTACHED] = true;
-	        i = 1;
-	        if (IE8 && indexOf.call(targets, node) < 0) {
-	          targets.push(node);
-	        }
-	      } else if (action === DETACHED && !node[DETACHED]) {
-	        node[ATTACHED] = false;
-	        node[DETACHED] = true;
-	        i = 1;
-	      }
-	      if (i && (fn = node[action + CALLBACK])) fn.call(node);
-	    }
-	  }
-	  
-	  
-	  
-	  // V1 in da House!
-	  function CustomElementRegistry() {}
-	  
-	  CustomElementRegistry.prototype = {
-	    constructor: CustomElementRegistry,
-	    // a workaround for the stubborn WebKit
-	    define: usableCustomElements ?
-	      function (name, Class, options) {
-	        if (options) {
-	          CERDefine(name, Class, options);
-	        } else {
-	          var NAME = name.toUpperCase();
-	          constructors[NAME] = {
-	            constructor: Class,
-	            create: [NAME]
-	          };
-	          nodeNames.set(Class, NAME);
-	          customElements.define(name, Class);
-	        }
-	      } :
-	      CERDefine,
-	    get: usableCustomElements ?
-	      function (name) {
-	        return customElements.get(name) || get(name);
-	      } :
-	      get,
-	    whenDefined: usableCustomElements ?
-	      function (name) {
-	        return Promise.race([
-	          customElements.whenDefined(name),
-	          whenDefined(name)
-	        ]);
-	      } :
-	      whenDefined
-	  };
-	  
-	  function CERDefine(name, Class, options) {
-	    var
-	      is = options && options[EXTENDS] || '',
-	      CProto = Class.prototype,
-	      proto = create(CProto),
-	      attributes = Class.observedAttributes || empty,
-	      definition = {prototype: proto}
-	    ;
-	    // TODO: is this needed at all since it's inherited?
-	    // defineProperty(proto, 'constructor', {value: Class});
-	    safeProperty(proto, CREATED_CALLBACK, {
-	        value: function () {
-	          if (justCreated) justCreated = false;
-	          else if (!this[DRECEV1]) {
-	            this[DRECEV1] = true;
-	            new Class(this);
-	            if (CProto[CREATED_CALLBACK])
-	              CProto[CREATED_CALLBACK].call(this);
-	            var info = constructors[nodeNames.get(Class)];
-	            if (!usableCustomElements || info.create.length > 1) {
-	              notifyAttributes(this);
-	            }
-	          }
-	      }
-	    });
-	    safeProperty(proto, ATTRIBUTE_CHANGED_CALLBACK, {
-	      value: function (name) {
-	        if (-1 < indexOf.call(attributes, name))
-	          CProto[ATTRIBUTE_CHANGED_CALLBACK].apply(this, arguments);
-	      }
-	    });
-	    if (CProto[CONNECTED_CALLBACK]) {
-	      safeProperty(proto, ATTACHED_CALLBACK, {
-	        value: CProto[CONNECTED_CALLBACK]
-	      });
-	    }
-	    if (CProto[DISCONNECTED_CALLBACK]) {
-	      safeProperty(proto, DETACHED_CALLBACK, {
-	        value: CProto[DISCONNECTED_CALLBACK]
-	      });
-	    }
-	    if (is) definition[EXTENDS] = is;
-	    name = name.toUpperCase();
-	    constructors[name] = {
-	      constructor: Class,
-	      create: is ? [is, secondArgument(name)] : [name]
-	    };
-	    nodeNames.set(Class, name);
-	    document[REGISTER_ELEMENT](name.toLowerCase(), definition);
-	    whenDefined(name);
-	    waitingList[name].r();
-	  }
-	  
-	  function get(name) {
-	    var info = constructors[name.toUpperCase()];
-	    return info && info.constructor;
-	  }
-	  
-	  function getIs(options) {
-	    return typeof options === 'string' ?
-	        options : (options && options.is || '');
-	  }
-	  
-	  function notifyAttributes(self) {
-	    var
-	      callback = self[ATTRIBUTE_CHANGED_CALLBACK],
-	      attributes = callback ? self.attributes : empty,
-	      i = attributes.length,
-	      attribute
-	    ;
-	    while (i--) {
-	      attribute =  attributes[i]; // || attributes.item(i);
-	      callback.call(
-	        self,
-	        attribute.name || attribute.nodeName,
-	        null,
-	        attribute.value || attribute.nodeValue
-	      );
-	    }
-	  }
-	  
-	  function whenDefined(name) {
-	    name = name.toUpperCase();
-	    if (!(name in waitingList)) {
-	      waitingList[name] = {};
-	      waitingList[name].p = new Promise(function (resolve) {
-	        waitingList[name].r = resolve;
-	      });
-	    }
-	    return waitingList[name].p;
-	  }
-	  
-	  function polyfillV1() {
-	    if (customElements) delete window.customElements;
-	    defineProperty(window, 'customElements', {
-	      configurable: true,
-	      value: new CustomElementRegistry()
-	    });
-	    defineProperty(window, 'CustomElementRegistry', {
-	      configurable: true,
-	      value: CustomElementRegistry
-	    });
-	    for (var
-	      patchClass = function (name) {
-	        var Class = window[name];
-	        if (Class) {
-	          window[name] = function CustomElementsV1(self) {
-	            var info, isNative;
-	            if (!self) self = this;
-	            if (!self[DRECEV1]) {
-	              justCreated = true;
-	              info = constructors[nodeNames.get(self.constructor)];
-	              isNative = usableCustomElements && info.create.length === 1;
-	              self = isNative ?
-	                Reflect.construct(Class, empty, info.constructor) :
-	                document.createElement.apply(document, info.create);
-	              self[DRECEV1] = true;
-	              justCreated = false;
-	              if (!isNative) notifyAttributes(self);
-	            }
-	            return self;
-	          };
-	          window[name].prototype = Class.prototype;
-	          try {
-	            Class.prototype.constructor = window[name];
-	          } catch(WebKit) {
-	            fixGetClass = true;
-	            defineProperty(Class, DRECEV1, {value: window[name]});
-	          }
-	        }
-	      },
-	      Classes = htmlClass.get(/^HTML[A-Z]*[a-z]/),
-	      i = Classes.length;
-	      i--;
-	      patchClass(Classes[i])
-	    ) {}
-	    (document.createElement = function (name, options) {
-	      var is = getIs(options);
-	      return is ?
-	        patchedCreateElement.call(this, name, secondArgument(is)) :
-	        patchedCreateElement.call(this, name);
-	    });
-	  }
-	  
-	  // if customElements is not there at all
-	  if (!customElements) polyfillV1();
-	  else {
-	    // if available test extends work as expected
-	    try {
-	      (function (DRE, options, name) {
-	        options[EXTENDS] = 'a';
-	        DRE.prototype = create(HTMLAnchorElement.prototype);
-	        DRE.prototype.constructor = DRE;
-	        window.customElements.define(name, DRE, options);
-	        if (
-	          getAttribute.call(document.createElement('a', {is: name}), 'is') !== name ||
-	          (usableCustomElements && getAttribute.call(new DRE(), 'is') !== name)
-	        ) {
-	          throw options;
-	        }
-	      }(
-	        function DRE() {
-	          return Reflect.construct(HTMLAnchorElement, [], DRE);
-	        },
-	        {},
-	        'document-register-element-a'
-	      ));
-	    } catch(o_O) {
-	      // or force the polyfill if not
-	      // and keep internal original reference
-	      polyfillV1();
-	    }
-	  }
-	  
-	  try {
-	    createElement.call(document, 'a', 'a');
-	  } catch(FireFox) {
-	    secondArgument = function (is) {
-	      return {is: is};
-	    };
-	  }
-	  
-	}
-
-	installCustomElements(global);
-
-	module.exports = installCustomElements;
-
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
-
-/***/ },
-/* 13 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["Turbolinks"] = __webpack_require__(14);
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
-
-/***/ },
-/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -14054,23 +14039,17 @@
 	Copyright © 2016 Basecamp, LLC
 	 */
 	(function(){(function(){(function(){this.Turbolinks={supported:function(){return null!=window.history.pushState&&null!=window.requestAnimationFrame}(),visit:function(e,r){return t.controller.visit(e,r)},clearCache:function(){return t.controller.clearCache()}}}).call(this)}).call(this);var t=this.Turbolinks;(function(){(function(){var e,r;t.copyObject=function(t){var e,r,n;r={};for(e in t)n=t[e],r[e]=n;return r},t.closest=function(t,r){return e.call(t,r)},e=function(){var t,e;return t=document.documentElement,null!=(e=t.closest)?e:function(t){var e;for(e=this;e;){if(e.nodeType===Node.ELEMENT_NODE&&r.call(e,t))return e;e=e.parentNode}}}(),t.defer=function(t){return setTimeout(t,1)},t.dispatch=function(t,e){var r,n,o,i,s;return i=null!=e?e:{},s=i.target,r=i.cancelable,n=i.data,o=document.createEvent("Events"),o.initEvent(t,!0,r===!0),o.data=null!=n?n:{},(null!=s?s:document).dispatchEvent(o),o},t.match=function(t,e){return r.call(t,e)},r=function(){var t,e,r,n;return t=document.documentElement,null!=(e=null!=(r=null!=(n=t.matchesSelector)?n:t.webkitMatchesSelector)?r:t.msMatchesSelector)?e:t.mozMatchesSelector}(),t.uuid=function(){var t,e,r;for(r="",t=e=1;36>=e;t=++e)r+=9===t||14===t||19===t||24===t?"-":15===t?"4":20===t?(Math.floor(4*Math.random())+8).toString(16):Math.floor(15*Math.random()).toString(16);return r}}).call(this),function(){t.Location=function(){function t(t){var e,r;null==t&&(t=""),r=document.createElement("a"),r.href=t.toString(),this.absoluteURL=r.href,e=r.hash.length,2>e?this.requestURL=this.absoluteURL:(this.requestURL=this.absoluteURL.slice(0,-e),this.anchor=r.hash.slice(1))}var e,r,n,o;return t.wrap=function(t){return t instanceof this?t:new this(t)},t.prototype.getOrigin=function(){return this.absoluteURL.split("/",3).join("/")},t.prototype.getPath=function(){var t,e;return null!=(t=null!=(e=this.absoluteURL.match(/\/\/[^\/]*(\/[^?;]*)/))?e[1]:void 0)?t:"/"},t.prototype.getPathComponents=function(){return this.getPath().split("/").slice(1)},t.prototype.getLastPathComponent=function(){return this.getPathComponents().slice(-1)[0]},t.prototype.getExtension=function(){var t,e;return null!=(t=null!=(e=this.getLastPathComponent().match(/\.[^.]*$/))?e[0]:void 0)?t:""},t.prototype.isHTML=function(){return this.getExtension().match(/^(?:|\.(?:htm|html|xhtml))$/)},t.prototype.isPrefixedBy=function(t){var e;return e=r(t),this.isEqualTo(t)||o(this.absoluteURL,e)},t.prototype.isEqualTo=function(t){return this.absoluteURL===(null!=t?t.absoluteURL:void 0)},t.prototype.toCacheKey=function(){return this.requestURL},t.prototype.toJSON=function(){return this.absoluteURL},t.prototype.toString=function(){return this.absoluteURL},t.prototype.valueOf=function(){return this.absoluteURL},r=function(t){return e(t.getOrigin()+t.getPath())},e=function(t){return n(t,"/")?t:t+"/"},o=function(t,e){return t.slice(0,e.length)===e},n=function(t,e){return t.slice(-e.length)===e},t}()}.call(this),function(){var e=function(t,e){return function(){return t.apply(e,arguments)}};t.HttpRequest=function(){function r(r,n,o){this.delegate=r,this.requestCanceled=e(this.requestCanceled,this),this.requestTimedOut=e(this.requestTimedOut,this),this.requestFailed=e(this.requestFailed,this),this.requestLoaded=e(this.requestLoaded,this),this.requestProgressed=e(this.requestProgressed,this),this.url=t.Location.wrap(n).requestURL,this.referrer=t.Location.wrap(o).absoluteURL,this.createXHR()}return r.NETWORK_FAILURE=0,r.TIMEOUT_FAILURE=-1,r.timeout=60,r.prototype.send=function(){var t;return this.xhr&&!this.sent?(this.notifyApplicationBeforeRequestStart(),this.setProgress(0),this.xhr.send(),this.sent=!0,"function"==typeof(t=this.delegate).requestStarted?t.requestStarted():void 0):void 0},r.prototype.cancel=function(){return this.xhr&&this.sent?this.xhr.abort():void 0},r.prototype.requestProgressed=function(t){return t.lengthComputable?this.setProgress(t.loaded/t.total):void 0},r.prototype.requestLoaded=function(){return this.endRequest(function(t){return function(){var e;return 200<=(e=t.xhr.status)&&300>e?t.delegate.requestCompletedWithResponse(t.xhr.responseText,t.xhr.getResponseHeader("Turbolinks-Location")):(t.failed=!0,t.delegate.requestFailedWithStatusCode(t.xhr.status,t.xhr.responseText))}}(this))},r.prototype.requestFailed=function(){return this.endRequest(function(t){return function(){return t.failed=!0,t.delegate.requestFailedWithStatusCode(t.constructor.NETWORK_FAILURE)}}(this))},r.prototype.requestTimedOut=function(){return this.endRequest(function(t){return function(){return t.failed=!0,t.delegate.requestFailedWithStatusCode(t.constructor.TIMEOUT_FAILURE)}}(this))},r.prototype.requestCanceled=function(){return this.endRequest()},r.prototype.notifyApplicationBeforeRequestStart=function(){return t.dispatch("turbolinks:request-start",{data:{url:this.url,xhr:this.xhr}})},r.prototype.notifyApplicationAfterRequestEnd=function(){return t.dispatch("turbolinks:request-end",{data:{url:this.url,xhr:this.xhr}})},r.prototype.createXHR=function(){return this.xhr=new XMLHttpRequest,this.xhr.open("GET",this.url,!0),this.xhr.timeout=1e3*this.constructor.timeout,this.xhr.setRequestHeader("Accept","text/html, application/xhtml+xml"),this.xhr.setRequestHeader("Turbolinks-Referrer",this.referrer),this.xhr.onprogress=this.requestProgressed,this.xhr.onload=this.requestLoaded,this.xhr.onerror=this.requestFailed,this.xhr.ontimeout=this.requestTimedOut,this.xhr.onabort=this.requestCanceled},r.prototype.endRequest=function(t){return this.xhr?(this.notifyApplicationAfterRequestEnd(),null!=t&&t.call(this),this.destroy()):void 0},r.prototype.setProgress=function(t){var e;return this.progress=t,"function"==typeof(e=this.delegate).requestProgressed?e.requestProgressed(this.progress):void 0},r.prototype.destroy=function(){var t;return this.setProgress(1),"function"==typeof(t=this.delegate).requestFinished&&t.requestFinished(),this.delegate=null,this.xhr=null},r}()}.call(this),function(){var e=function(t,e){return function(){return t.apply(e,arguments)}};t.ProgressBar=function(){function t(){this.trickle=e(this.trickle,this),this.stylesheetElement=this.createStylesheetElement(),this.progressElement=this.createProgressElement()}var r;return r=300,t.defaultCSS=".turbolinks-progress-bar {\n  position: fixed;\n  display: block;\n  top: 0;\n  left: 0;\n  height: 3px;\n  background: #0076ff;\n  z-index: 9999;\n  transition: width "+r+"ms ease-out, opacity "+r/2+"ms "+r/2+"ms ease-in;\n  transform: translate3d(0, 0, 0);\n}",t.prototype.show=function(){return this.visible?void 0:(this.visible=!0,this.installStylesheetElement(),this.installProgressElement(),this.startTrickling())},t.prototype.hide=function(){return this.visible&&!this.hiding?(this.hiding=!0,this.fadeProgressElement(function(t){return function(){return t.uninstallProgressElement(),t.stopTrickling(),t.visible=!1,t.hiding=!1}}(this))):void 0},t.prototype.setValue=function(t){return this.value=t,this.refresh()},t.prototype.installStylesheetElement=function(){return document.head.insertBefore(this.stylesheetElement,document.head.firstChild)},t.prototype.installProgressElement=function(){return this.progressElement.style.width=0,this.progressElement.style.opacity=1,document.documentElement.insertBefore(this.progressElement,document.body),this.refresh()},t.prototype.fadeProgressElement=function(t){return this.progressElement.style.opacity=0,setTimeout(t,1.5*r)},t.prototype.uninstallProgressElement=function(){return this.progressElement.parentNode?document.documentElement.removeChild(this.progressElement):void 0},t.prototype.startTrickling=function(){return null!=this.trickleInterval?this.trickleInterval:this.trickleInterval=setInterval(this.trickle,r)},t.prototype.stopTrickling=function(){return clearInterval(this.trickleInterval),this.trickleInterval=null},t.prototype.trickle=function(){return this.setValue(this.value+Math.random()/100)},t.prototype.refresh=function(){return requestAnimationFrame(function(t){return function(){return t.progressElement.style.width=10+90*t.value+"%"}}(this))},t.prototype.createStylesheetElement=function(){var t;return t=document.createElement("style"),t.type="text/css",t.textContent=this.constructor.defaultCSS,t},t.prototype.createProgressElement=function(){var t;return t=document.createElement("div"),t.className="turbolinks-progress-bar",t},t}()}.call(this),function(){var e=function(t,e){return function(){return t.apply(e,arguments)}};t.BrowserAdapter=function(){function r(r){this.controller=r,this.showProgressBar=e(this.showProgressBar,this),this.progressBar=new t.ProgressBar}var n,o,i,s;return s=t.HttpRequest,n=s.NETWORK_FAILURE,i=s.TIMEOUT_FAILURE,o=500,r.prototype.visitProposedToLocationWithAction=function(t,e){return this.controller.startVisitToLocationWithAction(t,e)},r.prototype.visitStarted=function(t){return t.issueRequest(),t.changeHistory(),t.loadCachedSnapshot()},r.prototype.visitRequestStarted=function(t){return this.progressBar.setValue(0),t.hasCachedSnapshot()||"restore"!==t.action?this.showProgressBarAfterDelay():this.showProgressBar()},r.prototype.visitRequestProgressed=function(t){return this.progressBar.setValue(t.progress)},r.prototype.visitRequestCompleted=function(t){return t.loadResponse()},r.prototype.visitRequestFailedWithStatusCode=function(t,e){switch(e){case n:case i:return this.reload();default:return t.loadResponse()}},r.prototype.visitRequestFinished=function(t){return this.hideProgressBar()},r.prototype.visitCompleted=function(t){return t.followRedirect()},r.prototype.pageInvalidated=function(){return this.reload()},r.prototype.showProgressBarAfterDelay=function(){return this.progressBarTimeout=setTimeout(this.showProgressBar,o)},r.prototype.showProgressBar=function(){return this.progressBar.show()},r.prototype.hideProgressBar=function(){return this.progressBar.hide(),clearTimeout(this.progressBarTimeout)},r.prototype.reload=function(){return window.location.reload()},r}()}.call(this),function(){var e,r=function(t,e){return function(){return t.apply(e,arguments)}};e=!1,addEventListener("load",function(){return t.defer(function(){return e=!0})},!1),t.History=function(){function n(t){this.delegate=t,this.onPopState=r(this.onPopState,this)}return n.prototype.start=function(){return this.started?void 0:(addEventListener("popstate",this.onPopState,!1),this.started=!0)},n.prototype.stop=function(){return this.started?(removeEventListener("popstate",this.onPopState,!1),this.started=!1):void 0},n.prototype.push=function(e,r){return e=t.Location.wrap(e),this.update("push",e,r)},n.prototype.replace=function(e,r){return e=t.Location.wrap(e),this.update("replace",e,r)},n.prototype.onPopState=function(e){var r,n,o,i;return this.shouldHandlePopState()&&(i=null!=(n=e.state)?n.turbolinks:void 0)?(r=t.Location.wrap(window.location),o=i.restorationIdentifier,this.delegate.historyPoppedToLocationWithRestorationIdentifier(r,o)):void 0},n.prototype.shouldHandlePopState=function(){return e===!0},n.prototype.update=function(t,e,r){var n;return n={turbolinks:{restorationIdentifier:r}},history[t+"State"](n,null,e)},n}()}.call(this),function(){t.Snapshot=function(){function e(t){var e,r;r=t.head,e=t.body,this.head=null!=r?r:document.createElement("head"),this.body=null!=e?e:document.createElement("body")}return e.wrap=function(t){return t instanceof this?t:this.fromHTML(t)},e.fromHTML=function(t){var e;return e=document.createElement("html"),e.innerHTML=t,this.fromElement(e)},e.fromElement=function(t){return new this({head:t.querySelector("head"),body:t.querySelector("body")})},e.prototype.clone=function(){return new e({head:this.head.cloneNode(!0),body:this.body.cloneNode(!0)})},e.prototype.getRootLocation=function(){var e,r;return r=null!=(e=this.getSetting("root"))?e:"/",new t.Location(r)},e.prototype.getCacheControlValue=function(){return this.getSetting("cache-control")},e.prototype.hasAnchor=function(t){try{return null!=this.body.querySelector("[id='"+t+"']")}catch(e){}},e.prototype.isPreviewable=function(){return"no-preview"!==this.getCacheControlValue()},e.prototype.isCacheable=function(){return"no-cache"!==this.getCacheControlValue()},e.prototype.getSetting=function(t){var e,r;return r=this.head.querySelectorAll("meta[name='turbolinks-"+t+"']"),e=r[r.length-1],null!=e?e.getAttribute("content"):void 0},e}()}.call(this),function(){var e=[].slice;t.Renderer=function(){function t(){}var r;return t.render=function(){var t,r,n,o;return n=arguments[0],r=arguments[1],t=3<=arguments.length?e.call(arguments,2):[],o=function(t,e,r){r.prototype=t.prototype;var n=new r,o=t.apply(n,e);return Object(o)===o?o:n}(this,t,function(){}),o.delegate=n,o.render(r),o},t.prototype.renderView=function(t){return this.delegate.viewWillRender(this.newBody),t(),this.delegate.viewRendered(this.newBody)},t.prototype.invalidateView=function(){return this.delegate.viewInvalidated()},t.prototype.createScriptElement=function(t){var e;return"false"===t.getAttribute("data-turbolinks-eval")?t:(e=document.createElement("script"),e.textContent=t.textContent,r(e,t),e)},r=function(t,e){var r,n,o,i,s,a,u;for(i=e.attributes,a=[],r=0,n=i.length;n>r;r++)s=i[r],o=s.name,u=s.value,a.push(t.setAttribute(o,u));return a},t}()}.call(this),function(){t.HeadDetails=function(){function t(t){var e,r,i,s,a,u,c;for(this.element=t,this.elements={},c=this.element.childNodes,s=0,u=c.length;u>s;s++)i=c[s],i.nodeType===Node.ELEMENT_NODE&&(a=i.outerHTML,r=null!=(e=this.elements)[a]?e[a]:e[a]={type:o(i),tracked:n(i),elements:[]},r.elements.push(i))}var e,r,n,o;return t.prototype.hasElementWithKey=function(t){return t in this.elements},t.prototype.getTrackedElementSignature=function(){var t,e;return function(){var r,n;r=this.elements,n=[];for(t in r)e=r[t].tracked,e&&n.push(t);return n}.call(this).join("")},t.prototype.getScriptElementsNotInDetails=function(t){return this.getElementsMatchingTypeNotInDetails("script",t)},t.prototype.getStylesheetElementsNotInDetails=function(t){return this.getElementsMatchingTypeNotInDetails("stylesheet",t)},t.prototype.getElementsMatchingTypeNotInDetails=function(t,e){var r,n,o,i,s,a;o=this.elements,s=[];for(n in o)i=o[n],a=i.type,r=i.elements,a!==t||e.hasElementWithKey(n)||s.push(r[0]);return s},t.prototype.getProvisionalElements=function(){var t,e,r,n,o,i,s;r=[],n=this.elements;for(e in n)o=n[e],s=o.type,i=o.tracked,t=o.elements,null!=s||i?t.length>1&&r.push.apply(r,t.slice(1)):r.push.apply(r,t);return r},o=function(t){return e(t)?"script":r(t)?"stylesheet":void 0},n=function(t){return"reload"===t.getAttribute("data-turbolinks-track")},e=function(t){var e;return e=t.tagName.toLowerCase(),"script"===e},r=function(t){var e;return e=t.tagName.toLowerCase(),"style"===e||"link"===e&&"stylesheet"===t.getAttribute("rel")},t}()}.call(this),function(){var e=function(t,e){function n(){this.constructor=t}for(var o in e)r.call(e,o)&&(t[o]=e[o]);return n.prototype=e.prototype,t.prototype=new n,t.__super__=e.prototype,t},r={}.hasOwnProperty;t.SnapshotRenderer=function(r){function n(e,r){this.currentSnapshot=e,this.newSnapshot=r,this.currentHeadDetails=new t.HeadDetails(this.currentSnapshot.head),this.newHeadDetails=new t.HeadDetails(this.newSnapshot.head),this.newBody=this.newSnapshot.body}return e(n,r),n.prototype.render=function(t){return this.trackedElementsAreIdentical()?(this.mergeHead(),this.renderView(function(e){return function(){return e.replaceBody(),e.focusFirstAutofocusableElement(),t()}}(this))):this.invalidateView()},n.prototype.mergeHead=function(){return this.copyNewHeadStylesheetElements(),this.copyNewHeadScriptElements(),this.removeCurrentHeadProvisionalElements(),this.copyNewHeadProvisionalElements()},n.prototype.replaceBody=function(){return this.activateBodyScriptElements(),this.importBodyPermanentElements(),this.assignNewBody()},n.prototype.trackedElementsAreIdentical=function(){return this.currentHeadDetails.getTrackedElementSignature()===this.newHeadDetails.getTrackedElementSignature()},n.prototype.copyNewHeadStylesheetElements=function(){var t,e,r,n,o;for(n=this.getNewHeadStylesheetElements(),o=[],e=0,r=n.length;r>e;e++)t=n[e],o.push(document.head.appendChild(t));return o},n.prototype.copyNewHeadScriptElements=function(){var t,e,r,n,o;for(n=this.getNewHeadScriptElements(),o=[],e=0,r=n.length;r>e;e++)t=n[e],o.push(document.head.appendChild(this.createScriptElement(t)));return o},n.prototype.removeCurrentHeadProvisionalElements=function(){var t,e,r,n,o;for(n=this.getCurrentHeadProvisionalElements(),o=[],e=0,r=n.length;r>e;e++)t=n[e],o.push(document.head.removeChild(t));return o},n.prototype.copyNewHeadProvisionalElements=function(){var t,e,r,n,o;for(n=this.getNewHeadProvisionalElements(),o=[],e=0,r=n.length;r>e;e++)t=n[e],o.push(document.head.appendChild(t));return o},n.prototype.importBodyPermanentElements=function(){var t,e,r,n,o,i;for(n=this.getNewBodyPermanentElements(),i=[],e=0,r=n.length;r>e;e++)o=n[e],(t=this.findCurrentBodyPermanentElement(o))?i.push(o.parentNode.replaceChild(t,o)):i.push(void 0);return i},n.prototype.activateBodyScriptElements=function(){var t,e,r,n,o,i;for(n=this.getNewBodyScriptElements(),i=[],e=0,r=n.length;r>e;e++)o=n[e],t=this.createScriptElement(o),i.push(o.parentNode.replaceChild(t,o));return i},n.prototype.assignNewBody=function(){return document.body=this.newBody},n.prototype.focusFirstAutofocusableElement=function(){var t;return null!=(t=this.findFirstAutofocusableElement())?t.focus():void 0},n.prototype.getNewHeadStylesheetElements=function(){return this.newHeadDetails.getStylesheetElementsNotInDetails(this.currentHeadDetails)},n.prototype.getNewHeadScriptElements=function(){return this.newHeadDetails.getScriptElementsNotInDetails(this.currentHeadDetails)},n.prototype.getCurrentHeadProvisionalElements=function(){return this.currentHeadDetails.getProvisionalElements()},n.prototype.getNewHeadProvisionalElements=function(){return this.newHeadDetails.getProvisionalElements()},n.prototype.getNewBodyPermanentElements=function(){return this.newBody.querySelectorAll("[id][data-turbolinks-permanent]")},n.prototype.findCurrentBodyPermanentElement=function(t){return document.body.querySelector("#"+t.id+"[data-turbolinks-permanent]")},n.prototype.getNewBodyScriptElements=function(){return this.newBody.querySelectorAll("script")},n.prototype.findFirstAutofocusableElement=function(){return document.body.querySelector("[autofocus]")},n}(t.Renderer)}.call(this),function(){var e=function(t,e){function n(){this.constructor=t}for(var o in e)r.call(e,o)&&(t[o]=e[o]);return n.prototype=e.prototype,t.prototype=new n,t.__super__=e.prototype,t},r={}.hasOwnProperty;t.ErrorRenderer=function(t){function r(t){this.html=t}return e(r,t),r.prototype.render=function(t){return this.renderView(function(e){return function(){return e.replaceDocumentHTML(),e.activateBodyScriptElements(),t()}}(this))},r.prototype.replaceDocumentHTML=function(){return document.documentElement.innerHTML=this.html},r.prototype.activateBodyScriptElements=function(){var t,e,r,n,o,i;for(n=this.getScriptElements(),i=[],e=0,r=n.length;r>e;e++)o=n[e],t=this.createScriptElement(o),i.push(o.parentNode.replaceChild(t,o));return i},r.prototype.getScriptElements=function(){return document.documentElement.querySelectorAll("script")},r}(t.Renderer)}.call(this),function(){t.View=function(){function e(t){this.delegate=t,this.element=document.documentElement}return e.prototype.getRootLocation=function(){return this.getSnapshot().getRootLocation()},e.prototype.getSnapshot=function(){return t.Snapshot.fromElement(this.element)},e.prototype.render=function(t,e){var r,n,o;return o=t.snapshot,r=t.error,n=t.isPreview,this.markAsPreview(n),null!=o?this.renderSnapshot(o,e):this.renderError(r,e)},e.prototype.markAsPreview=function(t){return t?this.element.setAttribute("data-turbolinks-preview",""):this.element.removeAttribute("data-turbolinks-preview")},e.prototype.renderSnapshot=function(e,r){return t.SnapshotRenderer.render(this.delegate,r,this.getSnapshot(),t.Snapshot.wrap(e))},e.prototype.renderError=function(e,r){return t.ErrorRenderer.render(this.delegate,r,e)},e}()}.call(this),function(){var e=function(t,e){return function(){return t.apply(e,arguments)}};t.ScrollManager=function(){function t(t){this.delegate=t,this.onScroll=e(this.onScroll,this)}return t.prototype.start=function(){return this.started?void 0:(addEventListener("scroll",this.onScroll,!1),this.onScroll(),this.started=!0)},t.prototype.stop=function(){return this.started?(removeEventListener("scroll",this.onScroll,!1),this.started=!1):void 0},t.prototype.scrollToElement=function(t){return t.scrollIntoView()},t.prototype.scrollToPosition=function(t){var e,r;return e=t.x,r=t.y,window.scrollTo(e,r)},t.prototype.onScroll=function(t){return this.updatePosition({x:window.pageXOffset,y:window.pageYOffset})},t.prototype.updatePosition=function(t){var e;return this.position=t,null!=(e=this.delegate)?e.scrollPositionChanged(this.position):void 0},t}()}.call(this),function(){t.SnapshotCache=function(){function e(t){this.size=t,this.keys=[],this.snapshots={}}var r;return e.prototype.has=function(t){var e;return e=r(t),e in this.snapshots},e.prototype.get=function(t){var e;if(this.has(t))return e=this.read(t),this.touch(t),e},e.prototype.put=function(t,e){return this.write(t,e),this.touch(t),e},e.prototype.read=function(t){var e;return e=r(t),this.snapshots[e]},e.prototype.write=function(t,e){var n;return n=r(t),this.snapshots[n]=e},e.prototype.touch=function(t){var e,n;return n=r(t),e=this.keys.indexOf(n),e>-1&&this.keys.splice(e,1),this.keys.unshift(n),this.trim()},e.prototype.trim=function(){var t,e,r,n,o;for(n=this.keys.splice(this.size),o=[],t=0,r=n.length;r>t;t++)e=n[t],o.push(delete this.snapshots[e]);return o},r=function(e){return t.Location.wrap(e).toCacheKey()},e}()}.call(this),function(){var e=function(t,e){return function(){return t.apply(e,arguments)}};t.Visit=function(){function r(r,n,o){this.controller=r,this.action=o,this.performScroll=e(this.performScroll,this),this.identifier=t.uuid(),this.location=t.Location.wrap(n),this.adapter=this.controller.adapter,this.state="initialized",this.timingMetrics={}}var n;return r.prototype.start=function(){return"initialized"===this.state?(this.recordTimingMetric("visitStart"),this.state="started",this.adapter.visitStarted(this)):void 0},r.prototype.cancel=function(){var t;return"started"===this.state?(null!=(t=this.request)&&t.cancel(),this.cancelRender(),this.state="canceled"):void 0},r.prototype.complete=function(){var t;return"started"===this.state?(this.recordTimingMetric("visitEnd"),this.state="completed","function"==typeof(t=this.adapter).visitCompleted&&t.visitCompleted(this),this.controller.visitCompleted(this)):void 0},r.prototype.fail=function(){var t;return"started"===this.state?(this.state="failed","function"==typeof(t=this.adapter).visitFailed?t.visitFailed(this):void 0):void 0},r.prototype.changeHistory=function(){var t,e;return this.historyChanged?void 0:(t=this.location.isEqualTo(this.referrer)?"replace":this.action,e=n(t),this.controller[e](this.location,this.restorationIdentifier),this.historyChanged=!0)},r.prototype.issueRequest=function(){return this.shouldIssueRequest()&&null==this.request?(this.progress=0,this.request=new t.HttpRequest(this,this.location,this.referrer),this.request.send()):void 0},r.prototype.getCachedSnapshot=function(){var t;return!(t=this.controller.getCachedSnapshotForLocation(this.location))||null!=this.location.anchor&&!t.hasAnchor(this.location.anchor)||"restore"!==this.action&&!t.isPreviewable()?void 0:t},r.prototype.hasCachedSnapshot=function(){return null!=this.getCachedSnapshot()},r.prototype.loadCachedSnapshot=function(){var t,e;return(e=this.getCachedSnapshot())?(t=this.shouldIssueRequest(),this.render(function(){var r;return this.cacheSnapshot(),this.controller.render({snapshot:e,isPreview:t},this.performScroll),"function"==typeof(r=this.adapter).visitRendered&&r.visitRendered(this),t?void 0:this.complete()})):void 0},r.prototype.loadResponse=function(){return null!=this.response?this.render(function(){var t,e;return this.cacheSnapshot(),this.request.failed?(this.controller.render({error:this.response},this.performScroll),"function"==typeof(t=this.adapter).visitRendered&&t.visitRendered(this),this.fail()):(this.controller.render({snapshot:this.response},this.performScroll),"function"==typeof(e=this.adapter).visitRendered&&e.visitRendered(this),this.complete())}):void 0},r.prototype.followRedirect=function(){return this.redirectedToLocation&&!this.followedRedirect?(this.location=this.redirectedToLocation,this.controller.replaceHistoryWithLocationAndRestorationIdentifier(this.redirectedToLocation,this.restorationIdentifier),this.followedRedirect=!0):void 0},r.prototype.requestStarted=function(){var t;return this.recordTimingMetric("requestStart"),"function"==typeof(t=this.adapter).visitRequestStarted?t.visitRequestStarted(this):void 0},r.prototype.requestProgressed=function(t){var e;return this.progress=t,"function"==typeof(e=this.adapter).visitRequestProgressed?e.visitRequestProgressed(this):void 0},r.prototype.requestCompletedWithResponse=function(e,r){return this.response=e,null!=r&&(this.redirectedToLocation=t.Location.wrap(r)),this.adapter.visitRequestCompleted(this)},r.prototype.requestFailedWithStatusCode=function(t,e){return this.response=e,this.adapter.visitRequestFailedWithStatusCode(this,t)},r.prototype.requestFinished=function(){var t;return this.recordTimingMetric("requestEnd"),"function"==typeof(t=this.adapter).visitRequestFinished?t.visitRequestFinished(this):void 0},r.prototype.performScroll=function(){return this.scrolled?void 0:("restore"===this.action?this.scrollToRestoredPosition()||this.scrollToTop():this.scrollToAnchor()||this.scrollToTop(),this.scrolled=!0)},r.prototype.scrollToRestoredPosition=function(){var t,e;return t=null!=(e=this.restorationData)?e.scrollPosition:void 0,null!=t?(this.controller.scrollToPosition(t),!0):void 0},r.prototype.scrollToAnchor=function(){return null!=this.location.anchor?(this.controller.scrollToAnchor(this.location.anchor),!0):void 0},r.prototype.scrollToTop=function(){return this.controller.scrollToPosition({x:0,y:0})},r.prototype.recordTimingMetric=function(t){var e;return null!=(e=this.timingMetrics)[t]?e[t]:e[t]=(new Date).getTime()},r.prototype.getTimingMetrics=function(){return t.copyObject(this.timingMetrics)},n=function(t){switch(t){case"replace":return"replaceHistoryWithLocationAndRestorationIdentifier";case"advance":case"restore":return"pushHistoryWithLocationAndRestorationIdentifier"}},r.prototype.shouldIssueRequest=function(){return"restore"===this.action?!this.hasCachedSnapshot():!0},r.prototype.cacheSnapshot=function(){return this.snapshotCached?void 0:(this.controller.cacheSnapshot(),this.snapshotCached=!0)},r.prototype.render=function(t){return this.cancelRender(),this.frame=requestAnimationFrame(function(e){return function(){return e.frame=null,t.call(e)}}(this))},r.prototype.cancelRender=function(){return this.frame?cancelAnimationFrame(this.frame):void 0},r}()}.call(this),function(){var e=function(t,e){return function(){return t.apply(e,arguments)}};t.Controller=function(){function r(){this.clickBubbled=e(this.clickBubbled,this),this.clickCaptured=e(this.clickCaptured,this),this.pageLoaded=e(this.pageLoaded,this),this.history=new t.History(this),this.view=new t.View(this),this.scrollManager=new t.ScrollManager(this),this.restorationData={},this.clearCache()}return r.prototype.start=function(){return t.supported&&!this.started?(addEventListener("click",this.clickCaptured,!0),addEventListener("DOMContentLoaded",this.pageLoaded,!1),this.scrollManager.start(),this.startHistory(),this.started=!0,this.enabled=!0):void 0},r.prototype.disable=function(){return this.enabled=!1},r.prototype.stop=function(){return this.started?(removeEventListener("click",this.clickCaptured,!0),removeEventListener("DOMContentLoaded",this.pageLoaded,!1),this.scrollManager.stop(),this.stopHistory(),this.started=!1):void 0},r.prototype.clearCache=function(){return this.cache=new t.SnapshotCache(10)},r.prototype.visit=function(e,r){var n,o;return null==r&&(r={}),e=t.Location.wrap(e),this.applicationAllowsVisitingLocation(e)?this.locationIsVisitable(e)?(n=null!=(o=r.action)?o:"advance",this.adapter.visitProposedToLocationWithAction(e,n)):window.location=e:void 0},r.prototype.startVisitToLocationWithAction=function(e,r,n){var o;return t.supported?(o=this.getRestorationDataForIdentifier(n),this.startVisit(e,r,{restorationData:o})):window.location=e},r.prototype.startHistory=function(){return this.location=t.Location.wrap(window.location),this.restorationIdentifier=t.uuid(),this.history.start(),this.history.replace(this.location,this.restorationIdentifier)},r.prototype.stopHistory=function(){return this.history.stop()},r.prototype.pushHistoryWithLocationAndRestorationIdentifier=function(e,r){return this.restorationIdentifier=r,this.location=t.Location.wrap(e),this.history.push(this.location,this.restorationIdentifier)},r.prototype.replaceHistoryWithLocationAndRestorationIdentifier=function(e,r){return this.restorationIdentifier=r,this.location=t.Location.wrap(e),this.history.replace(this.location,this.restorationIdentifier)},r.prototype.historyPoppedToLocationWithRestorationIdentifier=function(e,r){var n;return this.restorationIdentifier=r,this.enabled?(n=this.getRestorationDataForIdentifier(this.restorationIdentifier),this.startVisit(e,"restore",{restorationIdentifier:this.restorationIdentifier,restorationData:n,historyChanged:!0}),this.location=t.Location.wrap(e)):this.adapter.pageInvalidated()},r.prototype.getCachedSnapshotForLocation=function(t){var e;return e=this.cache.get(t),e?e.clone():void 0},r.prototype.shouldCacheSnapshot=function(){return this.view.getSnapshot().isCacheable()},r.prototype.cacheSnapshot=function(){var t;return this.shouldCacheSnapshot()?(this.notifyApplicationBeforeCachingSnapshot(),t=this.view.getSnapshot(),this.cache.put(this.lastRenderedLocation,t.clone())):void 0},r.prototype.scrollToAnchor=function(t){var e;return(e=document.getElementById(t))?this.scrollToElement(e):this.scrollToPosition({x:0,y:0})},r.prototype.scrollToElement=function(t){return this.scrollManager.scrollToElement(t)},r.prototype.scrollToPosition=function(t){return this.scrollManager.scrollToPosition(t)},r.prototype.scrollPositionChanged=function(t){var e;return e=this.getCurrentRestorationData(),e.scrollPosition=t},r.prototype.render=function(t,e){return this.view.render(t,e)},r.prototype.viewInvalidated=function(){return this.adapter.pageInvalidated()},r.prototype.viewWillRender=function(t){return this.notifyApplicationBeforeRender(t)},r.prototype.viewRendered=function(){return this.lastRenderedLocation=this.currentVisit.location,this.notifyApplicationAfterRender()},r.prototype.pageLoaded=function(){return this.lastRenderedLocation=this.location,this.notifyApplicationAfterPageLoad()},r.prototype.clickCaptured=function(){return removeEventListener("click",this.clickBubbled,!1),addEventListener("click",this.clickBubbled,!1)},r.prototype.clickBubbled=function(t){var e,r,n;return this.enabled&&this.clickEventIsSignificant(t)&&(r=this.getVisitableLinkForNode(t.target))&&(n=this.getVisitableLocationForLink(r))&&this.applicationAllowsFollowingLinkToLocation(r,n)?(t.preventDefault(),e=this.getActionForLink(r),this.visit(n,{action:e})):void 0},r.prototype.applicationAllowsFollowingLinkToLocation=function(t,e){var r;return r=this.notifyApplicationAfterClickingLinkToLocation(t,e),!r.defaultPrevented},r.prototype.applicationAllowsVisitingLocation=function(t){var e;return e=this.notifyApplicationBeforeVisitingLocation(t),!e.defaultPrevented},r.prototype.notifyApplicationAfterClickingLinkToLocation=function(e,r){return t.dispatch("turbolinks:click",{target:e,data:{url:r.absoluteURL},cancelable:!0})},r.prototype.notifyApplicationBeforeVisitingLocation=function(e){return t.dispatch("turbolinks:before-visit",{data:{url:e.absoluteURL},cancelable:!0})},r.prototype.notifyApplicationAfterVisitingLocation=function(e){return t.dispatch("turbolinks:visit",{data:{url:e.absoluteURL}})},r.prototype.notifyApplicationBeforeCachingSnapshot=function(){return t.dispatch("turbolinks:before-cache")},r.prototype.notifyApplicationBeforeRender=function(e){return t.dispatch("turbolinks:before-render",{data:{newBody:e}})},r.prototype.notifyApplicationAfterRender=function(){return t.dispatch("turbolinks:render")},r.prototype.notifyApplicationAfterPageLoad=function(e){return null==e&&(e={}),t.dispatch("turbolinks:load",{data:{url:this.location.absoluteURL,timing:e}})},r.prototype.startVisit=function(t,e,r){var n;return null!=(n=this.currentVisit)&&n.cancel(),this.currentVisit=this.createVisit(t,e,r),this.currentVisit.start(),this.notifyApplicationAfterVisitingLocation(t)},r.prototype.createVisit=function(e,r,n){
-	var o,i,s,a,u;return i=null!=n?n:{},a=i.restorationIdentifier,s=i.restorationData,o=i.historyChanged,u=new t.Visit(this,e,r),u.restorationIdentifier=null!=a?a:t.uuid(),u.restorationData=t.copyObject(s),u.historyChanged=o,u.referrer=this.location,u},r.prototype.visitCompleted=function(t){return this.notifyApplicationAfterPageLoad(t.getTimingMetrics())},r.prototype.clickEventIsSignificant=function(t){return!(t.defaultPrevented||t.target.isContentEditable||t.which>1||t.altKey||t.ctrlKey||t.metaKey||t.shiftKey)},r.prototype.getVisitableLinkForNode=function(e){return this.nodeIsVisitable(e)?t.closest(e,"a[href]:not([target])"):void 0},r.prototype.getVisitableLocationForLink=function(e){var r;return r=new t.Location(e.getAttribute("href")),this.locationIsVisitable(r)?r:void 0},r.prototype.getActionForLink=function(t){var e;return null!=(e=t.getAttribute("data-turbolinks-action"))?e:"advance"},r.prototype.nodeIsVisitable=function(e){var r;return(r=t.closest(e,"[data-turbolinks]"))?"false"!==r.getAttribute("data-turbolinks"):!0},r.prototype.locationIsVisitable=function(t){return t.isPrefixedBy(this.view.getRootLocation())&&t.isHTML()},r.prototype.getCurrentRestorationData=function(){return this.getRestorationDataForIdentifier(this.restorationIdentifier)},r.prototype.getRestorationDataForIdentifier=function(t){var e;return null!=(e=this.restorationData)[t]?e[t]:e[t]={}},r}()}.call(this),function(){var e,r,n;t.start=function(){return r()?(null==t.controller&&(t.controller=e()),t.controller.start()):void 0},r=function(){return null==window.Turbolinks&&(window.Turbolinks=t),n()},e=function(){var e;return e=new t.Controller,e.adapter=new t.BrowserAdapter(e),e},n=function(){return window.Turbolinks===t},n()&&t.start()}.call(this)}).call(this),"object"==typeof module&&module.exports?module.exports=t:"function"=="function"&&__webpack_require__(15)&&!(__WEBPACK_AMD_DEFINE_FACTORY__ = (t), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))}).call(this);
+	var o,i,s,a,u;return i=null!=n?n:{},a=i.restorationIdentifier,s=i.restorationData,o=i.historyChanged,u=new t.Visit(this,e,r),u.restorationIdentifier=null!=a?a:t.uuid(),u.restorationData=t.copyObject(s),u.historyChanged=o,u.referrer=this.location,u},r.prototype.visitCompleted=function(t){return this.notifyApplicationAfterPageLoad(t.getTimingMetrics())},r.prototype.clickEventIsSignificant=function(t){return!(t.defaultPrevented||t.target.isContentEditable||t.which>1||t.altKey||t.ctrlKey||t.metaKey||t.shiftKey)},r.prototype.getVisitableLinkForNode=function(e){return this.nodeIsVisitable(e)?t.closest(e,"a[href]:not([target])"):void 0},r.prototype.getVisitableLocationForLink=function(e){var r;return r=new t.Location(e.getAttribute("href")),this.locationIsVisitable(r)?r:void 0},r.prototype.getActionForLink=function(t){var e;return null!=(e=t.getAttribute("data-turbolinks-action"))?e:"advance"},r.prototype.nodeIsVisitable=function(e){var r;return(r=t.closest(e,"[data-turbolinks]"))?"false"!==r.getAttribute("data-turbolinks"):!0},r.prototype.locationIsVisitable=function(t){return t.isPrefixedBy(this.view.getRootLocation())&&t.isHTML()},r.prototype.getCurrentRestorationData=function(){return this.getRestorationDataForIdentifier(this.restorationIdentifier)},r.prototype.getRestorationDataForIdentifier=function(t){var e;return null!=(e=this.restorationData)[t]?e[t]:e[t]={}},r}()}.call(this),function(){var e,r,n;t.start=function(){return r()?(null==t.controller&&(t.controller=e()),t.controller.start()):void 0},r=function(){return null==window.Turbolinks&&(window.Turbolinks=t),n()},e=function(){var e;return e=new t.Controller,e.adapter=new t.BrowserAdapter(e),e},n=function(){return window.Turbolinks===t},n()&&t.start()}.call(this)}).call(this),"object"==typeof module&&module.exports?module.exports=t:"function"=="function"&&__webpack_require__(3)&&!(__WEBPACK_AMD_DEFINE_FACTORY__ = (t), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))}).call(this);
 
 /***/ },
-/* 15 */
-/***/ function(module, exports) {
-
-	/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {module.exports = __webpack_amd_options__;
-
-	/* WEBPACK VAR INJECTION */}.call(exports, {}))
-
-/***/ },
-/* 16 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(17);
+	__webpack_require__(12);
+
+	__webpack_require__(16);
 
 	__webpack_require__(19);
 
@@ -14088,29 +14067,776 @@
 
 	__webpack_require__(38);
 
-	__webpack_require__(40);
+	__webpack_require__(52);
 
-	__webpack_require__(42);
+	__webpack_require__(54);
 
-	__webpack_require__(44);
+	__webpack_require__(56);
 
-	__webpack_require__(46);
+	__webpack_require__(58);
 
-	__webpack_require__(48);
+	__webpack_require__(60);
+
+	__webpack_require__(62);
+
+	__webpack_require__(64);
+
+	__webpack_require__(66);
+
+	__webpack_require__(68);
+
+	__webpack_require__(70);
+
+	__webpack_require__(72);
+
+	__webpack_require__(74);
 
 /***/ },
-/* 17 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+
+	var _lud_module = __webpack_require__(13);
+
+	var _lud_module2 = _interopRequireDefault(_lud_module);
+
+	var _velocity = __webpack_require__(14);
+
+	var _velocity2 = _interopRequireDefault(_velocity);
+
+	__webpack_require__(15);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var def_animate = $.Velocity.RegisterEffect;
+	_lud_module2.default.velocity = _velocity2.default;
+
+	def_animate("transition.slideRightIn", {
+	  defaultDuration: 800,
+	  calls: [[{ opacity: [1, 0], translateX: [0, '100%'], translateZ: 0 }]]
+	});
+
+	def_animate("transition.slideRightOut", {
+	  defaultDuration: 800,
+	  calls: [[{ opaticy: [0, 1], translateX: '100%', translateZ: 0 }]],
+	  reset: { translateX: 0 }
+	});
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+
+/***/ },
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	window.lud = window.lud || {};
+
+	//utils
+	$.fn.exists = function () {
+	  return this.length !== 0;
+	};
+
+	exports.default = window.lud;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+
+/***/ },
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(jQuery) {/*! VelocityJS.org (1.3.1). (C) 2014 Julian Shapiro. MIT @license: en.wikipedia.org/wiki/MIT_License */
+	/*! VelocityJS.org jQuery Shim (1.0.1). (C) 2014 The jQuery Foundation. MIT @license: en.wikipedia.org/wiki/MIT_License. */
+	!function(a){"use strict";function b(a){var b=a.length,d=c.type(a);return"function"!==d&&!c.isWindow(a)&&(!(1!==a.nodeType||!b)||("array"===d||0===b||"number"==typeof b&&b>0&&b-1 in a))}if(!a.jQuery){var c=function(a,b){return new c.fn.init(a,b)};c.isWindow=function(a){return a&&a===a.window},c.type=function(a){return a?"object"==typeof a||"function"==typeof a?e[g.call(a)]||"object":typeof a:a+""},c.isArray=Array.isArray||function(a){return"array"===c.type(a)},c.isPlainObject=function(a){var b;if(!a||"object"!==c.type(a)||a.nodeType||c.isWindow(a))return!1;try{if(a.constructor&&!f.call(a,"constructor")&&!f.call(a.constructor.prototype,"isPrototypeOf"))return!1}catch(d){return!1}for(b in a);return void 0===b||f.call(a,b)},c.each=function(a,c,d){var e,f=0,g=a.length,h=b(a);if(d){if(h)for(;f<g&&(e=c.apply(a[f],d),e!==!1);f++);else for(f in a)if(a.hasOwnProperty(f)&&(e=c.apply(a[f],d),e===!1))break}else if(h)for(;f<g&&(e=c.call(a[f],f,a[f]),e!==!1);f++);else for(f in a)if(a.hasOwnProperty(f)&&(e=c.call(a[f],f,a[f]),e===!1))break;return a},c.data=function(a,b,e){if(void 0===e){var f=a[c.expando],g=f&&d[f];if(void 0===b)return g;if(g&&b in g)return g[b]}else if(void 0!==b){var h=a[c.expando]||(a[c.expando]=++c.uuid);return d[h]=d[h]||{},d[h][b]=e,e}},c.removeData=function(a,b){var e=a[c.expando],f=e&&d[e];f&&(b?c.each(b,function(a,b){delete f[b]}):delete d[e])},c.extend=function(){var a,b,d,e,f,g,h=arguments[0]||{},i=1,j=arguments.length,k=!1;for("boolean"==typeof h&&(k=h,h=arguments[i]||{},i++),"object"!=typeof h&&"function"!==c.type(h)&&(h={}),i===j&&(h=this,i--);i<j;i++)if(f=arguments[i])for(e in f)f.hasOwnProperty(e)&&(a=h[e],d=f[e],h!==d&&(k&&d&&(c.isPlainObject(d)||(b=c.isArray(d)))?(b?(b=!1,g=a&&c.isArray(a)?a:[]):g=a&&c.isPlainObject(a)?a:{},h[e]=c.extend(k,g,d)):void 0!==d&&(h[e]=d)));return h},c.queue=function(a,d,e){function f(a,c){var d=c||[];return a&&(b(Object(a))?!function(a,b){for(var c=+b.length,d=0,e=a.length;d<c;)a[e++]=b[d++];if(c!==c)for(;void 0!==b[d];)a[e++]=b[d++];return a.length=e,a}(d,"string"==typeof a?[a]:a):[].push.call(d,a)),d}if(a){d=(d||"fx")+"queue";var g=c.data(a,d);return e?(!g||c.isArray(e)?g=c.data(a,d,f(e)):g.push(e),g):g||[]}},c.dequeue=function(a,b){c.each(a.nodeType?[a]:a,function(a,d){b=b||"fx";var e=c.queue(d,b),f=e.shift();"inprogress"===f&&(f=e.shift()),f&&("fx"===b&&e.unshift("inprogress"),f.call(d,function(){c.dequeue(d,b)}))})},c.fn=c.prototype={init:function(a){if(a.nodeType)return this[0]=a,this;throw new Error("Not a DOM node.")},offset:function(){var b=this[0].getBoundingClientRect?this[0].getBoundingClientRect():{top:0,left:0};return{top:b.top+(a.pageYOffset||document.scrollTop||0)-(document.clientTop||0),left:b.left+(a.pageXOffset||document.scrollLeft||0)-(document.clientLeft||0)}},position:function(){function a(a){for(var b=a.offsetParent||document;b&&"html"!==b.nodeType.toLowerCase&&"static"===b.style.position;)b=b.offsetParent;return b||document}var b=this[0],d=a(b),e=this.offset(),f=/^(?:body|html)$/i.test(d.nodeName)?{top:0,left:0}:c(d).offset();return e.top-=parseFloat(b.style.marginTop)||0,e.left-=parseFloat(b.style.marginLeft)||0,d.style&&(f.top+=parseFloat(d.style.borderTopWidth)||0,f.left+=parseFloat(d.style.borderLeftWidth)||0),{top:e.top-f.top,left:e.left-f.left}}};var d={};c.expando="velocity"+(new Date).getTime(),c.uuid=0;for(var e={},f=e.hasOwnProperty,g=e.toString,h="Boolean Number String Function Array Date RegExp Object Error".split(" "),i=0;i<h.length;i++)e["[object "+h[i]+"]"]=h[i].toLowerCase();c.fn.init.prototype=c.fn,a.Velocity={Utilities:c}}}(window),function(a){"use strict";"object"==typeof module&&"object"==typeof module.exports?module.exports=a(): true?!(__WEBPACK_AMD_DEFINE_FACTORY__ = (a), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)):a()}(function(){"use strict";return function(a,b,c,d){function e(a){for(var b=-1,c=a?a.length:0,d=[];++b<c;){var e=a[b];e&&d.push(e)}return d}function f(a){return p.isWrapped(a)?a=[].slice.call(a):p.isNode(a)&&(a=[a]),a}function g(a){var b=m.data(a,"velocity");return null===b?d:b}function h(a){return function(b){return Math.round(b*a)*(1/a)}}function i(a,c,d,e){function f(a,b){return 1-3*b+3*a}function g(a,b){return 3*b-6*a}function h(a){return 3*a}function i(a,b,c){return((f(b,c)*a+g(b,c))*a+h(b))*a}function j(a,b,c){return 3*f(b,c)*a*a+2*g(b,c)*a+h(b)}function k(b,c){for(var e=0;e<p;++e){var f=j(c,a,d);if(0===f)return c;var g=i(c,a,d)-b;c-=g/f}return c}function l(){for(var b=0;b<t;++b)x[b]=i(b*u,a,d)}function m(b,c,e){var f,g,h=0;do g=c+(e-c)/2,f=i(g,a,d)-b,f>0?e=g:c=g;while(Math.abs(f)>r&&++h<s);return g}function n(b){for(var c=0,e=1,f=t-1;e!==f&&x[e]<=b;++e)c+=u;--e;var g=(b-x[e])/(x[e+1]-x[e]),h=c+g*u,i=j(h,a,d);return i>=q?k(b,h):0===i?h:m(b,c,c+u)}function o(){y=!0,a===c&&d===e||l()}var p=4,q=.001,r=1e-7,s=10,t=11,u=1/(t-1),v="Float32Array"in b;if(4!==arguments.length)return!1;for(var w=0;w<4;++w)if("number"!=typeof arguments[w]||isNaN(arguments[w])||!isFinite(arguments[w]))return!1;a=Math.min(a,1),d=Math.min(d,1),a=Math.max(a,0),d=Math.max(d,0);var x=v?new Float32Array(t):new Array(t),y=!1,z=function(b){return y||o(),a===c&&d===e?b:0===b?0:1===b?1:i(n(b),c,e)};z.getControlPoints=function(){return[{x:a,y:c},{x:d,y:e}]};var A="generateBezier("+[a,c,d,e]+")";return z.toString=function(){return A},z}function j(a,b){var c=a;return p.isString(a)?t.Easings[a]||(c=!1):c=p.isArray(a)&&1===a.length?h.apply(null,a):p.isArray(a)&&2===a.length?u.apply(null,a.concat([b])):!(!p.isArray(a)||4!==a.length)&&i.apply(null,a),c===!1&&(c=t.Easings[t.defaults.easing]?t.defaults.easing:s),c}function k(a){if(a){var b=(new Date).getTime(),c=t.State.calls.length;c>1e4&&(t.State.calls=e(t.State.calls),c=t.State.calls.length);for(var f=0;f<c;f++)if(t.State.calls[f]){var h=t.State.calls[f],i=h[0],j=h[2],n=h[3],o=!!n,q=null;n||(n=t.State.calls[f][3]=b-16);for(var r=Math.min((b-n)/j.duration,1),s=0,u=i.length;s<u;s++){var w=i[s],y=w.element;if(g(y)){var z=!1;if(j.display!==d&&null!==j.display&&"none"!==j.display){if("flex"===j.display){var A=["-webkit-box","-moz-box","-ms-flexbox","-webkit-flex"];m.each(A,function(a,b){v.setPropertyValue(y,"display",b)})}v.setPropertyValue(y,"display",j.display)}j.visibility!==d&&"hidden"!==j.visibility&&v.setPropertyValue(y,"visibility",j.visibility);for(var B in w)if(w.hasOwnProperty(B)&&"element"!==B){var C,D=w[B],E=p.isString(D.easing)?t.Easings[D.easing]:D.easing;if(1===r)C=D.endValue;else{var F=D.endValue-D.startValue;if(C=D.startValue+F*E(r,j,F),!o&&C===D.currentValue)continue}if(D.currentValue=C,"tween"===B)q=C;else{var G;if(v.Hooks.registered[B]){G=v.Hooks.getRoot(B);var H=g(y).rootPropertyValueCache[G];H&&(D.rootPropertyValue=H)}var I=v.setPropertyValue(y,B,D.currentValue+(0===parseFloat(C)?"":D.unitType),D.rootPropertyValue,D.scrollData);v.Hooks.registered[B]&&(v.Normalizations.registered[G]?g(y).rootPropertyValueCache[G]=v.Normalizations.registered[G]("extract",null,I[1]):g(y).rootPropertyValueCache[G]=I[1]),"transform"===I[0]&&(z=!0)}}j.mobileHA&&g(y).transformCache.translate3d===d&&(g(y).transformCache.translate3d="(0px, 0px, 0px)",z=!0),z&&v.flushTransformCache(y)}}j.display!==d&&"none"!==j.display&&(t.State.calls[f][2].display=!1),j.visibility!==d&&"hidden"!==j.visibility&&(t.State.calls[f][2].visibility=!1),j.progress&&j.progress.call(h[1],h[1],r,Math.max(0,n+j.duration-b),n,q),1===r&&l(f)}}t.State.isTicking&&x(k)}function l(a,b){if(!t.State.calls[a])return!1;for(var c=t.State.calls[a][0],e=t.State.calls[a][1],f=t.State.calls[a][2],h=t.State.calls[a][4],i=!1,j=0,k=c.length;j<k;j++){var l=c[j].element;b||f.loop||("none"===f.display&&v.setPropertyValue(l,"display",f.display),"hidden"===f.visibility&&v.setPropertyValue(l,"visibility",f.visibility));var n=g(l);if(f.loop!==!0&&(m.queue(l)[1]===d||!/\.velocityQueueEntryFlag/i.test(m.queue(l)[1]))&&n){n.isAnimating=!1,n.rootPropertyValueCache={};var o=!1;m.each(v.Lists.transforms3D,function(a,b){var c=/^scale/.test(b)?1:0,e=n.transformCache[b];n.transformCache[b]!==d&&new RegExp("^\\("+c+"[^.]").test(e)&&(o=!0,delete n.transformCache[b])}),f.mobileHA&&(o=!0,delete n.transformCache.translate3d),o&&v.flushTransformCache(l),v.Values.removeClass(l,"velocity-animating")}if(!b&&f.complete&&!f.loop&&j===k-1)try{f.complete.call(e,e)}catch(p){setTimeout(function(){throw p},1)}h&&f.loop!==!0&&h(e),n&&f.loop===!0&&!b&&(m.each(n.tweensContainer,function(a,b){if(/^rotate/.test(a)&&(parseFloat(b.startValue)-parseFloat(b.endValue))%360===0){var c=b.startValue;b.startValue=b.endValue,b.endValue=c}/^backgroundPosition/.test(a)&&100===parseFloat(b.endValue)&&"%"===b.unitType&&(b.endValue=0,b.startValue=100)}),t(l,"reverse",{loop:!0,delay:f.delay})),f.queue!==!1&&m.dequeue(l,f.queue)}t.State.calls[a]=!1;for(var q=0,r=t.State.calls.length;q<r;q++)if(t.State.calls[q]!==!1){i=!0;break}i===!1&&(t.State.isTicking=!1,delete t.State.calls,t.State.calls=[])}var m,n=function(){if(c.documentMode)return c.documentMode;for(var a=7;a>4;a--){var b=c.createElement("div");if(b.innerHTML="<!--[if IE "+a+"]><span></span><![endif]-->",b.getElementsByTagName("span").length)return b=null,a}return d}(),o=function(){var a=0;return b.webkitRequestAnimationFrame||b.mozRequestAnimationFrame||function(b){var c,d=(new Date).getTime();return c=Math.max(0,16-(d-a)),a=d+c,setTimeout(function(){b(d+c)},c)}}(),p={isString:function(a){return"string"==typeof a},isArray:Array.isArray||function(a){return"[object Array]"===Object.prototype.toString.call(a)},isFunction:function(a){return"[object Function]"===Object.prototype.toString.call(a)},isNode:function(a){return a&&a.nodeType},isNodeList:function(a){return"object"==typeof a&&/^\[object (HTMLCollection|NodeList|Object)\]$/.test(Object.prototype.toString.call(a))&&a.length!==d&&(0===a.length||"object"==typeof a[0]&&a[0].nodeType>0)},isWrapped:function(a){return a&&(a.jquery||b.Zepto&&b.Zepto.zepto.isZ(a))},isSVG:function(a){return b.SVGElement&&a instanceof b.SVGElement},isEmptyObject:function(a){for(var b in a)if(a.hasOwnProperty(b))return!1;return!0}},q=!1;if(a.fn&&a.fn.jquery?(m=a,q=!0):m=b.Velocity.Utilities,n<=8&&!q)throw new Error("Velocity: IE8 and below require jQuery to be loaded before Velocity.");if(n<=7)return void(jQuery.fn.velocity=jQuery.fn.animate);var r=400,s="swing",t={State:{isMobile:/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),isAndroid:/Android/i.test(navigator.userAgent),isGingerbread:/Android 2\.3\.[3-7]/i.test(navigator.userAgent),isChrome:b.chrome,isFirefox:/Firefox/i.test(navigator.userAgent),prefixElement:c.createElement("div"),prefixMatches:{},scrollAnchor:null,scrollPropertyLeft:null,scrollPropertyTop:null,isTicking:!1,calls:[]},CSS:{},Utilities:m,Redirects:{},Easings:{},Promise:b.Promise,defaults:{queue:"",duration:r,easing:s,begin:d,complete:d,progress:d,display:d,visibility:d,loop:!1,delay:!1,mobileHA:!0,_cacheValues:!0},init:function(a){m.data(a,"velocity",{isSVG:p.isSVG(a),isAnimating:!1,computedStyle:null,tweensContainer:null,rootPropertyValueCache:{},transformCache:{}})},hook:null,mock:!1,version:{major:1,minor:3,patch:1},debug:!1};b.pageYOffset!==d?(t.State.scrollAnchor=b,t.State.scrollPropertyLeft="pageXOffset",t.State.scrollPropertyTop="pageYOffset"):(t.State.scrollAnchor=c.documentElement||c.body.parentNode||c.body,t.State.scrollPropertyLeft="scrollLeft",t.State.scrollPropertyTop="scrollTop");var u=function(){function a(a){return-a.tension*a.x-a.friction*a.v}function b(b,c,d){var e={x:b.x+d.dx*c,v:b.v+d.dv*c,tension:b.tension,friction:b.friction};return{dx:e.v,dv:a(e)}}function c(c,d){var e={dx:c.v,dv:a(c)},f=b(c,.5*d,e),g=b(c,.5*d,f),h=b(c,d,g),i=1/6*(e.dx+2*(f.dx+g.dx)+h.dx),j=1/6*(e.dv+2*(f.dv+g.dv)+h.dv);return c.x=c.x+i*d,c.v=c.v+j*d,c}return function d(a,b,e){var f,g,h,i={x:-1,v:0,tension:null,friction:null},j=[0],k=0,l=1e-4,m=.016;for(a=parseFloat(a)||500,b=parseFloat(b)||20,e=e||null,i.tension=a,i.friction=b,f=null!==e,f?(k=d(a,b),g=k/e*m):g=m;;)if(h=c(h||i,g),j.push(1+h.x),k+=16,!(Math.abs(h.x)>l&&Math.abs(h.v)>l))break;return f?function(a){return j[a*(j.length-1)|0]}:k}}();t.Easings={linear:function(a){return a},swing:function(a){return.5-Math.cos(a*Math.PI)/2},spring:function(a){return 1-Math.cos(4.5*a*Math.PI)*Math.exp(6*-a)}},m.each([["ease",[.25,.1,.25,1]],["ease-in",[.42,0,1,1]],["ease-out",[0,0,.58,1]],["ease-in-out",[.42,0,.58,1]],["easeInSine",[.47,0,.745,.715]],["easeOutSine",[.39,.575,.565,1]],["easeInOutSine",[.445,.05,.55,.95]],["easeInQuad",[.55,.085,.68,.53]],["easeOutQuad",[.25,.46,.45,.94]],["easeInOutQuad",[.455,.03,.515,.955]],["easeInCubic",[.55,.055,.675,.19]],["easeOutCubic",[.215,.61,.355,1]],["easeInOutCubic",[.645,.045,.355,1]],["easeInQuart",[.895,.03,.685,.22]],["easeOutQuart",[.165,.84,.44,1]],["easeInOutQuart",[.77,0,.175,1]],["easeInQuint",[.755,.05,.855,.06]],["easeOutQuint",[.23,1,.32,1]],["easeInOutQuint",[.86,0,.07,1]],["easeInExpo",[.95,.05,.795,.035]],["easeOutExpo",[.19,1,.22,1]],["easeInOutExpo",[1,0,0,1]],["easeInCirc",[.6,.04,.98,.335]],["easeOutCirc",[.075,.82,.165,1]],["easeInOutCirc",[.785,.135,.15,.86]]],function(a,b){t.Easings[b[0]]=i.apply(null,b[1])});var v=t.CSS={RegEx:{isHex:/^#([A-f\d]{3}){1,2}$/i,valueUnwrap:/^[A-z]+\((.*)\)$/i,wrappedValueAlreadyExtracted:/[0-9.]+ [0-9.]+ [0-9.]+( [0-9.]+)?/,valueSplit:/([A-z]+\(.+\))|(([A-z0-9#-.]+?)(?=\s|$))/gi},Lists:{colors:["fill","stroke","stopColor","color","backgroundColor","borderColor","borderTopColor","borderRightColor","borderBottomColor","borderLeftColor","outlineColor"],transformsBase:["translateX","translateY","scale","scaleX","scaleY","skewX","skewY","rotateZ"],transforms3D:["transformPerspective","translateZ","scaleZ","rotateX","rotateY"]},Hooks:{templates:{textShadow:["Color X Y Blur","black 0px 0px 0px"],boxShadow:["Color X Y Blur Spread","black 0px 0px 0px 0px"],clip:["Top Right Bottom Left","0px 0px 0px 0px"],backgroundPosition:["X Y","0% 0%"],transformOrigin:["X Y Z","50% 50% 0px"],perspectiveOrigin:["X Y","50% 50%"]},registered:{},register:function(){for(var a=0;a<v.Lists.colors.length;a++){var b="color"===v.Lists.colors[a]?"0 0 0 1":"255 255 255 1";v.Hooks.templates[v.Lists.colors[a]]=["Red Green Blue Alpha",b]}var c,d,e;if(n)for(c in v.Hooks.templates)if(v.Hooks.templates.hasOwnProperty(c)){d=v.Hooks.templates[c],e=d[0].split(" ");var f=d[1].match(v.RegEx.valueSplit);"Color"===e[0]&&(e.push(e.shift()),f.push(f.shift()),v.Hooks.templates[c]=[e.join(" "),f.join(" ")])}for(c in v.Hooks.templates)if(v.Hooks.templates.hasOwnProperty(c)){d=v.Hooks.templates[c],e=d[0].split(" ");for(var g in e)if(e.hasOwnProperty(g)){var h=c+e[g],i=g;v.Hooks.registered[h]=[c,i]}}},getRoot:function(a){var b=v.Hooks.registered[a];return b?b[0]:a},cleanRootPropertyValue:function(a,b){return v.RegEx.valueUnwrap.test(b)&&(b=b.match(v.RegEx.valueUnwrap)[1]),v.Values.isCSSNullValue(b)&&(b=v.Hooks.templates[a][1]),b},extractValue:function(a,b){var c=v.Hooks.registered[a];if(c){var d=c[0],e=c[1];return b=v.Hooks.cleanRootPropertyValue(d,b),b.toString().match(v.RegEx.valueSplit)[e]}return b},injectValue:function(a,b,c){var d=v.Hooks.registered[a];if(d){var e,f,g=d[0],h=d[1];return c=v.Hooks.cleanRootPropertyValue(g,c),e=c.toString().match(v.RegEx.valueSplit),e[h]=b,f=e.join(" ")}return c}},Normalizations:{registered:{clip:function(a,b,c){switch(a){case"name":return"clip";case"extract":var d;return v.RegEx.wrappedValueAlreadyExtracted.test(c)?d=c:(d=c.toString().match(v.RegEx.valueUnwrap),d=d?d[1].replace(/,(\s+)?/g," "):c),d;case"inject":return"rect("+c+")"}},blur:function(a,b,c){switch(a){case"name":return t.State.isFirefox?"filter":"-webkit-filter";case"extract":var d=parseFloat(c);if(!d&&0!==d){var e=c.toString().match(/blur\(([0-9]+[A-z]+)\)/i);d=e?e[1]:0}return d;case"inject":return parseFloat(c)?"blur("+c+")":"none"}},opacity:function(a,b,c){if(n<=8)switch(a){case"name":return"filter";case"extract":var d=c.toString().match(/alpha\(opacity=(.*)\)/i);return c=d?d[1]/100:1;case"inject":return b.style.zoom=1,parseFloat(c)>=1?"":"alpha(opacity="+parseInt(100*parseFloat(c),10)+")"}else switch(a){case"name":return"opacity";case"extract":return c;case"inject":return c}}},register:function(){n&&!(n>9)||t.State.isGingerbread||(v.Lists.transformsBase=v.Lists.transformsBase.concat(v.Lists.transforms3D));for(var a=0;a<v.Lists.transformsBase.length;a++)!function(){var b=v.Lists.transformsBase[a];v.Normalizations.registered[b]=function(a,c,e){switch(a){case"name":return"transform";case"extract":return g(c)===d||g(c).transformCache[b]===d?/^scale/i.test(b)?1:0:g(c).transformCache[b].replace(/[()]/g,"");case"inject":var f=!1;switch(b.substr(0,b.length-1)){case"translate":f=!/(%|px|em|rem|vw|vh|\d)$/i.test(e);break;case"scal":case"scale":t.State.isAndroid&&g(c).transformCache[b]===d&&e<1&&(e=1),f=!/(\d)$/i.test(e);break;case"skew":f=!/(deg|\d)$/i.test(e);break;case"rotate":f=!/(deg|\d)$/i.test(e)}return f||(g(c).transformCache[b]="("+e+")"),g(c).transformCache[b]}}}();for(var b=0;b<v.Lists.colors.length;b++)!function(){var a=v.Lists.colors[b];v.Normalizations.registered[a]=function(b,c,e){switch(b){case"name":return a;case"extract":var f;if(v.RegEx.wrappedValueAlreadyExtracted.test(e))f=e;else{var g,h={black:"rgb(0, 0, 0)",blue:"rgb(0, 0, 255)",gray:"rgb(128, 128, 128)",green:"rgb(0, 128, 0)",red:"rgb(255, 0, 0)",white:"rgb(255, 255, 255)"};/^[A-z]+$/i.test(e)?g=h[e]!==d?h[e]:h.black:v.RegEx.isHex.test(e)?g="rgb("+v.Values.hexToRgb(e).join(" ")+")":/^rgba?\(/i.test(e)||(g=h.black),f=(g||e).toString().match(v.RegEx.valueUnwrap)[1].replace(/,(\s+)?/g," ")}return(!n||n>8)&&3===f.split(" ").length&&(f+=" 1"),f;case"inject":return n<=8?4===e.split(" ").length&&(e=e.split(/\s+/).slice(0,3).join(" ")):3===e.split(" ").length&&(e+=" 1"),(n<=8?"rgb":"rgba")+"("+e.replace(/\s+/g,",").replace(/\.(\d)+(?=,)/g,"")+")"}}}()}},Names:{camelCase:function(a){return a.replace(/-(\w)/g,function(a,b){return b.toUpperCase()})},SVGAttribute:function(a){var b="width|height|x|y|cx|cy|r|rx|ry|x1|x2|y1|y2";return(n||t.State.isAndroid&&!t.State.isChrome)&&(b+="|transform"),new RegExp("^("+b+")$","i").test(a)},prefixCheck:function(a){if(t.State.prefixMatches[a])return[t.State.prefixMatches[a],!0];for(var b=["","Webkit","Moz","ms","O"],c=0,d=b.length;c<d;c++){var e;if(e=0===c?a:b[c]+a.replace(/^\w/,function(a){return a.toUpperCase()}),p.isString(t.State.prefixElement.style[e]))return t.State.prefixMatches[a]=e,[e,!0]}return[a,!1]}},Values:{hexToRgb:function(a){var b,c=/^#?([a-f\d])([a-f\d])([a-f\d])$/i,d=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i;return a=a.replace(c,function(a,b,c,d){return b+b+c+c+d+d}),b=d.exec(a),b?[parseInt(b[1],16),parseInt(b[2],16),parseInt(b[3],16)]:[0,0,0]},isCSSNullValue:function(a){return!a||/^(none|auto|transparent|(rgba\(0, ?0, ?0, ?0\)))$/i.test(a)},getUnitType:function(a){return/^(rotate|skew)/i.test(a)?"deg":/(^(scale|scaleX|scaleY|scaleZ|alpha|flexGrow|flexHeight|zIndex|fontWeight)$)|((opacity|red|green|blue|alpha)$)/i.test(a)?"":"px"},getDisplayType:function(a){var b=a&&a.tagName.toString().toLowerCase();return/^(b|big|i|small|tt|abbr|acronym|cite|code|dfn|em|kbd|strong|samp|var|a|bdo|br|img|map|object|q|script|span|sub|sup|button|input|label|select|textarea)$/i.test(b)?"inline":/^(li)$/i.test(b)?"list-item":/^(tr)$/i.test(b)?"table-row":/^(table)$/i.test(b)?"table":/^(tbody)$/i.test(b)?"table-row-group":"block"},addClass:function(a,b){a.classList?a.classList.add(b):a.className+=(a.className.length?" ":"")+b},removeClass:function(a,b){a.classList?a.classList.remove(b):a.className=a.className.toString().replace(new RegExp("(^|\\s)"+b.split(" ").join("|")+"(\\s|$)","gi")," ")}},getPropertyValue:function(a,c,e,f){function h(a,c){var e=0;if(n<=8)e=m.css(a,c);else{var i=!1;/^(width|height)$/.test(c)&&0===v.getPropertyValue(a,"display")&&(i=!0,v.setPropertyValue(a,"display",v.Values.getDisplayType(a)));var j=function(){i&&v.setPropertyValue(a,"display","none")};if(!f){if("height"===c&&"border-box"!==v.getPropertyValue(a,"boxSizing").toString().toLowerCase()){var k=a.offsetHeight-(parseFloat(v.getPropertyValue(a,"borderTopWidth"))||0)-(parseFloat(v.getPropertyValue(a,"borderBottomWidth"))||0)-(parseFloat(v.getPropertyValue(a,"paddingTop"))||0)-(parseFloat(v.getPropertyValue(a,"paddingBottom"))||0);return j(),k}if("width"===c&&"border-box"!==v.getPropertyValue(a,"boxSizing").toString().toLowerCase()){var l=a.offsetWidth-(parseFloat(v.getPropertyValue(a,"borderLeftWidth"))||0)-(parseFloat(v.getPropertyValue(a,"borderRightWidth"))||0)-(parseFloat(v.getPropertyValue(a,"paddingLeft"))||0)-(parseFloat(v.getPropertyValue(a,"paddingRight"))||0);return j(),l}}var o;o=g(a)===d?b.getComputedStyle(a,null):g(a).computedStyle?g(a).computedStyle:g(a).computedStyle=b.getComputedStyle(a,null),"borderColor"===c&&(c="borderTopColor"),e=9===n&&"filter"===c?o.getPropertyValue(c):o[c],""!==e&&null!==e||(e=a.style[c]),j()}if("auto"===e&&/^(top|right|bottom|left)$/i.test(c)){var p=h(a,"position");("fixed"===p||"absolute"===p&&/top|left/i.test(c))&&(e=m(a).position()[c]+"px")}return e}var i;if(v.Hooks.registered[c]){var j=c,k=v.Hooks.getRoot(j);e===d&&(e=v.getPropertyValue(a,v.Names.prefixCheck(k)[0])),v.Normalizations.registered[k]&&(e=v.Normalizations.registered[k]("extract",a,e)),i=v.Hooks.extractValue(j,e)}else if(v.Normalizations.registered[c]){var l,o;l=v.Normalizations.registered[c]("name",a),"transform"!==l&&(o=h(a,v.Names.prefixCheck(l)[0]),v.Values.isCSSNullValue(o)&&v.Hooks.templates[c]&&(o=v.Hooks.templates[c][1])),i=v.Normalizations.registered[c]("extract",a,o)}if(!/^[\d-]/.test(i)){var p=g(a);if(p&&p.isSVG&&v.Names.SVGAttribute(c))if(/^(height|width)$/i.test(c))try{i=a.getBBox()[c]}catch(q){i=0}else i=a.getAttribute(c);else i=h(a,v.Names.prefixCheck(c)[0])}return v.Values.isCSSNullValue(i)&&(i=0),t.debug>=2&&console.log("Get "+c+": "+i),i},setPropertyValue:function(a,c,d,e,f){var h=c;if("scroll"===c)f.container?f.container["scroll"+f.direction]=d:"Left"===f.direction?b.scrollTo(d,f.alternateValue):b.scrollTo(f.alternateValue,d);else if(v.Normalizations.registered[c]&&"transform"===v.Normalizations.registered[c]("name",a))v.Normalizations.registered[c]("inject",a,d),h="transform",d=g(a).transformCache[c];else{if(v.Hooks.registered[c]){var i=c,j=v.Hooks.getRoot(c);e=e||v.getPropertyValue(a,j),d=v.Hooks.injectValue(i,d,e),c=j}if(v.Normalizations.registered[c]&&(d=v.Normalizations.registered[c]("inject",a,d),c=v.Normalizations.registered[c]("name",a)),h=v.Names.prefixCheck(c)[0],n<=8)try{a.style[h]=d}catch(k){t.debug&&console.log("Browser does not support ["+d+"] for ["+h+"]")}else{var l=g(a);l&&l.isSVG&&v.Names.SVGAttribute(c)?a.setAttribute(c,d):a.style[h]=d}t.debug>=2&&console.log("Set "+c+" ("+h+"): "+d)}return[h,d]},flushTransformCache:function(a){var b="",c=g(a);if((n||t.State.isAndroid&&!t.State.isChrome)&&c&&c.isSVG){var d=function(b){return parseFloat(v.getPropertyValue(a,b))},e={translate:[d("translateX"),d("translateY")],skewX:[d("skewX")],skewY:[d("skewY")],scale:1!==d("scale")?[d("scale"),d("scale")]:[d("scaleX"),d("scaleY")],rotate:[d("rotateZ"),0,0]};m.each(g(a).transformCache,function(a){/^translate/i.test(a)?a="translate":/^scale/i.test(a)?a="scale":/^rotate/i.test(a)&&(a="rotate"),e[a]&&(b+=a+"("+e[a].join(" ")+") ",delete e[a])})}else{var f,h;m.each(g(a).transformCache,function(c){return f=g(a).transformCache[c],"transformPerspective"===c?(h=f,!0):(9===n&&"rotateZ"===c&&(c="rotate"),void(b+=c+f+" "))}),h&&(b="perspective"+h+" "+b)}v.setPropertyValue(a,"transform",b)}};v.Hooks.register(),v.Normalizations.register(),t.hook=function(a,b,c){var e;return a=f(a),m.each(a,function(a,f){if(g(f)===d&&t.init(f),c===d)e===d&&(e=t.CSS.getPropertyValue(f,b));else{var h=t.CSS.setPropertyValue(f,b,c);"transform"===h[0]&&t.CSS.flushTransformCache(f),e=h}}),e};var w=function(){function a(){return i?C.promise||null:n}function e(a,e){function f(f){var n,o;if(i.begin&&0===z)try{i.begin.call(q,q)}catch(r){setTimeout(function(){throw r},1)}if("scroll"===D){var w,x,A,B=/^x$/i.test(i.axis)?"Left":"Top",E=parseFloat(i.offset)||0;i.container?p.isWrapped(i.container)||p.isNode(i.container)?(i.container=i.container[0]||i.container,w=i.container["scroll"+B],A=w+m(a).position()[B.toLowerCase()]+E):i.container=null:(w=t.State.scrollAnchor[t.State["scrollProperty"+B]],x=t.State.scrollAnchor[t.State["scrollProperty"+("Left"===B?"Top":"Left")]],A=m(a).offset()[B.toLowerCase()]+E),l={scroll:{rootPropertyValue:!1,startValue:w,currentValue:w,endValue:A,unitType:"",easing:i.easing,scrollData:{container:i.container,direction:B,alternateValue:x}},element:a},t.debug&&console.log("tweensContainer (scroll): ",l.scroll,a)}else if("reverse"===D){if(n=g(a),!n)return;if(!n.tweensContainer)return void m.dequeue(a,i.queue);"none"===n.opts.display&&(n.opts.display="auto"),"hidden"===n.opts.visibility&&(n.opts.visibility="visible"),n.opts.loop=!1,n.opts.begin=null,n.opts.complete=null,u.easing||delete i.easing,u.duration||delete i.duration,i=m.extend({},n.opts,i),o=m.extend(!0,{},n?n.tweensContainer:null);for(var F in o)if(o.hasOwnProperty(F)&&"element"!==F){var G=o[F].startValue;o[F].startValue=o[F].currentValue=o[F].endValue,o[F].endValue=G,p.isEmptyObject(u)||(o[F].easing=i.easing),t.debug&&console.log("reverse tweensContainer ("+F+"): "+JSON.stringify(o[F]),a)}l=o}else if("start"===D){n=g(a),n&&n.tweensContainer&&n.isAnimating===!0&&(o=n.tweensContainer);var H=function(b,c){var f,g,h;return p.isArray(b)?(f=b[0],!p.isArray(b[1])&&/^[\d-]/.test(b[1])||p.isFunction(b[1])||v.RegEx.isHex.test(b[1])?h=b[1]:(p.isString(b[1])&&!v.RegEx.isHex.test(b[1])||p.isArray(b[1]))&&(g=c?b[1]:j(b[1],i.duration),b[2]!==d&&(h=b[2]))):f=b,c||(g=g||i.easing),p.isFunction(f)&&(f=f.call(a,e,y)),p.isFunction(h)&&(h=h.call(a,e,y)),[f||0,g,h]};m.each(s,function(a,b){if(RegExp("^"+v.Lists.colors.join("$|^")+"$").test(v.Names.camelCase(a))){var c=H(b,!0),e=c[0],f=c[1],g=c[2];if(v.RegEx.isHex.test(e)){for(var h=["Red","Green","Blue"],i=v.Values.hexToRgb(e),j=g?v.Values.hexToRgb(g):d,k=0;k<h.length;k++){var l=[i[k]];f&&l.push(f),j!==d&&l.push(j[k]),s[v.Names.camelCase(a)+h[k]]=l}delete s[a]}}});for(var K in s)if(s.hasOwnProperty(K)){var L=H(s[K]),M=L[0],N=L[1],O=L[2];K=v.Names.camelCase(K);var P=v.Hooks.getRoot(K),Q=!1;if(n&&n.isSVG||"tween"===P||v.Names.prefixCheck(P)[1]!==!1||v.Normalizations.registered[P]!==d){(i.display!==d&&null!==i.display&&"none"!==i.display||i.visibility!==d&&"hidden"!==i.visibility)&&/opacity|filter/.test(K)&&!O&&0!==M&&(O=0),i._cacheValues&&o&&o[K]?(O===d&&(O=o[K].endValue+o[K].unitType),Q=n.rootPropertyValueCache[P]):v.Hooks.registered[K]?O===d?(Q=v.getPropertyValue(a,P),O=v.getPropertyValue(a,K,Q)):Q=v.Hooks.templates[P][1]:O===d&&(O=v.getPropertyValue(a,K));var R,S,T,U=!1,V=function(a,b){var c,d;return d=(b||"0").toString().toLowerCase().replace(/[%A-z]+$/,function(a){return c=a,""}),c||(c=v.Values.getUnitType(a)),[d,c]};R=V(K,O),O=R[0],T=R[1],R=V(K,M),M=R[0].replace(/^([+-\/*])=/,function(a,b){return U=b,""}),S=R[1],O=parseFloat(O)||0,M=parseFloat(M)||0,"%"===S&&(/^(fontSize|lineHeight)$/.test(K)?(M/=100,S="em"):/^scale/.test(K)?(M/=100,S=""):/(Red|Green|Blue)$/i.test(K)&&(M=M/100*255,S=""));var W=function(){var d={myParent:a.parentNode||c.body,position:v.getPropertyValue(a,"position"),fontSize:v.getPropertyValue(a,"fontSize")},e=d.position===I.lastPosition&&d.myParent===I.lastParent,f=d.fontSize===I.lastFontSize;I.lastParent=d.myParent,I.lastPosition=d.position,I.lastFontSize=d.fontSize;var g=100,h={};if(f&&e)h.emToPx=I.lastEmToPx,h.percentToPxWidth=I.lastPercentToPxWidth,h.percentToPxHeight=I.lastPercentToPxHeight;else{var i=n&&n.isSVG?c.createElementNS("http://www.w3.org/2000/svg","rect"):c.createElement("div");t.init(i),d.myParent.appendChild(i),m.each(["overflow","overflowX","overflowY"],function(a,b){t.CSS.setPropertyValue(i,b,"hidden")}),t.CSS.setPropertyValue(i,"position",d.position),t.CSS.setPropertyValue(i,"fontSize",d.fontSize),t.CSS.setPropertyValue(i,"boxSizing","content-box"),m.each(["minWidth","maxWidth","width","minHeight","maxHeight","height"],function(a,b){t.CSS.setPropertyValue(i,b,g+"%")}),t.CSS.setPropertyValue(i,"paddingLeft",g+"em"),h.percentToPxWidth=I.lastPercentToPxWidth=(parseFloat(v.getPropertyValue(i,"width",null,!0))||1)/g,h.percentToPxHeight=I.lastPercentToPxHeight=(parseFloat(v.getPropertyValue(i,"height",null,!0))||1)/g,h.emToPx=I.lastEmToPx=(parseFloat(v.getPropertyValue(i,"paddingLeft"))||1)/g,d.myParent.removeChild(i)}return null===I.remToPx&&(I.remToPx=parseFloat(v.getPropertyValue(c.body,"fontSize"))||16),null===I.vwToPx&&(I.vwToPx=parseFloat(b.innerWidth)/100,I.vhToPx=parseFloat(b.innerHeight)/100),h.remToPx=I.remToPx,h.vwToPx=I.vwToPx,h.vhToPx=I.vhToPx,t.debug>=1&&console.log("Unit ratios: "+JSON.stringify(h),a),h};if(/[\/*]/.test(U))S=T;else if(T!==S&&0!==O)if(0===M)S=T;else{h=h||W();var X=/margin|padding|left|right|width|text|word|letter/i.test(K)||/X$/.test(K)||"x"===K?"x":"y";switch(T){case"%":O*="x"===X?h.percentToPxWidth:h.percentToPxHeight;break;case"px":break;default:O*=h[T+"ToPx"]}switch(S){case"%":O*=1/("x"===X?h.percentToPxWidth:h.percentToPxHeight);break;case"px":break;default:O*=1/h[S+"ToPx"]}}switch(U){case"+":M=O+M;break;case"-":M=O-M;break;case"*":M=O*M;break;case"/":M=O/M}l[K]={rootPropertyValue:Q,startValue:O,currentValue:O,endValue:M,unitType:S,easing:N},t.debug&&console.log("tweensContainer ("+K+"): "+JSON.stringify(l[K]),a)}else t.debug&&console.log("Skipping ["+P+"] due to a lack of browser support.")}l.element=a}l.element&&(v.Values.addClass(a,"velocity-animating"),J.push(l),n=g(a),n&&(""===i.queue&&(n.tweensContainer=l,n.opts=i),n.isAnimating=!0),z===y-1?(t.State.calls.push([J,q,i,null,C.resolver]),t.State.isTicking===!1&&(t.State.isTicking=!0,k())):z++)}var h,i=m.extend({},t.defaults,u),l={};switch(g(a)===d&&t.init(a),parseFloat(i.delay)&&i.queue!==!1&&m.queue(a,i.queue,function(b){t.velocityQueueEntryFlag=!0,g(a).delayTimer={setTimeout:setTimeout(b,parseFloat(i.delay)),next:b}}),i.duration.toString().toLowerCase()){case"fast":i.duration=200;break;case"normal":i.duration=r;break;case"slow":i.duration=600;break;default:i.duration=parseFloat(i.duration)||1}t.mock!==!1&&(t.mock===!0?i.duration=i.delay=1:(i.duration*=parseFloat(t.mock)||1,i.delay*=parseFloat(t.mock)||1)),i.easing=j(i.easing,i.duration),i.begin&&!p.isFunction(i.begin)&&(i.begin=null),i.progress&&!p.isFunction(i.progress)&&(i.progress=null),i.complete&&!p.isFunction(i.complete)&&(i.complete=null),i.display!==d&&null!==i.display&&(i.display=i.display.toString().toLowerCase(),"auto"===i.display&&(i.display=t.CSS.Values.getDisplayType(a))),i.visibility!==d&&null!==i.visibility&&(i.visibility=i.visibility.toString().toLowerCase()),i.mobileHA=i.mobileHA&&t.State.isMobile&&!t.State.isGingerbread,i.queue===!1?i.delay?setTimeout(f,i.delay):f():m.queue(a,i.queue,function(a,b){return b===!0?(C.promise&&C.resolver(q),!0):(t.velocityQueueEntryFlag=!0,void f(a))}),""!==i.queue&&"fx"!==i.queue||"inprogress"===m.queue(a)[0]||m.dequeue(a)}var h,i,n,o,q,s,u,x=arguments[0]&&(arguments[0].p||m.isPlainObject(arguments[0].properties)&&!arguments[0].properties.names||p.isString(arguments[0].properties));if(p.isWrapped(this)?(i=!1,o=0,q=this,n=this):(i=!0,o=1,q=x?arguments[0].elements||arguments[0].e:arguments[0]),q=f(q)){x?(s=arguments[0].properties||arguments[0].p,u=arguments[0].options||arguments[0].o):(s=arguments[o],u=arguments[o+1]);var y=q.length,z=0;if(!/^(stop|finish|finishAll)$/i.test(s)&&!m.isPlainObject(u)){var A=o+1;u={};for(var B=A;B<arguments.length;B++)p.isArray(arguments[B])||!/^(fast|normal|slow)$/i.test(arguments[B])&&!/^\d/.test(arguments[B])?p.isString(arguments[B])||p.isArray(arguments[B])?u.easing=arguments[B]:p.isFunction(arguments[B])&&(u.complete=arguments[B]):u.duration=arguments[B]}var C={promise:null,resolver:null,rejecter:null};i&&t.Promise&&(C.promise=new t.Promise(function(a,b){C.resolver=a,C.rejecter=b}));var D;switch(s){case"scroll":D="scroll";break;case"reverse":D="reverse";break;case"finish":case"finishAll":case"stop":m.each(q,function(a,b){g(b)&&g(b).delayTimer&&(clearTimeout(g(b).delayTimer.setTimeout),
+	g(b).delayTimer.next&&g(b).delayTimer.next(),delete g(b).delayTimer),"finishAll"!==s||u!==!0&&!p.isString(u)||(m.each(m.queue(b,p.isString(u)?u:""),function(a,b){p.isFunction(b)&&b()}),m.queue(b,p.isString(u)?u:"",[]))});var E=[];return m.each(t.State.calls,function(a,b){b&&m.each(b[1],function(c,e){var f=u===d?"":u;return f!==!0&&b[2].queue!==f&&(u!==d||b[2].queue!==!1)||void m.each(q,function(c,d){if(d===e)if((u===!0||p.isString(u))&&(m.each(m.queue(d,p.isString(u)?u:""),function(a,b){p.isFunction(b)&&b(null,!0)}),m.queue(d,p.isString(u)?u:"",[])),"stop"===s){var h=g(d);h&&h.tweensContainer&&f!==!1&&m.each(h.tweensContainer,function(a,b){b.endValue=b.currentValue}),E.push(a)}else"finish"!==s&&"finishAll"!==s||(b[2].duration=1)})})}),"stop"===s&&(m.each(E,function(a,b){l(b,!0)}),C.promise&&C.resolver(q)),a();default:if(!m.isPlainObject(s)||p.isEmptyObject(s)){if(p.isString(s)&&t.Redirects[s]){h=m.extend({},u);var F=h.duration,G=h.delay||0;return h.backwards===!0&&(q=m.extend(!0,[],q).reverse()),m.each(q,function(a,b){parseFloat(h.stagger)?h.delay=G+parseFloat(h.stagger)*a:p.isFunction(h.stagger)&&(h.delay=G+h.stagger.call(b,a,y)),h.drag&&(h.duration=parseFloat(F)||(/^(callout|transition)/.test(s)?1e3:r),h.duration=Math.max(h.duration*(h.backwards?1-a/y:(a+1)/y),.75*h.duration,200)),t.Redirects[s].call(b,b,h||{},a,y,q,C.promise?C:d)}),a()}var H="Velocity: First argument ("+s+") was not a property map, a known action, or a registered redirect. Aborting.";return C.promise?C.rejecter(new Error(H)):console.log(H),a()}D="start"}var I={lastParent:null,lastPosition:null,lastFontSize:null,lastPercentToPxWidth:null,lastPercentToPxHeight:null,lastEmToPx:null,remToPx:null,vwToPx:null,vhToPx:null},J=[];m.each(q,function(a,b){p.isNode(b)&&e(b,a)}),h=m.extend({},t.defaults,u),h.loop=parseInt(h.loop,10);var K=2*h.loop-1;if(h.loop)for(var L=0;L<K;L++){var M={delay:h.delay,progress:h.progress};L===K-1&&(M.display=h.display,M.visibility=h.visibility,M.complete=h.complete),w(q,"reverse",M)}return a()}};t=m.extend(w,t),t.animate=w;var x=b.requestAnimationFrame||o;return t.State.isMobile||c.hidden===d||c.addEventListener("visibilitychange",function(){c.hidden?(x=function(a){return setTimeout(function(){a(!0)},16)},k()):x=b.requestAnimationFrame||o}),a.Velocity=t,a!==b&&(a.fn.velocity=w,a.fn.velocity.defaults=t.defaults),m.each(["Down","Up"],function(a,b){t.Redirects["slide"+b]=function(a,c,e,f,g,h){var i=m.extend({},c),j=i.begin,k=i.complete,l={height:"",marginTop:"",marginBottom:"",paddingTop:"",paddingBottom:""},n={};i.display===d&&(i.display="Down"===b?"inline"===t.CSS.Values.getDisplayType(a)?"inline-block":"block":"none"),i.begin=function(){j&&j.call(g,g);for(var c in l)if(l.hasOwnProperty(c)){n[c]=a.style[c];var d=t.CSS.getPropertyValue(a,c);l[c]="Down"===b?[d,0]:[0,d]}n.overflow=a.style.overflow,a.style.overflow="hidden"},i.complete=function(){for(var b in n)n.hasOwnProperty(b)&&(a.style[b]=n[b]);k&&k.call(g,g),h&&h.resolver(g)},t(a,l,i)}}),m.each(["In","Out"],function(a,b){t.Redirects["fade"+b]=function(a,c,e,f,g,h){var i=m.extend({},c),j=i.complete,k={opacity:"In"===b?1:0};e!==f-1?i.complete=i.begin=null:i.complete=function(){j&&j.call(g,g),h&&h.resolver(g)},i.display===d&&(i.display="In"===b?"auto":"none"),t(this,k,i)}}),t}(window.jQuery||window.Zepto||window,window,document)});
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+	!function(a){"use strict"; true?module.exports=a():"function"==typeof define&&define.amd?define(["velocity"],a):a()}(function(){"use strict";return function(a,b,c,d){function e(a,b){var c=[];return!(!a||!b)&&(g.each([a,b],function(a,b){var d=[];g.each(b,function(a,b){for(;b.toString().length<5;)b="0"+b;d.push(b)}),c.push(d.join(""))}),parseFloat(c[0])>parseFloat(c[1]))}var f=a.Velocity;if(!f||!f.Utilities)return void(b.console&&console.log("Velocity UI Pack: Velocity must be loaded first. Aborting."));var g=f.Utilities,h=f.version,i={major:1,minor:1,patch:0};if(e(i,h)){var j="Velocity UI Pack: You need to update Velocity (velocity.js) to a newer version. Visit http://github.com/julianshapiro/velocity.";throw alert(j),new Error(j)}f.RegisterEffect=f.RegisterUI=function(a,b){function c(a,b,c,d){var e,h=0;g.each(a.nodeType?[a]:a,function(a,b){d&&(c+=a*d),e=b.parentNode,propertiesToSum=["height","paddingTop","paddingBottom","marginTop","marginBottom"],"border-box"===f.CSS.getPropertyValue(b,"boxSizing").toString().toLowerCase()&&(propertiesToSum=["height"]),g.each(propertiesToSum,function(a,c){h+=parseFloat(f.CSS.getPropertyValue(b,c))})}),f.animate(e,{height:("In"===b?"+":"-")+"="+h},{queue:!1,easing:"ease-in-out",duration:c*("In"===b?.6:1)})}return f.Redirects[a]=function(e,h,i,j,k,l){var m=i===j-1;"function"==typeof b.defaultDuration?b.defaultDuration=b.defaultDuration.call(k,k):b.defaultDuration=parseFloat(b.defaultDuration);for(var n=0;n<b.calls.length;n++){var o=b.calls[n],p=o[0],q=1e3,r=o[1],s=o[2]||{},t={};if(h.duration!==d?q=h.duration:b.defaultDuration!==d&&(q=b.defaultDuration),t.duration=q*(r||1),t.queue=h.queue||"",t.easing=s.easing||"ease",t.delay=parseFloat(s.delay)||0,t._cacheValues=s._cacheValues||!0,0===n){if(t.delay+=parseFloat(h.delay)||0,0===i&&(t.begin=function(){h.begin&&h.begin.call(k,k);var b=a.match(/(In|Out)$/);b&&"In"===b[0]&&p.opacity!==d&&g.each(k.nodeType?[k]:k,function(a,b){f.CSS.setPropertyValue(b,"opacity",0)}),h.animateParentHeight&&b&&c(k,b[0],q+t.delay,h.stagger)}),null!==h.display)if(h.display!==d&&"none"!==h.display)t.display=h.display;else if(/In$/.test(a)){var u=f.CSS.Values.getDisplayType(e);t.display="inline"===u?"inline-block":u}h.visibility&&"hidden"!==h.visibility&&(t.visibility=h.visibility)}if(n===b.calls.length-1){var v=function(){h.display!==d&&"none"!==h.display||!/Out$/.test(a)||g.each(k.nodeType?[k]:k,function(a,b){f.CSS.setPropertyValue(b,"display","none")}),h.complete&&h.complete.call(k,k),l&&l.resolver(k||e)};t.complete=function(){if(b.reset){for(var a in b.reset)if(b.reset.hasOwnProperty(a)){var c=b.reset[a];f.CSS.Hooks.registered[a]!==d||"string"!=typeof c&&"number"!=typeof c||(b.reset[a]=[b.reset[a],b.reset[a]])}var g={duration:0,queue:!1};m&&(g.complete=v),f.animate(e,b.reset,g)}else m&&v()},"hidden"===h.visibility&&(t.visibility=h.visibility)}f.animate(e,p,t)}},f},f.RegisterEffect.packagedEffects={"callout.bounce":{defaultDuration:550,calls:[[{translateY:-30},.25],[{translateY:0},.125],[{translateY:-15},.125],[{translateY:0},.25]]},"callout.shake":{defaultDuration:800,calls:[[{translateX:-11},.125],[{translateX:11},.125],[{translateX:-11},.125],[{translateX:11},.125],[{translateX:-11},.125],[{translateX:11},.125],[{translateX:-11},.125],[{translateX:0},.125]]},"callout.flash":{defaultDuration:1100,calls:[[{opacity:[0,"easeInOutQuad",1]},.25],[{opacity:[1,"easeInOutQuad"]},.25],[{opacity:[0,"easeInOutQuad"]},.25],[{opacity:[1,"easeInOutQuad"]},.25]]},"callout.pulse":{defaultDuration:825,calls:[[{scaleX:1.1,scaleY:1.1},.5,{easing:"easeInExpo"}],[{scaleX:1,scaleY:1},.5]]},"callout.swing":{defaultDuration:950,calls:[[{rotateZ:15},.2],[{rotateZ:-10},.2],[{rotateZ:5},.2],[{rotateZ:-5},.2],[{rotateZ:0},.2]]},"callout.tada":{defaultDuration:1e3,calls:[[{scaleX:.9,scaleY:.9,rotateZ:-3},.1],[{scaleX:1.1,scaleY:1.1,rotateZ:3},.1],[{scaleX:1.1,scaleY:1.1,rotateZ:-3},.1],["reverse",.125],["reverse",.125],["reverse",.125],["reverse",.125],["reverse",.125],[{scaleX:1,scaleY:1,rotateZ:0},.2]]},"transition.fadeIn":{defaultDuration:500,calls:[[{opacity:[1,0]}]]},"transition.fadeOut":{defaultDuration:500,calls:[[{opacity:[0,1]}]]},"transition.flipXIn":{defaultDuration:700,calls:[[{opacity:[1,0],transformPerspective:[800,800],rotateY:[0,-55]}]],reset:{transformPerspective:0}},"transition.flipXOut":{defaultDuration:700,calls:[[{opacity:[0,1],transformPerspective:[800,800],rotateY:55}]],reset:{transformPerspective:0,rotateY:0}},"transition.flipYIn":{defaultDuration:800,calls:[[{opacity:[1,0],transformPerspective:[800,800],rotateX:[0,-45]}]],reset:{transformPerspective:0}},"transition.flipYOut":{defaultDuration:800,calls:[[{opacity:[0,1],transformPerspective:[800,800],rotateX:25}]],reset:{transformPerspective:0,rotateX:0}},"transition.flipBounceXIn":{defaultDuration:900,calls:[[{opacity:[.725,0],transformPerspective:[400,400],rotateY:[-10,90]},.5],[{opacity:.8,rotateY:10},.25],[{opacity:1,rotateY:0},.25]],reset:{transformPerspective:0}},"transition.flipBounceXOut":{defaultDuration:800,calls:[[{opacity:[.9,1],transformPerspective:[400,400],rotateY:-10},.5],[{opacity:0,rotateY:90},.5]],reset:{transformPerspective:0,rotateY:0}},"transition.flipBounceYIn":{defaultDuration:850,calls:[[{opacity:[.725,0],transformPerspective:[400,400],rotateX:[-10,90]},.5],[{opacity:.8,rotateX:10},.25],[{opacity:1,rotateX:0},.25]],reset:{transformPerspective:0}},"transition.flipBounceYOut":{defaultDuration:800,calls:[[{opacity:[.9,1],transformPerspective:[400,400],rotateX:-15},.5],[{opacity:0,rotateX:90},.5]],reset:{transformPerspective:0,rotateX:0}},"transition.swoopIn":{defaultDuration:850,calls:[[{opacity:[1,0],transformOriginX:["100%","50%"],transformOriginY:["100%","100%"],scaleX:[1,0],scaleY:[1,0],translateX:[0,-700],translateZ:0}]],reset:{transformOriginX:"50%",transformOriginY:"50%"}},"transition.swoopOut":{defaultDuration:850,calls:[[{opacity:[0,1],transformOriginX:["50%","100%"],transformOriginY:["100%","100%"],scaleX:0,scaleY:0,translateX:-700,translateZ:0}]],reset:{transformOriginX:"50%",transformOriginY:"50%",scaleX:1,scaleY:1,translateX:0}},"transition.whirlIn":{defaultDuration:850,calls:[[{opacity:[1,0],transformOriginX:["50%","50%"],transformOriginY:["50%","50%"],scaleX:[1,0],scaleY:[1,0],rotateY:[0,160]},1,{easing:"easeInOutSine"}]]},"transition.whirlOut":{defaultDuration:750,calls:[[{opacity:[0,"easeInOutQuint",1],transformOriginX:["50%","50%"],transformOriginY:["50%","50%"],scaleX:0,scaleY:0,rotateY:160},1,{easing:"swing"}]],reset:{scaleX:1,scaleY:1,rotateY:0}},"transition.shrinkIn":{defaultDuration:750,calls:[[{opacity:[1,0],transformOriginX:["50%","50%"],transformOriginY:["50%","50%"],scaleX:[1,1.5],scaleY:[1,1.5],translateZ:0}]]},"transition.shrinkOut":{defaultDuration:600,calls:[[{opacity:[0,1],transformOriginX:["50%","50%"],transformOriginY:["50%","50%"],scaleX:1.3,scaleY:1.3,translateZ:0}]],reset:{scaleX:1,scaleY:1}},"transition.expandIn":{defaultDuration:700,calls:[[{opacity:[1,0],transformOriginX:["50%","50%"],transformOriginY:["50%","50%"],scaleX:[1,.625],scaleY:[1,.625],translateZ:0}]]},"transition.expandOut":{defaultDuration:700,calls:[[{opacity:[0,1],transformOriginX:["50%","50%"],transformOriginY:["50%","50%"],scaleX:.5,scaleY:.5,translateZ:0}]],reset:{scaleX:1,scaleY:1}},"transition.bounceIn":{defaultDuration:800,calls:[[{opacity:[1,0],scaleX:[1.05,.3],scaleY:[1.05,.3]},.4],[{scaleX:.9,scaleY:.9,translateZ:0},.2],[{scaleX:1,scaleY:1},.5]]},"transition.bounceOut":{defaultDuration:800,calls:[[{scaleX:.95,scaleY:.95},.35],[{scaleX:1.1,scaleY:1.1,translateZ:0},.35],[{opacity:[0,1],scaleX:.3,scaleY:.3},.3]],reset:{scaleX:1,scaleY:1}},"transition.bounceUpIn":{defaultDuration:800,calls:[[{opacity:[1,0],translateY:[-30,1e3]},.6,{easing:"easeOutCirc"}],[{translateY:10},.2],[{translateY:0},.2]]},"transition.bounceUpOut":{defaultDuration:1e3,calls:[[{translateY:20},.2],[{opacity:[0,"easeInCirc",1],translateY:-1e3},.8]],reset:{translateY:0}},"transition.bounceDownIn":{defaultDuration:800,calls:[[{opacity:[1,0],translateY:[30,-1e3]},.6,{easing:"easeOutCirc"}],[{translateY:-10},.2],[{translateY:0},.2]]},"transition.bounceDownOut":{defaultDuration:1e3,calls:[[{translateY:-20},.2],[{opacity:[0,"easeInCirc",1],translateY:1e3},.8]],reset:{translateY:0}},"transition.bounceLeftIn":{defaultDuration:750,calls:[[{opacity:[1,0],translateX:[30,-1250]},.6,{easing:"easeOutCirc"}],[{translateX:-10},.2],[{translateX:0},.2]]},"transition.bounceLeftOut":{defaultDuration:750,calls:[[{translateX:30},.2],[{opacity:[0,"easeInCirc",1],translateX:-1250},.8]],reset:{translateX:0}},"transition.bounceRightIn":{defaultDuration:750,calls:[[{opacity:[1,0],translateX:[-30,1250]},.6,{easing:"easeOutCirc"}],[{translateX:10},.2],[{translateX:0},.2]]},"transition.bounceRightOut":{defaultDuration:750,calls:[[{translateX:-30},.2],[{opacity:[0,"easeInCirc",1],translateX:1250},.8]],reset:{translateX:0}},"transition.slideUpIn":{defaultDuration:900,calls:[[{opacity:[1,0],translateY:[0,20],translateZ:0}]]},"transition.slideUpOut":{defaultDuration:900,calls:[[{opacity:[0,1],translateY:-20,translateZ:0}]],reset:{translateY:0}},"transition.slideDownIn":{defaultDuration:900,calls:[[{opacity:[1,0],translateY:[0,-20],translateZ:0}]]},"transition.slideDownOut":{defaultDuration:900,calls:[[{opacity:[0,1],translateY:20,translateZ:0}]],reset:{translateY:0}},"transition.slideLeftIn":{defaultDuration:1e3,calls:[[{opacity:[1,0],translateX:[0,-20],translateZ:0}]]},"transition.slideLeftOut":{defaultDuration:1050,calls:[[{opacity:[0,1],translateX:-20,translateZ:0}]],reset:{translateX:0}},"transition.slideRightIn":{defaultDuration:1e3,calls:[[{opacity:[1,0],translateX:[0,20],translateZ:0}]]},"transition.slideRightOut":{defaultDuration:1050,calls:[[{opacity:[0,1],translateX:20,translateZ:0}]],reset:{translateX:0}},"transition.slideUpBigIn":{defaultDuration:850,calls:[[{opacity:[1,0],translateY:[0,75],translateZ:0}]]},"transition.slideUpBigOut":{defaultDuration:800,calls:[[{opacity:[0,1],translateY:-75,translateZ:0}]],reset:{translateY:0}},"transition.slideDownBigIn":{defaultDuration:850,calls:[[{opacity:[1,0],translateY:[0,-75],translateZ:0}]]},"transition.slideDownBigOut":{defaultDuration:800,calls:[[{opacity:[0,1],translateY:75,translateZ:0}]],reset:{translateY:0}},"transition.slideLeftBigIn":{defaultDuration:800,calls:[[{opacity:[1,0],translateX:[0,-75],translateZ:0}]]},"transition.slideLeftBigOut":{defaultDuration:750,calls:[[{opacity:[0,1],translateX:-75,translateZ:0}]],reset:{translateX:0}},"transition.slideRightBigIn":{defaultDuration:800,calls:[[{opacity:[1,0],translateX:[0,75],translateZ:0}]]},"transition.slideRightBigOut":{defaultDuration:750,calls:[[{opacity:[0,1],translateX:75,translateZ:0}]],reset:{translateX:0}},"transition.perspectiveUpIn":{defaultDuration:800,calls:[[{opacity:[1,0],transformPerspective:[800,800],transformOriginX:[0,0],transformOriginY:["100%","100%"],rotateX:[0,-180]}]],reset:{transformPerspective:0,transformOriginX:"50%",transformOriginY:"50%"}},"transition.perspectiveUpOut":{defaultDuration:850,calls:[[{opacity:[0,1],transformPerspective:[800,800],transformOriginX:[0,0],transformOriginY:["100%","100%"],rotateX:-180}]],reset:{transformPerspective:0,transformOriginX:"50%",transformOriginY:"50%",rotateX:0}},"transition.perspectiveDownIn":{defaultDuration:800,calls:[[{opacity:[1,0],transformPerspective:[800,800],transformOriginX:[0,0],transformOriginY:[0,0],rotateX:[0,180]}]],reset:{transformPerspective:0,transformOriginX:"50%",transformOriginY:"50%"}},"transition.perspectiveDownOut":{defaultDuration:850,calls:[[{opacity:[0,1],transformPerspective:[800,800],transformOriginX:[0,0],transformOriginY:[0,0],rotateX:180}]],reset:{transformPerspective:0,transformOriginX:"50%",transformOriginY:"50%",rotateX:0}},"transition.perspectiveLeftIn":{defaultDuration:950,calls:[[{opacity:[1,0],transformPerspective:[2e3,2e3],transformOriginX:[0,0],transformOriginY:[0,0],rotateY:[0,-180]}]],reset:{transformPerspective:0,transformOriginX:"50%",transformOriginY:"50%"}},"transition.perspectiveLeftOut":{defaultDuration:950,calls:[[{opacity:[0,1],transformPerspective:[2e3,2e3],transformOriginX:[0,0],transformOriginY:[0,0],rotateY:-180}]],reset:{transformPerspective:0,transformOriginX:"50%",transformOriginY:"50%",rotateY:0}},"transition.perspectiveRightIn":{defaultDuration:950,calls:[[{opacity:[1,0],transformPerspective:[2e3,2e3],transformOriginX:["100%","100%"],transformOriginY:[0,0],rotateY:[0,180]}]],reset:{transformPerspective:0,transformOriginX:"50%",transformOriginY:"50%"}},"transition.perspectiveRightOut":{defaultDuration:950,calls:[[{opacity:[0,1],transformPerspective:[2e3,2e3],transformOriginX:["100%","100%"],transformOriginY:[0,0],rotateY:180}]],reset:{transformPerspective:0,transformOriginX:"50%",transformOriginY:"50%",rotateY:0}}};for(var k in f.RegisterEffect.packagedEffects)f.RegisterEffect.packagedEffects.hasOwnProperty(k)&&f.RegisterEffect(k,f.RegisterEffect.packagedEffects[k]);f.RunSequence=function(a){var b=g.extend(!0,[],a);b.length>1&&(g.each(b.reverse(),function(a,c){var d=b[a+1];if(d){var e=c.o||c.options,h=d.o||d.options,i=e&&e.sequenceQueue===!1?"begin":"complete",j=h&&h[i],k={};k[i]=function(){var a=d.e||d.elements,b=a.nodeType?[a]:a;j&&j.call(b,b),f(c)},d.o?d.o=g.extend({},h,k):d.options=g.extend({},h,k)}}),b.reverse()),f(b[0])}}(window.jQuery||window.Zepto||window,window,document)});
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+
+	__webpack_require__(17);
 
 	__webpack_require__(18);
 
+	/*doc
+	 ---
+	 title: Table 表格
+	 name: table
+	 category: 组件
+	 ---
+
+	展示行列数据。
+
+	 ## 何时使用
+
+	 * 当有大量结构化的数据需要展现时；
+	 * 当需要对数据进行排序、分页等复杂行为时。
+
+	## 代码演示
+
+	 ```html_example
+	 <table class="lud-table lud-table--bordered lud-table--fixed-layout" role="grid">
+	 <thead>
+	 <tr class="lud-text-title--caps">
+	 <th class="lud-cell-shrink" scope="col">
+	 </th>
+	 <th class="lud-is-sortable lud-is-sorted lud-is-sorted--asc" scope="col" aria-sort="ascending" aria-label="Opportunity Name">
+	 <a href="javascript:void(0);" class="lud-th__action lud-text-link--reset">
+	 <span class="lud-assistive-text">Sort </span><span class="lud-truncate" title="Opportunity Name">Opportunity Name</span>
+	r </a>
+	 </th>
+	 <th class="lud-is-sortable" scope="col" aria-label="Account Name">
+	 <a href="javascript:void(0);" class="lud-th__action lud-text-link--reset">
+	 <span class="lud-assistive-text">Sort </span>
+	 <span class="lud-truncate" title="Account Name">Account Name</span>
+	 <lud-icon type="arrowdown" class="lud-is-sortable__icon"></lud-icon>
+	 <span class="lud-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+	 </a>
+	 </th>
+	 <th class="lud-is-sortable" scope="col" aria-label="Close Date">
+	 <a href="javascript:void(0);" class="lud-th__action lud-text-link--reset">
+	 <span class="lud-assistive-text">Sort </span>
+	 <span class="lud-truncate" title="Close Date">Close Date</span>
+	 <lud-icon type="arrowdown" class="lud-is-sortable__icon"></lud-icon>
+	 <span class="lud-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+	 </a>
+	 </th>
+	 <th class="lud-is-sortable" scope="col" aria-label="Stage">
+	 <a href="javascript:void(0);" class="lud-th__action lud-text-link--reset">
+	 <span class="lud-assistive-text">Sort </span>
+	 <span class="lud-truncate" title="Stage">Stage</span>
+	 <lud-icon type="arrowdown" class="lud-is-sortable__icon"></lud-icon>
+	 <span class="lud-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+	 </a>
+	 </th>
+	 <th class="lud-is-sortable" scope="col" aria-label="Confidence">
+	 <a href="javascript:void(0);" class="lud-th__action lud-text-link--reset">
+	 <span class="lud-assistive-text">Sort </span>
+	 <span class="lud-truncate" title="Confidence">Confidence</span>
+	 <lud-icon type="arrowdown" class="lud-is-sortable__icon"></lud-icon>
+	 <span class="lud-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+	 </a>
+	 </th>
+	 <th class="lud-is-sortable" scope="col" aria-label="Amount">
+	 <a href="javascript:void(0);" class="lud-th__action lud-text-link--reset">
+	 <span class="lud-assistive-text">Sort </span>
+	 <span class="lud-truncate" title="Amount">Amount</span>
+	 <lud-icon type="arrowdown" class="lud-is-sortable__icon"></lud-icon>
+	 <span class="lud-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+	 </a>
+	 </th>
+	 <th class="lud-is-sortable" scope="col" aria-label="Contact">
+	 <a href="javascript:void(0);" class="lud-th__action lud-text-link--reset">
+	 <span class="lud-assistive-text">Sort </span>
+	 <span class="lud-truncate" title="Contact">Contact</span>
+	 <lud-icon type="arrowdown" class="lud-is-sortable__icon"></lud-icon>
+	 <span class="lud-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+	 </a>
+	 </th>
+	 <th class="lud-cell-shrink" scope="col"></th>
+	 </tr>
+	 </thead>
+	 <tbody>
+	 <tr class="lud-hint-parent">
+	 <td role="gridcell" class="lud-cell-shrink">
+	 <label class="lud-checkbox">
+	 <input type="checkbox" name="options" />
+	 <span class="lud-checkbox--faux"></span>
+	 <span class="lud-assistive-text">Select row Anypoint Connectors</span>
+	 </label>
+	 </td>
+	 <th scope="row">
+	 <div class="lud-truncate" title="Anypoint Connectors">Anypoint Connectors</div>
+	 </th>
+	 <td role="gridcell">
+	 <div class="lud-truncate" title="Cloudhub">Cloudhub</div>
+	 </td>
+	 <td role="gridcell">
+	 <div class="lud-truncate" title="4/14/2015">4/14/2015</div>
+	 </td>
+	 <td role="gridcell">
+	 <div class="lud-truncate" title="Prospecting">Prospecting</div>
+	 </td>
+	 <td role="gridcell" data-label="Confidence">
+	 <div class="lud-truncate" title="20%">20%</div>
+	 </td>
+	 <td role="gridcell" data-label="Amount">
+	 <div class="lud-truncate" title="$25k">$25k</div>
+	 </td>
+	 <td role="gridcell" data-label="Contact">
+	 <div class="lud-truncate" title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div>
+	 </td>
+	 <td role="gridcell" class="lud-cell-shrink" data-label="Actions">
+	 <button class="lud-button lud-button--icon-border lud-button--icon-x-small">
+	 <lud-icon type="down" class="lud-is-sortable__icon"></lud-icon>
+	 <span class="lud-assistive-text">Show More</span>
+	 </button>
+	 </td>
+	 </tr>
+	 <tr class="lud-hint-parent">
+	 <td role="gridcell" class="lud-cell-shrink" data-label="Select row Cloudhub">
+	 <label class="lud-checkbox">
+	 <input type="checkbox" name="options" />
+	 <span class="lud-checkbox--faux"></span>
+	 <span class="lud-assistive-text">Select row Cloudhub</span>
+	 </label>
+	 </td>
+	 <th scope="row" data-label="Opportunity Name">
+	 <div class="lud-truncate" title="Cloudhub">Cloudhub</div>
+	 </th>
+	 <td role="gridcell" data-label="Account Name">
+	 <div class="lud-truncate" title="Cloudhub">Cloudhub</div>
+	 </td>
+	 <td role="gridcell" data-label="Close Date">
+	 <div class="lud-truncate" title="4/14/2015">4/14/2015</div>
+	 </td>
+	 <td role="gridcell" data-label="Prospecting">
+	 <div class="lud-truncate" title="Prospecting">Prospecting</div>
+	 </td>
+	 <td role="gridcell" data-label="Confidence">
+	 <div class="lud-truncate" title="20%">20%</div>
+	 </td>
+	 <td role="gridcell" data-label="Amount">
+	 <div class="lud-truncate" title="$25k">$25k</div>
+	 </td>
+	 <td role="gridcell" data-label="Contact">
+	 <div class="lud-truncate" title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div>
+	 </td>
+	 <td role="gridcell" class="lud-cell-shrink" data-label="Actions">
+	 <button class="lud-button lud-button--icon-border lud-button--icon-x-small">
+	 <lud-icon type="down" class="lud-is-sortable__icon"></lud-icon>
+	 <span class="lud-assistive-text">Show More</span>
+	 </button>
+	 </td>
+	 </tr>
+	 </tbody>
+	 </table>
+	 ```
+
+	 ```html_example
+	 <table class="lud-table lud-table--bordered lud-table--cell-buffer lud-table--striped">
+	 <thead>
+	 <tr class="lud-text-title--caps">
+	 <th scope="col">
+	 <div class="lud-truncate" title="Opportunity Name">Opportunity Name</div>
+	 </th>
+	 <th scope="col">
+	 <div class="lud-truncate" title="Account Name">Account Name</div>
+	 </th>
+	 <th scope="col">
+	 <div class="lud-truncate" title="Close Date">Close Date</div>
+	 </th>
+	 <th scope="col">
+	 <div class="lud-truncate" title="Stage">Stage</div>
+	 </th>
+	 <th scope="col">
+	 <div class="lud-truncate" title="Confidence">Confidence</div>
+	 </th>
+	 <th scope="col">
+	 <div class="lud-truncate" title="Amount">Amount</div>
+	 </th>
+	 <th scope="col">
+	 <div class="lud-truncate" title="Contact">Contact</div>
+	 </th>
+	 </tr>
+	 </thead>
+	 <tbody>
+	 <tr>
+	 <th scope="row" data-label="Opportunity Name">
+	 <div class="lud-truncate" title="Cloudhub"><a href="javascript:void(0);">Cloudhub</a></div>
+	 </th>
+	 <td data-label="Account Name">
+	 <div class="lud-truncate" title="Cloudhub">Cloudhub</div>
+	 </td>
+	 <td data-label="Close Date">
+	 <div class="lud-truncate" title="4/14/2015">4/14/2015</div>
+	 </td>
+	 <td data-label="Prospecting">
+	 <div class="lud-truncate" title="Prospecting">Prospecting</div>
+	 </td>
+	 <td data-label="Confidence">
+	 <div class="lud-truncate" title="20%">20%</div>
+	 </td>
+	 <td data-label="Amount">
+	 <div class="lud-truncate" title="$25k">$25k</div>
+	 </td>
+	 <td data-label="Contact">
+	 <div class="lud-truncate" title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div>
+	 </td>
+	 </tr>
+	 <tr>
+	 <th scope="row" data-label="Opportunity Name">
+	 <div class="lud-truncate" title="Cloudhub + Anypoint Connectors"><a href="javascript:void(0);">Cloudhub + Anypoint Connectors</a></div>
+	 </th>
+	 <td data-label="Account Name">
+	 <div class="lud-truncate" title="Cloudhub">Cloudhub</div>
+	 </td>
+	 <td data-label="Close Date">
+	 <div class="lud-truncate" title="4/14/2015">4/14/2015</div>
+	 </td>
+	 <td data-label="Prospecting">
+	 <div class="lud-truncate" title="Prospecting">Prospecting</div>
+	 </td>
+	 <td data-label="Confidence">
+	 <div class="lud-truncate" title="20%">20%</div>
+	 </td>
+	 <td data-label="Amount">
+	 <div class="lud-truncate" title="$25k">$25k</div>
+	 </td>
+	 <td data-label="Contact">
+	 <div class="lud-truncate" title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div>
+	 </td>
+	 </tr>
+	 <tr>
+	 <th scope="row" data-label="Opportunity Name">
+	 <div class="lud-truncate" title="Cloudhub"><a href="javascript:void(0);">Cloudhub</a></div>
+	 </th>
+	 <td data-label="Account Name">
+	 <div class="lud-truncate" title="Cloudhub">Cloudhub</div>
+	 </td>
+	 <td data-label="Close Date">
+	 <div class="lud-truncate" title="4/14/2015">4/14/2015</div>
+	 </td>
+	 <td data-label="Prospecting">
+	 <div class="lud-truncate" title="Prospecting">Prospecting</div>
+	 </td>
+	 <td data-label="Confidence">
+	 <div class="lud-truncate" title="20%">20%</div>
+	 </td>
+	 <td data-label="Amount">
+	 <div class="lud-truncate" title="$25k">$25k</div>
+	 </td>
+	 <td data-label="Contact">
+	 <div class="lud-truncate" title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div>
+	 </td>
+	 </tr>
+	 </tbody>
+	 </table>
+	 ```
+
+	 ```html_example
+	 <table class="lud-table lud-table--bordered lud-table--cell-buffer lud-table--col-bordered">
+	 <thead>
+	 <tr class="lud-text-title--caps">
+	 <th scope="col">
+	 <div class="lud-truncate" title="Opportunity Name">Opportunity Name</div>
+	 </th>
+	 <th scope="col">
+	 <div class="lud-truncate" title="Account Name">Account Name</div>
+	 </th>
+	 <th scope="col">
+	 <div class="lud-truncate" title="Close Date">Close Date</div>
+	 </th>
+	 <th scope="col">
+	 <div class="lud-truncate" title="Stage">Stage</div>
+	 </th>
+	 <th scope="col">
+	 <div class="lud-truncate" title="Confidence">Confidence</div>
+	 </th>
+	 <th scope="col">
+	 <div class="lud-truncate" title="Amount">Amount</div>
+	 </th>
+	 <th scope="col">
+	 <div class="lud-truncate" title="Contact">Contact</div>
+	 </th>
+	 </tr>
+	 </thead>
+	 <tbody>
+	 <tr>
+	 <th scope="row" data-label="Opportunity Name">
+	 <div class="lud-truncate" title="Cloudhub"><a href="javascript:void(0);">Cloudhub</a></div>
+	 </th>
+	 <td data-label="Account Name">
+	 <div class="lud-truncate" title="Cloudhub">Cloudhub</div>
+	 </td>
+	 <td data-label="Close Date">
+	 <div class="lud-truncate" title="4/14/2015">4/14/2015</div>
+	 </td>
+	 <td data-label="Prospecting">
+	 <div class="lud-truncate" title="Prospecting">Prospecting</div>
+	 </td>
+	 <td data-label="Confidence">
+	 <div class="lud-truncate" title="20%">20%</div>
+	 </td>
+	 <td data-label="Amount">
+	 <div class="lud-truncate" title="$25k">$25k</div>
+	 </td>
+	 <td data-label="Contact">
+	 <div class="lud-truncate" title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div>
+	 </td>
+	 </tr>
+	 <tr>
+	 <th scope="row" data-label="Opportunity Name">
+	 <div class="lud-truncate" title="Cloudhub + Anypoint Connectors"><a href="javascript:void(0);">Cloudhub + Anypoint Connectors</a></div>
+	 </th>
+	 <td data-label="Account Name">
+	 <div class="lud-truncate" title="Cloudhub">Cloudhub</div>
+	 </td>
+	 <td data-label="Close Date">
+	 <div class="lud-truncate" title="4/14/2015">4/14/2015</div>
+	 </td>
+	 <td data-label="Prospecting">
+	 <div class="lud-truncate" title="Prospecting">Prospecting</div>
+	 </td>
+	 <td data-label="Confidence">
+	 <div class="lud-truncate" title="20%">20%</div>
+	 </td>
+	 <td data-label="Amount">
+	 <div class="lud-truncate" title="$25k">$25k</div>
+	 </td>
+	 <td data-label="Contact">
+	 <div class="lud-truncate" title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div>
+	 </td>
+	 </tr>
+	 </tbody>
+	 </table>
+	 ```
+	 */
+
+	$(document).on("turbolinks:load", function () {
+	  return $('table.lud-table--sticky').stickyTableHeaders();
+	});
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+
 /***/ },
-/* 18 */
+/* 17 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(jQuery) {/*! Copyright (c) 2011 by Jonas Mosbech - https://github.com/jmosbech/StickyTableHeaders
+		MIT license info: https://github.com/jmosbech/StickyTableHeaders/blob/master/license.txt */
+
+	;(function ($, window, undefined) {
+		'use strict';
+
+		var name = 'stickyTableHeaders',
+			id = 0,
+			defaults = {
+				fixedOffset: 0,
+				leftOffset: 0,
+				marginTop: 0,
+				objDocument: document,
+				objHead: 'head',
+				objWindow: window,
+				scrollableArea: window,
+				cacheHeaderHeight: false
+			};
+
+		function Plugin (el, options) {
+			// To avoid scope issues, use 'base' instead of 'this'
+			// to reference this class from internal events and functions.
+			var base = this;
+
+			// Access to jQuery and DOM versions of element
+			base.$el = $(el);
+			base.el = el;
+			base.id = id++;
+
+			// Listen for destroyed, call teardown
+			base.$el.bind('destroyed',
+				$.proxy(base.teardown, base));
+
+			// Cache DOM refs for performance reasons
+			base.$clonedHeader = null;
+			base.$originalHeader = null;
+
+			// Cache header height for performance reasons
+			base.cachedHeaderHeight = null;
+
+			// Keep track of state
+			base.isSticky = false;
+			base.hasBeenSticky = false;
+			base.leftOffset = null;
+			base.topOffset = null;
+
+			base.init = function () {
+				base.setOptions(options);
+
+				base.$el.each(function () {
+					var $this = $(this);
+
+					// remove padding on <table> to fix issue #7
+					$this.css('padding', 0);
+
+					base.$originalHeader = $('thead:first', this);
+					base.$clonedHeader = base.$originalHeader.clone();
+					$this.trigger('clonedHeader.' + name, [base.$clonedHeader]);
+
+					base.$clonedHeader.addClass('tableFloatingHeader');
+					base.$clonedHeader.css({display: 'none', opacity: 0.0});
+
+					base.$originalHeader.addClass('tableFloatingHeaderOriginal');
+
+					base.$originalHeader.after(base.$clonedHeader);
+
+					base.$printStyle = $('<style type="text/css" media="print">' +
+						'.tableFloatingHeader{display:none !important;}' +
+						'.tableFloatingHeaderOriginal{position:static !important;}' +
+						'</style>');
+					base.$head.append(base.$printStyle);
+				});
+
+				base.updateWidth();
+				base.toggleHeaders();
+				base.bind();
+			};
+
+			base.destroy = function (){
+				base.$el.unbind('destroyed', base.teardown);
+				base.teardown();
+			};
+
+			base.teardown = function(){
+				if (base.isSticky) {
+					base.$originalHeader.css('position', 'static');
+				}
+				$.removeData(base.el, 'plugin_' + name);
+				base.unbind();
+
+				base.$clonedHeader.remove();
+				base.$originalHeader.removeClass('tableFloatingHeaderOriginal');
+				base.$originalHeader.css('visibility', 'visible');
+				base.$printStyle.remove();
+
+				base.el = null;
+				base.$el = null;
+			};
+
+			base.bind = function(){
+				base.$scrollableArea.on('scroll.' + name, base.toggleHeaders);
+				if (!base.isWindowScrolling) {
+					base.$window.on('scroll.' + name + base.id, base.setPositionValues);
+					base.$window.on('resize.' + name + base.id, base.toggleHeaders);
+				}
+				base.$scrollableArea.on('resize.' + name, base.toggleHeaders);
+				base.$scrollableArea.on('resize.' + name, base.updateWidth);
+			};
+
+			base.unbind = function(){
+				// unbind window events by specifying handle so we don't remove too much
+				base.$scrollableArea.off('.' + name, base.toggleHeaders);
+				if (!base.isWindowScrolling) {
+					base.$window.off('.' + name + base.id, base.setPositionValues);
+					base.$window.off('.' + name + base.id, base.toggleHeaders);
+				}
+				base.$scrollableArea.off('.' + name, base.updateWidth);
+			};
+
+			// We debounce the functions bound to the scroll and resize events
+			base.debounce = function (fn, delay) {
+				var timer = null;
+				return function () {
+					var context = this, args = arguments;
+					clearTimeout(timer);
+					timer = setTimeout(function () {
+						fn.apply(context, args);
+					}, delay);
+				};
+			};
+
+			base.toggleHeaders = base.debounce(function () {
+				if (base.$el) {
+					base.$el.each(function () {
+						var $this = $(this),
+							newLeft,
+							newTopOffset = base.isWindowScrolling ? (
+										isNaN(base.options.fixedOffset) ?
+										base.options.fixedOffset.outerHeight() :
+										base.options.fixedOffset
+									) :
+									base.$scrollableArea.offset().top + (!isNaN(base.options.fixedOffset) ? base.options.fixedOffset : 0),
+							offset = $this.offset(),
+
+							scrollTop = base.$scrollableArea.scrollTop() + newTopOffset,
+							scrollLeft = base.$scrollableArea.scrollLeft(),
+
+							headerHeight = base.options.cacheHeaderHeight ? base.cachedHeaderHeight : base.$clonedHeader.height(),
+
+							scrolledPastTop = base.isWindowScrolling ?
+									scrollTop > offset.top :
+									newTopOffset > offset.top,
+							notScrolledPastBottom = (base.isWindowScrolling ? scrollTop : 0) <
+								(offset.top + $this.height() - headerHeight - (base.isWindowScrolling ? 0 : newTopOffset));
+
+						if (scrolledPastTop && notScrolledPastBottom) {
+							newLeft = offset.left - scrollLeft + base.options.leftOffset;
+							base.$originalHeader.css({
+								'position': 'fixed',
+								'margin-top': base.options.marginTop,
+								'left': newLeft,
+								'z-index': 3 // #18: opacity bug
+							});
+							base.leftOffset = newLeft;
+							base.topOffset = newTopOffset;
+							base.$clonedHeader.css('display', '');
+							if (!base.isSticky) {
+								base.isSticky = true;
+								// make sure the width is correct: the user might have resized the browser while in static mode
+								base.updateWidth();
+								$this.trigger('enabledStickiness.' + name);
+							}
+							base.setPositionValues();
+						} else if (base.isSticky) {
+							base.$originalHeader.css('position', 'static');
+							base.$clonedHeader.css('display', 'none');
+							base.isSticky = false;
+							base.resetWidth($('td,th', base.$clonedHeader), $('td,th', base.$originalHeader));
+							$this.trigger('disabledStickiness.' + name);
+						}
+					});
+				}
+			}, 0);
+
+			base.setPositionValues = base.debounce(function () {
+				var winScrollTop = base.$window.scrollTop(),
+					winScrollLeft = base.$window.scrollLeft();
+				if (!base.isSticky ||
+						winScrollTop < 0 || winScrollTop + base.$window.height() > base.$document.height() ||
+						winScrollLeft < 0 || winScrollLeft + base.$window.width() > base.$document.width()) {
+					return;
+				}
+				base.$originalHeader.css({
+					'top': base.topOffset - (base.isWindowScrolling ? 0 : winScrollTop),
+					'left': base.leftOffset - (base.isWindowScrolling ? 0 : winScrollLeft)
+				});
+			}, 0);
+
+			base.updateWidth = base.debounce(function () {
+				if (!base.isSticky) {
+					return;
+				}
+				// Copy cell widths from clone
+				if (!base.$originalHeaderCells) {
+					base.$originalHeaderCells = $('th,td', base.$originalHeader);
+				}
+				if (!base.$clonedHeaderCells) {
+					base.$clonedHeaderCells = $('th,td', base.$clonedHeader);
+				}
+				var cellWidths = base.getWidth(base.$clonedHeaderCells);
+				base.setWidth(cellWidths, base.$clonedHeaderCells, base.$originalHeaderCells);
+
+				// Copy row width from whole table
+				base.$originalHeader.css('width', base.$clonedHeader.width());
+
+				// If we're caching the height, we need to update the cached value when the width changes
+				if (base.options.cacheHeaderHeight) {
+					base.cachedHeaderHeight = base.$clonedHeader.height();
+				}
+			}, 0);
+
+			base.getWidth = function ($clonedHeaders) {
+				var widths = [];
+				$clonedHeaders.each(function (index) {
+					var width, $this = $(this);
+
+					if ($this.css('box-sizing') === 'border-box') {
+						var boundingClientRect = $this[0].getBoundingClientRect();
+						if(boundingClientRect.width) {
+							width = boundingClientRect.width; // #39: border-box bug
+						} else {
+							width = boundingClientRect.right - boundingClientRect.left; // ie8 bug: getBoundingClientRect() does not have a width property
+						}
+					} else {
+						var $origTh = $('th', base.$originalHeader);
+						if ($origTh.css('border-collapse') === 'collapse') {
+							if (window.getComputedStyle) {
+								width = parseFloat(window.getComputedStyle(this, null).width);
+							} else {
+								// ie8 only
+								var leftPadding = parseFloat($this.css('padding-left'));
+								var rightPadding = parseFloat($this.css('padding-right'));
+								// Needs more investigation - this is assuming constant border around this cell and it's neighbours.
+								var border = parseFloat($this.css('border-width'));
+								width = $this.outerWidth() - leftPadding - rightPadding - border;
+							}
+						} else {
+							width = $this.width();
+						}
+					}
+
+					widths[index] = width;
+				});
+				return widths;
+			};
+
+			base.setWidth = function (widths, $clonedHeaders, $origHeaders) {
+				$clonedHeaders.each(function (index) {
+					var width = widths[index];
+					$origHeaders.eq(index).css({
+						'min-width': width,
+						'max-width': width
+					});
+				});
+			};
+
+			base.resetWidth = function ($clonedHeaders, $origHeaders) {
+				$clonedHeaders.each(function (index) {
+					var $this = $(this);
+					$origHeaders.eq(index).css({
+						'min-width': $this.css('min-width'),
+						'max-width': $this.css('max-width')
+					});
+				});
+			};
+
+			base.setOptions = function (options) {
+				base.options = $.extend({}, defaults, options);
+				base.$window = $(base.options.objWindow);
+				base.$head = $(base.options.objHead);
+				base.$document = $(base.options.objDocument);
+				base.$scrollableArea = $(base.options.scrollableArea);
+				base.isWindowScrolling = base.$scrollableArea[0] === base.$window[0];
+			};
+
+			base.updateOptions = function (options) {
+				base.setOptions(options);
+				// scrollableArea might have changed
+				base.unbind();
+				base.bind();
+				base.updateWidth();
+				base.toggleHeaders();
+			};
+
+			// Run initializer
+			base.init();
+		}
+
+		// A plugin wrapper around the constructor,
+		// preventing against multiple instantiations
+		$.fn[name] = function ( options ) {
+			return this.each(function () {
+				var instance = $.data(this, 'plugin_' + name);
+				if (instance) {
+					if (typeof options === 'string') {
+						instance[options].apply(instance);
+					} else {
+						instance.updateOptions(options);
+					}
+				} else if(options !== 'destroy') {
+					$.data(this, 'plugin_' + name, new Plugin( this, options ));
+				}
+			});
+		};
+
+	})(jQuery, window);
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
 /* 19 */
@@ -14136,7 +14862,7 @@
 
 	__webpack_require__(23);
 
-	var _jquery = __webpack_require__(2);
+	var _jquery = __webpack_require__(5);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -14204,7 +14930,7 @@
 	(function (factory) {
 	  if (true) {
 	    // AMD. Register as an anonymous module.
-	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(2)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(5)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	  } else if (typeof exports === 'object') {
 	    // Node/CommonJS
 	    factory(require('jquery'));
@@ -20631,13 +21357,13 @@
 	  return select2;
 	}));
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
 /* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+	'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -20705,9 +21431,8 @@
 	    key: 'created',
 	    value: function created(el) {
 	      el.input_name = el.name;
-	      var $el = $(el);
-	      $el.attr('name', el.input_name + '-wrap');
-	      $el.on('toggle', function () {
+	      el.setAttribute('name', el.input_name + '-wrap');
+	      el.addEventListener('toggle', function () {
 	        if (el.disabled) return false;
 	        el.checked = !el.checked;
 	      });
@@ -20739,7 +21464,6 @@
 	};
 
 	skate.define('lud-toggle', ludToggle);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
 /* 25 */
@@ -20907,10 +21631,11 @@
 	var name$1 = '____skate_name';
 	var props = '____skate_props';
 	var ref$1 = '____skate_ref';
-	var renderer = '____skate_renderer';
+	var renderer$1 = '____skate_renderer';
 	var rendering = '____skate_rendering';
 	var rendererDebounced = '____skate_rendererDebounced';
 	var shadowRoot = '____skate_shadowRoot';
+	var updated$1 = '____skate_updated';
 
 
 
@@ -21617,33 +22342,72 @@
 	  return namespace && (data[namespace] || (data[namespace] = {})) || data; // eslint-disable-line no-mixed-operators
 	};
 
-	var longerTimeoutBrowsers = ['Edge', 'Trident', 'Firefox'];
-	var timeoutDuration = 0;
-	for (var i = 0; i < longerTimeoutBrowsers.length; i += 1) {
-	  if (navigator.userAgent.indexOf(longerTimeoutBrowsers[i]) >= 0) {
-	    timeoutDuration = 1;
-	    break;
-	  }
-	}
+	var nativeHints = ['native code', '[object MutationObserverConstructor]' // for mobile safari iOS 9.0
+	];
+	var native = (function (fn) {
+	  return nativeHints.map(function (hint) {
+	    return (fn || '').toString().indexOf([hint]) > -1;
+	  }).reduce(function (a, b) {
+	    return a || b;
+	  });
+	});
 
-	var debounce = function (fn) {
-	  var _this = this;
+	var _window$2 = window;
+	var MutationObserver = _window$2.MutationObserver;
 
-	  var called = false;
+
+	function microtaskDebounce(cbFunc) {
+	  var scheduled = false;
+	  var i = 0;
+	  var cbArgs = [];
+	  var elem = document.createElement('span');
+	  var observer = new MutationObserver(function () {
+	    cbFunc.apply(undefined, toConsumableArray(cbArgs));
+	    scheduled = false;
+	    cbArgs = null;
+	  });
+
+	  observer.observe(elem, { childList: true });
+
 	  return function () {
 	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
 	      args[_key] = arguments[_key];
 	    }
 
-	    if (!called) {
-	      called = true;
-	      setTimeout(function () {
-	        called = false;
-	        fn.apply(_this, args);
-	      }, timeoutDuration);
+	    cbArgs = args;
+	    if (!scheduled) {
+	      scheduled = true;
+	      elem.textContent = '' + i;
+	      i += 1;
 	    }
 	  };
-	};
+	}
+
+	// We have to use setTimeout() for IE9 and 10 because the Mutation Observer
+	// polyfill requires that the element be in the document to trigger Mutation
+	// Events. Mutation Events are also synchronous and thus wouldn't debounce.
+	//
+	// The soonest we can set the timeout for in IE is 1 as they have issues when
+	// setting to 0.
+	function taskDebounce(cbFunc) {
+	  var scheduled = false;
+	  var cbArgs = [];
+	  return function () {
+	    for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+	      args[_key2] = arguments[_key2];
+	    }
+
+	    cbArgs = args;
+	    if (!scheduled) {
+	      scheduled = true;
+	      setTimeout(function () {
+	        scheduled = false;
+	        cbFunc.apply(undefined, toConsumableArray(cbArgs));
+	      }, 1);
+	    }
+	  };
+	}
+	var debounce = native(MutationObserver) ? microtaskDebounce : taskDebounce;
 
 	var getOwnPropertyDescriptors = function () {
 	  var obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
@@ -21652,6 +22416,26 @@
 	    prev[curr] = Object.getOwnPropertyDescriptor(obj, curr);
 	    return prev;
 	  }, {});
+	};
+
+	function get$2(elem) {
+	  var props$$1 = {};
+	  keys(elem.constructor.props).forEach(function (key) {
+	    props$$1[key] = elem[key];
+	  });
+
+	  return props$$1;
+	}
+
+	function set$2(elem, newProps) {
+	  assign(elem, newProps);
+	  if (elem.constructor[renderer$1]) {
+	    elem.constructor[renderer$1](elem);
+	  }
+	}
+
+	var props$1 = function (elem, newProps) {
+	  return typeof newProps === 'undefined' ? get$2(elem) : set$2(elem, newProps);
 	};
 
 	function getDefaultValue(elem, name, opts) {
@@ -21725,13 +22509,30 @@
 	  }
 	}
 
+	var _window$1 = window;
+	var HTMLElement = _window$1.HTMLElement;
+
+	// Abstracts shadow root across v1, v0 and no support.
+	// Once v1 is supported everywhere, we can call elem.attachShadow() directly
+	// and remove this function.
+
+	function attachShadow(elem) {
+	  if (shadowDomV1) {
+	    return elem.attachShadow({ mode: 'open' });
+	  } else if (shadowDomV0) {
+	    return elem.createShadowRoot();
+	  }
+	  return elem;
+	}
+
+	function getOrAttachShadow(elem) {
+	  return elem[shadowRoot] || (elem[shadowRoot] = attachShadow(elem));
+	}
+
 	function callConstructor(elem) {
 	  var elemData = data(elem);
 	  var readyCallbacks = elemData.readyCallbacks;
-	  var Ctor = elem.constructor;
-	  var created$$1 = Ctor.created;
-	  var observedAttributes = Ctor.observedAttributes;
-	  var props$$1 = Ctor.props;
+	  var constructor = elem.constructor;
 
 	  // Ensures that this can never be called twice.
 
@@ -21742,16 +22543,16 @@
 	  elem[created$1] = true;
 
 	  // Set up a renderer that is debounced for property sets to call directly.
-	  elem[rendererDebounced] = debounce(Ctor[renderer]);
+	  elem[rendererDebounced] = debounce(constructor[renderer$1].bind(constructor));
 
 	  // Set up property lifecycle.
-	  if (props$$1 && Ctor[props]) {
-	    Ctor[props](elem);
+	  if (constructor.props && constructor[props]) {
+	    constructor[props](elem);
 	  }
 
 	  // Props should be set up before calling this.
-	  if (created$$1) {
-	    created$$1(elem);
+	  if (typeof constructor.created === 'function') {
+	    constructor.created(elem);
 	  }
 
 	  // Created should be set before invoking the ready listeners.
@@ -21766,7 +22567,7 @@
 	  // that aren't linked to props so that the callback behaves the same no
 	  // matter if v0 or v1 is being used.
 	  if (customElementsV0) {
-	    observedAttributes.forEach(function (name$$1) {
+	    constructor.observedAttributes.forEach(function (name$$1) {
 	      var propertyName = data(elem, 'attributeLinks')[name$$1];
 	      if (!propertyName) {
 	        elem.attributeChangedCallback(name$$1, null, elem.getAttribute(name$$1));
@@ -21784,34 +22585,29 @@
 	}
 
 	function callConnected(elem) {
-	  var Ctor = elem.constructor;
-	  var attached = Ctor.attached;
+	  var constructor = elem.constructor;
 
-	  var render = Ctor[renderer];
 
 	  syncPropsToAttrs(elem);
 
 	  elem[connected] = true;
+	  elem[rendererDebounced](elem);
 
-	  if (typeof render === 'function') {
-	    render(elem);
-	  }
-
-	  if (typeof attached === 'function') {
-	    attached(elem);
+	  if (typeof constructor.attached === 'function') {
+	    constructor.attached(elem);
 	  }
 
 	  elem.setAttribute('defined', '');
 	}
 
 	function callDisconnected(elem) {
-	  var detached = elem.constructor.detached;
+	  var constructor = elem.constructor;
 
 
 	  elem[connected] = false;
 
-	  if (typeof detached === 'function') {
-	    detached(elem);
+	  if (typeof constructor.detached === 'function') {
+	    constructor.detached(elem);
 	  }
 	}
 
@@ -21875,6 +22671,28 @@
 
 	// Skate
 	//
+	// Incremental DOM renderer.
+	Component.renderer = function renderer(_ref) {
+	  var elem = _ref.elem;
+	  var render = _ref.render;
+	  var shadowRoot$$1 = _ref.shadowRoot;
+
+	  incrementalDom.patchInner(shadowRoot$$1, function () {
+	    var possibleFn = render(elem);
+	    if (typeof possibleFn === 'function') {
+	      possibleFn();
+	    } else if (Array.isArray(possibleFn)) {
+	      possibleFn.forEach(function (fn) {
+	        if (typeof fn === 'function') {
+	          fn();
+	        }
+	      });
+	    }
+	  });
+	};
+
+	// Skate
+	//
 	// This is a default implementation that does strict equality copmarison on
 	// previous props and next props. It synchronously renders on the first prop
 	// that is different and returns immediately.
@@ -21891,6 +22709,49 @@
 	    }
 	  }
 	  return false;
+	};
+
+	// Skate
+	//
+	// Calls the user-defined updated() lifecycle callback.
+	Component[updated$1] = function _updated(elem) {
+	  if (typeof this.updated === 'function') {
+	    var prev = elem[props];
+	    elem[props] = props$1(elem);
+	    return this.updated(elem, prev);
+	  }
+	  return true;
+	};
+
+	// Skate
+	//
+	// Goes through the user-defined render lifecycle.
+	Component[renderer$1] = function _renderer(elem) {
+	  if (elem[rendering] || !elem[connected]) {
+	    return;
+	  }
+
+	  // Flag as rendering. This prevents anything from trying to render - or
+	  // queueing a render - while there is a pending render.
+	  elem[rendering] = true;
+
+	  var shouldRender = this[updated$1](elem);
+
+	  // Even though this would ideally be checked in the updated() callback,
+	  // it may not be, so we ensure that there is a point in proceeding.
+	  if (!this.render || !this.renderer) {
+	    elem[rendering] = false;
+	    return;
+	  }
+
+	  if (shouldRender) {
+	    this.renderer({ elem: elem, render: this.render, shadowRoot: getOrAttachShadow(elem) });
+	    if (typeof this.rendered === 'function') {
+	      this.rendered(elem);
+	    }
+	  }
+
+	  elem[rendering] = false;
 	};
 
 	Component.prototype = Object.create(HTMLElement.prototype, {
@@ -21973,95 +22834,6 @@
 	    }
 	  }
 	});
-
-	function get$2(elem) {
-	  var props$$1 = {};
-	  keys(elem.constructor.props).forEach(function (key) {
-	    props$$1[key] = elem[key];
-	  });
-
-	  return props$$1;
-	}
-
-	function set$2(elem, newProps) {
-	  assign(elem, newProps);
-	  if (elem.constructor.render) {
-	    elem.constructor[renderer](elem);
-	  }
-	}
-
-	var props$1 = function (elem, newProps) {
-	  return typeof newProps === 'undefined' ? get$2(elem) : set$2(elem, newProps);
-	};
-
-	var createRenderer = function (Ctor) {
-	  var render = Ctor.render;
-	  var rendered = Ctor.rendered;
-	  var updated = Ctor.updated;
-
-
-	  return function (elem) {
-	    if (elem[rendering] || !elem[connected]) {
-	      return;
-	    }
-
-	    // Flag as rendering. This prevents anything from trying to render - or
-	    // queueing a render - while there is a pending render.
-	    elem[rendering] = true;
-
-	    // Call the updated() callback to see if we should render.
-	    var shouldRender = true;
-	    if (updated) {
-	      var prev = elem[props];
-	      elem[props] = props$1(elem);
-	      shouldRender = updated(elem, prev);
-	    }
-
-	    // Even though this would ideally be checked in the updated() callback,
-	    // it may not be, so we ensure that there is a point in proceeding.
-	    if (!render) {
-	      elem[rendering] = false;
-	      return;
-	    }
-
-	    // Try and get the current shadow root (will be setup if not).
-	    var sr = elem[shadowRoot];
-
-	    // Setup the shadow root if it hasn't been setup yet.
-	    if (!sr) {
-	      if (shadowDomV1) {
-	        sr = elem.attachShadow({ mode: 'open' });
-	      } else if (shadowDomV0) {
-	        sr = elem.createShadowRoot();
-	      } else {
-	        sr = elem;
-	      }
-
-	      elem[shadowRoot] = sr;
-	    }
-
-	    if (shouldRender) {
-	      incrementalDom.patchInner(sr, function () {
-	        var possibleFn = render(elem);
-	        if (typeof possibleFn === 'function') {
-	          possibleFn();
-	        } else if (Array.isArray(possibleFn)) {
-	          possibleFn.forEach(function (fn) {
-	            if (typeof fn === 'function') {
-	              fn();
-	            }
-	          });
-	        }
-	      });
-
-	      if (rendered) {
-	        rendered(elem);
-	      }
-	    }
-
-	    elem[rendering] = false;
-	  };
-	};
 
 	var dashCase = function (str) {
 	  return str.split(/([A-Z])/).reduce(function (one, two, idx) {
@@ -22264,7 +23036,6 @@
 	function prepareForRegistration(name$$1, Ctor) {
 	  Ctor[name$1] = name$$1;
 	  Ctor[props] = createInitProps(Ctor);
-	  Ctor[renderer] = createRenderer(Ctor);
 	}
 
 	function registerV0Element(name$$1, Ctor) {
@@ -23562,12 +24333,13 @@
 	      var _classNames;
 
 	      var alertCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, 'lud-alert', true), _defineProperty(_classNames, 'lud-alert--' + el.type, true), _classNames));
-	      var $el = $(el);
 	      var closable = !el.closable ? null : skate.h(
 	        'button',
 	        { type: 'button', 'class': 'lud-alert__close', 'aria-label': 'Close', onClick: function onClick() {
-	            $el.find('div.lud-alert').slideUp('fast', function () {
-	              return $el.remove();
+	            $(el).find('div.lud-alert').velocity('slideUp', {
+	              complete: function complete() {
+	                return el.parentNode.removeChild(el);
+	              }
 	            });
 	          } },
 	        skate.h('i', { className: 'lud-icon lud-icon--close' })
@@ -23599,7 +24371,7 @@
 
 
 	skate.define('lud-alert', ludAlert);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
 /* 30 */
@@ -23665,9 +24437,22 @@
 /* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
 	__webpack_require__(33);
+
+	$(document).on("turbolinks:load", function () {
+	  return $('.lud-aside').on('click', '.lud-aside__collapse > a', function (e) {
+	    var $parent = $(e.currentTarget).parent();
+	    var openCls = 'lud-aside__collapse--open';
+	    if (!$parent.hasClass(openCls)) {
+	      // Accordion.
+	      $('.' + openCls).removeClass(openCls);
+	    }
+	    $parent.toggleClass(openCls);
+	  });
+	});
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
 /* 33 */
@@ -23693,11 +24478,1606 @@
 /* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	__webpack_require__(37);
+
+/***/ },
+/* 37 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 38 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(39);
+
+	var _sweetalert = __webpack_require__(40);
+
+	var _sweetalert2 = _interopRequireDefault(_sweetalert);
+
+	var _lud_module = __webpack_require__(13);
+
+	var _lud_module2 = _interopRequireDefault(_lud_module);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	_lud_module2.default.alert = _sweetalert2.default;
+	_lud_module2.default.alert.success = function (title, text) {
+	  return (0, _sweetalert2.default)(title, text, 'success');
+	};
+	_lud_module2.default.alert.danger = function (title, text) {
+	  return (0, _sweetalert2.default)(title, text, 'error');
+	};
+	_lud_module2.default.alert.warning = function (title, text) {
+	  return (0, _sweetalert2.default)(title, text, 'warning');
+	};
+
+/***/ },
+/* 39 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; // SweetAlert
+	// 2014-2015 (c) - Tristan Edwards
+	// github.com/t4t5/sweetalert
+
+	/*
+	 * jQuery-like functions for manipulating the DOM
+	 */
+
+
+	/*
+	 * Handy utilities
+	 */
+
+
+	/*
+	 *  Handle sweetAlert's DOM elements
+	 */
+
+
+	// Handle button events and keyboard events
+
+
+	// Default values
+
+
+	var _handleDom = __webpack_require__(41);
+
+	var _utils = __webpack_require__(42);
+
+	var _handleSwalDom = __webpack_require__(43);
+
+	var _handleClick = __webpack_require__(46);
+
+	var _handleKey = __webpack_require__(47);
+
+	var _handleKey2 = _interopRequireDefault(_handleKey);
+
+	var _defaultParams = __webpack_require__(44);
+
+	var _defaultParams2 = _interopRequireDefault(_defaultParams);
+
+	var _setParams = __webpack_require__(51);
+
+	var _setParams2 = _interopRequireDefault(_setParams);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/*
+	 * Remember state in cases where opening and handling a modal will fiddle with it.
+	 * (We also use window.previousActiveElement as a global variable)
+	 */
+	var previousWindowKeyDown;
+	var lastFocusedButton;
+
+	/*
+	 * Global sweetAlert function
+	 * (this is what the user calls)
+	 */
+	var sweetAlert, _swal;
+
+	exports.default = sweetAlert = _swal = function swal() {
+	  var customizations = arguments[0];
+
+	  (0, _handleDom.addClass)(document.body, 'stop-scrolling');
+	  (0, _handleSwalDom.resetInput)();
+
+	  /*
+	   * Use argument if defined or default value from params object otherwise.
+	   * Supports the case where a default value is boolean true and should be
+	   * overridden by a corresponding explicit argument which is boolean false.
+	   */
+	  function argumentOrDefault(key) {
+	    var args = customizations;
+	    return args[key] === undefined ? _defaultParams2.default[key] : args[key];
+	  }
+
+	  if (customizations === undefined) {
+	    (0, _utils.logStr)('SweetAlert expects at least 1 attribute!');
+	    return false;
+	  }
+
+	  var params = (0, _utils.extend)({}, _defaultParams2.default);
+
+	  switch (typeof customizations === 'undefined' ? 'undefined' : _typeof(customizations)) {
+
+	    // Ex: swal("Hello", "Just testing", "info");
+	    case 'string':
+	      params.title = customizations;
+	      params.text = arguments[1] || '';
+	      params.type = arguments[2] || '';
+	      break;
+
+	    // Ex: swal({ title:"Hello", text: "Just testing", type: "info" });
+	    case 'object':
+	      if (customizations.title === undefined) {
+	        (0, _utils.logStr)('Missing "title" argument!');
+	        return false;
+	      }
+
+	      params.title = customizations.title;
+
+	      for (var customName in _defaultParams2.default) {
+	        params[customName] = argumentOrDefault(customName);
+	      }
+
+	      // Show "Confirm" instead of "OK" if cancel button is visible
+	      params.confirmButtonText = params.showCancelButton ? 'Confirm' : _defaultParams2.default.confirmButtonText;
+	      params.confirmButtonText = argumentOrDefault('confirmButtonText');
+
+	      // Callback function when clicking on "OK"/"Cancel"
+	      params.doneFunction = arguments[1] || null;
+
+	      break;
+
+	    default:
+	      (0, _utils.logStr)('Unexpected type of argument! Expected "string" or "object", got ' + (typeof customizations === 'undefined' ? 'undefined' : _typeof(customizations)));
+	      return false;
+
+	  }
+
+	  (0, _setParams2.default)(params);
+	  (0, _handleSwalDom.fixVerticalPosition)();
+	  (0, _handleSwalDom.openModal)(arguments[1]);
+
+	  // Modal interactions
+	  var modal = (0, _handleSwalDom.getModal)();
+
+	  /*
+	   * Make sure all modal buttons respond to all events
+	   */
+	  var $buttons = modal.querySelectorAll('button');
+	  var buttonEvents = ['onclick', 'onmouseover', 'onmouseout', 'onmousedown', 'onmouseup', 'onfocus'];
+	  var onButtonEvent = function onButtonEvent(e) {
+	    return (0, _handleClick.handleButton)(e, params, modal);
+	  };
+
+	  for (var btnIndex = 0; btnIndex < $buttons.length; btnIndex++) {
+	    for (var evtIndex = 0; evtIndex < buttonEvents.length; evtIndex++) {
+	      var btnEvt = buttonEvents[evtIndex];
+	      $buttons[btnIndex][btnEvt] = onButtonEvent;
+	    }
+	  }
+
+	  // Clicking outside the modal dismisses it (if allowed by user)
+	  (0, _handleSwalDom.getOverlay)().onclick = onButtonEvent;
+
+	  previousWindowKeyDown = window.onkeydown;
+
+	  var onKeyEvent = function onKeyEvent(e) {
+	    return (0, _handleKey2.default)(e, params, modal);
+	  };
+	  window.onkeydown = onKeyEvent;
+
+	  window.onfocus = function () {
+	    // When the user has focused away and focused back from the whole window.
+	    setTimeout(function () {
+	      // Put in a timeout to jump out of the event sequence.
+	      // Calling focus() in the event sequence confuses things.
+	      if (lastFocusedButton !== undefined) {
+	        lastFocusedButton.focus();
+	        lastFocusedButton = undefined;
+	      }
+	    }, 0);
+	  };
+
+	  // Show alert with enabled buttons always
+	  _swal.enableButtons();
+	};
+
+	/*
+	 * Set default params for each popup
+	 * @param {Object} userParams
+	 */
+
+
+	sweetAlert.setDefaults = _swal.setDefaults = function (userParams) {
+	  if (!userParams) {
+	    throw new Error('userParams is required');
+	  }
+	  if ((typeof userParams === 'undefined' ? 'undefined' : _typeof(userParams)) !== 'object') {
+	    throw new Error('userParams has to be a object');
+	  }
+
+	  (0, _utils.extend)(_defaultParams2.default, userParams);
+	};
+
+	/*
+	 * Animation when closing modal
+	 */
+	sweetAlert.close = _swal.close = function () {
+	  var modal = (0, _handleSwalDom.getModal)();
+
+	  (0, _handleDom.fadeOut)((0, _handleSwalDom.getOverlay)(), 5);
+	  (0, _handleDom.fadeOut)(modal, 5);
+	  (0, _handleDom.removeClass)(modal, 'showSweetAlert');
+	  (0, _handleDom.addClass)(modal, 'hideSweetAlert');
+	  (0, _handleDom.removeClass)(modal, 'visible');
+
+	  /*
+	   * Reset icon animations
+	   */
+	  var $successIcon = modal.querySelector('.sa-icon.sa-success');
+	  (0, _handleDom.removeClass)($successIcon, 'animate');
+	  (0, _handleDom.removeClass)($successIcon.querySelector('.sa-tip'), 'animateSuccessTip');
+	  (0, _handleDom.removeClass)($successIcon.querySelector('.sa-long'), 'animateSuccessLong');
+
+	  var $errorIcon = modal.querySelector('.sa-icon.sa-error');
+	  (0, _handleDom.removeClass)($errorIcon, 'animateErrorIcon');
+	  (0, _handleDom.removeClass)($errorIcon.querySelector('.sa-x-mark'), 'animateXMark');
+
+	  var $warningIcon = modal.querySelector('.sa-icon.sa-warning');
+	  (0, _handleDom.removeClass)($warningIcon, 'pulseWarning');
+	  (0, _handleDom.removeClass)($warningIcon.querySelector('.sa-body'), 'pulseWarningIns');
+	  (0, _handleDom.removeClass)($warningIcon.querySelector('.sa-dot'), 'pulseWarningIns');
+
+	  // Reset custom class (delay so that UI changes aren't visible)
+	  setTimeout(function () {
+	    var customClass = modal.getAttribute('data-custom-class');
+	    (0, _handleDom.removeClass)(modal, customClass);
+	  }, 300);
+
+	  // Make page scrollable again
+	  (0, _handleDom.removeClass)(document.body, 'stop-scrolling');
+
+	  // Reset the page to its previous state
+	  window.onkeydown = previousWindowKeyDown;
+	  if (window.previousActiveElement) {
+	    window.previousActiveElement.focus();
+	  }
+	  lastFocusedButton = undefined;
+	  clearTimeout(modal.timeout);
+
+	  return true;
+	};
+
+	/*
+	 * Validation of the input field is done by user
+	 * If something is wrong => call showInputError with errorMessage
+	 */
+	sweetAlert.showInputError = _swal.showInputError = function (errorMessage) {
+	  var modal = (0, _handleSwalDom.getModal)();
+
+	  var $errorIcon = modal.querySelector('.sa-input-error');
+	  (0, _handleDom.addClass)($errorIcon, 'show');
+
+	  var $errorContainer = modal.querySelector('.sa-error-container');
+	  (0, _handleDom.addClass)($errorContainer, 'show');
+
+	  $errorContainer.querySelector('p').innerHTML = errorMessage;
+
+	  setTimeout(function () {
+	    sweetAlert.enableButtons();
+	  }, 1);
+
+	  modal.querySelector('input').focus();
+	};
+
+	/*
+	 * Reset input error DOM elements
+	 */
+	sweetAlert.resetInputError = _swal.resetInputError = function (event) {
+	  // If press enter => ignore
+	  if (event && event.keyCode === 13) {
+	    return false;
+	  }
+
+	  var $modal = (0, _handleSwalDom.getModal)();
+
+	  var $errorIcon = $modal.querySelector('.sa-input-error');
+	  (0, _handleDom.removeClass)($errorIcon, 'show');
+
+	  var $errorContainer = $modal.querySelector('.sa-error-container');
+	  (0, _handleDom.removeClass)($errorContainer, 'show');
+	};
+
+	/*
+	 * Disable confirm and cancel buttons
+	 */
+	sweetAlert.disableButtons = _swal.disableButtons = function (event) {
+	  var modal = (0, _handleSwalDom.getModal)();
+	  var $confirmButton = modal.querySelector('button.confirm');
+	  var $cancelButton = modal.querySelector('button.cancel');
+	  $confirmButton.disabled = true;
+	  $cancelButton.disabled = true;
+	};
+
+	/*
+	 * Enable confirm and cancel buttons
+	 */
+	sweetAlert.enableButtons = _swal.enableButtons = function (event) {
+	  var modal = (0, _handleSwalDom.getModal)();
+	  var $confirmButton = modal.querySelector('button.confirm');
+	  var $cancelButton = modal.querySelector('button.cancel');
+	  $confirmButton.disabled = false;
+	  $cancelButton.disabled = false;
+	};
+
+	if (typeof window !== 'undefined') {
+	  // The 'handle-click' module requires
+	  // that 'sweetAlert' was set as global.
+	  window.sweetAlert = window.swal = sweetAlert;
+	} else {
+	  (0, _utils.logStr)('SweetAlert is a frontend module!');
+	}
+
+/***/ },
+/* 41 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	var hasClass = function hasClass(elem, className) {
+	  return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+	};
+
+	var addClass = function addClass(elem, className) {
+	  if (!hasClass(elem, className)) {
+	    elem.className += ' ' + className;
+	  }
+	};
+
+	var removeClass = function removeClass(elem, className) {
+	  var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
+	  if (hasClass(elem, className)) {
+	    while (newClass.indexOf(' ' + className + ' ') >= 0) {
+	      newClass = newClass.replace(' ' + className + ' ', ' ');
+	    }
+	    elem.className = newClass.replace(/^\s+|\s+$/g, '');
+	  }
+	};
+
+	var escapeHtml = function escapeHtml(str) {
+	  var div = document.createElement('div');
+	  div.appendChild(document.createTextNode(str));
+	  return div.innerHTML;
+	};
+
+	var _show = function _show(elem) {
+	  elem.style.opacity = '';
+	  elem.style.display = 'block';
+	};
+
+	var show = function show(elems) {
+	  if (elems && !elems.length) {
+	    return _show(elems);
+	  }
+	  for (var i = 0; i < elems.length; ++i) {
+	    _show(elems[i]);
+	  }
+	};
+
+	var _hide = function _hide(elem) {
+	  elem.style.opacity = '';
+	  elem.style.display = 'none';
+	};
+
+	var hide = function hide(elems) {
+	  if (elems && !elems.length) {
+	    return _hide(elems);
+	  }
+	  for (var i = 0; i < elems.length; ++i) {
+	    _hide(elems[i]);
+	  }
+	};
+
+	var isDescendant = function isDescendant(parent, child) {
+	  var node = child.parentNode;
+	  while (node !== null) {
+	    if (node === parent) {
+	      return true;
+	    }
+	    node = node.parentNode;
+	  }
+	  return false;
+	};
+
+	var getTopMargin = function getTopMargin(elem) {
+	  elem.style.left = '-9999px';
+	  elem.style.display = 'block';
+
+	  var height = elem.clientHeight,
+	      padding;
+	  if (typeof getComputedStyle !== 'undefined') {
+	    // IE 8
+	    padding = parseInt(getComputedStyle(elem).getPropertyValue('padding-top'), 10);
+	  } else {
+	    padding = parseInt(elem.currentStyle.padding);
+	  }
+
+	  elem.style.left = '';
+	  elem.style.display = 'none';
+	  return '-' + parseInt((height + padding) / 2) + 'px';
+	};
+
+	var fadeIn = function fadeIn(elem, interval) {
+	  if (+elem.style.opacity < 1) {
+	    interval = interval || 16;
+	    elem.style.opacity = 0;
+	    elem.style.display = 'block';
+	    var last = +new Date();
+	    var tick = (function (_tick) {
+	      function tick() {
+	        return _tick.apply(this, arguments);
+	      }
+
+	      tick.toString = function () {
+	        return _tick.toString();
+	      };
+
+	      return tick;
+	    })(function () {
+	      elem.style.opacity = +elem.style.opacity + (new Date() - last) / 100;
+	      last = +new Date();
+
+	      if (+elem.style.opacity < 1) {
+	        setTimeout(tick, interval);
+	      }
+	    });
+	    tick();
+	  }
+	  elem.style.display = 'block'; //fallback IE8
+	};
+
+	var fadeOut = function fadeOut(elem, interval) {
+	  interval = interval || 16;
+	  elem.style.opacity = 1;
+	  var last = +new Date();
+	  var tick = (function (_tick2) {
+	    function tick() {
+	      return _tick2.apply(this, arguments);
+	    }
+
+	    tick.toString = function () {
+	      return _tick2.toString();
+	    };
+
+	    return tick;
+	  })(function () {
+	    elem.style.opacity = +elem.style.opacity - (new Date() - last) / 100;
+	    last = +new Date();
+
+	    if (+elem.style.opacity > 0) {
+	      setTimeout(tick, interval);
+	    } else {
+	      elem.style.display = 'none';
+	    }
+	  });
+	  tick();
+	};
+
+	var fireClick = function fireClick(node) {
+	  // Taken from http://www.nonobtrusive.com/2011/11/29/programatically-fire-crossbrowser-click-event-with-javascript/
+	  // Then fixed for today's Chrome browser.
+	  if (typeof MouseEvent === 'function') {
+	    // Up-to-date approach
+	    var mevt = new MouseEvent('click', {
+	      view: window,
+	      bubbles: false,
+	      cancelable: true
+	    });
+	    node.dispatchEvent(mevt);
+	  } else if (document.createEvent) {
+	    // Fallback
+	    var evt = document.createEvent('MouseEvents');
+	    evt.initEvent('click', false, false);
+	    node.dispatchEvent(evt);
+	  } else if (document.createEventObject) {
+	    node.fireEvent('onclick');
+	  } else if (typeof node.onclick === 'function') {
+	    node.onclick();
+	  }
+	};
+
+	var stopEventPropagation = function stopEventPropagation(e) {
+	  // In particular, make sure the space bar doesn't scroll the main window.
+	  if (typeof e.stopPropagation === 'function') {
+	    e.stopPropagation();
+	    e.preventDefault();
+	  } else if (window.event && window.event.hasOwnProperty('cancelBubble')) {
+	    window.event.cancelBubble = true;
+	  }
+	};
+
+	exports.hasClass = hasClass;
+	exports.addClass = addClass;
+	exports.removeClass = removeClass;
+	exports.escapeHtml = escapeHtml;
+	exports._show = _show;
+	exports.show = show;
+	exports._hide = _hide;
+	exports.hide = hide;
+	exports.isDescendant = isDescendant;
+	exports.getTopMargin = getTopMargin;
+	exports.fadeIn = fadeIn;
+	exports.fadeOut = fadeOut;
+	exports.fireClick = fireClick;
+	exports.stopEventPropagation = stopEventPropagation;
+
+/***/ },
+/* 42 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	/*
+	 * Allow user to pass their own params
+	 */
+	var extend = function extend(a, b) {
+	  for (var key in b) {
+	    if (b.hasOwnProperty(key)) {
+	      a[key] = b[key];
+	    }
+	  }
+	  return a;
+	};
+
+	/*
+	 * Convert HEX codes to RGB values (#000000 -> rgb(0,0,0))
+	 */
+	var hexToRgb = function hexToRgb(hex) {
+	  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+	  return result ? parseInt(result[1], 16) + ', ' + parseInt(result[2], 16) + ', ' + parseInt(result[3], 16) : null;
+	};
+
+	/*
+	 * Check if the user is using Internet Explorer 8 (for fallbacks)
+	 */
+	var isIE8 = function isIE8() {
+	  return window.attachEvent && !window.addEventListener;
+	};
+
+	/*
+	 * IE compatible logging for developers
+	 */
+	var logStr = function logStr(string) {
+	  if (window.console) {
+	    // IE...
+	    window.console.log('SweetAlert: ' + string);
+	  }
+	};
+
+	/*
+	 * Set hover, active and focus-states for buttons 
+	 * (source: http://www.sitepoint.com/javascript-generate-lighter-darker-color)
+	 */
+	var colorLuminance = function colorLuminance(hex, lum) {
+	  // Validate hex string
+	  hex = String(hex).replace(/[^0-9a-f]/gi, '');
+	  if (hex.length < 6) {
+	    hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+	  }
+	  lum = lum || 0;
+
+	  // Convert to decimal and change luminosity
+	  var rgb = '#';
+	  var c;
+	  var i;
+
+	  for (i = 0; i < 3; i++) {
+	    c = parseInt(hex.substr(i * 2, 2), 16);
+	    c = Math.round(Math.min(Math.max(0, c + c * lum), 255)).toString(16);
+	    rgb += ('00' + c).substr(c.length);
+	  }
+
+	  return rgb;
+	};
+
+	exports.extend = extend;
+	exports.hexToRgb = hexToRgb;
+	exports.isIE8 = isIE8;
+	exports.logStr = logStr;
+	exports.colorLuminance = colorLuminance;
+
+/***/ },
+/* 43 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.fixVerticalPosition = exports.resetInputError = exports.resetInput = exports.openModal = exports.setFocusStyle = exports.getInput = exports.getOverlay = exports.getModal = exports.sweetAlertInitialize = undefined;
+
+	var _utils = __webpack_require__(42);
+
+	var _handleDom = __webpack_require__(41);
+
+	var _defaultParams = __webpack_require__(44);
+
+	var _defaultParams2 = _interopRequireDefault(_defaultParams);
+
+	var _injectedHtml = __webpack_require__(45);
+
+	var _injectedHtml2 = _interopRequireDefault(_injectedHtml);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var modalClass = '.sweet-alert';
+	var overlayClass = '.sweet-overlay';
+
+	/*
+	 * Add modal + overlay to DOM
+	 */
+
+
+	var sweetAlertInitialize = function sweetAlertInitialize() {
+	  var sweetWrap = document.createElement('div');
+	  sweetWrap.innerHTML = _injectedHtml2.default;
+
+	  // Append elements to body
+	  while (sweetWrap.firstChild) {
+	    document.body.appendChild(sweetWrap.firstChild);
+	  }
+	};
+
+	/*
+	 * Get DOM element of modal
+	 */
+	var getModal = function getModal() {
+	  var $modal = document.querySelector(modalClass);
+
+	  if (!$modal) {
+	    sweetAlertInitialize();
+	    $modal = getModal();
+	  }
+
+	  return $modal;
+	};
+
+	/*
+	 * Get DOM element of input (in modal)
+	 */
+	var getInput = function getInput() {
+	  var $modal = getModal();
+	  if ($modal) {
+	    return $modal.querySelector('input');
+	  }
+	};
+
+	/*
+	 * Get DOM element of overlay
+	 */
+	var getOverlay = function getOverlay() {
+	  return document.querySelector(overlayClass);
+	};
+
+	/*
+	 * Add box-shadow style to button (depending on its chosen bg-color)
+	 */
+	var setFocusStyle = function setFocusStyle($button, bgColor) {
+	  var rgbColor = (0, _utils.hexToRgb)(bgColor);
+	  $button.style.boxShadow = '0 0 2px rgba(' + rgbColor + ', 0.8), inset 0 0 0 1px rgba(0, 0, 0, 0.05)';
+	};
+
+	/*
+	 * Animation when opening modal
+	 */
+	var openModal = function openModal(callback) {
+	  var $modal = getModal();
+	  (0, _handleDom.fadeIn)(getOverlay(), 10);
+	  (0, _handleDom.show)($modal);
+	  (0, _handleDom.addClass)($modal, 'showSweetAlert');
+	  (0, _handleDom.removeClass)($modal, 'hideSweetAlert');
+
+	  window.previousActiveElement = document.activeElement;
+	  var $okButton = $modal.querySelector('button.confirm');
+	  $okButton.focus();
+
+	  setTimeout(function () {
+	    (0, _handleDom.addClass)($modal, 'visible');
+	  }, 500);
+
+	  var timer = $modal.getAttribute('data-timer');
+
+	  if (timer !== 'null' && timer !== '') {
+	    var timerCallback = callback;
+	    $modal.timeout = setTimeout(function () {
+	      var doneFunctionExists = (timerCallback || null) && $modal.getAttribute('data-has-done-function') === 'true';
+	      if (doneFunctionExists) {
+	        timerCallback(null);
+	      } else {
+	        sweetAlert.close();
+	      }
+	    }, timer);
+	  }
+	};
+
+	/*
+	 * Reset the styling of the input
+	 * (for example if errors have been shown)
+	 */
+	var resetInput = function resetInput() {
+	  var $modal = getModal();
+	  var $input = getInput();
+
+	  (0, _handleDom.removeClass)($modal, 'show-input');
+	  $input.value = _defaultParams2.default.inputValue;
+	  $input.setAttribute('type', _defaultParams2.default.inputType);
+	  $input.setAttribute('placeholder', _defaultParams2.default.inputPlaceholder);
+
+	  resetInputError();
+	};
+
+	var resetInputError = function resetInputError(event) {
+	  // If press enter => ignore
+	  if (event && event.keyCode === 13) {
+	    return false;
+	  }
+
+	  var $modal = getModal();
+
+	  var $errorIcon = $modal.querySelector('.sa-input-error');
+	  (0, _handleDom.removeClass)($errorIcon, 'show');
+
+	  var $errorContainer = $modal.querySelector('.sa-error-container');
+	  (0, _handleDom.removeClass)($errorContainer, 'show');
+	};
+
+	/*
+	 * Set "margin-top"-property on modal based on its computed height
+	 */
+	var fixVerticalPosition = function fixVerticalPosition() {
+	  var $modal = getModal();
+	  $modal.style.marginTop = (0, _handleDom.getTopMargin)(getModal());
+	};
+
+	exports.sweetAlertInitialize = sweetAlertInitialize;
+	exports.getModal = getModal;
+	exports.getOverlay = getOverlay;
+	exports.getInput = getInput;
+	exports.setFocusStyle = setFocusStyle;
+	exports.openModal = openModal;
+	exports.resetInput = resetInput;
+	exports.resetInputError = resetInputError;
+	exports.fixVerticalPosition = fixVerticalPosition;
+
+/***/ },
+/* 44 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var defaultParams = {
+	  title: '',
+	  text: '',
+	  type: null,
+	  allowOutsideClick: false,
+	  showConfirmButton: true,
+	  showCancelButton: false,
+	  closeOnConfirm: true,
+	  closeOnCancel: true,
+	  confirmButtonText: '确认',
+	  confirmButtonColor: '',
+	  cancelButtonText: '取消',
+	  imageUrl: null,
+	  imageSize: null,
+	  timer: null,
+	  customClass: '',
+	  html: false,
+	  animation: true,
+	  allowEscapeKey: true,
+	  inputType: 'text',
+	  inputPlaceholder: '',
+	  inputValue: '',
+	  showLoaderOnConfirm: false
+	};
+
+	exports.default = defaultParams;
+
+/***/ },
+/* 45 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var injectedHTML =
+
+	// Dark overlay
+	"<div class=\"sweet-overlay\" tabIndex=\"-1\"></div>" +
+
+	// Modal
+	"<div class=\"sweet-alert\">" +
+
+	// Error icon
+	"<div class=\"sa-icon sa-error\">\n      <span class=\"sa-x-mark\">\n        <span class=\"sa-line sa-left\"></span>\n        <span class=\"sa-line sa-right\"></span>\n      </span>\n    </div>" +
+
+	// Warning icon
+	"<div class=\"sa-icon sa-warning\">\n      <span class=\"sa-body\"></span>\n      <span class=\"sa-dot\"></span>\n    </div>" +
+
+	// Info icon
+	"<div class=\"sa-icon sa-info\"></div>" +
+
+	// Success icon
+	"<div class=\"sa-icon sa-success\">\n      <span class=\"sa-line sa-tip\"></span>\n      <span class=\"sa-line sa-long\"></span>\n\n      <div class=\"sa-placeholder\"></div>\n      <div class=\"sa-fix\"></div>\n    </div>" + "<div class=\"sa-icon sa-custom\"></div>" +
+
+	// Title, text and input
+	"<h2>Title</h2>\n    <p>Text</p>\n    <fieldset>\n      <input type=\"text\" tabIndex=\"3\" />\n      <div class=\"sa-input-error\"></div>\n    </fieldset>" +
+
+	// Input errors
+	"<div class=\"sa-error-container\">\n      <div class=\"icon\">!</div>\n      <p>Not valid!</p>\n    </div>" +
+
+	// Cancel and confirm buttons
+	"<div class=\"sa-button-container\">\n      <button class=\"lud-btn cancel\" tabIndex=\"2\">Cancel</button>\n      <div class=\"sa-confirm-button-container\">\n        <button class=\"lud-btn lud-btn--primary confirm\" tabIndex=\"1\">OK</button>" +
+
+	// Loading animation
+	"<div class=\"la-ball-fall\">\n          <div></div>\n          <div></div>\n          <div></div>\n        </div>\n      </div>\n    </div>" +
+
+	// End of modal
+	"</div>";
+
+	exports.default = injectedHTML;
+
+/***/ },
+/* 46 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	var _colorLuminance = __webpack_require__(42);
+
+	var _getModal = __webpack_require__(43);
+
+	var _hasClass$isDescendant = __webpack_require__(41);
+
+	/*
+	 * User clicked on "Confirm"/"OK" or "Cancel"
+	 */
+	var handleButton = function handleButton(event, params, modal) {
+	  var e = event || window.event;
+	  var target = e.target || e.srcElement;
+
+	  var targetedConfirm = target.className.indexOf('confirm') !== -1;
+	  var targetedOverlay = target.className.indexOf('sweet-overlay') !== -1;
+	  var modalIsVisible = _hasClass$isDescendant.hasClass(modal, 'visible');
+	  var doneFunctionExists = params.doneFunction && modal.getAttribute('data-has-done-function') === 'true';
+
+	  // Since the user can change the background-color of the confirm button programmatically,
+	  // we must calculate what the color should be on hover/active
+	  var normalColor, hoverColor, activeColor;
+	  if (targetedConfirm && params.confirmButtonColor) {
+	    normalColor = params.confirmButtonColor;
+	    hoverColor = _colorLuminance.colorLuminance(normalColor, -0.04);
+	    activeColor = _colorLuminance.colorLuminance(normalColor, -0.14);
+	  }
+
+	  function shouldSetConfirmButtonColor(color) {
+	    if (targetedConfirm && params.confirmButtonColor) {
+	      target.style.backgroundColor = color;
+	    }
+	  }
+
+	  switch (e.type) {
+	    case 'mouseover':
+	      shouldSetConfirmButtonColor(hoverColor);
+	      break;
+
+	    case 'mouseout':
+	      shouldSetConfirmButtonColor(normalColor);
+	      break;
+
+	    case 'mousedown':
+	      shouldSetConfirmButtonColor(activeColor);
+	      break;
+
+	    case 'mouseup':
+	      shouldSetConfirmButtonColor(hoverColor);
+	      break;
+
+	    case 'focus':
+	      var $confirmButton = modal.querySelector('button.confirm');
+	      var $cancelButton = modal.querySelector('button.cancel');
+
+	      if (targetedConfirm) {
+	        $cancelButton.style.boxShadow = 'none';
+	      } else {
+	        $confirmButton.style.boxShadow = 'none';
+	      }
+	      break;
+
+	    case 'click':
+	      e.stopPropagation();
+	      var clickedOnModal = modal === target;
+	      var clickedOnModalChild = _hasClass$isDescendant.isDescendant(modal, target);
+
+	      // Ignore click outside if allowOutsideClick is false
+	      if (!clickedOnModal && !clickedOnModalChild && modalIsVisible && !params.allowOutsideClick) {
+	        break;
+	      }
+
+	      if (targetedConfirm && doneFunctionExists && modalIsVisible) {
+	        handleConfirm(modal, params);
+	      } else if (doneFunctionExists && modalIsVisible || targetedOverlay) {
+	        handleCancel(modal, params);
+	      } else if (_hasClass$isDescendant.isDescendant(modal, target) && target.tagName === 'BUTTON') {
+	        sweetAlert.close();
+	      }
+	      break;
+	  }
+	};
+
+	/*
+	 *  User clicked on "Confirm"/"OK"
+	 */
+	var handleConfirm = function handleConfirm(modal, params) {
+	  var callbackValue = true;
+
+	  if (_hasClass$isDescendant.hasClass(modal, 'show-input')) {
+	    callbackValue = modal.querySelector('input').value;
+
+	    if (!callbackValue) {
+	      callbackValue = '';
+	    }
+	  }
+
+	  params.doneFunction(callbackValue);
+
+	  if (params.closeOnConfirm) {
+	    sweetAlert.close();
+	  }
+	  // Disable cancel and confirm button if the parameter is true
+	  if (params.showLoaderOnConfirm) {
+	    sweetAlert.disableButtons();
+	  }
+	};
+
+	/*
+	 *  User clicked on "Cancel"
+	 */
+	var handleCancel = function handleCancel(modal, params) {
+	  // Check if callback function expects a parameter (to track cancel actions)
+	  var functionAsStr = String(params.doneFunction).replace(/\s/g, '');
+	  var functionHandlesCancel = functionAsStr.substring(0, 9) === 'function(' && functionAsStr.substring(9, 10) !== ')';
+
+	  if (functionHandlesCancel) {
+	    params.doneFunction(false);
+	  }
+
+	  if (params.closeOnCancel) {
+	    sweetAlert.close();
+	  }
+	};
+
+	exports['default'] = {
+	  handleButton: handleButton,
+	  handleConfirm: handleConfirm,
+	  handleCancel: handleCancel
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 47 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	var _stopEventPropagation$fireClick = __webpack_require__(41);
+
+	var _setFocusStyle = __webpack_require__(48);
+
+	var handleKeyDown = function handleKeyDown(event, params, modal) {
+	  var e = event || window.event;
+	  var keyCode = e.keyCode || e.which;
+
+	  var $okButton = modal.querySelector('button.confirm');
+	  var $cancelButton = modal.querySelector('button.cancel');
+	  var $modalButtons = modal.querySelectorAll('button[tabindex]');
+
+	  if ([9, 13, 32, 27].indexOf(keyCode) === -1) {
+	    // Don't do work on keys we don't care about.
+	    return;
+	  }
+
+	  var $targetElement = e.target || e.srcElement;
+
+	  var btnIndex = -1; // Find the button - note, this is a nodelist, not an array.
+	  for (var i = 0; i < $modalButtons.length; i++) {
+	    if ($targetElement === $modalButtons[i]) {
+	      btnIndex = i;
+	      break;
+	    }
+	  }
+
+	  if (keyCode === 9) {
+	    // TAB
+	    if (btnIndex === -1) {
+	      // No button focused. Jump to the confirm button.
+	      $targetElement = $okButton;
+	    } else {
+	      // Cycle to the next button
+	      if (btnIndex === $modalButtons.length - 1) {
+	        $targetElement = $modalButtons[0];
+	      } else {
+	        $targetElement = $modalButtons[btnIndex + 1];
+	      }
+	    }
+
+	    _stopEventPropagation$fireClick.stopEventPropagation(e);
+	    $targetElement.focus();
+
+	    if (params.confirmButtonColor) {
+	      _setFocusStyle.setFocusStyle($targetElement, params.confirmButtonColor);
+	    }
+	  } else {
+	    if (keyCode === 13) {
+	      if ($targetElement.tagName === 'INPUT') {
+	        $targetElement = $okButton;
+	        $okButton.focus();
+	      }
+
+	      if (btnIndex === -1) {
+	        // ENTER/SPACE clicked outside of a button.
+	        $targetElement = $okButton;
+	      } else {
+	        // Do nothing - let the browser handle it.
+	        $targetElement = undefined;
+	      }
+	    } else if (keyCode === 27 && params.allowEscapeKey === true) {
+	      $targetElement = $cancelButton;
+	      _stopEventPropagation$fireClick.fireClick($targetElement, e);
+	    } else {
+	      // Fallback - let the browser handle it.
+	      $targetElement = undefined;
+	    }
+	  }
+	};
+
+	exports['default'] = handleKeyDown;
+	module.exports = exports['default'];
+
+/***/ },
+/* 48 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _interopRequireWildcard = function (obj) { return obj && obj.__esModule ? obj : { 'default': obj }; };
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	var _hexToRgb = __webpack_require__(42);
+
+	var _removeClass$getTopMargin$fadeIn$show$addClass = __webpack_require__(41);
+
+	var _defaultParams = __webpack_require__(49);
+
+	var _defaultParams2 = _interopRequireWildcard(_defaultParams);
+
+	/*
+	 * Add modal + overlay to DOM
+	 */
+
+	var _injectedHTML = __webpack_require__(50);
+
+	var _injectedHTML2 = _interopRequireWildcard(_injectedHTML);
+
+	var modalClass = '.sweet-alert';
+	var overlayClass = '.sweet-overlay';
+
+	var sweetAlertInitialize = function sweetAlertInitialize() {
+	  var sweetWrap = document.createElement('div');
+	  sweetWrap.innerHTML = _injectedHTML2['default'];
+
+	  // Append elements to body
+	  while (sweetWrap.firstChild) {
+	    document.body.appendChild(sweetWrap.firstChild);
+	  }
+	};
+
+	/*
+	 * Get DOM element of modal
+	 */
+	var getModal = (function (_getModal) {
+	  function getModal() {
+	    return _getModal.apply(this, arguments);
+	  }
+
+	  getModal.toString = function () {
+	    return _getModal.toString();
+	  };
+
+	  return getModal;
+	})(function () {
+	  var $modal = document.querySelector(modalClass);
+
+	  if (!$modal) {
+	    sweetAlertInitialize();
+	    $modal = getModal();
+	  }
+
+	  return $modal;
+	});
+
+	/*
+	 * Get DOM element of input (in modal)
+	 */
+	var getInput = function getInput() {
+	  var $modal = getModal();
+	  if ($modal) {
+	    return $modal.querySelector('input');
+	  }
+	};
+
+	/*
+	 * Get DOM element of overlay
+	 */
+	var getOverlay = function getOverlay() {
+	  return document.querySelector(overlayClass);
+	};
+
+	/*
+	 * Add box-shadow style to button (depending on its chosen bg-color)
+	 */
+	var setFocusStyle = function setFocusStyle($button, bgColor) {
+	  var rgbColor = _hexToRgb.hexToRgb(bgColor);
+	  $button.style.boxShadow = '0 0 2px rgba(' + rgbColor + ', 0.8), inset 0 0 0 1px rgba(0, 0, 0, 0.05)';
+	};
+
+	/*
+	 * Animation when opening modal
+	 */
+	var openModal = function openModal(callback) {
+	  var $modal = getModal();
+	  _removeClass$getTopMargin$fadeIn$show$addClass.fadeIn(getOverlay(), 10);
+	  _removeClass$getTopMargin$fadeIn$show$addClass.show($modal);
+	  _removeClass$getTopMargin$fadeIn$show$addClass.addClass($modal, 'showSweetAlert');
+	  _removeClass$getTopMargin$fadeIn$show$addClass.removeClass($modal, 'hideSweetAlert');
+
+	  window.previousActiveElement = document.activeElement;
+	  var $okButton = $modal.querySelector('button.confirm');
+	  $okButton.focus();
+
+	  setTimeout(function () {
+	    _removeClass$getTopMargin$fadeIn$show$addClass.addClass($modal, 'visible');
+	  }, 500);
+
+	  var timer = $modal.getAttribute('data-timer');
+
+	  if (timer !== 'null' && timer !== '') {
+	    var timerCallback = callback;
+	    $modal.timeout = setTimeout(function () {
+	      var doneFunctionExists = (timerCallback || null) && $modal.getAttribute('data-has-done-function') === 'true';
+	      if (doneFunctionExists) {
+	        timerCallback(null);
+	      } else {
+	        sweetAlert.close();
+	      }
+	    }, timer);
+	  }
+	};
+
+	/*
+	 * Reset the styling of the input
+	 * (for example if errors have been shown)
+	 */
+	var resetInput = function resetInput() {
+	  var $modal = getModal();
+	  var $input = getInput();
+
+	  _removeClass$getTopMargin$fadeIn$show$addClass.removeClass($modal, 'show-input');
+	  $input.value = _defaultParams2['default'].inputValue;
+	  $input.setAttribute('type', _defaultParams2['default'].inputType);
+	  $input.setAttribute('placeholder', _defaultParams2['default'].inputPlaceholder);
+
+	  resetInputError();
+	};
+
+	var resetInputError = function resetInputError(event) {
+	  // If press enter => ignore
+	  if (event && event.keyCode === 13) {
+	    return false;
+	  }
+
+	  var $modal = getModal();
+
+	  var $errorIcon = $modal.querySelector('.sa-input-error');
+	  _removeClass$getTopMargin$fadeIn$show$addClass.removeClass($errorIcon, 'show');
+
+	  var $errorContainer = $modal.querySelector('.sa-error-container');
+	  _removeClass$getTopMargin$fadeIn$show$addClass.removeClass($errorContainer, 'show');
+	};
+
+	/*
+	 * Set "margin-top"-property on modal based on its computed height
+	 */
+	var fixVerticalPosition = function fixVerticalPosition() {
+	  var $modal = getModal();
+	  $modal.style.marginTop = _removeClass$getTopMargin$fadeIn$show$addClass.getTopMargin(getModal());
+	};
+
+	exports.sweetAlertInitialize = sweetAlertInitialize;
+	exports.getModal = getModal;
+	exports.getOverlay = getOverlay;
+	exports.getInput = getInput;
+	exports.setFocusStyle = setFocusStyle;
+	exports.openModal = openModal;
+	exports.resetInput = resetInput;
+	exports.resetInputError = resetInputError;
+	exports.fixVerticalPosition = fixVerticalPosition;
+
+/***/ },
+/* 49 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	var defaultParams = {
+	  title: '',
+	  text: '',
+	  type: null,
+	  allowOutsideClick: false,
+	  showConfirmButton: true,
+	  showCancelButton: false,
+	  closeOnConfirm: true,
+	  closeOnCancel: true,
+	  confirmButtonText: 'OK',
+	  confirmButtonColor: '#8CD4F5',
+	  cancelButtonText: 'Cancel',
+	  imageUrl: null,
+	  imageSize: null,
+	  timer: null,
+	  customClass: '',
+	  html: false,
+	  animation: true,
+	  allowEscapeKey: true,
+	  inputType: 'text',
+	  inputPlaceholder: '',
+	  inputValue: '',
+	  showLoaderOnConfirm: false
+	};
+
+	exports['default'] = defaultParams;
+	module.exports = exports['default'];
+
+/***/ },
+/* 50 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var injectedHTML =
+
+	// Dark overlay
+	"<div class=\"sweet-overlay\" tabIndex=\"-1\"></div>" +
+
+	// Modal
+	"<div class=\"sweet-alert\">" +
+
+	// Error icon
+	"<div class=\"sa-icon sa-error\">\n      <span class=\"sa-x-mark\">\n        <span class=\"sa-line sa-left\"></span>\n        <span class=\"sa-line sa-right\"></span>\n      </span>\n    </div>" +
+
+	// Warning icon
+	"<div class=\"sa-icon sa-warning\">\n      <span class=\"sa-body\"></span>\n      <span class=\"sa-dot\"></span>\n    </div>" +
+
+	// Info icon
+	"<div class=\"sa-icon sa-info\"></div>" +
+
+	// Success icon
+	"<div class=\"sa-icon sa-success\">\n      <span class=\"sa-line sa-tip\"></span>\n      <span class=\"sa-line sa-long\"></span>\n\n      <div class=\"sa-placeholder\"></div>\n      <div class=\"sa-fix\"></div>\n    </div>" + "<div class=\"sa-icon sa-custom\"></div>" +
+
+	// Title, text and input
+	"<h2>Title</h2>\n    <p>Text</p>\n    <fieldset>\n      <input type=\"text\" tabIndex=\"3\" />\n      <div class=\"sa-input-error\"></div>\n    </fieldset>" +
+
+	// Input errors
+	"<div class=\"sa-error-container\">\n      <div class=\"icon\">!</div>\n      <p>Not valid!</p>\n    </div>" +
+
+	// Cancel and confirm buttons
+	"<div class=\"sa-button-container\">\n      <button class=\"cancel\" tabIndex=\"2\">Cancel</button>\n      <div class=\"sa-confirm-button-container\">\n        <button class=\"confirm\" tabIndex=\"1\">OK</button>" +
+
+	// Loading animation
+	"<div class=\"la-ball-fall\">\n          <div></div>\n          <div></div>\n          <div></div>\n        </div>\n      </div>\n    </div>" +
+
+	// End of modal
+	"</div>";
+
+	exports["default"] = injectedHTML;
+	module.exports = exports["default"];
+
+/***/ },
+/* 51 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	var _isIE8 = __webpack_require__(42);
+
+	var _getModal$getInput$setFocusStyle = __webpack_require__(48);
+
+	var _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide = __webpack_require__(41);
+
+	var alertTypes = ['error', 'warning', 'info', 'success', 'input', 'prompt'];
+
+	/*
+	 * Set type, text and actions on modal
+	 */
+	var setParameters = function setParameters(params) {
+	  var modal = _getModal$getInput$setFocusStyle.getModal();
+
+	  var $title = modal.querySelector('h2');
+	  var $text = modal.querySelector('p');
+	  var $cancelBtn = modal.querySelector('button.cancel');
+	  var $confirmBtn = modal.querySelector('button.confirm');
+
+	  /*
+	   * Title
+	   */
+	  $title.innerHTML = params.html ? params.title : _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.escapeHtml(params.title).split('\n').join('<br>');
+
+	  /*
+	   * Text
+	   */
+	  $text.innerHTML = params.html ? params.text : _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.escapeHtml(params.text || '').split('\n').join('<br>');
+	  if (params.text) _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.show($text);
+
+	  /*
+	   * Custom class
+	   */
+	  if (params.customClass) {
+	    _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.addClass(modal, params.customClass);
+	    modal.setAttribute('data-custom-class', params.customClass);
+	  } else {
+	    // Find previously set classes and remove them
+	    var customClass = modal.getAttribute('data-custom-class');
+	    _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.removeClass(modal, customClass);
+	    modal.setAttribute('data-custom-class', '');
+	  }
+
+	  /*
+	   * Icon
+	   */
+	  _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.hide(modal.querySelectorAll('.sa-icon'));
+
+	  if (params.type && !_isIE8.isIE8()) {
+	    var _ret = (function () {
+
+	      var validType = false;
+
+	      for (var i = 0; i < alertTypes.length; i++) {
+	        if (params.type === alertTypes[i]) {
+	          validType = true;
+	          break;
+	        }
+	      }
+
+	      if (!validType) {
+	        logStr('Unknown alert type: ' + params.type);
+	        return {
+	          v: false
+	        };
+	      }
+
+	      var typesWithIcons = ['success', 'error', 'warning', 'info'];
+	      var $icon = undefined;
+
+	      if (typesWithIcons.indexOf(params.type) !== -1) {
+	        $icon = modal.querySelector('.sa-icon.' + 'sa-' + params.type);
+	        _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.show($icon);
+	      }
+
+	      var $input = _getModal$getInput$setFocusStyle.getInput();
+
+	      // Animate icon
+	      switch (params.type) {
+
+	        case 'success':
+	          _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.addClass($icon, 'animate');
+	          _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.addClass($icon.querySelector('.sa-tip'), 'animateSuccessTip');
+	          _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.addClass($icon.querySelector('.sa-long'), 'animateSuccessLong');
+	          break;
+
+	        case 'error':
+	          _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.addClass($icon, 'animateErrorIcon');
+	          _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.addClass($icon.querySelector('.sa-x-mark'), 'animateXMark');
+	          break;
+
+	        case 'warning':
+	          _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.addClass($icon, 'pulseWarning');
+	          _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.addClass($icon.querySelector('.sa-body'), 'pulseWarningIns');
+	          _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.addClass($icon.querySelector('.sa-dot'), 'pulseWarningIns');
+	          break;
+
+	        case 'input':
+	        case 'prompt':
+	          $input.setAttribute('type', params.inputType);
+	          $input.value = params.inputValue;
+	          $input.setAttribute('placeholder', params.inputPlaceholder);
+	          _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.addClass(modal, 'show-input');
+	          setTimeout(function () {
+	            $input.focus();
+	            $input.addEventListener('keyup', swal.resetInputError);
+	          }, 400);
+	          break;
+	      }
+	    })();
+
+	    if (typeof _ret === 'object') {
+	      return _ret.v;
+	    }
+	  }
+
+	  /*
+	   * Custom image
+	   */
+	  if (params.imageUrl) {
+	    var $customIcon = modal.querySelector('.sa-icon.sa-custom');
+
+	    $customIcon.style.backgroundImage = 'url(' + params.imageUrl + ')';
+	    _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.show($customIcon);
+
+	    var _imgWidth = 80;
+	    var _imgHeight = 80;
+
+	    if (params.imageSize) {
+	      var dimensions = params.imageSize.toString().split('x');
+	      var imgWidth = dimensions[0];
+	      var imgHeight = dimensions[1];
+
+	      if (!imgWidth || !imgHeight) {
+	        logStr('Parameter imageSize expects value with format WIDTHxHEIGHT, got ' + params.imageSize);
+	      } else {
+	        _imgWidth = imgWidth;
+	        _imgHeight = imgHeight;
+	      }
+	    }
+
+	    $customIcon.setAttribute('style', $customIcon.getAttribute('style') + 'width:' + _imgWidth + 'px; height:' + _imgHeight + 'px');
+	  }
+
+	  /*
+	   * Show cancel button?
+	   */
+	  modal.setAttribute('data-has-cancel-button', params.showCancelButton);
+	  if (params.showCancelButton) {
+	    $cancelBtn.style.display = 'inline-block';
+	  } else {
+	    _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.hide($cancelBtn);
+	  }
+
+	  /*
+	   * Show confirm button?
+	   */
+	  modal.setAttribute('data-has-confirm-button', params.showConfirmButton);
+	  if (params.showConfirmButton) {
+	    $confirmBtn.style.display = 'inline-block';
+	  } else {
+	    _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.hide($confirmBtn);
+	  }
+
+	  /*
+	   * Custom text on cancel/confirm buttons
+	   */
+	  if (params.cancelButtonText) {
+	    $cancelBtn.innerHTML = _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.escapeHtml(params.cancelButtonText);
+	  }
+	  if (params.confirmButtonText) {
+	    $confirmBtn.innerHTML = _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.escapeHtml(params.confirmButtonText);
+	  }
+
+	  /*
+	   * Custom color on confirm button
+	   */
+	  if (params.confirmButtonColor) {
+	    // Set confirm button to selected background color
+	    $confirmBtn.style.backgroundColor = params.confirmButtonColor;
+
+	    // Set the confirm button color to the loading ring
+	    $confirmBtn.style.borderLeftColor = params.confirmLoadingButtonColor;
+	    $confirmBtn.style.borderRightColor = params.confirmLoadingButtonColor;
+
+	    // Set box-shadow to default focused button
+	    _getModal$getInput$setFocusStyle.setFocusStyle($confirmBtn, params.confirmButtonColor);
+	  }
+
+	  /*
+	   * Allow outside click
+	   */
+	  modal.setAttribute('data-allow-outside-click', params.allowOutsideClick);
+
+	  /*
+	   * Callback function
+	   */
+	  var hasDoneFunction = params.doneFunction ? true : false;
+	  modal.setAttribute('data-has-done-function', hasDoneFunction);
+
+	  /*
+	   * Animation
+	   */
+	  if (!params.animation) {
+	    modal.setAttribute('data-animation', 'none');
+	  } else if (typeof params.animation === 'string') {
+	    modal.setAttribute('data-animation', params.animation); // Custom animation
+	  } else {
+	    modal.setAttribute('data-animation', 'pop');
+	  }
+
+	  /*
+	   * Timer
+	   */
+	  modal.setAttribute('data-timer', params.timer);
+	};
+
+	exports['default'] = setParameters;
+	module.exports = exports['default'];
+
+/***/ },
+/* 52 */
+/***/ function(module, exports, __webpack_require__) {
+
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	__webpack_require__(37);
+	__webpack_require__(53);
 
 	var _lud_component = __webpack_require__(26);
 
@@ -23745,19 +26125,28 @@
 	    key: 'created',
 	    value: function created(el) {
 	      el.input_name = el.name;
-	      $(el).attr('name', el.input_name + '-wrap').addClass('lud-discussion');
+	      el.setAttribute('name', el.input_name + '-wrap');
 	      el.child = el.innerHTML;
 	      el.innerHTML = null;
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render(el) {
-	      var $el = $(el);
 	      //noinspection CheckTagEmptyBody
-	      return skate.h('textarea', { name: el.input_name, className: 'lud-textarea lud-text-longform lud-discussion__input',
-	        placeholder: el.placeholder, onFocus: function onFocus() {
-	          return $el.addClass('lud-is-active');
-	        } });
+	      return skate.h(
+	        'div',
+	        { className: 'lud-discussion' },
+	        skate.h('textarea', { name: el.input_name, className: 'lud-discussion__input lud-form__control',
+	          placeholder: el.placeholder, onFocus: function onFocus() {
+	            return $(el).children().addClass('lud-discussion--active');
+	          } }),
+	        skate.h(
+	          'button',
+	          { type: 'submit', 'data-disable-with': '\u63D0\u4EA4\u4E2D...', className: 'lud-btn lud-btn--sm lud-btn--primary' },
+	          skate.h('lud-icon', { type: 'add' }),
+	          '\u6DFB\u52A0'
+	        )
+	      );
 	    }
 	  }]);
 
@@ -23772,23 +26161,180 @@
 	};
 
 	skate.define('lud-discussion', ludDiscussion);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-/* 37 */
+/* 53 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 38 */
+/* 54 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	__webpack_require__(55);
+
+	var _lud_component = __webpack_require__(26);
+
+	var _lud_component2 = _interopRequireDefault(_lud_component);
+
+	var _skatejs = __webpack_require__(27);
+
+	var skate = _interopRequireWildcard(_skatejs);
+
+	var _classnames = __webpack_require__(31);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*doc
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                title: Dropdown 下拉菜单
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                name: dropdown
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                category: 组件
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                向下弹出的列表。
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 何时使用
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 当页面上的操作命令过多时，用此组件可以收纳操作元素。点击或移入触点，会出现一个下拉菜单。可在列表中进行选择，并执行相应的命令。
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 属性
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * align: [left,right] 菜单对齐方式，默认为居中
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * size: [x-small,small,medium,large] 菜单大小，默认为small
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * pointer: Boolean 是否显示角标样式， 默认为false
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 代码演示
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ```html_example
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <lud-dropdown align="left" pointer="true">
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <a href="javasctip:;">所有反馈<lud-icon type="down"></lud-icon></a>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <ul>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li><a href="javasctip:;">未处理反馈</a></li>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li><a href="javasctip:;">处理中反馈</a></li>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li><a href="javasctip:;">已处理反馈</a></li>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </lud-dropdown>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ```
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var ludDropdown = function (_ludComponent) {
+	  _inherits(ludDropdown, _ludComponent);
+
+	  function ludDropdown() {
+	    _classCallCheck(this, ludDropdown);
+
+	    return _possibleConstructorReturn(this, (ludDropdown.__proto__ || Object.getPrototypeOf(ludDropdown)).apply(this, arguments));
+	  }
+
+	  _createClass(ludDropdown, null, [{
+	    key: 'created',
+	    value: function created(el) {
+	      el.child = el.innerHTML;
+	      el.innerHTML = null;
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render(el) {
+	      var _classNames;
+
+	      var dropdownCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, 'lud-dropdown', true), _defineProperty(_classNames, 'lud-dropdown--' + el.size, true), _defineProperty(_classNames, 'lud-dropdown--' + el.align, !!el.align), _defineProperty(_classNames, 'lud-dropdown--pointer', el.pointer), _classNames));
+	      return skate.h('div', {
+	        ref: function ref(x) {
+	          return x.innerHTML = el.child;
+	        },
+	        skip: true,
+	        class: dropdownCls
+	      });
+	    }
+	  }, {
+	    key: 'attached',
+	    value: function attached() {
+	      var openCls = 'lud-dropdown--open';
+	      $(document).on('click.lud-dropdown', function () {
+	        return $('.' + openCls).removeClass(openCls);
+	      }); // close dropdown when click outside
+	    }
+	  }, {
+	    key: 'rendered',
+	    value: function rendered(el) {
+	      var $wrap = $(el).children('.lud-dropdown');
+	      $wrap.on("click.lud-dropdown", "> a", function (e) {
+	        e.preventDefault();
+	        e.stopPropagation();
+	        $wrap.toggleClass('lud-dropdown--open');
+	      });
+	    }
+	  }, {
+	    key: 'detached',
+	    value: function detached() {
+	      $(document).off('click.lud-dropdown');
+	    }
+	  }]);
+
+	  return ludDropdown;
+	}(_lud_component2.default);
+
+	ludDropdown.props = {
+	  align: skate.prop.string({ attribute: true }),
+	  size: skate.prop.string({
+	    attribute: true,
+	    default: 'x-small'
+	  }),
+	  pointer: skate.prop.boolean({ attribute: true }),
+	  child: skate.prop.string()
+	};
+
+	skate.define('lud-dropdown', ludDropdown);
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+
+/***/ },
+/* 55 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 56 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(57);
+
+/***/ },
+/* 57 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	__webpack_require__(39);
+	__webpack_require__(59);
 
 	var _lud_component = __webpack_require__(26);
 
@@ -23829,7 +26375,7 @@
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ```
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 图标列表
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <ul class="icon_lists lud-clearfix"> <li> <i class="icon lud-icon">&#xe662;</i> <div class="name">areachart</div><div class="code">&amp;#xe662;</div><div class="fontclass">.areachart</div></li><li> <i class="icon lud-icon">&#xe664;</i> <div class="name">barchart</div><div class="code">&amp;#xe664;</div><div class="fontclass">.barchart</div></li><li> <i class="icon lud-icon">&#xe6e4;</i> <div class="name">barschart</div><div class="code">&amp;#xe6e4;</div><div class="fontclass">.barschart</div></li><li> <i class="icon lud-icon">&#xe6e5;</i> <div class="name">facebook-official</div><div class="code">&amp;#xe6e5;</div><div class="fontclass">.facebookofficial</div></li><li> <i class="icon lud-icon">&#xe6e6;</i> <div class="name">linkedin-square</div><div class="code">&amp;#xe6e6;</div><div class="fontclass">.linkedinsquare</div></li><li> <i class="icon lud-icon">&#xe751;</i> <div class="name">skype</div><div class="code">&amp;#xe751;</div><div class="fontclass">.skype</div></li><li> <i class="icon lud-icon">&#xe7ba;</i> <div class="name">twitter</div><div class="code">&amp;#xe7ba;</div><div class="fontclass">.twitter</div></li><li> <i class="icon lud-icon">&#xe7bb;</i> <div class="name">wechat</div><div class="code">&amp;#xe7bb;</div><div class="fontclass">.wechat</div></li><li> <i class="icon lud-icon">&#xe7bc;</i> <div class="name">QQ</div><div class="code">&amp;#xe7bc;</div><div class="fontclass">.qq02</div></li><li> <i class="icon lud-icon">&#xe7bd;</i> <div class="name">weibo</div><div class="code">&amp;#xe7bd;</div><div class="fontclass">.weibo</div></li><li> <i class="icon lud-icon">&#xe600;</i> <div class="name">account</div><div class="code">&amp;#xe600;</div><div class="fontclass">.account</div></li><li> <i class="icon lud-icon">&#xe601;</i> <div class="name">announcement</div><div class="code">&amp;#xe601;</div><div class="fontclass">.announcement</div></li><li> <i class="icon lud-icon">&#xe602;</i> <div class="name">answer_best</div><div class="code">&amp;#xe602;</div><div class="fontclass">.answerbest</div></li><li> <i class="icon lud-icon">&#xe603;</i> <div class="name">answer_private</div><div class="code">&amp;#xe603;</div><div class="fontclass">.answerprivate</div></li><li> <i class="icon lud-icon">&#xe604;</i> <div class="name">answer_public</div><div class="code">&amp;#xe604;</div><div class="fontclass">.answerpublic</div></li><li> <i class="icon lud-icon">&#xe605;</i> <div class="name">approval</div><div class="code">&amp;#xe605;</div><div class="fontclass">.approval</div></li><li> <i class="icon lud-icon">&#xe606;</i> <div class="name">apps_admin</div><div class="code">&amp;#xe606;</div><div class="fontclass">.appsadmin</div></li><li> <i class="icon lud-icon">&#xe607;</i> <div class="name">apps</div><div class="code">&amp;#xe607;</div><div class="fontclass">.apps</div></li><li> <i class="icon lud-icon">&#xe608;</i> <div class="name">article</div><div class="code">&amp;#xe608;</div><div class="fontclass">.article</div></li><li> <i class="icon lud-icon">&#xe609;</i> <div class="name">avatar_loading</div><div class="code">&amp;#xe609;</div><div class="fontclass">.avatarloading</div></li><li> <i class="icon lud-icon">&#xe60a;</i> <div class="name">avatar</div><div class="code">&amp;#xe60a;</div><div class="fontclass">.avatar</div></li><li> <i class="icon lud-icon">&#xe60b;</i> <div class="name">calibration</div><div class="code">&amp;#xe60b;</div><div class="fontclass">.calibration</div></li><li> <i class="icon lud-icon">&#xe60c;</i> <div class="name">call_history</div><div class="code">&amp;#xe60c;</div><div class="fontclass">.callhistory</div></li><li> <i class="icon lud-icon">&#xe60d;</i> <div class="name">call</div><div class="code">&amp;#xe60d;</div><div class="fontclass">.call</div></li><li> <i class="icon lud-icon">&#xe60e;</i> <div class="name">campaign_members</div><div class="code">&amp;#xe60e;</div><div class="fontclass">.campaignmembers</div></li><li> <i class="icon lud-icon">&#xe60f;</i> <div class="name">campaign</div><div class="code">&amp;#xe60f;</div><div class="fontclass">.campaign</div></li><li> <i class="icon lud-icon">&#xe610;</i> <div class="name">canvas</div><div class="code">&amp;#xe610;</div><div class="fontclass">.canvas</div></li><li> <i class="icon lud-icon">&#xe611;</i> <div class="name">case_change_status</div><div class="code">&amp;#xe611;</div><div class="fontclass">.casechangestatus</div></li><li> <i class="icon lud-icon">&#xe612;</i> <div class="name">case_comment</div><div class="code">&amp;#xe612;</div><div class="fontclass">.casecomment</div></li><li> <i class="icon lud-icon">&#xe613;</i> <div class="name">case_email</div><div class="code">&amp;#xe613;</div><div class="fontclass">.caseemail</div></li><li> <i class="icon lud-icon">&#xe614;</i> <div class="name">case_log_a_call</div><div class="code">&amp;#xe614;</div><div class="fontclass">.caselogacall</div></li><li> <i class="icon lud-icon">&#xe615;</i> <div class="name">case_transcript</div><div class="code">&amp;#xe615;</div><div class="fontclass">.casetranscript</div></li><li> <i class="icon lud-icon">&#xe616;</i> <div class="name">case</div><div class="code">&amp;#xe616;</div><div class="fontclass">.case</div></li><li> <i class="icon lud-icon">&#xe617;</i> <div class="name">client</div><div class="code">&amp;#xe617;</div><div class="fontclass">.client</div></li><li> <i class="icon lud-icon">&#xe618;</i> <div class="name">coaching</div><div class="code">&amp;#xe618;</div><div class="fontclass">.coaching</div></li><li> <i class="icon lud-icon">&#xe619;</i> <div class="name">connected_apps</div><div class="code">&amp;#xe619;</div><div class="fontclass">.connectedapps</div></li><li> <i class="icon lud-icon">&#xe61a;</i> <div class="name">contact</div><div class="code">&amp;#xe61a;</div><div class="fontclass">.contact</div></li><li> <i class="icon lud-icon">&#xe61b;</i> <div class="name">contract</div><div class="code">&amp;#xe61b;</div><div class="fontclass">.contract</div></li><li> <i class="icon lud-icon">&#xe61c;</i> <div class="name">custom</div><div class="code">&amp;#xe61c;</div><div class="fontclass">.custom</div></li><li> <i class="icon lud-icon">&#xe61d;</i> <div class="name">dashboard</div><div class="code">&amp;#xe61d;</div><div class="fontclass">.dashboard</div></li><li> <i class="icon lud-icon">&#xe61e;</i> <div class="name">document</div><div class="code">&amp;#xe61e;</div><div class="fontclass">.document</div></li><li> <i class="icon lud-icon">&#xe61f;</i> <div class="name">drafts</div><div class="code">&amp;#xe61f;</div><div class="fontclass">.drafts</div></li><li> <i class="icon lud-icon">&#xe620;</i> <div class="name">email_chatter</div><div class="code">&amp;#xe620;</div><div class="fontclass">.emailchatter</div></li><li> <i class="icon lud-icon">&#xe621;</i> <div class="name">email_IQ</div><div class="code">&amp;#xe621;</div><div class="fontclass">.emailiq</div></li><li> <i class="icon lud-icon">&#xe622;</i> <div class="name">email</div><div class="code">&amp;#xe622;</div><div class="fontclass">.email</div></li><li> <i class="icon lud-icon">&#xe623;</i> <div class="name">endorsement</div><div class="code">&amp;#xe623;</div><div class="fontclass">.endorsement</div></li><li> <i class="icon lud-icon">&#xe624;</i> <div class="name">event</div><div class="code">&amp;#xe624;</div><div class="fontclass">.event</div></li><li> <i class="icon lud-icon">&#xe625;</i> <div class="name">feed</div><div class="code">&amp;#xe625;</div><div class="fontclass">.feed</div></li><li> <i class="icon lud-icon">&#xe626;</i> <div class="name">feedback</div><div class="code">&amp;#xe626;</div><div class="fontclass">.feedback</div></li><li> <i class="icon lud-icon">&#xe627;</i> <div class="name">file</div><div class="code">&amp;#xe627;</div><div class="fontclass">.file</div></li><li> <i class="icon lud-icon">&#xe628;</i> <div class="name">flow</div><div class="code">&amp;#xe628;</div><div class="fontclass">.flow</div></li><li> <i class="icon lud-icon">&#xe629;</i> <div class="name">folder</div><div class="code">&amp;#xe629;</div><div class="fontclass">.folder</div></li><li> <i class="icon lud-icon">&#xe62a;</i> <div class="name">generic_loading</div><div class="code">&amp;#xe62a;</div><div class="fontclass">.genericloading</div></li><li> <i class="icon lud-icon">&#xe62b;</i> <div class="name">goals</div><div class="code">&amp;#xe62b;</div><div class="fontclass">.goals</div></li><li> <i class="icon lud-icon">&#xe62c;</i> <div class="name">group_loading</div><div class="code">&amp;#xe62c;</div><div class="fontclass">.grouploading</div></li><li> <i class="icon lud-icon">&#xe62d;</i> <div class="name">groups</div><div class="code">&amp;#xe62d;</div><div class="fontclass">.groups</div></li><li> <i class="icon lud-icon">&#xe62e;</i> <div class="name">hierarchy</div><div class="code">&amp;#xe62e;</div><div class="fontclass">.hierarchy</div></li><li> <i class="icon lud-icon">&#xe62f;</i> <div class="name">home</div><div class="code">&amp;#xe62f;</div><div class="fontclass">.home</div></li><li> <i class="icon lud-icon">&#xe630;</i> <div class="name">household</div><div class="code">&amp;#xe630;</div><div class="fontclass">.household</div></li><li> <i class="icon lud-icon">&#xe631;</i> <div class="name">insights</div><div class="code">&amp;#xe631;</div><div class="fontclass">.insights</div></li><li> <i class="icon lud-icon">&#xe632;</i> <div class="name">investment_account</div><div class="code">&amp;#xe632;</div><div class="fontclass">.investmentaccount</div></li><li> <i class="icon lud-icon">&#xe633;</i> <div class="name">lead</div><div class="code">&amp;#xe633;</div><div class="fontclass">.lead</div></li><li> <i class="icon lud-icon">&#xe634;</i> <div class="name">link</div><div class="code">&amp;#xe634;</div><div class="fontclass">.link</div></li><li> <i class="icon lud-icon">&#xe635;</i> <div class="name">log_a_call</div><div class="code">&amp;#xe635;</div><div class="fontclass">.logacall</div></li><li> <i class="icon lud-icon">&#xe636;</i> <div class="name">marketing_actions</div><div class="code">&amp;#xe636;</div><div class="fontclass">.marketingactions</div></li><li> <i class="icon lud-icon">&#xe637;</i> <div class="name">metrics</div><div class="code">&amp;#xe637;</div><div class="fontclass">.metrics</div></li><li> <i class="icon lud-icon">&#xe638;</i> <div class="name">news</div><div class="code">&amp;#xe638;</div><div class="fontclass">.news</div></li><li> <i class="icon lud-icon">&#xe639;</i> <div class="name">note</div><div class="code">&amp;#xe639;</div><div class="fontclass">.note</div></li><li> <i class="icon lud-icon">&#xe63a;</i> <div class="name">opportunity</div><div class="code">&amp;#xe63a;</div><div class="fontclass">.opportunity</div></li><li> <i class="icon lud-icon">&#xe63b;</i> <div class="name">orders</div><div class="code">&amp;#xe63b;</div><div class="fontclass">.orders</div></li><li> <i class="icon lud-icon">&#xe63c;</i> <div class="name">people</div><div class="code">&amp;#xe63c;</div><div class="fontclass">.people</div></li><li> <i class="icon lud-icon">&#xe63d;</i> <div class="name">performance</div><div class="code">&amp;#xe63d;</div><div class="fontclass">.performance</div></li><li> <i class="icon lud-icon">&#xe63e;</i> <div class="name">person_account</div><div class="code">&amp;#xe63e;</div><div class="fontclass">.personaccount</div></li><li> <i class="icon lud-icon">&#xe63f;</i> <div class="name">photo</div><div class="code">&amp;#xe63f;</div><div class="fontclass">.photo</div></li><li> <i class="icon lud-icon">&#xe640;</i> <div class="name">poll</div><div class="code">&amp;#xe640;</div><div class="fontclass">.poll</div></li><li> <i class="icon lud-icon">&#xe641;</i> <div class="name">portal</div><div class="code">&amp;#xe641;</div><div class="fontclass">.portal</div></li><li> <i class="icon lud-icon">&#xe642;</i> <div class="name">pricebook</div><div class="code">&amp;#xe642;</div><div class="fontclass">.pricebook</div></li><li> <i class="icon lud-icon">&#xe643;</i> <div class="name">process</div><div class="code">&amp;#xe643;</div><div class="fontclass">.process</div></li><li> <i class="icon lud-icon">&#xe644;</i> <div class="name">question_best</div><div class="code">&amp;#xe644;</div><div class="fontclass">.questionbest</div></li><li> <i class="icon lud-icon">&#xe645;</i> <div class="name">quotes</div><div class="code">&amp;#xe645;</div><div class="fontclass">.quotes</div></li><li> <i class="icon lud-icon">&#xe646;</i> <div class="name">recent</div><div class="code">&amp;#xe646;</div><div class="fontclass">.recent</div></li><li> <i class="icon lud-icon">&#xe647;</i> <div class="name">record</div><div class="code">&amp;#xe647;</div><div class="fontclass">.record</div></li><li> <i class="icon lud-icon">&#xe648;</i> <div class="name">related_list</div><div class="code">&amp;#xe648;</div><div class="fontclass">.relatedlist</div></li><li> <i class="icon lud-icon">&#xe649;</i> <div class="name">report</div><div class="code">&amp;#xe649;</div><div class="fontclass">.report</div></li><li> <i class="icon lud-icon">&#xe64a;</i> <div class="name">reward</div><div class="code">&amp;#xe64a;</div><div class="fontclass">.reward</div></li><li> <i class="icon lud-icon">&#xe64b;</i> <div class="name">scan_card</div><div class="code">&amp;#xe64b;</div><div class="fontclass">.scancard</div></li><li> <i class="icon lud-icon">&#xe64c;</i> <div class="name">skill_entity</div><div class="code">&amp;#xe64c;</div><div class="fontclass">.skillentity</div></li><li> <i class="icon lud-icon">&#xe64d;</i> <div class="name">solution</div><div class="code">&amp;#xe64d;</div><div class="fontclass">.solution</div></li><li> <i class="icon lud-icon">&#xe64e;</i> <div class="name">sossession</div><div class="code">&amp;#xe64e;</div><div class="fontclass">.sossession</div></li><li> <i class="icon lud-icon">&#xe64f;</i> <div class="name">task</div><div class="code">&amp;#xe64f;</div><div class="fontclass">.task</div></li><li> <i class="icon lud-icon">&#xe650;</i> <div class="name">task2</div><div class="code">&amp;#xe650;</div><div class="fontclass">.task2</div></li><li> <i class="icon lud-icon">&#xe651;</i> <div class="name">team_member</div><div class="code">&amp;#xe651;</div><div class="fontclass">.teammember</div></li><li> <i class="icon lud-icon">&#xe652;</i> <div class="name">thanks_loading</div><div class="code">&amp;#xe652;</div><div class="fontclass">.thanksloading</div></li><li> <i class="icon lud-icon">&#xe653;</i> <div class="name">thanks</div><div class="code">&amp;#xe653;</div><div class="fontclass">.thanks</div></li><li> <i class="icon lud-icon">&#xe654;</i> <div class="name">today</div><div class="code">&amp;#xe654;</div><div class="fontclass">.today</div></li><li> <i class="icon lud-icon">&#xe655;</i> <div class="name">topic</div><div class="code">&amp;#xe655;</div><div class="fontclass">.topic</div></li><li> <i class="icon lud-icon">&#xe656;</i> <div class="name">unmatched</div><div class="code">&amp;#xe656;</div><div class="fontclass">.unmatched</div></li><li> <i class="icon lud-icon">&#xe657;</i> <div class="name">user</div><div class="code">&amp;#xe657;</div><div class="fontclass">.user</div></li><li> <i class="icon lud-icon">&#xe658;</i> <div class="name">work_order_item</div><div class="code">&amp;#xe658;</div><div class="fontclass">.workorderitem</div></li><li> <i class="icon lud-icon">&#xe659;</i> <div class="name">work_order</div><div class="code">&amp;#xe659;</div><div class="fontclass">.workorder</div></li><li> <i class="icon lud-icon">&#xe65a;</i> <div class="name">add_contact</div><div class="code">&amp;#xe65a;</div><div class="fontclass">.addcontact</div></li><li> <i class="icon lud-icon">&#xe65b;</i> <div class="name">announcement</div><div class="code">&amp;#xe65b;</div><div class="fontclass">.announcement1</div></li><li> <i class="icon lud-icon">&#xe65c;</i> <div class="name">apex</div><div class="code">&amp;#xe65c;</div><div class="fontclass">.apex</div></li><li> <i class="icon lud-icon">&#xe65d;</i> <div class="name">back</div><div class="code">&amp;#xe65d;</div><div class="fontclass">.back</div></li><li> <i class="icon lud-icon">&#xe65e;</i> <div class="name">call</div><div class="code">&amp;#xe65e;</div><div class="fontclass">.call1</div></li><li> <i class="icon lud-icon">&#xe65f;</i> <div class="name">canvas</div><div class="code">&amp;#xe65f;</div><div class="fontclass">.canvas1</div></li><li> <i class="icon lud-icon">&#xe660;</i> <div class="name">change_owner</div><div class="code">&amp;#xe660;</div><div class="fontclass">.changeowner</div></li><li> <i class="icon lud-icon">&#xe661;</i> <div class="name">change_record_type</div><div class="code">&amp;#xe661;</div><div class="fontclass">.changerecordtype</div></li><li> <i class="icon lud-icon">&#xe663;</i> <div class="name">clone</div><div class="code">&amp;#xe663;</div><div class="fontclass">.clone</div></li><li> <i class="icon lud-icon">&#xe665;</i> <div class="name">defer</div><div class="code">&amp;#xe665;</div><div class="fontclass">.defer</div></li><li> <i class="icon lud-icon">&#xe666;</i> <div class="name">delete</div><div class="code">&amp;#xe666;</div><div class="fontclass">.delete</div></li><li> <i class="icon lud-icon">&#xe667;</i> <div class="name">description</div><div class="code">&amp;#xe667;</div><div class="fontclass">.description</div></li><li> <i class="icon lud-icon">&#xe668;</i> <div class="name">dial_in</div><div class="code">&amp;#xe668;</div><div class="fontclass">.dialin</div></li><li> <i class="icon lud-icon">&#xe669;</i> <div class="name">download</div><div class="code">&amp;#xe669;</div><div class="fontclass">.download</div></li><li> <i class="icon lud-icon">&#xe66a;</i> <div class="name">edit_groups</div><div class="code">&amp;#xe66a;</div><div class="fontclass">.editgroups</div></li><li> <i class="icon lud-icon">&#xe66b;</i> <div class="name">edit_relationship</div><div class="code">&amp;#xe66b;</div><div class="fontclass">.editrelationship</div></li><li> <i class="icon lud-icon">&#xe66c;</i> <div class="name">edit</div><div class="code">&amp;#xe66c;</div><div class="fontclass">.edit</div></li><li> <i class="icon lud-icon">&#xe66d;</i> <div class="name">email</div><div class="code">&amp;#xe66d;</div><div class="fontclass">.email1</div></li><li> <i class="icon lud-icon">&#xe66e;</i> <div class="name">fallback</div><div class="code">&amp;#xe66e;</div><div class="fontclass">.fallback</div></li><li> <i class="icon lud-icon">&#xe66f;</i> <div class="name">filter</div><div class="code">&amp;#xe66f;</div><div class="fontclass">.filter</div></li><li> <i class="icon lud-icon">&#xe670;</i> <div class="name">flow</div><div class="code">&amp;#xe670;</div><div class="fontclass">.flow1</div></li><li> <i class="icon lud-icon">&#xe671;</i> <div class="name">follow</div><div class="code">&amp;#xe671;</div><div class="fontclass">.follow</div></li><li> <i class="icon lud-icon">&#xe672;</i> <div class="name">following</div><div class="code">&amp;#xe672;</div><div class="fontclass">.following</div></li><li> <i class="icon lud-icon">&#xe673;</i> <div class="name">freeze_user</div><div class="code">&amp;#xe673;</div><div class="fontclass">.freezeuser</div></li><li> <i class="icon lud-icon">&#xe674;</i> <div class="name">google_news</div><div class="code">&amp;#xe674;</div><div class="fontclass">.googlenews</div></li><li> <i class="icon lud-icon">&#xe675;</i> <div class="name">info</div><div class="code">&amp;#xe675;</div><div class="fontclass">.info</div></li><li> <i class="icon lud-icon">&#xe676;</i> <div class="name">join_group</div><div class="code">&amp;#xe676;</div><div class="fontclass">.joingroup</div></li><li> <i class="icon lud-icon">&#xe677;</i> <div class="name">lead_convert</div><div class="code">&amp;#xe677;</div><div class="fontclass">.leadconvert</div></li><li> <i class="icon lud-icon">&#xe678;</i> <div class="name">leave_group</div><div class="code">&amp;#xe678;</div><div class="fontclass">.leavegroup</div></li><li> <i class="icon lud-icon">&#xe679;</i> <div class="name">log_event</div><div class="code">&amp;#xe679;</div><div class="fontclass">.logevent</div></li><li> <i class="icon lud-icon">&#xe67a;</i> <div class="name">manage_perm_sets</div><div class="code">&amp;#xe67a;</div><div class="fontclass">.managepermsets</div></li><li> <i class="icon lud-icon">&#xe67b;</i> <div class="name">map</div><div class="code">&amp;#xe67b;</div><div class="fontclass">.map</div></li><li> <i class="icon lud-icon">&#xe67c;</i> <div class="name">more</div><div class="code">&amp;#xe67c;</div><div class="fontclass">.more</div></li><li> <i class="icon lud-icon">&#xe67d;</i> <div class="name">new_account</div><div class="code">&amp;#xe67d;</div><div class="fontclass">.newaccount</div></li><li> <i class="icon lud-icon">&#xe67e;</i> <div class="name">new_campaign</div><div class="code">&amp;#xe67e;</div><div class="fontclass">.newcampaign</div></li><li> <i class="icon lud-icon">&#xe67f;</i> <div class="name">new_child_case</div><div class="code">&amp;#xe67f;</div><div class="fontclass">.newchildcase</div></li><li> <i class="icon lud-icon">&#xe680;</i> <div class="name">new_contact</div><div class="code">&amp;#xe680;</div><div class="fontclass">.newcontact</div></li><li> <i class="icon lud-icon">&#xe681;</i> <div class="name">new_custom2</div><div class="code">&amp;#xe681;</div><div class="fontclass">.newcustom2</div></li><li> <i class="icon lud-icon">&#xe682;</i> <div class="name">new_custom3</div><div class="code">&amp;#xe682;</div><div class="fontclass">.newcustom3</div></li><li> <i class="icon lud-icon">&#xe683;</i> <div class="name">new_custom5</div><div class="code">&amp;#xe683;</div><div class="fontclass">.newcustom5</div></li><li> <i class="icon lud-icon">&#xe684;</i> <div class="name">new_custom9</div><div class="code">&amp;#xe684;</div><div class="fontclass">.newcustom9</div></li><li> <i class="icon lud-icon">&#xe685;</i> <div class="name">new_custom12</div><div class="code">&amp;#xe685;</div><div class="fontclass">.newcustom12</div></li><li> <i class="icon lud-icon">&#xe686;</i> <div class="name">new_custom14</div><div class="code">&amp;#xe686;</div><div class="fontclass">.newcustom14</div></li><li> <i class="icon lud-icon">&#xe687;</i> <div class="name">new_custom15</div><div class="code">&amp;#xe687;</div><div class="fontclass">.newcustom15</div></li><li> <i class="icon lud-icon">&#xe688;</i> <div class="name">new_custom16</div><div class="code">&amp;#xe688;</div><div class="fontclass">.newcustom16</div></li><li> <i class="icon lud-icon">&#xe689;</i> <div class="name">new_custom17</div><div class="code">&amp;#xe689;</div><div class="fontclass">.newcustom17</div></li><li> <i class="icon lud-icon">&#xe68a;</i> <div class="name">new_custom18</div><div class="code">&amp;#xe68a;</div><div class="fontclass">.newcustom18</div></li><li> <i class="icon lud-icon">&#xe68b;</i> <div class="name">new_custom20</div><div class="code">&amp;#xe68b;</div><div class="fontclass">.newcustom20</div></li><li> <i class="icon lud-icon">&#xe68c;</i> <div class="name">new_custom21</div><div class="code">&amp;#xe68c;</div><div class="fontclass">.newcustom21</div></li><li> <i class="icon lud-icon">&#xe68d;</i> <div class="name">new_custom24</div><div class="code">&amp;#xe68d;</div><div class="fontclass">.newcustom24</div></li><li> <i class="icon lud-icon">&#xe68e;</i> <div class="name">new_custom26</div><div class="code">&amp;#xe68e;</div><div class="fontclass">.newcustom26</div></li><li> <i class="icon lud-icon">&#xe68f;</i> <div class="name">new_custom30</div><div class="code">&amp;#xe68f;</div><div class="fontclass">.newcustom30</div></li><li> <i class="icon lud-icon">&#xe690;</i> <div class="name">new_custom31</div><div class="code">&amp;#xe690;</div><div class="fontclass">.newcustom31</div></li><li> <i class="icon lud-icon">&#xe691;</i> <div class="name">new_custom32</div><div class="code">&amp;#xe691;</div><div class="fontclass">.newcustom32</div></li><li> <i class="icon lud-icon">&#xe692;</i> <div class="name">new_custom33</div><div class="code">&amp;#xe692;</div><div class="fontclass">.newcustom33</div></li><li> <i class="icon lud-icon">&#xe693;</i> <div class="name">new_custom34</div><div class="code">&amp;#xe693;</div><div class="fontclass">.newcustom34</div></li><li> <i class="icon lud-icon">&#xe694;</i> <div class="name">new_custom35</div><div class="code">&amp;#xe694;</div><div class="fontclass">.newcustom35</div></li><li> <i class="icon lud-icon">&#xe695;</i> <div class="name">new_custom36</div><div class="code">&amp;#xe695;</div><div class="fontclass">.newcustom36</div></li><li> <i class="icon lud-icon">&#xe696;</i> <div class="name">new_custom37</div><div class="code">&amp;#xe696;</div><div class="fontclass">.newcustom37</div></li><li> <i class="icon lud-icon">&#xe697;</i> <div class="name">new_custom38</div><div class="code">&amp;#xe697;</div><div class="fontclass">.newcustom38</div></li><li> <i class="icon lud-icon">&#xe698;</i> <div class="name">new_custom39</div><div class="code">&amp;#xe698;</div><div class="fontclass">.newcustom39</div></li><li> <i class="icon lud-icon">&#xe699;</i> <div class="name">new_custom40</div><div class="code">&amp;#xe699;</div><div class="fontclass">.newcustom40</div></li><li> <i class="icon lud-icon">&#xe69a;</i> <div class="name">new_custom41</div><div class="code">&amp;#xe69a;</div><div class="fontclass">.newcustom41</div></li><li> <i class="icon lud-icon">&#xe69b;</i> <div class="name">new_custom42</div><div class="code">&amp;#xe69b;</div><div class="fontclass">.newcustom42</div></li><li> <i class="icon lud-icon">&#xe69c;</i> <div class="name">new_custom43</div><div class="code">&amp;#xe69c;</div><div class="fontclass">.newcustom43</div></li><li> <i class="icon lud-icon">&#xe69d;</i> <div class="name">new_custom44</div><div class="code">&amp;#xe69d;</div><div class="fontclass">.newcustom44</div></li><li> <i class="icon lud-icon">&#xe69e;</i> <div class="name">new_custom45</div><div class="code">&amp;#xe69e;</div><div class="fontclass">.newcustom45</div></li><li> <i class="icon lud-icon">&#xe69f;</i> <div class="name">new_custom46</div><div class="code">&amp;#xe69f;</div><div class="fontclass">.newcustom46</div></li><li> <i class="icon lud-icon">&#xe6a0;</i> <div class="name">new_custom47</div><div class="code">&amp;#xe6a0;</div><div class="fontclass">.newcustom47</div></li><li> <i class="icon lud-icon">&#xe6a1;</i> <div class="name">new_custom48</div><div class="code">&amp;#xe6a1;</div><div class="fontclass">.newcustom48</div></li><li> <i class="icon lud-icon">&#xe6a2;</i> <div class="name">new_custom49</div><div class="code">&amp;#xe6a2;</div><div class="fontclass">.newcustom49</div></li><li> <i class="icon lud-icon">&#xe6a3;</i> <div class="name">new_custom50</div><div class="code">&amp;#xe6a3;</div><div class="fontclass">.newcustom50</div></li><li> <i class="icon lud-icon">&#xe6a4;</i> <div class="name">new_custom51</div><div class="code">&amp;#xe6a4;</div><div class="fontclass">.newcustom51</div></li><li> <i class="icon lud-icon">&#xe6a5;</i> <div class="name">new_custom52</div><div class="code">&amp;#xe6a5;</div><div class="fontclass">.newcustom52</div></li><li> <i class="icon lud-icon">&#xe6a6;</i> <div class="name">new_custom54</div><div class="code">&amp;#xe6a6;</div><div class="fontclass">.newcustom54</div></li><li> <i class="icon lud-icon">&#xe6a7;</i> <div class="name">new_custom55</div><div class="code">&amp;#xe6a7;</div><div class="fontclass">.newcustom55</div></li><li> <i class="icon lud-icon">&#xe6a8;</i> <div class="name">new_custom56</div><div class="code">&amp;#xe6a8;</div><div class="fontclass">.newcustom56</div></li><li> <i class="icon lud-icon">&#xe6a9;</i> <div class="name">new_custom57</div><div class="code">&amp;#xe6a9;</div><div class="fontclass">.newcustom57</div></li><li> <i class="icon lud-icon">&#xe6aa;</i> <div class="name">new_custom58</div><div class="code">&amp;#xe6aa;</div><div class="fontclass">.newcustom58</div></li><li> <i class="icon lud-icon">&#xe6ab;</i> <div class="name">new_custom59</div><div class="code">&amp;#xe6ab;</div><div class="fontclass">.newcustom59</div></li><li> <i class="icon lud-icon">&#xe6ac;</i> <div class="name">new_custom60</div><div class="code">&amp;#xe6ac;</div><div class="fontclass">.newcustom60</div></li><li> <i class="icon lud-icon">&#xe6ad;</i> <div class="name">new_custom61</div><div class="code">&amp;#xe6ad;</div><div class="fontclass">.newcustom61</div></li><li> <i class="icon lud-icon">&#xe6ae;</i> <div class="name">new_custom62</div><div class="code">&amp;#xe6ae;</div><div class="fontclass">.newcustom62</div></li><li> <i class="icon lud-icon">&#xe6af;</i> <div class="name">new_custom63</div><div class="code">&amp;#xe6af;</div><div class="fontclass">.newcustom63</div></li><li> <i class="icon lud-icon">&#xe6b0;</i> <div class="name">new_custom64</div><div class="code">&amp;#xe6b0;</div><div class="fontclass">.newcustom64</div></li><li> <i class="icon lud-icon">&#xe6b1;</i> <div class="name">new_custom65</div><div class="code">&amp;#xe6b1;</div><div class="fontclass">.newcustom65</div></li><li> <i class="icon lud-icon">&#xe6b2;</i> <div class="name">new_custom66</div><div class="code">&amp;#xe6b2;</div><div class="fontclass">.newcustom66</div></li><li> <i class="icon lud-icon">&#xe6b3;</i> <div class="name">new_custom67</div><div class="code">&amp;#xe6b3;</div><div class="fontclass">.newcustom67</div></li><li> <i class="icon lud-icon">&#xe6b4;</i> <div class="name">new_custom68</div><div class="code">&amp;#xe6b4;</div><div class="fontclass">.newcustom68</div></li><li> <i class="icon lud-icon">&#xe6b5;</i> <div class="name">new_custom69</div><div class="code">&amp;#xe6b5;</div><div class="fontclass">.newcustom69</div></li><li> <i class="icon lud-icon">&#xe6b6;</i> <div class="name">new_custom70</div><div class="code">&amp;#xe6b6;</div><div class="fontclass">.newcustom70</div></li><li> <i class="icon lud-icon">&#xe6b7;</i> <div class="name">new_custom71</div><div class="code">&amp;#xe6b7;</div><div class="fontclass">.newcustom71</div></li><li> <i class="icon lud-icon">&#xe6b8;</i> <div class="name">new_custom72</div><div class="code">&amp;#xe6b8;</div><div class="fontclass">.newcustom72</div></li><li> <i class="icon lud-icon">&#xe6b9;</i> <div class="name">new_custom73</div><div class="code">&amp;#xe6b9;</div><div class="fontclass">.newcustom73</div></li><li> <i class="icon lud-icon">&#xe6ba;</i> <div class="name">new_custom74</div><div class="code">&amp;#xe6ba;</div><div class="fontclass">.newcustom74</div></li><li> <i class="icon lud-icon">&#xe6bb;</i> <div class="name">new_custom75</div><div class="code">&amp;#xe6bb;</div><div class="fontclass">.newcustom75</div></li><li> <i class="icon lud-icon">&#xe6bc;</i> <div class="name">new_custom76</div><div class="code">&amp;#xe6bc;</div><div class="fontclass">.newcustom76</div></li><li> <i class="icon lud-icon">&#xe6bd;</i> <div class="name">new_custom77</div><div class="code">&amp;#xe6bd;</div><div class="fontclass">.newcustom77</div></li><li> <i class="icon lud-icon">&#xe6be;</i> <div class="name">new_custom78</div><div class="code">&amp;#xe6be;</div><div class="fontclass">.newcustom78</div></li><li> <i class="icon lud-icon">&#xe6bf;</i> <div class="name">new_custom79</div><div class="code">&amp;#xe6bf;</div><div class="fontclass">.newcustom79</div></li><li> <i class="icon lud-icon">&#xe6c0;</i> <div class="name">new_custom80</div><div class="code">&amp;#xe6c0;</div><div class="fontclass">.newcustom80</div></li><li> <i class="icon lud-icon">&#xe6c1;</i> <div class="name">new_custom81</div><div class="code">&amp;#xe6c1;</div><div class="fontclass">.newcustom81</div></li><li> <i class="icon lud-icon">&#xe6c2;</i> <div class="name">new_custom82</div><div class="code">&amp;#xe6c2;</div><div class="fontclass">.newcustom82</div></li><li> <i class="icon lud-icon">&#xe6c3;</i> <div class="name">new_custom83</div><div class="code">&amp;#xe6c3;</div><div class="fontclass">.newcustom83</div></li><li> <i class="icon lud-icon">&#xe6c4;</i> <div class="name">new_custom84</div><div class="code">&amp;#xe6c4;</div><div class="fontclass">.newcustom84</div></li><li> <i class="icon lud-icon">&#xe6c5;</i> <div class="name">new_custom85</div><div class="code">&amp;#xe6c5;</div><div class="fontclass">.newcustom85</div></li><li> <i class="icon lud-icon">&#xe6c6;</i> <div class="name">new_custom86</div><div class="code">&amp;#xe6c6;</div><div class="fontclass">.newcustom86</div></li><li> <i class="icon lud-icon">&#xe6c7;</i> <div class="name">new_custom87</div><div class="code">&amp;#xe6c7;</div><div class="fontclass">.newcustom87</div></li><li> <i class="icon lud-icon">&#xe6c8;</i> <div class="name">new_custom88</div><div class="code">&amp;#xe6c8;</div><div class="fontclass">.newcustom88</div></li><li> <i class="icon lud-icon">&#xe6c9;</i> <div class="name">new_custom89</div><div class="code">&amp;#xe6c9;</div><div class="fontclass">.newcustom89</div></li><li> <i class="icon lud-icon">&#xe6ca;</i> <div class="name">new_custom90</div><div class="code">&amp;#xe6ca;</div><div class="fontclass">.newcustom90</div></li><li> <i class="icon lud-icon">&#xe6cb;</i> <div class="name">new_custom91</div><div class="code">&amp;#xe6cb;</div><div class="fontclass">.newcustom91</div></li><li> <i class="icon lud-icon">&#xe6cc;</i> <div class="name">new_custom92</div><div class="code">&amp;#xe6cc;</div><div class="fontclass">.newcustom92</div></li><li> <i class="icon lud-icon">&#xe6cd;</i> <div class="name">new_custom93</div><div class="code">&amp;#xe6cd;</div><div class="fontclass">.newcustom93</div></li><li> <i class="icon lud-icon">&#xe6ce;</i> <div class="name">new_custom94</div><div class="code">&amp;#xe6ce;</div><div class="fontclass">.newcustom94</div></li><li> <i class="icon lud-icon">&#xe6cf;</i> <div class="name">new_custom95</div><div class="code">&amp;#xe6cf;</div><div class="fontclass">.newcustom95</div></li><li> <i class="icon lud-icon">&#xe6d0;</i> <div class="name">new_custom96</div><div class="code">&amp;#xe6d0;</div><div class="fontclass">.newcustom96</div></li><li> <i class="icon lud-icon">&#xe6d1;</i> <div class="name">new_custom97</div><div class="code">&amp;#xe6d1;</div><div class="fontclass">.newcustom97</div></li><li> <i class="icon lud-icon">&#xe6d2;</i> <div class="name">new_custom98</div><div class="code">&amp;#xe6d2;</div><div class="fontclass">.newcustom98</div></li><li> <i class="icon lud-icon">&#xe6d3;</i> <div class="name">new_custom99</div><div class="code">&amp;#xe6d3;</div><div class="fontclass">.newcustom99</div></li><li> <i class="icon lud-icon">&#xe6d4;</i> <div class="name">new_custom100</div><div class="code">&amp;#xe6d4;</div><div class="fontclass">.newcustom100</div></li><li> <i class="icon lud-icon">&#xe6d5;</i> <div class="name">new_event</div><div class="code">&amp;#xe6d5;</div><div class="fontclass">.newevent</div></li><li> <i class="icon lud-icon">&#xe6d6;</i> <div class="name">new_group</div><div class="code">&amp;#xe6d6;</div><div class="fontclass">.newgroup</div></li><li> <i class="icon lud-icon">&#xe6d7;</i> <div class="name">new_lead</div><div class="code">&amp;#xe6d7;</div><div class="fontclass">.newlead</div></li><li> <i class="icon lud-icon">&#xe6d8;</i> <div class="name">new_note</div><div class="code">&amp;#xe6d8;</div><div class="fontclass">.newnote</div></li><li> <i class="icon lud-icon">&#xe6d9;</i> <div class="name">new_notebook</div><div class="code">&amp;#xe6d9;</div><div class="fontclass">.newnotebook</div></li><li> <i class="icon lud-icon">&#xe6da;</i> <div class="name">new_opportunity</div><div class="code">&amp;#xe6da;</div><div class="fontclass">.newopportunity</div></li><li> <i class="icon lud-icon">&#xe6db;</i> <div class="name">new_person_account</div><div class="code">&amp;#xe6db;</div><div class="fontclass">.newpersonaccount</div></li><li> <i class="icon lud-icon">&#xe6dc;</i> <div class="name">new_task</div><div class="code">&amp;#xe6dc;</div><div class="fontclass">.newtask</div></li><li> <i class="icon lud-icon">&#xe6dd;</i> <div class="name">password_unlock</div><div class="code">&amp;#xe6dd;</div><div class="fontclass">.passwordunlock</div></li><li> <i class="icon lud-icon">&#xe6de;</i> <div class="name">preview</div><div class="code">&amp;#xe6de;</div><div class="fontclass">.preview</div></li><li> <i class="icon lud-icon">&#xe6df;</i> <div class="name">priority</div><div class="code">&amp;#xe6df;</div><div class="fontclass">.priority</div></li><li> <i class="icon lud-icon">&#xe6e0;</i> <div class="name">question_post_action</div><div class="code">&amp;#xe6e0;</div><div class="fontclass">.questionpostaction</div></li><li> <i class="icon lud-icon">&#xe6e1;</i> <div class="name">quote</div><div class="code">&amp;#xe6e1;</div><div class="fontclass">.quote</div></li><li> <i class="icon lud-icon">&#xe6e2;</i> <div class="name">record</div><div class="code">&amp;#xe6e2;</div><div class="fontclass">.record1</div></li><li> <i class="icon lud-icon">&#xe6e3;</i> <div class="name">refresh</div><div class="code">&amp;#xe6e3;</div><div class="fontclass">.refresh</div></li><li> <i class="icon lud-icon">&#xe6e7;</i> <div class="name">share_link</div><div class="code">&amp;#xe6e7;</div><div class="fontclass">.sharelink</div></li><li> <i class="icon lud-icon">&#xe6e8;</i> <div class="name">share_poll</div><div class="code">&amp;#xe6e8;</div><div class="fontclass">.sharepoll</div></li><li> <i class="icon lud-icon">&#xe6e9;</i> <div class="name">share_post</div><div class="code">&amp;#xe6e9;</div><div class="fontclass">.sharepost</div></li><li> <i class="icon lud-icon">&#xe6ea;</i> <div class="name">share_thanks</div><div class="code">&amp;#xe6ea;</div><div class="fontclass">.sharethanks</div></li><li> <i class="icon lud-icon">&#xe6eb;</i> <div class="name">share</div><div class="code">&amp;#xe6eb;</div><div class="fontclass">.share</div></li><li> <i class="icon lud-icon">&#xe6ec;</i> <div class="name">sort</div><div class="code">&amp;#xe6ec;</div><div class="fontclass">.sort</div></li><li> <i class="icon lud-icon">&#xe6ed;</i> <div class="name">submit_for_approval</div><div class="code">&amp;#xe6ed;</div><div class="fontclass">.submitforapproval</div></li><li> <i class="icon lud-icon">&#xe6ee;</i> <div class="name">update_status</div><div class="code">&amp;#xe6ee;</div><div class="fontclass">.updatestatus</div></li><li> <i class="icon lud-icon">&#xe6ef;</i> <div class="name">update</div><div class="code">&amp;#xe6ef;</div><div class="fontclass">.update</div></li><li> <i class="icon lud-icon">&#xe6f0;</i> <div class="name">upload</div><div class="code">&amp;#xe6f0;</div><div class="fontclass">.upload</div></li><li> <i class="icon lud-icon">&#xe6f1;</i> <div class="name">user_activation</div><div class="code">&amp;#xe6f1;</div><div class="fontclass">.useractivation</div></li><li> <i class="icon lud-icon">&#xe6f2;</i> <div class="name">user</div><div class="code">&amp;#xe6f2;</div><div class="fontclass">.user1</div></li><li> <i class="icon lud-icon">&#xe6f3;</i> <div class="name">web_link</div><div class="code">&amp;#xe6f3;</div><div class="fontclass">.weblink</div></li><li> <i class="icon lud-icon">&#xe6f4;</i> <div class="name">add</div><div class="code">&amp;#xe6f4;</div><div class="fontclass">.add</div></li><li> <i class="icon lud-icon">&#xe6f5;</i> <div class="name">adduser</div><div class="code">&amp;#xe6f5;</div><div class="fontclass">.adduser</div></li><li> <i class="icon lud-icon">&#xe6f6;</i> <div class="name">announcement</div><div class="code">&amp;#xe6f6;</div><div class="fontclass">.announcement2</div></li><li> <i class="icon lud-icon">&#xe6f7;</i> <div class="name">answer</div><div class="code">&amp;#xe6f7;</div><div class="fontclass">.answer</div></li><li> <i class="icon lud-icon">&#xe6f8;</i> <div class="name">apps</div><div class="code">&amp;#xe6f8;</div><div class="fontclass">.apps1</div></li><li> <i class="icon lud-icon">&#xe6f9;</i> <div class="name">arrowdown</div><div class="code">&amp;#xe6f9;</div><div class="fontclass">.arrowdown</div></li><li> <i class="icon lud-icon">&#xe6fa;</i> <div class="name">arrowup</div><div class="code">&amp;#xe6fa;</div><div class="fontclass">.arrowup</div></li><li> <i class="icon lud-icon">&#xe6fb;</i> <div class="name">attach</div><div class="code">&amp;#xe6fb;</div><div class="fontclass">.attach</div></li><li> <i class="icon lud-icon">&#xe6fc;</i> <div class="name">back</div><div class="code">&amp;#xe6fc;</div><div class="fontclass">.back1</div></li><li> <i class="icon lud-icon">&#xe6fd;</i> <div class="name">ban</div><div class="code">&amp;#xe6fd;</div><div class="fontclass">.ban</div></li><li> <i class="icon lud-icon">&#xe6fe;</i> <div class="name">bold</div><div class="code">&amp;#xe6fe;</div><div class="fontclass">.bold</div></li><li> <i class="icon lud-icon">&#xe6ff;</i> <div class="name">bookmark</div><div class="code">&amp;#xe6ff;</div><div class="fontclass">.bookmark</div></li><li> <i class="icon lud-icon">&#xe700;</i> <div class="name">broadcast</div><div class="code">&amp;#xe700;</div><div class="fontclass">.broadcast</div></li><li> <i class="icon lud-icon">&#xe701;</i> <div class="name">brush</div><div class="code">&amp;#xe701;</div><div class="fontclass">.brush</div></li><li> <i class="icon lud-icon">&#xe702;</i> <div class="name">bucket</div><div class="code">&amp;#xe702;</div><div class="fontclass">.bucket</div></li><li> <i class="icon lud-icon">&#xe703;</i> <div class="name">builder</div><div class="code">&amp;#xe703;</div><div class="fontclass">.builder</div></li><li> <i class="icon lud-icon">&#xe704;</i> <div class="name">call</div><div class="code">&amp;#xe704;</div><div class="fontclass">.call2</div></li><li> <i class="icon lud-icon">&#xe705;</i> <div class="name">capslock</div><div class="code">&amp;#xe705;</div><div class="fontclass">.capslock</div></li><li> <i class="icon lud-icon">&#xe706;</i> <div class="name">cases</div><div class="code">&amp;#xe706;</div><div class="fontclass">.cases</div></li><li> <i class="icon lud-icon">&#xe707;</i> <div class="name">center_align_text</div><div class="code">&amp;#xe707;</div><div class="fontclass">.centeraligntext</div></li><li> <i class="icon lud-icon">&#xe708;</i> <div class="name">chart</div><div class="code">&amp;#xe708;</div><div class="fontclass">.chart</div></li><li> <i class="icon lud-icon">&#xe709;</i> <div class="name">chat</div><div class="code">&amp;#xe709;</div><div class="fontclass">.chat</div></li><li> <i class="icon lud-icon">&#xe70a;</i> <div class="name">check</div><div class="code">&amp;#xe70a;</div><div class="fontclass">.check</div></li><li> <i class="icon lud-icon">&#xe70b;</i> <div class="name">checkin</div><div class="code">&amp;#xe70b;</div><div class="fontclass">.checkin</div></li><li> <i class="icon lud-icon">&#xe70c;</i> <div class="name">chevrondown</div><div class="code">&amp;#xe70c;</div><div class="fontclass">.chevrondown</div></li><li> <i class="icon lud-icon">&#xe70d;</i> <div class="name">chevronleft</div><div class="code">&amp;#xe70d;</div><div class="fontclass">.chevronleft</div></li><li> <i class="icon lud-icon">&#xe70e;</i> <div class="name">chevronright</div><div class="code">&amp;#xe70e;</div><div class="fontclass">.chevronright</div></li><li> <i class="icon lud-icon">&#xe70f;</i> <div class="name">chevronup</div><div class="code">&amp;#xe70f;</div><div class="fontclass">.chevronup</div></li><li> <i class="icon lud-icon">&#xe710;</i> <div class="name">clear</div><div class="code">&amp;#xe710;</div><div class="fontclass">.clear</div></li><li> <i class="icon lud-icon">&#xe711;</i> <div class="name">clock</div><div class="code">&amp;#xe711;</div><div class="fontclass">.clock</div></li><li> <i class="icon lud-icon">&#xe712;</i> <div class="name">close</div><div class="code">&amp;#xe712;</div><div class="fontclass">.close</div></li><li> <i class="icon lud-icon">&#xe713;</i> <div class="name">comments</div><div class="code">&amp;#xe713;</div><div class="fontclass">.comments</div></li><li> <i class="icon lud-icon">&#xe714;</i> <div class="name">company</div><div class="code">&amp;#xe714;</div><div class="fontclass">.company</div></li><li> <i class="icon lud-icon">&#xe715;</i> <div class="name">connected_apps</div><div class="code">&amp;#xe715;</div><div class="fontclass">.connectedapps1</div></li><li> <i class="icon lud-icon">&#xe716;</i> <div class="name">contract_alt</div><div class="code">&amp;#xe716;</div><div class="fontclass">.contractalt</div></li><li> <i class="icon lud-icon">&#xe717;</i> <div class="name">contract</div><div class="code">&amp;#xe717;</div><div class="fontclass">.contract1</div></li><li> <i class="icon lud-icon">&#xe718;</i> <div class="name">copy</div><div class="code">&amp;#xe718;</div><div class="fontclass">.copy</div></li><li> <i class="icon lud-icon">&#xe719;</i> <div class="name">crossfilter</div><div class="code">&amp;#xe719;</div><div class="fontclass">.crossfilter</div></li><li> <i class="icon lud-icon">&#xe71a;</i> <div class="name">custom_apps</div><div class="code">&amp;#xe71a;</div><div class="fontclass">.customapps</div></li><li> <i class="icon lud-icon">&#xe71b;</i> <div class="name">cut</div><div class="code">&amp;#xe71b;</div><div class="fontclass">.cut</div></li><li> <i class="icon lud-icon">&#xe71c;</i> <div class="name">datadotcom</div><div class="code">&amp;#xe71c;</div><div class="fontclass">.datadotcom</div></li><li> <i class="icon lud-icon">&#xe71d;</i> <div class="name">dayview</div><div class="code">&amp;#xe71d;</div><div class="fontclass">.dayview</div></li><li> <i class="icon lud-icon">&#xe71e;</i> <div class="name">delete</div><div class="code">&amp;#xe71e;</div><div class="fontclass">.delete1</div></li><li> <i class="icon lud-icon">&#xe71f;</i> <div class="name">deprecate</div><div class="code">&amp;#xe71f;</div><div class="fontclass">.deprecate</div></li><li> <i class="icon lud-icon">&#xe720;</i> <div class="name">description</div><div class="code">&amp;#xe720;</div><div class="fontclass">.description1</div></li><li> <i class="icon lud-icon">&#xe721;</i> <div class="name">desktop</div><div class="code">&amp;#xe721;</div><div class="fontclass">.desktop</div></li><li> <i class="icon lud-icon">&#xe722;</i> <div class="name">dock_panel</div><div class="code">&amp;#xe722;</div><div class="fontclass">.dockpanel</div></li><li> <i class="icon lud-icon">&#xe723;</i> <div class="name">down</div><div class="code">&amp;#xe723;</div><div class="fontclass">.down</div></li><li> <i class="icon lud-icon">&#xe724;</i> <div class="name">download</div><div class="code">&amp;#xe724;</div><div class="fontclass">.download1</div></li><li> <i class="icon lud-icon">&#xe725;</i> <div class="name">edit_form</div><div class="code">&amp;#xe725;</div><div class="fontclass">.editform</div></li><li> <i class="icon lud-icon">&#xe726;</i> <div class="name">edit</div><div class="code">&amp;#xe726;</div><div class="fontclass">.edit1</div></li><li> <i class="icon lud-icon">&#xe727;</i> <div class="name">email</div><div class="code">&amp;#xe727;</div><div class="fontclass">.email2</div></li><li> <i class="icon lud-icon">&#xe728;</i> <div class="name">end_call</div><div class="code">&amp;#xe728;</div><div class="fontclass">.endcall</div></li><li> <i class="icon lud-icon">&#xe729;</i> <div class="name">erect_window</div><div class="code">&amp;#xe729;</div><div class="fontclass">.erectwindow</div></li><li> <i class="icon lud-icon">&#xe72a;</i> <div class="name">error</div><div class="code">&amp;#xe72a;</div><div class="fontclass">.error</div></li><li> <i class="icon lud-icon">&#xe72b;</i> <div class="name">event</div><div class="code">&amp;#xe72b;</div><div class="fontclass">.event1</div></li><li> <i class="icon lud-icon">&#xe72c;</i> <div class="name">expand_alt</div><div class="code">&amp;#xe72c;</div><div class="fontclass">.expandalt</div></li><li> <i class="icon lud-icon">&#xe72d;</i> <div class="name">expand</div><div class="code">&amp;#xe72d;</div><div class="fontclass">.expand</div></li><li> <i class="icon lud-icon">&#xe72e;</i> <div class="name">favorite</div><div class="code">&amp;#xe72e;</div><div class="fontclass">.favorite</div></li><li> <i class="icon lud-icon">&#xe72f;</i> <div class="name">feed</div><div class="code">&amp;#xe72f;</div><div class="fontclass">.feed1</div></li><li> <i class="icon lud-icon">&#xe730;</i> <div class="name">file</div><div class="code">&amp;#xe730;</div><div class="fontclass">.file1</div></li><li> <i class="icon lud-icon">&#xe731;</i> <div class="name">filter</div><div class="code">&amp;#xe731;</div><div class="fontclass">.filter1</div></li><li> <i class="icon lud-icon">&#xe732;</i> <div class="name">filterList</div><div class="code">&amp;#xe732;</div><div class="fontclass">.filterlist</div></li><li> <i class="icon lud-icon">&#xe733;</i> <div class="name">forward</div><div class="code">&amp;#xe733;</div><div class="fontclass">.forward</div></li><li> <i class="icon lud-icon">&#xe734;</i> <div class="name">frozen</div><div class="code">&amp;#xe734;</div><div class="fontclass">.frozen</div></li><li> <i class="icon lud-icon">&#xe735;</i> <div class="name">groups</div><div class="code">&amp;#xe735;</div><div class="fontclass">.groups1</div></li><li> <i class="icon lud-icon">&#xe736;</i> <div class="name">help</div><div class="code">&amp;#xe736;</div><div class="fontclass">.help</div></li><li> <i class="icon lud-icon">&#xe737;</i> <div class="name">home</div><div class="code">&amp;#xe737;</div><div class="fontclass">.home1</div></li><li> <i class="icon lud-icon">&#xe738;</i> <div class="name">identity</div><div class="code">&amp;#xe738;</div><div class="fontclass">.identity</div></li><li> <i class="icon lud-icon">&#xe739;</i> <div class="name">image</div><div class="code">&amp;#xe739;</div><div class="fontclass">.image</div></li><li> <i class="icon lud-icon">&#xe73a;</i> <div class="name">inbox</div><div class="code">&amp;#xe73a;</div><div class="fontclass">.inbox</div></li><li> <i class="icon lud-icon">&#xe73b;</i> <div class="name">info</div><div class="code">&amp;#xe73b;</div><div class="fontclass">.info1</div></li><li> <i class="icon lud-icon">&#xe73c;</i> <div class="name">insert_tag_field</div><div class="code">&amp;#xe73c;</div><div class="fontclass">.inserttagfield</div></li><li> <i class="icon lud-icon">&#xe73d;</i> <div class="name">insert_template</div><div class="code">&amp;#xe73d;</div><div class="fontclass">.inserttemplate</div></li><li> <i class="icon lud-icon">&#xe73e;</i> <div class="name">italic</div><div class="code">&amp;#xe73e;</div><div class="fontclass">.italic</div></li><li> <i class="icon lud-icon">&#xe73f;</i> <div class="name">justify_text</div><div class="code">&amp;#xe73f;</div><div class="fontclass">.justifytext</div></li><li> <i class="icon lud-icon">&#xe740;</i> <div class="name">kanban</div><div class="code">&amp;#xe740;</div><div class="fontclass">.kanban</div></li><li> <i class="icon lud-icon">&#xe741;</i> <div class="name">keyboard_dismiss</div><div class="code">&amp;#xe741;</div><div class="fontclass">.keyboarddismiss</div></li><li> <i class="icon lud-icon">&#xe742;</i> <div class="name">knowledge_base</div><div class="code">&amp;#xe742;</div><div class="fontclass">.knowledgebase</div></li><li> <i class="icon lud-icon">&#xe743;</i> <div class="name">layers</div><div class="code">&amp;#xe743;</div><div class="fontclass">.layers</div></li><li> <i class="icon lud-icon">&#xe744;</i> <div class="name">layout</div><div class="code">&amp;#xe744;</div><div class="fontclass">.layout</div></li><li> <i class="icon lud-icon">&#xe745;</i> <div class="name">left_align_text</div><div class="code">&amp;#xe745;</div><div class="fontclass">.leftaligntext</div></li><li> <i class="icon lud-icon">&#xe746;</i> <div class="name">left</div><div class="code">&amp;#xe746;</div><div class="fontclass">.left</div></li><li> <i class="icon lud-icon">&#xe747;</i> <div class="name">like</div><div class="code">&amp;#xe747;</div><div class="fontclass">.like</div></li><li> <i class="icon lud-icon">&#xe748;</i> <div class="name">link</div><div class="code">&amp;#xe748;</div><div class="fontclass">.link1</div></li><li> <i class="icon lud-icon">&#xe749;</i> <div class="name">list</div><div class="code">&amp;#xe749;</div><div class="fontclass">.list</div></li><li> <i class="icon lud-icon">&#xe74a;</i> <div class="name">location</div><div class="code">&amp;#xe74a;</div><div class="fontclass">.location</div></li><li> <i class="icon lud-icon">&#xe74b;</i> <div class="name">lock</div><div class="code">&amp;#xe74b;</div><div class="fontclass">.lock</div></li><li> <i class="icon lud-icon">&#xe74c;</i> <div class="name">log_a_call</div><div class="code">&amp;#xe74c;</div><div class="fontclass">.logacall1</div></li><li> <i class="icon lud-icon">&#xe74d;</i> <div class="name">logout</div><div class="code">&amp;#xe74d;</div><div class="fontclass">.logout</div></li><li> <i class="icon lud-icon">&#xe74e;</i> <div class="name">magicwand</div><div class="code">&amp;#xe74e;</div><div class="fontclass">.magicwand</div></li><li> <i class="icon lud-icon">&#xe74f;</i> <div class="name">matrix</div><div class="code">&amp;#xe74f;</div><div class="fontclass">.matrix</div></li><li> <i class="icon lud-icon">&#xe750;</i> <div class="name">metrics</div><div class="code">&amp;#xe750;</div><div class="fontclass">.metrics1</div></li><li> <i class="icon lud-icon">&#xe752;</i> <div class="name">moneybag</div><div class="code">&amp;#xe752;</div><div class="fontclass">.moneybag</div></li><li> <i class="icon lud-icon">&#xe753;</i> <div class="name">monthlyview</div><div class="code">&amp;#xe753;</div><div class="fontclass">.monthlyview</div></li><li> <i class="icon lud-icon">&#xe754;</i> <div class="name">move</div><div class="code">&amp;#xe754;</div><div class="fontclass">.move</div></li><li> <i class="icon lud-icon">&#xe755;</i> <div class="name">muted</div><div class="code">&amp;#xe755;</div><div class="fontclass">.muted</div></li><li> <i class="icon lud-icon">&#xe756;</i> <div class="name">new_window</div><div class="code">&amp;#xe756;</div><div class="fontclass">.newwindow</div></li><li> <i class="icon lud-icon">&#xe757;</i> <div class="name">new</div><div class="code">&amp;#xe757;</div><div class="fontclass">.new</div></li><li> <i class="icon lud-icon">&#xe758;</i> <div class="name">news</div><div class="code">&amp;#xe758;</div><div class="fontclass">.news1</div></li><li> <i class="icon lud-icon">&#xe759;</i> <div class="name">note</div><div class="code">&amp;#xe759;</div><div class="fontclass">.note1</div></li><li> <i class="icon lud-icon">&#xe75a;</i> <div class="name">notebook</div><div class="code">&amp;#xe75a;</div><div class="fontclass">.notebook</div></li><li> <i class="icon lud-icon">&#xe75b;</i> <div class="name">notification</div><div class="code">&amp;#xe75b;</div><div class="fontclass">.notification</div></li><li> <i class="icon lud-icon">&#xe75c;</i> <div class="name">office365</div><div class="code">&amp;#xe75c;</div><div class="fontclass">.office365</div></li><li> <i class="icon lud-icon">&#xe75d;</i> <div class="name">offline</div><div class="code">&amp;#xe75d;</div><div class="fontclass">.offline</div></li><li> <i class="icon lud-icon">&#xe75e;</i> <div class="name">open_folder</div><div class="code">&amp;#xe75e;</div><div class="fontclass">.openfolder</div></li><li> <i class="icon lud-icon">&#xe75f;</i> <div class="name">open</div><div class="code">&amp;#xe75f;</div><div class="fontclass">.open</div></li><li> <i class="icon lud-icon">&#xe760;</i> <div class="name">opened_folder</div><div class="code">&amp;#xe760;</div><div class="fontclass">.openedfolder</div></li><li> <i class="icon lud-icon">&#xe761;</i> <div class="name">overflow</div><div class="code">&amp;#xe761;</div><div class="fontclass">.overflow</div></li><li> <i class="icon lud-icon">&#xe762;</i> <div class="name">package_org_beta</div><div class="code">&amp;#xe762;</div><div class="fontclass">.packageorgbeta</div></li><li> <i class="icon lud-icon">&#xe763;</i> <div class="name">package_org</div><div class="code">&amp;#xe763;</div><div class="fontclass">.packageorg</div></li><li> <i class="icon lud-icon">&#xe764;</i> <div class="name">package</div><div class="code">&amp;#xe764;</div><div class="fontclass">.package</div></li><li> <i class="icon lud-icon">&#xe765;</i> <div class="name">page</div><div class="code">&amp;#xe765;</div><div class="fontclass">.page</div></li><li> <i class="icon lud-icon">&#xe766;</i> <div class="name">palette</div><div class="code">&amp;#xe766;</div><div class="fontclass">.palette</div></li><li> <i class="icon lud-icon">&#xe767;</i> <div class="name">paste</div><div class="code">&amp;#xe767;</div><div class="fontclass">.paste</div></li><li> <i class="icon lud-icon">&#xe768;</i> <div class="name">people</div><div class="code">&amp;#xe768;</div><div class="fontclass">.people1</div></li><li> <i class="icon lud-icon">&#xe769;</i> <div class="name">phone_landscape</div><div class="code">&amp;#xe769;</div><div class="fontclass">.phonelandscape</div></li><li> <i class="icon lud-icon">&#xe76a;</i> <div class="name">phone_portrait</div><div class="code">&amp;#xe76a;</div><div class="fontclass">.phoneportrait</div></li><li> <i class="icon lud-icon">&#xe76b;</i> <div class="name">photo</div><div class="code">&amp;#xe76b;</div><div class="fontclass">.photo1</div></li><li> <i class="icon lud-icon">&#xe76c;</i> <div class="name">picklist</div><div class="code">&amp;#xe76c;</div><div class="fontclass">.picklist</div></li><li> <i class="icon lud-icon">&#xe76d;</i> <div class="name">power</div><div class="code">&amp;#xe76d;</div><div class="fontclass">.power</div></li><li> <i class="icon lud-icon">&#xe76e;</i> <div class="name">preview</div><div class="code">&amp;#xe76e;</div><div class="fontclass">.preview1</div></li><li> <i class="icon lud-icon">&#xe76f;</i> <div class="name">priority</div><div class="code">&amp;#xe76f;</div><div class="fontclass">.priority1</div></li><li> <i class="icon lud-icon">&#xe770;</i> <div class="name">process</div><div class="code">&amp;#xe770;</div><div class="fontclass">.process1</div></li><li> <i class="icon lud-icon">&#xe771;</i> <div class="name">push</div><div class="code">&amp;#xe771;</div><div class="fontclass">.push</div></li><li> <i class="icon lud-icon">&#xe772;</i> <div class="name">puzzle</div><div class="code">&amp;#xe772;</div><div class="fontclass">.puzzle</div></li><li> <i class="icon lud-icon">&#xe773;</i> <div class="name">question</div><div class="code">&amp;#xe773;</div><div class="fontclass">.question</div></li><li> <i class="icon lud-icon">&#xe774;</i> <div class="name">questions_and_answers</div><div class="code">&amp;#xe774;</div><div class="fontclass">.questionsandanswers</div></li><li> <i class="icon lud-icon">&#xe775;</i> <div class="name">record</div><div class="code">&amp;#xe775;</div><div class="fontclass">.record2</div></li><li> <i class="icon lud-icon">&#xe776;</i> <div class="name">redo</div><div class="code">&amp;#xe776;</div><div class="fontclass">.redo</div></li><li> <i class="icon lud-icon">&#xe777;</i> <div class="name">refresh</div><div class="code">&amp;#xe777;</div><div class="fontclass">.refresh1</div></li><li> <i class="icon lud-icon">&#xe778;</i> <div class="name">relate</div><div class="code">&amp;#xe778;</div><div class="fontclass">.relate</div></li><li> <i class="icon lud-icon">&#xe779;</i> <div class="name">remove_formatting</div><div class="code">&amp;#xe779;</div><div class="fontclass">.removeformatting</div></li><li> <i class="icon lud-icon">&#xe77a;</i> <div class="name">remove_link</div><div class="code">&amp;#xe77a;</div><div class="fontclass">.removelink</div></li><li> <i class="icon lud-icon">&#xe77b;</i> <div class="name">replace</div><div class="code">&amp;#xe77b;</div><div class="fontclass">.replace</div></li><li> <i class="icon lud-icon">&#xe77c;</i> <div class="name">reply</div><div class="code">&amp;#xe77c;</div><div class="fontclass">.reply</div></li><li> <i class="icon lud-icon">&#xe77d;</i> <div class="name">reset_password</div><div class="code">&amp;#xe77d;</div><div class="fontclass">.resetpassword</div></li><li> <i class="icon lud-icon">&#xe77e;</i> <div class="name">retweet</div><div class="code">&amp;#xe77e;</div><div class="fontclass">.retweet</div></li><li> <i class="icon lud-icon">&#xe77f;</i> <div class="name">richtextbulletedlist</div><div class="code">&amp;#xe77f;</div><div class="fontclass">.richtextbulletedlist</div></li><li> <i class="icon lud-icon">&#xe780;</i> <div class="name">richtextindent</div><div class="code">&amp;#xe780;</div><div class="fontclass">.richtextindent</div></li><li> <i class="icon lud-icon">&#xe781;</i> <div class="name">richtextnumberedlist</div><div class="code">&amp;#xe781;</div><div class="fontclass">.richtextnumberedlist</div></li><li> <i class="icon lud-icon">&#xe782;</i> <div class="name">richtextoutdent</div><div class="code">&amp;#xe782;</div><div class="fontclass">.richtextoutdent</div></li><li> <i class="icon lud-icon">&#xe783;</i> <div class="name">right_align_text</div><div class="code">&amp;#xe783;</div><div class="fontclass">.rightaligntext</div></li><li> <i class="icon lud-icon">&#xe784;</i> <div class="name">right</div><div class="code">&amp;#xe784;</div><div class="fontclass">.right</div></li><li> <i class="icon lud-icon">&#xe785;</i> <div class="name">rotate</div><div class="code">&amp;#xe785;</div><div class="fontclass">.rotate</div></li><li> <i class="icon lud-icon">&#xe786;</i> <div class="name">rows</div><div class="code">&amp;#xe786;</div><div class="fontclass">.rows</div></li><li> <i class="icon lud-icon">&#xe787;</i> <div class="name">search</div><div class="code">&amp;#xe787;</div><div class="fontclass">.search</div></li><li> <i class="icon lud-icon">&#xe788;</i> <div class="name">settings</div><div class="code">&amp;#xe788;</div><div class="fontclass">.settings</div></li><li> <i class="icon lud-icon">&#xe789;</i> <div class="name">setup_assistant_guide</div><div class="code">&amp;#xe789;</div><div class="fontclass">.setupassistantguide</div></li><li> <i class="icon lud-icon">&#xe78a;</i> <div class="name">setup</div><div class="code">&amp;#xe78a;</div><div class="fontclass">.setup</div></li><li> <i class="icon lud-icon">&#xe78b;</i> <div class="name">share_post</div><div class="code">&amp;#xe78b;</div><div class="fontclass">.sharepost1</div></li><li> <i class="icon lud-icon">&#xe78c;</i> <div class="name">share</div><div class="code">&amp;#xe78c;</div><div class="fontclass">.share1</div></li><li> <i class="icon lud-icon">&#xe78d;</i> <div class="name">shield</div><div class="code">&amp;#xe78d;</div><div class="fontclass">.shield</div></li><li> <i class="icon lud-icon">&#xe78e;</i> <div class="name">side_list</div><div class="code">&amp;#xe78e;</div><div class="fontclass">.sidelist</div></li><li> <i class="icon lud-icon">&#xe78f;</i> <div class="name">signpost</div><div class="code">&amp;#xe78f;</div><div class="fontclass">.signpost</div></li><li> <i class="icon lud-icon">&#xe790;</i> <div class="name">sms</div><div class="code">&amp;#xe790;</div><div class="fontclass">.sms</div></li><li> <i class="icon lud-icon">&#xe791;</i> <div class="name">snippet</div><div class="code">&amp;#xe791;</div><div class="fontclass">.snippet</div></li><li> <i class="icon lud-icon">&#xe792;</i> <div class="name">socialshare</div><div class="code">&amp;#xe792;</div><div class="fontclass">.socialshare</div></li><li> <i class="icon lud-icon">&#xe793;</i> <div class="name">sort</div><div class="code">&amp;#xe793;</div><div class="fontclass">.sort1</div></li><li> <i class="icon lud-icon">&#xe794;</i> <div class="name">spinner</div><div class="code">&amp;#xe794;</div><div class="fontclass">.spinner</div></li><li> <i class="icon lud-icon">&#xe795;</i> <div class="name">standard_objects</div><div class="code">&amp;#xe795;</div><div class="fontclass">.standardobjects</div></li><li> <i class="icon lud-icon">&#xe796;</i> <div class="name">stop</div><div class="code">&amp;#xe796;</div><div class="fontclass">.stop</div></li><li> <i class="icon lud-icon">&#xe797;</i> <div class="name">strikethrough</div><div class="code">&amp;#xe797;</div><div class="fontclass">.strikethrough</div></li><li> <i class="icon lud-icon">&#xe798;</i> <div class="name">success</div><div class="code">&amp;#xe798;</div><div class="fontclass">.success</div></li><li> <i class="icon lud-icon">&#xe799;</i> <div class="name">summary</div><div class="code">&amp;#xe799;</div><div class="fontclass">.summary</div></li><li> <i class="icon lud-icon">&#xe79a;</i> <div class="name">summarydetail</div><div class="code">&amp;#xe79a;</div><div class="fontclass">.summarydetail</div></li><li> <i class="icon lud-icon">&#xe79b;</i> <div class="name">switch</div><div class="code">&amp;#xe79b;</div><div class="fontclass">.switch</div></li><li> <i class="icon lud-icon">&#xe79c;</i> <div class="name">table</div><div class="code">&amp;#xe79c;</div><div class="fontclass">.table</div></li><li> <i class="icon lud-icon">&#xe79d;</i> <div class="name">tablet_landscape</div><div class="code">&amp;#xe79d;</div><div class="fontclass">.tabletlandscape</div></li><li> <i class="icon lud-icon">&#xe79e;</i> <div class="name">tablet_portrait</div><div class="code">&amp;#xe79e;</div><div class="fontclass">.tabletportrait</div></li><li> <i class="icon lud-icon">&#xe79f;</i> <div class="name">tabset</div><div class="code">&amp;#xe79f;</div><div class="fontclass">.tabset</div></li><li> <i class="icon lud-icon">&#xe7a0;</i> <div class="name">task</div><div class="code">&amp;#xe7a0;</div><div class="fontclass">.task1</div></li><li> <i class="icon lud-icon">&#xe7a1;</i> <div class="name">text_background_color</div><div class="code">&amp;#xe7a1;</div><div class="fontclass">.textbackgroundcolor</div></li><li> <i class="icon lud-icon">&#xe7a2;</i> <div class="name">text_color</div><div class="code">&amp;#xe7a2;</div><div class="fontclass">.textcolor</div></li><li> <i class="icon lud-icon">&#xe7a3;</i> <div class="name">threedots</div><div class="code">&amp;#xe7a3;</div><div class="fontclass">.threedots</div></li><li> <i class="icon lud-icon">&#xe7a4;</i> <div class="name">tile_card_list</div><div class="code">&amp;#xe7a4;</div><div class="fontclass">.tilecardlist</div></li><li> <i class="icon lud-icon">&#xe7a5;</i> <div class="name">topic</div><div class="code">&amp;#xe7a5;</div><div class="fontclass">.topic1</div></li><li> <i class="icon lud-icon">&#xe7a6;</i> <div class="name">touch_action</div><div class="code">&amp;#xe7a6;</div><div class="fontclass">.touchaction</div></li><li> <i class="icon lud-icon">&#xe7a7;</i> <div class="name">trail</div><div class="code">&amp;#xe7a7;</div><div class="fontclass">.trail</div></li><li> <i class="icon lud-icon">&#xe7a8;</i> <div class="name">undelete</div><div class="code">&amp;#xe7a8;</div><div class="fontclass">.undelete</div></li><li> <i class="icon lud-icon">&#xe7a9;</i> <div class="name">undeprecate</div><div class="code">&amp;#xe7a9;</div><div class="fontclass">.undeprecate</div></li><li> <i class="icon lud-icon">&#xe7aa;</i> <div class="name">underline</div><div class="code">&amp;#xe7aa;</div><div class="fontclass">.underline</div></li><li> <i class="icon lud-icon">&#xe7ab;</i> <div class="name">undo</div><div class="code">&amp;#xe7ab;</div><div class="fontclass">.undo</div></li><li> <i class="icon lud-icon">&#xe7ac;</i> <div class="name">unlock</div><div class="code">&amp;#xe7ac;</div><div class="fontclass">.unlock</div></li><li> <i class="icon lud-icon">&#xe7ad;</i> <div class="name">unmuted</div><div class="code">&amp;#xe7ad;</div><div class="fontclass">.unmuted</div></li><li> <i class="icon lud-icon">&#xe7ae;</i> <div class="name">up</div><div class="code">&amp;#xe7ae;</div><div class="fontclass">.up</div></li><li> <i class="icon lud-icon">&#xe7af;</i> <div class="name">upload</div><div class="code">&amp;#xe7af;</div><div class="fontclass">.upload1</div></li><li> <i class="icon lud-icon">&#xe7b0;</i> <div class="name">user_role</div><div class="code">&amp;#xe7b0;</div><div class="fontclass">.userrole</div></li><li> <i class="icon lud-icon">&#xe7b1;</i> <div class="name">user</div><div class="code">&amp;#xe7b1;</div><div class="fontclass">.user2</div></li><li> <i class="icon lud-icon">&#xe7b2;</i> <div class="name">volume_high</div><div class="code">&amp;#xe7b2;</div><div class="fontclass">.volumehigh</div></li><li> <i class="icon lud-icon">&#xe7b3;</i> <div class="name">volume_low</div><div class="code">&amp;#xe7b3;</div><div class="fontclass">.volumelow</div></li><li> <i class="icon lud-icon">&#xe7b4;</i> <div class="name">volume_off</div><div class="code">&amp;#xe7b4;</div><div class="fontclass">.volumeoff</div></li><li> <i class="icon lud-icon">&#xe7b5;</i> <div class="name">warning</div><div class="code">&amp;#xe7b5;</div><div class="fontclass">.warning</div></li><li> <i class="icon lud-icon">&#xe7b6;</i> <div class="name">weeklyview</div><div class="code">&amp;#xe7b6;</div><div class="fontclass">.weeklyview</div></li><li> <i class="icon lud-icon">&#xe7b7;</i> <div class="name">world</div><div class="code">&amp;#xe7b7;</div><div class="fontclass">.world</div></li><li> <i class="icon lud-icon">&#xe7b8;</i> <div class="name">zoomin</div><div class="code">&amp;#xe7b8;</div><div class="fontclass">.zoomin</div></li><li> <i class="icon lud-icon">&#xe7b9;</i> <div class="name">zoomout</div><div class="code">&amp;#xe7b9;</div><div class="fontclass">.zoomout</div></li></ul>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <ul class="icon_lists lud-clearfix"><li> <i class="icon lud-icon">&#xe7be;</i> <div class="name">cloud</div><div class="code">&amp;#xe7be;</div><div class="fontclass">.cloud</div></li><li> <i class="icon lud-icon">&#xe662;</i> <div class="name">areachart</div><div class="code">&amp;#xe662;</div><div class="fontclass">.areachart</div></li><li> <i class="icon lud-icon">&#xe664;</i> <div class="name">barchart</div><div class="code">&amp;#xe664;</div><div class="fontclass">.barchart</div></li><li> <i class="icon lud-icon">&#xe6e4;</i> <div class="name">barschart</div><div class="code">&amp;#xe6e4;</div><div class="fontclass">.barschart</div></li><li> <i class="icon lud-icon">&#xe6e5;</i> <div class="name">facebook-official</div><div class="code">&amp;#xe6e5;</div><div class="fontclass">.facebookofficial</div></li><li> <i class="icon lud-icon">&#xe6e6;</i> <div class="name">linkedin-square</div><div class="code">&amp;#xe6e6;</div><div class="fontclass">.linkedinsquare</div></li><li> <i class="icon lud-icon">&#xe751;</i> <div class="name">skype</div><div class="code">&amp;#xe751;</div><div class="fontclass">.skype</div></li><li> <i class="icon lud-icon">&#xe7ba;</i> <div class="name">twitter</div><div class="code">&amp;#xe7ba;</div><div class="fontclass">.twitter</div></li><li> <i class="icon lud-icon">&#xe7bb;</i> <div class="name">wechat</div><div class="code">&amp;#xe7bb;</div><div class="fontclass">.wechat</div></li><li> <i class="icon lud-icon">&#xe7bc;</i> <div class="name">QQ</div><div class="code">&amp;#xe7bc;</div><div class="fontclass">.qq02</div></li><li> <i class="icon lud-icon">&#xe7bd;</i> <div class="name">weibo</div><div class="code">&amp;#xe7bd;</div><div class="fontclass">.weibo</div></li><li> <i class="icon lud-icon">&#xe655;</i> <div class="name">topic</div><div class="code">&amp;#xe655;</div><div class="fontclass">.topic</div></li><li> <i class="icon lud-icon">&#xe65a;</i> <div class="name">add_contact</div><div class="code">&amp;#xe65a;</div><div class="fontclass">.addcontact</div></li><li> <i class="icon lud-icon">&#xe65b;</i> <div class="name">announcement</div><div class="code">&amp;#xe65b;</div><div class="fontclass">.announcement</div></li><li> <i class="icon lud-icon">&#xe65c;</i> <div class="name">apex</div><div class="code">&amp;#xe65c;</div><div class="fontclass">.apex</div></li><li> <i class="icon lud-icon">&#xe65d;</i> <div class="name">back</div><div class="code">&amp;#xe65d;</div><div class="fontclass">.back</div></li><li> <i class="icon lud-icon">&#xe65e;</i> <div class="name">call</div><div class="code">&amp;#xe65e;</div><div class="fontclass">.call</div></li><li> <i class="icon lud-icon">&#xe65f;</i> <div class="name">canvas</div><div class="code">&amp;#xe65f;</div><div class="fontclass">.canvas</div></li><li> <i class="icon lud-icon">&#xe660;</i> <div class="name">change_owner</div><div class="code">&amp;#xe660;</div><div class="fontclass">.changeowner</div></li><li> <i class="icon lud-icon">&#xe661;</i> <div class="name">change_record_type</div><div class="code">&amp;#xe661;</div><div class="fontclass">.changerecordtype</div></li><li> <i class="icon lud-icon">&#xe663;</i> <div class="name">clone</div><div class="code">&amp;#xe663;</div><div class="fontclass">.clone</div></li><li> <i class="icon lud-icon">&#xe667;</i> <div class="name">description</div><div class="code">&amp;#xe667;</div><div class="fontclass">.description</div></li><li> <i class="icon lud-icon">&#xe668;</i> <div class="name">dial_in</div><div class="code">&amp;#xe668;</div><div class="fontclass">.dialin</div></li><li> <i class="icon lud-icon">&#xe669;</i> <div class="name">download</div><div class="code">&amp;#xe669;</div><div class="fontclass">.download</div></li><li> <i class="icon lud-icon">&#xe66a;</i> <div class="name">edit_groups</div><div class="code">&amp;#xe66a;</div><div class="fontclass">.editgroups</div></li><li> <i class="icon lud-icon">&#xe66b;</i> <div class="name">edit_relationship</div><div class="code">&amp;#xe66b;</div><div class="fontclass">.editrelationship</div></li><li> <i class="icon lud-icon">&#xe66c;</i> <div class="name">edit</div><div class="code">&amp;#xe66c;</div><div class="fontclass">.edit</div></li><li> <i class="icon lud-icon">&#xe66d;</i> <div class="name">email</div><div class="code">&amp;#xe66d;</div><div class="fontclass">.email</div></li><li> <i class="icon lud-icon">&#xe66e;</i> <div class="name">fallback</div><div class="code">&amp;#xe66e;</div><div class="fontclass">.fallback</div></li><li> <i class="icon lud-icon">&#xe66f;</i> <div class="name">filter</div><div class="code">&amp;#xe66f;</div><div class="fontclass">.filter</div></li><li> <i class="icon lud-icon">&#xe670;</i> <div class="name">flow</div><div class="code">&amp;#xe670;</div><div class="fontclass">.flow</div></li><li> <i class="icon lud-icon">&#xe671;</i> <div class="name">follow</div><div class="code">&amp;#xe671;</div><div class="fontclass">.follow</div></li><li> <i class="icon lud-icon">&#xe672;</i> <div class="name">following</div><div class="code">&amp;#xe672;</div><div class="fontclass">.following</div></li><li> <i class="icon lud-icon">&#xe673;</i> <div class="name">freeze_user</div><div class="code">&amp;#xe673;</div><div class="fontclass">.freezeuser</div></li><li> <i class="icon lud-icon">&#xe674;</i> <div class="name">google_news</div><div class="code">&amp;#xe674;</div><div class="fontclass">.googlenews</div></li><li> <i class="icon lud-icon">&#xe675;</i> <div class="name">info</div><div class="code">&amp;#xe675;</div><div class="fontclass">.info</div></li><li> <i class="icon lud-icon">&#xe676;</i> <div class="name">join_group</div><div class="code">&amp;#xe676;</div><div class="fontclass">.joingroup</div></li><li> <i class="icon lud-icon">&#xe677;</i> <div class="name">lead_convert</div><div class="code">&amp;#xe677;</div><div class="fontclass">.leadconvert</div></li><li> <i class="icon lud-icon">&#xe678;</i> <div class="name">leave_group</div><div class="code">&amp;#xe678;</div><div class="fontclass">.leavegroup</div></li><li> <i class="icon lud-icon">&#xe679;</i> <div class="name">log_event</div><div class="code">&amp;#xe679;</div><div class="fontclass">.logevent</div></li><li> <i class="icon lud-icon">&#xe67a;</i> <div class="name">manage_perm_sets</div><div class="code">&amp;#xe67a;</div><div class="fontclass">.managepermsets</div></li><li> <i class="icon lud-icon">&#xe67b;</i> <div class="name">map</div><div class="code">&amp;#xe67b;</div><div class="fontclass">.map</div></li><li> <i class="icon lud-icon">&#xe67c;</i> <div class="name">more</div><div class="code">&amp;#xe67c;</div><div class="fontclass">.more</div></li><li> <i class="icon lud-icon">&#xe67d;</i> <div class="name">new_account</div><div class="code">&amp;#xe67d;</div><div class="fontclass">.newaccount</div></li><li> <i class="icon lud-icon">&#xe67e;</i> <div class="name">new_campaign</div><div class="code">&amp;#xe67e;</div><div class="fontclass">.newcampaign</div></li><li> <i class="icon lud-icon">&#xe67f;</i> <div class="name">new_child_case</div><div class="code">&amp;#xe67f;</div><div class="fontclass">.newchildcase</div></li><li> <i class="icon lud-icon">&#xe680;</i> <div class="name">new_contact</div><div class="code">&amp;#xe680;</div><div class="fontclass">.newcontact</div></li><li> <i class="icon lud-icon">&#xe681;</i> <div class="name">new_custom2</div><div class="code">&amp;#xe681;</div><div class="fontclass">.newcustom2</div></li><li> <i class="icon lud-icon">&#xe682;</i> <div class="name">new_custom3</div><div class="code">&amp;#xe682;</div><div class="fontclass">.newcustom3</div></li><li> <i class="icon lud-icon">&#xe683;</i> <div class="name">new_custom5</div><div class="code">&amp;#xe683;</div><div class="fontclass">.newcustom5</div></li><li> <i class="icon lud-icon">&#xe684;</i> <div class="name">new_custom9</div><div class="code">&amp;#xe684;</div><div class="fontclass">.newcustom9</div></li><li> <i class="icon lud-icon">&#xe686;</i> <div class="name">new_custom14</div><div class="code">&amp;#xe686;</div><div class="fontclass">.newcustom14</div></li><li> <i class="icon lud-icon">&#xe687;</i> <div class="name">new_custom15</div><div class="code">&amp;#xe687;</div><div class="fontclass">.newcustom15</div></li><li> <i class="icon lud-icon">&#xe688;</i> <div class="name">new_custom16</div><div class="code">&amp;#xe688;</div><div class="fontclass">.newcustom16</div></li><li> <i class="icon lud-icon">&#xe689;</i> <div class="name">new_custom17</div><div class="code">&amp;#xe689;</div><div class="fontclass">.newcustom17</div></li><li> <i class="icon lud-icon">&#xe68a;</i> <div class="name">new_custom18</div><div class="code">&amp;#xe68a;</div><div class="fontclass">.newcustom18</div></li><li> <i class="icon lud-icon">&#xe68b;</i> <div class="name">new_custom20</div><div class="code">&amp;#xe68b;</div><div class="fontclass">.newcustom20</div></li><li> <i class="icon lud-icon">&#xe68c;</i> <div class="name">new_custom21</div><div class="code">&amp;#xe68c;</div><div class="fontclass">.newcustom21</div></li><li> <i class="icon lud-icon">&#xe68d;</i> <div class="name">new_custom24</div><div class="code">&amp;#xe68d;</div><div class="fontclass">.newcustom24</div></li><li> <i class="icon lud-icon">&#xe68e;</i> <div class="name">new_custom26</div><div class="code">&amp;#xe68e;</div><div class="fontclass">.newcustom26</div></li><li> <i class="icon lud-icon">&#xe68f;</i> <div class="name">new_custom30</div><div class="code">&amp;#xe68f;</div><div class="fontclass">.newcustom30</div></li><li> <i class="icon lud-icon">&#xe690;</i> <div class="name">new_custom31</div><div class="code">&amp;#xe690;</div><div class="fontclass">.newcustom31</div></li><li> <i class="icon lud-icon">&#xe691;</i> <div class="name">new_custom32</div><div class="code">&amp;#xe691;</div><div class="fontclass">.newcustom32</div></li><li> <i class="icon lud-icon">&#xe692;</i> <div class="name">new_custom33</div><div class="code">&amp;#xe692;</div><div class="fontclass">.newcustom33</div></li><li> <i class="icon lud-icon">&#xe693;</i> <div class="name">new_custom34</div><div class="code">&amp;#xe693;</div><div class="fontclass">.newcustom34</div></li><li> <i class="icon lud-icon">&#xe694;</i> <div class="name">new_custom35</div><div class="code">&amp;#xe694;</div><div class="fontclass">.newcustom35</div></li><li> <i class="icon lud-icon">&#xe695;</i> <div class="name">new_custom36</div><div class="code">&amp;#xe695;</div><div class="fontclass">.newcustom36</div></li><li> <i class="icon lud-icon">&#xe696;</i> <div class="name">new_custom37</div><div class="code">&amp;#xe696;</div><div class="fontclass">.newcustom37</div></li><li> <i class="icon lud-icon">&#xe697;</i> <div class="name">new_custom38</div><div class="code">&amp;#xe697;</div><div class="fontclass">.newcustom38</div></li><li> <i class="icon lud-icon">&#xe698;</i> <div class="name">new_custom39</div><div class="code">&amp;#xe698;</div><div class="fontclass">.newcustom39</div></li><li> <i class="icon lud-icon">&#xe699;</i> <div class="name">new_custom40</div><div class="code">&amp;#xe699;</div><div class="fontclass">.newcustom40</div></li><li> <i class="icon lud-icon">&#xe69a;</i> <div class="name">new_custom41</div><div class="code">&amp;#xe69a;</div><div class="fontclass">.newcustom41</div></li><li> <i class="icon lud-icon">&#xe69b;</i> <div class="name">new_custom42</div><div class="code">&amp;#xe69b;</div><div class="fontclass">.newcustom42</div></li><li> <i class="icon lud-icon">&#xe69c;</i> <div class="name">new_custom43</div><div class="code">&amp;#xe69c;</div><div class="fontclass">.newcustom43</div></li><li> <i class="icon lud-icon">&#xe69d;</i> <div class="name">new_custom44</div><div class="code">&amp;#xe69d;</div><div class="fontclass">.newcustom44</div></li><li> <i class="icon lud-icon">&#xe69e;</i> <div class="name">new_custom45</div><div class="code">&amp;#xe69e;</div><div class="fontclass">.newcustom45</div></li><li> <i class="icon lud-icon">&#xe69f;</i> <div class="name">new_custom46</div><div class="code">&amp;#xe69f;</div><div class="fontclass">.newcustom46</div></li><li> <i class="icon lud-icon">&#xe6a0;</i> <div class="name">new_custom47</div><div class="code">&amp;#xe6a0;</div><div class="fontclass">.newcustom47</div></li><li> <i class="icon lud-icon">&#xe6a1;</i> <div class="name">new_custom48</div><div class="code">&amp;#xe6a1;</div><div class="fontclass">.newcustom48</div></li><li> <i class="icon lud-icon">&#xe6a2;</i> <div class="name">new_custom49</div><div class="code">&amp;#xe6a2;</div><div class="fontclass">.newcustom49</div></li><li> <i class="icon lud-icon">&#xe6a3;</i> <div class="name">new_custom50</div><div class="code">&amp;#xe6a3;</div><div class="fontclass">.newcustom50</div></li><li> <i class="icon lud-icon">&#xe6a4;</i> <div class="name">new_custom51</div><div class="code">&amp;#xe6a4;</div><div class="fontclass">.newcustom51</div></li><li> <i class="icon lud-icon">&#xe6a5;</i> <div class="name">new_custom52</div><div class="code">&amp;#xe6a5;</div><div class="fontclass">.newcustom52</div></li><li> <i class="icon lud-icon">&#xe6a6;</i> <div class="name">new_custom54</div><div class="code">&amp;#xe6a6;</div><div class="fontclass">.newcustom54</div></li><li> <i class="icon lud-icon">&#xe6a7;</i> <div class="name">new_custom55</div><div class="code">&amp;#xe6a7;</div><div class="fontclass">.newcustom55</div></li><li> <i class="icon lud-icon">&#xe6a8;</i> <div class="name">new_custom56</div><div class="code">&amp;#xe6a8;</div><div class="fontclass">.newcustom56</div></li><li> <i class="icon lud-icon">&#xe6a9;</i> <div class="name">new_custom57</div><div class="code">&amp;#xe6a9;</div><div class="fontclass">.newcustom57</div></li><li> <i class="icon lud-icon">&#xe6aa;</i> <div class="name">new_custom58</div><div class="code">&amp;#xe6aa;</div><div class="fontclass">.newcustom58</div></li><li> <i class="icon lud-icon">&#xe6ab;</i> <div class="name">new_custom59</div><div class="code">&amp;#xe6ab;</div><div class="fontclass">.newcustom59</div></li><li> <i class="icon lud-icon">&#xe6ac;</i> <div class="name">new_custom60</div><div class="code">&amp;#xe6ac;</div><div class="fontclass">.newcustom60</div></li><li> <i class="icon lud-icon">&#xe6ad;</i> <div class="name">new_custom61</div><div class="code">&amp;#xe6ad;</div><div class="fontclass">.newcustom61</div></li><li> <i class="icon lud-icon">&#xe6ae;</i> <div class="name">new_custom62</div><div class="code">&amp;#xe6ae;</div><div class="fontclass">.newcustom62</div></li><li> <i class="icon lud-icon">&#xe6af;</i> <div class="name">new_custom63</div><div class="code">&amp;#xe6af;</div><div class="fontclass">.newcustom63</div></li><li> <i class="icon lud-icon">&#xe6b0;</i> <div class="name">new_custom64</div><div class="code">&amp;#xe6b0;</div><div class="fontclass">.newcustom64</div></li><li> <i class="icon lud-icon">&#xe6b1;</i> <div class="name">new_custom65</div><div class="code">&amp;#xe6b1;</div><div class="fontclass">.newcustom65</div></li><li> <i class="icon lud-icon">&#xe6b2;</i> <div class="name">new_custom66</div><div class="code">&amp;#xe6b2;</div><div class="fontclass">.newcustom66</div></li><li> <i class="icon lud-icon">&#xe6b3;</i> <div class="name">new_custom67</div><div class="code">&amp;#xe6b3;</div><div class="fontclass">.newcustom67</div></li><li> <i class="icon lud-icon">&#xe6b4;</i> <div class="name">new_custom68</div><div class="code">&amp;#xe6b4;</div><div class="fontclass">.newcustom68</div></li><li> <i class="icon lud-icon">&#xe6b5;</i> <div class="name">new_custom69</div><div class="code">&amp;#xe6b5;</div><div class="fontclass">.newcustom69</div></li><li> <i class="icon lud-icon">&#xe6b6;</i> <div class="name">new_custom70</div><div class="code">&amp;#xe6b6;</div><div class="fontclass">.newcustom70</div></li><li> <i class="icon lud-icon">&#xe6b7;</i> <div class="name">new_custom71</div><div class="code">&amp;#xe6b7;</div><div class="fontclass">.newcustom71</div></li><li> <i class="icon lud-icon">&#xe6b8;</i> <div class="name">new_custom72</div><div class="code">&amp;#xe6b8;</div><div class="fontclass">.newcustom72</div></li><li> <i class="icon lud-icon">&#xe6b9;</i> <div class="name">new_custom73</div><div class="code">&amp;#xe6b9;</div><div class="fontclass">.newcustom73</div></li><li> <i class="icon lud-icon">&#xe6ba;</i> <div class="name">new_custom74</div><div class="code">&amp;#xe6ba;</div><div class="fontclass">.newcustom74</div></li><li> <i class="icon lud-icon">&#xe6bb;</i> <div class="name">new_custom75</div><div class="code">&amp;#xe6bb;</div><div class="fontclass">.newcustom75</div></li><li> <i class="icon lud-icon">&#xe6bc;</i> <div class="name">new_custom76</div><div class="code">&amp;#xe6bc;</div><div class="fontclass">.newcustom76</div></li><li> <i class="icon lud-icon">&#xe6bd;</i> <div class="name">new_custom77</div><div class="code">&amp;#xe6bd;</div><div class="fontclass">.newcustom77</div></li><li> <i class="icon lud-icon">&#xe6be;</i> <div class="name">new_custom78</div><div class="code">&amp;#xe6be;</div><div class="fontclass">.newcustom78</div></li><li> <i class="icon lud-icon">&#xe6bf;</i> <div class="name">new_custom79</div><div class="code">&amp;#xe6bf;</div><div class="fontclass">.newcustom79</div></li><li> <i class="icon lud-icon">&#xe6c0;</i> <div class="name">new_custom80</div><div class="code">&amp;#xe6c0;</div><div class="fontclass">.newcustom80</div></li><li> <i class="icon lud-icon">&#xe6c1;</i> <div class="name">new_custom81</div><div class="code">&amp;#xe6c1;</div><div class="fontclass">.newcustom81</div></li><li> <i class="icon lud-icon">&#xe6c2;</i> <div class="name">new_custom82</div><div class="code">&amp;#xe6c2;</div><div class="fontclass">.newcustom82</div></li><li> <i class="icon lud-icon">&#xe6c3;</i> <div class="name">new_custom83</div><div class="code">&amp;#xe6c3;</div><div class="fontclass">.newcustom83</div></li><li> <i class="icon lud-icon">&#xe6c4;</i> <div class="name">new_custom84</div><div class="code">&amp;#xe6c4;</div><div class="fontclass">.newcustom84</div></li><li> <i class="icon lud-icon">&#xe6c5;</i> <div class="name">new_custom85</div><div class="code">&amp;#xe6c5;</div><div class="fontclass">.newcustom85</div></li><li> <i class="icon lud-icon">&#xe6c6;</i> <div class="name">new_custom86</div><div class="code">&amp;#xe6c6;</div><div class="fontclass">.newcustom86</div></li><li> <i class="icon lud-icon">&#xe6c7;</i> <div class="name">new_custom87</div><div class="code">&amp;#xe6c7;</div><div class="fontclass">.newcustom87</div></li><li> <i class="icon lud-icon">&#xe6c8;</i> <div class="name">new_custom88</div><div class="code">&amp;#xe6c8;</div><div class="fontclass">.newcustom88</div></li><li> <i class="icon lud-icon">&#xe6c9;</i> <div class="name">new_custom89</div><div class="code">&amp;#xe6c9;</div><div class="fontclass">.newcustom89</div></li><li> <i class="icon lud-icon">&#xe6ca;</i> <div class="name">new_custom90</div><div class="code">&amp;#xe6ca;</div><div class="fontclass">.newcustom90</div></li><li> <i class="icon lud-icon">&#xe6cb;</i> <div class="name">new_custom91</div><div class="code">&amp;#xe6cb;</div><div class="fontclass">.newcustom91</div></li><li> <i class="icon lud-icon">&#xe6cc;</i> <div class="name">new_custom92</div><div class="code">&amp;#xe6cc;</div><div class="fontclass">.newcustom92</div></li><li> <i class="icon lud-icon">&#xe6cd;</i> <div class="name">new_custom93</div><div class="code">&amp;#xe6cd;</div><div class="fontclass">.newcustom93</div></li><li> <i class="icon lud-icon">&#xe6ce;</i> <div class="name">new_custom94</div><div class="code">&amp;#xe6ce;</div><div class="fontclass">.newcustom94</div></li><li> <i class="icon lud-icon">&#xe6cf;</i> <div class="name">new_custom95</div><div class="code">&amp;#xe6cf;</div><div class="fontclass">.newcustom95</div></li><li> <i class="icon lud-icon">&#xe6d0;</i> <div class="name">new_custom96</div><div class="code">&amp;#xe6d0;</div><div class="fontclass">.newcustom96</div></li><li> <i class="icon lud-icon">&#xe6d1;</i> <div class="name">new_custom97</div><div class="code">&amp;#xe6d1;</div><div class="fontclass">.newcustom97</div></li><li> <i class="icon lud-icon">&#xe6d2;</i> <div class="name">new_custom98</div><div class="code">&amp;#xe6d2;</div><div class="fontclass">.newcustom98</div></li><li> <i class="icon lud-icon">&#xe6d3;</i> <div class="name">new_custom99</div><div class="code">&amp;#xe6d3;</div><div class="fontclass">.newcustom99</div></li><li> <i class="icon lud-icon">&#xe6d4;</i> <div class="name">new_custom100</div><div class="code">&amp;#xe6d4;</div><div class="fontclass">.newcustom100</div></li><li> <i class="icon lud-icon">&#xe6d5;</i> <div class="name">new_event</div><div class="code">&amp;#xe6d5;</div><div class="fontclass">.newevent</div></li><li> <i class="icon lud-icon">&#xe6d6;</i> <div class="name">new_group</div><div class="code">&amp;#xe6d6;</div><div class="fontclass">.newgroup</div></li><li> <i class="icon lud-icon">&#xe6d7;</i> <div class="name">new_lead</div><div class="code">&amp;#xe6d7;</div><div class="fontclass">.newlead</div></li><li> <i class="icon lud-icon">&#xe6d8;</i> <div class="name">new_note</div><div class="code">&amp;#xe6d8;</div><div class="fontclass">.newnote</div></li><li> <i class="icon lud-icon">&#xe6d9;</i> <div class="name">new_notebook</div><div class="code">&amp;#xe6d9;</div><div class="fontclass">.newnotebook</div></li><li> <i class="icon lud-icon">&#xe6da;</i> <div class="name">new_opportunity</div><div class="code">&amp;#xe6da;</div><div class="fontclass">.newopportunity</div></li><li> <i class="icon lud-icon">&#xe6db;</i> <div class="name">new_person_account</div><div class="code">&amp;#xe6db;</div><div class="fontclass">.newpersonaccount</div></li><li> <i class="icon lud-icon">&#xe6dc;</i> <div class="name">new_task</div><div class="code">&amp;#xe6dc;</div><div class="fontclass">.newtask</div></li><li> <i class="icon lud-icon">&#xe6dd;</i> <div class="name">password_unlock</div><div class="code">&amp;#xe6dd;</div><div class="fontclass">.passwordunlock</div></li><li> <i class="icon lud-icon">&#xe6de;</i> <div class="name">preview</div><div class="code">&amp;#xe6de;</div><div class="fontclass">.preview</div></li><li> <i class="icon lud-icon">&#xe6df;</i> <div class="name">priority</div><div class="code">&amp;#xe6df;</div><div class="fontclass">.priority</div></li><li> <i class="icon lud-icon">&#xe6e0;</i> <div class="name">question_post_action</div><div class="code">&amp;#xe6e0;</div><div class="fontclass">.questionpostaction</div></li><li> <i class="icon lud-icon">&#xe6e1;</i> <div class="name">quote</div><div class="code">&amp;#xe6e1;</div><div class="fontclass">.quote</div></li><li> <i class="icon lud-icon">&#xe6e2;</i> <div class="name">record</div><div class="code">&amp;#xe6e2;</div><div class="fontclass">.record</div></li><li> <i class="icon lud-icon">&#xe6e3;</i> <div class="name">refresh</div><div class="code">&amp;#xe6e3;</div><div class="fontclass">.refresh</div></li><li> <i class="icon lud-icon">&#xe6e7;</i> <div class="name">share_link</div><div class="code">&amp;#xe6e7;</div><div class="fontclass">.sharelink</div></li><li> <i class="icon lud-icon">&#xe6e8;</i> <div class="name">share_poll</div><div class="code">&amp;#xe6e8;</div><div class="fontclass">.sharepoll</div></li><li> <i class="icon lud-icon">&#xe6e9;</i> <div class="name">share_post</div><div class="code">&amp;#xe6e9;</div><div class="fontclass">.sharepost</div></li><li> <i class="icon lud-icon">&#xe6ea;</i> <div class="name">share_thanks</div><div class="code">&amp;#xe6ea;</div><div class="fontclass">.sharethanks</div></li><li> <i class="icon lud-icon">&#xe6eb;</i> <div class="name">share</div><div class="code">&amp;#xe6eb;</div><div class="fontclass">.share</div></li><li> <i class="icon lud-icon">&#xe6ec;</i> <div class="name">sort</div><div class="code">&amp;#xe6ec;</div><div class="fontclass">.sort</div></li><li> <i class="icon lud-icon">&#xe6ed;</i> <div class="name">submit_for_approval</div><div class="code">&amp;#xe6ed;</div><div class="fontclass">.submitforapproval</div></li><li> <i class="icon lud-icon">&#xe6ee;</i> <div class="name">update_status</div><div class="code">&amp;#xe6ee;</div><div class="fontclass">.updatestatus</div></li><li> <i class="icon lud-icon">&#xe6ef;</i> <div class="name">update</div><div class="code">&amp;#xe6ef;</div><div class="fontclass">.update</div></li><li> <i class="icon lud-icon">&#xe6f0;</i> <div class="name">upload</div><div class="code">&amp;#xe6f0;</div><div class="fontclass">.upload</div></li><li> <i class="icon lud-icon">&#xe6f1;</i> <div class="name">user_activation</div><div class="code">&amp;#xe6f1;</div><div class="fontclass">.useractivation</div></li><li> <i class="icon lud-icon">&#xe6f2;</i> <div class="name">user</div><div class="code">&amp;#xe6f2;</div><div class="fontclass">.user</div></li><li> <i class="icon lud-icon">&#xe6f3;</i> <div class="name">web_link</div><div class="code">&amp;#xe6f3;</div><div class="fontclass">.weblink</div></li><li> <i class="icon lud-icon">&#xe6f4;</i> <div class="name">add</div><div class="code">&amp;#xe6f4;</div><div class="fontclass">.add</div></li><li> <i class="icon lud-icon">&#xe6f5;</i> <div class="name">adduser</div><div class="code">&amp;#xe6f5;</div><div class="fontclass">.adduser</div></li><li> <i class="icon lud-icon">&#xe6f6;</i> <div class="name">announcement</div><div class="code">&amp;#xe6f6;</div><div class="fontclass">.announcement1</div></li><li> <i class="icon lud-icon">&#xe6f7;</i> <div class="name">answer</div><div class="code">&amp;#xe6f7;</div><div class="fontclass">.answer</div></li><li> <i class="icon lud-icon">&#xe6f8;</i> <div class="name">apps</div><div class="code">&amp;#xe6f8;</div><div class="fontclass">.apps</div></li><li> <i class="icon lud-icon">&#xe6f9;</i> <div class="name">arrowdown</div><div class="code">&amp;#xe6f9;</div><div class="fontclass">.arrowdown</div></li><li> <i class="icon lud-icon">&#xe6fa;</i> <div class="name">arrowup</div><div class="code">&amp;#xe6fa;</div><div class="fontclass">.arrowup</div></li><li> <i class="icon lud-icon">&#xe6fb;</i> <div class="name">attach</div><div class="code">&amp;#xe6fb;</div><div class="fontclass">.attach</div></li><li> <i class="icon lud-icon">&#xe6fc;</i> <div class="name">back</div><div class="code">&amp;#xe6fc;</div><div class="fontclass">.back1</div></li><li> <i class="icon lud-icon">&#xe6fd;</i> <div class="name">ban</div><div class="code">&amp;#xe6fd;</div><div class="fontclass">.ban</div></li><li> <i class="icon lud-icon">&#xe6fe;</i> <div class="name">bold</div><div class="code">&amp;#xe6fe;</div><div class="fontclass">.bold</div></li><li> <i class="icon lud-icon">&#xe6ff;</i> <div class="name">bookmark</div><div class="code">&amp;#xe6ff;</div><div class="fontclass">.bookmark</div></li><li> <i class="icon lud-icon">&#xe700;</i> <div class="name">broadcast</div><div class="code">&amp;#xe700;</div><div class="fontclass">.broadcast</div></li><li> <i class="icon lud-icon">&#xe701;</i> <div class="name">brush</div><div class="code">&amp;#xe701;</div><div class="fontclass">.brush</div></li><li> <i class="icon lud-icon">&#xe702;</i> <div class="name">bucket</div><div class="code">&amp;#xe702;</div><div class="fontclass">.bucket</div></li><li> <i class="icon lud-icon">&#xe703;</i> <div class="name">builder</div><div class="code">&amp;#xe703;</div><div class="fontclass">.builder</div></li><li> <i class="icon lud-icon">&#xe704;</i> <div class="name">call</div><div class="code">&amp;#xe704;</div><div class="fontclass">.call1</div></li><li> <i class="icon lud-icon">&#xe705;</i> <div class="name">capslock</div><div class="code">&amp;#xe705;</div><div class="fontclass">.capslock</div></li><li> <i class="icon lud-icon">&#xe706;</i> <div class="name">cases</div><div class="code">&amp;#xe706;</div><div class="fontclass">.cases</div></li><li> <i class="icon lud-icon">&#xe707;</i> <div class="name">center_align_text</div><div class="code">&amp;#xe707;</div><div class="fontclass">.centeraligntext</div></li><li> <i class="icon lud-icon">&#xe708;</i> <div class="name">chart</div><div class="code">&amp;#xe708;</div><div class="fontclass">.chart</div></li><li> <i class="icon lud-icon">&#xe709;</i> <div class="name">chat</div><div class="code">&amp;#xe709;</div><div class="fontclass">.chat</div></li><li> <i class="icon lud-icon">&#xe70a;</i> <div class="name">check</div><div class="code">&amp;#xe70a;</div><div class="fontclass">.check</div></li><li> <i class="icon lud-icon">&#xe70b;</i> <div class="name">checkin</div><div class="code">&amp;#xe70b;</div><div class="fontclass">.checkin</div></li><li> <i class="icon lud-icon">&#xe70c;</i> <div class="name">chevrondown</div><div class="code">&amp;#xe70c;</div><div class="fontclass">.chevrondown</div></li><li> <i class="icon lud-icon">&#xe70d;</i> <div class="name">chevronleft</div><div class="code">&amp;#xe70d;</div><div class="fontclass">.chevronleft</div></li><li> <i class="icon lud-icon">&#xe70e;</i> <div class="name">chevronright</div><div class="code">&amp;#xe70e;</div><div class="fontclass">.chevronright</div></li><li> <i class="icon lud-icon">&#xe70f;</i> <div class="name">chevronup</div><div class="code">&amp;#xe70f;</div><div class="fontclass">.chevronup</div></li><li> <i class="icon lud-icon">&#xe710;</i> <div class="name">clear</div><div class="code">&amp;#xe710;</div><div class="fontclass">.clear</div></li><li> <i class="icon lud-icon">&#xe711;</i> <div class="name">clock</div><div class="code">&amp;#xe711;</div><div class="fontclass">.clock</div></li><li> <i class="icon lud-icon">&#xe712;</i> <div class="name">close</div><div class="code">&amp;#xe712;</div><div class="fontclass">.close</div></li><li> <i class="icon lud-icon">&#xe713;</i> <div class="name">comments</div><div class="code">&amp;#xe713;</div><div class="fontclass">.comments</div></li><li> <i class="icon lud-icon">&#xe714;</i> <div class="name">company</div><div class="code">&amp;#xe714;</div><div class="fontclass">.company</div></li><li> <i class="icon lud-icon">&#xe715;</i> <div class="name">connected_apps</div><div class="code">&amp;#xe715;</div><div class="fontclass">.connectedapps</div></li><li> <i class="icon lud-icon">&#xe716;</i> <div class="name">contract_alt</div><div class="code">&amp;#xe716;</div><div class="fontclass">.contractalt</div></li><li> <i class="icon lud-icon">&#xe717;</i> <div class="name">contract</div><div class="code">&amp;#xe717;</div><div class="fontclass">.contract</div></li><li> <i class="icon lud-icon">&#xe718;</i> <div class="name">copy</div><div class="code">&amp;#xe718;</div><div class="fontclass">.copy</div></li><li> <i class="icon lud-icon">&#xe719;</i> <div class="name">crossfilter</div><div class="code">&amp;#xe719;</div><div class="fontclass">.crossfilter</div></li><li> <i class="icon lud-icon">&#xe71a;</i> <div class="name">custom_apps</div><div class="code">&amp;#xe71a;</div><div class="fontclass">.customapps</div></li><li> <i class="icon lud-icon">&#xe71b;</i> <div class="name">cut</div><div class="code">&amp;#xe71b;</div><div class="fontclass">.cut</div></li><li> <i class="icon lud-icon">&#xe71c;</i> <div class="name">datadotcom</div><div class="code">&amp;#xe71c;</div><div class="fontclass">.datadotcom</div></li><li> <i class="icon lud-icon">&#xe71d;</i> <div class="name">dayview</div><div class="code">&amp;#xe71d;</div><div class="fontclass">.dayview</div></li><li> <i class="icon lud-icon">&#xe71e;</i> <div class="name">delete</div><div class="code">&amp;#xe71e;</div><div class="fontclass">.delete</div></li><li> <i class="icon lud-icon">&#xe71f;</i> <div class="name">deprecate</div><div class="code">&amp;#xe71f;</div><div class="fontclass">.deprecate</div></li><li> <i class="icon lud-icon">&#xe720;</i> <div class="name">description</div><div class="code">&amp;#xe720;</div><div class="fontclass">.description1</div></li><li> <i class="icon lud-icon">&#xe721;</i> <div class="name">desktop</div><div class="code">&amp;#xe721;</div><div class="fontclass">.desktop</div></li><li> <i class="icon lud-icon">&#xe722;</i> <div class="name">dock_panel</div><div class="code">&amp;#xe722;</div><div class="fontclass">.dockpanel</div></li><li> <i class="icon lud-icon">&#xe723;</i> <div class="name">down</div><div class="code">&amp;#xe723;</div><div class="fontclass">.down</div></li><li> <i class="icon lud-icon">&#xe724;</i> <div class="name">download</div><div class="code">&amp;#xe724;</div><div class="fontclass">.download1</div></li><li> <i class="icon lud-icon">&#xe725;</i> <div class="name">edit_form</div><div class="code">&amp;#xe725;</div><div class="fontclass">.editform</div></li><li> <i class="icon lud-icon">&#xe726;</i> <div class="name">edit</div><div class="code">&amp;#xe726;</div><div class="fontclass">.edit1</div></li><li> <i class="icon lud-icon">&#xe727;</i> <div class="name">email</div><div class="code">&amp;#xe727;</div><div class="fontclass">.email1</div></li><li> <i class="icon lud-icon">&#xe728;</i> <div class="name">end_call</div><div class="code">&amp;#xe728;</div><div class="fontclass">.endcall</div></li><li> <i class="icon lud-icon">&#xe729;</i> <div class="name">erect_window</div><div class="code">&amp;#xe729;</div><div class="fontclass">.erectwindow</div></li><li> <i class="icon lud-icon">&#xe72a;</i> <div class="name">error</div><div class="code">&amp;#xe72a;</div><div class="fontclass">.error</div></li><li> <i class="icon lud-icon">&#xe72b;</i> <div class="name">event</div><div class="code">&amp;#xe72b;</div><div class="fontclass">.event</div></li><li> <i class="icon lud-icon">&#xe72c;</i> <div class="name">expand_alt</div><div class="code">&amp;#xe72c;</div><div class="fontclass">.expandalt</div></li><li> <i class="icon lud-icon">&#xe72d;</i> <div class="name">expand</div><div class="code">&amp;#xe72d;</div><div class="fontclass">.expand</div></li><li> <i class="icon lud-icon">&#xe72e;</i> <div class="name">favorite</div><div class="code">&amp;#xe72e;</div><div class="fontclass">.favorite</div></li><li> <i class="icon lud-icon">&#xe72f;</i> <div class="name">feed</div><div class="code">&amp;#xe72f;</div><div class="fontclass">.feed</div></li><li> <i class="icon lud-icon">&#xe730;</i> <div class="name">file</div><div class="code">&amp;#xe730;</div><div class="fontclass">.file</div></li><li> <i class="icon lud-icon">&#xe731;</i> <div class="name">filter</div><div class="code">&amp;#xe731;</div><div class="fontclass">.filter1</div></li><li> <i class="icon lud-icon">&#xe732;</i> <div class="name">filterList</div><div class="code">&amp;#xe732;</div><div class="fontclass">.filterlist</div></li><li> <i class="icon lud-icon">&#xe733;</i> <div class="name">forward</div><div class="code">&amp;#xe733;</div><div class="fontclass">.forward</div></li><li> <i class="icon lud-icon">&#xe734;</i> <div class="name">frozen</div><div class="code">&amp;#xe734;</div><div class="fontclass">.frozen</div></li><li> <i class="icon lud-icon">&#xe735;</i> <div class="name">groups</div><div class="code">&amp;#xe735;</div><div class="fontclass">.groups</div></li><li> <i class="icon lud-icon">&#xe736;</i> <div class="name">help</div><div class="code">&amp;#xe736;</div><div class="fontclass">.help</div></li><li> <i class="icon lud-icon">&#xe737;</i> <div class="name">home</div><div class="code">&amp;#xe737;</div><div class="fontclass">.home</div></li><li> <i class="icon lud-icon">&#xe738;</i> <div class="name">identity</div><div class="code">&amp;#xe738;</div><div class="fontclass">.identity</div></li><li> <i class="icon lud-icon">&#xe739;</i> <div class="name">image</div><div class="code">&amp;#xe739;</div><div class="fontclass">.image</div></li><li> <i class="icon lud-icon">&#xe73a;</i> <div class="name">inbox</div><div class="code">&amp;#xe73a;</div><div class="fontclass">.inbox</div></li><li> <i class="icon lud-icon">&#xe73b;</i> <div class="name">info</div><div class="code">&amp;#xe73b;</div><div class="fontclass">.info1</div></li><li> <i class="icon lud-icon">&#xe73c;</i> <div class="name">insert_tag_field</div><div class="code">&amp;#xe73c;</div><div class="fontclass">.inserttagfield</div></li><li> <i class="icon lud-icon">&#xe73d;</i> <div class="name">insert_template</div><div class="code">&amp;#xe73d;</div><div class="fontclass">.inserttemplate</div></li><li> <i class="icon lud-icon">&#xe73e;</i> <div class="name">italic</div><div class="code">&amp;#xe73e;</div><div class="fontclass">.italic</div></li><li> <i class="icon lud-icon">&#xe73f;</i> <div class="name">justify_text</div><div class="code">&amp;#xe73f;</div><div class="fontclass">.justifytext</div></li><li> <i class="icon lud-icon">&#xe740;</i> <div class="name">kanban</div><div class="code">&amp;#xe740;</div><div class="fontclass">.kanban</div></li><li> <i class="icon lud-icon">&#xe741;</i> <div class="name">keyboard_dismiss</div><div class="code">&amp;#xe741;</div><div class="fontclass">.keyboarddismiss</div></li><li> <i class="icon lud-icon">&#xe742;</i> <div class="name">knowledge_base</div><div class="code">&amp;#xe742;</div><div class="fontclass">.knowledgebase</div></li><li> <i class="icon lud-icon">&#xe743;</i> <div class="name">layers</div><div class="code">&amp;#xe743;</div><div class="fontclass">.layers</div></li><li> <i class="icon lud-icon">&#xe744;</i> <div class="name">layout</div><div class="code">&amp;#xe744;</div><div class="fontclass">.layout</div></li><li> <i class="icon lud-icon">&#xe745;</i> <div class="name">left_align_text</div><div class="code">&amp;#xe745;</div><div class="fontclass">.leftaligntext</div></li><li> <i class="icon lud-icon">&#xe746;</i> <div class="name">left</div><div class="code">&amp;#xe746;</div><div class="fontclass">.left</div></li><li> <i class="icon lud-icon">&#xe747;</i> <div class="name">like</div><div class="code">&amp;#xe747;</div><div class="fontclass">.like</div></li><li> <i class="icon lud-icon">&#xe748;</i> <div class="name">link</div><div class="code">&amp;#xe748;</div><div class="fontclass">.link</div></li><li> <i class="icon lud-icon">&#xe749;</i> <div class="name">list</div><div class="code">&amp;#xe749;</div><div class="fontclass">.list</div></li><li> <i class="icon lud-icon">&#xe74a;</i> <div class="name">location</div><div class="code">&amp;#xe74a;</div><div class="fontclass">.location</div></li><li> <i class="icon lud-icon">&#xe74b;</i> <div class="name">lock</div><div class="code">&amp;#xe74b;</div><div class="fontclass">.lock</div></li><li> <i class="icon lud-icon">&#xe74c;</i> <div class="name">log_a_call</div><div class="code">&amp;#xe74c;</div><div class="fontclass">.logacall</div></li><li> <i class="icon lud-icon">&#xe74d;</i> <div class="name">logout</div><div class="code">&amp;#xe74d;</div><div class="fontclass">.logout</div></li><li> <i class="icon lud-icon">&#xe74e;</i> <div class="name">magicwand</div><div class="code">&amp;#xe74e;</div><div class="fontclass">.magicwand</div></li><li> <i class="icon lud-icon">&#xe74f;</i> <div class="name">matrix</div><div class="code">&amp;#xe74f;</div><div class="fontclass">.matrix</div></li><li> <i class="icon lud-icon">&#xe750;</i> <div class="name">metrics</div><div class="code">&amp;#xe750;</div><div class="fontclass">.metrics</div></li><li> <i class="icon lud-icon">&#xe752;</i> <div class="name">moneybag</div><div class="code">&amp;#xe752;</div><div class="fontclass">.moneybag</div></li><li> <i class="icon lud-icon">&#xe753;</i> <div class="name">monthlyview</div><div class="code">&amp;#xe753;</div><div class="fontclass">.monthlyview</div></li><li> <i class="icon lud-icon">&#xe754;</i> <div class="name">move</div><div class="code">&amp;#xe754;</div><div class="fontclass">.move</div></li><li> <i class="icon lud-icon">&#xe755;</i> <div class="name">muted</div><div class="code">&amp;#xe755;</div><div class="fontclass">.muted</div></li><li> <i class="icon lud-icon">&#xe756;</i> <div class="name">new_window</div><div class="code">&amp;#xe756;</div><div class="fontclass">.newwindow</div></li><li> <i class="icon lud-icon">&#xe757;</i> <div class="name">new</div><div class="code">&amp;#xe757;</div><div class="fontclass">.new</div></li><li> <i class="icon lud-icon">&#xe758;</i> <div class="name">news</div><div class="code">&amp;#xe758;</div><div class="fontclass">.news</div></li><li> <i class="icon lud-icon">&#xe759;</i> <div class="name">note</div><div class="code">&amp;#xe759;</div><div class="fontclass">.note</div></li><li> <i class="icon lud-icon">&#xe75a;</i> <div class="name">notebook</div><div class="code">&amp;#xe75a;</div><div class="fontclass">.notebook</div></li><li> <i class="icon lud-icon">&#xe75b;</i> <div class="name">notification</div><div class="code">&amp;#xe75b;</div><div class="fontclass">.notification</div></li><li> <i class="icon lud-icon">&#xe75c;</i> <div class="name">office365</div><div class="code">&amp;#xe75c;</div><div class="fontclass">.office365</div></li><li> <i class="icon lud-icon">&#xe75d;</i> <div class="name">offline</div><div class="code">&amp;#xe75d;</div><div class="fontclass">.offline</div></li><li> <i class="icon lud-icon">&#xe75e;</i> <div class="name">open_folder</div><div class="code">&amp;#xe75e;</div><div class="fontclass">.openfolder</div></li><li> <i class="icon lud-icon">&#xe75f;</i> <div class="name">open</div><div class="code">&amp;#xe75f;</div><div class="fontclass">.open</div></li><li> <i class="icon lud-icon">&#xe760;</i> <div class="name">opened_folder</div><div class="code">&amp;#xe760;</div><div class="fontclass">.openedfolder</div></li><li> <i class="icon lud-icon">&#xe761;</i> <div class="name">overflow</div><div class="code">&amp;#xe761;</div><div class="fontclass">.overflow</div></li><li> <i class="icon lud-icon">&#xe762;</i> <div class="name">package_org_beta</div><div class="code">&amp;#xe762;</div><div class="fontclass">.packageorgbeta</div></li><li> <i class="icon lud-icon">&#xe763;</i> <div class="name">package_org</div><div class="code">&amp;#xe763;</div><div class="fontclass">.packageorg</div></li><li> <i class="icon lud-icon">&#xe764;</i> <div class="name">package</div><div class="code">&amp;#xe764;</div><div class="fontclass">.package</div></li><li> <i class="icon lud-icon">&#xe765;</i> <div class="name">page</div><div class="code">&amp;#xe765;</div><div class="fontclass">.page</div></li><li> <i class="icon lud-icon">&#xe766;</i> <div class="name">palette</div><div class="code">&amp;#xe766;</div><div class="fontclass">.palette</div></li><li> <i class="icon lud-icon">&#xe767;</i> <div class="name">paste</div><div class="code">&amp;#xe767;</div><div class="fontclass">.paste</div></li><li> <i class="icon lud-icon">&#xe768;</i> <div class="name">people</div><div class="code">&amp;#xe768;</div><div class="fontclass">.people</div></li><li> <i class="icon lud-icon">&#xe769;</i> <div class="name">phone_landscape</div><div class="code">&amp;#xe769;</div><div class="fontclass">.phonelandscape</div></li><li> <i class="icon lud-icon">&#xe76a;</i> <div class="name">phone_portrait</div><div class="code">&amp;#xe76a;</div><div class="fontclass">.phoneportrait</div></li><li> <i class="icon lud-icon">&#xe76b;</i> <div class="name">photo</div><div class="code">&amp;#xe76b;</div><div class="fontclass">.photo</div></li><li> <i class="icon lud-icon">&#xe76c;</i> <div class="name">picklist</div><div class="code">&amp;#xe76c;</div><div class="fontclass">.picklist</div></li><li> <i class="icon lud-icon">&#xe76d;</i> <div class="name">power</div><div class="code">&amp;#xe76d;</div><div class="fontclass">.power</div></li><li> <i class="icon lud-icon">&#xe76e;</i> <div class="name">preview</div><div class="code">&amp;#xe76e;</div><div class="fontclass">.preview1</div></li><li> <i class="icon lud-icon">&#xe76f;</i> <div class="name">priority</div><div class="code">&amp;#xe76f;</div><div class="fontclass">.priority1</div></li><li> <i class="icon lud-icon">&#xe770;</i> <div class="name">process</div><div class="code">&amp;#xe770;</div><div class="fontclass">.process</div></li><li> <i class="icon lud-icon">&#xe771;</i> <div class="name">push</div><div class="code">&amp;#xe771;</div><div class="fontclass">.push</div></li><li> <i class="icon lud-icon">&#xe772;</i> <div class="name">puzzle</div><div class="code">&amp;#xe772;</div><div class="fontclass">.puzzle</div></li><li> <i class="icon lud-icon">&#xe773;</i> <div class="name">question</div><div class="code">&amp;#xe773;</div><div class="fontclass">.question</div></li><li> <i class="icon lud-icon">&#xe774;</i> <div class="name">questions_and_answers</div><div class="code">&amp;#xe774;</div><div class="fontclass">.questionsandanswers</div></li><li> <i class="icon lud-icon">&#xe775;</i> <div class="name">record</div><div class="code">&amp;#xe775;</div><div class="fontclass">.record1</div></li><li> <i class="icon lud-icon">&#xe776;</i> <div class="name">redo</div><div class="code">&amp;#xe776;</div><div class="fontclass">.redo</div></li><li> <i class="icon lud-icon">&#xe777;</i> <div class="name">refresh</div><div class="code">&amp;#xe777;</div><div class="fontclass">.refresh1</div></li><li> <i class="icon lud-icon">&#xe778;</i> <div class="name">relate</div><div class="code">&amp;#xe778;</div><div class="fontclass">.relate</div></li><li> <i class="icon lud-icon">&#xe779;</i> <div class="name">remove_formatting</div><div class="code">&amp;#xe779;</div><div class="fontclass">.removeformatting</div></li><li> <i class="icon lud-icon">&#xe77a;</i> <div class="name">remove_link</div><div class="code">&amp;#xe77a;</div><div class="fontclass">.removelink</div></li><li> <i class="icon lud-icon">&#xe77b;</i> <div class="name">replace</div><div class="code">&amp;#xe77b;</div><div class="fontclass">.replace</div></li><li> <i class="icon lud-icon">&#xe77c;</i> <div class="name">reply</div><div class="code">&amp;#xe77c;</div><div class="fontclass">.reply</div></li><li> <i class="icon lud-icon">&#xe77d;</i> <div class="name">reset_password</div><div class="code">&amp;#xe77d;</div><div class="fontclass">.resetpassword</div></li><li> <i class="icon lud-icon">&#xe77e;</i> <div class="name">retweet</div><div class="code">&amp;#xe77e;</div><div class="fontclass">.retweet</div></li><li> <i class="icon lud-icon">&#xe77f;</i> <div class="name">richtextbulletedlist</div><div class="code">&amp;#xe77f;</div><div class="fontclass">.richtextbulletedlist</div></li><li> <i class="icon lud-icon">&#xe780;</i> <div class="name">richtextindent</div><div class="code">&amp;#xe780;</div><div class="fontclass">.richtextindent</div></li><li> <i class="icon lud-icon">&#xe781;</i> <div class="name">richtextnumberedlist</div><div class="code">&amp;#xe781;</div><div class="fontclass">.richtextnumberedlist</div></li><li> <i class="icon lud-icon">&#xe782;</i> <div class="name">richtextoutdent</div><div class="code">&amp;#xe782;</div><div class="fontclass">.richtextoutdent</div></li><li> <i class="icon lud-icon">&#xe783;</i> <div class="name">right_align_text</div><div class="code">&amp;#xe783;</div><div class="fontclass">.rightaligntext</div></li><li> <i class="icon lud-icon">&#xe784;</i> <div class="name">right</div><div class="code">&amp;#xe784;</div><div class="fontclass">.right</div></li><li> <i class="icon lud-icon">&#xe785;</i> <div class="name">rotate</div><div class="code">&amp;#xe785;</div><div class="fontclass">.rotate</div></li><li> <i class="icon lud-icon">&#xe786;</i> <div class="name">rows</div><div class="code">&amp;#xe786;</div><div class="fontclass">.rows</div></li><li> <i class="icon lud-icon">&#xe787;</i> <div class="name">search</div><div class="code">&amp;#xe787;</div><div class="fontclass">.search</div></li><li> <i class="icon lud-icon">&#xe788;</i> <div class="name">settings</div><div class="code">&amp;#xe788;</div><div class="fontclass">.settings</div></li><li> <i class="icon lud-icon">&#xe789;</i> <div class="name">setup_assistant_guide</div><div class="code">&amp;#xe789;</div><div class="fontclass">.setupassistantguide</div></li><li> <i class="icon lud-icon">&#xe78a;</i> <div class="name">setup</div><div class="code">&amp;#xe78a;</div><div class="fontclass">.setup</div></li><li> <i class="icon lud-icon">&#xe78b;</i> <div class="name">share_post</div><div class="code">&amp;#xe78b;</div><div class="fontclass">.sharepost1</div></li><li> <i class="icon lud-icon">&#xe78c;</i> <div class="name">share</div><div class="code">&amp;#xe78c;</div><div class="fontclass">.share1</div></li><li> <i class="icon lud-icon">&#xe78d;</i> <div class="name">shield</div><div class="code">&amp;#xe78d;</div><div class="fontclass">.shield</div></li><li> <i class="icon lud-icon">&#xe78e;</i> <div class="name">side_list</div><div class="code">&amp;#xe78e;</div><div class="fontclass">.sidelist</div></li><li> <i class="icon lud-icon">&#xe78f;</i> <div class="name">signpost</div><div class="code">&amp;#xe78f;</div><div class="fontclass">.signpost</div></li><li> <i class="icon lud-icon">&#xe790;</i> <div class="name">sms</div><div class="code">&amp;#xe790;</div><div class="fontclass">.sms</div></li><li> <i class="icon lud-icon">&#xe791;</i> <div class="name">snippet</div><div class="code">&amp;#xe791;</div><div class="fontclass">.snippet</div></li><li> <i class="icon lud-icon">&#xe792;</i> <div class="name">socialshare</div><div class="code">&amp;#xe792;</div><div class="fontclass">.socialshare</div></li><li> <i class="icon lud-icon">&#xe793;</i> <div class="name">sort</div><div class="code">&amp;#xe793;</div><div class="fontclass">.sort1</div></li><li> <i class="icon lud-icon">&#xe794;</i> <div class="name">spinner</div><div class="code">&amp;#xe794;</div><div class="fontclass">.spinner</div></li><li> <i class="icon lud-icon">&#xe795;</i> <div class="name">standard_objects</div><div class="code">&amp;#xe795;</div><div class="fontclass">.standardobjects</div></li><li> <i class="icon lud-icon">&#xe796;</i> <div class="name">stop</div><div class="code">&amp;#xe796;</div><div class="fontclass">.stop</div></li><li> <i class="icon lud-icon">&#xe797;</i> <div class="name">strikethrough</div><div class="code">&amp;#xe797;</div><div class="fontclass">.strikethrough</div></li><li> <i class="icon lud-icon">&#xe798;</i> <div class="name">success</div><div class="code">&amp;#xe798;</div><div class="fontclass">.success</div></li><li> <i class="icon lud-icon">&#xe799;</i> <div class="name">summary</div><div class="code">&amp;#xe799;</div><div class="fontclass">.summary</div></li><li> <i class="icon lud-icon">&#xe79a;</i> <div class="name">summarydetail</div><div class="code">&amp;#xe79a;</div><div class="fontclass">.summarydetail</div></li><li> <i class="icon lud-icon">&#xe79b;</i> <div class="name">switch</div><div class="code">&amp;#xe79b;</div><div class="fontclass">.switch</div></li><li> <i class="icon lud-icon">&#xe79c;</i> <div class="name">table</div><div class="code">&amp;#xe79c;</div><div class="fontclass">.table</div></li><li> <i class="icon lud-icon">&#xe79d;</i> <div class="name">tablet_landscape</div><div class="code">&amp;#xe79d;</div><div class="fontclass">.tabletlandscape</div></li><li> <i class="icon lud-icon">&#xe79e;</i> <div class="name">tablet_portrait</div><div class="code">&amp;#xe79e;</div><div class="fontclass">.tabletportrait</div></li><li> <i class="icon lud-icon">&#xe79f;</i> <div class="name">tabset</div><div class="code">&amp;#xe79f;</div><div class="fontclass">.tabset</div></li><li> <i class="icon lud-icon">&#xe7a0;</i> <div class="name">task</div><div class="code">&amp;#xe7a0;</div><div class="fontclass">.task</div></li><li> <i class="icon lud-icon">&#xe7a1;</i> <div class="name">text_background_color</div><div class="code">&amp;#xe7a1;</div><div class="fontclass">.textbackgroundcolor</div></li><li> <i class="icon lud-icon">&#xe7a2;</i> <div class="name">text_color</div><div class="code">&amp;#xe7a2;</div><div class="fontclass">.textcolor</div></li><li> <i class="icon lud-icon">&#xe7a3;</i> <div class="name">threedots</div><div class="code">&amp;#xe7a3;</div><div class="fontclass">.threedots</div></li><li> <i class="icon lud-icon">&#xe7a4;</i> <div class="name">tile_card_list</div><div class="code">&amp;#xe7a4;</div><div class="fontclass">.tilecardlist</div></li><li> <i class="icon lud-icon">&#xe7a5;</i> <div class="name">topic</div><div class="code">&amp;#xe7a5;</div><div class="fontclass">.topic1</div></li><li> <i class="icon lud-icon">&#xe7a6;</i> <div class="name">touch_action</div><div class="code">&amp;#xe7a6;</div><div class="fontclass">.touchaction</div></li><li> <i class="icon lud-icon">&#xe7a7;</i> <div class="name">trail</div><div class="code">&amp;#xe7a7;</div><div class="fontclass">.trail</div></li><li> <i class="icon lud-icon">&#xe7a8;</i> <div class="name">undelete</div><div class="code">&amp;#xe7a8;</div><div class="fontclass">.undelete</div></li><li> <i class="icon lud-icon">&#xe7a9;</i> <div class="name">undeprecate</div><div class="code">&amp;#xe7a9;</div><div class="fontclass">.undeprecate</div></li><li> <i class="icon lud-icon">&#xe7aa;</i> <div class="name">underline</div><div class="code">&amp;#xe7aa;</div><div class="fontclass">.underline</div></li><li> <i class="icon lud-icon">&#xe7ab;</i> <div class="name">undo</div><div class="code">&amp;#xe7ab;</div><div class="fontclass">.undo</div></li><li> <i class="icon lud-icon">&#xe7ac;</i> <div class="name">unlock</div><div class="code">&amp;#xe7ac;</div><div class="fontclass">.unlock</div></li><li> <i class="icon lud-icon">&#xe7ad;</i> <div class="name">unmuted</div><div class="code">&amp;#xe7ad;</div><div class="fontclass">.unmuted</div></li><li> <i class="icon lud-icon">&#xe7ae;</i> <div class="name">up</div><div class="code">&amp;#xe7ae;</div><div class="fontclass">.up</div></li><li> <i class="icon lud-icon">&#xe7af;</i> <div class="name">upload</div><div class="code">&amp;#xe7af;</div><div class="fontclass">.upload1</div></li><li> <i class="icon lud-icon">&#xe7b0;</i> <div class="name">user_role</div><div class="code">&amp;#xe7b0;</div><div class="fontclass">.userrole</div></li><li> <i class="icon lud-icon">&#xe7b1;</i> <div class="name">user</div><div class="code">&amp;#xe7b1;</div><div class="fontclass">.user1</div></li><li> <i class="icon lud-icon">&#xe7b2;</i> <div class="name">volume_high</div><div class="code">&amp;#xe7b2;</div><div class="fontclass">.volumehigh</div></li><li> <i class="icon lud-icon">&#xe7b3;</i> <div class="name">volume_low</div><div class="code">&amp;#xe7b3;</div><div class="fontclass">.volumelow</div></li><li> <i class="icon lud-icon">&#xe7b4;</i> <div class="name">volume_off</div><div class="code">&amp;#xe7b4;</div><div class="fontclass">.volumeoff</div></li><li> <i class="icon lud-icon">&#xe7b5;</i> <div class="name">warning</div><div class="code">&amp;#xe7b5;</div><div class="fontclass">.warning</div></li><li> <i class="icon lud-icon">&#xe7b6;</i> <div class="name">weeklyview</div><div class="code">&amp;#xe7b6;</div><div class="fontclass">.weeklyview</div></li><li> <i class="icon lud-icon">&#xe7b7;</i> <div class="name">world</div><div class="code">&amp;#xe7b7;</div><div class="fontclass">.world</div></li><li> <i class="icon lud-icon">&#xe7b8;</i> <div class="name">zoomin</div><div class="code">&amp;#xe7b8;</div><div class="fontclass">.zoomin</div></li><li> <i class="icon lud-icon">&#xe7b9;</i> <div class="name">zoomout</div><div class="code">&amp;#xe7b9;</div><div class="fontclass">.zoomout</div></li></ul>
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
 
@@ -23862,48 +26408,62 @@
 	skate.define('lud-icon', ludIcon);
 
 /***/ },
-/* 39 */
+/* 59 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 40 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(41);
+	__webpack_require__(61);
 
 /***/ },
-/* 41 */
+/* 61 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 42 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(43);
+	__webpack_require__(63);
 
 /***/ },
-/* 43 */
+/* 63 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 44 */
+/* 64 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(65);
+
+/***/ },
+/* 65 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	__webpack_require__(45);
+	__webpack_require__(67);
 
 	var _lud_component = __webpack_require__(26);
 
@@ -23982,20 +26542,166 @@
 	skate.define('lud-phone-mockup', ludPhoneMockup);
 
 /***/ },
-/* 45 */
+/* 67 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 46 */
+/* 68 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	__webpack_require__(69);
+
+	var _lud_module = __webpack_require__(13);
+
+	var _lud_module2 = _interopRequireDefault(_lud_module);
+
+	var _lud_component = __webpack_require__(26);
+
+	var _lud_component2 = _interopRequireDefault(_lud_component);
+
+	var _skatejs = __webpack_require__(27);
+
+	var skate = _interopRequireWildcard(_skatejs);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*doc
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                title: Sheet 浮层
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                name: sheets
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                category: 组件
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ---
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                卡片式浮层
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 何时使用
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                需要用户处理事务，又不希望跳转页面以致打断工作流程时，可以使用浮层承载相应的操作。
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ## 代码演示
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```html_example
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <a class="lud-button lud-button--primary" href="javascript:lud.slidePanel({title:'hello',body:'<p>world</p>'})">触发</a>
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ```
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var ludSlidePanel = function (_ludComponent) {
+	  _inherits(ludSlidePanel, _ludComponent);
+
+	  function ludSlidePanel() {
+	    _classCallCheck(this, ludSlidePanel);
+
+	    return _possibleConstructorReturn(this, (ludSlidePanel.__proto__ || Object.getPrototypeOf(ludSlidePanel)).apply(this, arguments));
+	  }
+
+	  _createClass(ludSlidePanel, null, [{
+	    key: 'created',
+	    value: function created(el) {
+	      el.child = el.innerHTML;
+	      el.innerHTML = null;
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render(el) {
+
+	      var title = !el.title ? null : skate.h(
+	        'h1',
+	        { className: 'lud-slide-panel__title' },
+	        el.title
+	      );
+	      var child = skate.h('div', { ref: function ref(x) {
+	          return x.innerHTML = el.child;
+	        }, skip: true, class: 'lud-slide-panel__body' });
+
+	      return skate.h(
+	        'div',
+	        { className: 'lud-slide-panel', role: 'alert' },
+	        title,
+	        child
+	      );
+	    }
+	  }, {
+	    key: 'attached',
+	    value: function attached() {
+	      $(document).on('click.lud-slide-panel', function () {
+	        return _lud_module2.default.slidePanel.close();
+	      });
+	    }
+	  }, {
+	    key: 'rendered',
+	    value: function rendered(el) {
+	      var $el = $(el).children();
+	      var sequence = [{ e: $el, p: { visibility: 'visible' }, o: { duration: 100 } }, { e: $el, p: "transition.slideRightIn" }];
+	      _lud_module2.default.velocity.RunSequence(sequence);
+	      $el.on("click.lud-slide-panel", function (e) {
+	        e.stopPropagation();
+	      });
+	    }
+	  }, {
+	    key: 'detached',
+	    value: function detached() {
+	      $(document).off('click.lud-slide-panel');
+	    }
+	  }]);
+
+	  return ludSlidePanel;
+	}(_lud_component2.default);
+
+	ludSlidePanel.props = {
+	  title: skate.prop.string({ attribute: true }),
+	  child: skate.prop.string()
+	};
+
+
+	skate.define('lud-slide-panel', ludSlidePanel);
+
+	_lud_module2.default.slidePanel = function () {
+	  var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+	  if (typeof props.body == "undefined") throw new Error("body is required");
+	  if ($('lud-slide-panel').exists()) $('lud-slide-panel').remove();
+	  $('body').append('<lud-slide-panel title="' + props.title + '">' + props.body + '</lud-slide-panel>');
+	};
+
+	_lud_module2.default.slidePanel.close = function () {
+	  var $el = $('lud-slide-panel');
+	  $el.children('.lud-slide-panel').velocity("transition.slideRightOut", {
+	    complete: function complete() {
+	      return $el.remove();
+	    }
+	  });
+	};
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+
+/***/ },
+/* 69 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	__webpack_require__(47);
+	__webpack_require__(71);
 
 	var _lud_component = __webpack_require__(26);
 
@@ -24060,20 +26766,20 @@
 	skate.define('lud-spinner', ludSpinner);
 
 /***/ },
-/* 47 */
+/* 71 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 48 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	__webpack_require__(49);
+	__webpack_require__(73);
 
 	var _lud_component = __webpack_require__(26);
 
@@ -24181,7 +26887,550 @@
 	skate.define('lud-tag', ludTag);
 
 /***/ },
-/* 49 */
+/* 73 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 74 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(75);
+
+	var _lud_module = __webpack_require__(13);
+
+	var _lud_module2 = _interopRequireDefault(_lud_module);
+
+	var _toastr = __webpack_require__(76);
+
+	var _toastr2 = _interopRequireDefault(_toastr);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	_lud_module2.default.toast = _toastr2.default; /*doc
+	                                                ---
+	                                                title: Toast
+	                                                name: toast
+	                                                category: 组件
+	                                                ---
+	                                               
+	                                                警告提示，展现需要关注的信息。
+	                                               
+	                                               ## 何时使用
+	                                               
+	                                                * 当某个页面需要向用户显示警告的信息时。
+	                                                * 非浮层的静态展现形式，始终展现，不会自动消失，用户可以点击关闭。
+	                                               
+	                                               ## 代码演示
+	                                               
+	                                                ```html_example
+	                                                <button class="lud-button lud-button--primary" onClick="lud.toast.info('hello word')">触发</button>
+	                                                ```
+	                                               
+	                                                ```
+	                                                lud.toast.info('hello word'):
+	                                                lud.toast.success('hello word'):
+	                                                lud.toast.warning('hello word'):
+	                                                lud.toast.danger('hello word'):
+	                                                ```
+	                                                */
+
+	_lud_module2.default.toast.danger = _lud_module2.default.toast.error;
+	_lud_module2.default.toast.options = {
+	  tapToDismiss: true,
+	  toastClass: 'lud-toast__body',
+	  containerId: 'lud-toast',
+	  debug: false,
+
+	  showMethod: 'fadeIn', //fadeIn, slideDown, and show are built into jQuery
+	  showDuration: 300,
+	  showEasing: 'swing', //swing and linear are built into jQuery
+	  onShown: undefined,
+	  hideMethod: 'fadeOut',
+	  hideDuration: 1000,
+	  hideEasing: 'swing',
+	  onHidden: undefined,
+	  closeMethod: false,
+	  closeDuration: false,
+	  closeEasing: false,
+	  closeOnHover: true,
+
+	  extendedTimeOut: 1000,
+	  iconClasses: {
+	    error: 'lud-toast--error',
+	    info: 'lud-toast--info',
+	    success: 'lud-toast--success',
+	    warning: 'lud-toast--warning'
+	  },
+	  iconClass: 'lud-toast--info',
+	  positionClass: 'lud-toast--top-right',
+	  timeOut: 10000, // Set timeOut and extendedTimeOut to 0 to make it sticky
+	  titleClass: 'lud-toast__title',
+	  messageClass: 'lud-toast__message',
+	  escapeHtml: false,
+	  target: 'body',
+	  closeHtml: '<lud-icon type="close"></lud-icon>',
+	  closeClass: 'lud-toast__close',
+	  newestOnTop: true,
+	  preventDuplicates: false,
+	  progressBar: false,
+	  progressClass: 'lud-toast__progress',
+	  rtl: false
+	};
+
+/***/ },
+/* 75 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 76 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
+	 * Toastr
+	 * Copyright 2012-2015
+	 * Authors: John Papa, Hans Fjällemark, and Tim Ferrell.
+	 * All Rights Reserved.
+	 * Use, reproduction, distribution, and modification of this code is subject to the terms and
+	 * conditions of the MIT license, available at http://www.opensource.org/licenses/mit-license.php
+	 *
+	 * ARIA Support: Greta Krafsig
+	 *
+	 * Project: https://github.com/CodeSeven/toastr
+	 */
+	/* global define */
+	; (function (define) {
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(5)], __WEBPACK_AMD_DEFINE_RESULT__ = function ($) {
+	        return (function () {
+	            var $container;
+	            var listener;
+	            var toastId = 0;
+	            var toastType = {
+	                error: 'error',
+	                info: 'info',
+	                success: 'success',
+	                warning: 'warning'
+	            };
+
+	            var toastr = {
+	                clear: clear,
+	                remove: remove,
+	                error: error,
+	                getContainer: getContainer,
+	                info: info,
+	                options: {},
+	                subscribe: subscribe,
+	                success: success,
+	                version: '2.1.2',
+	                warning: warning
+	            };
+
+	            var previousToast;
+
+	            return toastr;
+
+	            ////////////////
+
+	            function error(message, title, optionsOverride) {
+	                return notify({
+	                    type: toastType.error,
+	                    iconClass: getOptions().iconClasses.error,
+	                    message: message,
+	                    optionsOverride: optionsOverride,
+	                    title: title
+	                });
+	            }
+
+	            function getContainer(options, create) {
+	                if (!options) { options = getOptions(); }
+	                $container = $('#' + options.containerId);
+	                if ($container.length) {
+	                    return $container;
+	                }
+	                if (create) {
+	                    $container = createContainer(options);
+	                }
+	                return $container;
+	            }
+
+	            function info(message, title, optionsOverride) {
+	                return notify({
+	                    type: toastType.info,
+	                    iconClass: getOptions().iconClasses.info,
+	                    message: message,
+	                    optionsOverride: optionsOverride,
+	                    title: title
+	                });
+	            }
+
+	            function subscribe(callback) {
+	                listener = callback;
+	            }
+
+	            function success(message, title, optionsOverride) {
+	                return notify({
+	                    type: toastType.success,
+	                    iconClass: getOptions().iconClasses.success,
+	                    message: message,
+	                    optionsOverride: optionsOverride,
+	                    title: title
+	                });
+	            }
+
+	            function warning(message, title, optionsOverride) {
+	                return notify({
+	                    type: toastType.warning,
+	                    iconClass: getOptions().iconClasses.warning,
+	                    message: message,
+	                    optionsOverride: optionsOverride,
+	                    title: title
+	                });
+	            }
+
+	            function clear($toastElement, clearOptions) {
+	                var options = getOptions();
+	                if (!$container) { getContainer(options); }
+	                if (!clearToast($toastElement, options, clearOptions)) {
+	                    clearContainer(options);
+	                }
+	            }
+
+	            function remove($toastElement) {
+	                var options = getOptions();
+	                if (!$container) { getContainer(options); }
+	                if ($toastElement && $(':focus', $toastElement).length === 0) {
+	                    removeToast($toastElement);
+	                    return;
+	                }
+	                if ($container.children().length) {
+	                    $container.remove();
+	                }
+	            }
+
+	            // internal functions
+
+	            function clearContainer (options) {
+	                var toastsToClear = $container.children();
+	                for (var i = toastsToClear.length - 1; i >= 0; i--) {
+	                    clearToast($(toastsToClear[i]), options);
+	                }
+	            }
+
+	            function clearToast ($toastElement, options, clearOptions) {
+	                var force = clearOptions && clearOptions.force ? clearOptions.force : false;
+	                if ($toastElement && (force || $(':focus', $toastElement).length === 0)) {
+	                    $toastElement[options.hideMethod]({
+	                        duration: options.hideDuration,
+	                        easing: options.hideEasing,
+	                        complete: function () { removeToast($toastElement); }
+	                    });
+	                    return true;
+	                }
+	                return false;
+	            }
+
+	            function createContainer(options) {
+	                $container = $('<div/>')
+	                    .attr('id', options.containerId)
+	                    .addClass(options.positionClass)
+	                    .attr('aria-live', 'polite')
+	                    .attr('role', 'alert');
+
+	                $container.appendTo($(options.target));
+	                return $container;
+	            }
+
+	            function getDefaults() {
+	                return {
+	                    tapToDismiss: true,
+	                    toastClass: 'toast',
+	                    containerId: 'toast-container',
+	                    debug: false,
+
+	                    showMethod: 'fadeIn', //fadeIn, slideDown, and show are built into jQuery
+	                    showDuration: 300,
+	                    showEasing: 'swing', //swing and linear are built into jQuery
+	                    onShown: undefined,
+	                    hideMethod: 'fadeOut',
+	                    hideDuration: 1000,
+	                    hideEasing: 'swing',
+	                    onHidden: undefined,
+	                    closeMethod: false,
+	                    closeDuration: false,
+	                    closeEasing: false,
+
+	                    extendedTimeOut: 1000,
+	                    iconClasses: {
+	                        error: 'toast-error',
+	                        info: 'toast-info',
+	                        success: 'toast-success',
+	                        warning: 'toast-warning'
+	                    },
+	                    iconClass: 'toast-info',
+	                    positionClass: 'toast-top-right',
+	                    timeOut: 5000, // Set timeOut and extendedTimeOut to 0 to make it sticky
+	                    titleClass: 'toast-title',
+	                    messageClass: 'toast-message',
+	                    escapeHtml: false,
+	                    target: 'body',
+	                    closeHtml: '<button type="button">&times;</button>',
+	                    newestOnTop: true,
+	                    preventDuplicates: false,
+	                    progressBar: false
+	                };
+	            }
+
+	            function publish(args) {
+	                if (!listener) { return; }
+	                listener(args);
+	            }
+
+	            function notify(map) {
+	                var options = getOptions();
+	                var iconClass = map.iconClass || options.iconClass;
+
+	                if (typeof (map.optionsOverride) !== 'undefined') {
+	                    options = $.extend(options, map.optionsOverride);
+	                    iconClass = map.optionsOverride.iconClass || iconClass;
+	                }
+
+	                if (shouldExit(options, map)) { return; }
+
+	                toastId++;
+
+	                $container = getContainer(options, true);
+
+	                var intervalId = null;
+	                var $toastElement = $('<div/>');
+	                var $titleElement = $('<div/>');
+	                var $messageElement = $('<div/>');
+	                var $progressElement = $('<div/>');
+	                var $closeElement = $(options.closeHtml);
+	                var progressBar = {
+	                    intervalId: null,
+	                    hideEta: null,
+	                    maxHideTime: null
+	                };
+	                var response = {
+	                    toastId: toastId,
+	                    state: 'visible',
+	                    startTime: new Date(),
+	                    options: options,
+	                    map: map
+	                };
+
+	                personalizeToast();
+
+	                displayToast();
+
+	                handleEvents();
+
+	                publish(response);
+
+	                if (options.debug && console) {
+	                    console.log(response);
+	                }
+
+	                return $toastElement;
+
+	                function escapeHtml(source) {
+	                    if (source == null)
+	                        source = "";
+
+	                    return new String(source)
+	                        .replace(/&/g, '&amp;')
+	                        .replace(/"/g, '&quot;')
+	                        .replace(/'/g, '&#39;')
+	                        .replace(/</g, '&lt;')
+	                        .replace(/>/g, '&gt;');
+	                }
+
+	                function personalizeToast() {
+	                    setIcon();
+	                    setTitle();
+	                    setMessage();
+	                    setCloseButton();
+	                    setProgressBar();
+	                    setSequence();
+	                }
+
+	                function handleEvents() {
+	                    $toastElement.hover(stickAround, delayedHideToast);
+	                    if (!options.onclick && options.tapToDismiss) {
+	                        $toastElement.click(hideToast);
+	                    }
+
+	                    if (options.closeButton && $closeElement) {
+	                        $closeElement.click(function (event) {
+	                            if (event.stopPropagation) {
+	                                event.stopPropagation();
+	                            } else if (event.cancelBubble !== undefined && event.cancelBubble !== true) {
+	                                event.cancelBubble = true;
+	                            }
+	                            hideToast(true);
+	                        });
+	                    }
+
+	                    if (options.onclick) {
+	                        $toastElement.click(function (event) {
+	                            options.onclick(event);
+	                            hideToast();
+	                        });
+	                    }
+	                }
+
+	                function displayToast() {
+	                    $toastElement.hide();
+
+	                    $toastElement[options.showMethod](
+	                        {duration: options.showDuration, easing: options.showEasing, complete: options.onShown}
+	                    );
+
+	                    if (options.timeOut > 0) {
+	                        intervalId = setTimeout(hideToast, options.timeOut);
+	                        progressBar.maxHideTime = parseFloat(options.timeOut);
+	                        progressBar.hideEta = new Date().getTime() + progressBar.maxHideTime;
+	                        if (options.progressBar) {
+	                            progressBar.intervalId = setInterval(updateProgress, 10);
+	                        }
+	                    }
+	                }
+
+	                function setIcon() {
+	                    if (map.iconClass) {
+	                        $toastElement.addClass(options.toastClass).addClass(iconClass);
+	                    }
+	                }
+
+	                function setSequence() {
+	                    if (options.newestOnTop) {
+	                        $container.prepend($toastElement);
+	                    } else {
+	                        $container.append($toastElement);
+	                    }
+	                }
+
+	                function setTitle() {
+	                    if (map.title) {
+	                        $titleElement.append(!options.escapeHtml ? map.title : escapeHtml(map.title)).addClass(options.titleClass);
+	                        $toastElement.append($titleElement);
+	                    }
+	                }
+
+	                function setMessage() {
+	                    if (map.message) {
+	                        $messageElement.append(!options.escapeHtml ? map.message : escapeHtml(map.message)).addClass(options.messageClass);
+	                        $toastElement.append($messageElement);
+	                    }
+	                }
+
+	                function setCloseButton() {
+	                    if (options.closeButton) {
+	                        $closeElement.addClass('toast-close-button').attr('role', 'button');
+	                        $toastElement.prepend($closeElement);
+	                    }
+	                }
+
+	                function setProgressBar() {
+	                    if (options.progressBar) {
+	                        $progressElement.addClass('toast-progress');
+	                        $toastElement.prepend($progressElement);
+	                    }
+	                }
+
+	                function shouldExit(options, map) {
+	                    if (options.preventDuplicates) {
+	                        if (map.message === previousToast) {
+	                            return true;
+	                        } else {
+	                            previousToast = map.message;
+	                        }
+	                    }
+	                    return false;
+	                }
+
+	                function hideToast(override) {
+	                    var method = override && options.closeMethod !== false ? options.closeMethod : options.hideMethod;
+	                    var duration = override && options.closeDuration !== false ?
+	                        options.closeDuration : options.hideDuration;
+	                    var easing = override && options.closeEasing !== false ? options.closeEasing : options.hideEasing;
+	                    if ($(':focus', $toastElement).length && !override) {
+	                        return;
+	                    }
+	                    clearTimeout(progressBar.intervalId);
+	                    return $toastElement[method]({
+	                        duration: duration,
+	                        easing: easing,
+	                        complete: function () {
+	                            removeToast($toastElement);
+	                            if (options.onHidden && response.state !== 'hidden') {
+	                                options.onHidden();
+	                            }
+	                            response.state = 'hidden';
+	                            response.endTime = new Date();
+	                            publish(response);
+	                        }
+	                    });
+	                }
+
+	                function delayedHideToast() {
+	                    if (options.timeOut > 0 || options.extendedTimeOut > 0) {
+	                        intervalId = setTimeout(hideToast, options.extendedTimeOut);
+	                        progressBar.maxHideTime = parseFloat(options.extendedTimeOut);
+	                        progressBar.hideEta = new Date().getTime() + progressBar.maxHideTime;
+	                    }
+	                }
+
+	                function stickAround() {
+	                    clearTimeout(intervalId);
+	                    progressBar.hideEta = 0;
+	                    $toastElement.stop(true, true)[options.showMethod](
+	                        {duration: options.showDuration, easing: options.showEasing}
+	                    );
+	                }
+
+	                function updateProgress() {
+	                    var percentage = ((progressBar.hideEta - (new Date().getTime())) / progressBar.maxHideTime) * 100;
+	                    $progressElement.width(percentage + '%');
+	                }
+	            }
+
+	            function getOptions() {
+	                return $.extend({}, getDefaults(), toastr.options);
+	            }
+
+	            function removeToast($toastElement) {
+	                if (!$container) { $container = getContainer(); }
+	                if ($toastElement.is(':visible')) {
+	                    return;
+	                }
+	                $toastElement.remove();
+	                $toastElement = null;
+	                if ($container.children().length === 0) {
+	                    $container.remove();
+	                    previousToast = undefined;
+	                }
+	            }
+
+	        })();
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	}(__webpack_require__(77)));
+
+
+/***/ },
+/* 77 */
+/***/ function(module, exports) {
+
+	module.exports = function() { throw new Error("define cannot be used indirect"); };
+
+
+/***/ },
+/* 78 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

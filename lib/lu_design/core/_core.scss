@@ -3,16 +3,6 @@
 *:after {
   box-sizing : border-box;
 }
-
-html{
-  font-family: $font-family;
-  font-size: $font-size-base;
-}
-
-body{
-  font-size: 1rem;
-}
-
 ::placeholder {
   color       : $color-text-placeholder;
   font-weight : $font-weight-regular;
@@ -65,7 +55,6 @@ h5,
 h6 {
   font     : {
     weight : inherit;
-    size   : 1em;
   }
 }
 
@@ -145,7 +134,12 @@ video {
 
 img {
   max-width : 100%;
-  height    : auto;
 }
-
+button, input, optgroup, select, textarea {
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  overflow: visible;
+}
 @import "print";
+@import "root";

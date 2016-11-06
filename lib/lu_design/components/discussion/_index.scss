@@ -4,6 +4,7 @@
 @include fixed-component-fouc('lud-discussion');
 .#{$css-prefix}discussion {
   display: flex;
+  text-align: right;
 
   &__input {
     line-height: $line-height-button;
@@ -12,9 +13,13 @@
     min-height: calc(#{$line-height-button} + 2px);
     max-height: calc(#{$line-height-button} + 2px);
     width: 100%;
+    transition: max-height 1s;
+  }
+  .#{$css-prefix}btn{
+    display: none;
   }
 
-  &.#{$css-prefix}is-active {
+  &.#{$css-prefix}discussion--active {
     display: block;
 
     .#{$css-prefix}discussion__toggle-visibility {
@@ -22,15 +27,17 @@
     }
 
     .#{$css-prefix}discussion__input {
-      line-height: $line-height-text;
       height: auto;
       max-height: 10rem;
       resize: vertical;
-      transition: height 0.5s $ease-in-circ;
       padding: {
         top: $spacing-small;
         bottom: $spacing-small;
       }
+      margin-bottom: 1rem;
+    }
+    .#{$css-prefix}btn{
+      display: inline-block;
     }
   }
 

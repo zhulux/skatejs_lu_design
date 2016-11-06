@@ -1,0 +1,53 @@
+@import "../../config";
+@import "../../dependencies/index";
+.#{$css-prefix}pagination {
+    font-size: 12px;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    display: inline-block;
+    list-style: none;
+    @include clearfix;
+    li.#{$css-prefix}pagination__item{
+        cursor: pointer;
+        border-radius: .5rem;
+        user-select: none;
+        min-width: 2rem;
+        height: 2rem;
+        line-height: 2rem;
+        text-align: center;
+        list-style: none;
+        float: left;
+        border: 1px solid #d9d9d9;
+        background-color: #fff;
+        margin-right: .6rem;
+        font-weight: 500;
+        color: #666;
+        &:hover{
+            transition: all .3s ease;
+            border-color: $color-brand;
+            color: $color-brand;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: none;
+        }
+    }
+    li.#{$css-prefix}pagination__item--disabled{
+        cursor: not-allowed;
+        color: #ccc;
+        &:hover{
+            color: #ccc;
+            border: 1px solid #d9d9d9;
+        }
+
+    }
+    li.#{$css-prefix}pagination__item--active{
+        background: $color-brand;
+        border-color: $color-brand;
+        color: #fff;
+        &:hover{
+            color: #fff;
+        }
+    }
+}

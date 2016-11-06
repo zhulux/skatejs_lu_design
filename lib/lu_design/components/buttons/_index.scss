@@ -9,12 +9,12 @@
     background: shade($background, 20%);
     transition: all .6s $ease-in-out-cubic;
   }
-  &[disabled],&.lud-button--disabled, &[disabled]:hover, &.lud-button--disabled:hover{
+  &[disabled],&.#{$css-prefix}btn--disabled, &[disabled]:hover, &.#{$css-prefix}btn--disabled:hover{
     opacity: .5 !important;
     cursor: not-allowed !important;
     background: $background;
   }
-  &.lud-button--ghost{
+  &.#{$css-prefix}btn--ghost{
     background-color: transparent;
     color: $background;
     border-color: $background;
@@ -23,7 +23,7 @@
       color: $color;
       transition: all .4s $ease-in-out-cubic;
     }
-    &[disabled]:hover, &.lud-button--disabled:hover{
+    &[disabled]:hover, &.#{$css-prefix}btn--disabled:hover{
       background-color: transparent;
       color: $background;
     }
@@ -31,10 +31,10 @@
 
 }
 
-a.lud-button{
+a.#{$css-prefix}btn{
   text-decoration: none;
 }
-.lud-button{
+.#{$css-prefix}btn{
   overflow: hidden;
   position: relative;
   display: inline-block;
@@ -47,26 +47,34 @@ a.lud-button{
   user-select: none;
   letter-spacing: 1px;
   border: 1px solid transparent;
-  padding: rem(8) rem(16);
+  padding: rem(10) rem(19);
   line-height: 1;
   border-radius: rem(3);
-  &.lud-button--small{
+  &.#{$css-prefix}btn--sm{
     font-size: 12px;
-    padding: rem(5) rem(10);
+    padding: rem(6) rem(12);
   }
-  &.lud-button--large{
-    padding: rem(10) rem(20);
+  &.#{$css-prefix}btn--lg{
+    padding: rem(12) rem(24);
+  }
+  &.#{$css-prefix}btn--block{
+    display: block;
+    width: 100%;
+    padding: rem(12) rem(24);
+  }
+  .#{$css-prefix}icon{
+    vertical-align: baseline;
   }
 }
 
-.lud-button{ // default
+.#{$css-prefix}btn{ // default
   @include button-theme($color-brand-dark,#fff);
   border-color: #d8dde6;
   &:hover{
     color: shade($color-brand-dark, 10%);
     background: shade(#fff, 10%);
   }
-  &.lud-button--ghost{
+  &.#{$css-prefix}btn--ghost{
     color: $color-brand-dark;
     border-color: $color-brand-dark;
     &:hover{
@@ -77,26 +85,26 @@ a.lud-button{
 
 }
 
-.lud-button.lud-button--primary{
+.#{$css-prefix}btn.#{$css-prefix}btn--primary{
   @include button-theme(#fff,$color-background-button-brand);
 }
 
-.lud-button.lud-button--info{
+.#{$css-prefix}btn.#{$css-prefix}btn--info{
   @include button-theme(#fff,$color-background-info);
 }
 
-.lud-button.lud-button--success{
+.#{$css-prefix}btn.#{$css-prefix}btn--success{
   @include button-theme(#fff,$color-background-success);
 }
 
-.lud-button.lud-button--danger{
+.#{$css-prefix}btn.#{$css-prefix}btn--danger{
   @include button-theme(#fff,$color-background-error);
 }
 
-.lud-button.lud-button--warning{
+.#{$css-prefix}btn.#{$css-prefix}btn--warning{
   @include button-theme(#fff,$color-background-warning);
 }
 
-.lud-button.lud-button--inverse{
+.#{$css-prefix}btn.#{$css-prefix}btn--inverse{
   @include button-theme(#fff,$color-background-inverse);
 }

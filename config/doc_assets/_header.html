@@ -23,9 +23,9 @@
                 <ul class="lud-list--vertical lud-has-block-links hgt-menu">
                     <li class="lud-list__item">
                         <a href="index.html">首页</a></li>
-                    <li class="lud-list__item lud-is-open lud-is-selected">
+                    <li class="lud-list__item lud-aside__collapse lud-aside__collapse--open">
                         <a href="javascript:void(0);">组件</a>
-                        <ul id="js-components-nav" class="lud-list--vertical lud-has-block-links lud-is-nested">
+                        <ul id="js-components-nav" class="lud-list--vertical lud-has-block-links">
                             <% @blocks.each do |block| %>
                             <% if not block[:parent] %>
                             <li class="slds-list__item">

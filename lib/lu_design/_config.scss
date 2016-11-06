@@ -1,39 +1,20 @@
 @import "design-tokens";
-/// Version number
-/// Helps deprecating pieces of the codebase
-/// Note: update at each release
-///
-/// For internal use only
-///
-/// @type String
-/// @access private
-$app-version: '0.9.0';
 
+$css-prefix: 'lud-';
 
-/// Breakpoints
-///
-/// @type map
 $breakpoints: (
   'x-small': $mq-x-small,
   'small': $mq-small,
   'medium': $mq-medium,
   'large': $mq-large
-) !default;
+);
 
-/// Grid Column Support
-///
-/// @type list
-$grid-columns: (1, 2, 3, 4, 5, 6, 7, 8, 12) !default;
 
-/// CSS Prefix
-/// Will prefix all CSS classes
-///
-/// @example scss Compile without prefix
-///  $css-prefix: '';
-///
-/// @example scss Use in a class name
-///  .#{$css-prefix}foo { ... } // outputs .slds-foo { ... }
-///
-/// @type String
-/// @deprecated Use postcss-slds-prefix instead
-$css-prefix: 'lud-' !default;
+$color-brand: #5AA7F2 !default;
+$color-background-inverse: #36404a !default;
+$color-background: #f4f8f9 !default;
+$color-background-alt: rgb(255, 255, 255) !default;
+$color-background-info: rgb(84, 105, 141) !default;
+$color-background-success: rgb(75, 202, 129) !default;
+$color-background-warning: rgb(255, 183, 93) !default;
+$color-background-error: rgb(212, 80, 76) !default;

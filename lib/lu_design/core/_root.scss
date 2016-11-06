@@ -1,15 +1,16 @@
   html {
-    font-family: $font-family;
-    font-size: 100%;
-    line-height: $line-height-text;
+    font-size: $font-size-base;
     background: $color-background-alt;
     color: $color-text-default;
+    text-rendering: optimizeLegibility;
     -webkit: {
       tap-highlight-color: rgba(0, 0, 0, 0);
+      font-smoothing: antialiased;
     }
   }
 
   body {
-    font-size: $font-size-medium;
-    background: transparent;
+    font-size: 1rem;
+    font-family: $font-family;
+    line-height: 1.5;
   }

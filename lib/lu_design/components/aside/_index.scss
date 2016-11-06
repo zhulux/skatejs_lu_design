@@ -9,19 +9,34 @@ $width-sidebar: 12rem;
   }
 
   .#{$css-prefix}aside__brand{
-    font-weight: bold;
-    font-size: 1.5rem;
+    color: inherit;
+    font-weight: normal;
+    font-size: 16px;
+    &:hover{
+      text-decoration: none;
+      background: none;
+    }
+    & > .lud-icon{
+      color: $color-brand;
+      font-size: 1.8rem;
+      vertical-align: baseline;
+    }
   }
 
+  .#{$css-prefix}icon{
+    margin-right: .5rem;
+    vertical-align: top;
+  }
   // Links
   a {
     display: block;
-    padding: $spacing-small $spacing-x-large;
     line-height: 1.28571428571429;
-    color: $color-text-default;
+    color: #6C7D86;
+    padding: 1rem 1rem 1rem 1.5rem;
+    border-left: .25rem solid transparent;
 
     &:hover {
-      background-color: rgba($color-background, 0.5);
+      background-color: none;
     }
   }
 
@@ -31,40 +46,59 @@ $width-sidebar: 12rem;
     color: $color-text-tab-label-selected;
   }
 
-  // Open Menu Items
-  .#{$css-prefix}is-open {
-    padding-bottom: $spacing-x-small;
-  }
-
-  // Section Selected
-  .#{$css-prefix}is-selected {
-    background-color: $color-background;
-
-    a:hover {
-      background-color: darken($color-background, 2.5);
+  &__collapse{
+    & > ul{
+      display: none;
+    }
+    & > ul > li > a {
+      padding-left: 1.5rem;
+      .lud-icon{
+        font-size: 18px;
+        margin-right: .8rem;
+      }
+      &:hover,&.lud-list__item__link--active{
+        background: tint($color-brand,90%);
+        border-left: .25rem solid $color-brand;
+        color: $color-brand;
+      }
+    }
+    &--open > ul{
+      display: block;
     }
 
-    .icon__svg {
-      opacity: 1;
+    & > a:after {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-top: .35rem;
+      content: "";
+      border-top: .3rem solid;
+      border-right: .3rem solid transparent;
+      border-left: .3rem solid transparent;
+      float: right;
+      clear: both;
+      transition: transform 0.3s ease-in-out;
     }
-  }
 
-  // Nested List
-  .#{$css-prefix}is-nested {
-    margin-left: 0;
-
-    a {
-      padding: {
-        top: $spacing-x-small;
-        bottom: $spacing-x-small;
-        left: $spacing-x-large + $spacing-large;
+    > a{
+      font-size: 15px;
+      font-weight: 400;
+      &:after {
+        color: #6C7D86;
       }
     }
 
-    .#{$css-prefix}is-nested a {
-      padding-left: $spacing-x-large + ($spacing-large * 2);
+    &--open > a{
+      color: $color-brand;
+    }
+
+    &--open > a:after{
+      transform: rotate(180deg);
+      transition: transform 0.3s ease-in-out;
     }
   }
+
+
   @include mq-medium-min {
     position: fixed;
     top: 0;
@@ -74,8 +108,11 @@ $width-sidebar: 12rem;
     padding-top: 0;
     width: $width-sidebar;
     height: 100%;
-    background: $color-background;
     z-index: $z-index-default;
+    overflow-y: scroll;
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+
 
     nav {
       @include scrollbar($track: $color-background-alt);

@@ -17,14 +17,14 @@
   },
   "homepage": "https://lu_design.github.io",
   "devDependencies": {
-    "autoprefixer": "^6.4.0",
+    "autoprefixer": "^6.5.1",
     "babel-core": "^6.14.0",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.5",
     "babel-plugin-transform-react-jsx": "^6.8.0",
-    "babel-preset-react": "^6.16.0",
     "babel-plugin-transform-runtime": "^6.15.0",
     "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.16.0",
     "babel-preset-stage-2": "^6.13.0",
     "babel-register": "^6.16.3",
     "css-loader": "^0.24.0",
@@ -41,18 +41,20 @@
     "webpack-shell-plugin": "^0.4.3"
   },
   "dependencies": {
-    "@salesforce-ux/design-system": "^2.1.3",
     "bourbon": "^4.2.7",
     "classnames": "^2.2.5",
-    "g2": "^2.0.2",
-    "jquery": "^3.1.0",
+    "g2": "^2.0.5",
+    "jquery": "^3.1.1",
     "jquery-ujs": "^1.2.2",
-    "moment": "^2.15.1",
+    "moment": "^2.15.2",
     "normalize.css": "^5.0.0",
-    "npm": "^3.10.8",
     "select2": "^4.0.3",
-    "skatejs": "^2.0.4",
-    "skatejs-web-components": "^1.2.1",
-    "turbolinks": "^5.0.0"
+    "skatejs": "^3.1.2",
+    "skatejs-web-components": "^2.0.0",
+    "sticky-table-headers": "^0.1.19",
+    "sweetalert": "^1.1.3",
+    "toastr": "^2.1.2",
+    "turbolinks": "^5.0.0",
+    "velocity-animate": "^1.3.1"
   }
 }

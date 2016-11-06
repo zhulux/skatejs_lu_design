@@ -1,0 +1,23 @@
+@import "../../config";
+@import "../../dependencies/index";
+.#{$css-prefix}slide-panel{
+  display: none;
+  position: fixed;
+  background: #fff;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  padding: 2rem 1.5rem;
+  width: 35%;
+  box-shadow: 0 .1rem 2rem 0 rgba(0,0,0,0.16);
+  overflow-y: scroll;
+
+  &__title{
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+  }
+}

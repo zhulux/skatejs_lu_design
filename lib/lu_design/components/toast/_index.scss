@@ -1,0 +1,62 @@
+@import "../../config";
+@import "../../dependencies/index";
+
+##{$css-prefix}toast {
+  position : fixed;
+  z-index  : $z-index-toast;
+  > div {
+    position      : relative;
+    overflow      : hidden;
+    margin        : $spacing-x-small;
+    padding       : $spacing-medium $spacing-large;
+    min-width     : rem(480px);
+    border-radius : $border-radius-medium;
+    background    : no-repeat 15px center;
+    color         : #fff;
+  }
+  > div:hover {
+    cursor : pointer;
+  }
+  &.#{$css-prefix}toast--top-right {
+    top   : 1.5rem;
+    right : 1.5rem;
+  }
+  &.#{$css-prefix}toast--bottom-right {
+    right  : 1.5rem;
+    bottom : 1.5rem;
+  }
+
+  .#{$css-prefix}toast__close {
+    transform : translate3d($spacing-x-small, 0, 0);
+  }
+  .#{$css-prefix}lud-toast__body {
+    background-color : #030303;
+  }
+
+  .#{$css-prefix}toast__title {
+    font-weight : bold;
+  }
+  .#{$css-prefix}toast__message {
+    word-wrap : break-word;
+    a, label {
+      color : #fff;
+    }
+    a:hover {
+      color           : #cccccc;
+      text-decoration : none;
+    }
+  }
+
+  .#{$css-prefix}toast--info {
+    background-color : $color-background-info;
+  }
+  .#{$css-prefix}toast--error {
+    background-color : $color-background-error;
+  }
+  .#{$css-prefix}toast--success {
+    background-color : $color-background-success;
+  }
+  .#{$css-prefix}toast--warning {
+    background-color : $color-background-warning;
+  }
+}

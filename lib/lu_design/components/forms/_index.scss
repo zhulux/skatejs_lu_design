@@ -1,89 +1,175 @@
 @import "../../config";
 @import "../../dependencies/index";
 
-@import "./checkbox",
-        "./form",
-        "./input",
-        "./radio",
-        "./textarea",
-        "./file";
+$form-prefix: "#{$css-prefix}form";
+//@import "./file";
 
-.#{$css-prefix}form-element {
-  position: relative;
+// Used in _forms.scss to generate the form validation CSS for warnings, errors,
+// and successes.
 
+@mixin form-control-validation($color) {
+  // Color the label and help text
+  .#{$form-prefix}__label,
+  .#{$form-prefix}__text {
+    color: $color;
+  }
 
+  // Set the border and box shadow on specific inputs to match
+  .#{$form-prefix}__control {
+    border-color: $color;
 
-  // Form Element Label
-  &__label {
-    display: inline-block;
-    color: $color-text-label;
-    font-size: $font-size-small;
-    line-height: $line-height-text;
-    margin-right: $spacing-small;
-    margin-bottom: $spacing-xx-small;
-
-    &:empty {
-      margin: 0;
+    &:focus {
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px lighten($color,20%);
     }
   }
 
-  // Form Element Control
-  //
-  // Wrapper to any form display element
-  &__control {
+}
 
-    // Force radios and checkboxes to be on own line when there
-    // are multiples in a group
-    .#{$css-prefix}radio,
-    .#{$css-prefix}checkbox {
-      display: block;
-    }
+.#{$form-prefix}__label{
+  color: rgb(84, 105, 141);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.#{$form-prefix}__control {
+  display         : block;
+  width           : 100%;
+  // // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  // height: $input-height;
+  padding         : 0 1rem 0 .75rem;
+  font-size       : $font-size-base;
+  line-height     : $height-input;
+  color           : #16325c;
+  // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
+  background      : #fff none;
+  background-clip : padding-box;
+  border          : 1px solid #d8dde6;
+
+  border-radius   : .25rem;
+
+  transition: border .1s linear,background-color .1s linear;
+
+  // Unstyle the caret on `<select>`s in IE10+.
+  &::-ms-expand {
+    background-color: transparent;
+    border: 0;
   }
 
-  // Form Element Icon
-  //
-  // When an icon sits within a form element wrapper
-  // and adjacent to another element inside that wrapper such as a .form-element__label
-  // This should be used as the wrapper
-  &__icon {
-    display: inline-block;
-    position: relative; // Since this container can have a tooltip
+  // Customize the `:focus` state to imitate native WebKit styles.
+  &:focus{
+    outline: 0;
+    border-color: #1589ee;
+    background-color: #fff;
+    box-shadow: 0 0 3px #0070D2;
   }
 
-  // Inline Level Help Text
-  //
-  // Sits inside .form-element__control and below the element such
-  // as <input>
-  &__help {
-    font-size: $font-size-small;
-    margin-top: $spacing-x-small;
-    display: block;
+  // Placeholder
+  &::placeholder {
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
   }
 
-  // Read Only
-  &__static {
-    display: inline-block;
-    line-height: $line-height-button;
-    min-height: calc(#{$line-height-button} + 2px); // For IE
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  &:disabled,
+  &[readonly] {
+    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+    opacity: 1;
+    background-color: rgb(224, 229, 238);
+    user-select: none;
+    border-color: rgb(168, 183, 199);
+  }
 
-    // If read only state is longform
-    // Apply text line height
-    &.#{$css-prefix}text-longform {
-      line-height: $line-height-text;
-    }
+  &:disabled {
+    cursor: not-allowed;
   }
 }
 
-// Required Star
-.#{$css-prefix}required {
-  color: $color-text-error;
-  margin: 0 $spacing-xxx-small;
+// Form groups
+//
+// Designed to help with the organization and spacing of vertical forms. For
+// horizontal forms, use the predefined grid classes.
+
+.#{$form-prefix}__group {
+  margin-bottom: 1rem;
+}
+.#{$form-prefix}__group--footer{
+  margin-bottom: 0;
+  text-align: right;
 }
 
-// Error Styles
-.#{$css-prefix}has-error {
+.#{$form-prefix}__text {
+  display: block;
+  margin-top: .5rem;
+}
 
-  .#{$css-prefix}form-element__help {
-    color: $color-text-error;
+// Form control feedback states
+//
+// Apply contextual and semantic states to individual form controls.
+.#{$form-prefix}__control-feedback {
+  margin-top: .5rem;
+}
+
+.#{$form-prefix}__group--success .#{$form-prefix}__control,
+.#{$form-prefix}__group--warning .#{$form-prefix}__control,
+.#{$form-prefix}__group--danger .#{$form-prefix}__control {
+  padding-right   : 2.25rem;
+  background      : no-repeat center right .625rem;
+  background-size : 1.25rem 1.25rem;
+}
+
+// Form validation states
+.#{$form-prefix}__group--success {
+  @include form-control-validation($color-background-success);
+
+  .form-control-success {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#5cb85c' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3E%3C/svg%3E");
+  }
+}
+
+.#{$form-prefix}__group--warning {
+  @include form-control-validation($color-background-warning);
+
+  .form-control-warning {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#f0ad4e' d='M4.4 5.324h-.8v-2.46h.8zm0 1.42h-.8V5.89h.8zM3.76.63L.04 7.075c-.115.2.016.425.26.426h7.397c.242 0 .372-.226.258-.426C6.726 4.924 5.47 2.79 4.253.63c-.113-.174-.39-.174-.494 0z'/%3E%3C/svg%3E");
+  }
+}
+
+.#{$form-prefix}__group--danger {
+  @include form-control-validation($color-background-error);
+
+  .form-control-danger {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#d9534f' viewBox='-2 -2 7 7'%3E%3Cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3E%3Ccircle r='.5'/%3E%3Ccircle cx='3' r='.5'/%3E%3Ccircle cy='3' r='.5'/%3E%3Ccircle cx='3' cy='3' r='.5'/%3E%3C/svg%3E");
+  }
+}
+
+// Inline forms
+//
+// Make forms appear inline(-block) by adding the `.form-inline` class. Inline
+// forms begin stacked on extra small (mobile) devices and then go inline when
+// viewports reach <768px.
+//
+// Requires wrapping inputs and labels with `.form-group` for proper display of
+// default HTML form controls and our custom form controls (e.g., input groups).
+
+.#{$form-prefix}form--inline {
+  // Kick in the inline
+  @media (min-width: 576px) {
+    // Inline-block all the things for "inline"
+    .#{$form-prefix}__group {
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+
+    // Allow folks to *not* use `.form-group`
+    .#{$form-prefix}__control {
+      display: inline-block;
+      width: auto; // Prevent labels from stacking above inputs in `.form-group`
+      vertical-align: middle;
+    }
   }
 }

@@ -1,0 +1,37 @@
+@import "../../config";
+@import "../../dependencies/index";
+
+.#{$css-prefix}feeds{
+  margin-top: .5rem;
+  &__item{
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: flex-start;
+    &__avatar{
+      flex-shrink: 0;
+      margin-right: .75rem;
+      img{
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+    &__bdoy{
+      flex: 1;
+      min-width: 0;
+    }
+    &__header{
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    &__content{
+      padding: .25rem 0;
+    }
+    &__footer{
+      font-size: .75rem;
+      color: #54698d;
+      display: flex;
+    }
+  }
+}
