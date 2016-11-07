@@ -14185,323 +14185,71 @@
 
 	## 代码演示
 
-	 ```html_example
-	 <table class="lud-table lud-table--bordered lud-table--fixed-layout" role="grid">
+	```html_example
+	 <table class="lud-table">
 	 <thead>
-	 <tr class="lud-text-title--caps">
-	 <th class="lud-cell-shrink" scope="col">
-	 </th>
-	 <th class="lud-is-sortable lud-is-sorted lud-is-sorted--asc" scope="col" aria-sort="ascending" aria-label="Opportunity Name">
-	 <a href="javascript:void(0);" class="lud-th__action lud-text-link--reset">
-	 <span class="lud-assistive-text">Sort </span><span class="lud-truncate" title="Opportunity Name">Opportunity Name</span>
-	r </a>
-	 </th>
-	 <th class="lud-is-sortable" scope="col" aria-label="Account Name">
-	 <a href="javascript:void(0);" class="lud-th__action lud-text-link--reset">
-	 <span class="lud-assistive-text">Sort </span>
-	 <span class="lud-truncate" title="Account Name">Account Name</span>
-	 <lud-icon type="arrowdown" class="lud-is-sortable__icon"></lud-icon>
-	 <span class="lud-assistive-text" aria-live="assertive" aria-atomic="true"></span>
-	 </a>
-	 </th>
-	 <th class="lud-is-sortable" scope="col" aria-label="Close Date">
-	 <a href="javascript:void(0);" class="lud-th__action lud-text-link--reset">
-	 <span class="lud-assistive-text">Sort </span>
-	 <span class="lud-truncate" title="Close Date">Close Date</span>
-	 <lud-icon type="arrowdown" class="lud-is-sortable__icon"></lud-icon>
-	 <span class="lud-assistive-text" aria-live="assertive" aria-atomic="true"></span>
-	 </a>
-	 </th>
-	 <th class="lud-is-sortable" scope="col" aria-label="Stage">
-	 <a href="javascript:void(0);" class="lud-th__action lud-text-link--reset">
-	 <span class="lud-assistive-text">Sort </span>
-	 <span class="lud-truncate" title="Stage">Stage</span>
-	 <lud-icon type="arrowdown" class="lud-is-sortable__icon"></lud-icon>
-	 <span class="lud-assistive-text" aria-live="assertive" aria-atomic="true"></span>
-	 </a>
-	 </th>
-	 <th class="lud-is-sortable" scope="col" aria-label="Confidence">
-	 <a href="javascript:void(0);" class="lud-th__action lud-text-link--reset">
-	 <span class="lud-assistive-text">Sort </span>
-	 <span class="lud-truncate" title="Confidence">Confidence</span>
-	 <lud-icon type="arrowdown" class="lud-is-sortable__icon"></lud-icon>
-	 <span class="lud-assistive-text" aria-live="assertive" aria-atomic="true"></span>
-	 </a>
-	 </th>
-	 <th class="lud-is-sortable" scope="col" aria-label="Amount">
-	 <a href="javascript:void(0);" class="lud-th__action lud-text-link--reset">
-	 <span class="lud-assistive-text">Sort </span>
-	 <span class="lud-truncate" title="Amount">Amount</span>
-	 <lud-icon type="arrowdown" class="lud-is-sortable__icon"></lud-icon>
-	 <span class="lud-assistive-text" aria-live="assertive" aria-atomic="true"></span>
-	 </a>
-	 </th>
-	 <th class="lud-is-sortable" scope="col" aria-label="Contact">
-	 <a href="javascript:void(0);" class="lud-th__action lud-text-link--reset">
-	 <span class="lud-assistive-text">Sort </span>
-	 <span class="lud-truncate" title="Contact">Contact</span>
-	 <lud-icon type="arrowdown" class="lud-is-sortable__icon"></lud-icon>
-	 <span class="lud-assistive-text" aria-live="assertive" aria-atomic="true"></span>
-	 </a>
-	 </th>
-	 <th class="lud-cell-shrink" scope="col"></th>
+	 <tr>
+	 <th nowrap=""></th>
+	 <th nowrap="">状态</th>
+	 <th nowrap="">提交人</th>
+	 <th>内容</th>
+	 <th nowrap="">提交时间</th>
+	 <th></th>
 	 </tr>
 	 </thead>
 	 <tbody>
-	 <tr class="lud-hint-parent">
-	 <td role="gridcell" class="lud-cell-shrink">
-	 <label class="lud-checkbox">
-	 <input type="checkbox" name="options" />
-	 <span class="lud-checkbox--faux"></span>
-	 <span class="lud-assistive-text">Select row Anypoint Connectors</span>
-	 </label>
+	 <tr>
+	 <td nowrap="">270</td>
+	 <td nowrap=""><span class="lud-tag lud-tag--success">已处理</span></td>
+	 <td nowrap="">
+	 <a href="/users/16377/edit">谢玉辉</a>
 	 </td>
-	 <th scope="row">
-	 <div class="lud-truncate" title="Anypoint Connectors">Anypoint Connectors</div>
-	 </th>
-	 <td role="gridcell">
-	 <div class="lud-truncate" title="Cloudhub">Cloudhub</div>
-	 </td>
-	 <td role="gridcell">
-	 <div class="lud-truncate" title="4/14/2015">4/14/2015</div>
-	 </td>
-	 <td role="gridcell">
-	 <div class="lud-truncate" title="Prospecting">Prospecting</div>
-	 </td>
-	 <td role="gridcell" data-label="Confidence">
-	 <div class="lud-truncate" title="20%">20%</div>
-	 </td>
-	 <td role="gridcell" data-label="Amount">
-	 <div class="lud-truncate" title="$25k">$25k</div>
-	 </td>
-	 <td role="gridcell" data-label="Contact">
-	 <div class="lud-truncate" title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div>
-	 </td>
-	 <td role="gridcell" class="lud-cell-shrink" data-label="Actions">
-	 <button class="lud-button lud-button--icon-border lud-button--icon-x-small">
-	 <lud-icon type="down" class="lud-is-sortable__icon"></lud-icon>
-	 <span class="lud-assistive-text">Show More</span>
-	 </button>
+	 <td>目前无融资历史</td>
+	 <td nowrap="">5 天前</td>
+	 <td nowrap="">
+	 <a data-disable-with="loading..." data-remote="true" href="/feedbacks/270">处理详情(3)</a>
 	 </td>
 	 </tr>
-	 <tr class="lud-hint-parent">
-	 <td role="gridcell" class="lud-cell-shrink" data-label="Select row Cloudhub">
-	 <label class="lud-checkbox">
-	 <input type="checkbox" name="options" />
-	 <span class="lud-checkbox--faux"></span>
-	 <span class="lud-assistive-text">Select row Cloudhub</span>
-	 </label>
+	 <tr>
+	 <td nowrap="">269</td>
+	 <td nowrap=""><span class="lud-tag lud-tag--success">已处理</span></td>
+	 <td nowrap="">
+	 <a href="/users/16548/edit">刘培爽</a>
 	 </td>
-	 <th scope="row" data-label="Opportunity Name">
-	 <div class="lud-truncate" title="Cloudhub">Cloudhub</div>
-	 </th>
-	 <td role="gridcell" data-label="Account Name">
-	 <div class="lud-truncate" title="Cloudhub">Cloudhub</div>
+	 <td>无融资历史，无法申请认证。</td>
+	 <td nowrap="">5 天前</td>
+	 <td nowrap="">
+	 <a data-disable-with="loading..." data-remote="true" href="/feedbacks/269">处理详情(1)</a>
 	 </td>
-	 <td role="gridcell" data-label="Close Date">
-	 <div class="lud-truncate" title="4/14/2015">4/14/2015</div>
+	 </tr>
+	 <tr>
+	 <td nowrap="">268</td>
+	 <td nowrap=""><span class="lud-tag lud-tag--success">已处理</span></td>
+	 <td nowrap="">
+	 <a href="/users/16548/edit">刘培爽</a>
 	 </td>
-	 <td role="gridcell" data-label="Prospecting">
-	 <div class="lud-truncate" title="Prospecting">Prospecting</div>
+	 <td>无融资历史，无法申请认证。</td>
+	 <td nowrap="">5 天前</td>
+	 <td nowrap="">
+	 <a data-disable-with="loading..." data-remote="true" href="/feedbacks/268">处理详情(1)</a>
 	 </td>
-	 <td role="gridcell" data-label="Confidence">
-	 <div class="lud-truncate" title="20%">20%</div>
+	 </tr>
+	 <tr>
+	 <td nowrap="">267</td>
+	 <td nowrap=""><span class="lud-tag lud-tag--success">已处理</span></td>
+	 <td nowrap="">
+	 <a href="/users/16548/edit">刘培爽</a>
 	 </td>
-	 <td role="gridcell" data-label="Amount">
-	 <div class="lud-truncate" title="$25k">$25k</div>
-	 </td>
-	 <td role="gridcell" data-label="Contact">
-	 <div class="lud-truncate" title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div>
-	 </td>
-	 <td role="gridcell" class="lud-cell-shrink" data-label="Actions">
-	 <button class="lud-button lud-button--icon-border lud-button--icon-x-small">
-	 <lud-icon type="down" class="lud-is-sortable__icon"></lud-icon>
-	 <span class="lud-assistive-text">Show More</span>
-	 </button>
+	 <td>无融资历史，无法申请认证。</td>
+	 <td nowrap="">5 天前</td>
+	 <td nowrap="">
+	 <a data-disable-with="loading..." data-remote="true" href="/feedbacks/267">处理详情(1)</a>
 	 </td>
 	 </tr>
 	 </tbody>
 	 </table>
-	 ```
 
-	 ```html_example
-	 <table class="lud-table lud-table--bordered lud-table--cell-buffer lud-table--striped">
-	 <thead>
-	 <tr class="lud-text-title--caps">
-	 <th scope="col">
-	 <div class="lud-truncate" title="Opportunity Name">Opportunity Name</div>
-	 </th>
-	 <th scope="col">
-	 <div class="lud-truncate" title="Account Name">Account Name</div>
-	 </th>
-	 <th scope="col">
-	 <div class="lud-truncate" title="Close Date">Close Date</div>
-	 </th>
-	 <th scope="col">
-	 <div class="lud-truncate" title="Stage">Stage</div>
-	 </th>
-	 <th scope="col">
-	 <div class="lud-truncate" title="Confidence">Confidence</div>
-	 </th>
-	 <th scope="col">
-	 <div class="lud-truncate" title="Amount">Amount</div>
-	 </th>
-	 <th scope="col">
-	 <div class="lud-truncate" title="Contact">Contact</div>
-	 </th>
-	 </tr>
-	 </thead>
-	 <tbody>
-	 <tr>
-	 <th scope="row" data-label="Opportunity Name">
-	 <div class="lud-truncate" title="Cloudhub"><a href="javascript:void(0);">Cloudhub</a></div>
-	 </th>
-	 <td data-label="Account Name">
-	 <div class="lud-truncate" title="Cloudhub">Cloudhub</div>
-	 </td>
-	 <td data-label="Close Date">
-	 <div class="lud-truncate" title="4/14/2015">4/14/2015</div>
-	 </td>
-	 <td data-label="Prospecting">
-	 <div class="lud-truncate" title="Prospecting">Prospecting</div>
-	 </td>
-	 <td data-label="Confidence">
-	 <div class="lud-truncate" title="20%">20%</div>
-	 </td>
-	 <td data-label="Amount">
-	 <div class="lud-truncate" title="$25k">$25k</div>
-	 </td>
-	 <td data-label="Contact">
-	 <div class="lud-truncate" title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div>
-	 </td>
-	 </tr>
-	 <tr>
-	 <th scope="row" data-label="Opportunity Name">
-	 <div class="lud-truncate" title="Cloudhub + Anypoint Connectors"><a href="javascript:void(0);">Cloudhub + Anypoint Connectors</a></div>
-	 </th>
-	 <td data-label="Account Name">
-	 <div class="lud-truncate" title="Cloudhub">Cloudhub</div>
-	 </td>
-	 <td data-label="Close Date">
-	 <div class="lud-truncate" title="4/14/2015">4/14/2015</div>
-	 </td>
-	 <td data-label="Prospecting">
-	 <div class="lud-truncate" title="Prospecting">Prospecting</div>
-	 </td>
-	 <td data-label="Confidence">
-	 <div class="lud-truncate" title="20%">20%</div>
-	 </td>
-	 <td data-label="Amount">
-	 <div class="lud-truncate" title="$25k">$25k</div>
-	 </td>
-	 <td data-label="Contact">
-	 <div class="lud-truncate" title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div>
-	 </td>
-	 </tr>
-	 <tr>
-	 <th scope="row" data-label="Opportunity Name">
-	 <div class="lud-truncate" title="Cloudhub"><a href="javascript:void(0);">Cloudhub</a></div>
-	 </th>
-	 <td data-label="Account Name">
-	 <div class="lud-truncate" title="Cloudhub">Cloudhub</div>
-	 </td>
-	 <td data-label="Close Date">
-	 <div class="lud-truncate" title="4/14/2015">4/14/2015</div>
-	 </td>
-	 <td data-label="Prospecting">
-	 <div class="lud-truncate" title="Prospecting">Prospecting</div>
-	 </td>
-	 <td data-label="Confidence">
-	 <div class="lud-truncate" title="20%">20%</div>
-	 </td>
-	 <td data-label="Amount">
-	 <div class="lud-truncate" title="$25k">$25k</div>
-	 </td>
-	 <td data-label="Contact">
-	 <div class="lud-truncate" title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div>
-	 </td>
-	 </tr>
-	 </tbody>
-	 </table>
-	 ```
-
-	 ```html_example
-	 <table class="lud-table lud-table--bordered lud-table--cell-buffer lud-table--col-bordered">
-	 <thead>
-	 <tr class="lud-text-title--caps">
-	 <th scope="col">
-	 <div class="lud-truncate" title="Opportunity Name">Opportunity Name</div>
-	 </th>
-	 <th scope="col">
-	 <div class="lud-truncate" title="Account Name">Account Name</div>
-	 </th>
-	 <th scope="col">
-	 <div class="lud-truncate" title="Close Date">Close Date</div>
-	 </th>
-	 <th scope="col">
-	 <div class="lud-truncate" title="Stage">Stage</div>
-	 </th>
-	 <th scope="col">
-	 <div class="lud-truncate" title="Confidence">Confidence</div>
-	 </th>
-	 <th scope="col">
-	 <div class="lud-truncate" title="Amount">Amount</div>
-	 </th>
-	 <th scope="col">
-	 <div class="lud-truncate" title="Contact">Contact</div>
-	 </th>
-	 </tr>
-	 </thead>
-	 <tbody>
-	 <tr>
-	 <th scope="row" data-label="Opportunity Name">
-	 <div class="lud-truncate" title="Cloudhub"><a href="javascript:void(0);">Cloudhub</a></div>
-	 </th>
-	 <td data-label="Account Name">
-	 <div class="lud-truncate" title="Cloudhub">Cloudhub</div>
-	 </td>
-	 <td data-label="Close Date">
-	 <div class="lud-truncate" title="4/14/2015">4/14/2015</div>
-	 </td>
-	 <td data-label="Prospecting">
-	 <div class="lud-truncate" title="Prospecting">Prospecting</div>
-	 </td>
-	 <td data-label="Confidence">
-	 <div class="lud-truncate" title="20%">20%</div>
-	 </td>
-	 <td data-label="Amount">
-	 <div class="lud-truncate" title="$25k">$25k</div>
-	 </td>
-	 <td data-label="Contact">
-	 <div class="lud-truncate" title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div>
-	 </td>
-	 </tr>
-	 <tr>
-	 <th scope="row" data-label="Opportunity Name">
-	 <div class="lud-truncate" title="Cloudhub + Anypoint Connectors"><a href="javascript:void(0);">Cloudhub + Anypoint Connectors</a></div>
-	 </th>
-	 <td data-label="Account Name">
-	 <div class="lud-truncate" title="Cloudhub">Cloudhub</div>
-	 </td>
-	 <td data-label="Close Date">
-	 <div class="lud-truncate" title="4/14/2015">4/14/2015</div>
-	 </td>
-	 <td data-label="Prospecting">
-	 <div class="lud-truncate" title="Prospecting">Prospecting</div>
-	 </td>
-	 <td data-label="Confidence">
-	 <div class="lud-truncate" title="20%">20%</div>
-	 </td>
-	 <td data-label="Amount">
-	 <div class="lud-truncate" title="$25k">$25k</div>
-	 </td>
-	 <td data-label="Contact">
-	 <div class="lud-truncate" title="jrogers@cloudhub.com"><a href="javascript:void(0);">jrogers@cloudhub.com</a></div>
-	 </td>
-	 </tr>
-	 </tbody>
-	 </table>
-	 ```
+	```
 	 */
 
 	$(document).on("turbolinks:load", function () {
